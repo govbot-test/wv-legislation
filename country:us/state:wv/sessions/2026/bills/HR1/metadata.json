@@ -166,6 +166,7 @@
     "division_id": "ocd-division/country:us/state:wv"
   },
   "_processing": {
-    "logs_latest_update": "2026-07-13T06:05:56Z"
+    "logs_latest_update": "2026-07-13T06:05:56Z",
+    "text_extraction_latest_update": "2026-07-13T09:44:03.527592Z"
   }
 }
