@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4196 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+hb4196 sub1 
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4196">&laquo; House Bill 4196 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4196'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4196 sub1 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4196" title="HTML  - Enrolled Version  - Final Version
+ - House Bill 4196">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4196 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4196" title="HTML  - Engrossed Version
+ - House Bill 4196">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4196 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4196" title="HTML  - Introduced Version
+ - House Bill 4196">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4196 - To offer long-acting reversible contraception to patients receiving methadone and suboxone at the treatment facility for the methadone and suboxone&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4196+sub1.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4196"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.csF44CD7B7{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs1DE97462{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB763A657{text-align:justify;text-indent:0pt;margin:0pt 0pt 12pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs84CEC6E7{text-align:justify;text-indent:36pt;margin:0pt 0pt 12pt 0pt;line-height:2}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		.csDCDA41A9{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 0pt}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute for </span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4196</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Drennan, Worrell, Hite, Amos, and Crouse</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Originating in the Standing Committee on Health and Human Resources; Reported on January 19, 2026]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to </span><a name="_Hlk184821553"><span class="csEF05ACC">amend and reenact &sect;16B-13-3 and &sect;16B-13-5 of the Code of West Virginia, 1931, as amended, relating to</span></a><span class="csEF05ACC"> offering long-acting reversible contraception to patients; and establishing parameters of how to offer long-acting reversible contraception.</span></p><p class="csF44CD7B7"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="csF44CD7B7"><span class="csEF05ACC">&nbsp;</span></p><p class="csF44CD7B7"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs1DE97462">
+		<span class="cs7A33E2F1">Article 13. &nbsp;medication-assisted treatment PROGRAM licensing act</span></h2>
+	<p class="csF44CD7B7"><span class="csEF05ACC">&nbsp;</span></p><h4 class="csB763A657">
+		<span class="csB9803513">&sect;16B-13-3. Opioid treatment programs to obtain license; application; fees and inspections.</span></h4>
+	<h4 class="csB763A657">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs84CEC6E7"><span class="csEF05ACC">(a) No person, partnership, association, or corporation may operate an opioid treatment program without first obtaining a license from the director in accordance with the provisions of this article and the rules lawfully promulgated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any person, partnership, association, or corporation desiring a license to operate an opioid treatment program in this state shall file with the Office of Health Facility Licensure and Certification an application in such form and with such information as the director shall prescribe and furnish accompanied by an application fee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The Director of the Office of Health Facility Licensure and Certification or his or her designee shall inspect each facility and review all documentation submitted with the application. &nbsp;The director shall then approve or deny the application for a license. The director shall issue a license if the facility is in compliance with the provisions of this article and with the rules lawfully promulgated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) A license shall be issued in one of three categories:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An initial 12 month license shall be issued to an opioid treatment program establishing a new program or service for which there is insufficient consumer participation to demonstrate substantial compliance with this article and with all rules promulgated pursuant to this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A provisional license shall be issued when an opioid treatment program seeks a renewal license, or is an existing program as of the effective date of this article and is seeking an initial license, and the opioid treatment program is not in substantial compliance with this article and with all rules promulgated pursuant to this article, but does not pose a significant risk to the rights, health and safety of a consumer. &nbsp;It shall expire not more than six months from the date of issuance, and may not be consecutively reissued; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A renewal license shall be issued when an opioid treatment program is in substantial compliance with this article and with all rules promulgated pursuant to this article. A renewal license shall expire not more than one year from the date of issuance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) At least 60 days prior to the license expiration date, an application for renewal shall be submitted by the opioid treatment program to the director on forms furnished by the director. &nbsp;A license shall be renewed if the director determines that the applicant is in compliance with this article and with all rules promulgated pursuant to this article. &nbsp;A license issued to one program location pursuant to this article is not transferrable or assignable. &nbsp;Any change of ownership of a licensed medication-assisted treatment program requires submission of a new application. The medication-assisted treatment program shall notify the director of any change in ownership within 10 days of the change and must submit a new application within the time frame prescribed by the director.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Any person, partnership, association, or corporation that seeks to obtain or renew a license for an opioid treatment program in this state must submit to the director the following documentation:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Full operating name of the program as advertised;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Legal name of the program as registered with the West Virginia Secretary of State;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Physical address of the program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Preferred mailing address for the program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Email address to be used as the primary contact for the program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Federal Employer Identification Number assigned to the program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) All business licenses issued to the program by this state, the State Tax Department, the Secretary of State and all other applicable business entities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Brief description of all services provided by the program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Hours of operation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Legal Registered Owner Name &ndash; name of the person registered as the legal owner of the program.&nbsp; If more than one legal owner (i.e., partnership, corporation, etc.) list each legal owner separately, indicating the percentage of ownership;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Medical director&#39;s full name, medical license number, Drug Enforcement Administration registration number, and a list of all current certifications;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) For each employee of the program, provide the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Employee&#39;s role and occupation within the program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Full legal name;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Medical license, if applicable;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Drug Enforcement Administration registration number, if applicable;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Drug Enforcement Administration identification number to prescribe buprenorphine for addiction, if applicable; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Number of hours per week worked at program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) Name and location address of all programs owned or operated by the applicant;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) Notarized signature of applicant;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) Check or money order for licensing fee and inspection fee;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) Verification of education and training for all physicians, counselors and social workers practicing at or used by referral by the program such as fellowships, additional education, accreditations, board certifications and other certifications;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) Board of Pharmacy Controlled Substance Prescriber Report for each prescriber practicing at the program for the three months preceding the date of application; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) If applicable, a copy of a valid Certificate of Need or a letter of exemption from the West Virginia Health Care Authority.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Upon satisfaction that an applicant has met all of the requirements of this article, the director shall issue a license to operate an opioid treatment program. &nbsp;An entity that obtains this license may possess, have custody, or control of, and dispense drugs indicated and approved by the United States Food and Drug Administration for the treatment of substance use disorders.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The opioid treatment program shall display the current license in a prominent location where services are provided and in clear view of all patients.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(i) The director or his or her designee shall inspect on a periodic basis all opioid treatment programs that are subject to this article and all rules adopted pursuant to this article to ensure continued compliance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) The opioid treatment program shall offer long-acting reversible contraception to patients recovering from addiction such offerings shall be provided in accordance with the following provisions:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Contraceptive Counseling Requirement:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The opioid treatment program shall provide shared decision-making contraceptive counseling;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Counseling shall be non-coercive and tailored to the patient&rsquo;s lifestyle, health needs, and personal preferences, ensuring informed choice in contraceptive options:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Counseling services shall be available to both male and female patients; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Medical eligibility screening for potential contraindications; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Medical Assessment &amp; Referral Process:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The opioid treatment program may not place or insert a long-acting reversible contraception unless they have a licensed healthcare provider on staff who is trained; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) If the opioid treatment program lacks a qualified provider or necessary medical equipment, it shall establish a referral system to direct patients to a licensed healthcare provider or clinic capable of full contraceptive service delivery.</span></p><h4 class="cs7F45F1B">
+		<span class="csB9803513">&sect;16B-13-5. Operational requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The medication-assisted treatment program shall be licensed and registered in this state with the director, the Secretary of State, the State Tax Department, and all other applicable business or licensing entities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The program sponsor need not be a licensed physician but shall employ a licensed physician for the position of medical director, when required by the rules promulgated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Each medication-assisted treatment program shall designate a medical director. If the medication-assisted treatment program is accredited by a Substance Abuse and Mental Health Services Administration approved accrediting body that meets nationally accepted standards for providing medication-assisted treatment, including the Commission on Accreditation of Rehabilitation Facilities or the Joint Commission on Accreditation of Healthcare Organizations, then the program may designate a medical director to oversee all facilities associated with the accredited medication-assisted treatment program. The medical director shall be responsible for the operation of the medication-assisted treatment program, as further specified in the rules promulgated pursuant to this article. He or she may delegate the day-to-day operation of a medication-assisted treatment program as provided in rules promulgated pursuant to this article. Within 10 days after termination of a medical director, the medication-assisted treatment program shall notify the director of the identity of another medical director for that program. &nbsp;Failure to have a medical director practicing at the program may be the basis for a suspension or revocation of the program license. &nbsp;The medical director shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Have a full, active, and unencumbered license to practice allopathic medicine or surgery from the West Virginia Board of Medicine or to practice osteopathic medicine or surgery from the West Virginia Board of Osteopathic Medicine in this state and be in good standing and not under any probationary restrictions;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Meet both of the following training requirements:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) If the physician prescribes a partial opioid agonist, he or she shall complete the requirements for the Drug Addiction Treatment Act of 2000; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Complete other programs and continuing education requirements as further described in the rules promulgated pursuant to this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Practice at the licensed or registered medication-assisted treatment program a sufficient number of hours, based upon the type of medication-assisted treatment license or registration issued pursuant to this article, to ensure regulatory compliance, and carry out those duties specifically assigned to the medical director as further described in the rules promulgated pursuant to this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Be responsible for monitoring and ensuring compliance with all requirements related to the licensing and operation of the medication-assisted treatment program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Supervise, control, and direct the activities of each individual working or operating at the medication-assisted treatment program, including any employee, volunteer, or individual under contract, who provides medication-assisted treatment at the program or is associated with the provision of that treatment. The supervision, control, and direction shall be provided in accordance with rules promulgated by the Inspector General; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Complete other requirements prescribed by the Inspector General by rule.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Each medication-assisted treatment program shall designate counseling staff, either employees, or those used on a referral-basis by the program, which meet the requirements of this article and the rules promulgated pursuant to this article. The individual members of the counseling staff shall have one or more of the following qualifications:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Be a licensed psychiatrist;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Certification as an alcohol and drug counselor;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Certification as an advanced alcohol and drug counselor;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Be a counselor, psychologist, marriage and family therapist, or social worker with a master&rsquo;s level education with a specialty or specific training in treatment for substance use disorders, as further described in the rules promulgated pursuant to this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Under the direct supervision of an advanced alcohol and drug counselor, be a counselor with a bachelor&#39;s degree in social work or another relevant human services field: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the individual practicing with a bachelor&#39;s degree under supervision applies for certification as an alcohol and drug counselor within three years of the date of employment as a counselor; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Be a counselor with a graduate degree actively working toward licensure or certification in the individual&rsquo;s chosen field under supervision of a licensed or certified professional in that field and/or advanced alcohol and drug counselor;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Be a psych-mental health nurse practitioner or a psych-mental health clinical nurse specialist; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Be a psychiatry CAQ-certified physician assistant.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The medication-assisted treatment program shall be eligible for, and not prohibited from, enrollment with West Virginia Medicaid and other private insurance. Prior to directly billing a patient for any medication-assisted treatment, a medication-assisted treatment program must receive either a rejection of prior authorization, rejection of a submitted claim, or a written denial from a patient&rsquo;s insurer or West Virginia Medicaid denying coverage for </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">that</span><span class="csEF05ACC"> treatment:</span><span class="cs93AB6E8B"> Provided</span><span class="csEF05ACC">, That the director, in consultation with the Inspector General, may grant a variance from this requirement pursuant to &sect;16B-13-6 of this code. The program shall also document whether a patient has no insurance. At the option of the medication-assisted treatment program, treatment may commence prior to billing.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The medication-assisted treatment program shall apply for and receive approval as required from the United States Drug Enforcement Administration, Center for Substance Abuse Treatment, or an organization designated by Substance Abuse and Mental Health and Mental Health Administration.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) All persons employed by the medication-assisted treatment program shall comply with the requirements for the operation of a medication-assisted treatment program established within this article or by any rule adopted pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) All employees of an opioid treatment program shall furnish fingerprints for a state and federal criminal records check by the Criminal Identification Bureau of the West Virginia State Police and the Federal Bureau of Investigation. The fingerprints shall be accompanied by a signed authorization for the release of information and retention of the fingerprints by the Criminal Identification Bureau and the Federal Bureau of Investigation. The opioid treatment program shall be subject to the provisions of &sect;16B-15-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code and subsequent rules promulgated thereunder.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The medication-assisted treatment program </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not be owned by, nor </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> it employ or associate with, any physician or prescriber:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Whose Drug Enforcement Administration number is not currently full, active, and unencumbered;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Whose application for a license to prescribe, dispense, or administer a controlled substance has been denied by and is not full, active, and unencumbered in any jurisdiction; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Whose license is anything other than a full, active, and unencumbered license to practice allopathic medicine or surgery by the West Virginia Board of Medicine or osteopathic medicine or surgery by the West Virginia Board of Osteopathic Medicine in this state, and who is in good standing and not under any probationary restrictions.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) A person may not dispense any medication-assisted treatment medication, including a controlled substance as defined by &sect;60A-1-101 of this code, on the premises of a licensed medication-assisted treatment program, unless he or she is a physician or pharmacist licensed in this state and employed by the medication-assisted treatment program unless the medication-assisted treatment program is a federally certified narcotic treatment program. Prior to dispensing or prescribing medication-assisted treatment medications, the treating physician must access the Controlled Substances Monitoring Program Database to ensure the patient is not seeking medication-assisted treatment medications that are controlled substances from multiple sources and to assess potential adverse drug interactions, or both. Prior to dispensing or prescribing medication-assisted treatment medications, the treating physician shall also ensure that the medication-assisted treatment medication utilized is related to an appropriate diagnosis of a substance use disorder and approved for </span><span class="cs68EFC440">such </span><span class="cs46AE26E6">that</span><span class="csEF05ACC"> usage. The physician shall also review the Controlled Substances Monitoring Program Database no less than quarterly and at each patient&rsquo;s physical examination. The results obtained from the Controlled Substances Monitoring Program Database shall be maintained with the patient&rsquo;s medical records.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) A medication-assisted treatment program responsible for medication administration shall comply with:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The West Virginia Board of Pharmacy regulations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The West Virginia Board of Examiners for Registered Professional Nurses regulations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) All applicable federal laws and regulations relating to controlled substances; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Any requirements as specified in the rules promulgated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) Each medication-assisted treatment program location shall be licensed separately, regardless of whether the program is operated under the same business name or management as another program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) The medication-assisted treatment program shall develop and implement patient protocols, treatment plans, or treatment strategies and profiles, which shall include, but not be limited by, the following guidelines:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) When a physician diagnoses an individual as having a substance use disorder, the physician may treat the substance use disorder by managing it with medication in doses not exceeding those approved by the United States Food and Drug Administration as indicated for the treatment of substance use disorders and not greater than those amounts described in the rules promulgated pursuant to this article. The treating physician and treating counselor&rsquo;s diagnoses and treatment decisions shall be made according to accepted and prevailing standards for medical care;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The medication-assisted treatment program shall maintain a record of all of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Medical history and physical examination of the individual;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The diagnosis of substance use disorder of the individual;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The plan of treatment proposed, the patient&rsquo;s response to the treatment, and any modification to the plan of treatment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) The dates on which any medications were prescribed, dispensed, or administered, the name and address of the individual for whom the medications were prescribed, dispensed, or administered, and the amounts and dosage forms for any medications prescribed, dispensed, or administered;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) A copy of the report made by the physician or counselor to whom referral for evaluation was made, if applicable; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) A copy of the coordination of care agreement, which is to be signed by the patient, treating physician, and treating counselor. If a change of treating physician or treating counselor takes place, a new agreement must be signed. The coordination of care agreement must be updated or reviewed at least annually. If the coordination of care agreement is reviewed, but not updated, this review must be documented in the patient&rsquo;s record. The coordination of care agreement will be provided in a form prescribed and made available by the director;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Medication-assisted treatment programs shall report information, data, statistics, and other information as directed in this code, and the rules promulgated pursuant to this article to required agencies and other authorities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) A prescriber authorized to prescribe a medication-assisted treatment medication who practices at a medication-assisted treatment program is responsible for maintaining the control and security of his or her prescription blanks and any other method used for prescribing a medication-assisted treatment medication. The prescriber shall comply with all state and federal requirements for tamper-resistant prescription paper. In addition to any other requirements imposed by statute or rule, the prescriber shall notify the director and appropriate law-enforcement agencies in writing within 24 hours following any theft or loss of a prescription blank or breach of any other method of prescribing a medication-assisted treatment medication;</span><span class="cs68EFC440"> and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The medication-assisted treatment program shall have a drug testing program to ensure a patient is in compliance with the treatment strategy; </span><span class="cs46AE26E6">and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The medication-assisted treatment program shall offer long-acting reversible contraception to patients recovering from addiction; such offerings shall be provided in accordance with the following provisions:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Contraceptive Counseling Requirement:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The medication-assisted treatment program shall provide shared decision-making contraceptive counseling;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Counseling shall be non-coercive and tailored to the patient&rsquo;s lifestyle, health needs, and personal preferences, ensuring informed choice in contraceptive options;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Counseling services shall be available to both male and female patients; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) Medical eligibility screening for potential contraindications; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Medical Assessment &amp; Referral Process:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The medication-assisted treatment program may not place or insert a long-acting reversible contraception unless they have a licensed healthcare provider on staff who is trained; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) If the medication-assisted treatment program lacks a qualified provider or necessary medical equipment, it shall establish a referral system to direct patients to a licensed healthcare provider or clinic capable of full contraceptive service delivery.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) Medication-assisted treatment programs shall only prescribe, dispense, or administer liquid methadone to patients pursuant to the restrictions and requirements of the rules promulgated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o) The medication-assisted treatment program shall immediately notify the director, or his or her designee, in writing of any changes to its operations that affect the medication-assisted treatment program&rsquo;s continued compliance with the certification and licensure requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) If a physician treats a patient with more than 16 milligrams per day of buprenorphine then clear medical notes shall be placed in the patient&#39;s medical file indicating the clinical reason or reasons for the higher level of dosage.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(q) If a physician is not the patient&rsquo;s obstetrical or gynecological provider, the physician shall consult with the patient&rsquo;s obstetrical or gynecological provider to the extent possible to determine whether the prescription is appropriate for the patient.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(r) A practitioner providing medication-assisted treatment may perform certain aspects of telehealth if permitted under his or her scope of practice.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(s) The physician shall follow the recommended manufacturer&rsquo;s tapering schedule for the medication-assisted treatment medication. If the schedule is not followed, the physician shall document in the patient&rsquo;s medical record and the clinical reason why the schedule was not followed. The director may investigate a medication-assisted treatment program if a high percentage of its patients are not following the recommended tapering schedule.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><p class="csDCDA41A9"><span class="cs7FA9C667">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4358 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4358">&laquo; House Bill 4358 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4358'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4358 - Establishing pilot program for Public Guardian Ad Litem Services &amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4358+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4358"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csA130ECD1{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.cs367C8180{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs72E1F5C7{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:italic;text-decoration: underline;}
+		.cs7F85AE1E{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4358</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Burkhammer, Kimble, Heckert, and Holstein.</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 15, 2026; referred to the Committee on the Judiciary then Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;29-21A-101, &nbsp;&sect;29-21A-102, &sect;29-21A-103, &sect;29-21A-104, &sect;29-21A-105, &sect;29-21A-106, &sect;29-21A-107, &sect;29-21A-108, &sect;29-21A-109, &sect;29-21A-110, &sect;29-21A-111, &sect;29-21A-112, &sect;29-21A-113, &sect;29-21A-114, &sect;29-21A-115, &sect;29-21A-116, relating to establishing the West Virginia Public Guardian ad Litem Services and authorizing a three-year pilot program relating to the West Virginia Public Guardian ad Litem Services; providing legislative findings; defining terms; establishing the West Virginia Public Guardian ad Litem Services; relating to establishing three-year pilot program; relating to a sunset date for pilot program; relating to the creation of the Guardian ad Litem Commission; relating to the purpose and duties of the West Virginia Public Guardian ad Litem Services; relating to the executive director of the West Virginia Public Guardian ad Litem Services; relating to the powers, duties, and limitations of the West Virginia Public Guardian ad Litem Services; relating to the creation of West Virginia Public Guardian ad Litem Corporations, establishment thereof, and requesting the West Virginia Supreme Court of Appeals to select three circuits for pilot program; relating to the use of West Virginia Public Defender Service panel attorneys when the West Virginia Public Guardian ad Litem Corporation has a conflict of interest, relating to approval of guardian </span><span class="cs93AB6E8B">ad litem</span><span class="csEF05ACC"> corporation applications, funding, recordkeeping by guardian </span><span class="cs93AB6E8B">ad litem</span><span class="csEF05ACC"> corporations, relating to limitation on use of funds and exceptions; relating to and establishing the Board of Directors for a West Virginia Public Guardian ad Litem Corporation; &nbsp;relating to the private practice of law by a public guardian </span><span class="cs93AB6E8B">ad litem</span><span class="csEF05ACC">; relating to the duties of record creation, record making, and record keeping of the West Virginia Public Guardian ad Litem Services and a West Virginia Public Guardian ad Litem Corporation; relating to the duties of creating, maintaining, and availability of required reports of the West Virginia Public Guardian ad Litem Services and a West Virginia Public Guardian ad Litem Corporation; relating to audits of the accounts of any West Virginia Public Guardian ad Litem Corporation; relating to the creation of an annual audit report of West Virginia Public Guardian ad Litem Corporations; relating to public inspection of annual audit of a West Virginia Public Guardian ad Litem Corporation; relating to civil immunity for an appointed qualified guardian </span><span class="cs93AB6E8B">ad litem</span><span class="csEF05ACC">.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 21A. West Virginia Public Guardian ad litem Services Pilot Program.</span><a name="_Hlk157326869"></a></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-101. Legislative findings; purpose.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The purpose of this article is to establish a pilot program in no more than three locations in this state establishing the West Virginia Public Guardian ad Litem Services to provide legal services for children in juvenile abuse and neglect proceedings. The Legislature finds and declares that in juvenile abuse and neglect proceedings the state is required to provide high quality legal assistance to children, who constitute a vulnerable population, and are unable to afford adequate legal counsel; that providing legal representation to this vulnerable population that face an economic barrier to adequate legal counsel will serve the ends of justice in accordance with rights and privileges guaranteed to all citizens by the Constitution of the United States of America and the Constitution of the State of West Virginia; that the availability of quality legal assistance reaffirms the faith of our citizens in our government of laws; that there is a need to explore alternative methods of delivering legal assistance to children that are the subject of a juvenile abuse and neglect proceeding, including the use of salaried public guardians </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">; that innovative programs and pilot projects such as this are necessary in separate areas of the state to provide information and experience upon which to base future legislative action.</span></p><h4 class="cs89687900">
+		<a name="_Hlk151020570"><span class="csF3C8A5A3">&sect;</span></a><span class="csF3C8A5A3">29-21A-102. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article, the following words and phrases are hereby defined:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Eligible client&quot;: Any minor child who meets the requirements established by this article to receive the publicly funded legal representation of a guardian </span><span class="cs1489E706">ad litem </span><span class="cs46AE26E6">in an eligible proceeding as defined herein;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Eligible proceeding&quot;: Court actions filed pursuant to &sect;49-4-101 </span><span class="cs1489E706">et seq. </span><span class="cs46AE26E6">of this code; </span><span class="csA130ECD1">l</span><span class="cs46AE26E6"> legal representation by a guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> provided pursuant to the provisions of this article is limited to the court system of the state of West Virginia, but does not include representation in family court cases where the services of a guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> for a minor child are deemed necessary or in adult criminal cases where the services of a guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> are deemed necessary;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Legal representation&quot;: The provision of any legal services or legal assistance as guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> consistent with the purposes and provisions of this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Private practice of law&quot;: The provision of legal representation by a public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> to a client who is not entitled to receive legal representation under the provisions of this article, but does not include, among other activities, teaching;</span></p><p class="cs53FB8D75"><span class="cs367C8180">(5) </span><span class="cs46AE26E6">&quot;Public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">&quot; or &quot;Chief public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">&quot;:</span><span class="cs367C8180"> </span><span class="cs46AE26E6">The staff attorney employed on a full-time basis by a public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation who, in addition to providing direct representation to eligible clients, has administrative responsibility for the operation of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation. The public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> may be a part-time employee if the board of directors of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation finds efficient operation of the corporation does not require a full-time attorney and the executive director approves such part-time employment</span><span class="cs367C8180">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) &quot;Assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">&quot;: A staff attorney providing direct representation to eligible clients whose salary and status as a full-time or part-time employee are fixed by the board of directors of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) &quot;Public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation&quot;: A corporation created under &sect;29-21A-108 of this code for the sole purpose of providing guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal representation and other required services to eligible clients; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) &quot;Public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> office&quot;: An office operated by a public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation to provide guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal representation and other required services under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) &quot;Rural county&quot;: A county, based upon the 2020 United States Census, that has a population of less than 50,000 residents and does not have a city located within its boundaries with a population greater than 25,000 residents. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) &quot;Special needs county&quot;: Any county that has an exceptional need for guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> services due to a backlog of child abuse and neglect cases, a backlog of child abuse or neglect &nbsp;referrals, a deficiency in the number of practicing guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> attorneys, a deficiency in the amount of child protective services case workers, or is otherwise socioeconomically depressed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) &quot;Urban county&quot;: A county that has a population greater than 50,000 or has a city located within its boundaries with a population greater than 25,000.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-103. Establishment of the West Virginia Public Guardian ad Litem Services; authorization for three-year pilot program; sunset date of the pilot program.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) There is hereby created an executive agency known as the West Virginia Public Guardian ad Litem Services. The agency shall administer, coordinate, and evaluate programs by which the state provides legal guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> representation to eligible clients, monitor the progress of various delivery systems, recommend improvements, and provide annual reports throughout the existence of the pilot program to the Legislature. The agency shall maintain its office at the State Capitol. &nbsp;The pilot program shall be for a term of three years after operation of the program of providing guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal services commences. Implementation of the provisions and requirements of this article relating to this pilot program shall commence on July 1, 2026. &nbsp;This pilot program shall commence providing guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal representation in eligible proceedings, as contemplated in this article, on October 1, 2026.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The provisions of this article expire and shall have no force and effect after June 30, 2029, or until such later date the Legislature terminates the pilot program.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-104. Guardian ad Litem Commission. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) There is hereby established the Guardian ad Litem Commission to provide assistance to Public Guardian ad Litem Services with regard to the general policies and procedures of the agency, including, but not limited to, the opening, closing, or merging of public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> offices throughout the state and the establishment of performance measures for the qualitative review of the services provided by guardians </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) In order to demonstrate a collaborative approach to solving issues relating to the legal representation of children in juvenile child abuse and neglect proceedings, the commission shall consist of the Executive Director of Public Guardian ad Litem Services, who shall serve as chair, and the following members appointed by the Governor:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) One former or retired circuit judge;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Four lawyers who have significant experience in providing guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> services, have been trained and certified as guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> by a training program authorized and approved by the West Virginia Supreme Court of Appeals, and have demonstrated a strong commitment to quality representation of minors in child abuse and neglect proceedings;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) One current chief public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) One nonlawyer with a demonstrated commitment to providing guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal services to minors in abuse and neglect proceedings;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) One person who is a member of an organization that advocates on behalf of minors who have been a party to a child abuse and neglect proceeding; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The commission shall meet at the times and places specified by the call of the chair: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That the commission shall meet no less than four times each year. Members shall serve without compensation but may receive reimbursement of actual and necessary expenses for each day or portion thereof engaged in this discharge of official duties in a manner consistent with the guidelines of the Travel Management Office of the Department of Administration.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The initial appointments made to the commission shall be for the duration of the pilot program. &nbsp;Thereafter, terms of office shall be for four years, each term ending on the same day of the same month of the year as did the term which it succeeds. Each member shall hold office from the date of his or her appointment until the end of the term for which he or she was appointed or until his or her successor qualifies for office. When a vacancy occurs as a result of death, resignation, or removal in the membership of this commission, it shall be filled by appointment within 30 days of the vacancy for the unexpired portion of the term in the same manner as original appointments. No member shall serve more than two consecutive full or partial terms and no person may be reappointed to the commission until at least two years have elapsed after the completion of a second successive term.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The appointed members of the commission serve four-year terms that shall coincide with the term of the Governor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The commission has the following powers and duties:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) To assist in developing standards regarding the qualifications and training for public guardians </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">, assistant public guardians </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">, and staff;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) To explore opportunities related to the training of appointed panel guardians </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) To evaluate, on an annual basis, the compensation and caseloads of public guardians </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) To develop standards for providing and compensating expert witnesses, investigators, social workers, and other persons who provide services related to guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal representation under this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) To study the feasibility and need of creating additional public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations, the activation of public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations and the formation of multi-circuit or regional public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations in accordance with the provisions of &sect;29-21A-108 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) To study the potential for the dissolution of public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) To monitor and make recommendations regarding the following activities of the board of directors of each public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation receiving funding pursuant to this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The appointment of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> and any assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> pursuant to </span><a name="_Hlk149653955"><span class="cs46AE26E6">&sect;29-21A-11</span></a><span class="cs46AE26E6">2 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The fixing of professional and clerical salaries pursuant to &sect;29-21A-112 of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The removal of any public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">, assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or other employee for misfeasance, malfeasance, or nonfeasance pursuant to &sect;29-21A-112 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-105. Purpose and duties of the West Virginia Public Guardian ad Litem Services.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The agency shall have as its principal purpose the development and improvement of programs by which the state provides guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal representation to eligible clients.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-106. Executive director.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Governor shall appoint, by and with the advice and consent of the Senate, the Executive Director of the West Virginia Public Guardian ad Litem Services, who shall serve at the will and pleasure of the Governor throughout this pilot program. The executive director shall be a qualified administrator as determined by the Governor and shall be a member of the bar of the Supreme Court of Appeals. In addition to the executive director there shall be such other employees as the executive director determines to be necessary. The executive director shall have the authority to promulgate rules and shall have such other authority and perform such duties as may be required or necessary to effectuate this article. The executive director shall provide supervision and direction to the other agency employees in the performance of their duties.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The executive director&#39;s annual salary shall be equivalent to the salary provided to the Executive Director of the West Virginia Public Defender Services, as provided in &sect;29-21-5 of this code.</span></p><h4 class="cs89687900">
+		<a name="_Hlk156486580"><span class="csF3C8A5A3">&sect;</span></a><span class="csF3C8A5A3">29-21A-107. Powers, duties, and limitations of the West Virginia Public Guardian ad Litem Services.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Consistent with the provisions of this article, the agency is authorized to make grants to, and contracts with, public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations and with individuals, partnerships, firms, corporations, and nonprofit organizations for the purpose of providing legal representation under this article and may make any other grants and contracts that are necessary to carry out the purposes and provisions of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The agency is authorized to accept and employ or dispose of in furtherance of the purposes of this article any money or property, real, personal, or mixed, tangible or intangible, received by gift, devise, bequest, or otherwise.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The agency shall establish and the executive director or his or her designee shall operate an accounting and auditing division to require and monitor the compliance with this article by public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations and other persons or entities receiving funding or compensation from the agency. The accounting and auditing division shall review all plans and proposals for grants and contracts and shall make a recommendation of approval or disapproval to the executive director. The accounting and auditing division shall prepare, or cause to be prepared, reports concerning the evaluation, inspection, or monitoring of public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations and other grantees, contractors, persons, or entities receiving financial assistance under this article and shall further carry out the agency&#39;s responsibilities for records and reports as set forth in &sect;29-21A-114 of this code. The accounting and auditing division shall require each public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation to submit financial statements monthly and to report monthly on the billable and nonbillable time of its professional employees, including time used in administration of the respective offices, so as to compare the time to similar time expended in nonpublic law offices for similar activities. The accounting and auditing division shall provide to the executive director assistance in the fiscal administration of all of the agency&#39;s divisions. This assistance shall include, but not be limited to, budget preparation and statistical analysis.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-108. Public Guardian ad Litem corporations; establishment thereof; requesting the Supreme Court to select the three circuits for pilot program.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) (1) In the following judicial circuits of the state, there is hereby created a public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation of the circuit for the duration of the pilot program herein established. &nbsp;The Legislature requests that the Supreme Court of Appeals decide three circuits where this pilot program shall be initially located and implemented. &nbsp;The Legislature requests that the Supreme Court of Appeals select one rural county as defined in this article, one urban county as defined in this article, and one special needs county as defined in this article by June 1, 2026. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Throughout the pilot project, the executive director, with the approval of the Guardian ad Litem Commission, may make recommendations to the Legislature regarding the creation, merger or dissolution of a public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation in a judicial circuit where the creation, merger or dissolution of such a public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation would improve the quality of guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal representation, assure the prudent and resourceful expenditure of state funds and further the purposes of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The purpose of these public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations is to provide legal representation in the respective circuits in accordance with the provisions of this article. A public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation may employ full-time attorneys and employ part-time attorneys in whatever combination that the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation deems most cost effective.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If the executive director, with the approval of the Guardian ad Litem Commission determines there is a need to make a recommendation to the Legislature to activate, merge, or dissolve a corporation in a judicial circuit of the state, pursuant to subsection (a) of this section, the Guardian ad Litem Commission shall first consult with and give substantial consideration to the recommendation of the judge or the chief judge of a circuit.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-109. Qualified panel attorneys to serve in cases of conflict.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">If a public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation is unable to provide legal representation to an eligible client in an eligible proceeding due to a conflict of interest, or any other reason a qualified panel attorney shall be appointed as a guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> to represent the interest of the eligible client pursuant to the provisions of &sect;29-21-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;</span><span class="csF3C8A5A3">29-21A-110. Approval of public guardian </span><span class="cs72E1F5C7">ad litem</span><span class="csF3C8A5A3"> corporation funding applications; funding; recordkeeping by public guardian </span><span class="cs72E1F5C7">ad litem</span><span class="csF3C8A5A3"> corporations.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) On or before May 1 of each year, each active public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation shall submit to the executive director and the Guardian ad Litem Commission a funding application and a proposed budget for the ensuing fiscal year. The accounting and auditing division shall review all funding applications and prepare recommendations for an operating plan and annual budget for each public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation throughout the pendency of the pilot program herein established. The executive director shall review the funding applications and the accounting and auditing recommendations and shall, in consultation with the board of directors of each public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation, prepare a plan for providing legal guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> services, execute a funding contract for the fiscal year and commit funds for that purpose throughout the pendency of the pilot program herein established.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Upon final approval of a funding application by the executive director, the approved budget shall be set forth in an approval notice. The total cost to the agency shall not exceed the amount set forth in the approval notice and the agency shall not be obligated to reimburse the recipient for costs incurred in excess of the amount unless and until a program modification has been approved in accordance with the provisions of this article. At the discretion of the executive director, when caseloads increase or unusual expenses occur, funding contracts may be amended during a fiscal year if necessary to provide cost effective representation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Funding of public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations or other programs or entities providing legal representation under the provisions of this article shall be by annual grants disbursed in such periodic allotments as the executive director shall deem appropriate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) All recipients of funding under this article shall maintain such records as required by the executive director.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-111. Limitation on use of funds; exceptions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Funds made available by the agency to public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations or other entities under this article, either by loan, grant or contract, and funds used for payments to qualified panel attorneys shall be used only to provide guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal representation for eligible clients involved in proceedings defined by this article as eligible proceedings.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Funds received from any source other than the agency shall not be used by a public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation for purposes prohibited by this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-112. Public Guardian ad Litem Corporation &mdash; Board of directors.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The governing body of each public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation shall be a board of directors consisting of persons who are residents of the area to be served by the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) In multi-county circuits, and in the case of multi-circuit or regional corporations, the county commission of each county within the area served shall appoint a director, who shall not be an attorney-at-law. The president of each county bar association within the area served shall appoint a director, who shall be an attorney-at-law that has satisfied all of the requisite training relating to the duties of a guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> as approved by the West Virginia Supreme Court of Appeals: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That in a county where there is not an organized and active bar association, the circuit court shall convene a meeting of the members of the bar of the court resident within the county and such members of the bar shall elect one of their number as a director. The Governor shall appoint one director, who shall serve as chairman, who may be an attorney-at-law, unless such appointment would result in there being an even number of directors, in which event the Governor shall appoint two directors, one of whom may be an attorney-at-law. The Governor&#39;s appointees shall serve throughout the pendency of this pilot program. Appointments may be made for unexpired terms as may be necessary. Other board members&#39; terms shall be as determined by the board.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) In single-county circuits, the manner of selecting directors shall be the same as that described in subdivision (1) of this subsection, except that the county commission shall appoint two directors rather than one, and the bar shall appoint two directors rather than one.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The board of directors shall have at least four meetings a year. Timely and effective prior public notice of all meetings shall be given pursuant to rules promulgated in accordance with the provisions of &sect;6-9A-3 of this code, and all meetings shall be public except for those concerned with matters properly discussed in executive session.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The board of directors shall establish and enforce board policies governing the operation of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation but shall not interfere with any attorney&#39;s professional responsibilities to clients. The duties of the board of directors shall include, but not be limited to, the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Appointment of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> and any assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> as may be necessary to enable the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation to provide legal representation to eligible clients; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Approval of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation&#39;s budget and the fixing of professional and clerical salaries: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That the compensation paid to any part-time public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">, part-time assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">, or other part-time employee shall not include benefits such as retirement, health insurance or paid leave time for illness or vacation unless Public Guardian ad Litem Services has certified in writing to the board of directors that there exists sufficient funding to provide such benefits and the board of directors authorizes such benefits to be included in the compensation; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Removal of any public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">, assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or other employee for misfeasance, malfeasance, or nonfeasance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) To the extent that the provisions of chapter 31</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">of this code regarding nonprofit corporations are not inconsistent with this article, the provisions of said chapter shall be applicable to the board of directors of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) While serving on the board of directors, no member may receive compensation from the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation, but a member may receive payment for normal travel and other out-of-pocket expenses required for fulfillment of the obligations of membership and may accept appointments to represent eligible clients so long as he or she does not discuss a particular case with any public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">, assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or other employee of the office governed by the board. Directors may not serve as co-counsel with the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> in any matter.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-113. Private practice of law by a public guardian </span><span class="cs72E1F5C7">ad litem</span><span class="csF3C8A5A3">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) No full-time public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or full-time assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> may engage in any private practice of law except as provided in this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A board of directors may permit a newly employed full-time public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or full-time assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> to engage in the private practice of law for compensation for the sole purpose of expeditiously closing and withdrawing from existing private cases from a prior private practice. In no event shall any person employed for more than 90 days as a full-time public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or full-time assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> be engaged in any other private practice of law for compensation</span><span class="cs1489E706">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A board of directors may permit a full-time public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or full-time assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> to engage in private practice for compensation if the guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> is acting pursuant to an appointment made under a court rule or practice of equal applicability to all attorneys in the jurisdiction and if the guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> remits to the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation all compensation received.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A board of directors may permit a full-time public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or full-time assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> to engage in uncompensated private practice of law if the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> or assistant public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> is acting:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Pursuant to an appointment made under a court rule or practice of equal applicability to all attorneys in the jurisdiction; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) On behalf of a close friend or family member; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) On behalf of a religious, community, or charitable group.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Violation of the requirements of this section is sufficient grounds for immediate summary dismissal regardless of the conditions of employment established by a corporation&#39;s board of directors.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-114. Records and reports.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) At all times during this pilot program, the agency is authorized to require such reports as it deems necessary from any public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation or other entity or person receiving funding under this article regarding activities carried out pursuant to this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The agency is authorized to prescribe the keeping of records with respect to the activities of public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporations and other grantees, contractors, persons, or entities receiving financial assistance under this article and shall have access to such records at all reasonable times for the purpose of ensuring compliance with the terms and conditions upon which financial assistance was provided.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Copies of all reports pertinent to the evaluation, inspection, or monitoring of any public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation, other grantee, contractor, person, or entity receiving financial assistance under this article shall be maintained by the agency for a period of at least five years subsequent to such evaluation, inspection, or monitoring. Such reports shall be available for public inspection during regular business hours, and copies shall be furnished, upon request, to interested parties upon payment of such reasonable fees as the agency may establish.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-115. Audits.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) At all times during this pilot program, accounts of each public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation shall be audited annually as soon as possible after the end of each state fiscal year. Such audits shall be conducted in accordance with generally accepted auditing standards by the State Tax Commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The audits shall be conducted at the place or places where the accounts of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation are normally kept. All books, accounts, financial records, reports, files, and other papers or property belonging to or in use by the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation and necessary to facilitate the audits shall be made available to the person or persons conducting the audits; and full facilities for verifying transactions with the balances and securities held by depositories, fiscal agents, and custodians shall be afforded to any such person.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The report of the annual audit shall be filed with the agency and shall be available for public inspection during business hours at the principal office of the public guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> corporation. The report of each such audit shall be maintained for a period of at least five years at the office of the agency or during the time of this pilot program, whichever timeframe is longer.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;29-21A-116. </span><a name="_Hlk157328682"><span class="csF3C8A5A3">Appointed qualified guardian </span><span class="cs72E1F5C7">ad litem</span><span class="csF3C8A5A3"> counsel immune from liability.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any qualified attorney who provides guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> legal representation under the provisions of this article under appointment by any court, and whose only compensation therefor is paid under the provisions of this article, shall be immune from liability arising from that representation in the same manner and to the same extent that prosecuting attorneys are immune from liability.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create a three-year pilot program named the West Virginia Public Guardian ad Litem Services Pilot Program to provide legal representation for children under a framework similar to the West Virginia Public Defender Services.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

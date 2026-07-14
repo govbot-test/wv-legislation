@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 1002 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=1002">&laquo; Senate Bill 1002 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 1002'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 1002 - Allowing counties and municipalities to create special assessment districts&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb1002+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=1002"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 1002</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Weld</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 19, 2026; referred<br/>to the Committee on Energy, Industry, and Mining; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding two new articles, designated &sect;7-12B-1, &sect;7-12B-2, &sect;7-12B-3, &sect;7-12B-4, &sect;7-12B-5, &sect;7-12B-6, &sect;7-12B-7, &sect;7-12B-8, &sect;7-12B-9, &sect;7-12B-10, &sect;7-12B-11, &sect;7-12B-12, &sect;7-12B-13, &sect;7-12B-14, &sect;7-12B-15, &sect;7-12B-16, &sect;7-12B-17, &sect;8-13D-1, &sect;8-13D-2, &sect;8-13D-3, &sect;8-13D-4, &sect;8-13D-5, &sect;8-13D-6, &sect;8-13D-7, &sect;8-13D-8, &sect;8-13D-9, &sect;8-13D-10, &sect;8-13D-11, &sect;8-13D-12, &sect;8-13D-13, &sect;8-13D-14, &sect;8-13D-15, &sect;8-13D-16, and &sect;8-13D-17, relating to authorizing the creation of special assessment districts; providing legislative findings and purposes; authorizing county commissions and municipalities to create special assessment districts for certain public improvements and providing procedures therefor; providing for the notice and hearing requirements and process; limiting the use of certain fees; establishing of certain district boards and their respective duties; authorizing the levy of certain service fees; creating certain special funds account and providing for funding sources; providing for the process to include additional property in an existing special assessment district; establishing the procedure to abolish and dissolve a special assessment district; and authorizing issuance of bonds or notes to finance certain public improvements.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">Chapter 7. County Commissions and Officers.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs456817A0">Article 12B. COUNTY SPECIAL Assessment Districts.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-1. Legislative Findings and Purposes.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Legislature hereby finds and declares available housing is critical in economic development in communities throughout the State of West Virginia and that in many of those communities there exists a lack of sufficient utility infrastructure to service new housing projects. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Legislature hereby finds and declares further that the cost to expand utility infrastructure under current law can be inequitably allocated among taxpayers and ratepayers in a geographic area that is wider than that which is directly benefited by the expansion of utility infrastructure to service new construction.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Legislature hereby finds and declares further that it is in the public interest to provide counties with the authority to create &quot;Special Assessment Districts&quot; to target the cost of the expansion of utility infrastructure to service new construction to those that own real property within a proximate geographic location of such an expansion and who, consequently, derive the greatest benefit from such projects.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-2. Authorization.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The county commission may, in accordance with the procedures and subject to the limitations set forth in this article, establish one or more special assessment districts within the county. The county commission may provide for the purpose of developing, financing, and implementing plans for public improvements and public services that benefit the district.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-3. Improvements.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any county which has established a special assessment district under this article may provide or cause to be provided such services as will restore or promote the general welfare of the county, including, but not limited to, the improvement and expansion of utility infrastructure to encourage the development of new housing projects.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-4. Notice; hearing.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Prior to the creation of special assessment district pursuant to this article of the code, the county commission shall set a time and place for a public hearing regarding the creation of any special assessment district. The notice of the public hearing shall be published as a Class I-0 legal advertisement in compliance with &sect;59-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code at least 20 days prior to the scheduled hearing. Such notice must also state:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;The purpose of the hearing;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;The name of the proposed district;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The boundaries of the proposed district;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;The purpose of the proposed district; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)&nbsp;The proposed method of financing any costs involved, including the maximum rate of annual fees that may be imposed upon any residents situated within the proposed district.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">At the time and place set forth in the notice, the governing body shall afford the opportunity to be heard to any residents of the county.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-5. Creation of district; statement of prohibition on use of fees.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;If the county commission, following the public hearing, determines it advisable and in the public interest to establish a special assessment district, it shall create the district by order. In addition to all other requirements, the order shall contain the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;The name of the district and a description of its boundaries;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;A summary of any proposed improvements to be made within the district and a reasonable estimate of any attendant cost;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&nbsp;The maximum rate of any annual fees that may be imposed upon the affected residents and the manner in which the rate will be imposed; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&nbsp;The district board members&#39; terms, their method of appointment and a full description of their powers and duties.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;The order shall also state the general intention of the county commission to cause the improvements within the special assessment district and that no fees collected under the authority of the order may be used to reduce, replace or supplant existing funds or services.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-6. District board; duties.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;The county commission that intends to establish a special assessment district, in accordance with this article, shall provide by order for the appointment of a district board to oversee the operations of the special assessment district. The board shall be made up of at least seven members.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;The district board, in addition to the duties prescribed by the order creating the special assessment district, shall submit an annual report to the governing body containing:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;An itemized statement of its receipts and disbursements for the preceding fiscal year;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;A description of its activities for the preceding fiscal year;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&nbsp;A recommended program of improvements to be performed or provided within the district for the coming fiscal year; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&nbsp;A proposed budget to accomplish its objectives.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;Nothing in this article prohibits any member of the district board from also serving on the board of directors of a nonprofit corporation with which the county may contract to provide specified services within the district.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;No member of the district board may receive, either directly or indirectly, compensation for service on the board.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-7. Levy of service fees; classification of properties; factors to consider.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;Upon receipt of a recommended program of improvements and a proposed budget from the district board, the county commission may annually, by order, levy special assessment service fees which may only be applicable to properties located within the special assessment district and only to the extent necessary to fund the budget proposed by the district board. All revenue from the fees shall by collected by the sheriff of the county in which the special assessment district is located and shall be placed in a special assessment district fund and may only be used to fund the improvements provided under this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;The order creating a special assessment district may provide for the division of property within the district into two or more zones or uses in the event significant differences exist relative to the real property and the existing improvements. The order may establish different rates of assessment for each zone or use, or may provide that the rate be a certain percentage of the assessment levied in the zone or on the use, subject to the highest rate of assessment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;The amount of the special assessment service fee shall be in addition to any county-wide license fees or any other tax, fee or charge levied for the general benefit and use of the county.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;Each assessment shall be a lien on the real property that is assessed, second only to any state, federal or county taxes levied on that property.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-8. Special assessment district fund.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any county that has established a special assessment district shall establish a special assessment district fund for each district created within such county. Revenue derived from any special assessment fees, gifts, grants, appropriations from the county or other sources shall be paid into the fund. Moneys in another county fund or funds may be advanced to the special fund only if reimbursement is made to such other fund or funds prior to the end of the fiscal year.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-9. Modification of included area; notice; hearing.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;The order creating a special assessment district may be amended to include additional property if a recommendation is filed by the affected district board with the county commission requesting such inclusion. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;Upon a recommendation by a majority of the members of a district board that the order establishing a special assessment areas should be amended to include additional property, the county commission shall designate a time and place for a public hearing upon the recommendation to include additional property. The notice shall meet the requirements set forth in &sect;7-12B-3 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;At the time and place set forth in the notice, the county commission shall afford the opportunity to be heard to any owners of real property either currently included in or proposed to be added to the existing special assessment district and to any other residents of the county. The hearing shall be held within 60 days after the county commission&#39;s receipt of the district board&#39;s recommendation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;All additional property included in a district shall be subject to all fees whether currently existing or thereafter levied.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-10. Abolishment and dissolution of district; notice; hearing.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;A district may be abolished by an affirmative vote of the majority of the members of the county commission following a public hearing upon the proposed abolishment. Notice of such hearing must be provided by first class mail to all property owners within the district and shall be published as a Class I-0 legal advertisement in compliance with &sect;59-3-1, </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code at least 20 days prior to the public hearing. Upon the abolishment of any special assessment district, any funds or other assets, contractual rights or obligations, claims against holders of indebtedness or other financial benefits, liabilities or obligations existing after full payment has been made on all existing contracts, bonds, notes or other obligations of the district, shall be transferred to the county. Any funds or other assets so transferred shall be used for the benefit of the area included in the special assessment district being abolished.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;Notwithstanding any other provision of this article, no special assessment district may exist for a period exceeding 20 years unless reinstated pursuant to the provisions of this article. Reinstatement requires compliance with all requirements and procedures set forth herein for the initial development and establishment of a district. Upon the dissolution of any special assessment district, any funds or other assets, contractual rights or obligations, claims against holders of indebtedness, or other financial benefits, liabilities or obligations existing after full payment has been made on all contracts, bonds, notes or other obligations of the district, shall be transferred to the county. Any funds or other assets so transferred shall be used for the benefit of the area included in the improvement district being dissolved.</span></p><h4 class="cs89687900">
+		<a name="_Hlk220499919"><span class="csF3C8A5A3">&sect;7-12B-11. Bonds issued to finance special assessment district improvements.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;</span><span class="cs1489E706">General</span><span class="cs46AE26E6">. -- The county commission that established the special assessment district may issue bonds or notes for the purpose of financing special assessment district improvements, as described in section three of this article, with respect to one or more special assessment district improvements within the special assessment district.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;</span><span class="cs1489E706">Limited obligations</span><span class="cs46AE26E6">. -- All bonds and notes issued by a county commission under the authority of this article are limited obligations of the county.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;</span><span class="cs1489E706">Term of obligations</span><span class="cs46AE26E6">. -- No county commission may issue notes, bonds or other instruments for the purpose of funding special assessment district improvements that exceed a repayment schedule of 20 years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;</span><span class="cs1489E706">Debt service</span><span class="cs46AE26E6">. -- The principal and interest on the bonds shall be payable out of the funds on deposit in the special assessment district fund for the special assessment district pursuant to section eight of this article, including, without limitation, any funds derived from the special assessment fees imposed by section seven of this article or other revenues derived from the special assessment district to the extent pledged for the purpose set forth by the county commission in the resolution authorizing the bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)&nbsp;</span><span class="cs1489E706">Debt not general obligation of county</span><span class="cs46AE26E6">. -- Neither the notes or bonds and any interest coupons issued under the authority of this article shall ever constitute an indebtedness of the county commission issuing the notes or bonds within the meaning of any constitutional provision or statutory limitation and shall never constitute or give rise to a pecuniary liability of the county commission issuing the notes or bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f)&nbsp;</span><span class="cs1489E706">Debt not a charge general credit or taxing powers of county</span><span class="cs46AE26E6">. -- Neither the bonds or notes, nor interest thereon, shall ever constitute a charge against the general credit or taxing powers of the county commission and that fact shall be plainly stated on the face of each bond or note.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g)&nbsp;</span><span class="cs1489E706">Issuance of bonds or notes</span><span class="cs46AE26E6">. --</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;Bonds or notes allowed under this section may be executed, issued and delivered at any time and from time to time, may be in a form and denomination, may be of a tenor, must be negotiable but may be registered as to the principal thereof or as to the principal and interest thereof, may be payable in any amounts and at any time or times, may be payable at any place or places, may bear interest at any rate or rates payable at any place or places and evidenced in any manner and may contain any provisions therein not inconsistent herewith, all as provided in the order or orders of the county commission whereunder the bonds or notes are authorized to be issued.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;The bonds may be sold by the county commission at public or private sale at, above or below par as the county commission authorizes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&nbsp;Bonds and notes issued pursuant to this article shall be signed by the president of the county commission, or other chief officer thereof, and attested by the county clerk and be under the seal of the county.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&nbsp;Any coupons attached to the bonds shall bear the facsimile signature of the president of the commission or other chief officer thereof. In case any of the officials whose signatures appear on the bonds, notes or coupons cease to be officers before the delivery of the bonds or notes, their signatures shall, nevertheless, be valid and sufficient for all purposes to the same extent as if they had remained in office until the delivery.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i)&nbsp;</span><span class="cs1489E706">Additional bonds or notes</span><span class="cs46AE26E6">. -- If the proceeds of the bonds or notes, by error of calculation or otherwise, are less than the cost of the special assessment district improvement project, or if additional real or personal property is to be added to the special assessment district improvement project or if it is determined that financing is needed for additional development or redevelopment expenditures, additional bonds or notes may, in like manner, be issued to provide the amount of the deficiency or to defray the cost of acquiring or financing any additional real or personal property or development or redevelopment expenditures and, unless otherwise provided for in the trust agreement are considered to be of the same issue and shall be entitled to payment from the same fund, without preference or priority, and shall be of equal priority as to any security.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-12. Security for bonds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs1489E706">General</span><span class="cs46AE26E6">. -- Unless the county commission otherwise determines in the order authorizing the issuance of the bonds or notes under the authority of this article, there is hereby created a statutory lien upon the special assessment district fund for the special assessment district pursuant to section eight of this article and all special assessment district revenues collected for the benefit of the special assessment district pursuant to section seven of this article for the purpose of securing the principal of the bonds or notes and the interest thereon.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs1489E706">Security for debt service</span><span class="cs46AE26E6">. -- The principal of and interest on any bonds or notes issued under the authority of this article shall be secured by a pledge of the special assessment district revenues derived from the special assessment district improvement by the county commission issuing the bonds or notes to the extent provided in the order adopted by the county commission authorizing the issuance of the bonds or notes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs1489E706">Trust indenture</span><span class="cs46AE26E6">. --</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) In the discretion and at the option of the county commission, the bonds and notes may also be secured by a trust indenture by and between the county commission and a corporate trustee, which may be a trust company or bank having trust powers, within or without the State of West Virginia.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The resolution order authorizing and detailing the bonds or notes may provide that the trust indenture may contain the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Provisions providing for protection and enforcing the rights and remedies of the bondholders as are reasonable and proper, not in violation of law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Covenants setting forth (i) the duties of the county commission in relation to the construction, acquisition or financing of an special assessment district improvement, or part thereof or an addition thereto, (ii) the improvement, repair, maintenance and insurance thereof and for the custody, safeguarding and application of all moneys, and (iii) that the special assessment district improvement shall be constructed and paid for under the supervision and approval of the consulting engineers or architects employed and designated by the county commission or by the district board, and satisfactory to the purchasers of the bonds or notes, their successors, assigns or nominees.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The indenture may set forth the rights and remedies of the bondholders, the county commission or trustee and the indenture may provide for accelerating the maturity of the revenue bonds, at the option of the bondholders or the county commission issuing the bonds, upon default in the payment of the amounts due under the bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The county commission may also provide by resolution and in the trust indenture for the payment of the proceeds of the sale of the bonds or notes and the revenues from the special assessment district to any depository it determines, for the custody and investment thereof and for the method of distribution thereof, with safeguards and restrictions it determines to be necessary or advisable for the protection thereof and upon the filing of a certified copy of the resolution or of the indenture for record in the office of the clerk of the county commission of the county in which the special assessment district is located, the resolution has the same effect, as to notice, as the recordation of a deed of trust or other recordable instrument.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) In the event that more than one certified resolution or indenture is recorded, the security interest granted by the first recorded resolution or indenture has priority in the same manner as an earlier filed deed of trust except to the extent the earlier recorded resolution or indenture provides otherwise.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) </span><span class="cs1489E706">Enforcement of obligations</span><span class="cs46AE26E6">. The proceedings authorizing any bonds and any indenture may provide that, in the event of default in payment of the principal of or the interest on the bonds, or notes, or in the performance of any agreement contained in the proceedings, indenture, payment and performance may be enforced by the appointment of a receiver in equity with power to charge and collect rents or other amounts and to apply the revenues from the special assessment district in accordance with the proceedings or the provisions of the agreement or indenture.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) </span><span class="cs1489E706">No pecuniary liability</span><span class="cs46AE26E6">. -- No breach of any agreement or indenture may impose any pecuniary liability upon a county or any charge upon its general credit or against its taxing powers.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-13. Redemption of bonds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The revenue bonds issued pursuant to this article may contain a provision therein to the effect that they, or any of them, may be called for redemption at any time prior to maturity by the county commission and at the redemption prices or premiums, which terms shall be stated in the bond.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-14. Refunding bonds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;Any bonds issued under this article and at any time outstanding may at any time, and from time to time, be refunded by a county commission by the issuance of its refunding bonds in amount as the county commission considers necessary to refund the principal of the bonds to be refunded, together with any unpaid interest thereon; to make any improvements or alterations in the special assessment district project; and any premiums and commissions necessary to be paid in connection therewith.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;Any refunding may be effected whether the bonds to be refunded shall have then matured or shall thereafter mature, either by sale of the refunding bonds and the application of the proceeds thereof for the redemption of the bonds to be refunded thereby, or by exchange of the refunding bonds for the bonds to be refunded thereby:&nbsp;</span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That the holders of any bonds to be refunded shall not be compelled without their consent to surrender their bonds for payment or exchange prior to the date on which they are payable or, if they are called for redemption, prior to the date on which they are by their terms subject to redemption.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;Any refunding bonds issued under the authority of this article is subject to the provisions contained in section eleven of this article and shall be secured in accordance with the provisions of section twelve of this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-15. Use of proceeds from sale of bonds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;</span><span class="cs1489E706">General</span><span class="cs46AE26E6">. -- The proceeds from the sale of any bonds issued under authority of this article shall be applied only for the purpose for which the bonds were issued:&nbsp;</span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That any accrued interest received in any sale shall be applied to the payment of the interest on the bonds sold:&nbsp;</span><span class="cs1489E706">Provided, however</span><span class="cs46AE26E6">, That if for any reason any portion of the proceeds may not be needed for the purpose for which the bonds were issued, then the unneeded portion of the proceeds may be applied to the purchase of bonds for cancellation or payment of the principal of or the interest on the bonds, or held in reserve for the payment thereof.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;</span><span class="cs1489E706">Payment of costs</span><span class="cs46AE26E6">. -- The costs that may be paid with the proceeds of the bonds include all improvement expenditures described in section three of this article and may also include, but not be limited to, the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;All expenses incurred in connection with the authorization, sale and issuance of the bonds to finance the improvement and the interest on the bonds for a reasonable time prior to construction during construction and for not exceeding 12 months after completion of construction of the improvements; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;Any other costs and expenses reasonably necessary in the establishment of special assessment district improvement and the financing thereof.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-16. Bonds made legal investments.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Bonds issued under the provisions of this article are legal investments for banks, building and loan associations and insurance companies organized under the laws of this state and for a business development corporation organized pursuant to chapter thirty-one, article fourteen of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;7-12B-17. Exemption from taxation.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The revenue bonds and notes issued pursuant to this article and the income therefrom are exempt from taxation except inheritance, estate and transfer taxes; and the real and personal property which a county commission or district board acquires pursuant to the provisions of this article are exempt from taxation by the state, or any county, municipality, or other levying body, as public property so long as the property is owned by the county commission or district board.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">Chapter 8. Municipal Corporations.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs456817A0">Article 13D. MuNICIPAL SPECIAL Assessment Districts.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-1. Legislative Findings and Purposes.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Legislature hereby finds and declares available housing is critical in economic development in communities throughout the State of West Virginia and that in many of those communities there exists a lack of sufficient utility infrastructure to service new housing projects. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Legislature hereby finds and declares further that the cost to expand utility infrastructure under current law can be inequitably allocated among taxpayers and ratepayers in a geographic area that is wider than that which is directly benefited by the expansion of utility infrastructure to service new construction.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Legislature hereby finds and declares further that it is in the public interest to provide municipalities with the authority to create &quot;Special Assessment Districts&quot; to target the cost of the expansion of utility infrastructure to service new construction to those that own real property within a proximate geographic location of such an expansion and who, consequently, derive the greatest benefit from such projects.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-2. Authorization.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The governing body of any municipality may, in accordance with the procedures and subject to the limitations set forth in this article, establish one or more special assessment districts within the municipality. The municipality may provide for the purpose of developing, financing, and implementing plans for public improvements and public services that benefit the district.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-3. Improvements.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any municipality which has established a special assessment district under this article may provide or cause to be provided such services as will restore or promote the general welfare of the municipality, including, but not limited to, the improvement and expansion of utility infrastructure to encourage the development of new housing projects.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-4. Notice; hearing.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Prior to the creation of special assessment district pursuant to this article of the code, the governing body of the municipality shall set a time and place for a public hearing regarding the creation of any special assessment district. The notice of the public hearing shall be published as a Class I-0 legal advertisement in compliance with &sect;59-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code at least 20 days prior to the scheduled hearing. Such notice must also state:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;The purpose of the hearing;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;The name of the proposed district;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The boundaries of the proposed district;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&nbsp;The purpose of the proposed district; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5)&nbsp;The proposed method of financing any costs involved, including the maximum rate of annual fees that may be imposed upon any residents situated within the proposed district.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) At the time and place set forth in the notice, the governing body shall afford the opportunity to be heard to any residents of the municipality.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-5. Creation of district; statement of prohibition on use of fees.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;If the governing body of the municipality, following the public hearing, determines it advisable and in the public interest to establish a special assessment district, it shall create the district by ordinance as provided for in article eleven of this chapter. In addition to all other requirements, the ordinance shall contain the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;The name of the district and a description of its boundaries;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;A summary of any proposed improvements to be made within the district and a reasonable estimate of any attendant cost;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&nbsp;The maximum rate of any annual fees that may be imposed upon the affected residents and the manner in which the rate will be imposed; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&nbsp;The district board members&#39; terms, their method of appointment and a full description of their powers and duties.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;The ordinance shall also state the general intention of the municipality to cause the improvements within the special assessment district and that no fees collected under the authority of the ordinance may be used to reduce, replace or supplant existing funds or services.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-6. District board; duties.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;The governing body of any municipality that intends to establish a special assessment district, in accordance with this article, shall provide by ordinance for the appointment of a district board to oversee the operations of the special assessment district. The board shall be made up of at least seven members.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;The district board, in addition to the duties prescribed by the ordinance creating the special assessment district, shall submit an annual report to the governing body containing:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;An itemized statement of its receipts and disbursements for the preceding fiscal year;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;A description of its activities for the preceding fiscal year;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&nbsp;A recommended program of improvements to be performed or provided within the district for the coming fiscal year; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&nbsp;A proposed budget to accomplish its objectives.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;Nothing in this article prohibits any member of the district board from also serving on the board of directors of a nonprofit corporation with which the municipality may contract to provide specified services within the district.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;No member of the district board may receive, either directly or indirectly, compensation for service on the board.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-7. Levy of service fees; classification of properties; factors to consider.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;Upon receipt of a recommended program of improvements and a proposed budget from the district board, the governing body of the municipality may annually, by ordinance, levy special assessment service fees which may only be applicable to properties located within the special assessment district and only to the extent necessary to fund the budget proposed by the district board. All revenue from the fees shall be collected by the sheriff of the county in which the special assessment district is located and placed in a special assessment district fund and may only be used to fund the improvements provided under this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;The ordinance creating a special assessment district may provide for the division of property within the district into two or more zones or uses in the event significant differences exist relative to the property and the existing improvements. The ordinance may establish different rates of assessment for each zone or use, or may provide that the rate be a certain percentage of the assessment levied in the zone or on the use, subject to the highest rate of assessment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The ordinance creating a special assessment district may provide for the division of property within the district into two or more zones or uses in the event significant differences exist relative to the real property and the existing improvements. The ordinance may establish different rates of assessment for each zone or use, or may provide that the rate be a certain percentage of the assessment levied in the zone or on the use, subject to the highest rate of assessment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;The amount of the special assessment service fee shall be in addition to any municipality-wide license fees or any other tax, fee or charge levied for the general benefit and use of the municipality.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;Each assessment shall be a lien on the real property that is assessed, second only to any state, federal or county taxes levied on that property.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-8. Special assessment district fund.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any municipality that has established a special assessment district shall establish a special assessment district fund for each district created within such municipality. Revenue derived from any special assessment fees, gifts, grants, appropriations from the municipality or other sources shall be paid into the fund. Moneys in another municipal fund or funds may be advanced to the special fund only if reimbursement is made to such other fund or funds prior to the end of the fiscal year.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-9. Modification of included area; notice; hearing.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;The ordinance creating a special assessment district may be amended to include additional property if a recommendation is filed by the affected district board with the governing body of the municipality requesting such inclusion. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;Upon a recommendation by a majority of the members of a district board that the ordinance establishing a special assessment areas should be amended to include additional property, the governing body of the municipality shall designate a time and place for a public hearing upon the recommendation to include additional property. The notice shall meet the requirements set forth in &sect;8-13D-3 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;At the time and place set forth in the notice, the governing body of the municipality shall afford the opportunity to be heard to any owners of real property either currently included in or proposed to be added to the existing special assessment district and to any other residents of the municipality. The hearing shall be held within 60 days after the governing body of the municipality&rsquo;s receipt of the district board&#39;s recommendation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;All additional property included in a district shall be subject to all fees whether currently existing or thereafter levied.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-10. Abolishment and dissolution of district; notice; hearing.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;A district may be abolished an affirmative vote of the majority of the members of the by the governing body of the municipality following a public hearing upon the proposed abolishment. Notice of such hearing must be provided by first class mail to all property owners within the district and shall be published as a Class I-0 legal advertisement in compliance with &sect;59-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code at least 20 days prior to the public hearing. Upon the abolishment of any special assessment district, any funds or other assets, contractual rights or obligations, claims against holders of indebtedness or other financial benefits, liabilities or obligations existing after full payment has been made on all existing contracts, bonds, notes or other obligations of the district, shall be transferred to the municipality. Any funds or other assets so transferred shall be used for the benefit of the area included in the special assessment district being abolished.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;Notwithstanding any other provision of this article, no special assessment district may exist for a period exceeding 20 years unless reinstated pursuant to the provisions of this article. Reinstatement requires compliance with all requirements and procedures set forth herein for the initial development and establishment of a district. Upon the dissolution of any special assessment district, any funds or other assets, contractual rights or obligations, claims against holders of indebtedness, or other financial benefits, liabilities or obligations existing after full payment has been made on all contracts, bonds, notes or other obligations of the district, shall be transferred to the municipality. Any funds or other assets so transferred shall be used for the benefit of the area included in the improvement district being dissolved.</span></p><h4 class="cs89687900">
+		<a name="_Hlk220499895"><span class="csF3C8A5A3">&sect;8-13D-11. Bonds issued to finance special assessment district improvements.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;</span><span class="cs1489E706">General</span><span class="cs46AE26E6">. -- The municipality that established the special assessment district may issue bonds or notes for the purpose of financing special assessment district improvements, as described in section three of this article, with respect to one or more special assessment district improvements within the special assessment district.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;</span><span class="cs1489E706">Limited obligations</span><span class="cs46AE26E6">. -- All bonds and notes issued by a municipality under the authority of this article are limited obligations of the municipality.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;</span><span class="cs1489E706">Term of obligations</span><span class="cs46AE26E6">. -- No municipality may issue notes, bonds or other instruments for the purpose of funding special assessment district improvements that exceed a repayment schedule of 20 years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&nbsp;</span><span class="cs1489E706">Debt service</span><span class="cs46AE26E6">. -- The principal and interest on the bonds shall be payable out of the funds on deposit in the special assessment district fund for the special assessment district pursuant to section eight of this article, including, without limitation, any funds derived from the special assessment fees imposed by section seven of this article or other revenues derived from the special assessment district to the extent pledged for the purpose set forth by the municipality in the ordinance authorizing the bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)&nbsp;</span><span class="cs1489E706">Debt not general obligation of municipality</span><span class="cs46AE26E6">. -- Neither the notes or bonds and any interest coupons issued under the authority of this article shall ever constitute an indebtedness of the municipality issuing the notes or bonds within the meaning of any constitutional provision or statutory limitation and shall never constitute or give rise to a pecuniary liability of the municipality issuing the notes or bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f)&nbsp;</span><span class="cs1489E706">Debt not a charge general credit or taxing powers of municipality</span><span class="cs46AE26E6">. -- Neither the bonds or notes, nor interest thereon, is a charge against the general credit or taxing powers of the municipality and that fact shall be plainly stated on the face of each bond or note.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h)&nbsp;</span><span class="cs1489E706">Issuance of bonds or notes</span><span class="cs46AE26E6">. --</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;Bonds or notes allowed under this section may be executed, issued and delivered at any time and from time to time, may be in a form and denomination, may be of a tenor, must be negotiable but may be registered as to the principal thereof or as to the principal and interest thereof, may be payable in any amounts and at any time or times, may be payable at any place or places, may bear interest at any rate or rates payable at any place or places and evidenced in any manner and may contain any provisions therein not inconsistent herewith, all as provided in the ordinance of the municipality whereunder the bonds or notes are authorized to be issued.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;The bonds may be sold by the municipality at public or private sale at, above or below par as the municipality authorizes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&nbsp;Bonds and notes issued pursuant to this article shall be signed by the authorized representative of the municipality and attested by the municipal clerk or recorder and be under the seal of the municipality.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&nbsp;Any coupons attached to the bonds shall bear the facsimile signature of the authorized representative of the municipality. If any of the officials whose signatures appear on the bonds, notes or coupons cease to be officers before the delivery of the bonds or notes, their signatures are valid and sufficient for all purposes to the same extent as if they had remained in office until the delivery.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i)&nbsp;</span><span class="cs1489E706">Additional bonds or notes</span><span class="cs46AE26E6">. -- If the proceeds of the bonds or notes, by error of calculation or otherwise, are less than the cost of the special assessment district improvement project, or if additional real or personal property is to be added to the special assessment district improvement project or if it is determined that financing is needed for additional development or redevelopment expenditures, additional bonds or notes may, in like manner, be issued to provide the amount of the deficiency or to defray the cost of acquiring or financing any additional real or personal property or development or redevelopment expenditures and, unless otherwise provided for in the trust agreement are considered to be of the same issue and shall be entitled to payment from the same fund, without preference or priority, and shall be of equal priority as to any security.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-12. Security for bonds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs1489E706">General</span><span class="cs46AE26E6">. -- Unless the municipality otherwise determines in the ordinance authorizing the issuance of the bonds or notes under the authority of this article, there is hereby created a statutory lien upon the special assessment district fund for the special assessment district pursuant to section eight of this article and all special assessment district revenues collected for the benefit of the special assessment district pursuant to section seven of this article for the purpose of securing the principal of the bonds or notes and the interest thereon.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs1489E706">Security for debt service</span><span class="cs46AE26E6">. -- The principal of and interest on any bonds or notes issued under the authority of this article shall be secured by a pledge of the special assessment district revenues derived from the special assessment district improvement by the municipality issuing the bonds or notes to the extent provided in the ordinance adopted by the municipality authorizing the issuance of the bonds or notes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs1489E706">Trust indenture</span><span class="cs46AE26E6">. --</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) In the discretion and at the option of the municipality, the bonds and notes may also be secured by a trust indenture by and between the municipality and a corporate trustee, which may be a trust company or bank having trust powers, within or without the State of West Virginia.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The resolution ordinance authorizing and detailing the bonds or notes may provide that the trust indenture may contain the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Provisions providing for protection and enforcing the rights and remedies of the bondholders as are reasonable and proper, not in violation of law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Covenants setting forth (i) the duties of the governing body of the municipality in relation to the construction, acquisition or financing of an special assessment district improvement, or part thereof or an addition thereto, (ii) the improvement, repair, maintenance and insurance thereof and for the custody, safeguarding and application of all moneys, and (iii) that the special assessment district improvement shall be constructed and paid for under the supervision and approval of the consulting engineers or architects employed and designated by the governing body of the municipality or by the district board, and satisfactory to the purchasers of the bonds or notes, their successors, assigns or nominees; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Other provisions as determined by the governing body of the municipality.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The indenture may set forth the rights and remedies of the bondholders, the municipality or trustee and the indenture may provide for accelerating the maturity of the revenue bonds, at the option of the bondholders or the municipality issuing the bonds, upon default in the payment of the amounts due under the bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The municipality may also provide by resolution and in the trust indenture for the payment of the proceeds of the sale of the bonds or notes and the revenues from the special assessment district to any depository it determines, for the custody and investment thereof and for the method of distribution thereof, with safeguards and restrictions it determines to be necessary or advisable for the protection thereof and upon the filing of a certified copy of the resolution or of the indenture for record with the clerk or recorder of the municipality in which the special assessment district is located, the resolution has the same effect, as to notice, as the recordation of a deed of trust or other recordable instrument.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) In the event that more than one certified resolution or indenture is recorded, the security interest granted by the first recorded resolution or indenture has priority in the same manner as an earlier filed deed of trust except to the extent the earlier recorded resolution or indenture provides otherwise.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) </span><span class="cs1489E706">Enforcement of obligations</span><span class="cs46AE26E6">. The proceedings authorizing any bonds and any indenture may provide that, in the event of default in payment of the principal of or the interest on the bonds, or notes, or in the performance of any agreement contained in the proceedings, indenture, payment and performance may be enforced by the appointment of a receiver in equity with power to charge and collect rents or other amounts and to apply the revenues from the special assessment district in accordance with the proceedings or the provisions of the agreement or indenture.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) </span><span class="cs1489E706">No pecuniary liability</span><span class="cs46AE26E6">. -- No breach of any agreement or indenture may impose any pecuniary liability upon a municipality or any charge upon its general credit or against its taxing powers.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-13. Redemption of bonds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The revenue bonds issued pursuant to this article may contain a provision therein to the effect that they, or any of them, may be called for redemption at any time prior to maturity by the municipality and at the redemption prices or premiums, which terms shall be stated in the bond.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-14. Refunding bonds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;Any bonds issued under this article and at any time outstanding may at any time, and from time to time, be refunded by a municipality by the issuance of its refunding bonds in amount as the municipality considers necessary to refund the principal of the bonds to be refunded, together with any unpaid interest thereon; to make any improvements or alterations in the special assessment district project; and any premiums and commissions necessary to be paid in connection therewith.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;Any refunding may be effected whether the bonds to be refunded shall have then matured or shall thereafter mature, either by sale of the refunding bonds and the application of the proceeds thereof for the redemption of the bonds to be refunded thereby, or by exchange of the refunding bonds for the bonds to be refunded thereby:&nbsp;</span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That the holders of any bonds to be refunded shall not be compelled without their consent to surrender their bonds for payment or exchange prior to the date on which they are payable or, if they are called for redemption, prior to the date on which they are by their terms subject to redemption.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&nbsp;Any refunding bonds issued under the authority of this article is subject to the provisions contained in section eleven of this article and shall be secured in accordance with the provisions of section twelve of this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-15. Use of proceeds from sale of bonds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)&nbsp;</span><span class="cs1489E706">General</span><span class="cs46AE26E6">. -- The proceeds from the sale of any bonds issued under authority of this article shall be applied only for the purpose for which the bonds were issued:&nbsp;</span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That any accrued interest received in any sale shall be applied to the payment of the interest on the bonds sold:&nbsp;</span><span class="cs1489E706">Provided, however</span><span class="cs46AE26E6">, That if for any reason any portion of the proceeds may not be needed for the purpose for which the bonds were issued, then the unneeded portion of the proceeds may be applied to the purchase of bonds for cancellation or payment of the principal of or the interest on the bonds, or held in reserve for the payment thereof.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&nbsp;</span><span class="cs1489E706">Payment of costs</span><span class="cs46AE26E6">. -- The costs that may be paid with the proceeds of the bonds include all improvement expenditures described in section three of this article and may also include, but not be limited to, the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&nbsp;All expenses incurred in connection with the authorization, sale and issuance of the bonds to finance the improvement and the interest on the bonds for a reasonable time prior to construction during construction and for not exceeding 12 months after completion of construction of the improvements; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&nbsp;Any other costs and expenses reasonably necessary in the establishment of special assessment district improvement and the financing thereof.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-16. Bonds made legal investments.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Bonds issued under the provisions of this article are legal investments for banks, building and loan associations and insurance companies organized under the laws of this state and for a business development corporation organized pursuant to chapter thirty-one, article fourteen of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;8-13D-17. Exemption from taxation.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The revenue bonds and notes issued pursuant to this article and the income therefrom are exempt from taxation except inheritance, estate and transfer taxes; and the real and personal property which a municipality or district board acquires pursuant to the provisions of this article are exempt from taxation by the state, or any county, municipality, or other levying body, as public property so long as the property is owned by the municipality or district board.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to allow counties and municipalities to create special assessment districts.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5648 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5648">&laquo; House Bill 5648 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5648'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5648 - Relating to the regulation and oversight of the provision of electricial power to consumers in this State&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5648+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5648"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.csFCE4DED{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: line-through;}
+		.cs7F85AE1E{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs3A3F442A{color:#ED7D31;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5648</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Eldridge and Jordan </span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 17, 2026; referred to the Committee on Energy and Public Works]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;24-1-1, &sect;24-1-6, &sect;24-2-3a, &sect;24-2-17, and &sect;24-2A-1 of the Code of West Virginia, 1931, as amended; to amend the code by adding three new sections, designated &sect;24-1-1e, &sect;24-2A-6, and &sect;24-2F-1; and to amend the code by adding two new articles, designated &sect;24-2J-1, &sect;24-2J-2, &sect;24-2J-3, &sect;24-2J-4, &sect;24-2J-5, &sect;24-2K-1, &sect;24-2K-2, &sect;24-2K-3, &sect;24-2K-4, &sect;24-2K-5, and &sect;24-2K-6, relating to the regulation and oversight of the provision of electrical power to consumers in this state; revising legislative policy; establishing priority for customer interests; requiring hearings for public comment when rate requests affect certain amounts of customers; requiring a utility to notify customers when it requests a rate increase; expanding the duties of electrical utilities with regard to registry of persons dependent upon life support; specifying procedures for termination of services for non-payment; defining portable solar generation devices and exempting such devices from interconnection agreements or notice to electrical power utilities; authorizing the establishment of distributed power plant programs; defining terms; listing legislative findings; requiring electrical utilities to develop and submit distributed power plant programs; authorizing participation of customers with alternate means of generation and storage of electrical power; authorizing alternate means and timing of payments for electrical power within distributed power plans; allowing for cost recovery at reasonable rates; requiring the development of performance targets and requiring reports from utilities in furtherance thereof; establishing a community energy program establishing or authorizing the operation of certain power generation facilities under a subscriber model; defining terms; requiring the proposal of legislative rules; providing for the allocation and recovery of certain costs; requiring the formation of an interconnection working group and the preparation of a report therefrom; establishing a sunset date; and updating and reformatting of outdated references within the code.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. GENERAL PROVISIONS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;24-1-1. Legislative purpose and policy; plan for internal reorganization; promulgation of plan as rule; cooperation with Joint Committee on Government and Finance.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) It is the purpose and policy of the Legislature in enacting this chapter to confer upon the Public Service Commission of this state the authority and duty to enforce and regulate the practices, services and rates of public utilities in order to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Ensure fair and prompt regulation of public utilities in the interest of the using and consuming public;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Provide </span><span class="cs68EFC440">the availability of adequate, economical</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">safe, affordable,</span><span class="csEF05ACC"> and reliable utility services throughout the state;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Encourage the well-planned development of utility resources in a manner consistent with state needs and in ways consistent with the productive use of the state&#39;s energy resources, such as coal;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Ensure that rates and charges for utility services are just, reasonable, applied without unjust discrimination or preference, applied in a manner consistent with the purposes and policies set forth in </span><span class="cs68EFC440">article two-a of this chapter</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;24-2A-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code</span><span class="csEF05ACC"> and based primarily on the costs of providing these services;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Encourage energy conservation and the effective and efficient management of regulated utility enterprises; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Encourage removal of artificial barriers to rail carrier service, stimulate competition, stimulate the free flow of goods and passengers throughout the state and promote the expansion of the tourism industry, thereby improving the economic condition of the state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Legislature creates the Public Service Commission to exercise the legislative powers delegated to it. The Public Service Commission is charged with the responsibility for appraising and </span><span class="cs68EFC440">balancing</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">prioritizing</span><span class="csEF05ACC"> the interests of current and future utility service customers, </span><span class="cs46AE26E6">while giving consideration to</span><span class="csEF05ACC"> the general interests of the state&#39;s economy and the interests of the utilities subject to its jurisdiction in its deliberations and decisions.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The Legislature directs the Public Service Commission to identify, explore and consider the potential benefits or risks associated with emerging and state-of-the-art concepts in utility management, rate design and conservation. The commission may conduct inquiries and hold hearings regarding such concepts in order to provide utilities subject to its jurisdiction and other interested persons the opportunity to comment and shall report to the Governor and the Legislature regarding its findings and policies to each of these areas not later than the first day of the regular session of the Legislature in the year 1985, and every two years thereafter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) It is legislative policy to ensure that the Legislature and the general public become better informed regarding the regulation of public utilities in this state and the conduct of the business of the Public Service Commission. To aid in the achievement of this policy, the Public Service Commission annually shall present to the Joint Committee on Government and Finance, created by article three, chapter four of this code, or a subcommittee designated by the joint committee, a management summary report which describes in a concise manner:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The major activities of the commission for the year especially as such activities relate to the implementation of the provisions of this chapter;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Important policy decisions reached and initiatives undertaken during the year;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The current balance of supply and demand for natural gas and electric utility services in the state and forecast of the probable balance for the next </span><span class="cs68EFC440">ten</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">10</span><span class="csEF05ACC"> years; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Other information considered by the commission to be important including recommendations for statutory reform and the reasons for such recommendations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) In addition to any other studies and reports required to be conducted and made by the Public Service Commission pursuant to any other provision of this section, the commission shall study and initially report to the Legislature no later than the first day of the regular session of the Legislature in the year 1980 upon:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The extent to which natural gas wells or wells heretofore supplying gas utilities in this state have been capped off or shut in; the number of such wells; their probable extent of future production and the reasons given and any justification for capping off or shutting in such wells; the reasons, if any, why persons engaged or heretofore engaged in the development of gas wells in this state or the Appalachian areas have been discouraged from drilling, developing or selling the production of such wells; and whether there are fixed policies by any utility or group of utilities to avoid the purchase of natural gas produced in the Appalachian region of the United States generally and in West Virginia specifically.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The extent of the export and import of natural gas utility supplies in West Virginia.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The cumulative effect of the practices mentioned in subdivisions (1) and (2) of this subsection upon rates theretofore and hereafter charged gas utility customers in West Virginia. In carrying out the provisions of this section the commission shall have jurisdiction over such persons, whether public utilities or not, as may be in the opinion of the commission necessary to the exercise of its mandate and may compel attendance before it, take testimony under oath and compel the production of papers or other documents. Upon reasonable request by the commission, all other state agencies shall cooperate with the commission in carrying out the provisions and requirements of this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) No later than the first day of the regular session of the Legislature in the year 1980, the Public Service Commission shall submit to the Legislature a plan for internal reorganization which plan shall specifically address the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A division within the Public Service Commission which shall include the office of the commissioners, the hearing examiners and such support staff as may be necessary to carry out the functions of decisionmaking and general supervision of the commission, which functions shall not include advocacy in cases before the commission;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The creation of a division which shall act as an advocate for the position of and in the interest of all customers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The means and procedures by which the division to be created pursuant to the provisions of subdivision (2) of this subsection shall protect the interests of each class of customers and the means by which the commission will assure that such division will be financially and departmentally independent of the division created by subdivision (1) of this subsection;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The creation of a division within the Public Service Commission which shall assume the duties and responsibilities now charged to the commissioners with regard to motor carriers which division shall exist separately from those divisions set out in subdivisions (1) and (2) of this subsection and which shall relieve the commissioners of all except minimal administrative responsibilities as to motor carriers and which plan shall provide for a hearing procedure to relieve the commissioners from hearing motor carrier cases;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Which members of the staff of the Public Service Commission shall be exempted from the salary schedules or pay plan adopted by the Civil Service Commission and identify such staff members by job classification or designation, together with the salary or salary ranges for each such job classification or designation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The manner in which the commission will strengthen its knowledge and independent capacity to analyze key conditions and trends in the industries it regulates extending from general industry analysis and supply-demand forecasting to continuing and more thorough scrutiny of the capacity planning, construction management, operating performance and financial condition of the major companies within these industries.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Such plan shall be based on the concept that each of the divisions mentioned in subdivisions (1), (2) and (4) of this subsection shall exist independently of the others and the plan shall discourage ex parte communications between them by such means as the commission shall direct, including, but not limited to, separate clerical and professional staffing for each division. Further, the Public Service Commission is directed to incorporate within the said plan to the fullest extent possible the recommendations presented to the subcommittee on the Public Service Commission of the Joint Committee on Government and Finance in a final report dated February, 1979, and entitled A Plan for Regulatory Reform and Management Improvement.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The commission shall, before January 5, 1980, adopt said plan by order, which order shall promulgate the same as a rule of the commission to be effective upon the date specified in said order, which date shall be no later than December 31, 1980. Certified copies of such order and rule shall be filed on the first day of the 1980 regular session of the Legislature, by the chairman of the commission with the clerk of each house of the Legislature, the Governor and the Secretary of State. The chairman of the commission shall also file with the office of the Secretary of State the receipt of the clerk of each house and of the Governor, which receipt shall evidence compliance with this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Upon the filing of a certified copy of such order and rule, the clerk of each house of the Legislature shall report the same to their respective houses and the presiding officer thereof shall refer the same to appropriate standing committee or committees.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Within the limits of funds appropriated therefor, the rule of the Public Service Commission shall be effective upon the date specified in the order of the commission promulgating it unless an alternative plan be adopted by general law or unless the rule is disapproved by a concurrent resolution of the Legislature adopted prior to adjournment sine die of the regular session of the Legislature to be held in the year 1980: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That if such rule is approved in part and disapproved in part by a concurrent resolution of the Legislature adopted prior to such adjournment, such rule shall be effective to the extent and only to the extent that the same is approved by such concurrent resolution.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The rules promulgated and made effective pursuant to this section shall be effective notwithstanding any other provisions of this code for the promulgation of rules or regulations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The Public Service Commission is hereby directed to cooperate with the Joint Committee on Government and Finance of the Legislature in its review, examination and study of the administrative operations and enforcement record of the Railroad Safety Division of the Public Service Commission and any similar studies.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) (1) The Legislature hereby finds that rates for natural gas charged to customers of all classes have risen dramatically in recent years to the extent that such increases have adversely affected all customer classes. The Legislature further finds that it must take action necessary to mitigate the adverse consequences of these dramatic rate increases.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Legislature further finds that the practices of natural gas utilities in purchasing high-priced gas supplies, in purchasing gas supplies from out-of-state sources when West Virginia possesses abundant natural gas, and in securing supplies, directly or indirectly, by contractual agreements including take-or-pay provisions, indefinite price escalators or most-favored nation clauses have contributed to the dramatic increase in natural gas prices. It is therefore the policy of the Legislature to discourage such purchasing practices in order to protect all customer classes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The Legislature further finds that it is in the best interests of the citizens of West Virginia to encourage the transportation of natural gas in intrastate commerce by interstate or intrastate pipelines or by local distribution companies in order to provide competition in the natural gas industry and in order to provide natural gas to consumers at the lowest possible price.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The Legislature further finds that transactions between utilities and affiliates are a contributing factor to the increase in natural gas and electricity prices and tend to confuse consideration of a proper rate of return calculation. The Legislature therefore finds that it is imperative that the Public Service Commission have the opportunity to properly study the issue of proper rate of return for lengthy periods of time and to limit the return of a utility to a proper level when compared to return or profit that affiliates earn on transactions with sister utilities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) The Legislature further finds that water and sewer utilities that are political subdivisions of the state providing separate or combined services and having at least four thousand five hundred customers and annual gross revenues of $3 million or more are most fairly and effectively regulated by the local governing body with respect to rates, borrowing and capital projects. Therefore, notwithstanding any contrary provisions of this section, the jurisdiction of the Public Service Commission over water and sewer utilities that are political subdivisions of the state is limited to that granted specifically in this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) The Legislature further finds that an adequate cash working capital fund is essential to allow water and sewer utilities that are political subdivisions of the state to deliver continuous and compliant service. Therefore, these utilities shall maintain a working capital reserve in an amount of no less than one eighth of actual annual operation and maintenance expense. This reserve shall be separate and distinct from and in addition to any repair and replacement fund that may be required by bond covenants.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-1-1e. General investigation and report regarding organization and funding of the Consumer Advocate Division. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) In an effort to ensure that the parties that advocate on behalf of ratepayers have all necessary resources and statutory backing available for them to protect ratepayers, the Legislature directs that the Commission investigate opportunities for the Legislature to further support the work being done on behalf of ratepayers.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) By no later than July 1, 2026, the Commission shall initiate a general investigation for the purpose of identifying any opportunities or tools to further support the work of the Commission staff and work of the Consumer Advocate Division relating to utility ratemaking. This review should investigate and make recommendations regarding the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Increased funding, salaries, and other staffing needs for the staff of the Commission;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Increased funding, salaries, and other staffing needs for the Consumer Advocate Division; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Clear statutory authority in this code explaining the responsibilities and powers of the Consumer Advocate Division, including an exploration of whether the Consumer Advocate would benefit from additional independent decision-making authority; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Creating a small business advocate division to address small business utility rates, similar to the Consumer Advocate Division&#39;s work on behalf of residential ratepayers.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Commission shall issue a final order pursuant to the above general investigation, by December 31, 2026, that considers and describes how other states address the above methods of ensuring oversight of utility rates, and with recommendations by the Commission. The Commission shall allow for comments from interested parties and attach such recommendations, or a summary of recommendation, to the final order. The Commission may establish a task force and invite parties representing consumers, utilities, the elderly, low-income individuals, and any party with a history of participating in cases before the Commission, to assist in its general investigations. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A complete copy of the final order in the general investigation initiated pursuant to this section must be committed to the Joint Committee on Government and Finance and the Joint Standing Committee on Energy and Public Works. </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;24-1-6. Office of commission; time and place of hearings; number of commissioners required for taking action. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The general office of the commission shall be kept at the seat of government and in charge of the secretary or his or her deputy. Hearings and the taking of evidence may be had at such times and places and in such manner in each particular case as the commission may designate: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That in any case where electric, gas, water, or sewer bills will increase by five percent or more, and will affect more than 10,000 customers, the commission shall hold public comment hearings in at least one location within 50 miles of each customer within the utility&#39;s service territory</span><span class="csEF05ACC">. If the sole purpose of the hearing is to receive public comment or protest, then not less than one commissioner is required to be present, </span><span class="cs46AE26E6">and both an in-person and either an online or telephonic option for participating must be provided to the public</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The concurrent judgment of two of the commissioners, when in session as the commission, shall be deemed the action of the commission, and a vacancy in the commission shall not affect the right or duty of the remaining commissioners to function as a commission.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. POWERS AND DUTIES OF PUBLIC SERVICE COMMISSION.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;24-2-3a. Advance notice of filing of general rate case required; </span><span class="csF3C8A5A3">public notice of all rate increases</span><span class="csB9803513">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)</span><span class="csEF05ACC"> All public utilities subject to the provisions of section four or four-a of this article, intending to institute a general rate case, shall give the commission not less than thirty days&#39; notice before proceeding under the provision of those sections unless the commission modifies or waives such notice requirement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) All public utilities shall notify each customer of any proposed rate or tariff increase through the method that they deliver bills to the customer, at least once monthly between the date that the proposed increase was submitted to the Commission and the evidentiary hearing is scheduled for the case. If the utility maintains a public website or serves more than 100,000 customers, a notice shall be posted on the website in a manner that is easily accessible to the public. Such notices must also include the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Information about how ratepayers can submit comments to the Commission about the proposed increase; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A plain language explanation of the reason for the increase and the estimated bill impact on a typical residential customer and a typical small business customer; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Information regarding the dates of public hearings, opportunities for intervention, and the availability of assistance for the Office of the Consumer Advocate. </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;24-2-17. Registry of electric customers on life support systems; notification prior to scheduled outages; priority of service restoration; limitation of liability; life support defined.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) In addition to all other powers and duties conferred upon the commission by this chapter, the commission shall promulgate rules establishing requirements for electric utilities in this state for purposes of accomplishing the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Identifying and maintaining a registry of persons that are dependent upon life support systems which require electric service to function, and updating that registry at least twice annually; all new customers shall be notified of the registry and its functions </span><span class="cs46AE26E6">and existing customers shall be made aware of the registry through information on the utility&#39;s website or through an annual bill insert</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(2) Providing adequate notice of planned power outages to each </span><span class="cs68EFC440">residence in the registry</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">customer affected by the planned power outage. Such notice must be provided as early as practicable and through multiple reasonable communication methods, including electronic or telephonic notice where available</span><span class="csEF05ACC">; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Organizing service restoration so that, as much as practicable given the scope and nature of a power outage, priority is given to residences listed in the registry.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) An electric utility which </span><span class="cs46AE26E6">provides notice as required by Commission rules promulgated in accordance with this section, and</span><span class="csEF05ACC"> acts in good faith to comply with the rules promulgated in accordance with this section shall not be liable for damages in a civil action for any injuries or deaths resulting from loss of power to a life support system as a result of a power outage.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Nothing in this section shall be construed as requiring an electric utility to provide back-up life support to any customers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) For purposes of this section, the term &quot;life support system&quot; means a kidney dialysis machine, mechanical ventilation device or other medical device, the use of which is prescribed by a licensed physician and upon the request of the patient or his or her patient representative, is certified by such physician in writing to the electric utility as necessary to sustain critical body functions and without which a person is in imminent risk of death.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Coordinating, where practicable, with state and local emergency management agencies regarding planned outages that may affect a significant number of customers listed in the registry. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The Commission shall periodically review the effectiveness of the rules promulgated under this section and may require utilities to report anonymized data regarding registry enrollment, outages affecting registry customers, and service restoration outcomes. </span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2A. REDUCED RATES FOR LOW-INCOME RESIDENTIAL CUSTOMERS OF ELECTRICITY AND GAS.</span></h2>
+	<h4 class="cs89687900">
+		<a name="_Hlk221690941"><span class="csB9803513">&sect;</span></a><span class="csB9803513">24-2A-1. Special rates for gas and electric utility customers receiving </span><span class="csF3C8A5A3">low-income assistance.</span><span class="csB9803513"> </span><span class="csFCE4DED">Social Security Supplemental Security Income (SSI), Aid to Families with Dependent Children (AFDC), Aid to Families with Dependent Children--Unemployed (AFDC-U) or food stamps.</span><span class="csB9803513"> </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)</span><span class="csEF05ACC"> The commission shall order each gas and electric utility subject to its jurisdiction, except municipal or cooperative gas or electric utilities, to offer special reduced rates applicable to gas and electric service for the billing months of December, January, February, March, </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> April, </span><span class="cs46AE26E6">June, July and August</span><span class="csEF05ACC"> of each year </span><span class="cs68EFC440">(beginning with the billing month of December, 1983),</span><span class="csEF05ACC"> to residential utility customers receiving: </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(a) social</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(1) Social</span><span class="csEF05ACC"> security supplemental security income (SSI), </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b) aid</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(2) Aid</span><span class="csEF05ACC"> to families with dependent children (AFDC), </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c) aid</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(3) Aid</span><span class="csEF05ACC"> to families with dependent children-- unemployed (AFDC-U), </span><span class="cs68EFC440">or</span><span class="csEF05ACC"> </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Medicaid, </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Low Income Home Energy Assistance Program (LIHEAP),</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Temporary Assistance for Needy Families (TANF),</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Supplemental Security Disability Insurance (SSDI), </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d) food</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(8) Food</span><span class="csEF05ACC"> stamps </span><span class="cs46AE26E6">or Supplemental Nutrition Assistance Programs (SNAP)</span><span class="csEF05ACC">, </span><span class="cs68EFC440">if such food stamp recipients are sixty years of age or older</span><span class="csEF05ACC">. </span><span class="cs7F85AE1E">Or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Any similar state or federal program that is similarly limited by income.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)</span><span class="csEF05ACC"> The special reduced rate offered by each gas and electric utility to its eligible customers shall be </span><span class="cs68EFC440">twenty</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">20</span><span class="csEF05ACC"> percent less than the rate which would be applicable to such customers if they were not receiving any of the four forms of assistance which confer eligibility for the special reduced rates. A customer of a utility offering special reduced rates shall be eligible to </span><span class="cs46AE26E6">begin to</span><span class="csEF05ACC"> receive such rates for each of the billing months of December, January, February, March, </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> April, </span><span class="cs46AE26E6">June, July, and August,</span><span class="csEF05ACC"> that correlates to a calendar month during which that customer is eligible to participate in one or more of the qualifying programs specified in this section, except as otherwise provided in this section. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)</span><span class="csEF05ACC"> The correlation of billing months to calendar months of eligibility to participate in a qualifying program is as follows: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)</span><span class="csEF05ACC"> A December billing month correlates to the calendar month of November; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">a</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(2) A</span><span class="csEF05ACC"> January billing month correlates to the calendar month of December; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">a</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(3) A</span><span class="csEF05ACC"> February billing month correlates to the calendar month of January; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">a</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(4) A</span><span class="csEF05ACC"> March billing month correlates to the calendar month of February; </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> </span></p><p class="cs53FB8D75"><span class="cs68EFC440">an</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(5) An</span><span class="csEF05ACC"> April billing month correlates to the calendar month of March; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) A June billing month correlates to the calendar month of May; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) A July billing month correlates to the calendar month of June; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) An August billing month correlates to the calendar month of July. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">After the billing month of April, 1984, no customer shall be eligible to receive the special reduced rates until the billing month in which that customer applies for such rates. For the billing months of December, 1983, and January, February, March and April, 1984, a customer shall be eligible to receive a utility&#39;s special reduced rates for any of said billing months which correlates to a calendar month during which that customer is eligible to participate in one or more of the qualifying programs specified in this section, regardless of the date on which that customer applies for such rates: </span><span class="csB65271">Provided,</span><span class="cs68EFC440"> That the date of application falls on or prior to May 15, 1984. No customer who applies for the special reduced rates after May 15, 1984 shall be eligible to receive such rates for any of the billing months of December, 1983 or January, February, March or April, 1984. Before any individual may qualify to receive the special reduced rates, the following requirements must be met:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(a) The special reduced rates shall apply only to current customers or to those persons who subsequently become customers in their own right. If an SSI, AFDC, AFDC- U or food stamp recipient is living in a household which is served under the name of a person who is not an SSI, AFDC, AFDC-U or food stamp recipient, that service may not be changed or have been changed subsequent to March 12, 1983, to the name of the SSI, AFDC, AFDC-U or food stamp recipient in order to qualify for service under the special reduced rates.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b)</span><span class="csEF05ACC"> The burden of proving eligibility for the special reduced rates shall be on the customer requesting such rates. </span><span class="cs46AE26E6">The customer must renew eligibility every 12 months.</span><span class="csEF05ACC"> </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) If the utility offers assistance to a customer through a different program that is also based on low-income eligibility criteria, which could also be based upon the customer receiving the benefits described in subsection (a), then the utility shall, at least once annually, notify the customer of the reduced rate that may also be available to them. Similarly, if a customer is utilizing the low-income rate, the utility shall notify the customer, at least once annually, of any other low-income-eligible programs that may be available to the customer. The utility shall also provide the notice at the time of any disconnection notice or notice of arrearage. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)</span><span class="csEF05ACC"> The department of human services shall establish by rules and regulations procedures (1) to inform persons receiving any of the four forms of assistance which confer eligibility for the special reduced rates about the availability of the special reduced rates, (2) to assist applicants for the special reduced rates in proving their eligibility therefor, and (3) to assist gas and electric utilities offering the special reduced rates in determining on a continuing basis the eligibility therefor of persons receiving or applying for such rates. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f)</span><span class="csEF05ACC"> The commission shall establish by rules and regulations procedures for the application for, </span><span class="cs46AE26E6">notice of,</span><span class="csEF05ACC"> and provision of service under the special reduced rates and for the determination and certification of revenue deficiencies resulting from the special reduced rates. Within ten days of the effective date of this article, the commission and the department of human services shall adopt temporary rules and regulations, as required by this section, which rules and regulations shall not be subject to the requirements of </span><span class="cs68EFC440">chapter twenty-nine-a and section seven, article one of chapter twenty-four</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> or &sect;24-1-7 of this code</span><span class="csEF05ACC"> except that they shall be filed with the Secretary of State and published in the state register. These temporary rules and regulations shall remain in effect until supplanted by permanent rules and regulations, which shall be adopted by the commission and the department of human services within </span><span class="cs68EFC440">one hundred eighty</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">180</span><span class="csEF05ACC"> days of the effective date of this article. No customer who is a recipient of more than one of the four forms of assistance which confer eligibility for the special reduced rates shall be eligible for more than one </span><span class="cs68EFC440">twenty</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">20</span><span class="csEF05ACC"> percent discount for gas service and one </span><span class="cs68EFC440">twenty</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">20</span><span class="csEF05ACC"> percent discount for electric service during each billing month that said customer is eligible to receive the special reduced rates.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) A residential customer receiving services under the special reduced rates shall not be disconnected for nonpayment without first being offered reasonable payment arrangements consistent with Commission rules.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The Commission may, by rule, extend the availability of special reduced rates to additional billing months upon a finding that such extension is necessary to protect customer health or safety. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The Commission shall require all gas, electric, and water utilities that have 100,000 customers or more to file an annual report that tracks aggregated data on the percentage of household income spent by its residential customers for that utility&#39;s service. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c) In order to provide each eligible residential utility customer the special reduced rates for the billing months of December, 1983, through April, 1984, (hereinafter referred to as the first special-reduced-rate season), each utility providing the special reduced rates shall credit against the amount otherwise owed by each customer an amount equal to the difference between the total amount that each such customer was actually billed during the first special-reduced-rate season and the total amount that each customer would have been entitled to be billed under the special reduced rates. Each such credit shall be fully reflected on the first bill issued to each such customer after approval of each such customer&#39;s application for the special reduced rates, except in cases where the interval between the approval and the issuance of the next bill is so short that it is administratively impracticable to do so, in which cases such credits shall be fully reflected on the second bill issued to each such customer after approval of that customer&#39;s application. If the interval between the approval and the issuance of the next bill is fifteen days or more, it shall not be deemed administratively impracticable to reflect such credit on the customer&#39;s first such bill.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2A-6. Managing termination of electric or gas service for nonpayment.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The legislature finds that electric and natural gas service is critical for health and safety in the coldest winter months and that electric service is critical for health and safety in the hottest summer months. The legislature further finds that increased notice of impending termination of service can increase payments from ratepayers.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Commission shall promulgate or amend existing rules that are consistent with the following provisions relating to termination of service:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Utilities shall provide at least 30 days&#39; advance notice with at least three contact attempts before termination. At least one contact attempt shall be made by a method other than mailed notice where such contact information is available. Such notice shall be written in plain and understandable language and shall include the reason for termination the total amount due, available payment options, protections against termination and contact information for the Office of the Consumer Advocate; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Utilities shall offer an income-based repayment program. The program must be a monthly payment of six percent of income, or $10 each month, whichever is greater. Such a program can include requirements of eligibility that customers must enroll in an average monthly payment plan or conduct a home energy assessment as funded in subsection (c) of this section, if the customer is eligible for such programs. Participation in the income-based repayment program shall not result in additional fees, penalties, or higher rates;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Termination of service cannot occur during the following circumstances:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) In the months of January, February, March, and April for natural gas and electric utilities; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) In the months of June, July, and August for electric utilities;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) During a state of emergency, as declared by the federal, state, or local government for the county or municipality where the customer lives; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The customer has a demonstrated medical emergency 	including but not limited to hospitalization within three months of the termination date or, for electric customers, participation in the registry of electric customers on life support systems established in &sect;24-2-17 of this code; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) During an extreme weather event that has directly affected the ratepayer, including but not limited to severe storms, wildfires, extreme heat wave, or intense raining or flooding; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) During a time of financial hardship for the customer utilizing criteria set up by the Commission; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) While a customer is actively applying for or participating in an income-based repayment program, special reduced rate, or other Commission approved assistance program. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) In order to reduce terminations long-term and to efficiently utilize energy resources, each gas utility and electric utility shall dedicate one percent of annual energy sales revenue toward funding:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The Dollar Energy Fund for below-median-income customers who fall behind on payment; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Weatherization and energy use assessment for all customers, prioritizing weatherization for low- and middle-income customers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2F. ALTERNATIVE AND RENEWABLE ENERGY PORTFOLIO STANDARD.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2F-1. Portable solar generation devices.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The term &quot;portable solar generation device&quot; means a moveable photovoltaic generation device that is designed to be connected to a building&#39;s electrical system through a standard electrical outlet; is intended primarily to offset part or all of the customer&#39;s requirements for electricity; has a maximum power output of not more than 1.200 watts to a standard electrical outlet; and is certified by Underwriters Laboratory or another nationally recognized testing laboratory.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Portable solar generation devices are exempt from requirements to subject to a customer generation or interconnection agreement and are not eligible for net metering.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) An electrical service provider may not require a customer using a portable solar generation device to obtain the electrical corporation&#39;s approval before installing or using the device, pay any fee or charge related to the system or for feeding small amounts of electricity under the output threshold back into the utility grid, or install any additional controls or equipment beyond what is integrated into the system.</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 2J. DISTRIBUTED POWER PLANT PROGRAM.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2J-1. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Aggregator&quot; means a third-party entity that enrolls customers in the program and coordinates the operation of enrolled devices. An aggregator is a participant in the program; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Battery&quot; means a behind-the-meter energy storage device and associated equipment that operate together to fulfill program requirements;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Commission&quot; means the West Virginia Public Utilities Commission;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Customer&quot; means an active electric service account holder of an electric service company;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Direct participant&quot; means a customer that enrolls in the program directly with the company rather than via an aggregator; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Distributed energy resource&quot; means a behind-the-meter device, including, but not limited to solar PV, batteries, smart thermostats, and electric vehicles that provides energy or energy management capabilities for the customer or the grid;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Distributed power plant&quot; means an aggregation of behind-the meter distributed energy resources operated in coordination to provide one or more grid services;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Eligible device&quot; means a customer or third party-owned distributed energy resource that meets the requirements for participation in the program as specified in the relevant program rider;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Emergency event&quot; means an event called by the company with less than 24 hours&#39; notice;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Enrolled customer&quot; means a customer who participates in the program through either an aggregator or as a direct participant; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Enrolled device&quot; means an enrolled customer&#39;s eligible device, as specified in the relevant program rider; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Grid event&#39; means a grid condition for which the company schedules or remotely dispatches enrolled devices to respond to as specified in the grid service opportunities for each program rider; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;&quot;Grid service&quot; means a capacity, energy, or ancillary services that supports grid operations for each program rider; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Participant&quot; means an aggregator or a direct participant; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Performance payment&quot; means a payment made to the participant based on the performance of an enrolled device or devices providing a grid service during a grid event:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Performance payment rate&quot; means the compensation rate paid to participants for providing a particular grid service during a grid event:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Program rider&#39;&#39; means one or more of the battery rider, the non-battery rider, the EV rider, and such other distributed power program riders as the commission may approve from time to time; &nbsp;and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Upfront payment&quot; means a one-time payment made at the time of enrollment. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2J-2. Legislative findings.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Distributed power plants are dynamic load management and energy supply resources that support grid operations, reduce ratepayer costs, and achieve other important public policy goals.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Distributed power plants can reduce demand for grid supplied electricity during peak periods, shift electricity consumption out of peak periods, make renewable energy generated during off-peak periods available for use during on-peak periods, supply energy to the grid at desired times, provide frequency regulation, voltage support, and other ancillary services, improve system resiliency and reliability, and provide other grid services.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Distributed power plants facilitate and optimize the utilization of electrical generation from wind and solar energy to help utilities increase hosting capacity and integrate more renewable energy resources.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Distributed power plants reduce costs to ratepayers by utilizing customer-sited resources to provide grid services avoiding or reducing reliance on fossil-fuel fired. Specialized power generation facilities designed to operate only during times of high electricity demand plants, avoiding or deferring the need to construct new and more costly grid scale resources, optimizing the use of existing assets, and avoiding or deferring distribution and transmission system upgrades and other grid investments.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Distributed power plants promote equity by reducing costs for all ratepayers, expanding access to distributed energy resources among low and moderate income customers through improved distributed energy resource economics, and providing other important co-benefits, including reduction in emissions of greenhouse gasses and other pollutant, especially in environmental justice and other disadvantaged communities that host fossil fuel generation plants.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The United States Department of Energy estimates that the United States could deploy 80-160 gigawatts of distributed powerplants by 2030 to support the rapid electrification of vehicles and homes and provide on the order of $10 billion in ratepayer savings annually. The deployment of distributed power plants can provide energy cost savings and other benefits to the citizens of West Virginia.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) There are significant barriers to deployment and operation of distributed power plants, including the need for statutory and regulatory guidance and support, standardization in distributed power plant programs across regulatory jurisdictions, and for utility commitments to incorporate the use of distributed power plants into system operations and long-term resource planning.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) It is in the public interest to advance customer choice and leverage the expertise of private, non-utility entities to advance innovation and implement cost-effective clean energy solutions. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The policy of West Virginia shall be to maximize the use of distributed power plants comprised of customer-owned and third party-owned distributed energy resources to deliver system services and other benefits through utility administered distributed power plant programs in accordance with the provisions of this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2J-3. Distributed power plant program proposal.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Within 120 days of the effective date of this article each electric utility serving customers in this state shall develop and file with the commission a distributed power plant program proposal consistent with the provisions of this section. The commission shall provide opportunities for stakeholders to provide input on the distributed power plant program proposed for implementation by each utility, which the Commission shall take into consideration in its review of each utility&#39;s filing. Within 120 days of the utility&#39;s filing, the Commission shall approve or modify and approve each utility&#39;s distributed power plant program proposal for immediate implementation by the utility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The distributed power plant program proposal filed pursuant to subsection (a) of this section shall be developed for implementation through a standard offer, open access tariff for distributed energy resources to provide system peak load reduction and other grid services. The distributed power plant program tariff shall be designed to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Allow customers with battery storage, non-battery storage and electric vehicle technologies to enroll their respective devices in the program under separate service riders for each technology type through aggregators or directly with the utility. The tariff filed pursuant to subsection (a) of this section shall at minimum include a rider for new and existing battery storage devices and shall incorporate additional riders for non-battery storage devices and electric vehicles no later than one year after the approval of the distributed power plant program approved in subsection (a); </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Provide a mechanism to incorporate existing programs such as smart thermostat demand response or electric vehicle charging programs currently offered by the utility into the respective technology riders for operation under the distributed power plant program framework; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Include grid services opportunities for each eligible technology that customers and aggregators may provide which shall include, at minimum, a system-wide peak load reduction service for the battery rider and may also include: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Clean peak service; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Local peak demand reduction; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Locational value; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The avoidance or deferral of transmission or distribution upgrades or capacity expansion; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Voltage support and other ancillary services; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Emergency services; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) Such other functions and grid service opportunities that the commission determines are supportive of efficient planning and operation of the electrical grid.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Provide operational parameters for each eligible program rider and grid service which shall include at minimum: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Minimum and maximum numbers of grid events for which the utility may dispatch the enrolled distributed energy resources; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Months of the year that grid events may occur; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Days of the week that grid events may occur; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Times of day that grid events may occur; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Maximum duration of grid events; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Minimum day-ahead advance notification requirement of grid events, except for emergency events, as applicable.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Include provisions for aggregators to participate in the distributed power plant program, automatically enroll and manage their customers&#39; participation, receive dispatch signals and other communications from the utility, deliver performance measurement and verification data to the utility, and receive distributed power plant program payments directly from the utility; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Include provisions for direct participant customers to enroll and participate directly with the utility, receive dispatch signals and other communications from the utility, deliver performance measurement and verification data to the utility, and receive distributed power plant program payments directly from the utility: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That any provisions implementing this subdivision that necessitate the installation of equipment to enable direct participation via the utility shall apply to customers who elect to participate as a direct participant and shall not be required of customers who participate via an aggregator or to customers who do not participate in the distributed power plant program; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Provide for measurement and verification of battery performance directly at the device without the requirement for the installation of an additional meter and such other measurement standards for non-battery and electric vehicle technologies for approval by the Commission; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Include upfront payment and performance payment compensation mechanisms for the battery rider system peak reduction service based on the average capacity provided during grid events, and such other compensation mechanisms as the Commission determines appropriate for other grid services provided under the battery, non-battery, and electric vehicle riders. The distributed power plant program shall not assess penalties for non-performance; however, the Commission may approve reasonable mechanisms to disenroll customers for continued non-performance; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Include a higher upfront payment for certain customer classes, including, but not limited to, low-to-moderate income customers and customers located in environmental justice and other disadvantaged communities in addition to performance payments. The Commission shall coordinate with state energy officials and departments to make funding from the federal Inflation Reduction Act. Pub. L. 117-169 and such other sources as may be available for use in providing higher upfront payments to customer classes as may be approved by the Commission for the higher upfront payment in accordance with this subsection; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Allow participants to lock in the performance payment rate applicable at the time of enrollment for a minimum of five years, after which time the participant may re-enroll at the then applicable performance payment rate for an additional five-year term; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) In addition to the compensation for each grid service the tariff shall provide that energy exported from a participating distributed energy resource shall be credited to the enrolled customer at a value equal to the retail rate charged by the utility for energy at the lime of the export, irrespective of the export compensation rate specified in the customer&#39;s underlying interconnection tariff. Nothing in this section shall affect the rate of compensation for energy that is exported outside of a grid event under a commission-approved distributed power plant; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Provide that enrolled customers may co-participate in any applicable underlying interconnection tariff and may provide multiple grid services or co-participate in other riders under the distributed power plant program or other grid service programs outside the distributed power plant program, including wholesale market programs, except as otherwise provided by the commission. Enrolled customers shall remain eligible to receive state and federal incentives in addition to any compensation received for participating in the distributed power plant program; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) The utility may include other reasonable requirements for participation consistent with this subsection: </span><span class="cs1489E706">Provided, </span><span class="cs46AE26E6">That the utility shall not require collateral from a direct participant or an aggregator; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Utility-owned resources shall not be eligible to participate in the distributed power plant program. Utilities and utility affiliates may not be aggregators. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The utility may contract with a third party distributed energy resource management system provider to assist with program implementation provided that implementation of the program shall not be delayed due to the lack of utility-owned distributed energy resource management system capabilities or third party distributed energy resource management system capabilities. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2J-4. Utility cost recovery and earning opportunities.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Utilities may seek to recover prudently incurred costs to facilitate the distributed power plant program approved pursuant to &sect;24-2J-3 of this code, including but not limited to: distributed energy resource management system provider and other service contract costs, operations and maintenance expenses, information technology costs, and such other costs, expenses and investments &nbsp;the Commission &nbsp;finds necessary &nbsp;and prudent for the development	and implementation of the program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The provisions of subsection (a) of this section notwithstanding, the utility shall recover the cost of distributed power plant program performance payments and any other payments made to participants through cost recovery mechanisms approved by the Commission. The Commission may allow a reasonable rate of return on the cost of payments made for grid services and shall take any such allowance into consideration when developing performance incentives pursuant to the following section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2J-5. Performance targets and incentives. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Commission shall initiate a proceeding to develop capacity procurement targets applicable to the utility for the utilization of the distributed power plant program with corresponding performance incentives for achieving the established targets in accordance with the provisions of this section. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Within 270 days of the effective date of this act. the commission shall, at minimum:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Establish annual capacity procurement and performance targets for the system peak reduction service which shall be designed to meaningfully increase year-over-year the amount of capacity procured for system peak reduction over a five-year period. The Commission shall establish corresponding performance incentives for achieving the target established for each year of the performance period; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The performance incentives established pursuant to this subsection shall include financial rewards for achieving the targets and may include financial penalties for failure to achieve the targets; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The commission shall establish new targets for subsequent five-year periods; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The performance targets and incentives established pursuant to this section shall take effect no later than the beginning of the second calendar year following the year in which the Commission approves a utility&#39;s distributed power plant program pursuant to &sect;24-2J-3 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The commission shall develop additional targets and performance incentives for additional grid services adopted pursuant to subsection &sect;24-2J-3(b) of this code no later than 270 days after such additional grid services are approved for implementation through the tariff, which shall take effect no later than the beginning of the second calendar year following the year in which the Commission approves such additional grid services.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Each utility shall file an annual report no later than January 31 of each year that shall include, at minimum: the total capacity enrolled in each Program Rider developed pursuant to the</span></p><p class="cs7F45F1B"><span class="cs46AE26E6">requirements of &sect;24-2J-3 of this code, broken out by technology type, customer class, aggregator or direct participant status, the grid service or grid services that the distributed energy resource is enrolled to provide, recommendations to increase participation in the distributed power plant program, and such other information as the commission may require from time to time.</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 2K. COMMUNITY ENERGY PROGRAM.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2K-1. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Agrivoltaics&quot; means the simultaneous use of areas of land for both solar power generation and agriculture.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Applicable bill credit rate&quot; means the dollar-per-kilowatt-hour rate previously approved by the Public Service Commission in docket 23-0460-E-42T, which will be used to calculate a subscriber&#39;s electricity bill.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Bill credit&quot; means the monetary value of each kilowatt hour of electricity g	enerated bv a community energy facility and allocated to a subscriber&#39;s monthly bill to offset that subscriber&#39;s electricity bill which shall be on a one-to-one basis in kilowatt-hours, exclusive of fees, and calculated by multiplying the kilowatt-hours by the applicable bill credit rate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Brownfield&quot; means real property the expansion, redevelopment, or reuse of which may be complicated by the presence or potential presence of a hazardous substance, pollutant, or contaminant.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Commission&quot; means the West Virginia Public Service Commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Community energy facility&quot; means an electricity-generation facility operating under a subscriber plan in which subscribers&#39; electric power bills include a bill credit against the total electricity consumed that is in proportion to the size of their subscription.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Community energy program&quot; or &quot;program&quot; means the program created through the adoption of rules by the Public Service Commission pursuant to this article to allow for the development of community energy facilities as provided in &sect;24-2K-2 of this code. This program is distinct and separate from the existing net metering program as provided pursuant to&sect;24-2F-8 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Low-income customer&#39;&#39; means an individual or household with an income at or below 80 percent of the subscriber&#39;s county&#39;s area median income.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Low-income service organization&quot; means an organization or nonprofit whose function is to provide services or assistance to low-income individuals.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Net crediting&quot; means a program under which the utility, upon authorization by or on behalf of an eligible customer, remits the portion of the bill credit that represents the subscription fee directly to the subscriber organization of a project and places the remaining bill credit on the eligible customer&#39;s bill. In order to participate in net crediting, a customer&#39;s subscription fee shall be calculated as a percentage of the bill credit that appears on a subscriber&#39;s bill. Such percent must be less than 100 percent. The utility may charge the subscriber organization a fee of up to one percent of the bill credit value remitted to the subscriber organization to cover the costs of implementing net crediting.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Qualifying site&quot; means a site made up of one or more contiguous parcels of land where the majority of the acreage utilized for a community energy facility:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Has been previously used in electric generation, industrial. manufacturing or mining operations, including, but not limited to: rooftops, brownfields, closed landfills, hazardous waste sites, standing water or floating sites, former industrial sites, and former mining sites; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Will be utilized for the deployment of agrivoltaics. as defined by this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Subscriber&#39;&#39; means a retail electric customer of a utility who owns one or more subscriptions of a community solar facility interconnected with that utility. A subscriber must be located in the same electric utility service territory where the community solar facility is located.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Subscriber organization&quot; means any for-profit or tax-exempt entity that owns, operates, or manages one or more community solar facilities. A subscriber organization shall not be considered a utility pursuant to this chapter solely as a result of its ownership or operation of a community solar facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Subscription&quot; means a contract between a subscriber and a subscriber organization. A subscription shall be sized such that the estimated bill credits do not exceed the subscriber&#39;s average annual bill for the customer account to which the subscription is attributed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Utility&quot; means a public utility as defined in &sect;24-1-2 of this code: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That for the purposes of this article, utility does not include rural electric cooperatives, municipal utilities, nor utilities serving less than 30,000 customers. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2K-2. Requirements for community energy facilities. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A community energy facility subject to the provisions of this article and to legislative rules approved hereunder, shall meet the following requirements:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The facility generates electricity by means of a solar photovoltaic device or uses as its fuel either solar, wind, biomass, landfill gas, or hydroelectric power; or uses a microturbine, natural gas-fired generator, energy storage system, or a fuel cell; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The facility is located in this state and is directly connected to an electric distribution utility&#39;s distribution system; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The facility has at least three subscribers;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The facility is located on a single parcel of land and there is no community energy facility on the same or a contiguous parcel that is developed, owned, or operated by the same entity, affiliated entity, or entity under common control;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) No subscriber holds more than a 60 percent proportional interest in the output of the system which shall be measured as the sum of all meters on the subscriber&#39;s property;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Not less than 30 percent of the facility capacity may be provide or allocated to subscriptions of 25 kilowatts or less. For purposes of this subsection a multi-unit building served by a single meter shall be considered a single customer provided the average usage, based on the number of units, is 25 or less;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) The facility has a nameplate capacity of five or fewer megawatts, or 10 or fewer megawatts if the facility is on a &#39;qualifying&#39; site or one or more commercial or public sector rooftops as measured at the point of interconnection. The facility will be subject to the aggregate capacity limitation for each utility as provided by the Commission in accordance with &sect;24-2K-3 of this code; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) The facility is not under the control of an electric distribution utility, but may be under the control of an affiliate of the utility; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) The facility must be located within the service territory of the utility;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) The facility must be connected to the electric distribution grid serving the state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) The facility must be located on a parcel or contiguous parcels of land such that no project is located on a single parcel, or projects located on contiguous parcels exceed allowable project size.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)(1) If the facility uses either an energy storage system or natural gas-fired generator then the energy storage system or generator is not sized so as to exceed the size of any co-located facility using solar, wind, biomass, landfill gas, or hydroelectric power as its fuel.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If the system uses both an energy storage system and natural gas-fired generator then the combined nameplate capacity of the storage system and generator is not sized so as to exceed the size of any co-located facility using solar, wind, biomass, landfill gas, or hydroelectric power as its fuel.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2K-3. Program creation and implementation; proposal of legislative rules.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Pursuant to its authority under &sect;24-1-7 of this code, the Commission shall propose rules for legislative approval, in accordance with the provisions of &sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, to establish a community energy program that is substantively similar in nature to community energy programs offered in other states. The rules must outline requirements for community energy programs in West Virginia and must include schedules for each utility to file any tariffs, agreements, or forms necessary for implementation of the program. </span><span class="cs3A3F442A">F</span><span class="cs46AE26E6">or schedules and methods for interested parties to comment on the proposed tariffs, agreements, and forms, and schedules for final commission approval and implementation. Any such tariffs shall be consistent with the bill credit rates established by this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The rules promulgated by the Commission and any associated filing to be approved by the Commission shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Establish an aggregate capacity limitation for each utility such that generation from community energy facilities does not exceed: 750 MWac among utilities. All megawatts certified pursuant to this section shall be allocated proportionally based off of the size of each utility&#39;s retail electric sales published by the energy information administration. Program duration will be 10 years from final rule making and reviewed by the overseeing regulatory agency at that time. The Commission may increase the aggregate capacity limitations for a utility to allow a project that provides additional electric service to businesses making a capital investment in a new or expanded industrial facility located in West Virginia and resulting in new electric generating load to the utility; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Ensure broad competition for the development, ownership, and operation of community energy facilities for third-party, non-utility entities that produce at least 75 percent of program capacity; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Develop a bill credit that reasonably &nbsp;allows for the development and financing of community energy facilities by non-utility subscriber organizations; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Provide for an electric utility company to apply a bill credit to a subscriber&#39;s next monthly electric bill for the proportional output of a community energy facility attributable to the subscriber, with excess credits on a subscriber&#39;s bill to roll over from month to month. An electric utility company shall automatically apply excess credits to the final electric bill when a subscription is terminated for any cause, any unused credits will go back to the utility; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Value bill credits for subscriber&#39;s subsequent monthly electric bill for the proportional output of a community energy facility attributable to that subscriber for not less than 35 years from the date a community energy facility is first interconnected; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Allow all customer classes to participate in the program on a first-come, first-served basis, and ensure participation opportunities for all customer classes; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Prohibit up-front costs, credit checks, punitive fees, or other charges that undermine the feasibility of a community energy project&#39;s economics or customer energy bill savings; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Include one or more mechanisms sufficient to ensure accessibility for low-income customers and low-income service organizations. The Commission shall ensure that mechanisms targeted toward low-income customers and low-income service organizations are crafted to achieve tangible economic benefits for low-income customers and should integrate with existing complementary programs, including, but not limited to, energy efficiency, energy assistance, or workforce development programs. In determining the appropriate mechanisms, the Commission, utilities, and stakeholders shall work with the Legislature and appropriate state agencies to consider the development of financing options, financial incentives, education and outreach programs, or appropriate program participation goals or minimums;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Not remove a customer from its otherwise applicable customer class in order to subscribe to a community energy facility;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Reasonably allow for the transferability and portability of subscriptions, including allowing a subscriber to retain a subscription to a community energy facility if the subscriber moves within the same electric utility territory;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) Clarify existing interconnection standards for distributed customer generator generation facilities to efficiently and effectively interconnect community energy projects and to ensure that projects are not prohibited from applying for interconnection and being placed in the interconnection queue after the effective date of this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Provide for consumer protection in accordance with existing laws and consistent with consumer protections provided in programs managed by peer utilities;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) Address the co-location of two or more community energy facilities on a single or contiguous parcel of land, and provide guidelines for determining aggregate capacity of each project when two or more facilities are co-located;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(14) Encourage adherence to best market practices for construction and decommissioning of community energy facilities; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(15) Include a program implementation schedule.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2K-4. Additional requirements for allocation of costs and credits.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;(a) A community energy organization shall compensate an electric distribution company for the electric distribution company&#39;s reasonable costs of interconnection of a community energy facility. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An electric distribution company may recover reasonable costs from &nbsp;each subscriber organization subject to approval by the Commission to administer a community energy program within the electric distribution company&#39;s service territory of a community energy facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) An electric utility company purchase of unsubscribed energy from a community energy facility shall be made at the electric utility&#39;s wholesale energy cost as determined by the Commission.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2K-5. Interconnection working group.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Within 90 days of the effective date of this act, the Commission shall establish an interconnection working group between electric distribution companies and stakeholders with oversight from commission staff. The interconnection working group shall review and recommend changes to policies, processes, tariffs, rules, or standards associated with the interconnection of community energy facilities with the goal of transparency, accuracy, and efficiency to support the purposes of this act. The Interconnection working group shall submit a report to the Commission of the recommended changes within 270 days of the effective date of this article. Based on the recommended changes in the report, the Commission shall adopt the changes in the state jurisdictional interconnection rules as the commission deems necessary or appropriate. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-2K-6. Program sunset</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The provisions of this arti le shall expire on December 31, 2036. The expiration of this section shall not affect any community energy projects previously approved by the Commission pursuant to this section on or before December 31. 2036.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to allow a more consumer-oriented approach to the setting of public utility rates by the Public Service Commission by prioritizing the interests of utility service customers; providing protections to certain disabled rate-payers; and authorizing cost-saving measures such as: the use of portable electrical generation devices without notification to electric utilities; establishing distributed power plant production systems; and authorizing the operation of certain power generation facilities under a subscriber model. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

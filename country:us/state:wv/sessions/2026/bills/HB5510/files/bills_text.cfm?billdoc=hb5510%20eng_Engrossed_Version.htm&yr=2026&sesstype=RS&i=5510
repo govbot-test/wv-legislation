@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5510 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Engrossed Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5510">&laquo; House Bill 5510 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5510'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5510 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5510" title="HTML  - Introduced Version
+ - House Bill 5510">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5510 - Eliminate the requirement for private wedding venues to own or lease 2 acres in rural location.&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5510+eng.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5510"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs48F0597F{color:#4472C4;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">ENGROSSED</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5510</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Hornby, Clark, Hite, Browning, Ellington, Phillips, Funkhouser, and Maynor</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 13, 2026; referred to the Committee on Government Organization]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;60-7-2 of the Code of West Virginia, 1931, as amended, relating to removing the two-acre minimum for private wedding venues. </span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 7. LICENSES TO PRIVATE CLUBS. </span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;60-7-2. Definitions; authorizations; requirements for certain licenses.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Unless the context in which used clearly requires a different meaning, as used in this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Applicant&quot; means a private club applying for a license under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Code&quot; means the official Code of West Virginia, 1931, as amended.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Commissioner&quot; means the West Virginia Alcohol Beverage Control Commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Licensee&quot; means the holder of a license to operate a private club granted under this article, which remains unexpired, unsuspended, and unrevoked.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Private club&quot; means any corporation or unincorporated association which either: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Belongs to or is affiliated with a nationally recognized fraternal or veterans&#39; organization which is operated exclusively for the benefit of its members, which pays no part of its income to its shareholders or individual members, which owns or leases a building or other premises to which are admitted only duly-elected or approved dues-paying members in good standing of the corporation or association and their guests while in the company of a member and to which club the general public is not admitted, and which maintains in the building or on the premises a suitable kitchen and dining facility with related equipment for serving food to members and their guests; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Is a nonprofit social club, which is operated exclusively for the benefit of its members, which pays no part of its income to its shareholders or individual members, which owns or leases a building or other premises to which are admitted only duly-elected or approved dues-paying members in good standing of the corporation or association and their guests while in the company of a member and to which club the general public is not admitted, and which maintains in the building or on the premises a suitable kitchen and dining facility with related equipment for serving food to members and their guests; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Is organized and operated for legitimate purposes, which has at least 100 duly- elected or approved dues-paying members in good standing, which owns or leases a building or other premises, including any vessel licensed or approved by any federal agency to carry or accommodate passengers on navigable waters of this state, to which are admitted only duly- elected or approved dues-paying members in good standing of the corporation or association and their guests while in the company of a member and to which the general public is not admitted, and which club maintains in the building or on the premises a suitable kitchen and dining facility with related equipment and employs a sufficient number of persons for serving meals to members and their guests; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Is organized for legitimate purposes and owns or leases a building or other delimited premises in any state, county, or municipal park, or at any airport, in which a club has been established, to which are admitted only duly-elected and approved dues-paying members in good standing and their guests while in the company of a member and to which the general public is not admitted, and which maintains in connection with the club a suitable kitchen and dining facility and related equipment and employs a sufficient number of persons for serving meals in the club to the members and their guests. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private bakery&quot; means an applicant for a private club or licensed private club license that has a primary function of operating a food preparation business that produces baked goods, including brownies, cookies, cupcakes, confections, muffins, breads, cakes, wedding cakes, and other baked goods where the applicant or licensee desires to sell baked goods infused with liquor, wine, or nonintoxicating beer or nonintoxicating craft beer, included: (A) In the icing, syrup, drizzle, or some other topping; (B) as an infusion where the alcohol is not processed or cooked out of the baked goods; or (C) &nbsp;from an infusion packet containing alcohol no greater than 10 milliliters where the purchaser adds the alcohol. The applicant or licensee may not sell liquor, wine, or nonintoxicating beer or nonintoxicating craft beer for on-premises or off-premises consumption. The applicant or licensee may sell the baked goods with alcohol added as authorized for on-premises and off-premises consumption. Further, the applicant or licensee shall: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) &nbsp;Have at least 50 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Operate a kitchen that produces baked goods, as specified in this subdivision, including at least: (I) A baking oven and a four-burner range or hot plate; (II) A sink with hot and cold running water; (III) A 17 cubic foot refrigerator or freezer, or some combination of a refrigerator and freezer which is not used for alcohol cold storage; (IV) Baking utensils and pans, kitchen utensils, and other food consumption apparatus as determined by the commissioner; and (V) food fit for human consumption available to be served during all hours of operation on the licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Maintain, at any one time, a food inventory capable of being prepared in the private bakery&#39;s kitchen. In calculating the food inventory, the commissioner shall include bags of chips or similar products, microwavable food or meals, frozen meals, pre-packaged foods, baking items such as flour, sugar, icing, and other confectionary items, or canned prepared foods; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) Use an age verification system approved by the commissioner for the purpose of verifying that persons under the age of 21 who are in the private bakery are not sold items containing alcoholic liquors, nonintoxicating beer or nonintoxicating craft beer, or wine. A person under 21 years of age may enter the shop and purchase other items not containing alcoholic liquors; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v) Meet and be subject to all other private club requirements. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private cigar shop&quot; means an applicant for a private club or licensed private club licensee that has a primary function of operating a cigar shop for sales of premium cigars for consumption on or off the licensed premises. Where permitted by law, indoor on-premises cigar consumption is permitted with a limited food menu, which may be met by using a private caterer, for members and guests while the private club applicant or licensee is selling and serving liquor, wine, or nonintoxicating beer or nonintoxicating craft beer for on-premises consumption. Further, the applicant or licensee shall: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Have at least 50 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Operate a cigar shop and bar with a kitchen, including at least: (i) A two-burner hot plate, air fryer, or microwave oven; (ii) A sink with hot and cold running water; (iii) A 17 cubic foot refrigerator or freezer, or some combination of a refrigerator and freezer which is not used for alcohol cold storage; (iv) Kitchen utensils and other food consumption apparatus as determined by the commissioner; and (v) Food fit for human consumption available to be served during all hours of operation on the licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Maintain, at any one time, not less than a food inventory capable of being prepared in the private club bar&#39;s kitchen or have on hand at least $150 in food provided by a private caterer. In calculating the food inventory, the commissioner shall include bags of chips or similar products, microwavable food or meals, frozen meals, pre-packaged foods, or canned prepared foods; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Use an age verification system approved by the commissioner for the purpose of verifying that persons under the age of 21 who are in the private club bar are accompanied by a parent or legal guardian, and if a person under 21 years of age is not accompanied by a parent or legal guardian, refuse to admit that person as a guest; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Meet and be subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private caterer&quot; means a licensed private club restaurant, private hotel, or private resort hotel authorized by the commissioner to cater and serve food and sell and serve alcoholic liquors, or non-intoxicating beer or non-intoxicating craft beer. A private caterer shall purchase wine sold or served at a catering event from a wine distributor. A private caterer shall purchase nonintoxicating beer and nonintoxicating craft beer sold or served at the catering event from a licensed beer distributor. A private caterer shall purchase liquor from a retail liquor outlet authorized to sell in the market zone, where the catering event is held. The private caterer or the persons or entity holding the catering event shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Have at least 10 members and guests attending the catering event; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Have obtained an open container waiver or have otherwise been approved by a municipality or county in which the event is being held;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operate a private club restaurant on a daily operating basis;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Only use its employees, independent contractors, or volunteers to sell and serve alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer who have received certified training in verifying the legal identification, the age of a purchasing person, and the signs of visible, noticeable, and physical intoxication;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Provide to the commissioner, at least seven days before the event is to take place:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The name and business address of the unlicensed private venue where the private caterer is to provide food and alcohol for a catering event;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The name of the owner or operator of the unlicensed private venue;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) A copy of the contract or contracts between the private caterer, the person contracting with the caterer, and the unlicensed private venue;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) A floorplan of the unlicensed private venue to comprise the private catering premises, which shall only include spaces in buildings or rooms of an unlicensed private venue where the private caterer has control of the space for a set time period and where the space safely accounts for the ingress and egress of the stated members and guests who will be attending the private catering event at the catering premises. The unlicensed private venue&#39;s floorplan during the set time period as stated in the contract shall comprise the private caterer&#39;s licensed premises, which is authorized for the lawful sale, service, and consumption of alcoholic liquors, nonintoxicating beer and nonintoxicating craft beer, and wine throughout the licensed private catering premises: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the unlicensed private venue shall: (I) Be inside a building or structure; (II) have other facilities to prepare and serve food and alcohol; (III) Have adequate restrooms and sufficient building facilities for the number of members and guests expected to attend the private catering event; and &nbsp;(IV) Otherwise be in compliance with health, fire, safety, and zoning requirements;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Not hold more than 15 private catering events per calendar year. Upon reaching the 16th event, the unlicensed venue shall obtain its own private club license;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Submit to the commissioner, evidence that any noncontiguous area of an unlicensed venue is within 150 feet of the private caterer&#39;s submitted floorplan and may submit a floorplan extension for authorization to permit alcohol and food at an outdoor event;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Meet and be subject to all other private club requirements; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Use an age verification system approved by the commissioner. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private club bar&quot; means an applicant for a private club or licensed private club licensee that has a primary function for the use of the licensed premises as a bar for the sale and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer and wine when licensed for those sales, while providing a limited food menu for members and guests, and meeting the criteria set forth in this subdivision which:</span></p><p class="cs53FB8D75"><a name="_Hlk89022791"><span class="csEF05ACC">(A) Has at least 100 members;</span></a></p><p class="cs53FB8D75"><a name="_Hlk221634595"><span class="csEF05ACC">(B) Operates a bar with a kitchen, including at least: (i) A two-burner hot plate, air fryer, or microwave oven; (ii) A sink with hot and cold running water; (iii) A 17 cubic foot refrigerator or freezer, or some combination of a refrigerator and freezer which is not used for alcohol cold storage; (iv) kitchen utensils and other food consumption apparatus as determined by the commissioner; and (v) food fit for human consumption available to be served during all hours of operation on the licensed premises; </span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Maintains, at any one time, a food inventory capable of being prepared in the private club bar&#39;s kitchen. In calculating the food inventory, the commissioner shall include bags of chips or similar products, microwavable food or meals, frozen meals, prepackaged foods, or canned prepared foods; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Uses an age verification system approved by the commissioner for the purpose of verifying that persons under the age of 18 who are in the private club bar are accompanied by a parent or legal guardian. If a person under 18 years of age is not accompanied by a parent or legal guardian that person may not be admitted as a guest; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Meets and is subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private food truck&quot; means an applicant for a private club, licensed private club licensee, or licensed private manufacturer&#39;s club licensee that has a primary function of operating a food preparation business using an industrial truck, van, or trailer to prepare food and meals for sale at various locations within the state while using a propane or electric generator powered kitchen. The private food truck applicant shall obtain county or municipal approval to operate a private food truck for food and liquor, wine, hard cider, and nonintoxicating beer or nonintoxicating craft beer sales and service, while providing a food menu for members and guests. The private food truck applicant shall: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) &nbsp;Have at least 10 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Operate with a kitchen, including at least: (i) A two-burner hot plate, air fryer, or microwave oven; (ii) A sink with hot and cold running water; (iii) At least a 10 cubic foot refrigerator or freezer, or some combination of a refrigerator and freezer which is not used for alcohol cold storage; and (iv) Plastic or metal kitchen utensils and other food consumption apparatus as determined by the commissioner; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Maintain, at any one time, not less than $200 of food inventory that is fit for human consumption and capable of being prepared and served from the private food truck&#39;s kitchen during all hours of operation; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Be sponsored, endorsed, or approved by the governing body or its designee of the county or municipality in which the private food truck is to be located and operated. Each location shall have a bounded and defined area and set hours for private food truck operations, sales, and consumption of alcohol that are not greater than a private club&#39;s hours of operation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Provide the commissioner with a list of all locations, including a main business location, where the private food truck operates, and is approved for sales pursuant to paragraph (D) of this section, and immediately update the commissioner when new locations are approved by a county or municipality; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Require all nonintoxicating beer and nonintoxicating craft beer sold, furnished, tendered, or served pursuant to the license created by this section to be purchased from the licensed distributor where the private food truck has its home location or from a resident brewer acting in a limited capacity as a distributor, all in accordance with &sect;11-16-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Require wine or hard cider sold, furnished, tendered, or served pursuant to the license created by this section to be purchased from a licensed distributor, winery, or farm winery in accordance with &sect;60-8-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Require liquor sold, furnished, tendered, or served pursuant to the license created by this section shall be purchased from a licensed retail liquor outlet in the market zone or contiguous market zone where the private food truck has its main business location, all in accordance with &sect;60-3A-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) A licensee authorized by this section shall use bona fide employees to sell, furnish, tender, or serve the nonintoxicating beer or nonintoxicating craft beer, wine, or liquor;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) A brewer, resident brewer, winery, farm winery, distillery, mini-distillery, or micro-distillery may obtain a private food truck license;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Licensed representatives of a brewer, resident brewer, beer distributor, wine distributor, wine supplier, winery, farm winery, distillery, mini-distillery, micro-distillery, and liquor broker representatives may attend a location where a private food truck is located and discuss their respective products but may not engage in the selling, furnishing, tendering, or serving of any nonintoxicating beer or nonintoxicating craft beer, wine, or liquor;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(L) Use an age verification system approved by the commissioner for the purpose of verifying that persons under the age of 21 who are in the private club bar are not permitted to be served any alcoholic liquors, nonintoxicating beer or nonintoxicating craft beer, or wine but may be permitted to purchase food or other items; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(M) Obtain all permits required by &sect;60-6-12 of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(N) Meet and be subject to all other applicable private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private club restaurant&quot; means an applicant for a private club or licensed private club licensee that has a primary function of using the licensed premises as a restaurant for serving freshly prepared meals and dining in the restaurant area. The private club restaurant may have a bar area separate from or commingled within the restaurant where seating requirements for members and guests are met by including the restaurant area. The applicant for a private club restaurant license is an applicant which: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Operates a restaurant and full kitchen with at least: (i) </span><a name="_Hlk89023393"><span class="csEF05ACC">Ovens and four-burner ranges</span></a><span class="csEF05ACC">; (ii) </span><span class="cs48F0597F">R</span><span class="csEF05ACC">efrigerators or freezers, or some combination of refrigerators and freezers greater than 50 cubic feet, or a walk-in refrigerator or freezer; (iii) Other kitchen utensils and apparatus as determined by the commissioner; and (iv) Freshly prepared food fit for human consumption available to be served during all hours of operation on the licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Maintains, at any one time, fresh food capable of being prepared in the private club restaurant&#39;s full kitchen. In calculating the food inventory, the commissioner may not include bags of chips or similar products, microwavable meals, frozen meals, pre-packaged foods, or canned prepared foods;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Uses an age verification system approved by the commissioner for the purpose of verifying that persons under 18 years of age who are in the bar area of a private club restaurant are accompanied by a parent or legal guardian. The licensee may not seat a person in the bar area who is under the age of 18 years who is not accompanied by a parent or legal guardian, but may allow that person, as a guest, to dine for food and nonalcoholic beverage purposes in the restaurant area of a private club restaurant;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) May uncork and serve members and guests up to two bottles of wine that a member purchased from a wine retailer, wine specialty shop, an applicable winery or farm winery when licensed for retail sales, or a licensed wine direct shipper when the purchase is for personal use and, not for resale. The licensee may charge a corkage fee of up to $10 dollars per bottle. In no event may a member or a group of members and guests exceed two sealed bottles or containers of wine to carry onto the licensed premises for uncorking and serving by the private club restaurant and for personal consumption by the member and guests. A member or guest may cork and reseal any unconsumed wine bottles as provided in &sect;60-8-3 (j) of this code and the legislative rules for carrying unconsumed wine off the licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Has at least two restrooms for members and their guests: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That this requirement may be waived by the local health department upon supplying a written waiver of the requirement to the commissioner: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the requirement may also be waived for a historic building by written waiver supplied to commissioner of the requirement from the historic association or district with jurisdiction over a historic building: </span><span class="cs93AB6E8B">Provided, further</span><span class="csEF05ACC">, That in no event may a private club restaurant have less than one restroom; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Meets and is subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private manufacturer club&quot; means an applicant for a private club or licensed private club licensee which is also licensed as a distillery, mini-distillery, micro-distillery, winery, farm winery, brewery, or resident brewery that manufacturers liquor, wine, nonintoxicating beer or nonintoxicating craft beer, which may be sold, served, and furnished to members and guests for on-premises consumption at the licensee&#39;s licensed premises and in the area or areas denoted on the licensee&#39;s floorplan, and which: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Offers tours, may offer samples, and may offer space as a conference center or for meetings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operates a restaurant and full kitchen with ovens, four-burner ranges, a refrigerator, or freezer, or some combination of a refrigerator and freezer, and other kitchen utensils and apparatus as determined by the commissioner on the licensed premises and serves food: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a licensee required by the provisions of this code to serve food on premises in order to lawfully serve alcoholic liquors, nonintoxicating beer or nonintoxicating craft beer, wine, or hard cider may meet the requirement of having on-premises food preparation facilities by, during all hours alcoholic liquors, beer, wine, and hard cider are offered for sale or sampling, having on-site an operating food truck or other portable kitchen: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the approval of the commissioner and the appropriate health department is required to operate as allowed by subsection (a) of this section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Maintains, at any one time fresh food capable of being prepared in the private manufacturer club&#39;s full kitchen. In calculating the food inventory, the commissioner may include bags of chips or similar products, microwavable meals, frozen meals, pre-packaged foods, or canned prepared foods;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Owns or leases, controls, operates, and uses space which is contiguous, bounded, or fenced real property sufficient to safely operate the licensed premises that would be listed on the licensee&#39;s floorplan and may be used for large events such as weddings, reunions, conferences, meetings, and sporting or recreational events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Lists the entire property from paragraph (E) of this subdivision and all adjoining buildings and structures on the private manufacturer club&#39;s floorplan that would comprise the licensed premises, which would be authorized for the lawful sale, service, and consumption of alcoholic liquors, nonintoxicating beer or nonintoxicating craft beer, hard cider, and wine throughout the licensed premises, whether these activities were conducted in a building or structure or outdoors while on the private manufacturer club&#39;s licensed premises, and as noted on the private manufacturer club&#39;s floorplan;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Identifies a person, persons, an entity, or entities who or which have the right, title, and ownership or lease interest in the real property, buildings, and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Uses an age verification system approved by the commissioner; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Meets and is subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private fair and festival&quot; means an applicant for a private club or a licensed private club licensee meeting the requirements of &sect;60-7-8a of this code for a temporary event, and the criteria set forth in this subdivision which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Has been sponsored, endorsed, or approved, in writing, by the governing body, or its duly elected or appointed officers, of either the municipality or of the county in which the festival, fair, or other event is to be conducted; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Prepares, provides, or engages a food vendor to provide adequate freshly prepared food or meals to serve its stated members and guests who will be attending the temporary festival, fair, or other event, and further provides any documentation or agreements to the commissioner prior to approval; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Does not use third-party entities or individuals to purchase, sell, furnish, or serve alcoholic liquors, nonintoxicating beer or nonintoxicating craft beer; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Provides adequate restroom facilities, whether permanent or portable, to serve the stated members and guests who will be attending the festival, fair, or other event; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Provides a floorplan for the proposed premises with a defined and bounded area to safely account for the ingress and egress of stated members and guests who will be attending the festival, fair, or other event; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Uses an age verification system approved by the commissioner; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Meets and is subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private hotel&quot; means an applicant for a private club or licensed private club licensee meeting the criteria set forth in this subsection which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 2,000 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Offers short-term, daily rate accommodations or lodging for members and their guests amounting to at least 30 separate bedrooms, and also offers a conference center for meetings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operates a restaurant and full kitchen with ovens, four-burner ranges, walk-in freezers, and other kitchen utensils and apparatus as determined by the commissioner on the licensed premises and serves freshly prepared food at least 20 hours per week;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Maintains, at any one time, fresh food capable of being prepared in the private hotel&#39;s full kitchen. In calculating the food inventory, the commissioner may not include microwavable, frozen, or canned foods;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Owns or leases, controls, operates, and uses acreage amounting to more than one acre but fewer than three acres, which are contiguous acres of bounded or fenced real property which would be listed on the licensee&#39;s floorplan and would be used for hotel and conferences and large contracted-for group-type events such as weddings, reunions, conferences, meetings, and sporting or recreational events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Lists the entire property from paragraph (E) of this subdivision and all adjoining buildings and structures on the private hotel&#39;s floorplan which would comprise the licensed premises, which would be authorized for the lawful sales, service, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private hotel&#39;s licensed premises and as noted on the private hotel&#39;s floorplan;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Has an identified person, persons, or entity that has right, title, and ownership or lease interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Uses an age verification system approved by the commissioner; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Meets and is subject to all other private club requirements; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) May provide members and guests who are verified by proper form of identification to be 21 years of age or older to have secure access via key or key card to an in-room mini-bar in their rented short-term accommodation; the mini-bar may be a small refrigerator not in excess of 1.6 cubic feet for the sale of nonintoxicating beer or nonintoxicating craft beer, wine, hard cider, and liquor sold from the original sealed container, and the refrigerator may contain: (i) Any combination of 12 fluid ounce cans or bottles not exceeding 72 fluid ounces of nonintoxicating beer or nonintoxicating craft beer; (ii) Any combination of cans or bottles of wine or hard cider not exceeding 750 ml of wine or hard cider; (iii) Liquor in bottles sized from 50 ml, 100 ml, and 200 ml, with any combination of those liquor bottles not exceeding 750 ml; and (iv) Any combination of canned or packaged food valued at least $50. All markups, fees, and taxes shall be charged on the sale of nonintoxicating beer, nonintoxicating craft beer, wine, liquor, and hard cider. All nonintoxicating beer or nonintoxicating craft beer available for sale shall be purchased from the licensed distributor in the area where licensed. All wine or hard cider available for sale shall be purchased from a licensed wine distributor or authorized farm winery. All liquor available for sale shall be purchased from the licensed retail liquor outlet in the market zone of the licensed premises. The mini-bar shall be checked daily and replenished as needed to benefit the member and guest. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private resort hotel&quot; means an applicant for a private club or licensed private club licensee which: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 5,000 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Offers short term, daily rate accommodations or lodging for members and their guests amounting to at least 50 separate bedrooms;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operates a restaurant and full kitchen with ovens, six-burner ranges, walk-in freezers, and other kitchen utensils and apparatus as determined by the commissioner on the licensed premises and serves freshly prepared food at least 25 hours per week;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Maintains, at any one time, fresh food capable of being prepared in the private resort hotel&#39;s full kitchen. In calculating the food inventory, the commissioner may not include microwavable, frozen, or canned foods;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Owns or leases, controls, operates, and uses acreage amounting to at least 10 contiguous acres of bounded or fenced real property which would be listed on the licensee&#39;s floorplan and would be used for destination, resort, and large contracted-for group-type events such as weddings, reunions, conferences, meetings, and sporting or recreational events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Lists the entire property from paragraph (E) of this subdivision and all adjoining buildings and structures on the private resort hotel&#39;s floorplan comprising the licensed premises which would be authorized for the lawful sales, service, and consumption of alcoholic liquors &nbsp;and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private resort hotel&#39;s licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Has an identified person, persons, or entity that has right, title, and ownership or lease interest in the real property, buildings, and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Uses an age verification system approved by the commissioner; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Meets and is subject to all other private club requirements; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) May have a separately licensed resident brewer with a brewpub license inner-connected via a walkway, doorway, or entryway, all as determined and approved by the commissioner, for limited access during permitted hours of operation for tours and samples at the resident brewery; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) May provide members and guests who are verified by proper form of identification to be 21 years of age or older to have access via key or key card to an in-room mini-bar in their rented short-term accommodation. The mini-bar may be a small refrigerator not in excess of 3.2 cubic feet for the sale of nonintoxicating beer, nonintoxicating craft beer, wine, hard cider, and liquor sold from the original sealed container, and the refrigerator may contain: (i) Any combination of 12 fluid ounce cans or bottles not exceeding 144 fluid ounces of nonintoxicating beer or nonintoxicating craft beer; (ii) Any combination of cans or bottles of wine or hard cider not exceeding one and a half liters of wine or hard cider; (iii) Liquor in bottles sized from 50 ml, 100 ml, 200 ml, and 375 ml with any combination of such liquor bottles not exceeding one and a half liters; and (iv) Any combination of canned or packaged food. All markups, fees, and taxes shall be charged on the sale of nonintoxicating beer, nonintoxicating craft beer, hard cider, wine, and liquor. All nonintoxicating beer or nonintoxicating craft beer available for sale shall be purchased from the licensed distributor in the area where licensed. All wine or hard cider available for sale shall be purchased from a licensed wine distributor or authorized farm winery. All liquor available for sale shall be purchased from the licensed retail liquor outlet in the market zone of the licensed premises. The mini-bar shall be checked daily and replenished as needed to benefit the member and guest.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private golf club&quot; means an applicant for a private club or licensed private club licensee which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Maintains at least one 18-hole golf course with separate and distinct golf playing holes, not reusing nine golf playing holes to comprise the 18 golf playing holes, and a clubhouse;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operates a restaurant and full kitchen with ovens, as determined by the commissioner, on the licensed premises and serves freshly prepared food at least 15 hours per week;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Owns or leases, controls, operates, and uses acreage amounting to at least 80 contiguous acres of bounded or fenced real property which would be listed on the private golf club&#39;s floorplan and could be used for golfing events and large contracted-for group-type events such as weddings, reunions, conferences, meetings, and sporting or recreational events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Lists the entire property from paragraph (D) of this subsection and all adjoining buildings and structures on the private golf club&#39;s floorplan comprising the licensed premises which would be authorized for the lawful sales, service, and consumption of alcoholic liquors </span><a name="_Hlk160029419"><span class="csEF05ACC">and nonintoxicating beer, wine, hard cider, or nonintoxicating craft beer </span></a><span class="csEF05ACC">throughout the licensed premises whether these activities are conducted in a building or structure or outdoors while on the private golf club&#39;s licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Has an identified person, persons, or entity that has right, title, and ownership interest in the real property, buildings, and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Uses an age verification system approved by the commissioner; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Meets and is subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private nine-hole golf course&quot; means an applicant for a private club or licensed private club licensee which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 50 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Maintains at least one nine-hole golf course with separate and distinct golf playing holes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operates a restaurant and full kitchen with ovens, as determined by the commissioner, on the licensed premises and serves freshly prepared food at least 15 hours per week;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Owns or leases, controls, operates, and uses acreage amounting to at least 30 contiguous acres of bounded or fenced real property which would be listed on the private nine-hole golf course&#39;s floorplan and could be used for golfing events and large contracted for group-type events such as weddings, reunions, conferences, meetings, and sporting or recreational events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Lists the entire property from paragraph (D) of this subdivision and all adjoining buildings and structures on the private nine-hole golf course&#39;s floorplan comprising the licensed premises which would be authorized for the lawful sales, service, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private nine-hole golf course&#39;s licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Has an identified person, persons, or entity that has right, title, and ownership interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Uses an age verification system approved by the commissioner; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Meets and is subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private tennis club&quot; means an applicant for a private club or licensed private club licensee which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Maintains at least four separate and distinct tennis courts, either indoor or outdoor, and a clubhouse or similar facility;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Has a restaurant and full kitchen with ovens, as determined by the commissioner, on the licensed premises which is capable of serving freshly prepared food;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Owns or leases, controls, operates, and uses acreage amounting to at least two contiguous acres of bounded or fenced real property which would be listed on the private tennis club&#39;s floorplan and could be used for tennis events and large events such as weddings, reunions, conferences, tournaments, meetings, and sporting or recreational events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Lists the entire property from paragraph (D) of this subdivision and all adjoining buildings and structures on the private tennis club&#39;s floorplan comprising the licensed premises which would be authorized for the lawful sales, service, and consumption of alcoholic liquors throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private tennis club&#39;s licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Has identified a person, persons, an entity, or entities who or which has right, title, and ownership interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Meets and is subject to all other private club requirements; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Uses an age verification system approved by the commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private college sports stadium&quot; means an applicant for a private club or licensed private club licensee that operates a college or university stadium or coliseum for Division I, II, or III sports and that involves a college, public or private, or university that is a member of the National Collegiate Athletic Association, or its successor, and uses the facility for football, basketball, baseball, soccer, or other Division I, II, or III sports, reserved weddings, reunions, conferences, meetings, or other special events and does not maintain daily or regular operating hours as a bar or restaurant. The licensee may sell alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer when conducting or temporarily hosting non-collegiate sporting events. This license may be issued in the name of the National Collegiate Athletic Association Division I, II, or III college or university or the name of the primary food and beverage vendor under contract with that college or university. All alcohol sales shall take place within the confines of the college or university stadium: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That any outside area approved for alcohol sales and nonintoxicating beer or nonintoxicating craft beer shall be surrounded by a fence or other barrier prohibiting entry except upon the college or university&#39;s express permission, and under the conditions and restrictions established by the college or university, so that the alcohol sales area is closed in order to prevent entry and access by the general public. Further the applicant shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Have at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Maintain an open-air or enclosed stadium or coliseum venue primarily used for sporting events, such as football, basketball, baseball, soccer, or other Division I, II, or III sports, and also weddings, reunions, conferences, meetings, or other events where parties shall reserve the college stadium venue in advance of the event; &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operate a restaurant and full kitchen with ovens and equipment that is equivalent or greater than a private club restaurant, as determined by the commissioner, on the licensed premises that is capable of serving freshly prepared food or meals to its stated members, guests, and patrons who will be attending the event at the private college sports stadium;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Own or lease, control, operate, and use acreage amounting to at least two contiguous acres of bounded or fenced real property, as determined by the commissioner, which would be listed on the private college stadium&#39;s floorplan and could be used for contracted-for temporary non-collegiate sporting events, group-type weddings, reunions, conferences, meetings, or other events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) List the entire property from paragraph (D) of this subdivision and all adjoining buildings and structures on the private college sports stadium&#39;s floorplan which would comprise the licensed premises, which would be authorized for the lawful sales, service, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private college sports stadium&#39;s licensed premises and as noted on the private college sports stadium&#39;s floorplan;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Have an identified person, persons, or entity that has right, title, and ownership interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Meet and be subject to all other private club requirements; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Use an age verification system approved by the commissioner. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private professional sports stadium&quot; means an applicant for a private club or licensed private club licensee that is only open for professional sporting events when the events are affiliated with or sponsored by a professional sporting association, reserved weddings, reunions, conferences, meetings, or other special events and does not maintain daily or regular operating hours as a bar or restaurant. The licensee may not sell alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer when conducting or hosting non-professional sporting events, and further the applicant shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Have at least 1,000 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Maintain an open-air or enclosed stadium venue primarily used for sporting events, such as football, baseball, soccer, auto racing, or other professional sports, and also weddings, reunions, conferences, meetings, or other events where parties reserve the stadium venue in advance of the event; &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operate a restaurant and full kitchen with ovens, as determined by the commissioner, on the licensed premises which is capable of serving freshly prepared food or meals to serve its stated members, guests, and patrons who will be attending the event at the private professional sports stadium;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Own or lease, control, operate, and use acreage amounting to at least three contiguous acres of bounded or fenced real property, as determined by the commissioner, which would be listed on the professional sports stadium&#39;s floorplan and could be used for contracted- for professional sporting events, group-type weddings, reunions, conferences, meetings, or other events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) List the entire property from paragraph (D) of this subdivision and all adjoining buildings and structures on the private professional sports stadium&#39;s floorplan comprising the licensed premises which would be authorized for the lawful sales, service, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private professional sports stadium&#39;s licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Have an identified person, persons, or entity that has right, title, and ownership interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Meet and be subject to all other private club requirements; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Use an age verification system approved by the commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private farmers market&quot; means an applicant for a private club or licensed private club licensee that operates as an association of bars, restaurants, and retailers who sell West Virginia- made products among other products, and other stores who open primarily during daytime hours of 6:00 a.m. to 6:00 p.m., but may operate in the day or evenings for special events where the sale of food and alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer may occur for on-premises consumption, such as reserved weddings, reserved dinners, pairing events, tasting events, reunions, conferences, meetings, or other special events and does not maintain daily or regular operating hours as a bar or restaurant. All businesses that are members of the association shall agree in writing to be liable and responsible for all sales, service, furnishing, tendering, and consumption of alcoholic liquors, nonintoxicating beer, nonintoxicating craft beer, wine, and hard cider occurring on the entire licensed premises of the private farmer&#39;s market, including indoor and outdoor bounded areas. The applicant shall also:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Have at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Have one or more members operating a private club restaurant and full kitchen with ovens, four-burner ranges, a refrigerator or freezer or some combination of a refrigerator and freezer, and other kitchen utensils and apparatus as determined by the commissioner on the licensed premises and serve freshly prepared food at least 15 hours per week;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Have one or more members operating a private club restaurant who maintain, at any one time, fresh food capable of being prepared for events conducted at the </span><a name="_Hlk129024249"><span class="csEF05ACC">private farmers market in the private club restaurant</span></a><span class="csEF05ACC">&#39;s full kitchen. In calculating the food inventory, the commissioner may not include bags of chips or similar products, microwavable meals, frozen meals, pre-packaged foods, or canned prepared foods;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Have an association that owns or leases, controls, operates, and uses acreage amounting to more than one acre, which is contiguous acreage of bounded or fenced real property which would be listed on the licensee&#39;s floorplan and would be used for large contracted-for reserved weddings, reserved dinners, pairing events, tasting events, reunions, conferences, meetings, or other special events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Have an association that lists in the application for licensure the entire property and all adjoining buildings and structures on the private farmers market&#39;s floorplan which would comprise the licensed premises, which would be authorized for the lawful sales, service, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private farmers market&#39;s licensed premises and as noted on the private farmers market&#39;s floorplan;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Have an identified person, persons, or entity that has right, title, and ownership or lease interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Have at least two separate and unrelated vendors applying for the private farmers market license;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Only use its employees, independent contractors, or volunteers to purchase, sell, furnish, or serve liquor, wine, nonintoxicating beer or nonintoxicating craft beer; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Provide adequate restroom facilities, whether permanent or portable, to serve the stated members and guests who will be attending the private farmers market; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) Provide a security plan indicating all vendor points of service, entrances, and exits in order to verify members&#39;, patrons&#39;, and guests&#39; ages, to verify whether a member, patron, or guest is intoxicated, and to provide for the public health and safety of members, patrons, and guests;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Use an age verification system approved by the commissioner; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(L) Meet and be subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private wedding venue or barn&quot; means an applicant for a private club or licensed private club licensee that is only open for reserved weddings, reunions, conferences, meetings, or other events and does not maintain daily or regular operating hours, and which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 25 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Maintains a venue, facility, barn, or pavilion primarily used for weddings, reunions, conferences, meetings, or other events where parties reserve or contract for the venue, facility, barn, or pavilion in advance of the event; &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operates a restaurant and full kitchen with ovens, as determined by the commissioner, on the licensed premises that is capable of serving freshly prepared food, or engages a food caterer to provide adequate freshly prepared food or meals to serve its stated members, guests, and patrons who will be attending the event at the private wedding venue or barn. The applicant or licensee shall provide written documentation including a list of food caterers or written agreements regarding any food catering operations to the commissioner prior to approval of a food catering event;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Owns or leases, controls, operates, and uses space sufficient to safely operate the licensed premises; </span><span class="cs68EFC440">The applicant or licensee shall verify that, the property is not less than two acres and is remotely located, subject to the commissioner&#39;s approval. The bounded or fenced real property may be listed on the private wedding venue&#39;s or barn&rsquo;s floorplan and may be used for large events such as weddings, reunions, conferences, meetings, or other events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Lists the entire property from paragraph (D) of this subdivision and all adjoining buildings and structures on the private wedding venue or barn&#39;s floorplan that would comprise the licensed premises and which would be authorized for the lawful sales, service, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private wedding venue or barn&#39;s licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Has an identified person, persons, or entity that has right, title, and ownership interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Meets and is subject to all other private club requirements; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Uses an age verification system approved by the commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private multi-sport complex&quot; means an applicant for a private club or licensed private club licensee that is open for multiple sports events to be played at the complex facilities, reserved weddings, concerts, reunions, conferences, meetings, or other special events, and which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Maintains an open-air multi-sport complex primarily for use for sporting events, such as baseball, soccer, basketball, tennis, frisbee, or other sports, but may also conduct weddings, concerts, reunions, conferences, meetings, or other events where parties reserve parts of the sports complex in advance of the sporting or other event; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operates a restaurant and full kitchen with ovens in the licensee&#39;s main facility, as determined by the commissioner, on the licensed premises which is capable of serving freshly prepared food, or meals to its stated members, guests, and patrons who will be attending the event at the private multi-sport complex. A licensee may contract with temporary food vendors or food trucks for food sales only, but not on a permanent basis, in areas of the multi-sport complex not readily accessible by the main facility; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Maintains, at any one time, fresh food capable of being prepared in the </span><a name="_Hlk129024276"><span class="csEF05ACC">private multi-sport complex&#39;s </span></a><span class="csEF05ACC">full kitchen. In calculating the food inventory, the commissioner may not include bags of chips or similar products, microwavable meals, frozen meals, prepackaged foods, or canned prepared foods;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Owns or leases, controls, operates, and uses acreage amounting to at least 50 contiguous acres of bounded or fenced real property, as determined by the commissioner, which would be listed on the private multi-sport complex&#39;s floorplan and could be used for contracted-for sporting events, group-type weddings, concerts, reunions, conferences, meetings, or other events;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Lists the entire property from paragraph (E) of this subdivision and all adjoining buildings and structures on the private multi-sport complex&#39;s floorplan which would comprise the licensed premises, and which would be authorized for the lawful sales, service, and consumption of alcoholic liquors, nonintoxicating beer, nonintoxicating craft beer, and hard cider throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on the private multi-sport complex&#39;s licensed premises, as noted on the private multi-sport complex&#39;s floorplan. The licensee may sell alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer from a golf cart or food truck owned or leased by the licensee and also operated by the licensee when the golf cart or food truck is located on the private multi-sport complex&#39;s licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Has an identified person, persons, or entity that has right, title, and ownership interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Meets and is subject to all other private club requirements; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Uses an age verification system approved by the commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private coliseum or center&quot; means an applicant for a private club or licensed private club licensee that is open for various events including, but not limited to, musical concerts, bands, sporting events, monster trucks, sports entertainment events, circuses, expos, hobby events, tradeshows, health events, reserved weddings, reunions, retreats, conventions, conferences, meetings, or other special events. The licensee may not sell alcoholic liquors, nonintoxicating beer or wine when conducting or hosting events focused on patrons who are less than 21 years of age. The applicant shall also:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Have at least 5,000 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Maintain an enclosed coliseum or center venue with at least 80,000 square feet of event space primarily used for events where parties reserve the coliseum or center venue in advance of the event; &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Operate a restaurant and full kitchen with ovens, as determined by the commissioner, on the licensed premises and be capable of serving freshly prepared food or meals to its stated members, guests, and patrons who will be attending events at the private coliseum or center;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Own or lease, control, operate, and use acreage amounting to at least two contiguous acres of bounded or fenced real property, as determined by the commissioner, which would be listed on the private coliseum or center&#39;s floorplan and could be used for contracted-for events, or a private fair and festival, as authorized by the commissioner per dual licensing requirements as set forth in &sect;60-7-2a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) List the entire property from paragraph (D) of this subdivision and all adjoining buildings and structures on the private coliseum or center&#39;s floorplan comprising the licensed premises which would be authorized for the lawful sales, service, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure or outdoors while on private coliseum or center&#39;s licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Have an identified person, persons, or entity that has right, title, and ownership interest in the real property buildings and structures located on the proposed licensed premises; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Meet and be subject to all other private club requirements; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Use an age verification system approved by the commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Private food court&quot; means an applicant who qualifies for a private club restaurant or licensed private club restaurant license that operates in a facility within a licensed premises with one licensed floorplan that includes an association of other inter-connected licensed private club restaurants or unlicensed restaurants that operate legally without alcohol sales, where all businesses that are licensed members of the association have agreed in writing to be liable and responsible for all sales, service, furnishing, tendering, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer occurring on the entire licensed premises of the private food court. The applicant shall also:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Have at least 100 members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Have at least one member of its association who qualifies for a private club restaurant containing a full kitchen with ovens, four-burner ranges, a refrigerator or freezer or some combination of a refrigerator and freezer, and other kitchen utensils and apparatus as determined by the commissioner on the licensed premises and be capable of serving freshly prepared food at least 15 hours per week in the private food court;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Have at least one member of its association who qualifies for a private club restaurant license who maintains, at any one time, fresh food capable of being prepared in the private club restaurant&#39;s full kitchen. In calculating the food inventory the commissioner may not include bags of chips or similar products, microwavable meals, frozen meals, pre-packaged foods, or canned prepared foods;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Have an association that owns or leases, controls, operates, and uses a facility that meets requirements of this article, and the entire facility is listed on the licensee&#39;s floorplan as its licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Have an association that lists in the application for licensure the entire facility and any inter-connected and adjoining structures on the private food court&#39;s floorplan which would compromise the licensed premises, and which would be authorized for the lawful sales, service, and consumption of alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer throughout the licensed premises whether these activities were conducted in a building or structure while on the private food court&#39;s licensed premises as noted on the private food court&#39;s licensed floorplan;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Have an identified person, persons, or entity that has right, title, and ownership or lease interest in the real property buildings and structures located on the proposed licensed premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Have at least one separate and unrelated business applying for private food court license;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Only use its employees, independent contractors, or volunteers to purchase, sell, furnish, or serve liquor, wine, nonintoxicating beer or nonintoxicating craft beer;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Provide adequate restroom facilities, whether permanent or portable, to serve the stated members, patrons, and guests who will be attending the private food court;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) Provide a security plan indicating all businesses who will be selling and serving alcoholic liquors and nonintoxicating beer or nonintoxicating craft beer, list non-licensees who will be selling and serving food, list all entrances, and list all exits, provide a plan to verify the ages of members, patrons, and guests, a plan to verify whether a member, patron, or guest is intoxicated, and a plan to provide for the public health and safety of members, patrons, and guests;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) &nbsp;Use an age verification system approved by the commissioner; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(L) &nbsp;Meet and be subject to all other private club requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The Division of Natural Resources, the authority governing any county or municipal park, or any county commission, municipality, other governmental entity, public corporation, or public authority operating any park or airport may lease, as lessor, a building or portion thereof or other limited premises in any park or airport to any corporation or unincorporated association for the establishment of a private club pursuant to this article.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

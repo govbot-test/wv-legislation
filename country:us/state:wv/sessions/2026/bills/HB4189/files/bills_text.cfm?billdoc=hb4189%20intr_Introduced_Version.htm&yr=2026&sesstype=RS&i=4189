@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4189 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4189">&laquo; House Bill 4189 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4189'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4189 - Relating to Hope Scholarships awards&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4189+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4189"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs7788C6BC{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4189</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Hornbuckle</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 14, 2026; referred to the Committee on Education then Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend &sect;18-31-5 and &sect;18-31-8 of the Code of West Virginia, 1931, as amended, relating to Hope Scholarship awards; placing a limitation on eligibility based on the income of the recipient family; and requiring reimbursement of counties for services or activities the county provides to Hope Scholarship recipients.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-31-5. Award of Hope Scholarships.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Hope Scholarship Program is established to provide the option for a parent to better meet the individual elementary and secondary education needs of his or her eligible child. The program shall be operational no later than July 1, 2022.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The board shall create a standard application form that a parent can submit to establish his or her student&#39;s eligibility for the award of Hope Scholarship funds, to be placed in a personal education savings account to be used for qualifying education expenses on behalf of the eligible recipient as provided for in &sect;18-31-7 of this code. Information about scholarship funds and the application process shall be made available on the board&#39;s website.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The board shall process, accept, and make available Hope Scholarship applications and awards at any time during the calendar year. The board may update the application as needed. The board shall issue an award letter to eligible recipients within 45 days of receipt of a completed application and all required documentation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The board shall approve an application for a Hope Scholarship if all of the following circumstances are met:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A parent submits an application for a Hope Scholarship in accordance with the legislative rules promulgated by the board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A student on whose behalf the parent is applying is an eligible recipient, as provided in &sect;18-31-2(5) of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The parent signs an agreement with the board, promising to do all of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) To provide an education for the eligible recipient in at least the subjects of reading, language, mathematics, science, and social studies;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) To use the Hope Scholarship funds exclusively for qualifying expenses incurred in providing the student an elementary or secondary education as provided for in &sect;18-31-7 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) To comply with the rules and requirements of the Hope Scholarship Program; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) To afford the Hope Scholarship student opportunities for educational enrichment such as organized athletics, art, music, or literature; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) To notify the Hope Scholarship Board immediately and cease use of Hope Scholarship funds upon the student&#39;s reenrollment in a public school or when the student graduates from or otherwise successfully completes a secondary school program; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The board confirms with the West Virginia Department of Education that the student satisfies &sect;18-31-2(5) of this code: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That if the department does not reply within 30 days, this criteria is considered satisfied.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) All records accepted or maintained by the board containing personally identifying information of a Hope Scholarship student, applicant, or parent are confidential and not a public record subject to release pursuant to the West Virginia Freedom of Information Act, as codified in &sect;29B-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	</span><span class="cs46AE26E6">(f) </span><span class="cs1489E706">Family income-based adjustments to Hope Scholarship awards &mdash;</span></p><p class="cs7F45F1B"><span class="cs93AB6E8B">&nbsp;</span><span class="csEF05ACC">	</span><span class="cs46AE26E6">(1) To preserve the financial soundness of the Hope Scholarship program, an income eligibility qualification is established to assure sufficient funding is available for all students. The Board shall implement Hope Scholarship income-based eligibility for students as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Each year the Board shall review and publish for the upcoming school year a schedule for eligible student awards based on the calculation of the family income for the prior year&rsquo;s earning of the family to be calculated as follows:</span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(A) For any family at or below the 450% of the federal poverty level: full award;</span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(B) For any family at or below 500% of the federal poverty level: 85% of full award;</span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(C) For any family at or below 600% of the federal poverty level: 50% of full award;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) For any family at or below 650% of the federal poverty level: 37% of the full award.</span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(E) For any family at or below 700% the federal poverty level: 25% of the full award;</span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(F) For any family at or below 750% of the federal poverty level: 10% of the full award.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Each parent making an application for a Hope Scholarship shall submit their most recent tax documents or information as required by the board to determine the eligibility of the child or children for a Hope Scholarship for the upcoming school term year. The Board shall establish protocols and directives to assure that all tax information is used solely to determine eligibility and shall preserve confidentiality for all personal tax and income information. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The board shall promulgate the necessary rules and policies to assist to comply with the provisions of this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-31-8. Annual continuation of Hope Scholarship accounts; participation in public school system.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Notwithstanding any changes in eligibility, effective January 1, 2025, a Hope Scholarship student may continue participation in the program from school year to school year without reapplying for the program until one of the conditions set forth in &sect;18-31-6(f) occurs: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the board shall verify with the Department of Education the following information by July 1 of every year:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A list of all active Hope Scholarship accounts;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The resident school district of each Hope Scholarship student;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) For a Hope Scholarship student who chooses to attend a participating school, annual confirmation of his or her continued attendance at a nonpublic school that complies with all requirements that other nonpublic school students must comply with; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) For a Hope Scholarship student who chooses an individualized instructional program:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) (i) He or she has annually taken a nationally normed standardized achievement test of academic achievement in the subject areas of reading, language, and mathematics, and when available for the student&#39;s grade-level, science and social studies;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The mean of the child&#39;s overall test results in the subject areas tested for any single year is within or above the fourth stanine or, if below the fourth stanine, show improvement from the previous year&#39;s results; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) The mean of the child&#39;s overall test results are reported to the county superintendent; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) (i) A certified teacher conducts a review of the student&#39;s academic work annually;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The certified teacher determines that the student is making academic progress commensurate with his or her age and ability; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) The certified teacher&#39;s determination is reported to the county superintendent.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) As a condition of continued participation in the Hope Scholarship Program from one school year to the next, a parent must annually meet the following requirements, according to the deadlines and procedures established by the Board:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The parent must submit proof of the student&rsquo;s continued West Virginia residency;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The parent must execute the parent agreement with the Board described in &sect;18-31-5(d)(3) of this code ahead of each school year; </span><span class="cs68EFC440">and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The parent must report to the county superintendent of the student&rsquo;s county of residence that the student has complied with all attendance and academic requirements in accordance with subsection (a) of this section for the most recent school year</span><span class="cs46AE26E6">; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Income or tax information as required by the Board pursuant to &sect;18-31-8(f) of this code</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Each county superintendent shall submit the test results and determinations reported to him or her pursuant to subsection (a) of this section to the board and the Department of Education each year on or before June 15. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) If a parent fails to meet the annual conditions for continued participation in the Hope Scholarship Program described in subsection (b) of this section, the board shall notify the parent that the eligible recipient&#39;s account will be closed in 45 calendar days. If a parent declines continued participation in the program or does not respond within 30 calendar days of receipt of notice, the board shall close the account and any remaining moneys shall be returned to the state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) If an eligible recipient decides to return to the Hope Scholarship Program after failing to meet the conditions for continued participation described in subsection (b) of this section, they must reapply.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The </span><span class="cs68EFC440">board, in consultation with the </span><span class="csEF05ACC">Department of Education,</span><span class="cs68EFC440"> may</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">shall</span><span class="csEF05ACC"> adopt rules and policies for Hope Scholarship students who want to continue to receive services provided by a public school or district, including individual classes and extracurricular programs, in combination with an individualized instructional program. The </span><span class="cs68EFC440">board, in consultation with the</span><span class="csEF05ACC"> Department of Education, </span><span class="cs46AE26E6">in consultation with county boards of education, shall establish a fee schedule for each event or activity that a Hope Scholarship recipient is eligible to participate in to assure that the county board of education is reimbursed for costs for providing that service or activity to the Hope Scholarship participant. &nbsp;If the Department of Education determines that a cost disparity between counties is significant, then a fee schedule may be promulgated by county or region to assure assessment of any collected fee is fair and equitable. Any fee must be paid by the Hope Scholarship participant for participation in any event or activity administered by county public county school system. The Department of Education may provide guidelines and establish procedures to have the fees deducted from the Hope Scholarship Award at the time of the award. &nbsp;Collection of these fees </span><span class="csEF05ACC">shall ensure that any public school or school district providing such services receives the appropriate pro rata share of a student&#39;s Hope Scholarship funds based on the percentage of total instruction provided to the student by the public school or school district. County boards and charter school governing boards shall charge tuition to Hope Scholarship students who enroll for services in a public school within the county or in a public charter school. Hope Scholarship students who enroll for services part-time in public school shall not be included in net enrollment for state aid funding purposes under &sect;18-9A-2 of this code. Nothing in this subsection prohibits a Hope Scholarship student from using the funds deposited in his or her account on both services provided by a public school or district and other qualifying expenses as provided for in &sect;18-31-7 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The board, in consultation with the Department of Education, may adopt rules and policies to provide the least disruptive process for Hope Scholarship students who desire to stop receiving Hope Scholarship payments and return full-time to a public school. </span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to help preserve Hope Scholarship funding resources by placing family income eligibility limitations for Hope scholarships, and providing the county schools be reimbursed for services provided to Hope scholarship recipients.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

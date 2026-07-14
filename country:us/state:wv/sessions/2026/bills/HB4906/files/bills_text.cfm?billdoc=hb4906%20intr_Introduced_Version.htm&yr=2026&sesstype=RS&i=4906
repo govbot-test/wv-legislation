@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4906 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4906">&laquo; House Bill 4906 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4906'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4906 - To exempt individuals over 70 from real estate taxes beginning tax year 2027 &amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4906+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4906"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4906</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Roop</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 29, 2026; referred to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;11-3-9 and &sect;11-6B-3 of the Code of West Virginia, 1931, as amended, relating to property exempt from taxation; providing real and personal property tax exemptions for person 70 years or older; and clarifying who qualifies for the Homestead Property Tax Exemption.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 3. ASSESSMENTS GENERALLY.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;11-3-9. Property exempt from taxation.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) All property, real and personal, described in this subsection, and to the extent limited by this section, is exempt from taxation:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Property belonging to the United States, other than property permitted by the United States to be taxed under state law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Property belonging exclusively to the state;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Property belonging exclusively to any county, district, city, village, or town in this state and used for public purposes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Property located in this state belonging to any city, town, village, county, or any other political subdivision of another state and used for public purposes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Property used exclusively for divine worship, or </span><a name="_Hlk63611049"><span class="csEF05ACC">used exclusively for divine worship and the operation of a pre-K school, primary school, middle school, secondary school, daycare center, or church camp for children, which school, daycare center, or church camp is operated by the church which owns the property or is operated by another not-for-profit organization or entity;</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Parsonages and the household goods and furniture pertaining thereto;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Mortgages, bonds, and other evidence of indebtedness in the hands of bona fide owners and holders hereafter issued and sold by churches and religious societies for the purposes of securing money to be used in the erection of church buildings used exclusively for divine worship or for the purpose of paying indebtedness thereon;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Cemeteries;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Property belonging to, or held in trust for, colleges, seminaries, academies, and free schools, if used for educational, literary, or scientific purposes, including books, apparatus, annuities, and furniture;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Property belonging to, or held in trust for, colleges or universities located in West Virginia, or any public or private nonprofit foundation or corporation which receives contributions exclusively for such college or university, if the property or dividends, interest, rents, or royalties derived therefrom are used or devoted to educational purposes of such college or university;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Public and family libraries;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) Property used for charitable purposes and not held or leased out for profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) Property used for the public purposes of distributing electricity, water or natural gas or providing sewer service by a duly chartered nonprofit corporation when such property is not held, leased out, or used for profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) Property used for area economic development purposes by nonprofit corporations when the property is not leased out for profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) All real estate not exceeding one acre in extent, and the buildings on the real estate, used exclusively by any college or university society as a literary hall, or as a dormitory or clubroom, if not used with a view to profit, including, but not limited to, property owned by a fraternity or sorority organization affiliated with a university or college or property owned by a nonprofit housing corporation or similar entity on behalf of a fraternity or sorority organization affiliated with a university or college, when the property is used as residential accommodations or as a dormitory for members of the organization;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) All property belonging to benevolent associations not conducted for private profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) Property belonging to any public institution for the education of the deaf, intellectually disabled, or blind or any hospital not held or leased out for profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) Houses of refuge and mental health facility or orphanage;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(19) Homes for children or for the aged, friendless, or infirm not conducted for private profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(20) Fire engines and implements for extinguishing fires, and property used exclusively for the safekeeping thereof, and for the meeting of fire companies;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(21) All property on hand to be used in the subsistence of livestock on hand at the commencement of the assessment year;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(22) Household goods to the value of $200, whether or not held or used for profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(23) Bank deposits and money;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(24) Household goods, which for purposes of this section means only personal property and household goods commonly found within the house and items used to care for the house and its surrounding property, when not held or used for profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(25) Personal effects, which for purposes of this section means only articles and items of personal property commonly worn on or about the human body or carried by a person and normally thought to be associated with the person when not held or used for profit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(26) Dead victuals laid away for family use;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(27) All property belonging to the state, any county, district, city, village, town, or other political subdivision or any state college or university which is subject to a lease purchase agreement, and which provides that, during the term of the lease purchase agreement, title to the leased property rests in the lessee so long as lessee is not in default or shall not have terminated the lease as to the property;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(28) Personal property, including vehicles that qualify for a farm use exemption certificate pursuant to &sect;17A-3-2 of this code and livestock, employed exclusively in agriculture, as defined in article X, section one of the West Virginia Constitution: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That this exemption only applies in the case of such personal property used on a farm or farming operation that annually produces for sale agricultural products, as defined in rules of the Tax Commissioner;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(29) Real property owned by a nonprofit organization whose primary purpose is youth development by means of adventure, educational, or recreational activities for young people, which real property contains a facility built with the expenditure of not less than $100 million that is capable of supporting additional activities within the region or the state and which is leased or used to generate revenue for the nonprofit organization whether or not the property is used by the nonprofit organization for its nonprofit purpose, subject to the requirements, limitations, and conditions set forth in </span><a name="_Hlk65506820"><span class="csEF05ACC">&sect;11-3-9(h) of this code</span></a><span class="csEF05ACC">; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(30) Any personal or real property belonging to residents 70 years of age or older;</span><span class="csEF05ACC"> and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(30)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(31)</span><span class="csEF05ACC"> Any other property or security exempted by any other provision of law.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Notwithstanding the provisions of &sect;11-3-9(a) of this code, no property is exempt from taxation which has been purchased or procured for the purpose of evading taxation whether temporarily holding the same over the first day of the assessment year or otherwise.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Real property which is exempt from taxation by &sect;11-3-9(a) of this code shall be entered upon the assessor&rsquo;s books, together with the true and actual value thereof, but no taxes may be levied upon the property or extended upon the assessor&rsquo;s books.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Notwithstanding any other provisions of this section, this section does not exempt from taxation any property owned by, or held in trust for, educational, literary, scientific, religious, or other charitable corporations or organizations, including any public or private nonprofit foundation or corporation existing for the support of any college or university located in West Virginia, unless such property, or the dividends, interest, rents, or royalties derived therefrom, is used primarily and immediately for the purposes of the corporations or organizations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The Tax Commissioner shall, by issuance of rules, provide each assessor with guidelines to ensure uniform assessment practices statewide to affect the intent of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Inasmuch as there is litigation pending regarding application of this section to property held by fraternities and sororities, amendments to this section enacted in the year 1998 shall apply to all cases and controversies pending on the date of such enactment.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The amendment to &sect;11-3-9(a)(27) of this code, passed during the 2005 regular session of the Legislature, shall apply to all applicable lease purchase agreements in existence upon the effective date of the amendment.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Nonprofit youth organization exemption. &mdash; Limitations, conditions, collection, and administration of one and one quarter percent fee, limitations, and distribution of moneys.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The exemption from ad valorem taxation provided pursuant to the provisions of &sect;11-3-9(a)(29) of this code does not apply to a property owned by a nonprofit organization otherwise qualifying for the exemption but which property or facilities are used for &nbsp;profit or outside the primary purpose of the owner which result in unrelated business taxable income as defined by Section 512 of the Internal Revenue Code of 1986, as amended, unless the income is generated by an activity upon which the one and one quarter percent fee authorized by &sect;11-3-9(h)(2) of this code is applied as provided in &sect;11-3-9(h)(3) of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The owner of real property exempt from ad valorem taxation under &sect;11-3-9(a)(29) of this code shall pay an amount equal to one and one quarter percent of the gross revenues the owner receives in accordance with this subsection. For purposes of this subsection, &quot;gross revenues&quot; means the gross amount received by the owner as payment for use of the property or the facilities thereon.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Gross revenues derived from the following facilities, uses, activities, and operations are subject to a fee of one and one quarter percent of such gross revenues:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Gross revenues derived from the use of lodging and campground facilities by persons participating in meetings and multiday spectator sports or multiday recreational, celebratory, or ceremonial events held onsite where onsite lodging or camping is offered as part of the program. For purposes of this section the term &quot;meeting&quot; means, and is limited to, a gathering, assembly, or conference of two or more persons who have deliberately convened at a single specific location at a single specified time and date for a common specific purpose.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Gross revenues derived from any retail store located at the facility that is open only to those persons who are attending meetings, spectator sports, recreational, celebratory, or ceremonial events held onsite at the facility. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Gross revenues derived from operations of gift shops at a welcome or information center located adjacent to a public highway operated by the nonprofit organization which is open to the general public.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Gross revenues derived from the leasing of zip-lines, canopy tours, wheeled sports, and climbing facilities used by the general public on a for-profit basis: (i) Under a written agreement with a licensed commercial outfitter operating a business utilizing zip-lines, canopy tours, wheeled sports, or climbing areas of a similar nature in the same or an adjacent county where the facilities are located; and (ii) when the property or facilities are used as part of a training or advanced experience offered by the licensed commercial outfitter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Gross revenues derived from the use or operation of zip-lines, canopy tours, wheeled sports facilities, or activities, climbing facilities or activities and the use or operation of other sporting facilities on the exempt property that are leased on a for-profit basis for spectator events, such as concerts, spectator sporting events, or exhibitions or similar mass gathering events.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Gross revenues derived from leases or agreements for use of the property for meetings and multiday spectator sports or events or multiday recreational, celebratory, or ceremonial events, held onsite.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Notwithstanding any other provision of this section to the contrary, programs or activities occurring on the property or its facilities held in conjunction with a government organization or sponsored by other nonprofit organizations serving youth, veterans, military services, public service agencies including, fire, police, emergency, and search and rescue services, government agencies, schools and universities, health care providers, and similar organizations or groups which are designed to provide opportunities for learning or training in the areas of leadership, character education, science, technology, engineering, arts, and mathematics (STEAM) programs, physical challenges, sustainability, conservation, and outdoor learning shall be considered a charitable or nonprofit use for the purposes of this section and not subject to the one and one quarter percent fee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Notwithstanding any other provision of this section to the contrary, activities open to the public through individual visitor passes allowing tours and access to the property and its facilities for the purpose of viewing or participating in demonstrations, programs, and facilities providing information and experiences consistent with the owner&rsquo;s nonprofit purposes where zip-lines, canopy tours, wheeled sports, or climbing facilities are merely components of the demonstrations, programs, and facilities used shall be considered a charitable or nonprofit use for the purposes of this section and not subject to the one and one quarter percent fee: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That such individual visitor passes may not include the rental or use of onsite overnight lodging or camping facilities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Administration. &mdash;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The sheriff of the county wherein the majority of the acreage of the property is located as specified in the deed to such property, shall collect, on a monthly basis, all moneys derived from the fee of one and one quarter percent of the gross revenues imposed under this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The sheriff of the county wherein the majority of the acreage of the property is located as specified in the deed to such property, shall prescribe such forms and schedules as may be necessary for the efficient, accurate, and expeditious payment and reporting of the one and one quarter percent fee specified in this subsection on gross revenues.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The sheriff of the county wherein the majority of the acreage of the property is located as specified in the deed to such property, shall administer the fee imposed under this subsection, including refunds and adjustments.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Payment, administration, and compliance of fee payers and administrators shall be subject to audit by the Office of Chief Inspector.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) All moneys so collected, net of refunds and adjustments, shall be paid into a special account in the State Treasury, which is hereby created, and the amount thereof shall be distributed and paid annually, by the State Treasurer, on October 1 of each year, into the funds and to the distributees specified in of this code in the amounts specified therein. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Distribution. &mdash;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Twenty-five percent of moneys so collected, net of refunds and adjustments, shall be paid annually to the Tourism Promotion Fund established pursuant to &sect;5B-2-12 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Twenty-five percent of moneys so collected, net of refunds and adjustments, shall be paid annually to the sheriff of the county where the property is located which, but for the exemption provided in &sect;11-3-9(a)(29) of this code, would be entitled to receive ad valorem taxes on the property. The sheriff shall treat all such payments in the same manner as payments in lieu of taxes, and such payments are subject to the adjustment mandated under &sect;18-9A-12 of this code. For properties located in more than one county, the amount paid to the sheriff of the county shall be in proportion to the total number of acres located in each county at the close of the fiscal year, as specified in the deed to such property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Fifty percent of moneys so collected, net of refunds and adjustments, shall be divided equally and paid annually into separate accounts established and maintained by the sheriffs of the county or counties wherein the property is located and the sheriffs of any other county that is within the jurisdiction of the same economic development authority as the county or counties wherein the property is located to be used solely for the establishment and delivery of a science, technology, engineering, art, and math (STEAM) program in conjunction with the owner of the exempt property. The funds shall be divided equally for use in each county and the programs must be approved by the respective county superintendents of schools. Expenditures from the accounts shall be authorized by the county superintendent of schools.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) If lodging is furnished as part of a retreat, meeting, or multiday spectator sport or event being held onsite wherein onsite lodging or camping is offered as part of the program, any applicable hotel occupancy tax and state and local consumers sales and service tax and use tax shall be paid based upon the actual location of such lodging.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) If merchants are allowed to do business on the property, the owner or lessee of the property shall offer space to local merchants on terms at least as favorable as are offered to other merchants.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) For the purposes of this subsection, owner includes the owner holding record title to the property and its affiliates to the extent they are commonly owned, controlled or have the power to appoint the governing body of the affiliate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) The Tourism Commission shall include in its annual report submitted to the Governor and the Legislature a summary of funds paid into the Tourism Promotion Fund and recommendations pertaining to the administration of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) This subsection may not be construed to prohibit the owner of property otherwise subject to this section from having portions of the property severed from the remainder of the property, assessed and taxed as if nonexempt and thereafter conducting business on such property the same as any other nonexempt property: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the area of property to be severed shall be approved by the county commission wherein the property lies so as to include in the severance all property substantially supporting the for-profit or business activity giving rise to the specific purpose of the severance and excluding all property entitled to the continued benefits of this act.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) To assure the implementation of &sect;11-3-9(h) of this code does not harm local and regionally located businesses by use of the tax-exempt facility in a manner that cause unfair competition and unreasonable loss of revenue to those businesses, studies shall be periodically conducted to assure that further legislation is in order regarding the uses of the tax-exempt facility. The county commission of any county where such a property is located shall report to the Joint Committee on Government and Finance by the first day of January every five years after the effective date of this section. The report shall include information on any unfair business competition resulting from the establishment of the nonprofit status, and include a report of the costs and benefits to its county of the tax exemption and associated fee, including an audit of that county&rsquo;s use of the net revenues. The West Virginia University Bureau of Business and Economic Research in coordination of the Center for Business and Economic Research at Marshall University, by January 1, 2020, shall undertake a study and report to the &nbsp;committee, the economic impact of this tax exemption and fee to the county and that region of the state, and make any recommendations regarding the benefits and disadvantages for continuing the provision of this tax exemption and fee, included, but not limited to, the impacts to other small and large businesses in the county, the costs to the county has incurred as a result of use of the facility, and any other relevant data that the universities may deem relevant.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;11-6B-3. Twenty thousand dollar homestead exemption allowed.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) </span><span class="cs93AB6E8B">General.</span><span class="csEF05ACC"> -- An exemption from ad valorem property taxes shall be allowed for the first $20,000 of assessed value of a homestead that is used and occupied by the owner thereof exclusively for residential purposes, when such owner </span><span class="cs68EFC440">is sixty-five years of age or older or</span><span class="csEF05ACC"> is certified as being permanently and totally disabled provided the owner has been or will be a resident of the State of West Virginia for the two consecutive calendar years preceding the tax year to which the homestead exemption relates: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That an owner who receives a similar exemption for a homestead in another state is ineligible for the exemption provided by this section. The owner&#39;s application for exemption shall be accompanied by a sworn affidavit stating that such owner is not receiving a similar exemption in another state: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That when a resident of West Virginia establishes residency in another state or country and subsequently returns and reestablishes residency in West Virginia within a period of five years, such resident may be allowed a homestead exemption without satisfying the requirement of two years consecutive residency if such person was a resident of this state for two calendar years out of the ten calendar years immediately preceding the tax year for which the homestead exemption is sought. Proof of residency includes, but is not limited to, the owner&#39;s voter&#39;s registration card issued in this state or a motor vehicle registration card issued in this state. Additionally, when a person is a resident of this state at the time such person enters upon active duty in the military service of this country and throughout such service maintains this state as his or her state of residence, and upon retirement from the military service, or earlier separation due to a permanent and total physical or mental disability, such person returns to this state and purchases a homestead, such person is deemed to satisfy the residency test required by this section and shall be allowed a homestead exemption under this section if such person is otherwise eligible for a homestead exemption under this article; and the Tax Commissioner may specify, by regulation promulgated under chapter twenty-nine-a of this code, what constitutes acceptable proof of these facts. Only one exemption shall be allowed for each homestead used and occupied exclusively for residential purposes by the owner thereof, regardless of the number of qualified owners residing therein.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) </span><span class="cs93AB6E8B">Attachment of exemption.</span><span class="csEF05ACC"> -- This exemption shall attach to the homestead occupied by the qualified owner on the July first assessment date and shall be applicable to taxes for the following tax year. An exemption shall not be transferred to another homestead until the following July first. If the homestead of an owner qualified under this article is transferred by deed, will or otherwise, the $20,000 exemption shall be removed from the property on the next July first assessment date unless the new owner qualifies for the exemption.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) </span><span class="cs93AB6E8B">Construction.</span><span class="csEF05ACC"> -- The residency requirement specified in subsection (a) is enacted pursuant to the Legislature&#39;s authority to prescribe by general law requirements, limitations and conditions for the homestead exemption, as set forth in section one-b, article ten of the Constitution of this state. Should the Supreme Court of Appeals or a federal court of competent jurisdiction determine that this residency requirement violates federal law in a decision that becomes final, this section shall then be construed and applied, beginning with the July first assessment day immediately following the date the decision became final, as if the residency requirement had not been enacted, thereby preserving the availability of the homestead exemption and the fiscal integrity of local government levying bodies.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to provide a real and personal property tax exemption for residents 70 years or older and clarify who qualifies for the Homestead Act.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 923 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=923">&laquo; Senate Bill 923 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 923'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 923 - Creating Guaranteeing Rights Against Novel International Tyranny and Extortion Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb923+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=923"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 923</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senators Rucker, Azinger, Barrett, Helton, M. Maynard, Rose, Taylor, Thorne, and Willis</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 12, 2026; referred<br/>to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;55-22-1, &sect;55-22-2, &sect;55-22-3, &sect;55-22-4, &sect;55-22-5, &sect;55-22-6, &sect;55-22-7, &sect;55-22-8, &sect;55-22-9, &sect;55-22-10, &sect;55-22-11, and &sect;55-22-12, relating to civil procedure, and creating the West Virginia Guaranteeing Rights Against Novel International Tyranny and Extortion (GRANITE) Act; creating a cause of action against foreign states and international organizations regarding foreign censorship laws that violate specific constitutional provisions; providing for standing, jurisdiction, venue, alternative service of process, and a statute of limitations; providing remedies; imposing joint and several liability; prohibiting the state from recognizing, enforcing, or cooperating with certain foreign judgments; creating a cause of action against the state for the recognition, enforcement, or cooperation with certain foreign judgments; providing civil penalties; providing definitions; providing legislative findings; making conforming amendments; requiring rulemaking; and providing for effective dates.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">article 22. Guaranteeing Rights Against Novel International Tyranny and Extortion Act.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-1. Legislative findings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The legislature finds that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) West Virginia has a strong public policy favoring robust protection of speech, association and innovation, including in the fields of digital communication, blockchain and internet services and relies on a predictable legal environment for persons engaged in those activities in this state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Foreign states and international organizations increasingly seek to restrict, penalize or compel disclosure of speech that occurs wholly within the United States by threatening or attempting to enforce foreign censorship laws;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) For example, the United Kingdom&#39;s communications regulatory agency, the Office of Communications, sent a letter to the United States based platform 4chan threatening fines of not more than $25 million or ten percent of that company&#39;s total worldwide revenue for noncompliance with the United Kingdom&#39;s Online Safety Act. In addition, the Brazilian supreme court Justice Alexandre de Moraes ordered the United States based platforms X (formerly known as Twitter) and Trump Media and Technology Group to censor user accounts and disclose user data or the Brazilian supreme court may order the shutdown of the platforms and impose significant penalties;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) These extraterritorial efforts taken by foreign states and international organizations conflict with the United States Constitution and the West Virginia Constitution by chilling the speech of West Virginia residents, including residents who operate in digital innovation sectors like blockchain and decentralized technologies;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) West Virginia has a compelling state interest in safeguarding the free exchange of ideas and protecting its citizens and business entities against foreign coercion and intimidation;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Censorship by foreign states and international organizations threatens West Virginia&#39;s leadership in decentralized finance and digital assets;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) In order to effectively deter foreign states and international organizations from enforcing foreign censorship laws in West Virginia, there needs to be meaningful civil remedies and joint and several liability across foreign states, agencies and instrumentalities of foreign states, international organizations and foreign officials. Agencies and instrumentalities of foreign states and foreign officials may be immune from judgment or liability while foreign states and international organizations often maintain assets or commercial relationships within the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Foreign censorship laws enforced by foreign states or international organizations characteristically restrict expression based on content, viewpoint or speaker identity in ways that would be presumptively unconstitutional under the first amendment to the United States Constitution, &nbsp;Section 7, Article III of the West Virginia Constitution and &nbsp;Section 16, Article III of the West Virginia Constitution;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) It is appropriate to place the burden on foreign states and international organizations to demonstrate that the foreign states&#39; or international organizations&#39; enforcement of foreign censorship laws would satisfy strict scrutiny rather than requiring West Virginia residents and business entities to prove the unconstitutionality of foreign speech restrictions because these foreign censorship laws are fundamentally incompatible with the constitutional protections afforded by the United States and West Virginia Constitutions;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) Foreign states and international organizations have increasingly sought to criminalize constitutionally protected speech by issuing criminal foreign judgments, arrest warrants and extradition requests that deprive persons in the United States from lawful expression that is constitutionally protected in the United States. The dual criminality requirement in most United States mutual legal assistance treaties reflects the principle that the United States should not lend its sovereign power to enforce foreign judgments that criminalize conduct that is lawful in the United States. West Virginia has a compelling state interest in ensuring its legal infrastructure is not used to circumvent this principle;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) Foreign states and international organizations have exploited procedural mechanisms, including service of process through mutual legal assistance treaties, upon registered agents and through private process servers to advance foreign censorship proceedings against citizens of the United States. Even ministerial cooperation may result in substantial foreign penalties for constitutionally protected speech, which facilitates the clearance of procedural hurdles in the foreign jurisdiction. West Virginia&#39;s registered agent system and private process servers should not serve as vectors for foreign censorship proceedings and service of process effectuated through any means should not result in recognition of any resulting foreign judgment in this state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(l) This act operates defensively to protect persons within West Virginia from coercion, rather than offensively to regulate foreign conduct. Congress has endorsed this approach through the federal SPEECH Act, 28 U.S.C. &sect;&sect; 4101&ndash;4105, which prohibits recognition of foreign defamation judgments that are inconsistent with the first amendment to the United States constitution. This act extends that principle to the broader category of foreign censorship, consistent with West Virginia&#39;s sovereign authority to determine which foreign judgments West Virginia&#39;s courts will recognize and enforce;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(m) The executive branch of the United States has not established a comprehensive policy to protect United States persons from enforcement of foreign censorship laws by foreign states and international organizations. This act aims to protect state residents from enforcement of foreign censorship laws and does not conflict with any existing federal law or policy;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(n) When a foreign state or international organization transmits an enforcement demand, fine or threat to a person in West Virginia the tortious act is completed upon receipt. The harm occurs in West Virginia when the person receives and understands the communication and experiences the coercive effect of the communication;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(o) West Virginia seeks to establish itself as a welcoming home for digital innovation and digital infrastructure. West Virginia has a compelling state interest in protecting digital innovation and digital infrastructure located within the state, including servers, data centers and other digital infrastructure from enforcement of foreign censorship laws;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(p) No foreign state or international organization has legitimate discretion to enforce foreign censorship laws against persons or speech protected by the first amendment of the United States Constitution. The suppression of constitutionally protected expression violates fundamental rights recognized by the United Nations Universal Declaration of Human Rights, the United Nations International Covenant on Civil and Political Rights and the first amendment to the United States Constitution. Foreign state&#39;s and international organization&#39;s enforcement of foreign censorship laws is conduct that falls outside any discretionary function exception to foreign sovereignty immunity.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-2. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This chapter shall be known and may be cited as the &quot;West Virginia Guaranteeing Rights Against Novel International Tyranny and Extortion (GRANITE) Act.&quot;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-3. Purposes.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The purposes of this chapter are to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Protect the constitutional rights of West Virginia residents and business entities from the extraterritorial application of foreign censorship laws by establishing an in&#8209;state forum, with clear and predictable jurisdictional rules and effective remedies that are consistent with federal law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Promote West Virginia&#39;s economy by fostering a safe harbor for digital innovation and by ensuring that foreign threats do not deter investment in West Virginia business entities.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-4. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">As used in this chapter:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) &quot;Enforce&quot; means to give effect to, carry out or seek compliance with a foreign censorship law, including by formal legal process, economic pressure, indirect coercion through affiliates or intermediaries or any other means;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) &quot;Foreign censorship law&quot; means any law, rule, judgment, order, subpoena, administrative action or formal demand of a foreign state or international organization that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Is final, binding and enforceable under the law of that foreign state or country where the international organization is headquartered;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Has the primary purpose or a substantial effect of restricting, penalizing or compelling disclosure regarding expression, expressive conduct or expressive association;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Targets expression, expressive conduct or expressive association based on its content, viewpoint or speaker identity or compels disclosure that would reasonably chill that expression, expressive conduct or expressive association; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Would be unenforceable in this state because it conflicts with the protections of the first amendment of the United States Constitution, &nbsp;Section 7, Article III of the West Virginia Constitution or &nbsp;Section 16, Article III of the West Virginia Constitution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) &quot;Foreign judgment&quot; means any judgment, decree, order or similar determination issued by a foreign state or international organization that is final, binding and enforceable under the laws of that foreign state or country where the international organization is headquartered;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) &quot;Foreign state&quot; means as defined in 28 U.S.C. &sect; 1603(a). &quot;Foreign state&quot; shall include an agency or instrumentality of a foreign state as defined in 28 U.S.C. &sect; 1603(b);</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) &quot;International organization&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) As defined in 22 U.S.C. &sect; 288;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An organization with which the United States has official relations, including any supranational organization, intergovernmental organization or multilateral institution; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any member state, organ, agency, commission, court or instrumentality of an organization described in subparagraph (A) or (B) of this paragraph.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) &quot;Threaten&quot; means to communicate an intent to enforce a foreign censorship law, including by sending or directing any notice, demand, subpoena, request or similar communication to a person by any medium;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) &quot;United States person&quot; means a person who is a citizen or permanent resident of the United States or any business entity organized under the laws of the United States or any state or territory thereof;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) &quot;United States related revenue&quot; means gross revenue from the sales of goods, provision of services or conduct of business operations in or directed to the United States, as determined under generally accepted accounting principles, for the most recent twelve (12) month period ending on the last day of the defendant&#39;s fiscal year preceding the commencement of the cause of action under this article. For purposes of this paragraph, &quot;defendant&quot; shall include the named entity and any parent, subsidiary or affiliate of the entity under common control that participated in the relevant transactions;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) &quot;West Virginia resident&quot; means a natural person who is domiciled in this state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) &quot;West Virginia business entity&quot; means a business entity that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Is incorporated, organized or created under the laws of this state; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Has its principal place of business in this state.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-5. Cause of action; statute of limitations; construction.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A plaintiff described in &sect;55-22-6(a) of this Code shall have a cause of action, to the extent permitted by federal law and subject to subsections (b) and (c) of this section, against any foreign state, international organization or any officer, employee or other person thereof acting within the scope of their official duties who has threatened to enforce, attempted to enforce or enforced a foreign censorship law against the plaintiff in a manner that would violate the first amendment of the United States Constitution, &nbsp;Section 7, Article III of the West Virginia Constitution or &nbsp;Section 16, Article III of the West Virginia Constitution.&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The cause of action under subsection (a) of this section shall apply only to the extent permitted by federal law, including the Foreign Sovereign Immunities Act and the International Organizations Immunities Act and any applicable headquarters agreement, treaty or executive order.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Nothing in this chapter shall be construed to:&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Waive the sovereign immunity of any foreign state or international organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Limit any exceptions to sovereign immunity available to the plaintiff under the federal Foreign Sovereign Immunities Act;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Limit any right of a defendant to remove the case from state court to federal court as provided by federal law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Limit any defense available to the defendant under federal law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Regulate foreign states or international organizations or to conflict with the foreign affairs powers of the United States.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A cause of action brought under subsection (a) of this section shall be commenced not later than four years after the latest of the following dates:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The date of a foreign state&#39;s or international organization&#39;s threat to enforce, attempt to enforce or enforcement of a foreign censorship law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The date of the last in a series of related threats, attempts or enforcement actions by a foreign state or international organization arising from the same investigation or proceeding;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The date the plaintiff discovered or reasonably could have discovered a foreign state&#39;s or international organization&#39;s threat to enforce, attempt to enforce or enforcement of a foreign censorship law.&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-6. Standing; jurisdiction; venue; alternative service of process.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A civil cause of action brought under &sect;55-22-5(a) of this Code may be brought by:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A West Virginia resident;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A natural person who is physically present in this state when a foreign state or international organization threatens to enforce, attempts to enforce or enforces a foreign censorship law against the natural person and who was specifically targeted by the foreign censorship law while physically present in this state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A West Virginia business entity; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Any United States person whose protected expression, expressive conduct or expressive association originates from or is hosted on servers physically located in this state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Notwithstanding any other provision of law, a West Virginia court may exercise personal jurisdiction over any foreign state or international organization that threatens to enforce, attempts to enforce or enforces a foreign censorship law against a person with standing under subsection (a) of this section, consistent with the United States Constitution and the West Virginia Constitution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Notwithstanding &sect;55-22-8 of this code, an action initiated under &sect;55-22-5(a) of this code may be brought in:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The district court of the county where the plaintiff resides or is located;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The district court where the communication that threatened to enforce, attempted to enforce or enforced a foreign censorship law was received; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The district court in Kanawha county.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Except as provided by subsection (e) of this section, upon a motion by the plaintiff, a court may authorize an alternative method of service of process that is reasonably calculated to give actual notice to an international organization, including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Service by email to email addresses that were used to transmit the threat to enforce, attempt to enforce or enforcement of a foreign censorship law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Service on the United States counsel of record for the international organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Service by publishing on a website maintained by an international organization, if the international organization is evading notice;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Any other means of service that is permitted by law or treaty.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Service of process on:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A foreign state shall comply with 28 U.S.C. &sect; 1608;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An international organization as defined in 22 U.S.C. &sect; 288 shall comply with 28 U.S.C. &sect; 1608 and any applicable headquarters agreements, treaties and established procedures for providing service of process.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-7. Presumptions; rebuttal.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A court shall presume that a foreign censorship law violates the first amendment of the United States Constitution, &nbsp;Section 7, Article III of the West Virginia Constitution and &nbsp;Section 16, Article III of the West Virginia Constitution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A defendant may rebut the presumption under subsection (a) of this section by proving by clear and convincing evidence that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The foreign censorship law, on its face and as applied to the plaintiff&#39;s expression, expressive conduct or expressive association, would satisfy strict scrutiny under the first amendment to the United States Constitution, &nbsp;Section 7, Article III of the West Virginia Constitution and &nbsp;Section 16, Article III of the West Virginia Constitution; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The threatened enforcement, attempted enforcement or enforcement of the foreign censorship law does not burden expression, expressive conduct or expressive association that is protected under the first amendment to the United States Constitution, &nbsp;Section 7, Article III of the West Virginia Constitution and &nbsp;Section 16, Article III of the West Virginia Constitution.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-8. Nonrecognition of foreign judgements; noncooperation with foreign judgments and extradition requests; penalties; cause of action.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Except as provided by federal law and otherwise provided by this subsection, no court of this state shall recognize, enforce or give effect to any foreign judgment, order, subpoena, administrative action, fine, penalty or similar measure that imposes liability or compels actions based on expression, expressive conduct or expressive association that would be protected by the first amendment of the United States Constitution, Section 7, Article III of the West Virginia Constitution or Section 16, Article III of the West Virginia Constitution. A court may sever and may recognize, enforce or give effect to any foreign judgment, order, subpoena, administrative action, fine, penalty or similar measure that does not impose liability or compel action based on expression, expressive conduct or expressive association that would be protected by the first amendment of the United States Constitution, Section 7, Article III of the West Virginia Constitution or Section 16, Article III of the West Virginia Constitution.&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Except as required by federal law, the state, its political subdivisions and its employees acting within the scope of their official duties shall not provide assistance or cooperation in collecting, enforcing or giving effect to any foreign judgment, order, subpoena, administrative action, fine, penalty or similar measure that imposes liability or compels actions based on expression, expressive conduct or expressive association that would be protected by the first amendment of the United States Constitution, Section 7, Article III of the West Virginia Constitution or &nbsp;Section 16, Article III of the West Virginia Constitution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The state and its political subdivisions shall not indemnify or reimburse a person who violated subsection (b) of this section for a civil penalty imposed under subsection (c) of this section.</span></p><p class="cs53FB8D75" style="tab-stops:left 454.5pt;"><span class="cs46AE26E6">(d) Except as required by federal law, no court of this state shall recognize, enforce or give effect to any foreign criminal judgment, conviction, sentence, warrant or similar order that imposes criminal liability based in whole or in part on expression, expressive conduct or expressive association that would be protected by the first amendment of the United States Constitution, &nbsp;Section 7, Article III of the West Virginia Constitution or Section 16, Article III of the West Virginia Constitution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Except as required by federal law, the state, its political subdivisions and its employees acting within the scope of their official duties shall not:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Arrest, detain or surrender any person pursuant to a foreign extradition request, international arrest warrant or similar process when the underlying offense is based on expression, expressive conduct or expressive association that would be protected by the first amendment of the United States Constitution, Section 7, Article III of the West Virginia Constitution or Section 16, Article III of the West Virginia Constitution;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Provide any other assistance or cooperation to any foreign state or international organization in investigating, prosecuting, sanctioning or punishing any person for expression, expressive conduct or expressive association that would be protected by the first amendment of the United States Constitution, Section 7, Article III of the West Virginia Constitution or Section 16, Article III of the West Virginia Constitution;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Honor or execute a request under a mutual legal assistance treaty, letters, rogatory or other international agreement or mechanism if the request seeks service of process, evidence testimony or any other assistance in connection with a proceeding based on expression, expressive conduct or expressive association that would be protected by the first amendment of the United States Constitution, Section 7, Article III of the West Virginia Constitution or Section 16, Article III of the West Virginia Constitution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) This section shall apply regardless of the manner in which service of process was effectuated in a foreign proceeding.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The attorney general shall promulgate rules to provide guidance to state and local law enforcement regarding implementation of this section, including procedures for identifying foreign judgments, foreign criminal judgments, orders, subpoenas, administrative actions, fines and penalties from foreign states and international organizations that may impose liability or compel action based on expression, expressive conduct or expressive association that would be protected by the first amendment of the United States Constitution, Section 7, Article III of the West Virginia Constitution or Section 16, Article III of the West Virginia Constitution.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-9. Actions against nonresidents and foreign corporations.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">An action, other than one of those mentioned in this article, against a nonresident of this state or a foreign corporation, whether or not codefendants reside in West Virginia, may be brought in any county where the cause of action arose or where the plaintiff resides.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-10. Rulemaking.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The Attorney General shall promulgate all rules necessary to implement this act.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;55-22-11. Effective date.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This Act takes effect on July 1, 2026.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create the West Virginia &quot;Guaranteeing Rights Against Novel International Tyranny and Extortion (GRANITE) Act.&quot; </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5334 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5334">&laquo; House Bill 5334 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5334'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5334 - Relating to lease termination and tenant privacy&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5334+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5334"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5334</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Young</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 09, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, and by adding a new article, designated &sect;37-6B-1, &sect;37-6B-2, and &sect;37-6B-3, relating to the providing tenants with the right to contact emergency services; to terminate a lease where there is fear of violence, and a residential tenant&#39;s right to privacy.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 6B. Tenant&#39;s Rights.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;37-6B-1. Tenant&#39;s right to seek police and emergency services.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) In this section, &quot;domestic violence&quot; has the meaning given in &sect;48-27-202.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A landlord may not:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Bar or limit a residential tenant&#39;s right to call for police or emergency assistance in response to unlawful conduct; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Impose a penalty on a residential tenant for calling for police or emergency assistance in response to unlawful conduct.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A residential tenant may not waive and a landlord may not require the residential tenant to waive the residential tenant&#39;s right to call for police or emergency assistance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) This section preempts any inconsistent local ordinance or rule including, without limitation, any ordinance or rule that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Requires an eviction after a specified number of calls by a residential tenant for police or emergency assistance in response to unlawful conduct; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Provides that calls by a residential tenant for police or emergency assistance in response to unlawful conduct may be used to penalize or charge a fee to a landlord.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) This subdivision shall not otherwise preempt any local ordinance or rule that penalizes a landlord for, or requires a landlord to abate, conduct on the premises that constitutes a nuisance or other disorderly conduct as defined by local ordinance or rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) This section shall not be construed to condone or permit any breach of a lease or of law by a residential tenant including, but not limited to, disturbing the peace and quiet of other tenants, damage to property, disorderly conduct, or unlawful conduct.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) A residential tenant may bring a civil action for a violation of this section and recover from the landlord $1,000 or actual damages, whichever is greater, and reasonable attorney&#39;s fees.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;37-6B-2. Right of victims of violence to terminate lease.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A tenant to a residential lease may terminate a lease agreement in the manner provided in this section without penalty or liability, if the tenant or another authorized occupant fears imminent violence after being subjected to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Domestic violence, as that term is defined under &sect;48-27-202 of this code; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Criminal sexual conduct under &sect;61-8B-1 </span><span class="cs1489E706">et seq. </span><span class="cs46AE26E6">of this code, even if there is no conviction of a person accused of these actions;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Sexual extortion, which is defined as &quot;demanding, requesting, requiring, or accepting sexual favors in place of payment for rent, utilities, repairs, or any other financial interaction between landlord and tenant; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Stalking, harassment, or both under &sect;61-2-9a of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The tenant shall provide signed and dated written notice to the landlord:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Stating the tenant fears imminent violence from a person as indicated in a qualifying document against the tenant or an authorized occupant if the tenant or authorized occupant remains in the leased premises;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Stating that the tenant needs to terminate the tenancy;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Providing the date by which the tenant will vacate; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Providing written instructions for the disposition of any remaining personal property in accordance with section &sect;37-6-6 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The written notice shall be delivered before the termination of the tenancy and be accompanied by a qualifying document.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The landlord may request that the tenant disclose the name of the perpetrator and if a request is made, inform the tenant that the landlord seeks disclosure to protect other tenants in the building. The tenant may decline to provide the name of the perpetrator for safety reasons. Disclosure shall not be a precondition of terminating the lease.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The tenancy terminates, including the right of possession of the premises, as provided in subsection (c) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A landlord may not disclose:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Any information provided to the landlord by a tenant in the written notice required under subsection (b) of this section;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any information contained in the qualifying document;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The address or location to which the tenant has relocated; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The status of the tenant as a victim of violence.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The information referenced in subsection (b) of this section may not be entered into any shared database or provided to any person or entity but may be used when required as evidence in an eviction proceeding, action for unpaid rent or damages arising out of the tenancy, with the consent of the tenant, or as otherwise required by law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;(g) A tenant who is a sole tenant and is terminating a lease for reasons described in this section is responsible for the rent payment for the full month in which the tenancy terminates and is relieved of any other contractual obligation for payment of rent or any other charges for the remaining term of the lease, except as provided in this section. In a sole tenancy, the tenancy terminates on the date specified in the notice provided to the landlord as required by this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) In a tenancy with multiple tenants, one of whom is terminating the lease under this section, any lease governing all tenants is terminated at the later of the end of the month or the end of the rent interval in which one tenant terminates the lease under this section. All tenants are responsible for the rent payment for the full month in which the tenancy terminates, and are relieved of any other contractual obligation for payment of rent or any other charges for the remaining term of the lease, except as provided in this section. Any tenant whose tenancy was terminated under this paragraph may reapply to enter into a new lease with the landlord.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) This section does not affect a tenant&#39;s liability for delinquent, unpaid rent or other amounts owed to the landlord before the lease was terminated by the tenant under this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) A residential tenant may not waive, and a landlord may not require the residential tenant to waive, the tenant&#39;s rights under this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) For purposes of this section, the following terms have the meanings given:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Court official&quot; means a judge, court administrator, prosecutor, probation officer, or victim&#39;s advocate, whether employed by or under contract with the court, who is authorized to act on behalf of the court;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Qualified third party&quot; means a person, acting in an official capacity, who has had in-person contact with the tenant and is:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A licensed health care professional operating within the scope of the license;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A domestic abuse advocate; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A sexual assault counselor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Qualifying document&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A valid order for protection under &sect;48-27-501 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code</span><span class="cs1489E706">.</span><span class="cs46AE26E6">;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Any document from a court mandating that no contact be had between the victim and the person who is the subject of the lease termination;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A writing produced and signed by a court official, acting in an official capacity, documenting that the tenant or authorized occupant is a victim of domestic violence, as that term criminal sexual conduct, sexual extortion, or harassment, as those terms are used in this section, and naming the perpetrator, if known;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) A writing produced and signed by a city, county, state, or tribal law enforcement official, acting in an official capacity, documenting that the tenant or authorized occupant is a victim of domestic violence, as that term criminal sexual conduct, sexual extortion, or harassment, as those terms are used in this section, and naming the perpetrator, if known; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) a statement by a qualified third party, in the following form:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">STATEMENT BY QUALIFIED THIRD PARTY</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">I, .................... (name of qualified third party), do hereby verify as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">1. I am a licensed health care professional, domestic abuse advocate, or sexual assault counselor, who has had in-person contact with .................... (name of victim(s)).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">2. I have a reasonable basis to believe .................... (name of victim(s)) is a victim/are victims of domestic abuse, criminal sexual conduct, sexual extortion, or harassment and fear(s) imminent violence against the individual or authorized occupant if the individual remains (the individuals remain) in the leased premises.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">3. I understand that the person(s) listed above may use this document as a basis for gaining a release from the lease.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">I attest that the foregoing is true and correct.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(Printed name of qualified third party)</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(Signature of qualified third party)</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(Business address and business telephone)</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(Date)</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(l) If a federal statute, regulation, or handbook permitting termination of a residential tenancy subsidized under a federal program conflicts with any provision of this section, then the landlord shall comply with the federal statute, regulation, or handbook.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;37-6B-3. Residential Tenant&#39;s Right to Privacy.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) For purposes of this section, &quot;landlord&quot; has the meaning defined in &sect;37-6-1 </span><span class="cs1489E706">et seq. </span><span class="cs46AE26E6">of this code, and also includes the landlord&#39;s agent or other person acting under the landlord&#39;s direction and control.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Except as provided in subsection (d) of this section, a landlord may enter the premises rented by a residential tenant only for a reasonable business purpose and after making a good faith effort to give the residential tenant reasonable notice under the circumstances of not less than 24 hours in advance of the intent to enter. A residential tenant may permit a landlord to enter the rented premises with less than 24 hours&#39; notice if desired. The notice shall specify a time or anticipated window of time of entry and the landlord may only enter between the hours of 8:00 a.m. and 8:00 p.m. unless the landlord and tenant agree to an earlier or later time. A residential tenant may not waive and the landlord may not require the residential tenant to waive the residential tenant&#39;s right to prior notice of entry under this section as a condition of entering into or maintaining the lease.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) For purposes of this section, a reasonable business purpose includes, but is not limited to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Showing the unit to prospective residential tenants during the notice period before the lease terminates or after the current residential tenant has given notice to move to the landlord or the landlord&#39;s agent;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Showing the unit to a prospective buyer or to an insurance representative;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Performing maintenance work;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Allowing inspections by state, county, or city officials charged in the enforcement of health, housing, building, fire prevention, or housing maintenance codes;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The residential tenant is causing a disturbance within the unit;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The landlord has a reasonable belief that the residential tenant is violating the lease within the residential tenant&#39;s unit;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Prearranged housekeeping work in senior housing where 80% or more of the residential tenants are age 55 or older;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) The landlord has a reasonable belief that the unit is being occupied by an individual without a legal right to occupy it; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) The residential tenant has vacated the unit.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Notwithstanding subsection (b), a landlord may enter the premises rented by a residential tenant to inspect or take appropriate action without prior notice to the residential tenant if the landlord reasonably suspects that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Immediate entry is necessary to prevent injury to persons or property because of conditions relating to maintenance, building security, or law enforcement;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Immediate entry is necessary to determine a residential tenant&#39;s safety; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Immediate entry is necessary in order to comply with local ordinances regarding unlawful activity occurring within the residential tenant&#39;s premises.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) If the landlord enters when the residential tenant is not present and prior notice has not been given, the landlord shall disclose the entry by placing a written disclosure of the entry in a conspicuous place in the premises.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) If a landlord violates this section, the residential tenant is entitled to a penalty which may include a rent reduction up to full rescission of the lease, recovery of any damage deposit less any amount retained under section &sect;37-6A-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, and up to a $1,000 civil penalty for each violation and reasonable attorney fees.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to provide for a tenant&#39;s right to contact emergency services, leave a lease due to violence or threats of violence, and to ensure tenant privacy from landlords.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

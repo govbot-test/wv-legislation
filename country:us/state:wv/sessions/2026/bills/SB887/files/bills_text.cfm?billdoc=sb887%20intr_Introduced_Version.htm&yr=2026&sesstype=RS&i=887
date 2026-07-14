@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 887 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=887">&laquo; Senate Bill 887 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 887'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb887 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=887" title="HTML  - Committee Substitute (1)
+ - Senate Bill 887">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 887 - Relating to requirements for licensure and regulation of money transmission services&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb887+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=887"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs7E56D39A{text-align:left;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB733B9BE{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2;background-color:#FFFFFF}
+		.cs19E44A0C{color:#1A1A1A;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs80D3AC4F{text-align:left;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2;background-color:#FFFFFF}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs50974958{color:#1A1A1A;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs7E56D39A" style="tab-stops:center 234pt right 468pt;"><span class="csB0C9F1E0">	2026 </span><span class="csC2FEE544">REGULAR SESSION	</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 887</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Barnhart</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 9, 2026; referred<br/>to the Committee on Banking and Insurance; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;32A-2-1, &sect;32A-2-4, &sect;32A-2-17, and &sect;32A-2-27 of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;32A-2-8c, relating to requirements for licensure and regulation of money service businesses; creating new definitions for virtual currency and the use of virtual currency kiosks; including the ownership and operation of virtual currency kiosks in the definition of &ldquo;money transmission&rdquo;; designating a start date for licensure of kiosks; setting forth disclosure and receipt requirements for customers of virtual currency kiosks; providing for a resolution of conflicts between state and federal law as it relates to money transmission; and clarifying that virtual currency kiosks are delegates of a money transmission licensee.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. &nbsp;CHECKS AND MONEY ORDER SALES, MONEY TRANSMISSION SERVICES, TRANSPORTATION AND CURRENCY EXCHANGE.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;32A-2-1. Definitions.</span></h4>
+	<p class="csB733B9BE"><span class="cs19E44A0C">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) &quot;Acting in concert&quot; means persons knowingly acting together with a common goal of jointly acquiring control of a licensee whether or not pursuant to an express agreement.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) &quot;Average daily money transmission liability&quot; means the amount of the licensee&rsquo;s outstanding money transmission obligations in this state at the end of each day in a given period of time, added together, and divided by the total number of days in the given period of time. For purposes of calculating average daily money transmission liability, the given period of time shall be the quarters ending March 31, June 30, September 30, and December 31.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) &quot;Check&quot; means any check, traveler&rsquo;s check, draft, money order, or other instrument for the transmission or payment of money whether or not the instrument is negotiable. &quot;Check&quot; does not include a credit card voucher or a letter of credit.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) &quot;Closed loop stored value&quot; means stored value that is redeemable by the issuer only for goods or services provided by the issuer or its affiliate or franchisees of the issuer or its affiliate, except to the extent required by applicable law to be redeemable in cash for its cash value.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) &quot;Commissioner&quot; means the Commissioner of Financial Institutions of this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) &quot;Control&quot; means:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1)(A) The power to vote, directly or indirectly, at least 25 percent of voting shares or voting interests of a licensee or person in control of a licensee;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The power to elect or appoint a majority of key individuals or executive officers, managers, directors, trustees, or other persons exercising managerial authority of a person in control of a licensee; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The power to exercise, directly or indirectly, a controlling influence over the management or policies of a licensee or person in control of a licensee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Rebuttable presumption of control:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A person is presumed to exercise a controlling influence when the person holds the power to vote, directly or indirectly, at least 10 percent of outstanding voting shares or voting interests of a licensee or person in control of a licensee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A person presumed to exercise a controlling influence as defined in this section can rebut the presumption of control if the person is a passive investor.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) For the purposes of determining the percentage of a person controlled by any other person, the person&rsquo;s interest shall be aggregated with the interest of any other immediate family member, including the person&rsquo;s spouse, parents, children, siblings, mothers-in-law, fathers-in-law, sons-in-law, daughters-in-law, brothers-in-law, sisters-in-law, and any other person who shares such person&rsquo;s home.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) </span><span class="cs46AE26E6">&quot;Control of virtual currency,&quot; when used in reference to a transaction or relationship involving virtual currency, means the power to execute unilaterally or prevent indefinitely a virtual currency transaction.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h)</span><span class="csEF05ACC"> &quot;Currency exchange&quot; means the conversion of the currency of one government into the currency of another government, but it does not include the issuance and sale of travelers checks denominated in a foreign currency. Transactions involving the electronic transmission of funds by licensed money transmitters which may permit, but do not require, the recipient to obtain the funds in a foreign currency outside of West Virginia are not currency exchange transactions:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That they are not reportable as currency exchange transactions under federal laws and regulations.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(h)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(i)</span><span class="csEF05ACC"> &quot;Currency exchange, transportation, transmission business&quot; means a person who is engaging in currency exchange, currency transportation, or currency transmission as a service or for profit.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(j)</span><span class="csEF05ACC"> &quot;Currency transmission&quot; or &quot;money transmission&quot; means, </span><span class="cs46AE26E6">directly or through an authorized delegate:</span><span class="csEF05ACC"> (1) Engaging in the business of selling or issuing checks or the business of receiving currency, the payment of money, or other value that substitutes for money by any means for the purpose of transmitting, either prior to or after receipt, that currency; </span><span class="cs68EFC440">or</span><span class="csEF05ACC"> (2) Payment of money or other value that substitutes for money by wire, facsimile, or other electronic means, or through the use of a financial institution, financial intermediary, the Federal Reserve system, </span><span class="cs46AE26E6">digital wallet, including but not limited to, a digital wallet used in connection with a consumer payment mobile application,</span><span class="csEF05ACC"> or other funds transfer network; </span><span class="cs46AE26E6">or (3) Engaging in the business of owning or operating a virtual currency kiosk</span><span class="csEF05ACC">. It includes the transmission of funds through the issuance and sale of stored value or similar prepaid products&rsquo; cards which are intended for general acceptance and used in commercial or consumer transactions. &nbsp;It also includes payroll processing services. It does not include the provision solely of online or telecommunications services or network access.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(j)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(k)</span><span class="csEF05ACC"> &quot;Currency transportation&quot; means knowingly engaging in the business of physically transporting currency from one location to another in a manner other than by a licensed armored car service exempted under section three of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(l) &quot;Digital wallet&quot; means any electronic or digital functionality that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Stores value or virtual currency for a customer, including but not limited to, in encrypted or tokenized form; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Transmits, routes or otherwise processes such stored value or virtual currency to facilitate a payment transaction. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(m) &quot;Elder adult&quot; means a person who is 60 years of age or older.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(n) &quot;Exchange,&quot; used as a verb, means to assume control of virtual currency from or on behalf of a person, at least momentarily, to sell, trade, or convert:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Virtual currency for money, bank credit, or one or more forms of virtual currency; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Money or bank credit for one or more forms of virtual currency.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(o) &quot;Existing customer&quot; means a consumer who:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Is engaging in a transaction at a virtual currency kiosk in this state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Has been registered for more than 10 days as a customer of the owner of the virtual currency kiosk or virtual currency kiosk operator.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(k)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(p)</span><span class="csEF05ACC"> &quot;Key individual&quot; or &quot;principal&quot; means any individual ultimately responsible for establishing or directing policies and procedures of the licensee, such as an executive officer, manager, director, or trustee.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(l)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(q)</span><span class="csEF05ACC"> &quot;Licensee&quot; means a person licensed by the commissioner under this article.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(m)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(r)</span><span class="csEF05ACC"> &quot;Money&quot; or &quot;currency&quot; means a medium of exchange that is authorized or adopted by the United States or a foreign government and includes a monetary unit of account established by an intergovernmental organization or by agreement between two or more governments.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(n)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(s)</span><span class="csEF05ACC"> &quot;Money order&quot; means any instrument for the transmission or payment of money in relation to which the purchaser or remitter appoints or purports to appoint the seller thereof as his or her agent for the receipt, transmission, or handling of money, whether the instrument is signed by the seller, the purchaser, remitter, or some other person.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(t) &quot;Money transmission kiosk&quot; or &quot;virtual currency kiosk&quot; means an automated electronic machine that allows users to engage in money transmission, including any machine that is capable of accepting or dispensing cash in exchange for virtual currency. &nbsp;&quot;Money transmission kiosk&quot; or &quot;virtual currency kiosk&quot; does not include consumer cellular telephones and similar personal devices.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(o)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(u)</span><span class="csEF05ACC"> &quot;MSB accredited state&quot; means a state agency that is accredited by the Conference of State Bank Supervisors and Money Transmitter Regulators Association for money transmission licensing and supervision.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(p)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(v)</span><span class="csEF05ACC"> &quot;Nationwide Multistate Licensing System and Registry&quot; or &quot;NMLS&quot; means the system developed by the Conference of State Bank Supervisors and the American Association of Residential Mortgage Regulators and owned and operated by the State Regulatory Registry, LLC, or any successor or affiliated entity, for the licensing and registration of persons in the financial services industries.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(w) &quot;New customer&quot; means a consumer who is engaging in a virtual currency transaction in this state and has been registered for less than 10 days as a customer of the owner of a virtual currency kiosk or virtual currency kiosk operator.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(q)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(x)</span><span class="csEF05ACC"> &quot;Outstanding money transmission obligations&quot; shall mean:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Any payment instrument or stored value issued or sold by the licensee to a person located in the United States or reported as sold by an authorized delegate of the licensee to a person that is located in the United States that has not yet been paid or refunded by or for the licensee or escheated in accordance with applicable unclaimed property laws; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Any money received for transmission by the licensee or an authorized delegate in the United States from a person located in the United States that has not been received by the payee or refunded to the sender or escheated in accordance with applicable unclaimed property laws.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) For purposes of this subsection, &quot;in the United States&quot; shall include, to the extent applicable, a person in any state, territory, or possession of the United States, the District of Columbia, the Commonwealth of Puerto Rico, or a United States military installation that is located in a foreign country.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(r)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(y)</span><span class="csEF05ACC"> &quot;Passive investor&quot; means a person that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Does not have the power to elect a majority of key individuals or executive officers, managers, directors, trustees, or other persons exercising managerial authority of a person in control of a licensee;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Is not employed by and does not have any managerial duties of the licensee or person in control of a licensee;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Does not have the power to exercise directly or indirectly a controlling influence over the management or policies of a licensee or person in control of a licensee; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Either:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Attests to subdivisions (1), (2), and (3) of this subsection in a form prescribed by the commissioner or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Commits to the passivity characteristics of subdivisions (1), (2), and (3) of this subsection in a written document.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(s)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(z)</span><span class="csEF05ACC"> &quot;Payment instrument&quot; means a written or electronic check, draft, money order, traveler&rsquo;s check, or other written or electronic instrument for the transmission of payment of money or monetary value, whether or not negotiable and does not include stored value or any instrument that: (1) is redeemable by the issuer only for goods or services provided by the issuer or its affiliate or franchisees of the issuer or its affiliate, except to the extent required by applicable law to be redeemable in cash for its cash value, or (2) not sold to the public but issued and distributed as part of a loyalty, rewards, or promotional program.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(t)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(aa)</span><span class="csEF05ACC"> &quot;Payroll processing services&quot; means receiving money for transmission pursuant to a contract with a person to deliver wages or salaries, making payment of payroll taxes to state and federal agencies, making payments relating to employee benefit plans, or making distributions of other authorized deductions from wages and salaries:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That it does not include an employer performing payroll processing services on its own behalf or on behalf of an affiliate or a professional employment organization subject to regulation under other applicable state law.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(u)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(bb)</span><span class="csEF05ACC"> &quot;Person&quot; means any individual, partnership, association, joint stock association, limited liability company, trust, or corporation.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(v)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(cc)</span><span class="csEF05ACC"> &quot;Stored value&quot; means monetary value representing a claim against the issuer evidenced by an electronic or digital record and that is intended and accepted for use as a means of redemption for money or monetary value, or payment for goods or services. The term includes, but is not limited to, &quot;prepaid access&quot; as defined by 31 C.F.R. &sect; 1010.100, as amended or recodified from time to time. Notwithstanding the foregoing, the term &quot;stored value&quot; does not include a payment instrument, closed loop stored value, or stored value not sold to the public but issued and distributed as part of a loyalty, rewards, or promotional program.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(w)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(dd)</span><span class="csEF05ACC"> &quot;Tangible net worth&quot; means the aggregate assets of a licensee excluding all intangible assets, less liabilities, as determined in accordance with United States generally accepted accounting principles.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ee) &quot;Transfer&quot; means to assume control of virtual currency from or on behalf of a person and to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Credit the virtual currency to the account of another person;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Move the virtual currency from one account of a person to another account of the same person; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Relinquish control of virtual currency to another person.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ff) &quot;U.S. Dollar equivalent of virtual currency&quot; means the equivalent value of a particular virtual currency in United States dollars shown on a virtual-currency exchange based in the United States for a particular date or period specified in this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(gg) &quot;Virtual currency&quot; means a digital representation of value that is used as a medium of exchange, unit of account, or store of value and is not money, whether or not denominated in money. &nbsp;Virtual currency does not include:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A transaction in which a merchant grants, as part of an affinity or rewards program, value that cannot be taken from or exchanged with the merchant for money, bank credit, or virtual currency; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A digital representation of value issued by or on behalf of a publisher and used solely within an online game, game platform, or family of games sold by the same publisher or offered on the same game platform.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(hh) &quot;Virtual-currency administration&quot; means issuing virtual currency with the authority to redeem the currency for money, bank credit, or other virtual currency.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) &quot;Virtual-currency business activity&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Exchanging, transferring, or storing virtual currency or engaging in virtual-currency administration, whether directly or through an agreement with a virtual-currency control-services vendor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Holding electronic precious metals or electronic certificates representing interests in precious metals on behalf of another person or issuing shares or electronic certificates representing interests in precious metals; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Exchanging one or more digital representations of value used within one or more online games, game platforms, or family of games for:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Virtual currency offered by or on behalf of the same publisher from which the original digital representation of value was received;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Money or bank credit outside the online game, game platform, or family of games offered by or on behalf of the same publisher from which the original digital representation of value was received.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(jj) &quot;Virtual-currency control-services vendor&quot; means a person that has control of virtual currency solely under an agreement with a person that, on behalf of another person, assumes control of virtual currency.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(kk) &quot;Virtual currency kiosk operator&quot; means a person who engages in virtual currency business activity through a money transmission kiosk located in this state or a person that owns, operates, solicits, markets, advertises, manages, or facilitates a money transmission kiosk located in this state through which virtual currency business activity is offered.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ll) &quot;Virtual currency storage&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Maintaining possession, custody, or control over virtual currency on behalf of another person, including as a virtual currency control-services vendor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Issuing, transferring, or otherwise granting or providing to any person in this state any claim or right or any physical, digital, or electronic instrument, receipt, certificate, or record representing any claim or right to receive, redeem, withdraw, transfer, exchange, or control any virtual currency; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Receiving possession, custody, or control over virtual currency from a person in this state in return for a promise or obligation to return, repay, exchange, or transfer such virtual currency or a like amount of such virtual currency.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(mm) &quot;Virtual currency wallet&quot; means a software application or other mechanism providing a means for holding, storing, and transferring virtual currency. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;32A-2-4. License application, issuance, and renewal.</span></h4>
+	<p class="cs80D3AC4F"><span class="cs19E44A0C">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(a) An applicant for a license shall submit an application to the commissioner on a form prescribed by the commissioner. The commissioner may direct an applicant to file a license application through the Nationwide Multistate Licensing System and Registry operated by the State Regulatory Registry, LLC.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Each application shall be accompanied by a nonrefundable application fee and a license fee. If the application is approved, the application fee is the license fee for the first year of licensure.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The commissioner shall issue a license if the commissioner finds that the applicant meets the requirements of this article and the rules adopted under this article. The commissioner shall approve or deny every application for an original license within 120 days from the date a complete application is submitted, unless the commissioner extends the period for good cause. All licenses issued under this article expire on December 31 of the year issued, unless sooner suspended or revoked, and are subject to renewal for the following year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The licensee at each office it owns and operates in West Virginia shall prominently display, or maintain available for inspection, a copy of the license authorizing the conduct of a currency exchange business if the location offers and provides such services. Where the currency exchange business is conducted through a licensee&rsquo;s authorized delegates in this state, each authorized delegate location offering such services shall maintain available for inspection proof of their appointment by the licensee to conduct such business.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) As a condition for renewal of a license, the licensee must submit to the commissioner an application for renewal on a form prescribed by the commissioner and an annual license renewal fee. The commissioner may direct an applicant to file a license renewal application through the Nationwide Multistate Licensing System and Registry operated by the State Regulatory Registry, LLC.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) A license issued under this article may not be transferred or assigned.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) An applicant for a license who is not located in this state shall file an irrevocable consent, duly acknowledged, that suits and actions may be commenced against the applicant in the courts of this state by service of process upon a person located within the state designated to accept service, or by service upon the Secretary of State, as well as by service as set forth in this chapter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The commissioner is authorized to participate in the multistate supervisory process, including any multistate investigatory, examination, and licensing process, established between states and coordinated through the Conference of State Bank Supervisors, Money Transmitter Regulators Association, and affiliates and successors thereof, for all licensees that hold licenses in this state and other states.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) A virtual currency kiosk operator shall comply with this article and submit applications through NMLS on or before November 1, 2026, for licensure beginning January 1, 2027. &nbsp;Applicants must provide a list of delegate locations at the time of application and include the appropriate fee. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;32A-2-8c. &nbsp;Virtual Currency Kiosk Requirements. &nbsp;</span></h4>
+	<p class="cs80D3AC4F"><span class="cs19E44A0C">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a)(1) The licensee, in establishing a relationship with a customer and before entering into an initial virtual currency transaction on behalf of or with the customer, shall disclose in clear, conspicuous, and legible writing all material risks associated with virtual currency generally. &nbsp;&nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs50974958">(2) The material risks associated with virtual currency required to be disclosed under subdivision (a)(1) include without limitation: &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs50974958">(A) A disclosure that is acknowledged by the customer and provided separately from the disclosures provided under subdivision (a)(2)(B) and subdivision (a)(2)(G), and written prominently and in bold type, stating the following: &quot;WARNING: LOSSES DUE TO FRAUDULENT OR ACCIDENTAL TRANSACTIONS MAY NOT BE RECOVERABLE AND TRANSACTIONS IN VIRTUAL CURRENCY ARE IRREVERSIBLE.&quot;; </span></p><p class="cs53FB8D75"><span class="cs50974958">(B) Virtual currency is not backed or insured by the government, and accounts and value balances are not subject to protections of the Federal Deposit Insurance Corporation, National Credit Union Administration, or Securities Investor Protection Corporation; </span></p><p class="cs53FB8D75"><span class="cs50974958">(C) A virtual currency transaction may be deemed to be made when recorded on a public ledger which may not be the date or time when the customer initiates the virtual currency transaction; </span></p><p class="cs53FB8D75"><span class="cs50974958">(D) The value of virtual currency may be derived from the continued willingness of market participants to exchange fiat currency for virtual currency which may result in the permanent and total loss of the value of a particular virtual currency if the market for that virtual currency disappears; </span></p><p class="cs53FB8D75"><span class="cs50974958">(E) The volatility and unpredictability of the price of virtual currency relative to fiat currency may result in a significant loss over a short period of time; </span></p><p class="cs53FB8D75"><span class="cs50974958">(F) A bond maintained by the licensee for the benefit of the customers of the licensee may not be sufficient to cover all losses incurred by customers; and </span></p><p class="cs53FB8D75"><span class="cs50974958">(G) Virtual currency transactions are irreversible and may be used by a person seeking to defraud customers, including but not limited to, a person impersonating a customer&rsquo;s family or friends; threatening jail time, stating that a customer&rsquo;s identity has been stolen insisting that a customer withdraw money from the customer&rsquo;s bank account and purchase virtual currency or alleging that a customer&rsquo;s personal computer has been hacked. </span></p><p class="cs53FB8D75"><span class="cs50974958">(b)(1) A licensee, when opening an account for a new customer and before entering into an initial virtual currency transaction for, on behalf of, or with the customer, shall disclose in clear, conspicuous, and legible writing, using not less than 24 point sans-serif-type font, all relevant terms and conditions associated with the products, services, and activities of the licensee and virtual currency generally. </span></p><p class="cs53FB8D75"><span class="cs50974958">(2) The disclosure required under subdivision (b)(1) shall include without limitation: </span></p><p class="cs53FB8D75"><span class="cs50974958">(A) The customer&rsquo;s liability for unauthorized virtual currency transactions; </span></p><p class="cs53FB8D75"><span class="cs50974958">(B) The customer&rsquo;s right to stop payment of a preauthorized virtual currency transfer and the procedure used to initiate a stop-payment order; </span></p><p class="cs53FB8D75"><span class="cs50974958">(C) The circumstances under which the licensee, absent a court or government order, will disclose information concerning the customer&rsquo;s account to third parties; </span></p><p class="cs53FB8D75"><span class="cs50974958">(D) The requirement that the licensee communicate to the customer what customer information may be disclosed to third parties; </span></p><p class="cs53FB8D75"><span class="cs50974958">(E) The customer&rsquo;s right to receive a receipt for a virtual currency transaction at the time of the transaction; </span></p><p class="cs53FB8D75"><span class="cs50974958">(F) Upon a change in the rules or policies of the owner or operator, the customer&rsquo;s right to consent to the changed rules or policies before performing a transaction after the change; and </span></p><p class="cs53FB8D75"><span class="cs50974958">(G) Any other disclosures that are customarily provided in connection with opening a person&rsquo;s account. </span></p><p class="cs53FB8D75"><span class="cs50974958">(c)(1) A licensee, before each transaction in virtual currency for, on behalf of, or with a customer, shall disclose to the customer in an easily readable manner that is in clear, conspicuous, and legible writing to advertise, solicit, or negotiate, either orally or in writing, for a transaction conducted in person, electronically, or by phone, using not less than 24 point sans-serif-type font, the terms and conditions of the virtual currency transaction. </span></p><p class="cs53FB8D75"><span class="cs50974958">(2) The terms and conditions required under subdivision (c)(1) shall include without limitation: </span></p><p class="cs53FB8D75"><span class="cs50974958">(A) The amount of the transaction; </span></p><p class="cs53FB8D75"><span class="cs50974958">(B) Any fees, expenses, and charges borne by the customer, including without limitation applicable exchange rates; </span></p><p class="cs53FB8D75"><span class="cs50974958">(C) The type and nature of the virtual currency transaction; </span></p><p class="cs53FB8D75"><span class="cs50974958">(D) A warning that, once executed, the virtual currency transaction may not be undone, if applicable; </span></p><p class="cs53FB8D75"><span class="cs50974958">(E) A daily virtual currency transaction limit according to subsection (g); </span></p><p class="cs53FB8D75"><span class="cs50974958">(F) The difference in the sale price of the virtual currency versus the current market price; and </span></p><p class="cs53FB8D75"><span class="cs50974958">(G) Any other disclosures that are customarily given in connection with a virtual currency transaction. </span></p><p class="cs53FB8D75"><span class="cs50974958">(d) A licensee shall ensure that each customer acknowledges receipt of all disclosures required under this section. </span></p><p class="cs53FB8D75"><span class="cs50974958">(e)(1) A licensee, upon the completion of a virtual currency transaction, shall provide to the customer a written, paper receipt containing: </span></p><p class="cs53FB8D75"><span class="cs50974958">(A) The name of, and contact information for the licensee, including without limitation the licensee&rsquo;s business address and a customer service telephone number established by the licensee to answer questions and register complaints; </span></p><p class="cs53FB8D75"><span class="cs50974958">(B) The name of the customer; </span></p><p class="cs53FB8D75"><span class="cs50974958">(C) The type, value, date and precise time of the virtual currency transaction, transaction hash or identification number, and each virtual currency address; </span></p><p class="cs53FB8D75"><span class="cs50974958">(D) The amount of the virtual currency transaction expressed in United States currency; </span></p><p class="cs53FB8D75"><span class="cs50974958">(E) The public virtual currency address of the customer; </span></p><p class="cs53FB8D75"><span class="cs50974958">(F) The unique identifier of the virtual currency kiosk operator; </span></p><p class="cs53FB8D75"><span class="cs50974958">(G) A fee charged, including without limitation a fee charged directly or indirectly by the licensee or a third party involved in the virtual currency transaction; </span></p><p class="cs53FB8D75"><span class="cs50974958">(H) The exchange rate, if applicable; </span></p><p class="cs53FB8D75"><span class="cs50974958">(I) Any tax collected by the licensee for the virtual currency transaction; </span></p><p class="cs53FB8D75"><span class="cs50974958">(J) A statement of the liability of the licensee for non delivery or delayed delivery; </span></p><p class="cs53FB8D75"><span class="cs50974958">(K) A statement of the refund policy of the licensee; </span></p><p class="cs53FB8D75"><span class="cs50974958">(L) The name and telephone number of the Division of Financial Institutions and a statement disclosing that the licensee&rsquo;s customers may contact the division with questions or complaints about the licensee&rsquo;s virtual currency kiosk services; and </span></p><p class="cs53FB8D75"><span class="cs50974958">(M) Any additional information the commissioner may require. </span></p><p class="cs53FB8D75"><span class="cs50974958">(2) The receipt required under subdivision (e)(1) shall be provided in a retainable form and may be provided electronically if the customer requests and agrees to receive an electronic receipt. </span></p><p class="cs53FB8D75"><span class="cs50974958">(f) The total amount of a fee and commission charged by the licensee for a virtual currency transaction shall not exceed $5 or 10 percent of the amount of the virtual currency transaction. </span></p><p class="cs53FB8D75"><span class="cs50974958">(g) There are established the following maximum daily virtual currency kiosk transaction limits: &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs50974958">(1) One thousand dollars for each new customer of a virtual currency kiosk; and </span></p><p class="cs53FB8D75"><span class="cs50974958">(2) Two thousand five hundred dollars for each existing customer of a virtual currency kiosk. </span></p><p class="cs53FB8D75"><span class="cs50974958">(h) The </span><a name="_Hlk210901760"><span class="cs50974958">licensee </span></a><span class="cs50974958">shall allow a new customer, upon the request of the new customer, to cancel and receive a full refund for any fraudulent virtual currency transactions that occurred not later than 10 days after the new customer registered as a customer of the licensee if, not later than 30 days after the last virtual currency transaction that occurred during the 10 day period, the new customer: </span></p><p class="cs53FB8D75"><span class="cs50974958">(1) Contacts the licensee and a government or law enforcement agency to inform them of the fraudulent nature of the virtual currency transaction; and &nbsp;</span></p><p class="cs53FB8D75"><span class="cs50974958">(2) Files a report with a government or law enforcement agency memorializing the fraudulent nature of the virtual currency transaction. </span></p><p class="cs53FB8D75"><span class="cs50974958">(i) Each licensee shall: &nbsp;</span></p><p class="cs53FB8D75"><span class="cs50974958">(1) Obtain a copy of a government-issued identification card that identifies each customer of the owner of the virtual currency kiosk or the virtual currency kiosk operator; </span></p><p class="cs53FB8D75"><span class="cs50974958">(2) Maintain restrictions that prevent more than one customer of the licensee from using the same virtual currency wallet; </span></p><p class="cs53FB8D75"><span class="cs50974958">(3) Be able to prevent designated virtual currency wallets from being used at a virtual currency kiosk owned or operated by the licensee; </span></p><p class="cs53FB8D75"><span class="cs50974958">(4) Use an established third party that specializes in performing blockchain analyses to preemptively perform the analyses to identify and prevent high risk or sanctioned virtual currency wallets from being used by customers at virtual currency kiosks owned or operated by the licensee; </span></p><p class="cs53FB8D75"><span class="cs50974958">(5) Define, in the licensee&rsquo;s policies and procedures, a risk-based method of monitoring customers of the owner of the virtual currency kiosk or the virtual currency kiosk operator on a post-transaction basis; </span></p><p class="cs53FB8D75"><span class="cs50974958">(6) Offer, during the hours of operation of the virtual currency kiosks owned or operated by the licensee, live customer support by telephone from a toll-free telephone number prominently displayed at or on the virtual currency kiosks; </span></p><p class="cs53FB8D75"><span class="cs50974958">(7)(A) Identify and speak by telephone with an elder adult who is a new customer before the elder adult who is a new customer completes his or her first virtual currency transaction with the licensee. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs50974958">(B) During the communication, which shall be recorded and retained by the licensee, the licensee shall: </span></p><p class="cs53FB8D75"><span class="cs50974958">(i) Reconfirm any attestations made by the new customer at a virtual currency kiosk owned or operated by the licensee; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs50974958">(ii) Discuss the transaction; and </span></p><p class="cs53FB8D75"><span class="cs50974958">(iii) Discuss types of fraudulent schemes relating to virtual currency. </span></p><p class="cs53FB8D75"><span class="cs50974958">(C) The licensee&rsquo;s approval of the transaction shall be dependent upon the licensee&rsquo;s assessment of the communication; </span></p><p class="cs53FB8D75"><span class="cs50974958">(8) Designate and employ a chief compliance officer who shall:</span></p><p class="cs53FB8D75"><span class="cs50974958">(A) Be qualified to coordinate and monitor a compliance program to ensure compliance with this section and all other applicable federal laws and regulations and state laws and rules; and </span></p><p class="cs53FB8D75"><span class="cs50974958">(B) Not own more than 20 percent of the licensee that employs the officer; and </span></p><p class="cs53FB8D75"><span class="cs50974958">(9) Use full-time employees to fulfill the licensee&rsquo;s compliance responsibilities under federal laws and regulations and state laws and rules.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;32A-2-17. Cooperative agreements.</span></h4>
+	<p class="cs80D3AC4F"><span class="cs19E44A0C">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) The commissioner shall cooperate with federal and state agencies in discharging the commissioner&#39;s responsibilities under this article. The commissioner may:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Arrange for the exchange of information among government officials concerning the regulation of a currency exchange, transportation or transmission business;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Cooperate in and coordinate training programs concerning the regulation of currency exchange, transportation or transmission businesses; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Assist state and federal agencies in their enforcement and investigatory activities and supply those agencies with documentation and information.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The commissioner may request the assistance of the West Virginia state police in enforcing this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) In the event state money transmission jurisdiction is conditioned on a federal law, any inconsistencies between any provision of this article and the federal law governing money transmission shall be governed by the applicable federal law to the extent of the inconsistency. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) In the event of any inconsistencies between this article and a federal law that governs pursuant to subsection (c) of this section, the commissioner may provide interpretive guidance that: (1) Identifies the inconsistency; and (2) Identifies the appropriate means of compliance with federal law.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;32A-2-27. Authorized delegates.</span></h4>
+	<p class="cs80D3AC4F"><span class="cs19E44A0C">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) A licensee may conduct the business of money transmission and currency exchange regulated by this article at one or more locations through authorized delegates designated by the licensee to conduct business on its behalf, </span><span class="cs46AE26E6">including the physical locations of money transmission kiosks and virtual currency kiosks</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) A licensee may not knowingly authorize a person to act as its delegate who has, within the previous 10 years, a disqualifying criminal conviction of the type set forth in &sect;32A-2-8(c)(2) of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A licensee shall enter into a contract with its authorized delegate detailing the nature and scope of the relationship between the licensee and the authorized delegate. The contract shall require that the authorized delegate operate in full compliance with the laws of this state and of the United States. The licensee shall, upon request, provide the commissioner with the sample written contract.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The financial responsibility of a licensee for the actions of its authorized delegate shall not exceed the amount of funds received by the authorized delegate on behalf of its licensee for the business regulated under this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) An authorized delegate has an affirmative duty not to: (i) Commit fraud or misrepresentation; or (ii) submit fraudulent statements to the licensee. A licensee shall promptly report to the commissioner and to any other appropriate state or federal official when it has probable cause to believe that an authorized delegate has violated the affirmative duty set forth in this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The licensee shall require the authorized delegate to hold in trust for the licensee from the moment of receipt of the proceeds of any business transacted under this article in an amount equal to the amount of proceeds due the licensee less the amount due the authorized delegate. The funds shall remain the property of the licensee whether or not commingled by the authorized delegate with its own funds. In the event that the license is revoked by the commissioner, all proceeds held in trust by the authorized delegate of that licensee are considered to be assigned to the commissioner. If an authorized delegate fails to remit funds to the licensee in accordance with the time specified in the contract with the licensee, the licensee may bring a civil action against the authorized delegate for three times the actual damages. The commissioner may by rule set a maximum remittance time for authorized delegates.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) An authorized delegate shall report to the licensee the theft or loss of payment instruments within 24 hours from the time the authorized delegate knew or should have known of the theft or loss.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Upon any suspension or revocation of a license, the failure of a licensee to renew a license, or the denial of the renewal of a license, the licensee shall notify its authorized delegates of the event and demand that they immediately cease operations as authorized delegates.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) A licensee shall report the removal of an authorized delegate location, or the termination of operations of an authorized delegate location, </span><span class="cs46AE26E6">including money transmission kiosks and virtual currency kiosks</span><span class="csEF05ACC">, to the commissioner on a quarterly basis, and shall in the report list any new authorized delegate locations, </span><span class="cs46AE26E6">including money transmission kiosks and virtual currency kiosks,</span><span class="csEF05ACC"> in this state.</span></p><p class="cs53FB8D75"><span class="cs19E44A0C">(j) No authorized delegate shall act outside its scope of authority as defined under this article and by its contract with the licensee to act on behalf of the licensee with regard to any transaction regulated by this article.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to bring virtual currency kiosks within the purview of money transmission licensure and create disclosure requirements and daily transaction limitations for new and existing customers.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

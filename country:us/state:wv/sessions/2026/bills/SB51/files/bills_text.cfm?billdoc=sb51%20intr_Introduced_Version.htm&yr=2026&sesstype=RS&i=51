@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 51 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=51">&laquo; Senate Bill 51 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 51'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 51 - Requiring course in public schools on human development&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb51+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=51"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.csDF04B19F{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.csF96CDBB6{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		.cs4E345552{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 51</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Rucker</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[</span><span class="cs7B75DFFE">Introduced January 14, 2026; referred<br/>to the Committee on Education</span><span class="cs7B75DFFE">]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;18-2-9 of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;18-2-47, relating to the State Board of Education and required courses of education; providing that a course on human growth and development related to pregnancy and human development inside the womb be mandatory from grade three; clarifying methods of instruction; providing that this curriculum be known as the Baby Olivia Act; creating rule-making authority; authorizing the Attorney General to enforce the Baby Olivia Act; and creating civil penalties.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. STATE BOARD OF EDUCATION.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-2-9. Required courses of instruction.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) (1) In all public, private, parochial, and denominational schools located within this state there shall be given prior to the completion of the eighth grade at least one year of instruction in the history of the State of West Virginia. The schools shall require regular courses of instruction by the completion of the 12th grade in the history of the United States, in civics, in the Constitution of the United States, and in the government of the State of West Virginia for the purpose of teaching, fostering, and perpetuating the ideals, principles, and spirit of political and economic democracy in America, and increasing the knowledge of the organization and machinery of the government of the United States and of the State of West Virginia. The required courses shall include instruction on the institutions and structure of American government, such as the separation of powers, the Electoral College, and federalism. The required courses shall include instruction that provides students an understanding of American political philosophy and history, utilizing writings from prominent figures in Western civilization, such as Aristotle, Thomas Hobbes, John Locke, and Thomas Jefferson. The courses of instruction shall offer an objective and critical analysis of ideologies throughout history including, but not limited to, capitalism, republicanism, democracy, socialism, communism, and fascism. The required courses shall emphasize the use of primary sources and interactive learning techniques, such as mock scenarios, debates, and open and impartial discussions. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The state board shall, with the advice of the state superintendent, and after consultation with other entities, prescribe the courses of study, including the basic course requirements for middle school and high school, and the academic standards listed in subdivision (1) of this subsection for these courses of study covering these subjects for the public schools, and publish an approved list of instructional resources pursuant to &sect;18-2A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. The curriculum used in the delivery of instruction shall cover the standards adopted for such courses. The other entities for consultation may include such organizations as the Florida Joint Center for Citizenship, the College Board, the Bill of Rights Institute, Hillsdale College, the Gilder Lehrman Institute of American History, the Constitutional Sources Project, educators, school administrators, postsecondary education representatives, elected officials, business and industry leaders, parents, and the public. &nbsp;Officials or boards having authority over the respective private, parochial, and denominational schools shall prescribe courses of study for the schools under their control and supervision similar to those required for the public schools. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The state board shall provide testing or assessment instruments for the history and civics courses of instruction required by this section. These testing instruments shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Be aligned with the academic standards required by this section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Be mandatory for students enrolled in those courses of instruction;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Be cumulative by including questions about knowledge learned in prior history and civics courses; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Measure students&#39; factual and conceptual knowledge including how the facts interrelate and the reasons behind historical documents and events.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) To further this study, every high school student eligible by age for voter registration shall be afforded the opportunity to register to vote pursuant to &sect;3-2-22 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The state board shall cause to be taught in all public schools of this state the subject of health education, including instruction in any of the grades six through 12 as considered appropriate by the county board, on: (1) The prevention, transmission, and spread of acquired immune deficiency syndrome and other sexually transmitted diseases; (2) substance abuse, including the nature of alcoholic drinks and narcotics, tobacco products, and other potentially harmful drugs, with special instruction as to their effect upon the human system and upon society in general; (3) the importance of healthy eating and physical activity in maintaining healthy weight; </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> (4) education concerning cardiopulmonary resuscitation and first aid, including instruction in the care for conscious choking, and recognition of symptoms of drug or alcohol overdose. The course curriculum requirements and materials for the instruction shall be adopted by the state board by rule in consultation with the Department of Health and Human Resources. The state board shall prescribe a standardized health education assessment to be administered within health education classes to measure student health knowledge and program effectiveness; </span><span class="cs46AE26E6">and</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(5) Education concerning human growth and development by means of an oral, written, or digital lesson, lecture, or presentation about human biology related to pregnancy and human development inside the womb. Human growth and development instruction shall commence in grade three. Beginning the 2026-2027 school year, the course curriculum materials, as adopted by the state board by legislative rule, shall include: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A high-definition ultrasound video, at least three minutes in duration, showing the development of the brain, heart, sex organs, and other vital organs in early fetal development; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The </span><span class="cs1489E706">Meet Baby Olivia </span><span class="cs46AE26E6">video developed by Live Action, showing the process of fertilization and every stage of human development inside the uterus, noting significant markers in cell growth and organ development for every significant marker of pregnancy until birth.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) An opportunity shall be afforded to the parent or guardian of a child subject to instruction in the prevention, transmission, and spread of acquired immune deficiency syndrome and other sexually transmitted diseases to examine the course curriculum requirements and materials to be used in the instruction. The parent or guardian may exempt the child from participation in the instruction by giving notice to that effect in writing to the school principal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) After July 1, 2015, the required instruction in cardiopulmonary resuscitation in subsection (b) of this section shall include at least 30 minutes of instruction for each student prior to graduation on the proper administration of cardiopulmonary resuscitation (CPR) and the psychomotor skills necessary to perform cardiopulmonary resuscitation. The term &quot;psychomotor skills&quot; means the use of hands-on practicing to support cognitive learning. Cognitive-only training does not qualify as &quot;psychomotor skills&quot;. The CPR instruction shall be based on an instructional program established by the American Heart Association or the American Red Cross, or another program which is nationally recognized and uses the most current national evidence-based emergency cardiovascular care guidelines and incorporates psychomotor skills development into the instruction. A licensed teacher is not required to be a certified trainer of cardiopulmonary resuscitation to facilitate, provide, or oversee such instruction. The instruction may be given by community members, such as emergency medical technicians, paramedics, police officers, firefighters, licensed nurses, and representatives of the American Heart Association or the American Red Cross. These community members are encouraged to provide necessary training and instructional resources such as cardiopulmonary resuscitation kits and other material at no cost to the schools. The requirements of this subsection are minimum requirements. A local school district may offer CPR instruction for longer periods of time and may enhance the curriculum and training components, including, but not limited to, incorporating into the instruction the use of an automated external defibrillator (AED): </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That any instruction that results in a certification being earned shall be taught by an authorized CPR/AED instructor.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) A full week of classes during the week selected by the county board of education shall be recognized as Celebrate Freedom Week. The purpose of Celebrate Freedom Week is to educate students about the sacrifices made for freedom in the founding of this country and the values on which this country was founded.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Celebrate Freedom Week shall include appropriate instruction in each social studies class which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Includes an in-depth study of the intent, meaning, and importance of the Declaration of Independence, the Emancipation Proclamation, and the Constitution of the United States with an emphasis on the amendments that are crucial to the survival of democracy and freedom, such as the Bill of Rights and the thirteenth, fourteenth, fifteenth, and nineteenth amendments;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Uses the historical, political, and social environments surrounding each document at the time of its initial passage or ratification; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Includes the study of historical documents to firmly establish the historical background leading to the establishment of the provisions of the constitution and Bill of Rights by the founding fathers for the purposes of safeguarding our constitutional republic.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The requirements of this subsection are applicable to all public, private, parochial, and denominational schools located within this state. Nothing in this subsection creates a standard or requirement subject to state accountability measures.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Beginning the 2018-2019 school year, students in public schools shall be administered a test the same as or substantially similar to the civics portion of the naturalization test used by the United States Citizenship and Immigration Services between their ninth and 12th grade years as an indicator of student achievement in the area of civics education. The test results may be reported in the aggregate to the county board for evaluation by the board&#39;s curriculum director and reported to the board members. Nothing in this subsection creates a standard or requirement subject to state accountability measures.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Beginning with the entering ninth grade class in the 2027-2028 school year, a public high school student shall be required to earn one unit of credit in a high school computer science course before the student graduates. &quot;Computer science&quot; means the study of computers, programming, and algorithms, including their principles, their hardware and software designs, their implementation, and their impact on society. Computer science does not include the study of everyday uses of computers and computer applications, such as keyboarding, word processing, digital literacy, or accessing the internet.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The one credit required in this subsection may be earned in grades eight through twelve.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A computer science course offered by a public high school shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Be of high quality; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Meet or exceed the curriculum standards established by the State Board of Education; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Be made available in a traditional classroom setting. Only if a traditional classroom setting is not feasible shall a school offer the course in a blended learning environment or an online-based or other technology-based format that is tailored to meet the needs of each participating student: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the intent of (C) shall not interfere with the schedule of homeschool students or virtual students. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The one credit required in this subsection shall be allowed to substitute for one math credit or one personalized education plan credit.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The one credit shall be approved for one credit in Career Technical Education (CTE): </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the credit shall be relevant to the program of study. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) If a student uses a computer science course to fulfill a math, the school district shall denote that computer science course as equivalent to a high school math course, on the student&rsquo;s transcript for the purpose of admission to a higher education institution in this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The state board shall adopt rules detailing how credit fulfillment under paragraph (3) of this subsection shall be granted. The rules shall ensure maximum flexibility for students. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Beginning in August of 2026, the State Board of Education shall make available to all public schools a list of course options that can meet the requirements for this credit. The state board shall update the list as often as necessary: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the state board shall create an approved list of courses that may be substituted. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The state board may adopt rules to administer this subsection, including rules for flexible options to license computer science teachers, which may include without limitation, approval codes, technical permits, ancillary licenses, and standard licenses. In adopting such rules, the board shall consider policy that ensures teacher subject area certification does not restrict the ability of students to earn a math or other substitution credit for a computer science course taken under this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;18-2-47. &nbsp;Human growth and development curriculum; </span><span class="csDF04B19F">the &quot;Baby Olivia Act&quot;</span><span class="csF3C8A5A3">. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) This section shall be known and cited as </span><a name="_Hlk154045695"><span class="cs46AE26E6">the &quot;Baby Olivia Act&quot;</span></a><span class="cs46AE26E6">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) As used in this section, a &quot;human growth and development discussion&quot; means an oral, written, or digital lesson, lecture, or presentation about human biology related to pregnancy and human development inside the womb.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Beginning the 2025-2026 school year, each public school, including each public charter school, shall incorporate a human growth and development discussion into its curriculum, in grades three, five, and eight. The human growth and development discussion must include:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A high-definition ultrasound video, at least three minutes in duration, showing the development of the brain, heart, sex organs, and other vital organs in early fetal development; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The </span><span class="cs1489E706">Meet Baby Olivia </span><span class="cs46AE26E6">video developed by Live Action, showing the process of fertilization and every stage of human development inside the uterus, noting significant markers in cell growth and organ development for every significant marker of pregnancy until birth.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The state board shall promulgate a legislative rule pursuant &sect;29A-3B-1</span><span class="cs1489E706"> et seq. </span><span class="cs46AE26E6">to implement this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Enforcement&mdash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Acknowledging the state&#39;s interest in safeguarding the health and well-being of its residents and citizens, the attorney general of the state of West Virginia shall have a cause of action to enforce this section on behalf of any or all residents or citizens of West Virginia.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The</span><span class="cs1489E706"> </span><span class="cs46AE26E6">attorney general of the state of West Virginia shall have a cause of action to sue for damages and injunctive relief on behalf of any or all residents or citizens of West Virginia against any person or entity that violates this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="csF96CDBB6"><span class="cs7FA9C667">NOTE: The purpose of this bill is to amend required courses of education to include human growth and development related to pregnancy and human development inside the womb; required methods of presenting this instruction and adding a human growth and development curriculum to be known as the &quot;Baby Olivia Act&quot;; and to authorize the Attorney General to sue for any violation of the &quot;Baby Olivia Act&quot;.</span></p><p class="cs4E345552"><span class="cs7FA9C667">&nbsp;</span></p><p class="csF96CDBB6"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

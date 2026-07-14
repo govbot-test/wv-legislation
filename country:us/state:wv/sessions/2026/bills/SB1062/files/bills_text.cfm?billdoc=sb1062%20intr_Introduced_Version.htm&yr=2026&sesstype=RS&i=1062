@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 1062 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=1062">&laquo; Senate Bill 1062 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 1062'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 1062 - Creating TEAM-WV&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb1062+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=1062"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs9B0077FC{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2;background-color:#FFFFFF}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs68BCB87{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2;background-color:#FFFFFF}
+		.csF5B7C975{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs9A0FB74B{text-align:left;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 1062</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Jeffries</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 21, 2026; referred <br/>to the Committee on Economic Development; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;5B-12-1, &sect;5B-12-2, &sect;5B-12-3, &sect;5B-12-4, &sect;5B-12-5, &sect;5B-12-6, &sect;5B-12-7, &sect;5B-12-8, &sect;5B-12-9, and &sect;5B-12-10; and to amend the code by adding a new section, designated &sect;60-2-27, relating to the creation of TEAM-WV.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5B. &nbsp;ECONOMIC DEVELOPMENT ACT OF 1985.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 12. TEAM-WV.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-1. TEAM-WV Corporation; creation; articles of incorporation.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) As used in this article, &quot;TEAM-WV&quot; means the non-stock, not-for-profit corporation established in accordance with the provisions of &sect;31E-1-101 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, and includes any subsidiary of that corporation. In any section of this code that refers to TEAM-WV, reference to the corporation shall also include reference to any such subsidiary unless otherwise specified or clearly appearing from the context.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b) On or before the effective date of the enactment of this article, the Governor shall form a nonprofit corporation, to be named &quot;TEAM-WV,&quot; with the purpose of promoting economic development, job creation, job retention, job training, and the recruitment of business to this state. Except as otherwise provided in this article, the corporation shall be organized and operated in accordance with &sect;31E-1-101 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code. The Governor shall sign and file articles of incorporation for the corporation with the Secretary of State. The legal existence of the corporation shall begin upon the filing of the articles.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(c) In addition to meeting the requirements for articles of incorporation set forth in &sect;31E-2-201 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, the articles of incorporation for the nonprofit corporation shall include the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) The designation of the name of the corporation as TEAM-WV;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) A provision, in accordance with this section, providing for the nomination and appointment of members to the board of directors;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) A provision for the appointment of a chief executive officer of the corporation by the board. The chief executive officer shall serve at the pleasure of the board and shall have the power to execute contracts, spend corporation funds, and hire employees on behalf of the corporation. If the position of chief executive officer becomes vacant for any reason, the vacancy shall be filled in the same manner as provided in this section.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(4) Provisions requiring the board to do all of the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(A) Adopt one or more resolutions providing for the compensation of the chief executive officer;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(B) Approve an employee compensation plan recommended by the chief executive officer;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(C) Approve a contract with the Department of Commerce for the corporation to assist the Secretary of Commerce and the department with providing services or otherwise carrying out the functions or duties of the department, including the operation and management of programs, offices, divisions, or boards, as may be determined by the secretary;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(D) Approve all major contracts for services recommended by the chief executive officer;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(E) Establish an annual strategic plan and standards of measure to be used in evaluating the corporation&#39;s success in executing the plan;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(F) Establish a conflicts of interest policy that, at a minimum, complies with section six of this article;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(G) Hold a minimum of four meetings per year at which a quorum of the board is physically present, and such other meetings, at which the directors&#39; physical presence is not required, as may be necessary. </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(H) Establish a records retention policy and present the policy, and any subsequent changes to the policy, at a meeting of the board of directors at which a quorum of the board is required to be physically present; and</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(I) Adopt standards of conduct for the directors.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(5) A statement that directors shall not receive any compensation from the corporation, except that directors may be reimbursed for actual and necessary expenses incurred in connection with services performed for the corporation;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(6) A provision authorizing the board to amend the corporation&#39;s articles of incorporation or regulations, except for provisions required by this article;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(7) Procedures by which the corporation would be dissolved and by which all corporation rights and assets would be distributed to the state or to another corporation organized under this article. These procedures shall incorporate any separate procedures set forth in &sect;31E-13-1301 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code for the dissolution of the corporation. The articles shall state that no dissolution shall take effect until the corporation has made adequate provision for the payment of any outstanding bonds, notes, or other obligations.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(8) A provision establishing an audit committee to be comprised of directors. This provision shall require that the audit committee hire a firm of independent certified public accountants, to perform, once each year, a financial audit of the corporation and of any nonprofit entity of which TEAM-WV is the sole member. This provision shall also require all of the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(A) Commencing with TEAM-WV&#39;s fiscal year beginning July 1, 2026, that the financial statements to be audited are to be prepared in accordance with the Generally Accepted Accounting Principles promulgated by the Governmental Accounting Standards Board;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(B) That the firm of independent certified public accountants hired is to conduct a supplemental compliance and control review pursuant to a written agreement by and among the firm, TEAM-WV, and any nonprofit entity of which TEAM-WV is the sole member; and</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(C) That a copy of the annual financial audit report shall be provided to the Governor, the President of the Senate, and the Speaker of the House of Delegates.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(9) A provision authorizing a majority of the disinterested directors to remove an appointed director for misconduct, as that term may be defined in the articles or regulations of the corporation. The removal of an appointed director under this section creates a vacancy on the board that the Governor shall fill by appointment, with the advice and consent of the Senate, for the remainder of the term of office of the vacated seat.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-2. Board of directors; qualifications.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) TEAM-WV shall be governed by a board of directors that shall consist of nine voting members, including the following three, ex-officio voting members: the President of West Virginia University, the President of Marshall University, and the Executive Director of the West Virginia Investment Management Board. For each of the remaining six members the directors of the corporation shall submit a list of three nominees containing significant knowledge and significant experience in at least one of the following to the Governor: large scale investment analysis, project financing, capital structuring; corporate governance; and complex accounting. If there is more than one open member position at any one time, the directors of the corporation may not nominate any person for more than one of the open member positions. The Governor may appoint the board member from the list of nominees submitted or he or she may reject the list of nominees for any open member position and request that the directors of the corporation submit a list of three different nominees for that open member position. The board members appointed by the Governor shall be appointed with the advice and consent of the Senate. </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) The Governor shall make initial appointments to the board within 60 days after the filing of the articles of incorporation. The appointed board members shall serve six-year terms: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That of the initial members appointed, two members shall serve for a term of two years, two members shall serve for a term of four years, and one member shall serve for a term of six years. If any appointed director dies, resigns, or if the director&#39;s status changes in such a manner that any of the requirements of this article are no longer met, that director&#39;s seat on the board shall immediately become vacant. Any vacancy in an appointed board member position shall be filled pursuant to the nomination and appointment procedure set forth in this section. </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) One director shall be designated as chairperson of the board and procedures for electing directors to serve as officers of the corporation and members of an executive committee.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b) To qualify for appointment to the board of directors of TEAM-WV, an individual must satisfy all of the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) Has an understanding of generally accepted accounting principles and financial statements;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Possesses the ability to assess the general application of such principles in connection with the accounting for estimates, accruals, and reserves;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) Has experience preparing, auditing, analyzing, or evaluating financial statements that present a breadth and level of complexity of accounting issues that are generally comparable to the breadth and complexity of issues that can reasonably be expected to be presented by TEAM-WV&#39;s financial statements, or experience actively supervising one or more persons engaged in such activities;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(4) Has an understanding of internal controls and the procedures for financial reporting;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(5) Has an understanding of audit committee functions.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(c) Specific experience demonstrating the qualifications required by subsection (a) of this section may be evidenced by any of the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) Education and experience as a principal financial officer, principal accounting officer, controller, public accountant or auditor, or experience in one or more positions that involve the performance of similar functions;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Experience actively supervising a principal financial officer, principal accounting officer, controller, public accountant, auditor, or person performing similar functions;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) Experience overseeing or assessing the performance of companies or public accountants with respect to the preparation, auditing, or evaluation of financial statements.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(d) Each individual appointed to the board of directors shall be a citizen of the United States. At least three of the individuals appointed to the board shall be residents of or domiciled in this state.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-3. Functions and duties of corporation; status of employees; expenditures; board meetings.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) TEAM-WV may perform such functions as permitted and shall perform such duties as prescribed by law and as set forth in any contract entered into pursuant to section&nbsp; four of this article, but shall not be considered a state or public department, agency, office, body, institution, or instrumentality. TEAM-WV and its board of directors shall &nbsp;not be subject to the following sections of Chapter 31E of this Code: &sect;31E-2-202, &sect;31E-3-206, &sect;31E-8-302, &sect;31E-6-601 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, &sect;31E-7-704, &sect;31E-8-801, &sect;31E-8-803, &sect;31E-8-810, &sect;31E-8-825, &sect;31E-8-826, &sect;31E-8-840, &sect;31E-8-860, &sect;31E-10-1001, &sect;31E-11-1101, &sect;31E-11-1104, &sect;31E-13-1301 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, or any other provision in Chapter 31E that conflicts with the provisions of this article.&nbsp; </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b)(1) Directors and employees of TEAM-WV are not employees or officials of the state and, except as otherwise specifically provided in this article.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Actual or in-kind expenditures for the travel, meals, or lodging of the Governor, Speaker of the House of Delegates, or Senate President, or of any public official or employee designated by the Governor, Speaker of the House of Delegates, or Senate President, for the purpose of this article shall not be considered a violation of &sect;6B-2-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> if the expenditures are made by the corporation, or on behalf of the corporation by any person, in connection with the public official or employee&rsquo;s performance of official duties related to TEAM-WV. The Governor, Speaker of the House of Delegates, or Senate President, may designate any person, including a person who is a public official or employee as defined in &sect;6B-1-2, for the purpose of this article if such expenditures are made on behalf of the person in connection with the Governor&#39;s, Speaker&rsquo;s or President&rsquo;s performance of official duties related to TEAM-WV. A public official or employee so designated by the Governor, Speaker of the House of Delegates, or Senate President, shall comply with all applicable financial requirements of &sect;6B-2-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) At the times and frequency agreed to under section four of this article, beginning in 2027, the corporation shall file with the Department of Commerce a written report of all such expenditures paid or incurred during the preceding calendar year. The report shall state the dollar value and purpose of each expenditure, the date of each expenditure, the name of the person that paid or incurred each expenditure, and the location, if any, where services or benefits of an expenditure were received, provided that any such information that may disclose proprietary information shall not be included in the report.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(4) The prohibition applicable to former public officials or employees contained within &sect;6B-2-5 do not apply to any person appointed to be a director or hired as an employee of TEAM-WV.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(5), Any person who is a former state employee shall no longer be considered a public employee for purposes of &sect;5-10-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> upon commencement of employment with TEAM-WV.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(c) Meetings of the board of directors at which a quorum of the board is required to be physically present shall be open to the public except, by a majority vote of the directors present at the meeting, such a meeting may be closed to the public only for one or more of the following purposes:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) To consider business strategies of the corporation;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) To consider proprietary information belonging to potential applicants or potential recipients of business recruitment, retention, or creation incentives. For the purposes of this section, &quot;proprietary information&quot; means marketing plans, specific business strategy, production techniques, trade secrets, financial projections, or personal financial statements of applicants or members of the applicants&#39; immediate family, including, but not limited to, tax records or other similar information not open to the public inspection;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) To consider legal matters, including litigation, in which the corporation is or may be involved; and</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(4) To consider personnel matters related to an individual employee of the corporation.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(5) Any other purpose that is in conformance with the provisions of &sect;6-9A-4 of this code.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(d) The board of directors shall establish a reasonable method whereby any person may obtain the time and place of all public meetings.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(e) The board of directors shall promptly prepare and maintain minutes of all public meetings held in accordance with this section.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(f) Not later than the first day of July of each year, the chief executive officer of TEAM-WV shall prepare and submit a report of the corporation&#39;s activities for the preceding year to the Governor, the President of the Senate, and the Speaker of the House of Delegates. The annual report shall include the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) An analysis of the state&#39;s economy;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) A description of the structure, operation, and financial status of the corporation;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) A description of the corporation&#39;s strategy to improve the state&rsquo;s economy and the standards of measure used to evaluate its progress;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(4) An evaluation of the performance of current strategies and major initiatives; and</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(5) An analysis of any statutory or administrative barriers to successful economic development, business recruitment, and job growth in the state identified by TEAM-WV during the preceding year.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-4. Contract with the Department of Commerce.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) The secretary of the Department of Commerce may execute a contract with TEAM-WV for the corporation to assist the secretary and the department with providing services or otherwise carrying out the functions or duties of the &nbsp;department, including the operation and management of programs, offices, divisions, or boards, as may be determined by the secretary. The approval or disapproval of awards involving public money shall remain functions of the department. All contracts for grants, loans, and tax incentives involving public money shall be between the department and the recipient of the grants, loans or tax incentives, and shall be enforced by the department. TEAM-WV may not execute contracts obligating the department for loans, grants, tax credits, or incentive awards recommended by TEAM-WV to the department. </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b) The term of an initial contract entered into under this section shall not extend beyond two years. Thereafter, the secretary and TEAM-WV shall enter into a subsequent contract for a period of five fiscal years. &nbsp;Following this subsequent contract, the secretary and TEAM-WV may renew the contract for successive five-fiscal-year terms.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(c) TEAM-WV&#39;s provision of services to the department as described in this section shall be pursuant to a contract entered into under this section. If at any time the secretary determines that the contract with TEAM-WV will not be renewed for the subsequent fiscal year, the secretary shall notify TEAM-WV of the secretary&#39;s decision not later than one hundred twenty days prior to the end of the current state fiscal year. If the secretary does not provide such written notice to TEAM-WV prior to one hundred days before the end of the current state fiscal year, the contract shall be renewed upon such terms as the parties shall agree to, subject to the requirements of this section.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(d) A contract entered into under this section shall include all of the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) Terms assigning to the corporation the duties of advising and assisting the secretary in the secretary&rsquo;s evaluation of the department and the formulation of recommendations under section five of this article;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Terms designating records created or received by TEAM-WV that shall be made available to the public under the same conditions as are public records under &sect;29B-1-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code. Documents designated as being available to the public pursuant to the contract shall be kept on file with the department. The records designated under this section shall include the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(A) The corporation&#39;s federal income tax returns, to be filed annually;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(B) The report of expenditures described in &sect;5B-12-3(b)(2) of this code; &nbsp;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(C) The annual total compensation paid to each officer and employee of the corporation;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(D) A copy of the report for each financial audit of the corporation and of each supplemental compliance and control review of the corporation performed by a firm of independent certified public accountants pursuant to &sect;5B-12-1(c)(8) of this code; </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(E) Records of any fully executed incentive proposals, to be filed annually;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(F) Records pertaining to the monitoring of commitments made by incentive recipients, to be filed annually; and</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(G) A copy of the minutes of all public meetings described in &sect;5B-12-3(c) not otherwise closed to the public.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(H) Unless otherwise stated, all records designated under this section</span><span class="cs46AE26E6"><span style="color:#B5082E;"><ins cite="mailto:Sarah Stewart" datetime="2026-02-05T10:20:00Z"> </ins></span></span><span class="cs46AE26E6">shall be filed with the department at such times and frequency as agreed to by the corporation and the department, which shall not be less frequently than quarterly.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) The following statement acknowledging that TEAM-WV is not acting as an agent of the state: TEAM-WV shall have no power or authority to bind the state or to assume or create an obligation or responsibility, expressed or implied, on behalf of the state or in its name, nor shall TEAM-WV represent to any person that it has any such power or authority, except as expressly provided in this contract.&quot;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(e)(1) Records created by TEAM-WV are not public records for the purposes of &sect;29B-1-1</span><span class="cs1489E706"> et seq.</span><span class="cs46AE26E6"> of this code, regardless of who may have custody of the records, except for records expressly designated to be made available to the public pursuant to a contract entered into pursuant to this section . </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Records received by TEAM-WV from any person or entity that is not subject to &sect;29B-1-1 </span><span class="cs1489E706">et seq </span><span class="cs46AE26E6">.are not public records for purposes of &sect;29B-1-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, regardless of who may have custody of the records, unless the record is expressly designated to be available to the public by the contract pursuant to &sect;5B-12-4(d)(2) of this code.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) Records received by TEAM-WV from a public body as defined in &sect;29B-1-2 that are not public records under &sect;29B-1-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> when in the custody of the public office are not public records for the purposes of &sect;29B-1-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> regardless of who has custody of the records.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(4) Any work papers of the firm of independent certified public accountants engaged to perform the annual financial audit and the supplemental compliance and control review described in &sect;5B-12-1(c)(8), the financial audit report, and any report of the supplemental compliance and control review are not subject to &sect;29B-1-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, unless the record is expressly designated to be available to the public by the contract under &sect;5b-12-4(d)(2) of this code.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(f) Any contract executed under authority of this section shall not negate, impair, or otherwise adversely affect the obligation of this state to pay debt charges on securities executed by the secretary or other state entity to fund economic development programs of the state, or to abide by any pledge or covenant relating to the payment of those debt charges made in any related proceedings. </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(g) Nothing in this section shall prohibit the agency from contracting with TEAM-WV to perform any of the following functions:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) Promoting and advocating for the state;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Making recommendations to the department;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) Performing research for the department;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(4) Establishing and managing programs or offices on behalf of the department, by contract; or</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(5) Negotiating on behalf of the state.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(h) Nothing in this section shall prohibit the department from compensating TEAM-WV from funds appropriated to the department to perform the functions described in subsection (g) of this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect; 5b-12-5. Evaluation by secretary; report.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) The secretary of the Department of Commerce, as soon as practicable after March 15, 2026, shall, in consultation with the Governor, evaluate all powers, functions, and duties of the Department of Commerce, the Division of Economic Development, and the West Virginia Economic Development Authority. Within six months after March 15, 2026, the secretary shall submit a written report to the Joint Committee on Government and Finance that:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) identifies inefficiencies, duplications, or gaps in the powers, functions, and duties of the department and its entities; and</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) recommends statutory changes necessary to improve their functioning and efficiency, including the transfer or elimination of specified powers, functions, or duties, or the transfer of such powers, functions, or duties to other existing state agencies or to TEAM-WV.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b) After submitting the report, the secretary, in consultation with the Governor, shall continue to evaluate the department and its entities and make additional recommendations on such matters to the Legislature.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-6. Conflicts of interest.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) For purposes of this section, &quot;person&quot; means a natural person, corporation, business trust, estate, trust, partnership, association, joint venture, government, governmental subdivision or agency or any other legal or commercial entity; and &quot;interested individual&quot; means a director, &nbsp;officer, or employee of TEAM-WV who has, directly or indirectly, through business, investment, or immediate family, any of the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) An ownership or investment interest in any person with which TEAM-WV has a transaction or arrangement;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) A compensation arrangement with TEAM-WV or with any person with which TEAM-WV has a transaction or arrangement;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) A potential ownership or investment interest in, or compensation arrangement with, any person with which TEAM-WV is negotiating a transaction or arrangement. Compensation includes direct and indirect remuneration as well as material gifts or favors.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b) The conflicts of interest policy adopted pursuant to &sect;5B-12-1 shall protect TEAM-WV&#39;s interests when it is considering a transaction or arrangement that might benefit the private interest of an interested individual director or officer of TEAM-WV or that might directly benefit that individual in other than a de minimis manner. An interested individual shall disclose the existence of a financial interest to each member of the board of directors of TEAM-WV. The interested individual shall be given an opportunity to disclose all material facts to the directors. After disclosure of the financial interest and all material facts, the board of directors shall decide if a conflict of interest exists. If the board decides by a majority vote of the disinterested directors that a conflict exists, the disinterested directors shall determine whether TEAM-WV can obtain with reasonable efforts a more advantageous transaction or arrangement from a person that would not give rise to a conflict of interest. If a more advantageous transaction or arrangement is not reasonably possible under circumstances not producing a conflict of interest, the board shall determine by a majority vote of the disinterested directors whether the transaction or arrangement is in TEAM-WV&#39;s best interest, for its own benefit, and whether it is fair and reasonable.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(c) If the board of directors has reasonable cause to believe an interested individual has failed to disclose an actual or possible conflict of interest, it shall inform the individual of the basis for such belief and provide the individual with an opportunity to explain the alleged failure to disclose. If the board determines the individual has failed to disclose an actual or possible conflict of interest, it shall take appropriate disciplinary and corrective action, including, but not limited to, initiating an action for breach of fiduciary duty.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(d) Minutes of board meetings considering possible or actual conflicts of interest shall be kept. The minutes shall, at a minimum, contain the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) The names of the individuals who disclosed, or were found to have, a financial interest in connection with an actual or possible conflict of interest, the nature of the financial interest, any action taken to determine whether a conflict of interest was present, and the board&#39;s decision as to whether a conflict of interest existed;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) The names of the individuals who were present for discussions and votes relating to the transaction or arrangement, the content of the discussion, including any alternatives to the proposed transaction or arrangement, and a record of any votes taken in connection with the proceedings.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(e) An officer or employee of TEAM-WV whose responsibility includes compensation matters and who receives compensation, directly or indirectly, from TEAM-WV for services is precluded from voting or providing information to a compensation committee, if any, on matters pertaining to that individual&#39;s compensation.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(f) The conflicts of interest policy adopted pursuant &sect;5B-12-1 of this code shall prohibit any director of TEAM-WV from soliciting or accepting employment with any person that receives or has received an incentive or other assistance as a result of a decision the director participated in as a director of TEAM-WV.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(g) Each director or officer shall annually sign a statement that affirms the individual:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) Has received a copy of the conflicts of interest policy;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Has read and understands the policy;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) Has agreed to comply with the policy; and</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(4) Understands TEAM-WV&#39;s statutory purpose and that it is a nonprofit corporation.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(h) To ensure TEAM-WV operates in a manner consistent with its statutory purpose and its contractual obligations, periodic reviews shall be conducted. The periodic reviews shall, at a minimum, determine all of the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) Whether compensation arrangements and benefits are reasonable, based on competent survey information, and the result of arm&#39;s length bargaining;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Whether TEAM-WV&#39;s operations are consistent with its articles of incorporation, its regulations, the provisions of this article, as well as its contractual obligations, and are properly documented;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) Whether transactions are fair to TEAM-WV, reflect reasonable investment or payments for goods and services, further TEAM-WV&#39;s statutory purpose or contractual obligations, and do not result in direct private benefit to directors, officers, or other persons, in other than a de minimis manner.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(i) Each officer and employee of TEAM-WV shall do all of the following:</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(1) Sign an ethical conduct statement prescribed by the board of directors of TEAM-WV;</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(2) Complete an annual course or program of study on ethics that shall be reviewed and approved by the board of directors.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(3) Comply with the gift policy prescribed by the board of directors.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-7. &nbsp;Venue and jurisdiction for actions brought by or on behalf of corporation; constitutional challenges.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) Any action brought by or on behalf of TEAM-WV against a director or former director in that individual&#39;s capacity as a director shall be brought in the circuit court of Kanawha County.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b) Except as provided in &sect;5B-12-7(d) of this code, any action or proceeding asserting that any provision of this article enacted during the 2026 Regular Session of the Legislature, or any amendments made thereto, violates any provision of the West Virginia Constitution &nbsp;shall be filed in the circuit court of Kanawha County within ninety days after the effective date of the legislation giving rise to the claim. </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(c) Except as provided in &sect;5B-12-7(d) of this code, any claim asserting that any action taken by TEAM-WV violates any provision of the West Virginia Constitution shall be brought in the circuit court of Kanawha County within sixty days after the action is taken.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(d) Any actions brought pursuant to subsections (b) or (c) of this section shall not apply to any claim within the original jurisdiction of the West Virginia Supreme Court of Appeals.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(e) The circuit court of Kanawha County </span><a name="_Hlk171597814"><span class="cs46AE26E6">shall give any claim filed pursuant to subsections (b) or (c) of this section priority over </span></a><span class="cs46AE26E6">all other civil cases before the court, irrespective of position on the court&#39;s calendar, and shall make a determination on the claim expeditiously. A court of appeals shall give any appeal from a final order issued in a case brought pursuant to subsections (b) or (c) of this section priority over all other civil cases before the court, irrespective of position on the court&#39;s calendar, and shall make a determination on the appeal expeditiously.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-8. &nbsp;Bribery.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) No person shall promise, offer, or give any valuable thing or valuable benefit to a director, officer, or employee of TEAM-WV or to a member of the immediate family of a director, officer, or employee, with the intent to improperly influence the director, officer, or employee of </span><span class="cs46AE26E6"><span style="color:#B5082E;"><del cite="mailto:Sarah Stewart" datetime="2026-02-05T10:31:00Z"> </del></span></span><span class="cs46AE26E6">TEAM-WV.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b) No person who is a director, officer, or employee of TEAM-WV, either before or after being appointed, qualified, or employed in that capacity, shall knowingly solicit or accept for their own benefit or for the benefit of another person any valuable thing or valuable benefit to &nbsp;improperly influence themselves &nbsp;or another director, officer, or employee of TEAM-WV with respect to the discharge of the person&#39;s or the other director&#39;s, officer&#39;s, or employee&#39;s duty.</span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(c) The provisions of &sect;61-5A-1 </span><span class="cs1489E706">et seq. </span><span class="cs46AE26E6">shall govern and control as to any offenses committed in violation of this article. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-9. Indemnification; insurance.</span></h4>
+	<p class="cs68BCB87"><span class="csEF05ACC">	</span><span class="cs46AE26E6">TEAM-WV may indemnify, to the fullest extent permitted by law, its board of directors, board members, officers, and employees from liability incurred in the performance of duties or functions of TEAM-WV. For purposes of this section, TEAM-WV may procure policies of insurance for civil liability.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-12-10. &nbsp;Use of name.</span></h4>
+	<p class="cs9B0077FC"><span class="cs46AE26E6">(a) No person, except the nonprofit corporation formed under &sect;5B-12-1 of this code or its designees, may use the name &quot; TEAM-WV &quot; or words of a similar meaning in another language, as any part of a designation or name under which the person conducts or may conduct business in this state, unless the person receives the written consent of TEAM-WV. As used in this section, &quot;person&quot; has the same meaning as provided in &sect;5B-12-6 of this code. </span></p><p class="cs9B0077FC"><span class="cs46AE26E6">(b) The name of any subsidiary of TEAM-WV shall include the name &quot; TEAM-WV &quot; and an additional designation that differentiates the subsidiary from other TEAM-WV corporations formed under &sect;5B-12-1 of this code.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 60. STATE CONTROL OF ALCOHOLIC LIQUORS.</span></h1>
+	<h2 class="cs89687900">
+		<span class="csF5B7C975">ARTICLE 6. MISCELLANEOUS PROVISIONS. </span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-6-27. Transfer of enterprise acquisition project to TEAM-WV.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) For purposes of this section, the following terms shall mean:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Enterprise acquisition project&quot; means, as applicable, all or any portion of the capital or other assets of the distribution of spirits and merchandising operations of the commission relating to spirits, including, without limitation, inventory, real property rights, equipment, furnishings, the spirits liquor distribution system including, transportation, the monetary management system, warehouses, contract rights, rights to take assignment of contracts, licenses, and related receipts and revenues, accounts receivable, the exclusive right to manage and control spirits distribution and merchandising and to sell spirits in the state subject to the control of the commission pursuant to the transfer agreement, and all necessary appurtenances thereto, or leasehold interests therein.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;TEAM-WV&quot; means the non-stock, not-for-profit corporation created pursuant to the provisions of &sect;5B-12-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code and includes any subsidiary of that corporation unless otherwise specified or clearly implied from the context, together with any successor or assignee of that corporation or any subsidiary if and to the extent permitted by &sect;5B-12-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Spirits profits&quot; means any amount over the amount required to be paid to the state pursuant to any transfer agreement entered into pursuant to this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Transfer&quot; means an assignment, granting of a franchise, lease, or transfer of all or an interest.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) &quot;Transfer agreement&quot; means the agreement entered into between the state and TEAM-WV providing for the transfer of the enterprise acquisition project pursuant to this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The state may transfer to TEAM-WV, and TEAM-WV may accept the transfer of all or a portion of the enterprise acquisition project for a transfer price of no less than $30 million annually payable by TEAM-WV to the state in monthly installments. &nbsp;Any such transfer shall be treated as an absolute conveyance and true sale of the interest in the enterprise acquisition project purported to be conveyed for all purposes, and not as a pledge or other security interest. &nbsp;The characterization of any such transfer as a true sale and absolute conveyance shall not be negated or adversely affected by the acquisition or retention by the state of a residuary or reversionary interest in the enterprise acquisition project, the participation of any state officer or employee as a member or officer of, or contracting for staff support to, TEAM-WV or any subsidiary of TEAM-WV, any regulatory responsibility of an officer or employee of the state, including the authority to collect amounts to be received in connection therewith, the retention of the state of any legal title to or interest in any portion of the enterprise acquisition project for the purpose of regulatory activities, or any characterization of TEAM-WV or obligations of TEAM-WV under accounting, taxation, or securities regulations, or any other reason whatsoever. &nbsp;An absolute conveyance and true sale or lease shall exist under this section regardless of whether TEAM-WV has any recourse against the state or the treatment or characterization of the transfer as a financing for any purpose. &nbsp;Upon and following the transfer, the state shall not have any right, title, or interest in the enterprise acquisition project so transferred other than any residual interest that may be described in the transfer agreement pursuant to subsections (c) or (h) of this section. &nbsp;Any determination of the fair market value of the enterprise acquisition project reflected in the transfer agreement shall be conclusive and binding on the state and TEAM-WV.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The transfer agreement shall be for a term not to exceed 25 years. The state, at any time and upon agreement with TEAM-WV, may extend the original transfer agreement of the enterprise acquisition project for an additional 15 years from the end of the original term by entering into a new agreement in accordance with this section. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The exercise of the powers granted by this section will be for the benefit of the people of the state. All or any portion of the enterprise acquisition project transferred pursuant to the transfer agreement that would be exempt from real property taxes or assessments or real property taxes or assessments in the absence of such transfer shall, as it may from time to time exist thereafter, remain exempt from real property taxes or assessments levied by the state and its subdivisions to the same extent as if not transferred. The gross receipts and income of TEAM-WV derived from the enterprise acquisition project shall be exempt from taxation levied by the state and its subdivisions, including, but not limited to, the taxes levied pursuant to &sect;11-13A-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, &sect;11-13C-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, &sect;11-15-1</span><span class="cs1489E706"> et seq.</span><span class="cs46AE26E6">, &sect;11-15A-1</span><span class="cs1489E706"> et seq.</span><span class="cs46AE26E6">, &sect;11-21-1</span><span class="cs1489E706"> et seq.</span><span class="cs46AE26E6">, and &sect;11-24-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code. &nbsp;Any transfer from the state to TEAM-WV of the enterprise acquisition project, or item included or to be included in the project, shall be exempt from any taxes levied by the state or a political subdivision, including but not limited to, those levied pursuant to &sect;11-15-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> and &sect;11-15A-1</span><span class="cs1489E706"> et seq.</span><span class="cs46AE26E6"> of this code or any similar tax assessed by a county or municipality.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(e) The proceeds of any transfer under subsection (b) of this section shall be deposited into the general revenue fund.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The state may covenant, pledge, and agree in the transfer agreement, with and for the benefit of TEAM-WV, that it shall maintain statutory authority for the enterprise acquisition project and the revenues of the enterprise acquisition project and not otherwise materially impair any obligations supported by a pledge of revenues of the enterprise acquisition project. The transfer agreement may provide or authorize the manner for determining material impairment of the security for any such outstanding obligations, including by assessing and evaluating the revenues of the enterprise acquisition project. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The Secretary of Revenue, in consultation with the Secretary of Commerce, may, without need for any other approval, negotiate terms of any documents, including the transfer agreement, necessary to effect the transfer and the acceptance of the transfer of the enterprise acquisition project. The Secretary of Revenue and the Secretary of Commerce shall execute the transfer agreement on behalf of the state. The Secretary of Revenue may also, without need for any other approval, retain or contract for the services of commercial appraisers, underwriters, investment bankers, and financial advisers, as are necessary to effect the transfer agreement. Any transfer agreement may contain terms and conditions established by the state to carry out and effectuate the purposes of this section, including, without limitation, covenants binding the state in favor of TEAM-WV. Any such transfer agreement shall be sufficient to effectuate the transfer without regard to any other laws governing other property sales or financial transactions by the state. The Secretary of Revenue may create any funds or accounts, within or without the state treasury, as are needed for the transactions and activities authorized by this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The transfer agreement may authorize TEAM-WV, in the ordinary course of doing business, to convey, lease, release, or otherwise dispose of any regular inventory or tangible personal property. Ownership of the interest in the enterprise acquisition project that is transferred to TEAM-WV under this section and the transfer agreement shall be maintained in TEAM-WV or a nonprofit entity the sole member of which is TEAM-WV until the enterprise acquisition project is transferred back to the state pursuant to this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The transfer agreement may authorize TEAM-WV to fix, alter, and collect rentals and other charges for the use and occupancy of all or any portion of the enterprise acquisition project and to lease any portion of the enterprise acquisition project to the state, and shall include a contract with, or the granting of an option to, the state to have the enterprise acquisition project, as it then exists, transferred back to it without charge in accordance with the terms of the transfer agreement after retirement or redemption, or provision therefor, of all obligations supported by a pledge of spirits profits.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) Notwithstanding any other provision of this code to the contrary, the Secretary of Revenue and the Secretary of Commerce shall enter into a contract with TEAM-WV, which may be part of the transfer agreement, for the continuing operation by the commission of the distribution and merchandising of spirits subject to standards for performance provided in that contract that may relate to or support subsection (f) of this section. The contract shall establish other terms and conditions for the assignment of duties to, and the provision of advice, services, and other assistance by, the commission, including providing for the necessary staffing and payment by TEAM-WV of appropriate compensation to the commission for the performance of such duties and the provision of such advice, services, and other assistance. The Commission shall manage and actively supervise the activities required or authorized under &sect;60-2-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> and &sect;60-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> as those sections exist on June 30, 2026, including, but not limited to, controlling the traffic in intoxicating liquor in this state and fixing the wholesale and retail prices at which the various classes, varieties, and brands of spirits are sold.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) The transaction and transfer provided for under this section shall comply with all applicable provisions of the West Virginia Constitution.</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create TEAM-WV.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that wo</span><span class="cs7FA9C667">uld be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,601 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 534 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=534">&laquo; Senate Bill 534 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 534'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 534 - Relating to Kratom Consumer Protection Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb534+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=534"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.csC43C5E5B{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;text-decoration: none;}
+		.csF5B7C975{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs7A021A8C{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs60C11EA{text-align:justify;text-indent:38pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 534</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Deeds</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 20, 2026; referred <br/>&nbsp;&nbsp;&nbsp;to the Committee on the Judiciary; and then to the Committee on Finance]	</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL </span><a name="_Hlk219365873"><span class="csEF05ACC">to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;60-11-1, &sect;60-11-2, &sect;60-11-3, &sect;60-11-3a, &sect;60-11-4, &sect;60-11-5, &sect;60-11-6, &sect;60-11-7, &sect;60-11-8, &sect;60-11-9, &sect;60-11-10, &sect;60-11-11, and &sect;60-11-12; and to repeal &sect;19-12F-1, &sect;19-12F-2, &sect;19-12F-3, &sect;19-12F-4, &sect;19-12F-5, &sect;19-12F-6, &sect;19-12F-7, &sect;19-12F-8, &sect;19-12F-9, &sect;19-12F-10, &sect;19-12F-11, &sect;60-10-1, and &sect;60-10-2, relating to the West Virginia Kratom Consumer Protection Act; providing a short title and findings; defining terms; regulating and permitting the sale of kratom; prohibiting certain practices; giving rule-making authority; requiring age verification; taxing kratom business; creating an application process; permitting cooperative enforcement agreements; permitting seizure of contraband; creating criminal penalties; establishing a licensing fund; and permitting coordination. </span></a></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 19. AGRICULTURE.</span></h1>
+	<h2 class="cs89687900">
+		<span class="csE70BDF83"><a class="csC43C5E5B" href="https://code.wvlegislature.gov/19-12F/"><span class="csF5B7C975">ARTICLE 12F. SELECT PLANT-BASED DERIVATIVES REGULATION ACT: KRATOM.</span></a></span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-1. Short title. Findings.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-2. &nbsp;Findings; purpose.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-3. Definitions.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-4. Processor and retailer permits; regulations; permitting; and registration.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-5. Rule-making authority.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-6. Age verification requirements.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-7. Taxation; disposition of funds.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-8. Application and registration fees.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-9. Cooperative enforcement agreements.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-10. Contraband; seizures; forfeitures; and destruction.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-11. Criminal violations; penalties.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 60. STATE CONTROL OF ALCOHOLIC LIQUORS.</span></h1>
+	<h2 class="cs89687900">
+		<span class="csF5B7C975">ARTICLE 10. ENFORCEMENT AUTHORITY RELATING TO RETAIL SALE OF SELECT PLANT-BASED DERIVATIVES.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;60-10-1. Enforcement authority; jurisdiction.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;60-10-2. General provisions.</span></h4>
+	<p class="cs63FD752D"><span class="csEF05ACC">[Repealed.]</span></p><h2 class="cs89687900">
+		<span class="cs7A021A8C"><a class="cs7A021A8C" href="https://code.wvlegislature.gov/19-12F/"><span>ARTICLE 11. WEST VIRGINIA KRATOM COMSUMER PROTECTION ACT.</span></a></span></h2>
+	<h2 class="cs89687900">
+		<span class="csF5B7C975">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-1. Short title; findings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) This article shall be known as the West Virginia Kratom Consumer Protection Act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Legislature finds that the manufacturing, processing, distributing, and sale of kratom or kratom products is an activity deserving of careful and strict attention to the administration and enforcement of West Virginia standards designed to protect and safeguard the welfare and well-being of West Virginia citizens and residents. Therefore, the permitting, labeling, and other control and administration provisions of this article apply to businesses located within this state engaged in manufacturing, processing, distribution, or sale of kratom or kratom products and to businesses located outside of this state that are engaged in the remote distribution or remote retail sale of kratom or kratom products across state lines for delivery into this state. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Legislature further finds that select plant-based derivatives and synthesized material, including kratom, can be regulated so as not to interfere with the strict regulation of controlled substances in this state. The purpose of this article is to allow limited regulated access to kratom for adults 21 years of age and older.</span></p><h4 class="cs89687900">
+		<a name="_Hlk213521801"><span class="csF3C8A5A3">&sect;60-11-2</span></a><span class="csF3C8A5A3">. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">For the purposes of this article: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Commissioner&quot; means the West Virginia Alcohol Beverage Control Administration Commissioner or his or her designee, as used in this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Contaminated&quot; means made impure and unsafe by biological, chemical, or physical additives.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Department&quot; or &quot;Department of Agriculture&quot; means the West Virginia Department of Agriculture, as used in this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Grower&quot; means a person or entity which grows kratom for commercial purposes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Independent testing laboratory&quot;: means a laboratory that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Does not have a direct or indirect interest in the entity whose product is being tested;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Does not have a direct or indirect interest in a facility that processes, distributes, dispenses, or sells kratom products in this state or in another jurisdiction; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Is an accredited laboratory through the American Association for Laboratory Accreditation, the National Voluntary Laboratory Accreditation Program, the ANSI National Accreditation Board, or comparable accredited laboratory.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Kratom&quot; means a psychoactive preparation that is composed of the crushed or powdered dried leaves of the mitragyna speciosa, a flowered tropical tree which contains the alkaloids mitragynine and 7-hydroxymitragynine.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Kratom product&quot; means a finished product containing any of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Any part of the leaf of the plant mitragyna speciosa in fresh, dehydrated, or dried form; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Synthesized material or semi-synthetic alkaloid substance; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A Kratom extract that is manufactured.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Processor&quot; or &quot;manufacturer&quot; means a person or entity that processes, compounds, or converts plant material from mitragyna speciosa into a kratom product. This also includes further processing, compounding, converting, or repackaging of existing kratom products.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Retailer&quot; or &quot;seller&quot; means a person or entity that distributes, offers for sale, or sells kratom or kratom products to persons for personal consumption.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Synthesized material&quot; means an alkaloid, metabolite of an alkaloid, or alkaloid derivative that has been created by chemical synthesis means, including fermentation, recombinant techniques, yeast derived, enzymatic techniques, and oxidation. &nbsp;Synthesized material does not include an alkaloid, metabolite of an alkaloid, or alkaloid derivative created by traditional food preparation techniques.</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Synthesized material includes the synthesis of 7-hydroxymitragynine when produced by chemical alteration of mitragynine.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Semi-synthetic alkaloid&quot; means a substance derived from an alkaloid naturally occurring in kratom that has been chemically altered through chemical reactions, including reduction, acetylation, or other processes to change the structure or pharmacological activity of the naturally occurring kratom alkaloid. Semi-synthetic kratom alkaloid includes the synthesis of 7-hydroxymitragynine when produced by chemical alteration of mitragynine.</span></p><h4 class="cs89687900">
+		<a name="_Hlk213521819"></a><a name="_Hlk213515755"><span class="csF3C8A5A3">&sect;60-11-3. </span></a><span class="csF3C8A5A3">Processor and retailer permits; regulations; permitting; and registration.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><a name="_Hlk217306133"><span class="cs46AE26E6">Any person manufacturing, processing, distributing, offering for sale, or selling any kratom or kratom products in this state shall have </span></a><span class="cs46AE26E6">a permit issued by the commissioner and be otherwise authorized to do business in this state. The commissioner may issue manufacturer, processor, distributor, and retailer permits. The business activity subject to permitting under this article shall be treated as separate and distinct from manufacturing, processing, distribution, or sale of hemp-derived cannabinoid products addressed and administered under &sect;19-12E-12 of this code, hemp addressed and administered under &sect;19-12E-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, or medical cannabis addressed and administered under &sect;16A-9-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any person manufacturing, processing, distributing, offering for sale, or selling any kratom or kratom products in this state shall apply for a permit from the commissioner which shall contain, at a minimum, the following information:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A permit to manufacture, process, distribute, offer for sale, or selling any kratom or kratom products shall be submitted not less than 30 days and not more than 60 days prior to the anticipated initiation of services.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) All applicants shall submit, at a minimum, the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The name of the owner of the location;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The current address of the owner of the location;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A current telephone number of the owner;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The name of the operator of the location; if different than the owner;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) The address of the operator of the location; if different than the owner; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) A current telephone number of the operator of the location, if different than the owner; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) The form of the kratom or kratom product to be manufactured, processed, distributed, offered for sale, or sold; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) The product label; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) A signed certification from an independent testing laboratory certifying that the kratom or kratom product does not contain a controlled substance or residual solvent higher than is allowed by the United States Pharmacopeia general chapter 467;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(J) A signed certification from an independent laboratory certifying that the kratom or kratom product does not contain a concentration ratio that is:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Greater than two percent of the alkaloid composition of the kratom product;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Contains a level of 7-hydroxymitragynine that is greater than one milligram per serving in its final product form, as documented by a certificate of analysis, conducted by the department, on the finished product on the finished product prior to distribution;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Contains a level of mitragynine that is greater than 150 milligrams per serving in its final product form, as documented by a certificate of analysis, conducted by the department, on the finished product on the finished product prior to distribution; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) Contains a level of 7-hydroxymitragynine that is greater than 0.5 milligrams per gram in its final product form, as documented by a certificate of analysis, conducted by the department, on the finished product on the finished product prior to distribution; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(K) A signed certification from an independent laboratory certifying that the kratom or kratom product does not contain a synthesized material or semi-synthetic-alkaloid. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A permit is valid only for the location and owner or owners described in the permit application.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Each location shall have a separate permit, regardless of whether the location is operated under the same business name or management as another location.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) If the ownership changes, the new owner shall notify the commissioner within 10 days and immediately apply for a new permit. The new owner&rsquo;s application for a permit is valid for three months from the date the application is received by the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Persons engaged in manufacturing, processing, distribution, or sale of kratom or kratom products in this State must obtain a West Virginia business registration certificate as specified in &sect;11-12-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code and shall be subject to other administrative and regulatory requirements as set forth in this code. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) In the interest of protecting the safety, welfare, and well-being of West Virginia citizens and residents, West Virginia nexus and jurisdiction attaches for purposes of business registration, permitting, regulation and taxation with relation to the activity of distribution or sale of kratom or kratom products across State lines into this State. Persons located outside of this State that are engaged in distribution or sale of kratom or kratom products across state lines into this State must obtain a West Virginia business registration certificate as specified in &sect;11-12-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code and shall be subject to other administrative and regulatory requirements as set forth in this code. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The Tax Commissioner may place a notation on the business registration certificate showing the status of the certificate holder as a person or entity holding a permit from the commissioner pursuant to this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The commissioner shall keep a list of all persons and entities that have been issued permits pursuant to this article. Such list shall be public information and shall be published initially on or before January 1, 2027, by the commissioner on its website from time to time so as to reflect a current listing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The commissioner shall keep a list of any persons or entities that have been subject to a permit, revocation, withdrawal, suspension, non-renewal, or other process whereby the person or entity has ceased to be a permit holder in good standing with the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The commissioner shall keep a list of all kratom and kratom products that have been approved for sale or distribution in this State. Such list shall be public information and shall be published initially on or before January 1, 2027, by the commissioner on its website from time to time so as to reflect a current listing.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-3a. Prohibited practices.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) No person manufacturing, processing, distributing, offering for sale, or selling any kratom or kratom products in this state shall hold or handle for distribution, distribute, or sell a kratom product that meets any of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Contains </span><a name="_Hlk217307026"><span class="cs46AE26E6">a controlled substance or residual solvent higher than is allowed by the United States Pharmacopeia general chapter 467</span></a><span class="cs46AE26E6">;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Has a </span><a name="_Hlk217307401"><span class="cs46AE26E6">concentration ratio that is;</span></a></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Greater than two percent of the alkaloid composition of the kratom product;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Contains a level of 7-hydroxymitragynine that is greater than one milligram per serving in its final product form, as documented by a certificate of analysis, conducted by the department, on the finished product on the finished product prior to distribution;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Contains a level of mitragynine that is greater than 150 milligrams per serving in its final product form, as documented by a certificate of analysis, conducted by the department, on the finished product on the finished product prior to distribution; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Contains a level of 7-hydroxymitragynine that is greater than 0.5 milligrams per gram in its final product form, as documented by a certificate of analysis, conducted by the department, on the finished product on the finished product prior to distribution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Contains a synthesized material or semi-synthetic-alkaloid; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Is in a form that employes a heating element, power source, electronic circuit, or other electric, chemical, or mechanical means, regardless of shape or size, that can be used to produce vapor in a solution of other form, including, but not limited to, an electric cigarette, electronic cigar, electronic cigarillo, electronic pipe, or similar product or device and any vapor cartridge or other container of kratom in a solution or other form that is intended to be used with or in an electronic cigarette, electronic cigar, electronic cigarillo, electronic pipe, or similar product or device;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Includes a product label inconsistent with the requirements set forth in this article or contains an inaccurate or misleading product label; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) No person manufacturing, processing, distributing, offering for sale, or selling any kratom or kratom products in this state shall sell, give, or furnish, or cause to be sold, given, or furnished, any kratom product, in any form, to any person younger than 21 years of age, which shall be verified by a valid driver&#39;s license, state identification card, or any valid and unexpired federally issued identification card such as a passport or military identification card.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-4. Rule-making authority.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The commissioner shall propose legislative rules for promulgation in accordance with &sect;29A-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code that include, but are not limited to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Issuance of permits to persons who wish to manufacture, process, distribute, offer for sale, or sell kratom; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Coordinating with the department for sampling and testing of kratom to determine purity levels;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Supervision of the kratom during its manufacture, processing, and sale;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Assessment of fees that are commensurate with the costs of the Commissioner&rsquo;s activities in permitting, testing, and supervising the regulation of kratom and the sale of kratom products;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The production, processing, sale, possession, distribution, or transport of kratom products;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The procedure for seizing and destroying a kratom product that does not meet the requirements of this article; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Developing standards for the labeling of kratom products to include, at a minimum, a statement which says:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) &quot;KEEP OUT OF REACH OF CHILDREN. CONSULT YOUR PHYSICIAN BEFORE USE IF YOU ARE PREGNANT OR TAKING ANY MEDICATION&quot;; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) That the sale or transfer possession of kratom to another person under 21 years of age is prohibited;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The amount of Mitragynine and 7-hydromitragynine contained in such product;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The amount of mitragynine and 7-hydromitragynine contained in the packaging for such product;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) The common or usual names of each ingredient used in the manufacture of such product, listed in descending order or predominance; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) The name, physical address, and principal mailing address of the manufacturer or the person responsible for distributing such product;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) Clear and adequate directions for the consumption of such product, including the recommended serving size and the time frame within which safe consumption should occur;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) Any precautionary statements as to the safety and effectiveness of such product, including a statement that the kratom is not intended to diagnose, treat, cure, or prevent any disease; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) A statement that a kratom product label is prohibited from making any therapeutic claims unless approved by the United States Food and Drug Administration.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Developing guidelines or standards related to the display or staging of kratom products to increase the safety of underage patrons in retail environments;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Developing prohibitive standards as to child targeted packaging and shapes and forms of products;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Developing administrative rules, procedures, and sanctions for violations of this section;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Any other rules and procedures necessary to carry out the provisions of this article. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Commissioner&rsquo;s pursuant to &sect;29A-3-15 of this code, promulgate such separate or joint emergency rules as are necessary to effectuate the purposes of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The department shall promulgate a legislative rule in accordance with &sect;29A-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code to set forth;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The standards and procedures for kratom product testing including but not limited to sampling and testing to determine kratom purity levels; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any fees associated with testing; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any timeframes for such testing to take place. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-5. Age verification requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Any website owned, managed, or operated by a person who manufactures, processes, distributes, offers for sale, or sells a product containing kratom or kratom products to persons in this state shall employ a neutral age-screening mechanism that verifies that the user is at least 21 years old, including by using an age-gate, age-screen, or other age-verification mechanism approved by the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any person or entity distributing, offering to distribute or sell, or selling kratom or kratom products to persons in this state by means other than a direct in-person transaction shall employ an age-verification mechanism approved by the commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-6. Taxation; disposition of funds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) For the privilege of engaging or continuing within this state in the business of the retail sale of kratom or kratom products, there is hereby levied upon and collected from every person exercising the privilege a privilege tax, equal to 11 percent of the retail sales price of kratom or kratom products sold during the reporting period. Such tax is imposed in addition to all other applicable taxes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The tax imposed by this article shall be added by the retailer as a separate charge or line item on any sales slip, invoice, receipt, other statement, or memorandum of the price paid by a customer. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The tax is due and payable on a quarterly basis as follows: On the 20th day of January, April, July, and October for the preceding calendar quarter. When the payment of tax is due, the person shall file a tax return in a form prescribed by the Tax Commissioner. The Tax Commissioner may require such forms, schedules, and returns and impose such filing and remittance requirements necessary or convenient for the efficient administration of taxes imposed by this subsection.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The taxes imposed by this subsection shall be paid to the Tax Commissioner by electronic funds transfer unless electronic payment is prohibited by state or federal law. Tax returns required by this subsection shall be filed electronically with the Tax Commissioner. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) If any retailer does not renew its permit, relinquishes its permit, has its permit suspended or revoked, or otherwise ceases selling kratom and kratom products, then any tax, additions to tax, penalties, and interest imposed by this section and by &sect;11-10-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code shall become due and the retailer shall make a final return or returns and pay any tax which is due within 90 days of not renewing its permit, relinquishing its permit, having its permit suspended or revoked, or otherwise ceasing business. The unpaid amount of any tax is to be considered a lien.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) All money received from the privilege tax imposed under this section, including any interest and additions to tax paid under &sect;11-10-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, less the amount of any refunds, and less the fee retained by the Tax Commissioner pursuant to &sect;11-10-27 of this code, shall be deposited into the Agricultural Fees Fund created by &sect;19-1-4c of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Persons or entities subject to the tax imposed by this subsection shall provide to the Tax Commissioner any information required by the Tax Commissioner to administer, collect, and enforce the tax imposed by this subsection.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Notwithstanding any provision of &sect;11-10-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code or of this article to the contrary, the Tax Commissioner, the Commissioner, and the department may enter into written agreements pursuant to which the Tax Commissioner may disclose to designated employees of the Alcohol Beverage Control Administration Commissioner or commissioner, or both, whether a particular retailer or permittee, or applicant for a permit, is in good standing with the Tax Commissioner, and the commissioner may disclose to designated employees of the Tax Commissioner or the Alcohol Beverage Control Administration Commissioner, or both, information a retailer or permittee, or applicant for a permit, provides to the commissioner pursuant to this code and the Alcohol Beverage Control Administration Commissioner may disclose to designated employees of the Tax Commissioner, or the commissioner, or both, information a retailer or permittee, or applicant for a permit, provides to the Alcohol Beverage Control Administration Commissioner pursuant to this code. Tax information disclosed pursuant to a written agreement shall remain confidential in the hands of the receiver and shall not be disclosable under &sect;29B-1-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code. To the extent feasible, this information should be shared or exchanged electronically to ensure safe destruction, or as necessary, proper file retention practices.</span></p><p class="cs53FB8D75"><a name="_Hlk140230520"><span class="cs46AE26E6">(i) The Tax Commissioner may promulgate, in accordance with the provisions of &sect;29A-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, any necessary legislative rules the Tax Commissioner determines necessary to the efficient administration of taxes imposed by this subsection.</span></a></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Funds from the tax imposed by the provisions of this article, less the fee retained by the Tax Commissioner pursuant to &sect;11-10-27 of this code, and deposited into the Agricultural Fees Fund shall be divided and deposited as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Sixty-five percent shall remain in the possession of the </span><a name="_Hlk213519420"><span class="cs46AE26E6">Kratom Licensure Fund</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">established by the provisions of &sect;60-11-11 of this code for the use of the commissioner.</span></a></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Five percent shall be transferred to the Fight Substance Abuse Fund created by &sect;60A-9-8 of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Thirty percent shall be deposited in the Agriculture Fees Fund established by the provisions of &sect;19-1-4c of this code to facilitate testing of kratom products.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) Notwithstanding any provision in &sect;11-9-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code to the contrary, and as relevant to the tax imposed by this article, the West Virginia Tax Crimes and Penalties Act set forth in &sect;11-9-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code shall apply with like effect as if the said West Virginia Tax Crimes and Penalties Act were applicable only to the tax imposed by this article and were set forth in this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) Notwithstanding any provision of &sect;11-10-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, or any other provision of this code to the contrary, the West Virginia Tax Procedure and Administration Act, as set forth in &sect;11-10-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, applies to the tax imposed by this article with like effect as if the said West Virginia Tax Procedure and Administration Act were applicable only to the tax imposed by this article and were set forth in this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-7. Application and registration fees.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Applicants for kratom and kratom manufacturer, processor, distributor, or retailer permits shall pay a non-refundable application fee of $1,500 which shall be deposited with the State Treasurer to the credit of the Kratom Licensure Fund established by the provisions of &sect;60-11-11 of this code for the use of the commissioner for administering and enforcing the provisions of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Processors, manufacturers, distributors, and retailer permit holders shall pay an annual fee of $300 which shall be deposited with the State Treasurer to the credit of the Kratom Licensure Fund</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">established by the provisions of &sect;60-11-11 of this code for the use of the commissioner in administering and enforcing the provisions of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The business activity subject to application, registration, and permitting under this article shall be treated as separate and distinct from manufacturing, processing, distribution, or sale of hemp-derived cannabinoid products, or of hemp addressed and administered under &sect;19-12E-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, or of medical cannabis addressed and administered under &sect;16A-9-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Persons engaged in the manufacturing, processing, distribution, or sale of kratom and kratom products in this state must obtain a West Virginia business registration certificate as specified in &sect;11-12-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code and shall be subject to other administrative and regulatory requirements as set forth in this code. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) In the interest of protecting the safety, welfare, and well-being of West Virginia citizens and residents, West Virginia nexus and jurisdiction attaches for purposes of business registration, permitting, regulation, and taxation with relation to the activity of distribution or sale of kratom and kratom products across state lines into this state. Persons located outside of this state that are engaged in distribution or sale of kratom and kratom products across state lines into this state must obtain a West Virginia business registration certificate as specified in &sect;11-12-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code and shall be subject to other administrative and regulatory requirements as set forth in this code. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The Tax Commissioner may place a notation on the business registration certificate showing the status of the certificate holder as a person or entity holding a permit from the commissioner pursuant to this article. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The commissioner shall keep a list of all persons and entities that have been issued permits pursuant to this article. Such list shall be public information and shall be published quarterly by the commissioner on its website to reflect a current listing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The commissioner shall keep a list of any persons or entities that have been subject to a permit revocation, withdrawal, suspension, non-renewal, or other process whereby the person or entity has ceased to be a permit holder in good standing with the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The commissioner shall keep a list of all kratom and kratom products that have been approved for sale or distribution in this state. Such list shall be public information and shall be published by the commissioner on its website quarterly to reflect a current listing.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-8. Cooperative enforcement agreements.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The provisions of this article related to retail sales shall be enforced by the commissioner with the assistance of the department.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Pursuant to the labeling requirements under section 4 of this article, the commissioner and the Alcohol Beverage Control Administration Commissioner shall enter into a memorandum or memoranda of understanding to facilitate enforcement of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Procedure for contested cases. Any person or entity seeking to contest an administrative action of the commissioner under this article shall bring such contestation in writing within 14 days under the provisions of the Administrative Procedures Act set forth in &sect;29A-5-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code in administrative proceedings held by or before the commissioner, or his or her designee. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) In addition to any other memoranda, the commissioner, department, Commissioner of the Alcohol Beverage Control Administration, and the Tax Commissioner may enter into, they shall agree by memorandum to the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) To assist each other in enforcement of this </span><a name="_Hlk160875792"><span class="cs46AE26E6">article</span></a><span class="cs46AE26E6">;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) To assist each other in training and cooperating with State and local law enforcement to develop a state-wide plan for implementing the provisions of this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) To confer among themselves and law enforcement about enforcement of this article on a monthly basis; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) To jointly compile a report to be submitted to the Joint Committee on the Judiciary on or before January 1, 2027, as to actions undertaken to enforce this article and the results thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-9 Contraband; seizures; forfeitures; and destruction.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Any kratom or kratom product found in this state in violation of this article is hereby declared contraband and any property interest in the kratom or kratom product is vested in the State of West Virginia and is subject to seizure and forfeiture and destruction.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any certified law enforcement officer in this state may enforce the criminal provisions of this article, and any enforcement agent of the Alcohol Beverage Control Commissioner is authorized to enforce the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk213520566"><span class="csF3C8A5A3">&sect;60-11-10. Criminal violations; penalties; and administrative sanction.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A processor who knowingly or with criminal negligence commits an act in violation of this article shall, upon first conviction thereof, be guilty of a misdemeanor, and upon a subsequent conviction, be guilty of a felony, and shall be punished by imprisonment for not less than one year nor more than 15 years, by a fine not to exceed $100,000, or both.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A processor who negligently commits an act in violation of this article shall be guilty of a misdemeanor and subject to a fine not to exceed $1000.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Upon request by the Alcohol Beverage Control Administration or the Tax Department, the processor shall provide test results from a United States-based testing facility, that is an independent testing facility as defined in section 3 of this article, to confirm the items listed on the product label.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A retailer who knowingly or with criminal negligence commits an act in violation of section 3a and the labeling requirements of this article shall upon a first conviction thereof be guilty of a misdemeanor, and upon a second conviction be guilty of a felony, and shall be punished by imprisonment for not less than one year nor more than 15 years, by a fine not to exceed $100,000, or both.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A retailer who negligently commits an act in violation of subsection 4a and the labeling requirements of this article shall be guilty of a misdemeanor: </span><span class="cs1489E706">Provided, however</span><span class="cs46AE26E6">, That for a conviction of a first offense such individual shall be punished by a fine not to exceed $250; for a conviction of a second offense, such individual shall be punished by a fine of up to $500; and for a third offense, such individual shall be punished by a fine of up to $1,000; </span><span class="cs1489E706">Provided, further</span><span class="cs46AE26E6">, that upon each subsequent conviction after a third conviction, such individual shall be guilty of a misdemeanor and shall be imprisoned for not less than 10 days nor more than 12 months and punished by a fine of not less than $1,000 nor more than $5,000.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) A retailer shall have a defense to prosecution under this article if such retailer provides by a preponderance of the evidence that the retailer relied in good faith upon the representations of a processor that the kratom, kratom product, or kratom labeling complied with this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Administrative sanctions.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) In the case of any person or entity holding a permit issued by the commissioner under this article charged with any criminal violation enumerated in this section, in addition to such criminal penalties imposed, the commissioner may impose administrative sanctions including, but not limited to, permanent revocation of any one or more permits held by the violator, revocation of one or more permits held by the violator for a period of time to be determined by the commissioner, suspension of any one or more permits held by the violator for a period of time to be determined by the commissioner, fine or fines to any one or more permits held by the violator not to exceed $1,000 per each violation as determined by the commissioner, or non-issuance of a permit upon application of a violator. For purposes of this subsection, administrative sanctions may be imposed by the commissioner upon or against any alter ego, agent, representative, or person or entity acting on behalf of, or in the interest of, a violator. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The commissioner may impose the administrative sanctions in subdivision (1) of this subsection upon any person or entity under indictment for any of the criminal violations during, and during the pendency of, a criminal trial therefor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Nothing in this article prohibits an authorized enforcement agent of the commissioner or a person who is at least 18 years of age from purchasing or possessing kratom products when he or she is acting upon the request of, or under the direction and control of any member of a state, federal, or local law-enforcement agency or the commissioner while the agency is conducting an investigation or other activity relating to the criminal or administrative enforcement of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk218670848"><span class="csF3C8A5A3">&sect;60-11-11. Kratom Licensure Fund.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">There is hereby created a special revenue account within the state Treasury to be known as &quot;Kratom Licensure Fund&quot;. Expenditures from the fund shall be used exclusively by the commissioner of tax for the purpose of enforcement and administration of this article. Moneys paid into the account shall be from all moneys collected under this article. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-11-12. Coordination with Department and grace period.</span></h4>
+	<h5 class="cs60C11EA">
+		<span class="csEF05ACC">&nbsp;</span></h5>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Within 90 days of the effective date of this article, the department shall transmit the names, along with the date of issuance and renewal period, of those having a permit to manufacture, process, distribute, offer for sale, or sell any kratom or kratom products in this state to the Commissioner. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A permittee that has a current permit approved on the effective date of passage of this legislation shall have a grace period of compliance with this article: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That the permittee within 180 days prior to the expiration of their current permit file a new application in compliance with the provisions of this article with the Commissioner. &nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create the West Virginia Kratom Consumer Protection Act &nbsp;and establish the Kratom Consumer Protection Fund under the jurisdiction of the Tax Department.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>
