@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 630 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=630">&laquo; Senate Bill 630 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 630'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 630 - Protecting minors from exposure to indecent displays of sexually explicit nature&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb630+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=630"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csBEF9F1CD{color:#0070C0;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csA130ECD1{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 630</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Azinger </span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 27, 2026; referred<br/>to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL amend and reenact </span><a name="_Hlk124506049"><span class="csEF05ACC">&sect;</span></a><span class="csEF05ACC">61-8-9, &sect;61-8-27, &sect;61-8A-1,</span><a name="_Hlk124506087"></a><a name="_Hlk124506109"></a><a name="_Hlk124506125"><span class="csEF05ACC"> &sect;61-9-1, &sect;61-9-3, &sect;61-9-4,</span></a><span class="csEF05ACC"> &sect;61-9-5, </span><a name="_Hlk124506137"><span class="csEF05ACC">&sect;61-9-6, &sect;61-9-8, </span></a><span class="csEF05ACC">&sect;61-9-9, and &sect;61-9-10 &nbsp;of the Code of West Virginia, 1931, as amended, relating to protecting minors from exposure to indecent displays of a sexually explicit nature, including but not limited to, transvestite and/or transgender exposure in performances or displays to minors.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 8. CRIMES AGAINST CHASTITY, MORALITY AND DECENCY.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-8-9. Indecent exposure.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) A person is guilty of indecent exposure when such person intentionally </span><span class="cs46AE26E6">engages in obscene matter or sexually explicit conduct as defined in &sect;61-8A-1 of this code, or</span><span class="csEF05ACC"> exposes his or her sex organs or anus or the sex organs or anus of another person, or intentionally causes such exposure by another or engages in any overt act of sexual gratification, and does so under circumstances in which the person knows that the conduct is likely to cause affront or alarm: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That it is not considered indecent exposure for a mother to breast feed a child in any location, public or private.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Except as provided in subsection (c), any person who violates the provisions of this section shall be guilty of a misdemeanor and, upon conviction thereof, shall be confined in jail not more than </span><span class="cs68EFC440">ninety days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">six months,</span><span class="csEF05ACC"> or fined not more than </span><span class="cs68EFC440">$250</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$1,000,</span><span class="csEF05ACC"> or both fined and confined.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Any person who violates the provisions of subsection (a) of this section by intentionally exposing himself or herself to another person and the exposure was done for the purpose of sexual gratification, is guilty of a misdemeanor and, upon conviction thereof, shall be fined not more than </span><span class="cs68EFC440">$500</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$2,500</span><span class="csEF05ACC"> or confined in jail not more than twelve months, or both. For a second offense, the person is guilty of a misdemeanor and, upon conviction thereof, shall be fined not more than </span><a name="_Hlk153225129"><span class="cs68EFC440">$1,000</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$5,000</span><span class="csEF05ACC"> </span></a><span class="csEF05ACC">and confined in jail for not less than </span><span class="cs68EFC440">thirty days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">six months</span><span class="csEF05ACC"> nor more than twelve months. For a third or subsequent offense, the person is guilty of a felony and, upon conviction thereof, shall be fined not more than </span><span class="cs68EFC440">$3,000</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$7,500</span><span class="csEF05ACC"> and imprisoned in a state correctional facility for not less than one year nor more than five years.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-8-27. Unlawful admission of children to </span><span class="csF3C8A5A3">a venue,</span><span class="csB9803513"> dance house, etc.; penalty.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Any proprietor or any person in charge of: </span><span class="cs46AE26E6">(1) any venue where obscene matter or sexually explicit conduct as defined in &sect;61-8A-1 of this code is engaged in or displayed or allowed to be engaged in or displayed, or (2)</span><span class="cs93AB6E8B"> </span><span class="csEF05ACC">a dance house, concert saloon, theater, museum, or similar place of amusement, or other place, where wines or spirituous or malt liquors are sold or given away, or </span><span class="cs46AE26E6">(3)</span><span class="cs93AB6E8B"> </span><span class="csEF05ACC">any place of entertainment injurious to health or morals who admits or permits to remain therein any minor under the age of 18 years, </span><span class="cs68EFC440">unless accompanied by his or her parent or guardian</span><span class="csEF05ACC"> is guilty of a misdemeanor and, &nbsp;upon conviction thereof, shall be punished by a fine not exceeding </span><span class="cs68EFC440">$200</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$500:</span><span class="csEF05ACC"> </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That there is exemption from </span><span class="cs68EFC440">this</span><span class="csEF05ACC"> prohibitions </span><span class="cs46AE26E6">under subsections (ii)</span><span class="cs1489E706"> and </span><span class="cs46AE26E6">(iii)</span><span class="csEF05ACC"> for: (a) A private bakery, private cigar shop, private caterer, private club restaurant, private manufacturer club, private fair and festival, private resort hotel, private hotel, private golf club, private food truck, private nine-hole golf course, private tennis club, private wedding venue or barn, private outdoor dining and private outdoor street dining, private multi-vendor fair and festival license, private farmers market, &nbsp;private college sports stadium or coliseum, private professional sports stadium, and a private multi-sports complex licensed pursuant to &sect;60-7-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code and in compliance with, &sect;60-7-2(6)(iv), &sect;60-7-2(7)(D), &sect;60-7-2(8)(I), &sect;60-7-2(10)(L), &sect;60-7-2(11)(D), &sect;60-7-2(12)(H), &sect;60-7-2(13)(6), &sect;60-7-2(14)(H), 60-7-2(15)(H), </span><a name="_Hlk96591809"><span class="csEF05ACC">&sect;60-7-2</span></a><span class="csEF05ACC">(16)(G), &sect;60-7-2(17)(G), &sect;60-7-2(18)(H), &sect;60-7-2(19)(H), &sect;60-7-2(20)(H), &sect;60-7-2(21)(L), &sect;60-7-2(22)(H), &sect;60-7-2(23)(H), &sect;60-7-8c(b)(14), &sect;60-7-8d, and &sect;60-8-32a of this code; or (b) a private club with more than 1,000 members that is in good standing with the Alcohol Beverage Control Commissioner, that has been approved by the Alcohol Beverage Control Commissioner; and which has designated certain seating areas on its licensed premises as nonalcoholic liquor and nonintoxicating beer areas, as noted in the licensee&rsquo;s floorplan, by using a mandatory carding or identification program by which all members or guests being served or sold alcoholic liquors, nonintoxicating beer or nonintoxicating craft beer are asked and required to provide their proper identification to verify their identity and further that they are of legal drinking age, 21 years of age or older, prior to each sale or service of alcoholic liquors, nonintoxicating beer or nonintoxicating craft beer: </span><span class="cs1489E706">Provided</span><span class="csBEF9F1CD">,</span><span class="cs1489E706"> further, </span><span class="cs46AE26E6">That no exemption exists whatsoever for the prohibition set forth in subsection (i)</span><span class="cs1489E706">.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 8A. PREPARATION, DISTRIBUTION OR EXHIBITION OF OBSCENE MATTER TO MINORS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-8A-1. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">When used in this article, the following words, and any variations thereof required by the context, shall have the meaning ascribed to them in this section:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) &quot;Adult&quot; means a person eighteen years of age or older.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) &quot;Computer&quot; means an electronic, magnetic, optical, electrochemical or other high-speed data processing device performing logical, arithmetic or storage functions and includes any data storage facility or communication facility directly related to or operating in conjunction with such device. As used in this article, computer includes file servers, mainframe systems, desktop personal computers, laptop personal computers, tablet personal computers, cellular telephones, game consoles and any electronic data storage device or equipment. The term &quot;computer&quot; includes any connected or directly related device, equipment or facility which enables the computer to store, retrieve or communicate computer programs, computer data or the results of computer operations to or from a person, another computer or another device, but such term does not include an automated typewriter or typesetter, a portable hand-held calculator or other similar device.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) &quot;Computer network&quot; means the interconnection of hardware or wireless communication lines with a computer through remote terminals, or a complex consisting of two or more interconnected computers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) &quot;Display&quot; means to show, exhibit or expose matter, in a manner visible to general or invited public, including minors. As used in this article, display shall include the placing or exhibiting of matter on or in a billboard, viewing screen, theater, marquee, newsstand, display rack, window, showcase, display case or similar public place.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) &quot;Distribute&quot; means to transfer possession, transport, transmit, sell or rent, whether with or without consideration.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) &quot;Employee&quot; means any individual who renders personal services in the course of a business, who receives compensation and who has no financial interest in the ownership or operation of the business other than his or her salary or wages.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) </span><span class="cs46AE26E6">&quot;Graphic&quot;, when used with respect to a depiction of sexually explicit conduct, means that a viewer can observe any part of the genitals or pubic area of any depicted person or animal during any part of the time that the sexually explicit conduct is being depicted.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) &quot;Identifiable minor&quot; means a person: (A) who was a minor at the time the visual depiction was created, adapted, or modified; or (B) whose image as a minor was used in creating, adapting, or modifying the visual depiction; and (C)</span><span class="cs1489E706"> </span><span class="cs46AE26E6">who is recognizable as an actual person by the person&rsquo;s face, likeness, or other distinguishing characteristic, such as a unique birthmark or other recognizable feature; and shall not be construed to require proof of the actual identity of the identifiable minor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) &quot;Indistinguishable&quot; used with respect to a depiction, means virtually indistinguishable, in that the depiction is such that an ordinary person viewing the depiction would conclude that the depiction is of an actual minor engaged in sexually explicit conduct.</span></p><p class="cs53FB8D75"><span class="csA130ECD1">(g)</span><span class="cs46AE26E6">(j)</span><span class="csEF05ACC"> &quot;Internet&quot; means the international computer network of both federal and nonfederal interoperable packet switched data networks.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(h)</span><span class="cs46AE26E6">(k)</span><span class="csEF05ACC">&quot;Knowledge of the character of the matter&quot; means having awareness of or notice of the overall sexual content and character of matter as depicting, representing or describing obscene matter.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(l)</span><span class="csEF05ACC"> &quot;Matter&quot; means any visual, audio, or physical item, article, production transmission, publication, </span><span class="cs46AE26E6">display, exposure,</span><span class="csEF05ACC"> exhibition, or live performance, or reproduction thereof, including any two- or three- dimensional visual or written material, </span><span class="cs46AE26E6">stereopticon, moving picture, slide,</span><span class="csEF05ACC"> film, picture, drawing, </span><span class="cs46AE26E6">not exceeding $500</span><span class="csEF05ACC"> video, graphic, </span><span class="cs46AE26E6">graphic novel,</span><span class="csEF05ACC"> or computer generated or reproduced image; or any book, </span><span class="cs46AE26E6">not exceeding $500</span><span class="csEF05ACC"> magazine, newspaper or other visual or written material; or any motion picture or other pictorial representation; or any statue or other figure; or any recording, transcription, or mechanical, chemical, or electrical reproduction; or any other articles, video laser disc, computer hardware and software, or computer generated images or message recording, transcription, or object, or any public or commercial live exhibition performed for consideration or before an audience of one or more.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(j)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(m)</span><span class="csEF05ACC"> &quot;Minor&quot; means an unemancipated person under eighteen years of age.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(k)</span><span class="cs46AE26E6">(n)</span><span class="csEF05ACC"> &quot;Obscene matter&quot; means matter that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An average person, applying contemporary adult community standards, would find, taken as a whole, appeals to the prurient interest, is intended to appeal to the prurient interest, or is pandered to a prurient interest;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) An average person, applying community standards, would find depicts or describes, in a patently offensive way, sexually explicit conduct; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A reasonable person would find, taken as a whole, lacks serious literary, artistic, political or scientific value.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) For the purposes of any prohibition, protection, or requirement under any and all articles and sections of this code protecting children from exposure to indecent displays of an obscene or sexually explicit nature, such prohibited displays shall include, but not be limited to, any transvestite and/or transgender exposure, performances, or display to any minor.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(l)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(o)</span><span class="csEF05ACC"> &quot;Parent&quot; includes a biological or adoptive parent, legal guardian or legal custodian.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(m)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(p)</span><span class="csEF05ACC"> &quot;Person&quot; means any adult, partnership, firm, association, corporation or other legal entity.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(n)</span><span class="cs46AE26E6">(q)</span><span class="csEF05ACC"> &quot;Sexually explicit conduct&quot; means </span><span class="cs68EFC440">an</span><span class="csEF05ACC"> </span><span class="cs68EFC440">ultimate</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">a definitive </span><span class="csEF05ACC">sexual act </span><span class="cs46AE26E6">between persons of the same or opposite sex</span><span class="csEF05ACC">, </span><span class="cs68EFC440">normal or perverted,</span><span class="csEF05ACC"> actual or simulated, including &nbsp;</span><span class="cs46AE26E6">genital-genital, oral-genital, anal-genital, or oral-anal </span><span class="csEF05ACC">sexual intercourse, sodomy, oral copulation </span><span class="cs46AE26E6">of any kind</span><span class="csEF05ACC">, sexual bestiality, sexual sadism and masochism, masturbation, excretory functions and lewd exhibition of the </span><span class="cs46AE26E6">anus,</span><span class="csEF05ACC"> genitals </span><span class="cs46AE26E6">or pubic area of any person, or lascivious simulated sexual intercourse where the genitals, breast, or pubic area of any person is exhibited</span><span class="csEF05ACC">.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 9. EQUITABLE REMEDIES IN AID OF CHASTITY, MORALITY AND DECENCY.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-9-1. Definition of terms.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">For the purposes of this article the terms &quot;place,&quot; &quot;person,&quot; &quot;nuisance&quot; are defined as follows:&quot; Place&quot; shall include any building, structure, erection or place, or any separate part or portion thereof, or the ground itself; &quot;person&quot; shall include any individual, corporation, association, partnership, trustee, lessee, agent or assignee; &quot;nuisance&quot; shall mean any place as above defined in or upon which lewdness, </span><span class="cs46AE26E6">obscene matter, sexually explicit conduct as defined in &sect;61-8A-1 of this code,</span><span class="csEF05ACC"> assignation, or prostitution is conducted, permitted, continued or exists, and the personal property and contents used in conducting or maintaining any such place for any such purpose.</span></p><h4 class="cs7F45F1B">
+		<span class="csB9803513">&sect;61-9-3. Suit to enjoin; by whom instituted.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Whenever a nuisance exists, </span><span class="cs46AE26E6">as defined in &sect;61-9-1 of this code,</span><span class="csEF05ACC"> the Attorney General of the state, the prosecuting attorney of the county wherein the same exists, or any person who is a citizen, resident or taxpayer of the county, may bring suit in equity in the name of the State of West Virginia, upon the relation of such Attorney General, prosecuting attorney, or any person, to abate such nuisance and to perpetually enjoin the person or persons maintaining </span><span class="cs68EFC440">the same</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">any such nuisance</span><span class="csEF05ACC"> from further maintenance thereof.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-9-4. Venue; procedure; temporary injunction; order closing place; vacation of orders; bond.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Such suit shall be brought in the circuit court of the county in which the property is located, or in any other court of the county having equity jurisdiction. The bill of complaint and other pleadings, and all proceedings in the case, shall conform to the law of the state with respect to equity procedure and to the rules and principles governing courts of equity, except so far as otherwise herein provided.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">At the time of the commencement of the suit, or at any time during the pendency thereof, the plaintiff or his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> attorney may file in the office of the clerk of the county court of the county in which such property is located a memorandum or notice setting forth the title of the case, the court in which it is pending, the general object of the suit, a brief description of the property to be affected thereby, and the name of the person or persons whose estate is intended to be affected by such suit. Such notice shall immediately be recorded by the clerk of the county court in the deed book, and he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> shall index the same in the name of all the parties whose interest in such property is to be affected; and such notice shall, from and after its recordation, be notice to all purchasers of such property of the pendency of such suit.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Upon the application for an injunction in such suit, the court or judge may, in his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> discretion, enjoin the defendants and all other persons from removing or in any manner interfering with the personal property and contents of the place where such nuisance is alleged to exist, until the final decision of the case. A copy of such injunction order may be posted in a conspicuous place upon the premises proceeded against, and any person thereafter removing or interfering with such property shall be guilty of a violation of such injunction, and any person removing or mutilating such copy of the order so posted, while the same remains in force, shall be guilty of contempt of court, provided such posted notice or order contains thereon or therein a notice to that effect. The officer serving such injunction order shall forthwith make and return into court an inventory of the personal property and contents situated in the building or place proceeded against and used in conducting or maintaining such nuisance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">If, at the time of granting a temporary injunction, the same shall appear proper, the court or judge granting the same may order the place proceeded against to be closed and not used for any purpose until the final decision of the case: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That the owner of any property so closed or restrained may appear at any time before final hearing and decision, and upon payment of all the costs incurred, and upon the filing of a bond, with sureties to be approved by the clerk, in the amount of the full value of the property, to be ascertained by the court or judge, conditioned that such owner will immediately abate the nuisance and prevent the same from being established or kept until final decision of the case, then and in that case the court or judge, if satisfied of the good faith of the owner of the real or personal property and of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> innocence of any knowledge of the use of such property as a nuisance, and that with reasonable care and diligence such owner could not have known thereof, may deliver such property to the owner thereof and vacate any order theretofore made for the closing of such real property, or restraining the removal or interference with such personal property. The release of any real or personal property under the provisions of this section, however, shall not release it from any judgment, lien, penalty or liability to which it may be subject by law. &nbsp;</span><span class="cs46AE26E6">The court may award reimbursement of any and all attorneys fees, witness fees, and costs incurred by any party who prevails in the bringing of suit to enjoin any such nuisance. </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-9-5. Prima facie evidence of nuisance; prosecution of complaint; dismissal; costs; permanent injunction.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">In such suit evidence of the general reputation of the place, or an admission or finding of guilt of any person under the criminal laws against prostitution, </span><span class="cs46AE26E6">obscene matter, sexually explicit conduct as defined in &sect;61-8A-1 of this code,</span><span class="csEF05ACC"> lewdness or assignation at any such place, shall be admissible for the purpose of proving the existence of such nuisance, and shall be prima facie evidence of such nuisance and of knowledge thereof and acquiescence and participation therein on the part of the person or persons charged with maintaining such nuisance as herein defined. If the complaint is filed by a person who is a citizen, resident or taxpayer of the county, it shall not be dismissed except upon a sworn statement by the complainant and his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> or its attorney, setting forth the reasons why the action should be dismissed and the dismissal approved by the prosecuting attorney in writing or in open court. If the court or judge is of opinion that the action ought not to be dismissed, he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> may direct the prosecuting attorney to prosecute such action to judgment at the expense of the county, and if any such action is continued more than one term of court, any person who is a citizen, resident or taxpayer of the county, or the Attorney General, or the prosecuting attorney, may be substituted for the complainant and prosecute such suit to final decree. </span><span class="cs46AE26E6">If the Attorney General, or the prosecuting attorney, is substituted for the complainant such Attorney General or prosecuting attorney shall zealously and promptly prosecute such suit to final decree.</span><span class="csEF05ACC"> If the suit is brought by any person who is a citizen, resident or taxpayer of the county and the court finds and enters of record in the case that there were no reasonable grounds or cause for such suit, the costs may be taxed to such person. If the existence of the nuisance be established upon the trial, a decree shall be entered which shall perpetually enjoin the defendants and any other person or persons from further maintaining the nuisance at the place complained of and the defendants from maintaining such nuisance elsewhere within the county.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-9-6. Order of abatement; sale of personal property; renewal of bond or continuance of closing order; release of property; breaking in or entering closed property; sheriff&#39;s fees.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">If the existence of such nuisance be admitted or established in a suit as provided in this article, an order of abatement shall be entered as part of the decree in the case, which order shall direct the removal from the place of all personal property and contents used in conducting the nuisance, and not already released by and under the authority of the court as provided in section four of this article, and shall direct the sale of such thereof as belongs to the defendants notified or appearing in the manner provided for the sale of personal property under execution. Such order shall also require the renewal for one year of any bond furnished by the owner of the real property as provided in section four, or, if not so furnished, shall continue for one year any closing order issued at the time of granting the temporary injunction, or, if no such closing order was then issued, shall include an order directing the effectual closing of the place against its use for any purpose, and so keeping it closed for a period of one year unless sooner released: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That the owner of any place so closed and not released under bond as hereinbefore provided may then or thereafter appear and obtain such release in the manner and upon fulfilling the requirements as hereinbefore provided. The release of the property under the provisions of this section shall not release it from any judgment, lien, penalty, or liability, to which it may be subject by law. Owners of unsold personal property and contents so seized shall appear and claim the same within ten days after such order of abatement is made, and if it has not been proved to the satisfaction of the court that such owner had knowledge of such use thereof, or, that with reasonable care and diligence, he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> could not have known thereof, such unsold personal property and contents shall be delivered to the owner, otherwise it shall be sold as hereinbefore provided. If any person shall break and enter or use any place so directed to be closed, he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> shall be punished as for contempt as provided hereinafter, in addition to any other penalties imposed by law. For removing and selling personal property and contents, the sheriff shall be entitled to charge and receive the same fees as he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> would for levying upon and selling like property on execution; and for closing the place and keeping it closed, a reasonable sum shall be allowed by the court.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-9-8. Violation of injunction or closing order; trial; penalty.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">In case of the violation of any injunction or closing order granted under the provisions of this article, or the commission of any contempt of court in proceedings under this article, the court, or a judge thereof in vacation, may summarily try and punish the offender. The proceedings shall conform to the practice in other suits in equity for violations of injunctions, and proceedings for contempt of court. The trial may be had upon affidavits, or either party may demand the production and oral examination of the witnesses. A party found guilty of contempt under the provisions of this article shall be punished by a fine of not less than </span><span class="cs68EFC440">$100</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$1,000</span><span class="csEF05ACC"> nor more than </span><span class="cs68EFC440">$1,000</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$5,000</span><span class="csEF05ACC">, or by imprisonment in the county jail not more than six months, or by both such fine and imprisonment.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-9-9. Permanent injunction; tax imposed on property.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Whenever a permanent injunction is granted against any person or persons for maintaining a nuisance as in this article defined, there shall be imposed upon such nuisance and against the person or persons maintaining the same a tax of </span><span class="cs68EFC440">$300</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$1,000</span><span class="csEF05ACC">: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That such tax may not be imposed upon the personal property or against the owner or owners thereof who have proven innocence as hereinbefore provided, or upon the real property or against the owner or owners thereof who shall show to the satisfaction of the court or judge thereof, at the time of the granting of the permanent injunction, that he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> or they have in good faith permanently abated the nuisance complained of. The imposition of such tax shall be made by the court as a part of the proceedings, and the clerk of such court shall make and certify a return of the imposition of such tax thereon to the county assessor, who shall enter the same as a tax upon the property and against the persons upon which or whom the lien was imposed, as a proper tax and charge upon such real or personal property, when making up his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> assessments for the next ensuing year, unless the same shall have been paid before such books are made up; and the same shall be and remain a perpetual lien upon all property, both real and personal, used for the purposes of maintaining such nuisance, except as herein excepted, until fully paid. The payment of such tax shall not relieve the persons or property from any other taxes provided by law. The provisions of the laws relating to the collection of taxes in this state, the delinquency thereof, and sale of property for taxes, shall govern in the collection of the tax herein prescribed insofar as the same are applicable; and the said tax collected shall be applied in payment of any deficiency in the costs of the action and abatement on behalf of the state to the extent of such deficiency after the application thereto of the proceeds of the sale of the personal property as hereinbefore provided, and the remainder of such tax, together with the unexpended portion of the proceeds of personal property, shall be paid into the county treasury.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-9-10. Notice to collect tax.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">When such nuisance has been found to exist under any equity proceedings as in this article provided, and the owner or agent of such place whereon the same has been found to exist was not a party to such proceedings and has not appeared therein, the said tax of $</span><span class="cs68EFC440">300</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$1,000 </span><span class="csEF05ACC">shall, nevertheless, be imposed against the person served or appearing and against the property as in this article set forth. But no such tax shall be certified to the assessor or enforced against such property, unless the owner thereof shall have appeared therein or shall be served with summons or notice therein, and the provisions of existing laws regarding the service of process shall be applied to service in proceedings under this article. The person in whose name the real estate affected by the action stands on the land books of the county for purposes of taxation shall be presumed to be the owner thereof, and in case of unknown persons having or claiming any ownership, right, title, or interest in property affected by the action, such may be made parties to the action by designating them in the summons and complaint as &quot;all other persons unknown claiming any ownership, right, title, or interest in the property affected by the action,&quot; and service thereon be had by publishing such summons in the same manner prescribed by law.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to protect minors from indecent displays of a sexually explicit nature, including but not limited to, transvestite and/or transgender performances or displays to minors.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

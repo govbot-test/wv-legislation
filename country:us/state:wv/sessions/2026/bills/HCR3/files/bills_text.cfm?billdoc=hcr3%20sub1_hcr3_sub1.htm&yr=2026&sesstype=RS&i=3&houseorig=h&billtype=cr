@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HCR 3 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+hcr3 sub1 
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="resolution_history.cfm?year=2026&sessiontype=RS&input4=3&billtype=cr&houseorig=h">&laquo; House Concurrent Resolution 3 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Concurrent Resolution 3'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hcr3 sub2.htm&yr=2026&sesstype=RS&billtype=CR&houseorig=H&i=3" title="HTML  - Committee Substitute (2)
+ - Resolutions Bill 3">
+Committee Substitute (2)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hcr3 sub 2.htm&yr=2026&sesstype=RS&billtype=CR&houseorig=H&i=3" title="HTML  - hcr3 sub 2  - Resolutions Bill 3">
+hcr3 sub 2 </a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hcr3 intr.htm&yr=2026&sesstype=RS&billtype=CR&houseorig=H&i=3" title="HTML  - Introduced Version
+ - Resolutions Bill 3">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HCR 3 - House Infrastructure Naming Resolution&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hcr3+sub1.htm%26yr=2026%26sesstype=RS%26billtype=CR%26houseorig=H%26i=3"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs9A0FB74B{text-align:left;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csA130ECD1{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Concurrent Resolution 3</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">(By Delegates Hanshaw (Mr. Speaker), Amos, Barnhart, Bell, Brooks, Browning, Burkhammer, Campbell, Cooper, Crouse, Dillon, Dittman, Eldridge, Heckert, Hott, Howell, G., Howell, T., Jeffries, Jennings, Kyle, Lucas, Mallow, Marple, Mazzocchi, Moore, Pritt, Shamblin, Sheedy, Statler, Stephens, Toney, and Ward) </span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Originating January 22, 2026 in the Committee on Energy and Public Works then to Rules]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">Requesting that the Division of Highways name the following infrastructure </span><span class="cs46AE26E6">specified in this resolution</span><span class="csEF05ACC">.</span></p><p class="cs9A0FB74B"><span class="cs1489E706">Whereas, </span><span class="cs46AE26E6">it Is proper to honor persons who have distinguished themselves in service to West Viginia by naming infrastructure; therefore,</span><span class="cs1489E706"> </span><span class="cs46AE26E6">the Legislature is</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Whereas, Requesting the Division of Highways name bridge numbers: 04-079/00-067.01&nbsp; (NB &amp; SB) (04A119, 04A120), (38.70312, -80.66296) locally known as FLATWOODS ICHG N &amp; S, carrying IS 079 over CR 19/22 in Braxton County, the &quot;John and Virginia Skidmore Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 39-052/00-002.84&nbsp; () (39A200), (39.50962, -79.69173) locally known as PLEASANTDALE BRIDGE, carrying CR 052 over GREENS RUN in Preston County, the Timothy Wade Thompson Memorial Bridge&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name a 3.1-mile section of Route 18, beginning at a point 3.1 miles from its intersection with Route 119 and ending at a point 3.1 miles further down Route 18, in Lincoln County, the &quot;Hill Family Veterans Memorial Highway.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 22-037/00-004.35&nbsp;(22A167), (38.10346, -82.17775), locally known as U.S. Army TEC5 Donald &quot;Tiny&quot; Lucas Memorial Bridge, carrying CR 037 over EAST FK OF 14 MI.&nbsp; CK in Lincoln County as the &quot;Donald &lsquo;Tiny&rsquo; Lucas and Ronald Dale Lucas Veterans Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways to name the road from the mouth of Harts Creek on Harts Creek Road 1.2 miles to Warrens Way off SR 10 on CR 19 Lincoln County, the &quot;U.S. Army CPL George Browning Memorial Road&quot;. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 16-005/00-001.02 &nbsp;() (16A011), (39.08116, -78.57930) locally known as NORTH MOUNTAIN ROAD BRIDGE, carrying CR 005 over WAITES RUN in Hardy County, the &quot;Charles Edward Sine Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 10-061/00-025.69 &nbsp;() (10A159), (38.12661, -81.26228) locally known as DEEPWATER BRIDGE, carrying WV 061 over LOOP CREEK in Fayette County, the &quot;US Army Corporal Mike Comer Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 26-074/00-018.50&nbsp; () (26A124), (39.76802, -80.64454) locally known as Adaline Bridge, carrying CR 074 over Fish Creek in Marshall County, the &quot;Anthony Martin &quot;Butch&quot; Skrypeck Bridge.&quot; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 25-079/00-135.62 &nbsp;() (25A260), (39.46437, -80.13663) locally known as PLEASANT VALLEY BRIDGE, carrying I-79 over Mar. Co. Rt. 64 in Marion County, the &quot;Janice L. Cosco Memorial Bridge&quot; with accompanying signage stating, &quot;Marion County&#39;s Longest Serving Clerk.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 42-250/00-001.72 &nbsp;() (42A263), (38.617, -79.86974) locally known as Cheat Bridge, carrying US 250 over Shavers Fork Cheat River in Randolph County, the Richard Lee Thompson Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 26-250/00-004.62 &nbsp;() (26A110), (39.75913, -80.56326) locally known as Bellton Bridge, carrying US 250 over PA Fork of Fish Creek in Marshall County, the &quot;PFC Edwin L. Mackey Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 26-015/00-001.55 &nbsp;() (26A097), (39.95361, -80.54004) locally known as Harsh Sugar Camp Bridge, carrying CR 015 over Big Wheeling Creek in Marshall County, the &quot;CPL Wilbert D. Whipkey, WW II POW Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name Bridge Number: 52-013/00-004.64&nbsp;() (52A039), (39.67254, -80.45228) locally known as Hundred Covered Bridge, carrying CR 013 over WV Fork Fish Creek in Wetzel County, the &quot;PFC Charles &#39;Charlie&#39; Goff Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 52-250/00-003.88 (52A139) at Lat/Long: 39.68333, -80.45983, locally known as Stewart Street Bridge, carrying CR 250/12 over West Virginia Fork of Fish Creek in Wetzel County, the &quot;U.S. Army Tustin Brothers Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 52-250/12-000.02 (52A102), at Lat./Long. (39.68344, -80.45906), locally known as Church Fork Bridge, carrying US 250 over Church Fork Creek in Wetzel County, the &quot;U.S. Army Private Terry F. Tustin Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 52-009/00.004.54(52A159) at Latitude/Longitude 39.70766, -80.53262, locally known as Sugar Run Bridge carrying CR 09 over West Virginia Fork of Fish Creek in Wetzel County, the &quot;U.S. Army PFC Howard Bissett Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways to name a portion of U.S. 250 in Marshall County, from the intersection of WV 891 to the Wetzel County line as the Dragon Highway, reflecting the Cameron High School Dragons, and that one sign is to be placed immediately South of the U.S. 250 WV 891 intersection and the other at the Wetzel County line heading North towards Cameron.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways&nbsp;rename the section of road located on U.S. Route 250 just North of the Moundsville city limits to just North of the intersection of W.V. Route 891 to the &quot;Waynesburg Pike Road&quot; and have an additional sign placed at the intersection of W.V. Route 88 and U.S. Route 250.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number: 21-019/00-006.49 &nbsp;() (21A053), (38.87316, -80.44936) locally known as WALKERSVILLE TRUSS, carrying US 019 over WEST FORK RIVER in Lewis County, the &quot;U. S. Army Cpl Benny Franklin Shifflett Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name Route 46 from (39.4269980, -78.9090972) to (39.4490456, -78.8777104) the &quot;Doil E. Simpson Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 43-021/00-000.06&nbsp; () (43A071), (39.07742, -81.19013), locally known as DUTCHMAN BRIDGE (CSPG), carrying CR 021 over SOUTH FORK HUGHES RIVER in Ritchie County as the &quot;Clark Brothers Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 26-250/14-001.94 &nbsp;() (26A091), (39.73953, -80.52450) locally known as GEORGETOWN BRIDGE, carrying CR 250/14 over PA. FORK OF FISH CREEK in Marshall County, the &quot;Marine Corporal Joe Gorby Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 40-064/00-044.47 &nbsp;() (40A075), (38.44092, -81.83320) locally known as I-64 NITRO INTERCHANGE BRIDGE, carrying IS 064 over WV25, CR25/30, N&amp;S RR in Putnam County, the&nbsp;&quot;Private Ronnie W. Matthews Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name&nbsp;a portion of Route 2 bearing the coordinates 40&deg;01&#39;41&quot;N 80&deg; 43&#39;38W and 40&deg;00&#39;07&quot;N 80&deg;43&#39;57&quot;W in Benwood, Marshall County, as the &quot;Gold Star Mother Catherine Blake Highway&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 23-016/18-000.01(23A183), at Lat./Long. 37.76296, -81.84196, locally known as Low Ash Concrete Box BM, carrying County Route 16/18 over Buffalo Creek in Logan County, the &quot;U.S. Army Warrant Officer Sidney Washington Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 54-014/00-013.22 &nbsp;() (54A037), (39.26028, -81.55637) locally known as Fifth Street Bridge (SSTT), carrying WV 014 over Little Kanawha River in Wood County, the&nbsp;&quot;Delegate Thomas A. Azinger Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name a portion of Greentown Loop Road, in Oak Hill, Fayette County, beginning at the intersection of US 19 and WV 16, Latitude 37.959594, Longitude -81.148356, ending at the intersection of Meadow Fork Road, Latitude 37.964227, Longitude -81.125199, the &quot;Delegate James Monroe Ellis Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 41-077/00-043.59 &nbsp;(SB) (41A229), (37.78047, -81.22121) locally known as I-77 OVER CABELL RD, carrying IS 077 over WHITESTICK CRK/CABELL RD in Raleigh County, the&nbsp;&quot;U.S. Navy S1c Curtis Hatcher Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 10-025/00-000.06 (10A113), locally known as Dunloup Creek Bridge #2, carrying Thurmond Road/CR 25 over Dunloup Creek in Fayette County, the &quot;U.S. Army PFC Calvin Esco Spade Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 55-009/04-006.66 &nbsp;() (55A028), (37.66467, -81.60096) locally known as COON BRANCH BRIDGE, carrying CR 009/04 over LAUREL FORK in Wyoming County, the &quot;Pastor Roger D. Stewart and Brenda Runion Stewart Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name a portion of Main Street East, in Fayette County, beginning at the intersection with Patterson Avenue, Latitude 37.983998, Longitude -81.137400, ending at the intersection with Lochgelly Road, Latitude 38.005804, Longitude -81.131043, the &quot;U.S. Air Force Sergeant Thomas Madison Oxley Memorial Road&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 00-005.51(20A561), locally known as Rocky Fork Bridge, carrying County Route 622 over Rocky Fork Creek in Kanawha County, the &quot;U.S. Army Corporal Kenneth H. Tinsley Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 39-072/00-001.85&nbsp; () (39A236), (39.28332, -79.73050) locally known as Etam Bridge, carrying WV 072 over Buffalo Creek in Preston County as the &quot;U.S. Army Sgt Clinton &quot;Randy&quot; Dean 101st Airborne Vietnam Veterans Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways rename the section of road beginning at (37.765157, -80.466491) and ending at (37.787638, -80.452570), known locally as the Seneca Trail, to the &quot;Vance Brothers Six Military Veterans Highway&quot; and have signs placed identifying it as such.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 25-079/00-135.62 &nbsp;() (25A260), (39.46437, -80.13663) locally known as PLEASANT VALLEY BRIDGE, carrying I-79 over Mar. Co. Rt. 64 in Marion County, the &quot;Janice L. Cosco Memorial Bridge&quot; with accompanying signage stating, &quot;Marion County&#39;s Longest Serving Clerk.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name a portion of State Route 16, specifically beginning at the northern city limits of Gauley Bridge, West Virginia and continuing for a mile in Fayette County, the &quot;U.S. Navy S1c Guy Harlow Waugh Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 34-001/00-006.32 (34A002), at Latitude 38.5011610265538, Longitude -80.7633140291533, and locally known as Birch River Bridge, carrying Widen Dille Road over Birch River in Nicholas County, the &quot;U.S. Army Spec 4 Gary W. Spinks Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 30-003/05-016.21 &nbsp;() (30A288), (37.90962, -82.24858) locally known as Breeden Bridge, carrying CR 03/05 over West FK of Twelvepole CK in Mingo County the &quot;Jim Marcum and Airiel Shai Wallace Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 044-14/00-9.87(44A198), at Lat/Long: 38.90043, -81.42299, locally known as Reedy Bridge, carrying WV 14 over Reedy Creek in Roane County, the &quot;U. S. Revolutionary War Patriot Private Patrick Board Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 44-010/00-001.09 (44A024), locally known as MT OLIVE BRIDGE (SCBB), beginning at Latitude 38.815807, Longitude -81.430185, ending at Latitude 38.815550, Longitude -81.430992, carrying Reedyville Road, CR 10, over Left Fork Reedy Creek in Roane&nbsp;County, the &quot;U.S. Army Corporal Leonard N. Miller Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name Bridge Number: 13-036/03-000.30 &nbsp;() (13A193), (37.80392, -80.30595) locally known as CAN CREEK BRIDGE, carrying CR 036/03 over CAN CREEK in Greenbrier County, the &quot;U.S. Army PFC Paul Ralph Bittinger, Sr. Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name Bridge Number: 20-061/00-000.32 &nbsp;() (20A177), (38.18011, -81.33495) locally known as MORRIS CK BR #2492.1, carrying WV 61 over MORRIS CK &amp; PRIVATE RD in Kanawha County, the &quot;Fire Chief Benny Filiaggi, III Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name a bridge bearing the Bridge Number: 43-021/00-000.06&nbsp; () (43A071), (39.07742, -81.19013), locally known as DUTCHMAN BRIDGE (CSPG), carrying CR 021 over SOUTH FORK HUGHES RIVER in Ritchie County as the &quot;Clark Brothers Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name a portion of 4.3-mile bypass from Tuckers Run to Middle Fork on US 33, in Roane County, the &quot;Scott Miller Bypass Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 40-064/00-044.47 &nbsp;() (40A190), (38.44091, -81.8332) locally known as I-64 NITRO INTERCHANGE BRIDGE, carrying IS 064 over WV25, CR25/30, N&amp;S RR in Putnam County, the&nbsp;&quot;Private Ronnie W. Matthews Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 13-092/00-003.04 &nbsp;() (13A174), (37.83706, -80.25641) locally known as POND LICK RUN BRIDGE, carrying WV 092 over POND LICK RUN in Greenbrier County, the &quot;U.S. Army PFC Julian W. Burns Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 23-009/03-000.14 &nbsp;() (23A033), (37.83174, -82.04239) locally known as WHITMAN JUNCTION BRIDGE, carrying CR 009/03 over ALDRICH CREEK in Logan County, the &quot;US Army PFC Lester Maynard Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 44-009/00-007.46 &nbsp;(NB) (44A189), (38.87502, -81.33427) locally known as Millard Box Beam Bridge (SCBB), carrying CR 009 over LITTLE SPRING CREEK in Roane County, the &quot;George Weekley Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 44-033/02-000.03 &nbsp;() (44A143), (38.79976, -81.34842) locally known as SPENCER BUSINESS PARK &nbsp;&nbsp;&nbsp;(SCCB), carrying CR 033/02 over GOFF RUN in Roane County, the &quot;CSM (Command Sargeant Major) Billie Jo Minney Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 20-817/00-001.23 &nbsp;() (20A322), (38.41451, -81.85880) locally known as TOMPKINS CROSSING BRIDGE, carrying WV 817 over CSX RAILROAD in Kanawha County, the &quot;Jack Miller Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 50-052/04-001.33 &nbsp;() (50A116), (38.30705, -82.42569) locally known as FALLS BRANCH BOX BEAM, carrying CR 052/04 over BEECH FORK in Wayne County, the &quot;Berry Brothers Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 16-220/00-015.03 &nbsp;() (16A157), (39.13225, -78.9512) locally known as Anderson Run Bridge, carrying US 220 over Anderson Run in Hardy County, the &quot;Donald Warden Hott Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge numbers 16-048/00-021.37 &nbsp;(EB &amp; WB) (16A116, 16A117), (39.05535, -78.78147) locally known as LONG LICK RUN &nbsp;BRIDGES (EAST BOUND and WEST BOUND), carrying US 048 over CR 08 &amp; Long Lick Run in Hardy County, the &quot;Ronnie Allen Miller Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 26-074/00-017.32 &nbsp;() (26A055), (39.76396, -80.65880) locally known as Valley Run Bridge, carrying CR 074 over Valley Run in Marshall County, the &quot;EM 2 Donald &quot;Ray&quot; Baker Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 10-016/00-007.78 &nbsp;() (10A096), (37.96778, -81.14746) locally known as PEA RIDGE ROAD BRIDGE, carrying WV 016 over US 19 in Fayette County, the &quot;Walter J. Komisky Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name a portion of State Route 7 in Wetzel County from (39.6200234, -80.8487216) to (39.6184898, -80.8470912) the &quot;William D. Long Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 44-021/00-000.02 &nbsp;() (44A041), (38.65028, -81.39503) locally known as JOHNSON CREEK ROAD BRDG (CSPG), carrying CR 021 over POCATALICO RIVER in Roane County, the &quot;Lynch Family Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 17-005/00-000.33 &nbsp;() (17A014), (39.29263, -80.48647) locally known as LOG CABIN ARCH, carrying CR 005 over TENMILE CREEK in Harrison County, the &quot;Gary Edward Swiger Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name portions of Airport Road and Industrial Park Road Beginning: (37.770625 Latitude 81.12166 Longitude) to (End: 37.80692 Latitude 81.124407 Longitude), the &quot;Correctional Workers Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name Bridge on I-64 crossing Mud River at 38.41591631611025, -82.26817946048766 the John Paul White Memorial Bridge.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 10-025/00-000.77 &nbsp;() (10A266), (37.93378, -81.14607) locally known as DUNLOOP CREEK BRIDGE #3, carrying CR 025 over DUNLOOP CREEK in Fayette County, the &quot;Kathy Canterbury Caldwell Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 20-079/00-010.64&nbsp; (NB &amp; SB) (20A508, 20A509), (38.46642, -81.48277) locally known as I-79 BRIDGE NO 2672 NB &amp; SB, carrying IS 079 over CR 53 in Kanawha County, the &quot;Coal Miner and Marine Lance Corporal Stephen Lipscomb Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 20-079/00-007.38 &nbsp;(NB &amp; SB) (20A502, 20A503), (38.43708, -81.52043) locally known as I79 LITTLE SANDY CK 2668 NB &amp; SB, carrying IS 079 over CR45 &amp; LITTLE SANDY CK. in Kanawha County, the &quot;Tim Armstead Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 50-152/00-034.00 () (50A103), (38.25912, -82.44572) locally known as Doctor Doctor Bridge, carrying WV 152 over Twelvepole Creek in Wayne County, the &quot;U.S. Army PFC Carl. J. Osburn Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 31-007/00-019.04 &nbsp;() (31A305), (39.70903, -80.13012) locally known as JAKES RUN BRIDGE, carrying WV 007 over JAKES RUN in Monongalia County, the &quot;Richard Allen Statler Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 11-033/00-016.59 &nbsp;() (11A076), (38.93369, -80.83885) locally known as GLENVILLE TRUSS, carrying US 033 over LITTLE KANAWHA RIVER in Gilmer County, the &quot;Gilmer County Veterans Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number (55A106), (37.69680, -81.52925), locally known as the Laurel Fork Bridge, carrying Mabel Street over Glen Fork in Wyoming County, the &quot;Jim Sigmon Family Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 49-007/00-000.17 &nbsp;() (49A095), (38.99922, -80.25256) locally known as BRUSHY FORK RIGID FRAME, carrying CR 007 over FINK RUN in Upshur County, the &quot;Raymond E. Phillips and Kyle Helmick Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 20-061/00-000.32 &nbsp;() (20A177), (38.18011, -81.33495) locally known as MORRIS CK BR #2492.1, carrying WV 061 over MORRIS CK &amp; PRIVATE RD in Kanawha County, the &quot;Owen Jarrett Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 32-122/00-006.54 &nbsp;() (32A095), (37.54538, -80.68611) locally known as Mill Pond Bridge, carrying WV 122 over LAUREL CREEK in Monroe County, the &quot;SPC-5 Mason P. Johnson Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 13-092/00-008.78 &nbsp;() (13A176), (37.90977, -80.21137) locally known as WHITMANS DRAFT BRIDGE, carrying WV 092 over WHITMANS DRAFT in Greenbrier County, the &quot;USAF Lt. Col. Robert P. White Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name Poplar School Road from &nbsp;(39.221861, -79.025383) to (32.26331, -79.069200), the PFC Herbert Andrew Leatherman Memorial Road.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">Requesting the Division of Highways name bridge number 12-009/00-010.30 &nbsp;() (12A026), (38.95924, -79.11454) locally known as BRAKE BRG., carrying CR 009 over NORTH MILL CRK. in Grant County, the &quot;William R. Mangold Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge numbers: 04-079/00-067.01 (NB &amp; SB) (04A119, 04A120), (38.70312, -80.66296) locally known as Flatwoods Ichg N &amp; S, carrying IS 079 over CR 19/22 in Braxton County, the &quot;John and Virginia Skidmore Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name the 3.1-mile section of Route 18, beginning at a point 3.1 miles from its intersection with Route 119 and ending at a point 3.1 miles further down Route 18, in Lincoln County, the &quot;Hill Family Veterans Memorial Highway.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 22-037/00-004.35&nbsp;(22A167), (38.10346, -82.17775), locally known as &ldquo;U.S. Army TEC5 Donald &quot;Tiny&quot; Lucas Memorial Bridge&rdquo;, carrying CR 037 over East Fk of 14 Mi. Ck in Lincoln County as the &quot;Donald &lsquo;Tiny&rsquo; Lucas and Ronald Dale Lucas Veterans Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways to name the road from the mouth of Harts Creek on Harts Creek Road 1.2 miles to Warrens Way off SR 10 on CR 19 Lincoln County, the &quot;U.S. Army CPL George Browning Memorial Road&quot;. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 16-005/00-001.02 (16A011), (39.08116, -78.57930) locally known as North Mountain Road Bridge, carrying CR 005 over Waites Run in Hardy County, the &quot;U.S. Army SGT Charles Edward Sine Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 10-061/00-025.69 (10A159), (38.12661, -81.26228) locally known as Deepwater Bridge, carrying WV 061 over Loop Creek in Fayette County, the &quot;US Army CPL Mike Comer Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 25-079/00-135.62 (25A260), (39.46437, -80.13663) locally known as Pleasant Valley Bridge, carrying I-79 over Marion Co. Rt. 64 in Marion County, the &quot;Janice L. Cosco Memorial Bridge.&rdquo;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 42-250/00-001.72 (42A263), (38.617, -79.86974) locally known as Cheat Bridge, carrying US 250 over Shavers Fork Cheat River in Randolph County, the &ldquo;Richard Lee Thompson Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 26-250/00-004.62 (26A110), (39.75913, -80.56326) locally known as Bellton Bridge, carrying US 250 over PA Fork of Fish Creek in Marshall County, the &quot;U.S. Army PFC Edwin L. Mackey Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 26-015/00-001.55 (26A097), (39.95361, -80.54004) locally known as Harsh Sugar Camp Bridge, carrying CR 015 over Big Wheeling Creek in Marshall County, the &quot;U.S. Army CPL Wilbert D. Whipkey, POW Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name Bridge Number: 52-013/00-004.64 (52A039), (39.67254, -80.45228) locally known as Hundred Covered Bridge, carrying CR 013 over WV Fork Fish Creek in Wetzel County, the &quot;U.S. Army PFC Charles &#39;Charlie&#39; Goff Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 52-250/00-003.88 (52A139) at (39.68333, -80.45983</span><span class="csA130ECD1">,</span><span class="cs46AE26E6">) locally known as Stewart Street Bridge, carrying CR 250/12 over West Virginia Fork of Fish Creek in Wetzel County, the &quot;U.S. Army Tustin Brothers Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 52-009/00.004.54(52A159) at (39.70766, -80.53262</span><span class="csA130ECD1">)</span><span class="cs46AE26E6">, locally known as Sugar Run Bridge carrying CR 09 over West Virginia Fork of Fish Creek in Wetzel County, the &quot;U.S. Army PFC Howard Bissett Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways&nbsp;rename the section of road located on U.S. Route 250 just North of the Moundsville city limits to just North of the intersection of W.V. Route 891 to the &quot;Waynesburg Pike Road&quot; and have an additional sign placed at the intersection of W.V. Route 88 and U.S. Route 250.</span></p><p class="cs53FB8D75"><a name="_Hlk219138559"><span class="cs46AE26E6">Requesting the Division of Highways name</span></a><span class="cs46AE26E6"> bridge number: 21-019/00-006.49 (21A053), (38.87316, -80.44936) locally known as Walkersville Truss, carrying US 019 over West Fork River in Lewis County, the &quot;U. S. Army CPL Benny Franklin Shifflett Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name Route 46 from (39.4269980, -78.9090972) to (39.4490456, -78.8777104) the &quot;U.S. Army PFC Doil E. Simpson Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 43-021/00-000.06 (43A071), (39.07742, -81.19013), locally known as Dutchman Bridge (CSPG), carrying CR 021 over South Fork Hughes River in Ritchie County as the &quot;Clark Brothers Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 26-250/14-001.94 (26A091), (39.73953, -80.52450) locally known as Georgetown Bridge, carrying CR 250/14 over Pa. Fork of Fish Creek in Marshall County, the &quot;CPL Joe Gorby USMC Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 40-064/00-044.47 (40A075), (38.44092, -81.83320) locally known as I-64 Nitro Interchange Bridge, carrying IS 064 over WV25, CR25/30, N&amp;S RR in Putnam County, the&nbsp;&quot;U.S. Army PVT Ronnie W. Matthews Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 23-016/18-000.01(23A183), at </span><span class="csA130ECD1">Lat./Long.</span><span class="cs46AE26E6"> (37.76296, -81.84196), locally known as Low Ash Concrete Box BM, carrying County Route 16/18 over Buffalo Creek in Logan County, the &quot;U.S. Army PVT Sidney Washington Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 54-014/00-013.22 (54A037), (39.26028, -81.55637) locally known as Fifth Street Bridge (SSTT), carrying WV 014 over Little Kanawha River in Wood County, the&nbsp;&quot;Delegate Thomas A. Azinger Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name a portion of Greentown Loop Road, in Oak Hill, Fayette County, beginning at the intersection of US 19 and WV 16, (37.959594, -81.148356), ending at the intersection of Meadow Fork Road, (37.964227, -81.125199), the &quot;Delegate James Monroe Ellis Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 41-077/00-043.59 (SB) (41A229), (37.78047, -81.22121) locally known as I-77 Over Cabell Rd, carrying IS 077 over Whitestick Crk/Cabell Rd in Raleigh County, the&nbsp;&quot;U.S. Navy S1c Curtis Hatcher Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 10-025/00-000.06 (10A113), locally known as Dunloup Creek Bridge #2, carrying Thurmond Road/CR 25 over Dunloup Creek in Fayette County, the &quot;U.S. Army PFC Calvin Esco Spade Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name a portion of Main Street East, in Fayette County, beginning at the intersection with Patterson Avenue, (37.983998, -81.137400), ending at the intersection with Lochgelly Road, (38.005804, -81.131043), the &quot;USAF SGT Thomas Madison Oxley Memorial Road&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 00-005.51(20A561), locally known as Rocky Fork Bridge, carrying County Route 622 over Rocky Fork Creek in Kanawha County, the &quot;U.S. Army CPL Kenneth H. Tinsley Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 39-072/00-001.85&nbsp;(39A236), (39.28332, -79.73050) locally known as Etam Bridge, carrying WV 072 over Buffalo Creek in Preston County as the &quot;U.S. Army SGT Clinton &quot;Randy&quot; Dean Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name the section of road beginning at (37.765157, -80.466491) and ending at (37.787638, -80.452570), known locally as the Seneca Trail, to the &quot;Vance Brothers Six Military Veterans Highway&quot; and have signs placed identifying it as such.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name a portion of State Route 16, specifically beginning at the northern city limits of Gauley Bridge, West Virginia and continuing for a mile in Fayette County, the &quot;U.S. Navy S1c Guy Harlow Waugh Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 34-001/00-006.32 (34A002), at (38.5011610265538, -80.7633140291533), and locally known as Birch River Bridge, carrying Widen Dille Road over Birch River in Nicholas County, the &quot;U.S. Army SPC4 Gary W. Spinks Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 044-14/00-9.87(44A198), at </span><span class="csA130ECD1">(</span><span class="cs46AE26E6">38.90043, -81.42299, locally known as Reedy Bridge, carrying WV 14 over Reedy Creek in Roane County, the &quot;Revolutionary War PVT Patrick Board Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 44-010/00-001.09 (44A024), locally known as Mt Olive Bridge (SCBB), beginning at (38.815807, -81.430185), ending at</span><span class="csA130ECD1"> </span><span class="cs46AE26E6">(38.815550, -81.430992), carrying Reedyville Road, CR 10, over Left Fork Reedy Creek in Roane&nbsp;County, the &quot;U.S. Army CPL Leonard N. Miller Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name Bridge Number: 13-036/03-000.30 (13A193), (37.80392, -80.30595) locally known as Can Creek Bridge, carrying CR 036/03 over Can Creek in Greenbrier County, the &quot;U.S. Army PFC Paul Ralph Bittinger, Sr. Memorial Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name a portion of 4.3-mile bypass from Tuckers Run to Middle Fork on US 33, in Roane County, the &quot;Scott Miller Memorial Bypass Road.&quot;</span></p><p class="cs53FB8D75"><a name="_Hlk219139615"><span class="cs46AE26E6">Requesting the Division of Highways name </span></a><span class="cs46AE26E6">bridge number 13-092/00-003.04 (13A174), (37.83706, -80.25641) locally known as Pond Lick Run Bridge, carrying WV 092 over Pond Lick Run In Greenbrier County, the &quot;U.S. Army PFC Julian W. Burns Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 23-009/03-000.14 (23A033), (37.83174, -82.04239) locally known as Whitman Junction Bridge, carrying CR 009/03 over Aldrich Creek in Logan County, the &quot;U.S. Army PFC Lester Maynard Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><a name="_Hlk219139778"><span class="cs46AE26E6">Requesting the Division of Highways name </span></a><span class="cs46AE26E6">bridge number 44-033/02-000.03 (44A143), (38.79976, -81.34842) locally known as Spencer Business Park (SCCB), carrying CR 033/02 over Goff Run in Roane County, the &quot;U.S. Army CSM Billie Jo Minney Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 20-817/00-001.23 (20A322), (38.41451, -81.85880) locally known as Tompkins Crossing Bridge, carrying WV 817 over CSX Railroad in Kanawha County, the &quot;USAF LTC Jack Miller Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 50-052/04-001.33 (50A116), (38.30705, -82.42569) locally known as Falls Branch Box Beam, carrying CR 052/04 over Beech Fork in Wayne County, the &quot;Berry Brothers Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><a name="_Hlk219139970"><span class="cs46AE26E6">Requesting the Division of Highways name </span></a><span class="cs46AE26E6">bridge number 16-220/00-015.03 (16A157), (39.13225, -78.9512) locally known as Anderson Run Bridge, carrying US 220 over Anderson Run in Hardy County, the &quot;Donald Warden Hott USN Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><a name="_Hlk219140042"><span class="cs46AE26E6">Requesting the Division of Highways name</span></a><span class="cs46AE26E6"> bridge numbers 16-048/00-021.37 (EB &amp; WB) (16A116, 16A117), (39.05535, -78.78147) locally known as Long Lick Run Bridges (East Bound and West Bound), carrying US 048 over CR 08 &amp; Long Lick Run in Hardy County, the &quot;U.S. Army SPC4 Ronnie Allen Miller Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><a name="_Hlk219140118"><span class="cs46AE26E6">Requesting the Division of Highways name </span></a><span class="cs46AE26E6">bridge number 26-074/00-017.32 (26A055), (39.76396, -80.65880) locally known as Valley Run Bridge, carrying CR 074 over Valley Run in Marshall County, the &quot;U.S. Navy EM2 Donald &quot;Ray&quot; Baker Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 10-016/00-007.78 (10A096), (37.96778, -81.14746) locally known as Pea Ridge Road Bridge, carrying WV 016 over US 19 in Fayette County, the &quot;Dr. Walter J. Kominsky Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name a portion of State Route 7 in Wetzel County from (39.6200234, -80.8487216) to (39.6184898, -80.8470912) the &quot;U.S. Army PVT William D. Long Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 44-021/00-000.02 (44A041), (38.65028, -81.39503) locally known as Johnson Creek Road Brdg (CSPG), carrying CR 021 over Pocatalico River in Roane County, the &quot;Lynch Family Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name portions of Airport Road and Industrial Park Road Beginning: (37.770625, -81.12166) to (37.80692, -81.124407), the &quot;Correctional Workers Memorial Road.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 20-079/00-010.64 (NB &amp; SB) (20A508, 20A509), (38.46642, -81.48277) locally known as I-79 Bridge No 2672 NB &amp; SB, carrying IS 079 over CR 53 in Kanawha County, the &quot;Coal Miner and USMC LCpl Stephen Lipscomb Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 20-079/00-007.38 (NB &amp; SB) (20A502, 20A503), (38.43708, -81.52043) locally known as I79 Little Sandy Ck 2668 NB &amp; SB, carrying IS 079 over CR45 &amp; Little Sandy Ck. in Kanawha County, the &quot;Chief Justice and Speaker Tim Armstead Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 50-152/00-034.00 (50A103), (38.25912, -82.44572) locally known as Doctor Doctor Bridge, carrying WV 152 over Twelvepole Creek in Wayne County, the &quot;U.S. Army PFC Carl. J. Osburn Bridge&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 11-033/00-016.59 (11A076), (38.93369, -80.83885) locally known as Glenville Truss, carrying US 033 over Little Kanawha River in Gilmer County, the &quot;Gilmer County Veterans Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 20-061/00-000.32 (20A177), (38.18011, -81.33495) locally known as Morris Ck Br #2492.1, carrying WV 061 over Morris Ck &amp; Private Rd in Kanawha County, the &quot;U.S. Army PVT Owen Jarrett Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 32-122/00-006.54 (32A095), (37.54538, -80.68611) locally known as Mill Pond Bridge, carrying WV 122 over Laurel Creek in Monroe County, the &quot; U.S. Army SPC5 Mason P. Johnson Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 13-092/00-008.78 (13A176), (37.90977, -80.21137) locally known as Whitmans Draft Bridge, carrying WV 092 over Whitmans Draft in Greenbrier County, the &quot;USAF LTC Robert P. White Memorial Bridge.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name Poplar School Road from (39.221861, -79.025383) to (32.26331, -79.069200), the &ldquo;U.S. Army PFC Herbert Andrew Leatherman POW Memorial Road&rdquo;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Requesting the Division of Highways name bridge number 12-009/00-010.30 (12A026), (38.95924, -79.11454) locally known as Brake Brg., carrying CR 009 over North Mill Crk. in Grant County, the &quot;U.S. Army CPL William R. Mongold Memorial Bridge.&quot;; and be it</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Resolved by the Legislature of West Virginia:</span></p><p class="cs9A0FB74B"><span class="csEF05ACC">That the Division of Highways name the infrastructure specified in this resolution; and be it</span></p><p class="cs53FB8D75"><span class="cs93AB6E8B">Further Resolved</span><span class="csEF05ACC">, That the Clerk of the House is hereby directed forward a copy of this resolution to the parties submitting the naming requests. </span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

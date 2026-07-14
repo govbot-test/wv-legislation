@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 626 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=626">&laquo; Senate Bill 626 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 626'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 626 - Removing Inspector General from inclusion in Department of Health&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb626+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=626"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.csF5B7C975{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs5F7FB1FA{color:#000000;background-color:#FFFF00;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	<span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 626</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Helton</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 27, 2026; referred<br/>to the Committee on Health and Human Resources; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;5F-2-1a, &sect;16B-2-1, and &sect;16B-2-4 of the Code of West Virginia, 1931, as amended, relating to the Office of the Inspector General; removing the Inspector General from inclusion in the Department of Health; removing the requirement that the Department of Health provide administrative support; clarifying that the Inspector General has the power to conduct performance audits, financial audits, evaluations, and attestations engagements of the Department of Human Services, the Department of Health, and the Department of Health Facilities and their independent contractors; requiring reporting; and requiring notification to the prosecuting attorney and law-enforcement in the event that the Inspector General believes a criminal law has been violated.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5F. REORGANIZATION OF THE EXECUTIVE BRANCH OF STATE GOVERNMENT.</span></h1>
+	<h2 class="cs89687900">
+		<span class="csF5B7C975">ARTICLE 2. OFFICE OF THE INSPECTOR GENERAL, DUTIES, AND POWERS.</span></h2>
+	<h4 class="cs89687900">
+		<a name="_Hlk126333868"><span class="csB9803513">&sect;5F-2-1a</span></a><span class="csB9803513">. Termination of the department of health and human resources; transfer and incorporation of agencies and boards legislative intent; creation of new departments.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) It is the intent of the Legislature to devolve the functions of the </span><a name="_Hlk125356608"><span class="csEF05ACC">Department of Health and Human Resources</span></a><span class="csEF05ACC"> into three new and separate departments of the executive branch as provided in this Act over a period of transition that concludes with the termination of the Department of Health and Human Resources. &nbsp;It is the intent of the Legislature that the provisions of this Act be construed to achieve the restructuring and reallocation of the powers, duties and functions of the </span><a name="_Hlk125357203"><span class="csEF05ACC">Department of Health and Human Resources </span></a><span class="csEF05ACC">to the three new departments created in this section in an orderly manner designed to maintain the delivery of services that have heretofore been provided by the Department of Health and Human Resources by the new departments during the transition and beyond the termination of the Department of </span><a name="_Hlk125361462"><span class="csEF05ACC">Health and Human Resources </span></a><span class="csEF05ACC">without disruption and to streamline and, where possible, to share administrative and operative expenses where common to each of the new departments. &nbsp;To that end, the Secretary of the Department of Health and Human Resources, the Secretary of the Department of Human Services, the Secretary of the Department of Health and the </span><a name="_Hlk125985170"><span class="csEF05ACC">Secretary of the Department of Health Facilities </span></a><a name="_Hlk125985110"><span class="csEF05ACC">shall enter </span></a><a name="_Hlk126577198"><span class="csEF05ACC">into a memorandum of understanding to effect the provisions of this Act that shall, at a minimum, create a Office of Shared Administration mutually administered by the secretaries that shall coordinate efforts with the Department of Administration to maximize efficiencies and function of services in an effort to contain expenses within the Department of Human Services, the Department of Health and the Department of Health Facilities. &nbsp;The Office of Shared Administration shall implement a plan to maximize function and efficiency administrative services for the purpose of streamlining administrative services and reducing expenses within the departments.</span></a><span class="csEF05ACC"> &nbsp;The Office of Shared Administration shall complete implementation by June 30, 2024, and shall provide quarterly updates to the Legislative Oversight Commission on Health and Human Resources Accountability.</span></p><p class="cs53FB8D75"><a name="_Hlk126573267"><span class="csEF05ACC">(b) The Department of Human Services created under &sect;5F-1-2 of this code is a separate and distinct department of the executive branch. The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are </span></a><a name="_Hlk125355168"><span class="csEF05ACC">transferred to,</span></a><span class="csEF05ACC"> incorporated in and administered as a part of the Department of Human Services:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Bureau for Social Services;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Bureau for Medical Services; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Bureau for Child Support Enforcement;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Bureau for Family Assistance; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Bureau for Behavioral Health; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Any other agency or entity hereinafter established within the Department of Human Services by an act of the Legislature.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) </span><span class="cs68EFC440">(1)</span><span class="csEF05ACC"> The Department of Health created under &sect;5F-1-2 of this code is a separate and distinct department of the executive branch. The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are transferred to, incorporated in and administered as a part of the Department of Health:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Bureau for Public Health;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Office of Emergency Medical Services; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Office of the Chief Medical Examiner;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Center for Threat Preparedness;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Health Care Authority; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Any other agency or entity hereinafter established within the Department of Health by an act of the Legislature.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(2) The Office of the Inspector General is a separate and autonomous agency within the Department of Health as provided in &sect;16B-2-1. &nbsp;The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are transferred to, incorporated in and administered as a part of the Office of the Inspector General. The Office of the Inspector General, shall include:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(A) Office of Health Facility Licensure and Certification;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(B) Board of Review;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(C) Foster Care Ombudsman;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(D) Olmstead Office;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(E) Investigations and Fraud Management;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(F) Quality Control; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(G) Mental Health Ombudsman;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(H) WV Clearance for Access: Registry and Employment Screening; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(I) Human Rights Commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The Department of Health Facilities created under &sect;5F-1-2 of this code is a separate and distinct department of the executive branch. The following state facilities, including all of the allied, advisory, affiliated, or related entities and funds associated with any state facility, are transferred to, incorporated in and administered as a part of the Department of Health Facilities:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(1)</span><span class="csEF05ACC"> </span><span class="cs68EFC440">Hopemont Hospital;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(2)</span><span class="csEF05ACC"> </span><span class="cs68EFC440">Jackie Withrow Hospital;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(3)</span><span class="csEF05ACC"> </span><span class="cs68EFC440">John Manchin, Sr. Health Care Center;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4)</span><span class="csEF05ACC"> </span><span class="cs68EFC440">Lakin Hospital;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5)</span><span class="cs46AE26E6">(1)</span><span class="csEF05ACC"> Mildred Mitchell-Bateman Hospital;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(6)</span><span class="cs46AE26E6">(2)</span><span class="csEF05ACC"> Welch Community Hospital; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(7)</span><span class="cs46AE26E6">(3)</span><span class="csEF05ACC"> William R. Sharpe Jr. Hospital; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(8)</span><span class="cs46AE26E6">(4)</span><span class="csEF05ACC"> Any other agency or entity hereinafter established within the Department of Health Facilities by an act of the Legislature.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Any secretary may recommend that a bureau, office, board, commission or other state entity be included or excluded from the organization of the departments created in this section to the Joint Committee on Government and Finance and the Legislative Commission on Health and Human Resources Accountability.</span><span class="cs5F7FB1FA"> </span></p><p class="cs53FB8D75"><a name="_Hlk125624691"><span class="csEF05ACC">(f) All programs, orders, determinations, rules, permits, grants, contracts, certificates, bonds, authorizations and privileges which have been issued, promulgated, made, granted or allowed to become pursuant to authority provided by this code to the Department of Health and Human Resources or the Secretary of that Department that are in effect on the dates of the creation of the new departments as provided in this section shall continue in effect according to their terms until modified, terminated, superseded, set aside or revoked by the department or secretary that assumes authority over the subject matter of the same under the provisions of this Act.</span></a></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 16B. INSPECTOR GENERAL.</span></h1>
+	<h2 class="cs89687900">
+		<span class="csF5B7C975">ARTICLE 2. OFFICE OF THE INSPECTOR GENERAL, DUTIES, AND POWERS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;16B-2-1. Office of the Inspector General continued; appointment and qualifications of Director of Office of Health Facility Licensure and Certification and the Director of Investigations and Fraud Management Units.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The </span><a name="_Hlk125981899"><span class="csEF05ACC">Office of the Inspector General is continued as a separate and autonomous agency </span><span class="cs68EFC440">within the Department of Health</span></a><span class="cs68EFC440">. The Department of Health shall provide administrative support, at the request of the Office of Inspector General. Shared services shall be provided at the request of the Office of the Inspector General when the same cannot be accomplished with current staffing within the Office of the Inspector General.</span><span class="csEF05ACC"> The Office of Inspector General shall be headed by the Inspector General </span><span class="cs68EFC440">and is comprised of</span><span class="csEF05ACC"> </span><span class="cs68EFC440">the offices as provided in &sect;5F-2-1a of this code. Any administrative supports or shared services provided or received by the Office of the Inspector General are not subject to review by the Department of Health, the Department of Human Services, or the Department of Health Facilities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) (1) The Inspector General shall be appointed by the Governor, within 90 days of a vacancy, subject to the advice and consent of the Senate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The term of the Inspector General is five years.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) At the end of a term, the Inspector General is eligible to be reappointed for one additional term. The Inspector General shall continue to serve until a successor is appointed.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) If a vacancy occurs in the office, an interim Inspector General may be appointed as successor to serve for the remainder of the unexpired term.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Inspector General may be removed by the Governor only for:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Misconduct in office;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Persistent failure to perform the duties of the Office; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Conduct prejudicial to the proper administration of justice.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The Inspector General shall be professionally qualified through experience or education in at least two of the following areas:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Auditing;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Government operations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Financial management; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Health policy.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The Inspector General shall be paid an annual salary as provided in the budget.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Funding for the office shall be as provided in the state budget.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The Inspector General shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Conduct and supervise investigations, perform inspections, evaluations, and review, and provide quality control for the programs of the Department of Human Services, the Department of Health, and the Department of Health Facilities to promote legal, regulatory, programmatic, and fiscal compliance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Investigate fraud, waste, and abuse of the Department of Human Services, the Department of Health, and the Department of Health Facilities&rsquo; funds, and conduct, whether by acts or omissions in the Department of Human Services, the Department of Health, and the Department of Health Facilities, that threatens or has the reasonable likelihood to threaten public safety or demonstrates negligence, incompetence, or malfeasance, </span><span class="cs46AE26E6">including but not limited to performance of the following</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Conducting performance audits, financial audits, evaluations, and attestations engagements of the </span><a name="_Hlk218615298"><span class="cs46AE26E6">Department of Human Services, the Department of Health, and the Department of Health Facilities</span></a><span class="cs46AE26E6"> and their independent contractors to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Determine whether acts of fraud, waste, abuse, or corruption have been committed or are being committed by the Department of Human Services, the Department of Health, and the Department of Health Facilities state officers, employees, or their independent contractors including any allegations of criminal acts affecting the operations of state agencies. However, no investigation of an elected official of the state of West Virginia shall occur, be initiated, undertaken, or continued except upon the request of the Governor or a grand jury;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Determine whether the Department of Human Services, the Department of Health, and the Department of Health Facilities&rsquo; programs are efficient, effective, offered in compliance with the laws and regulations, and obtain success in achieving program objectives; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Determine whether the Department of Human Services, the Department of Health, and the Department of Health Facilities&rsquo; has presented their financial statements fairly in accordance with generally accepted accounting principles, has an internal control structure that provides reasonable assurance of achieving the control objectives; and has complied with laws and regulations that could have a direct impact and material effect on its financial statements, the Federal Financial Management Improvement Act and other such laws and regulations. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Preparing a detailed report of each investigation shall be prepared and submitted beginning on July 1, 2027 and each year thereafter to the Legislative Oversight Commission on Health and Human Resources Accountability. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The Department of Human Services, the Department of Health, and the Department of Health Facilities shall respond to each finding contained in the audit within 30 days of receipt of the audit</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Providing timely notification to the appropriate prosecuting attorney and law-enforcement agencies whenever the Inspector General has reasonable grounds to believe there has been a violation of state criminal law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Cooperate with and coordinate investigative efforts with the Medicaid Fraud Control Unit within the Office of the Attorney General, and where a preliminary investigation establishes a sufficient basis to warrant referral, shall refer such matters to the Medicaid Fraud Control Unit; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Cooperate with and coordinate investigative efforts with departmental programs and other state and federal agencies to ensure a provider is not subject to duplicative audits; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Be empowered to consult with the Legislature for policy development;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) (A) Organize a board of review, consisting of a chairman appointed by the Inspector General and as many assistants or employees as may be determined by the Inspector General and as may be required by federal laws and rules respecting assistance; the board of review to have such powers of a review nature and such additional powers as may be granted to it by the Inspector General and as may be required by federal laws and rules respecting assistance;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Provide by rules, review, and appeal procedures within the office as may be required by applicable federal laws and rules respecting assistance, and as will provide applicants for, and recipients of, all classes of assistance, an opportunity to be heard by the board of review, a member thereof, or individuals designated by the board, upon claims involving denial, reduction, closure, delay, or other action or inaction pertaining to public assistance;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) (A) May subpoena any person or evidence, administer oaths, take and certify affidavits, and take depositions and other testimony for the purpose of investigating fraud, waste, and abuse of Department of Health, Department of Human Services, or Department of Health Facilities&rsquo; funds, or behavior in the same departments that threaten public safety or demonstrate negligence, incompetence, or malfeasance;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) If a person fails to comply with a lawful order or subpoena issued under this subsection, on petition of the Inspector General or a designated Assistant Inspector General, a court of competent jurisdiction may compel:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Compliance with the order or subpoena; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Testimony or the production of evidence;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Within 30 business days after receiving a complaint or allegation, the Inspector General shall respond to the individual who filed the complaint or allegation with:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) A preliminary indication of whether the Office of the Inspector General is able to investigate the complaint or allegation; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) If the Office of the Inspector General is unable to investigate the complaint or allegation because of a conflict of interest, the Office of the Inspector General shall refer the complaint or allegation to another unit of government or law enforcement.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Neither the secretary nor any employee of the Department of Human Services, Department of Health, or the Department of Health Facilities may prevent, inhibit, or prohibit or cause to be prevented, inhibited, or prohibited, the Inspector General or his or her employees from initiating, carrying out, or completing any investigation, inspection, evaluation, review, or other activity oversight of public integrity by the Office of the Inspector General. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The Inspector General formulates, approves, and submits his or her budget to the Governor for consideration by the Governor. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The Inspector General shall supervise all personnel of the Office of the Inspector General. &nbsp;Qualification, compensation, and personnel practice relating to the employees of the Office of the Inspector General, shall be governed by the classified service.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) Employ and discharge within the Office of the Inspector General employees, including professional employees such as investigators and other professional personnel as may be necessary to carry out the functions of the Inspector General, which employees shall continue to be within the classified service provisions of &sect;29-6-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code and rules promulgated thereunder, except for the Inspector General.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) Cause the various sections of the Office of the Inspector General to be operated effectively, efficiently, and economically, and to develop goals, policies, and plans that are necessary or desirable for the effective, efficient, and economical operation of the Office of the Inspector General.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) Eliminate or consolidate positions and name a person to fill more than one position.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) Reorganize internal functions or operations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) Enter into contracts or agreements requiring the expenditure of public funds and authorize the expenditure or obligation of public funds as authorized by law: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the powers granted to the Inspector General to enter into agreements and to make expenditures or obligations of public funds under this provision shall not exceed or be interpreted as authority to exceed the powers granted by the Legislature.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o) Promulgate rules, as defined in &sect;29A-1-2 of this code, to implement and make effective the powers, authority, and duties granted and imposed by the provisions of this chapter in accordance with the provisions of chapter 29A of this code. The Inspector General may promulgate emergency rules pursuant to &sect;29A-3-15 of this code to effectuate the purposes of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) Delegate to administrators the duties the Inspector General may deem appropriate, from time to time, to facilitate execution of the powers, authority, and duties delegated to the Inspector General.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(q) Transfer permanent state employees between units of the Inspector General.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(r) Enter into memorandums of understanding; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(s) Take any other action involving or relating to internal management not otherwise prohibited by law; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(t) All legislative rules currently in effect impact the Office of the Inspector General or its programs will continue to remain in full force and effect.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(u) (1) The Director of Office of Health Facility Licensure and Certification shall be appointed by the Governor, within 90 days of a vacancy, subject to the advice and consent of the Senate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Director of the Office of Health Facility Licensure and Certification shall have at least eight years&rsquo; experience in the field of licensure and regulatory matters; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v)(1) The Director of Investigations and Fraud Management shall be appointed by the Governor, subject to advice and consent of the Senate. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Director of Investigations and Fraud Management shall have at least eight years&rsquo; experience in the field of investigations and fraud matters.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(w) The Inspector General, the Director of The Office of Health Facility Licensure and Certification and the Director of the Investigations and Fraud Management may not be the same person. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;16B-2-4. Authority of Investigations and Fraud Management Division to subpoena witnesses and documents. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) When the Investigations and Fraud Management Unit of the Office of the Inspector General, which is charged with investigating welfare fraud, </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> intra-agency employee misconduct, </span><span class="cs46AE26E6">conducting performance audits, financial audits, evaluations, and attestations engagements of the Department of Human Services, the Department of Health, and the Department of Health Facilities and their independent contractors</span><span class="csEF05ACC"> has credible information that indicates a person has engaged in an act or activity related to the Department of Human Services, the Department of Health, or the Department of Health Facilities programs, benefits, or intra-agency employee misconduct which is subject to prosecution, it may conduct an investigation to determine if the act has been committed. To the extent necessary to the investigation, the Inspector General or an employee of the Office of the Inspector General may administer oaths or affirmations and issue subpoenas for witnesses and documents relevant to the investigation, including information concerning the existence, description, nature, custody, condition, and location of any book, record, documents or other tangible thing, and the identity and location of persons having knowledge of relevant facts or any matter reasonably calculated to lead to the discovery of admissible evidence.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">When the Investigations and Fraud Management Unit has probable cause to believe that a person has engaged in an act or activity which is subject to prosecution relating to the Department of Human Services, the Department of Health, or the Department of Health Facilities programs, benefits, or intra-agency employee misconduct, the Inspector General or an employee of the Office of the Inspector General may request search warrants and present and swear or affirm criminal complaints.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) If documents necessary to an investigation of the Investigations and Fraud Management Unit appear to be located outside the state, the documents shall be made available by the person or entity within the jurisdiction of the state having control over such documents either at a convenient location within the state or, upon payment of necessary expenses to the division for transportation and inspection, at the place outside the state where these documents are maintained.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Upon failure of a person to comply with a subpoena or a subpoena for the production of evidence or failure of a person to give testimony without lawful excuse and upon reasonable notice to all persons affected thereby, the Investigations and Fraud Management Division may apply to the circuit court of the county in which compliance is sought for appropriate orders to compel obedience with the provisions of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The Investigations and Fraud Management Unit may not make public the name or identity of a person whose acts or conduct is investigated pursuant to this section or the facts disclosed in an investigation except as the same may be used in any legal action or enforcement proceeding brought pursuant to this code or federal law.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to remove the Office of the Inspector General from the Department of Health, where is it for administrative purposes, &nbsp;and to clarify that the Office of the Inspector General has the ability to conduct performance audits, financial audits, evaluations, and attestations engagements of the Department of Human Services, the Department of Health, and the Department of Health Facilities and their independent contractors.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

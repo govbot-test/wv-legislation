@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 417 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=417">&laquo; Senate Bill 417 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 417'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 417 - Proxy Advisor Transparency Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb417+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=417"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 417</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Rucker</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 15, 2026; referred<br/>to the Committee on Banking and Insurance; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;46A-9-1, &sect;46A-9-2, &sect;46A-9-3, &sect;46A-9-4, &sect;46A-9-5, and &sect;46A-9-6, relating to creating the Proxy Advisor Transparency Act; providing legislative findings; creating definitions; setting out disclosure requirements; providing for enforcement; setting an effective date; and providing a severability provision. </span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">article 9. proxy advisor transparancy act. </span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46A-9-1. Legislative Findings. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The State of West Virginia finds as follows: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) When shareholders hire professionals to manage investments, they reasonably expect that the service provider will perform those services in the financial interest of the shareholders, and that the service provider will make recommendations based on financial analysis of what actions would enhance investment value. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) There is a particular need for disclosures for proxy voting advice because that advice is often provided for hundreds or thousands of shareholder votes each year, and few investors have the resources to research every shareholder vote, so investors often use proxy advisors for guidance on how to exercise fiduciary duties.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Many companies hire proxy advisors pursuant to the Department of Labor&rsquo;s long-standing conclusion that, under the Employee Retirement Income Security Act, the &quot;fiduciary obligations of prudence and loyalty to plan participants and beneficiaries require the responsible fiduciary to vote proxies on issues that may affect the value of the plan&rsquo;s investment.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Directors of publicly-held companies owe fiduciary duties to shareholders, and make recommendations in line with those fiduciary duties.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Nevertheless, proxy advisors have recommended votes against company management, including votes for shareholder proposals related to environmental, social, or governance (ESG) issues; diversity, equity, or inclusion (DEI) issues; and social credit and sustainability scores; but have not disclosed to clients that the recommendations were made without conducting a financial analysis to determine how these votes would affect shareholder value. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) In fact, the chief operating officer of Glass Lewis, a major proxy advisor, stated under penalty of perjury that Glass Lewis does not conduct a written financial analysis before recommending votes on shareholder proposals, and that other proxy advisors do not do so either. Yet proxy advisors have advertised that the purpose of their recommendations is maximizing, increasing, or protecting shareholder value.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) These facts raise concern that proxy advisors are engaged in fraudulent or deceptive practices and are not disclosing material information to their clients, who otherwise would reasonably believe that they are choosing between recommendations of management and a proxy advisor that are based on dueling financial analyses. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Investors purchasing proxy voting services should be informed when recommendations against management are or are not being based on financial analyses that consider the effect on the value of the plan&rsquo;s investment. Investors also should be able to access those analyses upon request, in order to assess whether the analyses were sufficient to uphold fiduciary standards. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Requiring proxy advisors to provide clear, factual disclosures under these circumstances helps investors evaluate whether the proxy advisor&rsquo;s recommendations uphold investors&rsquo; fiduciary duties of prudence and loyalty.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Requiring proxy advisors to inform companies of these recommendations also promotes disclosures in line with fiduciary duties. For example, a company that is the subject of a shareholder proposal often has additional information regarding whether a proposal is in the shareholder&rsquo;s financial interests or regarding the costs of a proposal, and notice of a proxy advisor&rsquo;s recommendation allows the company to provide additional responsive information to shareholders seeking to uphold their fiduciary duties. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46A-9-2. Definitions. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Company&quot; means a publicly-traded, for-profit corporation, limited liability company, partnership, or other business entity that is organized or created under the laws of this state, has its principal place of business in this state, or is a foreign entity that has made a company proposal to become a domestic entity, whether by merger, conversion, or otherwise.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Company proposal&quot; means any proposal made by a company to its shareholders that is included in the company&rsquo;s proxy statement, including but not limited to director nominations or elections, or any proposal relating to director nominations or elections, executive compensation, corporate transactions, corporate structure, auditor selection, or company policy on any subject.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Default recommendation or policy&quot; means a system, set of rules, principles, or guidelines designed to assist with voting decisions on any company proposals or proxy proposals.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Proxy advisor&quot; means a person who, for compensation, provides a proxy advisory service to shareholders of a company or to other persons with authority to vote on behalf of shareholders of a company.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Proxy advisory service&quot; means any of the following services that are provided in connection with or in relation to a company, or are provided to any person in this state:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Advice or a recommendation on how to vote on a company proposal or proxy proposal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Proxy statement research and analysis regarding a company proposal or proxy proposal; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Development of proxy voting recommendations or policies, including establishing default recommendations or policies.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Proxy proposal&quot; means any proposal made by a shareholder of a company that is included in the company&rsquo;s proxy statement, including but not limited to a proposal relating to any of the subjects that could be covered by a company proposal.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Shareholder&quot; includes a shareholder, unitholder, limited partner, or other equity owner of a company.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Written financial analysis&quot; means a written document that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Analyzes the expected short-term and long-term financial benefits and costs to the company of implementing a company proposal or proxy proposal, </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Concludes what vote or course of action is most likely to positively affect shareholder value, and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Explains the methods and processes used to prepare the analysis, including the experience and geographic location of the personnel who formed the recommendation.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46A-9-3. Disclosure of lack of financial analysis to prevent fraud or deceit. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) If a proxy advisor makes a recommendation against company management on a company proposal or proxy proposal, or makes a default recommendation or policy involving votes against company management on company proposals or proxy proposals, and the proxy advisor does not do so based on a written financial analysis, the proxy advisor shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Concurrently with providing the proxy advisory service, include a clear and conspicuous disclosure to each shareholder, or entity or other person acting on behalf of a shareholder, receiving the proxy advisory service that: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Identifies the service being provided; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Identifies the recommendation or policy at issue; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) States that the proxy advisory service has made the recommendation or policy without doing so based on a written financial analysis regarding the impact of that recommended action on company investors that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Analyzes the expected short-term and long-term financial benefits and costs to the company of implementing the company proposal or proxy proposal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Concludes what vote or course of action is most likely to positively affect shareholder value; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Explains the methods and processes used to prepare the analysis, including the experience and geographic location of the personnel who formed the recommendation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) For a proxy advisory service covered under this section, concurrently with providing the proxy advisory service, provide the disclosure under subsection (a)(1) of this section to the board of directors of each company that is the subject of the service; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) While any proxy advisory services described by subsection (a) of this section are being provided, publicly and conspicuously disclose on the home or front page of the proxy advisor&rsquo;s website a statement that the advisor&rsquo;s proxy advisory services include one or more services that include recommendations or policies against company management on company proposals or proxy proposals that are not made based on a written financial analysis regarding the impact of that recommended action on company investors that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Analyzes the expected short-term and long-term financial benefits and costs to the company of implementing the company proposal or proxy proposal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Concludes what vote or course of action is most likely to positively affect shareholder value; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Explains the methods and processes used to prepare the analysis, including the experience and geographic location of the personnel who formed the recommendation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If a proxy advisor makes a recommendation against company management on a company proposal or proxy proposal, or makes a default recommendation or policy involving votes against company management on company proposals or proxy proposals, and the proxy advisor does so based on a written financial analysis, the proxy advisor shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Concurrently with providing the proxy advisory service, include a clear and conspicuous disclosure to each shareholder, or entity or other person acting on behalf of a shareholder, receiving the proxy advisory service that: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Identifies the service being provided; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Identifies the recommendation or policy at issue; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) States that the proxy advisory service has made the recommendation or policy based on a written financial analysis that :</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Analyzes the expected short-term and long-term financial benefits and costs to the company of implementing the company proposal or proxy proposal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Concludes what vote or course of action is most likely to positively affect shareholder value; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Explains the methods and processes used to prepare the analysis, including the experience and geographic location of the personnel who formed the recommendation; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) States that the analysis is available upon request;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Make such analysis available within a reasonable time to any client of the proxy advisory service upon request;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) For a proxy advisory service covered under this section, concurrently with providing the proxy advisory service, provide a copy of such analysis to the board of directors of each company that is the subject of the service.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46A-9-4. Enforcement.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A violation of this article is a deceptive trade practice under &sect;46A-6-104 of this code and is actionable under the enforcement provisions of that statute. The Attorney General of the State of West Virginia may exercise all investigative powers under the West Virginia Consumer Credit and Protection Act, &sect;46A-1-101 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, if the attorney general has reason to believe a violation has occurred, is occurring, or is about to occur.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) In addition to enforcement under subsection (a), any person aggrieved by a violation of this act may bring an action seeking a declaratory judgment or injunctive relief against a proxy advisor who violates this chapter. Not later than the seventh day after the date on which an action is brought under this subsection, the plaintiff shall provide written notice to the Attorney General of the State of West Virginia, who has a right to intervene in the action. For purposes of this paragraph, an aggrieved person includes:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A recipient of proxy advisory services provided by the proxy advisor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A company that is the subject of proxy advisory services covered by &sect;46A-9-3 of this code provided by the proxy advisor; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any shareholder, unitholder, limited partner, or other equity owner of a company covered by subsection (b)(2) of this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46A-9-5. Severability.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">If any provision of this article or its application to any person or circumstance is held unconstitutional or invalid, such unconstitutionality or invalidity shall not affect any other provisions or applications of this article which are declared to be severable.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46A-9-6. Effective Date. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">This article becomes effective on July 1, 2026. The changes in law made by this article apply only to a proxy advisory service provided on or after the effective date. Nothing in this article eliminates any claim under the West Virginia Consumer Credit and Protection Act, &sect;46A-1-</span><span class="cs1489E706">101 et seq.</span><span class="cs46AE26E6"> of this code, regardless of whether that claim accrues before or after the effective date of this article. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create the Proxy Advisor Transparency Act. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

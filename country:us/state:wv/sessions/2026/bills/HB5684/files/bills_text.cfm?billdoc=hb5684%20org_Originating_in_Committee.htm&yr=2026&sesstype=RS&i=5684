@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5684 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version - Originating in Committee
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5684">&laquo; House Bill 5684 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5684'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5684 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5684" title="HTML  - Enrolled Version  - Final Version
+ - House Bill 5684">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5684 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5684" title="HTML  - Engrossed Version
+ - House Bill 5684">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5684 - Relating to authorizing the Supreme Court of Appeals to create child protection commissioners&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5684+org.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5684"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Originating</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5684</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Akers, Maynor, Butler, Heckert, Holstein, Phillips, B. Ward, D. Cannon, and Burkhammer</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Originating in the Committee on the Judiciary; Reported on February 27, 2026]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;5-10-48, &sect;49-1-207, and &sect;51-9-10 of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;49-4-118, relating to authorizing the Supreme Court of Appeals to create child protection commissioners; specifying retirement benefits applicable to certain retired public employees employed as child protection commissioners; defining child protection commissioner; requesting Supreme Court of Appeals to create program of child protection commissioners; providing for appointment, removal, and oversight; providing qualifications; authorizing multi-circuit child protection commissioner regions; setting forth powers and duties; providing for compensation and employment terms; and authorizing senior judges and justices to serve as child protection commissioners.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5. GENERAL POWERS AND AUTHORITY OF THE GOVERNOR, SECRETARY OF STATE AND ATTORNEY GENERAL; BOARD OF PUBLIC WORKS; MISCELLANEOUS AGENCIES, COMMISSIONS, OFFICES, PROGRAMS, ETC.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 10. WEST VIRGINIA PUBLIC EMPLOYEES RETIREMENT ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5-10-48. Reemployment after retirement; options for holder of elected public office.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Legislature finds that a compelling state interest exists in maintaining an actuarially sound retirement system and that this interest necessitates that certain limitations be placed upon an individual&rsquo;s ability to retire from the system and to then later return to state employment as an employee with a participating public employer while contemporaneously drawing an annuity from the system. The Legislature hereby further finds and declares that the interests of the public are served when persons having retired from public employment are permitted, within certain limitations, to render post-retirement employment in positions of public service, either in elected or appointed capacities. The Legislature further finds and declares that it has the need for qualified employees and that in many cases an employee of the Legislature will retire and be available to return to work for the Legislature as a per diem employee. The Legislature further finds and declares that in many instances these employees have particularly valuable expertise which the Legislature cannot find elsewhere. The Legislature further finds and declares that reemploying these persons on a limited per diem basis after they have retired is not only in the best interests of this state but has no adverse effect whatsoever upon the actuarial soundness of this particular retirement system.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) For the purposes of this section: (1) &quot;Regularly employed on a full-time basis&quot; means employment of an individual by a participating public employer, in a position other than as an elected or appointed public official, which normally requires 12 months per year service and at least 1,040 hours of service per year in that position; (2) &quot;temporary full-time employment&quot; or &quot;temporary part-time employment&quot; means employment of an individual on a temporary or provisional basis by a participating public employer, other than as an elected or appointed public official, in a position which does not otherwise render the individual as regularly employed; (3) &quot;former employee of the Legislature&quot; means any person who has retired from employment with the Legislature and who has at least 10 years&rsquo; contributing service with the Legislature; and (4) &quot;reemployed by the Legislature&quot; means a former employee of the Legislature who has been reemployed on a per diem basis not to exceed 175 days per calendar year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Subject to the provisions of subsection (i) of this section, if a retirant becomes regularly employed on a full-time basis by a participating public employer, payment of his or her annuity shall be suspended during the period of his or her reemployment and he or she shall become a contributing member to the retirement system. If his or her reemployment is for a period of one year or longer, his or her annuity shall be recalculated and he or she shall be granted an increased annuity due to the additional employment, the annuity to be computed according to &sect;5-10-22 of this code. If his or her reemployment is for a period less than one year, he or she may request in writing that the employee and employer retirement contributions submitted during reemployment be credited to the participating public employer pursuant to &sect;5-10-44 of this code, and his or her previous annuity shall be reinstated effective the first day of the month following termination of reemployment and the board&#39;s receipt of written notice thereof. Subject to the provisions of subsection (i) of this section, a retirant may accept legislative per diem, temporary full-time, or temporary part-time employment from a participating employer without suspending his or her retirement annuity so long as he or she does not receive annual compensation in excess of $25,000.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Senior judges, justices, and magistrates. &mdash;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Notwithstanding the provisions of subsection (c) of this section, a retired intermediate court judge, circuit court judge, or family court judge, or justice who is recalled and assigned to temporary service as a senior judge or justice by the West Virginia Supreme Court of Appeals may receive per diem compensation pursuant to the requirements of &sect;51-9-10 of this code while continuing to receive his or her annuity, subject to the provisions of subsection (i) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Notwithstanding the provisions of subsection (c) of this section, a retired magistrate who is recalled and assigned to temporary service as a senior magistrate by the West Virginia Supreme Court of Appeals may receive per diem compensation pursuant to the requirements of &sect;50-1-6a of this code while continuing to receive his or her annuity, subject to the provisions of subsection (i) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Subject to the provisions of subsection (i) of this section, if a member retires and is then subsequently elected to a public office, or is subsequently appointed to hold an elected public office, or is a former employee of the Legislature who has been reemployed by the Legislature, he or she has the option, notwithstanding subsection (c) of this section, to either:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Continue to receive payment of his or her annuity while holding public office, or during any reemployment of a former employee of the Legislature on a per diem basis, in addition to the salary he or she may be entitled to as an office holder, or as a per diem reemployed former employee of the Legislature; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Suspend the payment of his or her annuity and become a contributing member of the retirement system as provided in subsection (c) of this section. Notwithstanding the provisions of this subsection, a member who is participating in the system as an elected public official may not retire from his or her elected position and commence to receive an annuity from the system and then be elected or reappointed to the same position unless and until a continuous 12-month period has passed since his or her retirement from the position:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a former employee of the Legislature may not be reemployed by the Legislature on a per diem basis until at least 60 days after the employee has retired:&nbsp;</span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the limitation on compensation provided by subsection (c) of this section does not apply to the reemployed former employee:&nbsp;</span><span class="cs93AB6E8B">Provided further</span><span class="csEF05ACC">, That in no event may reemployment by the Legislature of a per diem employee exceed 175 days per calendar year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Subject to the provisions of subsection (i) of this section, a member who is participating in the system simultaneously as both a regular, full-time employee of a participating public employer, and as an elected or appointed member of the legislative body of the state or any political subdivision, may, upon meeting the age and service requirements of this article, elect to retire from his or her regular full-time state employment and may commence to receive an annuity from the system without terminating his or her position as a member of the legislative body of the state or political subdivision:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the retired member shall not, during the term of his or her retirement and continued service as a member of the legislative body of a political subdivision, be eligible to continue his or her participation as a contributing member of the system and shall not continue to accrue any additional service credit or benefits in the system related to the continued service.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Notwithstanding the provisions of &sect;5-10-27b of this code, any publicly elected member of the legislative body of any political subdivision or of the State Legislature, the Clerk of the House of Delegates, and the Clerk of the Senate may elect to commence receiving in-service retirement distributions from this system upon attaining the age of 70 and one-half years:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the member is eligible to retire under the provisions of &sect;5-10-20 or &sect;5-10-21 of this code:&nbsp;</span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the member elects to stop actively contributing to the system while receiving the in-service distributions.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The Legislature hereby finds and declares that a severe shortage of child protective services workers and adult protective services workers exists throughout the state, and therefore, a compelling state interest exists in expanding the use of retired employees to serve this critical need. Notwithstanding any provision of subsection (c) of this section to the contrary, a person receiving retirement benefits or who is eligible to receive retirement benefits pursuant to the provisions of this chapter, may accept employment as a child protective services worker or an adult protective services worker on a full-time or part-time basis without having payment of his or her retirement annuity suspended and without reentering the retirement system as a contributing member. This subsection is only applicable if the retired employee meets the minimum qualifications of the position, has been retired for at least 60 days, and is hired to fill an existing child protective services or adult protective services vacancy. The retired employee may continue to work under this subsection only as long as that position remains vacant. The vacant position shall be posted until it is filled by a regularly employed person meeting the minimum qualifications to serve as a child protective service worker or an adult protective service worker. The provisions of this subsection shall expire July 1, 2025.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) </span><a name="_Hlk188617045"><span class="csEF05ACC">Notwithstanding any provision of this article to the contrary, a retirant who becomes employed by a participating public employer after the effective date of his or her retirement must have a bona fide separation from service upon retirement to be eligible for an annuity under the retirement system. If a retirant fails to have a bona fide separation from service upon retirement or if such retirant or his or her participating public employer fails to comply with &sect;5-10-19 in a manner satisfactory to the board, then the member&rsquo;s retirement shall be voided and the member shall repay to the system the gross amount of all annuity payments received related to such voided retirement. The board may take any actions necessary or appropriate in accordance with the provisions of &sect;5-10-44 to recover such annuity payments so that an in-service distribution is not deemed to have been made. </span></a></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) The Legislature hereby finds and declares that a severe shortage of attorneys to represent children in child welfare matters exists throughout the state, and therefore, a compelling state interest exists in expanding the use of retired employees to serve as child protection commissioners or circuit court law clerks. Notwithstanding any provision of subsection (c) of this section to the contrary, a licensed attorney receiving retirement benefits or who is eligible to receive retirement benefits pursuant to the provisions of this chapter, may accept employment from the Supreme Court of Appeals as a child protection commissioner or circuit court law clerk on a full-time or part-time basis without having payment of his or her retirement annuity suspended and without reentering the retirement system as a contributing member. This subsection is only applicable if the retired employee meets the minimum qualifications of the position and has been retired for at least 60 days. The retired employee may continue to work under this subsection only as long as that position remains vacant. The vacant position shall be posted until it is filled by a regularly employed person meeting the minimum qualifications to serve as a child protection commissioner or circuit court law clerk. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 49. CHILD WELFARE.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">Article 1. general provisions and definitions.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-1-207. Definitions related to court actions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">When used in this chapter, terms defined in this section have the meanings ascribed to them that relate to, but are not limited to, court actions, except in those instances where a different meaning is provided or the context in which the word is used clearly indicates that a different meaning is intended.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Court&rdquo; means the circuit court of the county with jurisdiction of the case or the judge in vacation unless otherwise specifically provided.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Court appointed special advocate (CASA) program&rdquo; means a community organization that screens, trains, and supervises CASA volunteers to advocate for the best interests of children who are involved in abuse and neglect proceedings pursuant to &sect;49-3-102 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Extrajudicial Statement&rdquo; means any utterance, written or oral, which was made outside of court.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Juvenile referee&rdquo; means a magistrate appointed by the circuit court to perform the functions expressly prescribed for a referee under the provisions of this chapter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Multidisciplinary team&rdquo; means a group of professionals and paraprofessionals representing a variety of disciplines who interact and coordinate their efforts to identify, diagnose and treat specific cases of child abuse and neglect. Multidisciplinary teams may include, but are not limited to, medical, educational, childcare and law-enforcement personnel, social workers, psychologists, and psychiatrists. Their goal is to pool their respective skills in order to formulate accurate diagnoses and to provide comprehensive coordinated treatment with continuity and follow-up for both parents and children.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Community team&rdquo; means a multidisciplinary group which addresses the general problem of child abuse and neglect in a given community and may consist of several multidisciplinary teams with different functions.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&ldquo;Child protection commissioner&rdquo; means an individual appointed by the Supreme Court of Appeals to manage portions of a court case filed pursuant to this chapter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Res gestae&rdquo; means a spontaneous declaration made by a person immediately after an event and before the person has had an opportunity to conjure a falsehood.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Valid court order&rdquo; means an order issued by a court of competent jurisdiction relating to a child brought before the court and who is the subject of that order. Prior to the entry of the order the child shall receive the full due process rights guaranteed to that child or juvenile by the Constitutions of the United States and the State of West Virginia.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;</span><a name="_Hlk191723760"><span class="csEF05ACC">Violation of a traffic law of West Virginia</span></a><span class="csEF05ACC">&rdquo; means a violation of chapter 17A, 17B, 17C, or 17D of this code, except a violation of &sect;17C-4-1 or &sect;17C-4-2 of this code relating to hit and run, or &sect;17C-5-1, &sect;17C-5-2, or &sect;17C-5-3 of this code, relating, respectively, to vehicular homicide, aggravated vehicular homicide, vehicular homicide in a school zone, vehicular homicide in a construction zone, driving under the influence of alcohol, controlled substances or drugs and reckless driving.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 4. &nbsp;COURT ACTIONS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;49-4-118. Child protection commissioner created; powers and duties.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Supreme Court of Appeals is requested to create a pilot project utilizing child protection commissioners to encourage efficiency and ensure accountability in court actions filed pursuant to this chapter. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A child protection commissioner is a judicial officer and shall be appointed, and may be removed, by the Supreme Court of Appeals for a two-year term that may be renewed, and is subject to the administrative oversight, training, and standards established by the Supreme Court of Appeals. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A child protection commissioner shall be an attorney licensed to practice law in this state and possess experience or training in juvenile law, as determined by rules of the Supreme Court of Appeals.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The Administrative Director of the Supreme Court of Appeals may designate multi-circuit child protection commissioner regions to carry out the purpose of this section, and a child protection commissioner may serve in that capacity in more than one circuit simultaneously. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Subject to the direction and oversight of the chief circuit judge, a child protection commissioner may authorize emergency removals as permitted by law, monitor diversion and pre-petition matters, conduct evidentiary and status hearings, compel witnesses to testify and place them under oath, order services and visitation, determine child-support, custody, sibling visitation, grandparent visitation, and post termination-visitation in matters pending in circuit court under Rule 6 of the Rules of Procedure for Child Abuse and Neglect Proceedings, facilitate multi-disciplinary team meetings, manage discovery, oversee improvement periods and case plans, remove individuals from treatment court programs, and perform all other duties authorized by rules promulgated by the Supreme Court of Appeals. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The child protection commissioner may issue a non-binding report and recommendations to the presiding circuit judge regarding findings of fact and conclusions of law for a preliminary, adjudication, disposition, or permanency hearing, contempt, termination of an improvement period, placement, or referral to a treatment court; however, the circuit court shall retain the sole authority to enter orders on these matters. A child protection commissioner shall not exercise independent contempt authority. Any party may object to a child protection commissioner&rsquo;s report and recommendations within 10 days of their entry and filing, and the circuit judge shall review the record made before the child protection commissioner, the recommended decision of the child protection commissioner, and the objections and exceptions which have been filed, and the court shall enter an order. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) A child protection commissioner shall be paid by the Supreme Court of Appeals at the rate it establishes and may also receive travel reimbursement as provided by Supreme Court of Appeals policy. The Supreme Court of Appeals shall provide all necessary equipment for a child protection commissioner to perform his or her duties, and may, at its discretion, acquire or lease the necessary facilities as required. A child protection commissioner may be either a full-time employee or paid hourly depending on workload necessities as determined by the Administrative Director. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 51. COURTS AND THEIR OFFICERS.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 9. RETIREMENT SYSTEM FOR JUDGES OF COURTS OF RECORD.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;51-9-10. Services of senior judges and justices.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Legislature finds that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Section seven, article VIII of the Constitution of West Virginia expressly requires the Legislature to fix judicial salaries by statute, providing that: &quot;[j]ustices, judges and magistrates shall receive the salaries fixed by law&quot;.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Occasionally, circumstances may require the extended assignment of senior judges and justices, necessitating the Legislature to prescribe such circumstances when the limitations on compensation of senior judges and justices receiving retirement benefits may be exceeded.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Legislature recognizes and acknowledges the authority of the West Virginia Supreme Court of Appeals to recall retired circuit court judges, family court judges, judges of the Intermediate Court of Appeals, and justices of the Supreme Court of Appeals for temporary assignment and to create a panel of such senior judges and justices to serve in certain circumstances including, but not limited to, serving temporarily in the event of a protracted illness or medical condition, lengthy suspension, or other unfilled vacancy; serving temporarily in a circuit to assist with an excess of pending matters identified by the administrative director through statistical analysis; mentoring or assisting a sitting judge as directed by the administrative director; serving temporarily in a circuit in the event of a recusal or disqualification of a judge or justice; </span><span class="cs46AE26E6">serving as a child protection commissioner pursuant to &sect;49-4-118 of this code; serving as a law clerk for a circuit judge, a judge of the intermediate court of appeals, or a justice of the Supreme Court of Appeals;</span><span class="csEF05ACC"> or presiding over cases as a member of the mass litigation or business court: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That extended assignment of retired judges and justices must not be utilized in such a way as to threaten the qualified status of the Judges&#39; Retirement System under applicable provisions of the Internal Revenue Code, including Treasury Regulation &sect;1.401(a)-1(b)(1) requiring that a qualified plan must be established primarily to provide payment of definitely determinable benefits to its employees after retirement or attainment of normal retirement age.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Senior intermediate court judges, circuit court judges, and justices recalled and assigned to service shall receive per diem compensation set by the Supreme Court of Appeals, but not to exceed $430 for each day actually served:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the combined total of per diem compensation and retirement benefits paid to a senior judge or justice during a single calendar year may not exceed the annual salary of a sitting circuit judge, except as set forth in subsection (d) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Notwithstanding subsection (c) of this section, for purposes of maintaining judicial efficacy and continuity in judicial decision making, a senior judge or justice may continue to receive per diem compensation after the combined total of per diem compensation and retirement benefits paid to the senior judge or justice during that calendar year exceeds the annual salary of a sitting circuit judge if the Chief Justice of the Supreme Court of Appeals enters an administrative order certifying there are certain extraordinary circumstances involving the necessary absence of a sitting judicial officer because of a protracted illness or medical condition, or a lengthy suspension which necessitate the extended assignment of the senior judge or justice. Immediately upon entering such an order, the Chief Justice shall submit copies of the order to the State Auditor and the State Treasurer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) In addition to the per diem compensation authorized by this section, senior judges and justices recalled to service may be reimbursed for their actual and necessary expenses incurred in the performance of their duties.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Senior family court judges recalled and assigned to service shall receive per diem compensation set by the Supreme Court of Appeals, but not to exceed $325 for each day actually served:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the combined total per diem compensation and retirement benefits paid to a senior family court judge during a single calendar year may not exceed the annual salary of a sitting family court judge, except as set forth in subsection (d) of this section. In addition to the per diem compensation authorized by this section, senior family court judges recalled to service may be reimbursed for their actual and necessary expenses incurred in the performance of their duties.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Notwithstanding any provision of this article to the contrary, a retirant who becomes employed by the Supreme Court after the effective date of his or her retirement must have a bona fide separation from service upon retirement to be eligible for an annuity under the retirement system. If a retirant fails to have a bona fide separation from service upon retirement or if such retirant or the participating public employer fails to comply with subsection (h) of this section in a manner satisfactory to the board, then the member&rsquo;s retirement shall be voided and the member shall repay to the system the gross amount of all annuity payments received related to such voided retirement. The board may take any actions necessary or appropriate in accordance with the provisions of &sect; 51-9-18 to recover such annuity payments so that an in-service distribution is not deemed to have been made. &nbsp;&nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Prior to any retirant subsequently becoming reemployed by the Supreme Court, whether on a permanent, full-time, part-time, substitute, per diem, temporary or leased employee basis, the Supreme Court shall notify the board and the retirant, in writing, if and when any such potential employment will negatively impact the retirant&rsquo;s retired status or benefits. Upon the retirant&rsquo;s acceptance of such employment, the participating public employer shall notify the board, in writing, of the retirant&rsquo;s subsequent employment. The retirement board may also require of retirants and the Supreme Court such reports, forms and verifications as it deems necessary to ensure that a bona fide separation from service from retirement has occurred. </span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to authorize the Supreme Court to create program of child protection commissioners.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

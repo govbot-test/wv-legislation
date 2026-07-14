@@ -1,0 +1,534 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 442 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=442">&laquo; Senate Bill 442 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 442'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 442 - Creating homeless education coordinator position in counties designated by State Board as urban county&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb442+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=442"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 442</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Deeds</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 16, 2026; referred<br/>to the Committee on Education; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;18-8-4 of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;18-8A-5, relating to homeless children; clarifying the duties of the attendance director and assistant directors; and creating a homeless education coordinator position in counties designated by the state board as an urban county.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 8. COMPULSORY SCHOOL ATTENDANCE.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-8-4. Duties of attendance director and assistant directors; complaints, warrants, and hearings.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) For the purposes of this article, the following definitions apply:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Excused absence&quot; means:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A medical or dental appointment with written excuse from physician or dentist;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Personal illness or injury of the student accompanied by a timely written excuse from the student&rsquo;s parent, guardian, or custodian: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the total absences under this section combined with absences permitted under paragraph (C) of this subdivision do not exceed more than 10 per school year unless supported by a physician&rsquo;s note: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That a medically documented chronic health condition or disability that adversely impacts in-person attendance approved by a county school board or the principal is not subject to this limitation, and that absences of students with disabilities shall be in accordance with the Individuals with Disabilities Education Improvement Act of 2004 and the federal and state regulations adopted in compliance therewith; &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Personal illness or injury of the student&rsquo;s parent, guardian, custodian, or family member: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the excuse must provide a reasonable explanation for why the student&rsquo;s absence was necessary and caused by the illness or injury in the family, and the total absences under this section in combination with paragraph (B) of this subdivision may not exceed more than 10 excuses per school year;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Death in the family;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) School-approved or county-approved curricular or extra-curricular activities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) A judicial obligation or court appearance involving the student; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) A military requirement for students enlisted or enlisting in the military;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Up to five college visits; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) A student in any West Virginia Department of Education recognized and sanctioned student organization to enhance student enrichment and success, including, but not limited to, SkillsUSA, Future Business Leaders of America (FBLA), Health Occupations Students of America (HOSA), the Common Ground Partnership, or 4-H or FFA-sanctioned activity or program, subject to the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) A student who participates in an activity or program sanctioned in paragraph (I) of this subdivision shall be credited as present by the school in which the student is enrolled in the same manner as a student participating in an educational field trip. A school principal, or the principal&#39;s designee, shall not count a student absent for participating in an activity or program sanctioned in paragraph (I) of this subdivision.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) An agent of a sanctioned organization set forth in paragraph (I) of this subdivision shall provide documentation as proof of a student&#39;s participation in an activity or program sanctioned in paragraph (I) of this subdivision.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) A student shall make up any schoolwork missed while the student was participating in an activity or program sanctioned by paragraph (I) of this subdivision and shall not have the student&#39;s class grades adversely affected for lack of attendance or participation due to the student&#39;s participation in an activity or program sanctioned in paragraph (I) of this subdivision.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) A school principal, or the principal&#39;s designee, shall not credit a student who participates in an activity or program sanctioned in paragraph (I) of this subdivision as present if the student&#39;s participation in the activity or program sanctioned in paragraph (I) of this subdivision occurs during any period of time for which the student has been suspended, expelled, or assigned to an alternative school or alternative program under this chapter and the student&#39;s suspension, expulsion, or assignment to an alternative school or alternative program would preclude the student from participating in an educational field trip.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) The total amount of excused absences under paragraphs (E), (H), and (I) of this subdivision may not exceed more than 10 per school year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Nothing in this section shall interfere with the Every Student Succeeds Act (2015), which does not differentiate between excused and unexcused absences.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Meaningful contact&quot; means two-way communication by the school administrator or other school designee and the student&rsquo;s parent, guardian, or custodian to discuss the student&rsquo;s attendance record in an effort to prevent subsequent truancy or other legal proceedings relating to compulsory school attendance, and to minimize additional absences. &nbsp;Methods of meaningful contact include, but are not limited to, phone calls, video conferencing, home visits, and the use of digital platforms. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;System of Support Plan&quot; (&quot;SOS Plan&quot;) refers to a plan to be developed by the State Board of Education designed to encourage students to attend school. &nbsp;It shall, at a minimum, require county attendance directors, principals, or other school designees to make periodic contact with the parent, guardian, or custodian of a student subject to compulsory school attendance to ascertain the reason or reasons for the student&rsquo;s absence or absences and what measures the school may employ to assist the student in attending school and not incurring additional absences. It shall also impart upon the student&rsquo;s parents, guardians, and custodians the importance of the student&rsquo;s attendance and the seriousness of failing to do so.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Unexcused absence&quot; means any absence not specifically included in the definition of &quot;excused absence&quot;.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The county attendance director and his or her assistants shall diligently promote regular school attendance. The director and assistants shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Ascertain the reasons for unexcused absences from school of students of compulsory school age; and students who remain enrolled beyond the compulsory school age;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Ensure the implementation of the SOS Plan as developed by the state board, including encouraging the attendance of students and imparting upon the parents, guardians, and custodians the important of attendance and the seriousness of failing to do so. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) All documentation relating to absences shall be provided to the school no later than three instructional days after the first day the student returns to school. &nbsp;In the event documentation is not provided to the school within three instructional days after the first day the student returns to school, the absences are unexcused. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) In the case of three total unexcused absences of a student during a school year, the attendance director, his or her assistant,</span><a name="_Hlk10056573"><span class="csEF05ACC"> or the principal shall </span></a><a name="_Hlk8292210"><span class="csEF05ACC">make meaningful contact with the parent, guardian, or custodian of the student to ascertain the reasons for the unexcused absences and what measures the school may employ to assist the student in attending and not incurring any additional unexcused absences. </span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) </span><a name="_Hlk10056614"><span class="csEF05ACC">In the case of five total unexcused absences, the attendance director, his or her assistant or the principal shall again make meaningful contact with the parent, guardian, or custodian of the student to ascertain the reasons for the unexcused absences and what measures the school may employ to assist the student in attending school and not incurring any additional unexcused absences.</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) In the case of 10 total unexcused absences of a student during a school year, the attendance director or assistant may make a complaint against the parent, guardian, or custodian before a magistrate of the county. If it appears from the complaint that there is probable cause to believe that an offense has been committed and that the accused has committed it, a summons or a warrant for the arrest of the accused shall issue to any officer authorized by law to serve the summons or to arrest persons charged with offenses against the state. More than one parent, guardian, or custodian may be charged in a complaint. Initial service of a summons or warrant issued pursuant to the provisions of this section shall be attempted within 10 calendar days of receipt of the summons or warrant and subsequent attempts at service shall continue until the summons or warrant is executed or until the end of the school term during which the complaint is made, whichever is later.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The magistrate court clerk, or the clerk of the circuit court performing the duties of the magistrate court as authorized in &sect;50-1-8 of this code, shall assign the case to a magistrate within 10 days of execution of the summons or warrant. The hearing shall be held within 20 days of the assignment to the magistrate, subject to lawful continuance. The magistrate shall provide to the accused at least 10 days&rsquo; advance notice of the date, time, and place of the hearing.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) When any doubt exists as to the age of a student absent from school, the attendance director and his or her assistants may require a properly attested birth certificate or an affidavit from the parent, guardian, or custodian of the student stating the age of the student. In the performance of his or her duties, the county attendance director and his or her assistants have authority to take without warrant any student absent from school in violation of the provisions of this article and to place the student in the school in which he or she is or should be enrolled.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The county attendance director and his or her assistants shall devote as much time as is required to the duties of attendance director in accordance with this section during the instructional term and at any other times as the duties of an attendance director are required. All attendance directors and assistants hired for more than 200 days may be assigned other duties determined by the superintendent during the period in excess of 200 days. The county attendance director is responsible under direction of the county superintendent for efficiently administering school attendance in the county.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) In addition to those duties directly relating to the administration of attendance, the county attendance director and his or her assistant directors also shall perform the following duties:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Assist in directing the taking of the school census to see that it is taken at the time and in the manner provided by law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Confer with principals and teachers on the comparison of the school census and enrollment for the detection of possible non-enrollees;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Cooperate with existing state and federal agencies charged with enforcing child labor laws;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Promote attendance in the county by compiling data for schools and by furnishing suggestions and recommendations for publication through school bulletins and the press, or in any manner directed by the county superintendent;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Participate in school teachers&rsquo; conferences with parents and students;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Assist in any other ways directed by the county superintendent for improving school attendance;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Make home visits of students who have excessive unexcused absences, as provided in subsection (a) of this section, or if requested by the chief administrator, principal, or assistant principal; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(8) Serve as the liaison for homeless children and youth.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 8A. ATTENDANCE OF HOMELESS CHILDREN.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;18-8A-5. Homeless education coordinator.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The county board shall employ a full-time homeless education coordinator in each county designated by the state board as an urban county and a part-time homeless education coordinator in each county designated by the state board as a rural county. Urban and rural designations may be based on the Metropolitan Statistical Area designations of metropolitan and non-metropolitan or a substantially similar method of delimitating urban and rural areas. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The county board may establish special and professional qualifications for homeless education coordinators as are deemed expedient and proper and are consistent with rules of the state board. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A homeless education coordinator is responsible for: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Ensuring that homeless children and youth are identified by school personnel, are</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">enrolled in, and have a full and equal opportunity to succeed in schools of that county; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Coordinating the referrals of homeless children to health care, dental care, mental health services, and other appropriate services; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Expediting school placement decisions; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Identifying homeless children, youth, and families in the community; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Coordinating programs and services to prevent duplication of services; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Monitoring programs and projects to ensure compliance with applicable statutory and regulatory requirements, if the county board receives funds under the McKinney-Vento Homeless Assistance Act; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Informing parents or guardians of homeless children and youth of the educational and related opportunities available to their children, ensuring that they are provided with meaningful opportunities to participate in the education of their children; disseminating public notice of the educational rights of homeless children and youth in the schools, community agencies, family shelters, soup kitchens, and organizations where children and youth receive services; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Ensuring that the parent or guardian of a homeless child or youth, and that any unaccompanied youth is fully informed of all transportation services; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Working with Title I administrators to ensure that Title I services are provided in accordance with the reservation of funds required by McKinney-Vento Act; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Coordinating and collaborating with the state coordinator and community and school personnel responsible for the provision of education and related services to homeless children and youth; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) Developing and implementing a program to train school personnel on the educational rights of homeless children and youth, policies and procedures to identify and serve homeless children and youth, and on the special needs of homeless children and youth; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Assisting unaccompanied homeless youth in the school selection process; ensuring that they are provided with meaningful opportunities to participate fully in educational activities,</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) Ensuring that enrollment disputes are mediated according to the county board&rsquo;s appeal process.</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create a homeless education coordinator in counties designated by the state board as an urban county.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

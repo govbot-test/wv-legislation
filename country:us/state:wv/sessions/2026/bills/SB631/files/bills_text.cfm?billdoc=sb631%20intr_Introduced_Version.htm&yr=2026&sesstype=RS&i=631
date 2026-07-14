@@ -1,0 +1,536 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 631 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=631">&laquo; Senate Bill 631 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 631'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 631 - Relating to controlling interests in flood control dams and similar structures&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb631+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=631"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.csFCE4DED{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: line-through;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 631</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Smith (Mr. President)</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 27, 2026; referred<br/>to the Committee on Natural Resources]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;19-21A-3, &sect;19-21A-4, &sect;19-21A-7, &sect;19-21A-8, &sect;19-21A-11, &sect;19-21A-12, and &sect;19-21A-13 of the Code of West Virginia, 1931, as amended, relating to controlling interests in flood control dams and similar structures; revising definitions; authorizing State Conservation Committee to construct, operate, improve, and maintain flood control dams and similar structures and to contract with other entities to do so; removing authority of conservation districts to employ dam monitors; removing authority of conservation districts to construct, operate, improve, and maintain flood control dams and similar structures and to contract with other entities to do so; mandating conservation districts to transfer interests in flood control dams and similar structures, and any associated property, to the West Virginia Conservation Agency by certain date; and requiring conservation districts to transfer all funds and accounts associated with flood control dams and similar structures to the West Virginia Conservation Agency by certain date.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 21A. CONSERVATION DISTRICTS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-21A-3. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Wherever used or referred to in this article, unless a different meaning clearly appears from the context:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Agency of this state&quot; means the government of this state and any subdivision, agency, or instrumentality, corporate or otherwise, of the government of this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Agriculture&quot; means the production of food, fiber, and woodland products, by means of cultivation, tillage of the soil, and by the conduct of animal, livestock, dairy, apiary, equine or poultry husbandry, and the practice of forestry, silviculture, horticulture, harvesting of silviculture products, packing, shipping, milling, and marketing of agricultural products conducted by the proprietor of the agricultural operation, or any other legal plant or animal production and all farm practices. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Committee&quot; or &quot;State Conservation Committee&quot; means the agency created in &sect;19-21A-4 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Conservation&quot; means the reduction of soil erosion, enhancement of water supplies, control, and abatement of nonpoint sources of water pollution, improvement of water quality, increased aquatic and wildlife habitat, and the reduction of damages caused by floodwater and sediment damages and other natural disasters.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;District&quot; or &quot;conservation district&quot; means a subdivision of this state, organized in accordance with the provisions of this article, for the purposes, with the powers and subject to the restrictions hereinafter set forth.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Grant&quot; means the providing of grants for conservation purposes pursuant to legislative rule.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Governing body&quot; means the supervisors of any conservation district, town, or city, council, city commission, county court, or body acting in lieu of a county court, in this state, and the term &quot;governmental division&quot; means any conservation district, town, city, or county in this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;Land occupier&quot; or &quot;occupier of land&quot; means any person, firm, or corporation who shall hold title to, or shall be in possession of, any lands lying within a district organized under the provisions of this article, whether as owner, lessee, renter, or tenant.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;Landowners&quot; or &quot;owners of land&quot; means any person or persons, firm, or corporation who holds title to any lands lying within a district organized under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) &quot;Notice&quot; means notice published as a Class II legal advertisement in compliance with the provisions of &sect;59-3-1 et seq. of this code and the publication area for the publication is the county in which is located the appropriate area. At any hearing held pursuant to such notice at the time and place designated in the notice, adjournment may be made, from time to time, without the necessity of renewing the notice for the adjournment dates.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) &quot;Petition&quot; means a petition filed under the provisions of &nbsp;&sect;19-21A-14 of this code for the creation of a district.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) &quot;Soil conservation&quot;, &quot;erosion control&quot;, or &quot;erosion prevention projects&quot; means those projects that have been established by federal agencies in cooperation with state agencies for the purpose of demonstrating soil erosion control and water conservation practices.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) &quot;State&quot; means the State of West Virginia.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) &quot;Supervisor&quot; means one of the members of the governing body of a district, elected or appointed in accordance with the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) &quot;Urban Agriculture&quot; means the cultivation, processing, and distribution of agricultural products grown in urban and suburban settings, including vertical production, warehouse farms, community gardens, rooftop farms, hydroponic, aeroponic, and aquaponic facilities, and other innovations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) &quot;United States&quot; or &quot;agencies of the United States&quot; means the United States of America, Natural Resources Conservation Service of the United States Department of Agriculture </span><span class="cs46AE26E6">(NRCS)</span><span class="csEF05ACC">, and any other agency or instrumentality, corporate or otherwise, of the United States of America.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(17) &quot;Water management&quot; or &quot;water management operation&quot; means practices to conserve and use water as efficiently as possible in agricultural operations and does not refer to or include construction, improvement, operation, or maintenance of flood control dams, channels, dikes, or levees.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(17)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(18)</span><span class="csEF05ACC"> &quot;Works of improvement&quot; means such structures as may be necessary or convenient for </span><span class="cs68EFC440">flood prevention or</span><span class="csEF05ACC"> the conservation, development, or utilization</span><span class="cs68EFC440">, or disposal</span><span class="csEF05ACC"> of water </span><span class="cs46AE26E6">but does not include flood control dams, channels, dikes, or levees</span><span class="csEF05ACC">.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-21A-4. State Conservation Committee; continuation.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The State Conservation Committee is continued. It serves as an agency of the state and is to perform the functions conferred upon it in this article. The committee consists of the following 10 members:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Four citizen members;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The following ex officio members or his or her designee:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The Director of the state Cooperative Extension Service;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The Director of the State Agricultural and Forestry Experiment Station;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The Secretary of the Department of Environmental Protection;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) The State Commissioner of Agriculture, who is the chairperson of the committee;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) The Director of the Division of Forestry; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) The President of the West Virginia Association of Conservation Districts.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Governor shall appoint, by and with the consent of the Senate, the four citizen members. Members shall be appointed for four-year terms, which are staggered in accordance with the initial appointments under prior enactment of this section. In the event of a vacancy, the appointment is for the unexpired term.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The committee may invite the Secretary of Agriculture of the United States of America to appoint one person to serve with the committee as an advisory member.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The committee shall keep a record of its official actions, shall adopt a seal, which shall be judicially noticed, and may perform those acts, hold public hearings, and adopt or propose for legislative approval rules necessary for the execution of its functions under this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The State Conservation Committee may employ an administrative officer, technical experts, and other agents and employees, permanent and temporary, as it requires. The administrative officer and support staff shall be known as the West Virginia Conservation Agency. The committee shall determine their qualifications, duties, and compensation. The committee may call upon the Attorney General of the state for legal services it requires. It may delegate to its chairperson, to one or more of its members, or to one or more agents or employees, powers and duties it considers proper. The committee may secure necessary and suitable office accommodations and the necessary supplies and equipment. Upon request of the committee, for the purpose of carrying out any of its functions, the supervising officer of any state agency or of any state institution of learning shall, insofar as may be possible, under available appropriations and having due regard to the needs of the agency to which the request is directed, assign or detail to the committee members of the staff or personnel of the agency or institution of learning and make special reports, surveys, or studies required by the committee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) A member of the committee holds office so long as he or she retains the office by virtue of which he or she is serving on the committee. A majority of the committee is a quorum and the concurrence of a majority in any matter within their duties is required for its determination. The chairperson and members of the committee may receive no compensation for their services on the committee, but are entitled to reimbursement of expenses, including traveling expenses necessarily incurred in the discharge of their duties on the committee. The committee shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Require the execution of surety bonds for all employees and officers who are entrusted with funds or property;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Provide for the keeping of a full and accurate public record of all proceedings and of all resolutions, rules, and orders issued or adopted;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Provide for an annual audit of the accounts of receipts and disbursements; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Cooperate with the State Resiliency Office to the fullest extent practicable to assist that office in fulfilling its duties.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) In addition to other duties and powers conferred upon the State Conservation Committee, it may:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Review district programs and offer appropriate assistance to the supervisors of conservation districts, organized as provided in this article, in the carrying out of any of their powers and programs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Assist and advise conservation districts and others in implementing conservation improvements and projects to control and abate nonpoint sources of water pollution </span><span class="cs68EFC440">and prevent damage from floodwater and sediment</span><span class="csEF05ACC">; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Keep the supervisors of each of the several districts, organized under the provisions of this article, informed of the activities and experience of all other districts organized under this article, and facilitate an interchange of advice and experience between the districts and cooperation between them;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Review agreements, or forms of agreements, proposed to be entered into by districts with other districts or with any state, federal, interstate, or other public or private agency, organization, or individual, and advise the districts concerning such agreements or forms of agreements;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Coordinate the programs of the several conservation districts so far as this may be done by advice and consultation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Contract for services directly related to natural disaster recovery and stream restoration related to flooding, on an as-needed basis;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Comply with provisions of present and future federal aid statutes and regulations, including execution of contracts or agreements with, and cooperation in, programs of the United States government and any of its proper departments, bureaus, or agencies relating to natural disaster response, natural disaster recovery, or stream restoration related to flooding;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Secure the cooperation and assistance of the United States and any of its agencies and of agencies of this state in the work of the districts;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Disseminate information throughout the state concerning the activities and programs of the conservation districts and encourage the formation of the districts in areas where their organization is desirable;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Administer the provisions of any law hereinafter enacted by the Legislature appropriating funds for expenditures in connection with the activities of conservation districts; distribute to conservation districts funds, equipment, supplies, and services received by the committee for such purpose from any source subject to conditions in any state or federal statute or local ordinance making such funds, property, or services; adopt rules establishing guidelines to govern the use by conservation districts of such funds, property, and services; and review all budgets, administrative procedures, and operations of such districts and advise the districts concerning their conformance with applicable laws and rules;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Administer a conservation grant program that provides financial assistance to conservation districts and others to promote approved conservation, water quality, and soil conservation projects;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) Accept and receive donations, gifts, contributions, grants, and appropriations in money, services, materials, or otherwise, from the United States or any of its agencies, from the State of West Virginia, or from other sources, and use or expend the money, services, materials, or other contributions in carrying out the policy and provisions of this article, including the right to allocate the money, services, or materials in part to the various conservation districts created by this article in order to assist them in carrying on their operations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) Obtain options upon and acquire by purchase, exchange, lease, gift, grant, bequest, devise, or otherwise, any property, real or personal, or rights or interests in the property; maintain, administer, operate, and improve any properties acquired; receive and retain income from the property and expend the income as required for operation, maintenance, administration, or improvement of the properties or in otherwise carrying out the purposes and provisions of this article; and sell, lease, or otherwise dispose of any of its property or interests in the property in furtherance of the purposes and the provisions of this article. Money received from the sale of land acquired in the small watershed program shall be deposited in the special account of the State Conservation Committee and expended as provided in this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) Promulgate emergency and legislative rules to effectuate the provisions of this article; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) Upon a Governor&rsquo;s proclamation declaring a state of emergency or federal disaster declaration, the state committee, its employees, or agents may enter any water of the state for the purpose of removing debris and other obstruction which impede water flow and present additional flood hazards. The agency shall make reasonable efforts to secure the permission of the landowner before entering any private property in connection with these removal activities. The exercise of this limited authority does not constitute taking of private property or trespass. This authority shall continue for the duration of the Governor&rsquo;s proclamation or the federal disaster declaration.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) &nbsp;Require annual reports from conservation districts, the form and content of which shall be developed by the state committee; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) Establish by rule, adequate and reasonably uniform accounting and auditing procedures which shall be used by conservation districts.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(18) Enter into contracts and other arrangements with agencies of the United States, with persons, firms, or corporations, including public and nonprofit corporations, with the state government of this state or other states, or any department or agency thereof, with governmental divisions, with soil conservation, drainage, flood control, soil erosion, or other improvement districts in this state or other states for cooperation or assistance in constructing, improving, operating, or maintaining works of improvement and flood control dams, channels, dikes, and levees within the state, or in preventing floods, or in conserving, developing, utilizing, and disposing of water in the state, or for making surveys, investigations, or reports thereof; and to obtain options upon and acquire property, real or personal, or rights or interests therein, required for flood prevention and water quality improvement, or the conservation, development, utilization, and disposal of water within the state and to construct, improve, operate, or maintain thereon or therewith works of improvement and flood control dams, channels, dikes, and levees.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-21A-7. Supervisors to constitute governing body of district; qualifications and terms of supervisors; powers and duties; removal.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The governing body of the district consists of the supervisors, appointed or elected, as provided in this article. The supervisors shall be persons who are by training and experience qualified to perform the specialized skilled services which are required of them in the performance of their duties under this section and shall be legal residents and landowners in the district.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The supervisors shall designate a chairperson and may, from time to time, change the designation. On and after the election of supervisors in 2008, the term of office of each elected supervisor is four years. A supervisor holds office until his or her successor has been elected or appointed. In case a new county is added to a district, the committee may appoint two supervisors to represent the county until the next regular election of supervisors for the district takes place.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A supervisor is entitled to reasonable and necessary expenses and a per diem of not more than $150 nor less than $30 when engaged in the performance of his or her duties. The expense and per diem rate shall be established by the state committee based on availability of funds.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The supervisors may, with the approval of the State Conservation Committee, employ a secretary, </span><span class="cs68EFC440">dam monitors,</span><span class="csEF05ACC"> technical experts, and any other officers, agents, and employees, permanent and temporary, either with or without compensation, as they may require and shall determine their qualifications, duties, and compensation, if any. </span><span class="cs68EFC440">Dam monitors, as specified in any emergency action plan or monitoring plan approved by the Department of Environmental Protection pursuant to its dam safety rules, pertaining to a flood control structure operated or maintained by a soil conservation district and any other employees, agents or officers employed pursuant to this section are &quot;employees&quot; of the district within the meaning of subsection (a), section three, article twelve-a, chapter twenty-nine of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The supervisors may delegate to their chairperson, to one or more supervisors or to one or more agents, or employees, those administrative powers and duties they consider proper. The supervisors shall furnish to the State Conservation Committee, upon request, copies of the ordinances, rules, orders, contracts, forms, and other documents they adopt or employ and any other information concerning their activities required in the performance of State Conservation Committee&#39;s duties under this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The supervisors shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Require the execution of surety bonds for all employees and officers who are entrusted with funds or property;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Provide for the keeping of a full and accurate record of all proceedings and of all resolutions, rules and orders issued or adopted; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Provide for an annual audit of the accounts of receipts and disbursements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Any supervisor may be removed from office pursuant to &sect;6-6-7 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The supervisors may invite the legislative body of any municipality or county located near the territory comprised within the district to designate a representative to advise and consult with the supervisors of a district on all questions of program and policy which may affect the property, water </span><span class="cs68EFC440">supply</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">quality,</span><span class="csEF05ACC"> or other interests of the municipality or county.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-21A-8. Powers and duties of conservations districts and supervisors.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">A conservation district organized under the provisions of this article and the supervisors thereof shall have the following powers and duties, in addition to others granted in other sections of this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) To hold public meetings; to conduct surveys, investigations, and research relating to the character of soil erosion, floodwater and sediment damage, and nonpoint source water pollution, and to the conservation, development, utilization, water quality, disposal of water, and the preventive and control measures needed; to publish the results of such surveys, investigations, or research, and to disseminate information concerning such preventive and control measures and works of improvement to the public: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That in order to avoid duplication of research activities, a district may not initiate any research program or publish the results except with the approval of the state committee and in cooperation with the government of this state or any of its agencies, or with the United States or any of its agencies</span><span class="cs68EFC440">: </span><span class="csB65271">Provided, however</span><span class="cs68EFC440">, That any alteration, improvement, or agreement related to a dam owned or sponsored by a local conservation district is subject solely to the authority of the Department of Environmental Protection.</span><span class="csEF05ACC"> The provisions of this </span><span class="cs68EFC440">subsection</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">subdivision</span><span class="csEF05ACC"> may not be construed to affect or alter any state or federal funding to the West Virginia Conservation Agency;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) To conduct demonstrational projects within the district on lands owned or controlled by this state or any of its agencies, with the consent and cooperation of the agency administering and having jurisdiction thereof, and on any other lands within the district upon obtaining the consent of the owner and occupier of the lands or the necessary rights or interests in the lands in order to demonstrate by example the means, methods, and measures by which soil and soil resources may be conserved and soil erosion in the form of soil washing may be prevented and controlled, </span><span class="cs46AE26E6">and</span><span class="csEF05ACC"> water quality may be improved</span><span class="cs68EFC440">, and works of improvement may be carried out</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) To carry out preventive and control measures </span><span class="cs68EFC440">and works of improvement</span><span class="csEF05ACC"> within the district, including, but not limited to, engineering operations, methods of cultivation, the growing of vegetation, changes in use of land; drainage, irrigation, and other agricultural water management operations </span><span class="cs68EFC440">and measures for the prevention of floodwater and sediment damages</span><span class="csEF05ACC">, or for the control and abatement of nonpoint sources of water pollution; and the measures listed in &sect;19-21A-2 of this code on lands owned or controlled by this state or any of its agencies with the consent and cooperation of the agency administering and having jurisdiction thereof and on any other lands within the district upon obtaining the consent of the owner and occupier of such lands or the necessary rights or interests in such lands;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) To cooperate, or enter into agreements with, and within the limits of appropriations duly made available to it by law, to furnish financial or other aid to any agency, governmental or otherwise, or any occupier of lands within the district in the carrying on of erosion-control and prevention operations, </span><span class="cs46AE26E6">and</span><span class="csEF05ACC"> operations for the control and abatement of nonpoint sources of water pollution, </span><span class="cs68EFC440">and works of improvement within the district,</span><span class="csEF05ACC"> subject to such conditions as the supervisors may deem necessary to advance the purposes of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) To obtain options upon and to acquire, by purchase, exchange, lease, gift, grant, bequest, devise, or otherwise, any property, real or personal, or rights or interests therein; </span><span class="cs68EFC440">to institute condemnation proceedings to acquire any property, real or personal, or rights or interests therein, whether or not located in the district, required for works of improvement;</span><span class="csEF05ACC"> to maintain, administer, and improve any properties acquired, to receive income from such properties, and to expend such income in carrying out the purposes and provisions of this article; and to sell, lease, or otherwise dispose of any of its property or interests therein in furtherance of the purposes and the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) To accept and receive donations, gifts, contributions, grants, and appropriations in money, services, materials, or otherwise from the United States or any of its agencies, from the state of West Virginia, or from other sources and use or expend the money, services, materials, or other contributions in carrying out the policy and provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) To make available, on such terms as it shall prescribe, to land occupiers within the district, agricultural and engineering machinery and equipment, fertilizer, seeds and seedlings, and such other material or equipment as will assist such land occupiers to carry on operations upon their lands for the conservation of soil resources, and for the prevention and control of soil erosion, and for </span><span class="cs68EFC440">flood prevention or </span><span class="csEF05ACC">the conservation, development, utilization, </span><span class="cs68EFC440">water quality,</span><span class="csEF05ACC"> and </span><span class="cs68EFC440">disposal</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">quality</span><span class="csEF05ACC"> of water;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(8) To construct, improve, operate, and maintain such structures as may be necessary or convenient for the performance of any of the operations authorized in this article;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(9)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(8)</span><span class="csEF05ACC"> To develop and submit to the state committee its proposed long range program and annual work plans related to the conservation of soil resources, and for the control and prevention of soil erosion, and for </span><span class="cs68EFC440">flood prevention and</span><span class="csEF05ACC"> water quality improvement, or the conservation, development, </span><span class="cs46AE26E6">and</span><span class="csEF05ACC"> utilization</span><span class="cs68EFC440">, and disposal</span><span class="csEF05ACC"> of water within the district. The plans shall specify, in as much detail as may be possible, the acts, procedures, performances, and avoidances which are necessary or desirable for the effectuation of such plans, including the specification of engineering operations, methods of cultivation, the growing of vegetation, cropping programs, tillage practices, and changes in use of land; and to publish such plans and information and bring them to the attention of occupiers of lands within the district;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(10)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(9)</span><span class="csEF05ACC"> To take over, by purchase, lease, or otherwise, and to administer any soil-conservation, </span><span class="cs68EFC440">flood-prevention,</span><span class="csEF05ACC"> drainage, irrigation, water-management, erosion-control or erosion-prevention project, or combinations thereof, located within its boundaries, undertaken by the United States or any of its agencies, or by this state or any of its agencies; to manage, as agent of the United States or any of its agencies, or of this state or any of its agencies, any soil-conservation, </span><span class="cs68EFC440">flood-prevention,</span><span class="csEF05ACC"> drainage, irrigation, water-management, erosion-control or erosion-prevention project, or combinations thereof, within its boundaries; to act as agent for the United States or any of its agencies, or for this state or any of its agencies, in connection with the acquisition, construction, operation, or administration of any soil-conservation, </span><span class="cs68EFC440">flood-prevention,</span><span class="csEF05ACC"> drainage, irrigation, water-management, erosion-control or erosion-prevention project, or combinations thereof, within its boundaries; to accept donations, gifts, contributions, and grants in money, services, materials, or otherwise, from the United States or any of its agencies, or from this state or any of its agencies, or from any other source and to use or expend such money, services, materials, or other contributions in carrying on its operations;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(11)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(10)</span><span class="csEF05ACC"> To sue and be sued in the name of the district; to have a seal, which shall be judicially noticed; to have perpetual succession unless terminated as hereinafter provided; to make and execute contracts and other instruments, necessary or convenient to the exercise of its powers; to make and, from time to time, amend and repeal rules and regulations not inconsistent with this article to carry into effect its purposes and powers;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(12)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(11)</span><span class="csEF05ACC"> As a condition to extending any benefits under this article to, or the performance of work upon any lands, the supervisors may require contributions in money, services, materials, or otherwise to any operations conferring such benefits and may require land occupiers to enter into and perform such agreements or covenants as to the permanent use of such lands as will tend to prevent or control erosion </span><span class="cs68EFC440">and prevent floodwater and sediment damage</span><span class="csEF05ACC"> thereon;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(13)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(12)</span><span class="csEF05ACC"> No provisions with respect to the acquisition, operation, or disposition of property by other public bodies shall be applicable to a district organized here under in its acquisition, operation, and disposition of property unless the Legislature shall specifically so state;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(14) To enter into contracts and other arrangements with agencies of the United States, with persons, firms, or corporations, including public and nonprofit corporations, with the state government of this state or other states, or any department or agency thereof, with governmental divisions, with soil conservation, drainage, flood control, soil erosion, or other improvement districts in this state or other states, for cooperation or assistance in constructing, improving, operating, or maintaining works of improvement within the district, or in preventing floods, or in conserving, developing, utilizing, and disposing of water in the district, or for making surveys, investigations, or reports thereof; and to obtain options upon and acquire property, real or personal, or rights or interests therein, in other districts or states required for flood prevention and water quality improvement, or the conservation, development, utilization, and disposal of water within the district and to construct, improve, operate, or maintain thereon or therewith works of improvement.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(15)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(13)</span><span class="csEF05ACC"> Each district shall, through public meetings, publications, or other means, keep the public, agencies, and occupiers of the land within the district informed of the works and activities planned and administered by the district, of the purposes these will serve, and of the results achieved annually by the districts.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(14) By no later than July 1, 2026, each district shall convey and transfer all its ownership and sponsorship interest in any flood control dams, channels, dikes, and levees, and any property and easements associated with those flood control dams, channels, dikes, and levees, to the West Virginia Conservation Agency and thereafter may not take an ownership or sponsorship interest in, or operate or maintain, any flood control dams, channels, dikes, or levees.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(15) Upon the conveyance and transfer of its ownership and sponsorship interests in any flood control dams, channels, dikes, and levees to the West Virginia Conservation Agency, and by no later than July 1, 2026, each district shall also transfer all funds and accounts associated with the construction, operation, and maintenance of those flood control dams, channels, dikes, and levees to the West Virginia Conservation Agency.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-21A-11. Authority of </span><span class="csFCE4DED">governmental divisions</span><span class="csB9803513"> </span><span class="csF3C8A5A3">counties and municipalities</span><span class="csB9803513"> to expend money for works of improvement; levy.</span></h4>
+	<p class="cs53FB8D75"><span class="cs68EFC440">The</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">A county commission or the</span><span class="csEF05ACC"> governing body of any </span><span class="cs68EFC440">governmental division which</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">municipality that</span><span class="csEF05ACC"> may reasonably be expected to receive a benefit from the construction, improvement, operation, or maintenance of any works of improvement may expend money for such construction, improvement, operation or maintenance if this expectation exists as to any part of the </span><span class="cs68EFC440">governmental division</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">county or municipality</span><span class="csEF05ACC"> and even though such works of improvement are not located within the corporate limits of the </span><span class="cs68EFC440">governmental division</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">county or municipality</span><span class="csEF05ACC"> or are not within this state: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That if the expenditure is not made directly by the </span><span class="cs68EFC440">governmental division</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">county commission or the governing body of the municipality</span><span class="csEF05ACC"> for such purpose, it shall be made only through </span><span class="cs68EFC440">a conservation district or watershed improvement district organized under the laws of this state, but it shall not be necessary that any part of the governmental division be within the limits of the district through which the expenditure is made</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the committee or the conservation agency</span><span class="csEF05ACC">. The governing bodies </span><span class="cs68EFC440">or governmental divisions</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">of municipalities or county commissions</span><span class="csEF05ACC"> may set up in their respective budgets funds to be spent for such purposes and municipalities and counties may levy and collect taxes for such purposes in the manner provided by law: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That in case sufficient funds cannot be raised by ordinary levies, additional funds may be raised by municipalities and counties as provided by &sect;11-8-16 of this code.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-21A-12. Assurances of cooperation by </span><span class="csFCE4DED">governmental division</span><span class="csB9803513"> </span><span class="csF3C8A5A3">counties and municipalities</span><span class="csB9803513">.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) By vote of the governing body </span><span class="cs46AE26E6">of a municipality or a county commission</span><span class="csEF05ACC">, any </span><span class="cs68EFC440">governmental division</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">county or municipality</span><span class="csEF05ACC"> authorized to expend money on works of improvement by &sect;19-21A-11 of this code may alone, or in combination with </span><span class="cs68EFC440">any other governmental division or divisions authorized to expend money on works of improvement</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the committee or the conservation agency</span><span class="csEF05ACC">, give assurances, by contract or otherwise, satisfactory to agencies of the United States, congressional committees, or other proper federal authority </span><span class="cs68EFC440">and to conservation districts or watershed improvement districts organized under the laws of this state</span><span class="csEF05ACC"> that the </span><span class="cs68EFC440">governmental division or divisions</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">county or municipality</span><span class="csEF05ACC"> will construct, improve, operate, &nbsp;or maintain works of improvement or will appropriate a sum or sums of money and expend it for such purposes as provided in &sect;19-21A-11 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The assurances, whether by contract or otherwise, shall be reduced to writing and, before final approval of the governing bodies involved, shall be submitted to the Attorney General for approval. After approval by the Attorney General and by the governing body or bodies concerned, certified copies of the assurances shall be filed in the office of the county clerk of the county or counties in which the </span><span class="cs68EFC440">governmental division is</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">governing bodies are</span><span class="csEF05ACC"> located and in the office of the State Tax Commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Any assurance hereunder may be valid and binding for a period of time not to exceed 50 years.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-21A-13. Contracts </span><span class="csFCE4DED">with district</span><span class="csB9803513"> for construction of flood control projects; power to borrow money; levy.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The county commission of each county and the governing body of each municipality in the state are hereby authorized and empowered to enter into a contract or agreement with the conservation </span><span class="cs68EFC440">district or districts</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">committee or the conservation agency</span><span class="csEF05ACC"> for the purpose of constructing flood control projects within their respective counties or municipalities or adjacent thereto and to use the projects as recreational areas or public parks. For the purpose of defraying the cost of any such project or projects, the county commission or the governing body of any municipality is hereby authorized to borrow from the federal government, or from any federal agency having money to loan, a sum sufficient to cover the cost of such project or projects. For the purpose of retiring any indebtedness incurred under the provisions of this section, notwithstanding any other provisions of law, the county commission or the governing body of any municipality is hereby authorized to lay and impose a county or citywide levy as the case might be.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to transfer all interests of conservation districts in flood control dams and similar structures, as well as any associated property and related funds and accounts, to the state Conservation Agency by July 1, 2026. The bill authorizes the state conservation committee to operate, improve, maintain, and construct flood control dams and similar structures and to contract with other entities to realize that authority.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

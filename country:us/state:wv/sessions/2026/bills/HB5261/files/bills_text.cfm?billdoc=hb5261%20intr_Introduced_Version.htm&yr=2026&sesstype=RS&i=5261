@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5261 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5261">&laquo; House Bill 5261 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5261'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5261 - Relating generally to forfeiture of contraband&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5261+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5261"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csFCE4DED{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: line-through;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs9A0FB74B{text-align:left;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5261</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Pushkin and Garcia</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 05, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL </span><a name="_Hlk219993846"><span class="csEF05ACC">to amend and reenact &sect;60A-7-703 and &sect;60A-7-705 of the Code of West Virginia, 1931, as amended; to amend the code by adding twelve new sections, designated &sect;60A-7-702a, &sect;60A-7-703a, &sect;60A-7-703b, &sect;60A-7-709, &sect;60A-7-710, &sect;60A-7-711, &sect;60A-7-712, &sect;60A-7-713, &sect;60A-7-714, &sect;60A-7-715, &sect;60A-7-716, and &sect;60A-7-717; and to repeal &nbsp;&sect;60A-7-704, &sect;60A-7-705a, &sect;60A-7-706, &sect;60A-7-707, and &sect;60A-7 relating to forfeiture of contraband; establishing criminal forfeiture and the items and property subject to forfeiture; setting forth additional procedures for forfeiture; establishing dates; permitting a court to waive a conviction requirement; protecting innocent owners; permitting seizure of personal property with and without process; providing that there are no additional remedies and no joint and severable liability; establishing title; setting forth the disposition of forfeited property and proceeds; establishing prohibition on retaining property; establishing sales restrictions, return of property, damages, and costs; permitting the transfer of forfeited property to the federal government; providing for preemption; and defining terms.</span></a></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 7. WEST VIRGINIA CONTRABAND FORFEITURE ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-702a. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article, the terms defined in this section have the following meanings:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Abandoned property&quot; means personal property left by an owner who intentionally relinquishes all rights to its control. Real property may not be abandoned.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Actual knowledge&quot; means direct and clear awareness of information, a fact, or a condition.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Contraband&quot; means goods that are unlawful to possess, including scheduled drugs without a valid prescription.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Constructive knowledge&quot; means knowledge that is imputed to family or household members of the defendant if, in the 10 years prior to the alleged offense, the defendant admitted guilt or was adjudicated guilty three or more times for the same or similar offense, as specified in statute.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Conveyance&quot; means a device used for transportation and includes any motor vehicle, trailer, all-terrain vehicle, snowmobile, aircraft, boat, or other vessel, and any equipment attached to it. The term does not include property that is stolen or taken in violation of the law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Forfeiture charge&quot; means the initiating document for the forfeiture procedure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Instrumentality&quot; means lawful property that is used in the furtherance or commission of an offense subject to forfeiture. An &quot;instrumentality&quot; includes, but is not limited to, land, buildings, a container, a conveyance, equipment, materials, products, a tool, a computer, computer software, a telecommunications device, a firearm, or ammunition.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Law-enforcement agency&quot; means any nonfederal police force, or other local, county, or state agency that has the authority under state law to engage in seizure and forfeiture.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Law subject to forfeiture&quot; means a felony and that explicitly includes forfeiture as a punishment or sanction for the offense.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Proceeds&quot; means money, securities, negotiable instruments, or other means of exchange obtained by the sale of property.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;60A-7-703. </span><span class="csFCE4DED">Items subject to forfeiture; persons authorized to seize property</span><span class="csB9803513"> </span><span class="csF3C8A5A3">Criminal forfeiture; items and property</span><span class="csB9803513"> subject to forfeiture.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) When a person is convicted of violating a law subject to forfeiture, the court, consistent with this chapter, may order the person to forfeit:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Proceeds the person derived from the commission of the crime;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Property directly traceable to proceeds derived from the commission of the crime; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Instrumentalities the person used in the commission of the crime. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(a) The</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(b) Notwithstanding any provision of this code to the contrary, upon conviction of any felony</span><span class="csEF05ACC"> the following </span><span class="cs46AE26E6">items are deemed contraband and</span><span class="csEF05ACC"> are subject to forfeiture:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) All controlled substances which have been manufactured, distributed, dispensed, or possessed in violation of this chapter;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) All raw materials, products, and equipment of any kind which are used, or intended for use, in manufacturing, compounding, processing, delivering, importing, or exporting any controlled substance in violation of this chapter;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) All tax-not-paid tobacco products, as that term is defined in &sect;11-17-2 of this code, declared to be contraband under </span><span class="cs68EFC440">said</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">that </span><span class="csEF05ACC">article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) All property which is used, or has been used, or is intended for use, as a container for property described in subdivision (1), (2) or (3) of this subsection;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) All conveyances </span><span class="cs68EFC440">including aircraft, vehicles or vessels</span><span class="csEF05ACC"> which are used, have been used, or are intended for use, to transport, or in any manner to facilitate the transportation, sale, receipt, possession, or concealment of property described in subdivision (1), (2) or (3) of this subsection, except that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) A conveyance used by any person as a common carrier in the transaction of business as a common carrier shall not be forfeited under this section unless it appears that the person owning the conveyance is a consenting party or privy to a violation of this chapter;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) A conveyance shall not be forfeited under the provisions of this article if the person owning the conveyance establishes that he or she neither knew, nor had reason to know, that the conveyance was being employed or was likely to be employed in a violation of this chapter; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) A bona fide security interest or other valid lien in any conveyance shall not be forfeited under the provisions of this article, unless the state proves by a preponderance of the evidence that the holder of the security interest or lien either knew, or had reason to know, that the conveyance was being used or was likely to be used in a violation of this chapter;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) All books, records, research products, and materials, including formulas, microfilm, tapes, and data which are used, or have been used, or are intended for use, in violation of this chapter;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) All moneys, negotiable instruments, securities, or other things of value furnished or intended to be furnished in violation of this chapter by any person in exchange for a controlled substance, all proceeds traceable to the exchange and all moneys, negotiable instruments and securities used, or which have been used, or which are intended to be used to facilitate any violation of this chapter: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That no property may be forfeited under this subdivision, to the extent of the interest of an owner, by reason of any act or omission established by that owner to have been committed or omitted without his or her knowledge or consent; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) All real property, including any right, title, and interest in any lot or tract of land, and any appurtenances or improvements, which are used, or have been used, or are intended to be used, in any manner or part, to commit or to facilitate the commission of a violation of this chapter punishable by more than one year imprisonment: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That no property may be forfeited under this subdivision, to the extent of an interest of an owner, by reason of any act or omission established by that owner to have been committed or omitted without his or her knowledge or consent.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The requirements of this subsection pertaining to the removal of seized property are not mandatory in the case of real property and the appurtenances to the real property.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b)</span><span class="csEF05ACC"> (c) Property subject to forfeiture under this article may be seized by any person granted enforcement powers in &sect;60A-5-501 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code (hereinafter referred to as the &quot;appropriate person&quot; in this article).</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c)</span><span class="csEF05ACC"> (d) Controlled substances listed in &sect;60A-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code which are manufactured, possessed, transferred, sold or offered for sale in violation of this chapter are contraband and shall be seized and summarily forfeited to the state. Controlled substances which are seized or come into the possession of the state, the owners of which are unknown, are contraband and shall be summarily forfeited to the state upon the seizure of the controlled substances.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d)</span><span class="csEF05ACC"> (e) Species of plant from which controlled substances may be derived which have been planted or cultivated in violation of the provisions of this chapter, or of which the owners or cultivators are unknown, or which are wild growths may be seized and summarily forfeited to the state upon the seizure of the plants.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(e</span><span class="csEF05ACC">) (f) The failure, upon demand by the appropriate person, or his or her authorized agent, of the person in occupancy or in control of land or premises upon which the species of plants are growing or being stored, to produce an appropriate registration, or proof that he or she is the holder of an appropriate registration, constitutes authority for the seizure and forfeiture of the plants.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(f)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(g)</span><span class="csEF05ACC"> Notwithstanding any provision of this article to the contrary, controlled substances listed in &sect;60A-2-1 </span><span class="cs93AB6E8B">et seq. </span><span class="csEF05ACC">of this code and species of plants from which controlled substances may be derived shall either be destroyed or used only for investigative or prosecutorial purposes.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(g)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(h)</span><span class="csEF05ACC">Notwithstanding any other provisions of this article to the contrary, any items of real property or any items of tangible personal property sold to a bona fide purchaser are not subject to forfeiture unless the state establishes by clear and convincing proof that the bona fide purchaser knew or should have known that the property had in the previous three years next preceding the sale been used in violation of this chapter or that the property is a controlled substance.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-703a. Contraband.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">No property right exists in contraband. Contraband is subject to seizure and shall be disposed of according to state law. Contraband is not subject to forfeiture under this chapter. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-703b. Exemption.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Real property used as the accused&rsquo;s personal dwelling, a motor vehicle of less than $5,000 in market value, and U.S. currency totaling $500 or less are exempt from forfeiture.</span><span class="csEF05ACC"> </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;60A-7-704. Procedures for seizure of forfeitable property.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;60A-7-705. Procedures for forfeiture</span><span class="csF3C8A5A3">; conviction required; standard of proof; pretrial replevin; trial proceedings; proportionality hearing; substitute property; appeal.</span></h4>
+	<p class="cs53FB8D75"><span class="cs68EFC440">(a)(1) Any proceeding wherein the state seeks forfeiture of property subject to forfeiture under this article shall be a civil proceeding. A petition for forfeiture may be filed on behalf of the state and any law-enforcement agency making a seizure under this article by the prosecuting attorney of a county, or duly appointed special prosecutor.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(2) A petition for forfeiture may be filed and proceedings held thereon in the circuit court of the county wherein the seizure was made, the real property subject to forfeiture is situate, or the circuit court of the county wherein any owner of the property subject to forfeiture may reside.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(3) Any civil trial stemming from a petition for forfeiture brought under this chapter at the demand of either party shall be by jury.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4) A petition for forfeiture of the seized property shall be filed within 90 days after the seizure of the property in question. The petition shall be verified by oath or affirmation of a law-enforcement officer representing the law-enforcement agency responsible for the seizure or the prosecuting attorney and shall contain the following:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i) A description of the property seized;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(ii) A statement as to who is responsible for the seizure;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(iii) A statement of the time and place of seizure;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(iv) The identity of the owner or owners of the property, if known;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(v) The identity of the person or persons in possession of the property at the time seized, if known;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(vi) A statement of facts upon which probable cause for belief that the seized property is subject to forfeiture pursuant to the provisions of this article is based;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(vii) The identity of all persons or corporations having a perfected security interest or lien in the subject property, as well as the identity of all persons or corporations known to the affiant who may be holding a possessory or statutory lien against such property;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(viii) A prayer for an order directing forfeiture of the seized property to the state, and vesting ownership of such property in the state</span></p><p class="cs53FB8D75"><a name="_Hlk505933959"><span class="cs46AE26E6">(a)(1) The State of West Virginia will use the criminal forfeiture process to litigate that transfer of title of any seizures in which the aggregate net equity value of the property and currency seized, in a single case, is less than $100,000, excluding the value of contraband.</span></a></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Discovery in all proceedings under this section is subject to the rules of criminal procedure.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(b) Such property may be forfeited only if:</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(1) The offense is of a law subject to forfeiture; </span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(2) The offense is established by proof of a criminal conviction; and</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(3) The state establishes that the property is forfeitable under &sect;60A-7-704 through &sect;60A-7-706 of this code by clear and convincing evidence. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Within 30 days of the seizure of property or simultaneously upon filing a related criminal indictment, the state shall file a forfeiture charge that shall include:</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(1) A description of the property seized;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(2) The date, time, and place of seizure of the property;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The name and address of the law-enforcement agency responsible for making the seizure;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(4) The specific statutory and factual grounds for the seizure;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Whether the property was seized pursuant to an order of seizure, and if the property was seized without an order of seizure, an affidavit from a law-enforcement officer stating the legal and factual grounds why an order of seizure was not required; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The names of persons known to the state who may claim an interest in the property and the basis for each person&rsquo;s alleged interest, including the identity of the owner or owners of the property, if known; and the identity of the person or persons in possession of the property at the time of seizure, if known</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The forfeiture charge shall be served upon the person from whom the property was seized, the person&rsquo;s attorney of record and all persons known or reasonably believed to have an interest in the property. &nbsp;</span></p><p class="cs53FB8D75"><a name="_Hlk505934213"><span class="cs68EFC440">A petition for forfeiture</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">The forfeiture charge may be filed and proceedings held thereon in the circuit court of the county wherein the accused is to be tried, the seizure was made, the real property subject to forfeiture is situate, or the circuit court of the county wherein any owner of the property subject to forfeiture may reside</span></a><span class="cs46AE26E6">.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b)</span><span class="csEF05ACC">(e) At the time of filing or as soon as practicable thereafter, a copy of the </span><span class="cs68EFC440">petition for</span><span class="csEF05ACC"> forfeiture </span><span class="cs46AE26E6">charge</span><span class="csEF05ACC"> shall be served upon the owner or owners of the seized property, as well as all holders of a perfected security interest or lien or of a possessory or statutory lien in the same class, if known. Should diligent efforts fail to disclose the lawful owner or owners of the seized property, a copy of the </span><span class="cs68EFC440">petition for </span><span class="csEF05ACC">forfeiture </span><span class="cs46AE26E6">charge</span><span class="csEF05ACC"> shall be served upon any person who was in possession or alleged to be in possession of the property at the time of seizure, where such person&rsquo;s identity is known. The above service shall be made pursuant to the provisions of the West Virginia Rules of Civil Procedure. Any copy of the </span><span class="cs68EFC440">petition for </span><span class="csEF05ACC">forfeiture </span><span class="cs46AE26E6">charge</span><span class="csEF05ACC"> so served shall include a notice substantially as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;To any claimant to the within described property: You have the right to file an answer to this </span><span class="cs68EFC440">petition</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">forfeiture charge</span><span class="csEF05ACC"> setting forth your title in, and right to possession of, the property within 30 days from the service hereof. If you fail to file an answer, a final order forfeiting the property to the state will be entered, and such order is not subject to appeal.&quot;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">If no owner or possessors, lienholders, or holders of a security interest be found, then such service may be by Class II legal publication in accordance with the provisions of &sect;59-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, and the publication area shall be the county wherein such property was located at the time of seizure and the county wherein the petition for forfeiture is filed.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c)</span><span class="csEF05ACC"> (f) In addition to the requirements of subsection </span><span class="cs68EFC440">(b) above</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(d) of this section,</span><span class="csEF05ACC"> the prosecuting attorney or law-enforcement officer upon whose oath or affirmation the </span><span class="cs68EFC440">petition for</span><span class="csEF05ACC"> forfeiture </span><span class="cs46AE26E6">charge</span><span class="csEF05ACC"> is based, shall be responsible for the publication of a further notice. Such further notice that a </span><span class="cs68EFC440">petition for</span><span class="csEF05ACC"> forfeiture </span><span class="cs46AE26E6">charge</span><span class="csEF05ACC"> has been filed shall be published by Class II legal advertisement in accordance with &sect;59-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. The publication area shall be the county wherein the property was seized and the county wherein the </span><span class="cs68EFC440">petition for</span><span class="csEF05ACC"> forfeiture </span><span class="cs46AE26E6">charge </span><span class="csEF05ACC">is filed. The notice shall advise any claimant to the property of their right to file a claim on or before the date set forth in the notice, which date shall not be less than 30 days from the date of the first publication. The notice shall specify that any claim must clearly state the identity of the claimant and an address where legal process can be served upon that person. In addition such notice shall contain the following information:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A description of the property seized; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(2) A statement as to who is responsible for the seizure;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(3) A statement of the time and place of seizure;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4) The identity of the owner or owners of the property, if known;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5) The identity of the person or persons in possession of the property at the time of seizure, if known</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(2) The date, time, and place of seizure of the property;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(3) The name and address of the law-enforcement agency responsible for making the seizure;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(4) The specific statutory and factual grounds for the seizure;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(5) Whether the property was seized pursuant to an order of seizure, and if the property was seized without an order of seizure, an affidavit from a law-enforcement officer stating the legal and factual grounds why an order of seizure was not required; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The names of persons known to the state who may claim an interest in the property and the basis for each person&rsquo;s alleged interest, including the identity of the owner or owners of the property, if known; and the identity of the person or persons in possession of the property at the time of seizure, if known.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(6)</span><span class="csEF05ACC"> (7) A statement that prayer for an order directing forfeiture of the seized property to the state, and vesting ownership of such property in the state shall be requested of the court.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g)(1) Following the seizure of property, a defendant has a right to a pretrial replevin hearing to determine the validity of the seizure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The defendant may claim at any time prior to 60 days before trial of the related criminal offense the right to possession of property by motion to the court for a writ of replevin by filing a motion establishing the validity of the alleged interest in the property; which motion shall be heard more than 30 days after if is filed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The state shall file an answer showing probable cause for the seizure, or cross motions at least 10 days before the hearing.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(4) Either party may, by agreement or for good cause, move the court for one extension of no more than 10 days. Any such motion may be supported by affidavits or other submissions.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(5) The court shall grant the motion if it finds by a preponderance of the evidence that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) It is likely the final judgment will be that the state must return the property to the claimant; or</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(B) The property is not reasonably required to be held for investigatory reasons; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The property is the only reasonable means for a defendant to pay for legal representation in the forfeiture or criminal proceeding. At the court&rsquo;s discretion under paragraph (B) of this subdivision, it may order the return of funds or property sufficient to obtain legal counsel but less than the total amount seized, and require an accounting.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(6) In lieu of ordering the issuance of the writ: </span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(A) The court may order the state to give security or written assurance for satisfaction of any judgment, including damages, that may be rendered in the action; or</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(B) The court may order other relief as may be just.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(h)(1)</span><span class="csEF05ACC"> If no answer or claim is filed within 30 days of the date of service of the petition </span><span class="cs46AE26E6">forfeiture charge</span><span class="csEF05ACC"> pursuant to subsection </span><span class="cs68EFC440">(b)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(d) </span><span class="csEF05ACC">of this section, or within 30 days of the first publication pursuant to subsection </span><span class="cs68EFC440">(b)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(d)</span><span class="csEF05ACC"> of this section, </span><span class="cs46AE26E6">upon conviction, then</span><span class="csEF05ACC"> the court shall enter an order forfeiting the seized property to the state. If any claim to the seized property is timely filed, a time and place shall be set for a hearing upon such claim. The claimant or claimants shall be given notice of such hearing not less than 10 days prior to the date set for the hearing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The litigation related to the forfeiture of property shall be held in a single proceeding following the trial of the related alleged offense. The litigation associated with the forfeiture of property of less than $10,000 in value shall be held before only a judge.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(e)</span><span class="csEF05ACC"> (3) At the hearing upon the claim or claims, the state shall have the burden of proving by a preponderance of the evidence that the seized property is subject to forfeiture pursuant to the provisions of this chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i)(1)</span><span class="csF3C8A5A3"> </span><span class="cs46AE26E6">Within 30 days following entry of an order of forfeiture by the circuit court, the defendant may petition the court to determine whether the forfeiture is unconstitutionally excessive under the state or federal constitution.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(A) The defendant has the burden of establishing the forfeiture is grossly disproportional to the seriousness of the offense by a preponderance of the evidence at a hearing conducted by the court without a jury.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) In determining whether the forfeiture of an instrumentality is unconstitutionally excessive, the court may consider all relevant factors, including, but not limited to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The seriousness of the offense and its impact on the community, including the duration of the activity and the harm caused by the defendant; </span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(ii) The extent to which the defendant participated in the offense;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(iii) The extent to which the property was used in committing the offense;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(iv) The sentence imposed for committing the crime subject to forfeiture; and</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(v) Whether the offense was completed or attempted.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)</span><span class="csF3C8A5A3"> </span><span class="cs46AE26E6">In determining the value of the instrumentality subject to forfeiture, the court may consider all relevant factors, including, but not limited to:</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(A) The fair market value of the property;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(B) The value of the property to the defendant including hardship to the defendant if the forfeiture is realized, including any factors establishing a personal value to the defendant; and </span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(C) The hardship from the loss of a primary residence, motor vehicle, or other property to the defendant&rsquo;s family members or others if the property is forfeited.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(3) The court may not consider the value of the instrumentality to the state in determining whether the forfeiture of an instrumentality is constitutionally excessive.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(f)</span><span class="csEF05ACC"> (j) Any order forfeiting property to the state and entered pursuant to this section perfects the state&rsquo;s right, title and interest in the forfeited property and relates back to the date of seizure: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That in any proceeding under this article the circuit court shall in its final order make specific findings with respect to whether or not probable cause to seize such property existed at the time of such seizure.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(g)</span><span class="csEF05ACC"> (k) During the pendency of a forfeiture proceeding, it is unlawful for any property owner or holder of a bona fide security interest or other valid lienholder to transfer or attempt to transfer any ownership interest or security interest in seized property with the intent to defeat the purpose of this article, and the court wherein the petition for forfeiture is filed may enjoin a property owner or holder of a security interest or other lienholder from making such a transfer should one come to its attention. Any such transfer which is made in violation of the provisions of this subsection shall have no effect upon an order of the court forfeiting seized property to the state if a notice of lis pendens is filed prior to the recording of the instrument of transfer.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(h)</span><span class="csEF05ACC"> (l) The court may void any transfer of property made before or after a forfeiture proceeding has been commenced, which is subject to forfeiture, if the transfer was not to a bona fide purchaser without notice for value.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i)</span><span class="csEF05ACC"> (m) An appeal of a decision of the circuit court concerning a forfeiture proceeding brought pursuant to this chapter must be filed within 120 days of the date of entry of the final appealable order. The appellant shall be required to give notice of intent to appeal within 30 days of the entry of such appealable order.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(n) Nothing herein prevents property from being forfeited by plea agreement agreeing to a forfeiture by the defendant and approved by the circuit court.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(o) The court may waive the conviction requirement upon a motion by the prosecuting attorney that shows by clear and convincing evidence that the defendant:</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(1) Died;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(2) Was deported by the U.S. government;</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(3) Was granted immunity or reduced punishment in exchange for testifying or assisting a law-enforcement investigation or prosecution; </span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(4) Fled the jurisdiction; or</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(5) Abandoned the property. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The property of a person who has fled the jurisdiction or who has abandoned property shall be delivered to the State Treasurer within 30 days without further forfeiture-related litigation. The State Treasurer shall dispose of all noncurrency property. The sale proceeds and currency shall be deposited into the State&rsquo;s General Fund.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(p) Upon the prosecuting attorney&rsquo;s motion following conviction, the court may order the forfeiture of substitute property owned by the defendant up to the value of unreachable property that is beyond the court&rsquo;s jurisdiction or cannot be located through due diligence only if the state proves by a preponderance of the evidence that the defendant intentionally transferred, sold, or deposited property with a third party to avoid the court&rsquo;s jurisdiction.</span></p><p class="cs9A0FB74B"><span class="cs46AE26E6">(q) Notwithstanding the prosecuting attorney&rsquo;s motion for a waiver, the property remains subject to claims by innocent owners, creditors, and other third parties pursuant to this chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(r)</span><span class="csF3C8A5A3"> </span><span class="cs46AE26E6">A party to forfeiture litigation may appeal the circuit court&rsquo;s decision regarding the seizure, forfeiture, and distribution of property under this chapter.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;60A-7-705a. Additional procedures for forfeiture.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;60A-7-706. Disposition of forfeited moneys, securities or other negotiable instruments; distribution of proceeds.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;60A-7-707. Disposition of other forfeited property; distribution of proceeds.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;60A-7-708. Bookkeeping procedures and internal controls.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed]</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-709. Secured Interests. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Property encumbered by a bona fide security interest is not subject to forfeiture. A person claiming a security interest must establish by a preponderance of the evidence the validity of the interest perfected under chapter 46 and other appropriate provisions of this code or produce a lease or rental agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The prosecuting authority shall summarily return seized property to the person with a bona fide security interest.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If the person alleging a valid security interest had actual knowledge of the underlying crime giving rise to the forfeiture, the state may seek to proceed with the forfeiture against the property, the state shall prove by a preponderance of the evidence that the person had such actual knowledge.</span><span class="csEF05ACC"> </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-710. Innocent Owner. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The property of an innocent owner may not be forfeited.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An innocent owner having an ownership interest in property subject to forfeiture existing at the time that the illegal conduct giving rise to forfeiture occurred bears the burden of proving by a preponderance of the evidence that the said innocent owner has a legal right, title, or interest in the property seized under this chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If the requirements of subsection (b) of this section are satisfied and the state seeks to proceed with the forfeiture, the state shall prove by a preponderance of the evidence that the alleged innocent owner had actual or constructive knowledge of the underlying crime giving rise to the forfeiture. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A person who acquired an ownership interest in property subject to forfeiture after the commission of a crime giving rise to the forfeiture and who claims to be an innocent owner bears the burden of proving by a preponderance of the evidence that the person has legal right, title, or interest in the property seized under this chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) If the requirements of subsection (d) of this section are met and the state seeks to proceed with the forfeiture against the property, the state shall prove by a preponderance of the evidence that at the time the person acquired the property the person:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Had actual or constructive knowledge that the property was subject to forfeiture; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Was not a bona fide purchaser without notice of any defect in title and for valuable consideration. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) If the state fails to meet its burden in subsections (c) or (e) of this section, the court shall find that the person is an innocent owner and shall order the state to relinquish all claims of title to the property.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The suspect or convicted offender may invoke the right against self-incrimination or the marital privilege at the civil hearing. The trier of fact in the civil hearing may draw an adverse inference from the invocation of the right or privilege.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-711. Seizure of personal property with process; seizure of personal property without process; seizure of real property with process; receipt. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) At the request of the state at any time, a court may issue an ex parte preliminary order to attach, seize, or secure personal property for which forfeiture is sought and to provide for its custody. Application, issuance, execution, and return are subject to state statute or court rules.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Personal property subject to forfeiture may be seized at anytime without a court order if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The seizure of personal property is incident to a lawful arrest or a search lawfully conducted;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The personal property subject to seizure has been the subject of a prior judgment in favor of the state; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The state has probable cause to believe that the delay occasioned by the necessity to obtain process would result in the removal or destruction of the personal property and that the personal property is forfeitable under this chapter. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)(1) Seizure of real property requires a court order. A court may issue an order to seize or secure real property for which forfeiture is sought only after proper notice to property owners and an opportunity for a contested hearing to determine the sufficiency of probable cause for the seizure. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Nothing in this section prohibits the prosecuting authority from seeking a lis pendens or restraining order to hinder the sale or destruction of the real property.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Application, issuance, execution, and return of any order are subject to state law. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) When property is seized, the law-enforcement officer shall give an itemized receipt to the person possessing the property; or in the absence of any person, leave a receipt in the place where the property was found, if reasonably possible.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-712. No additional remedies; no joint-and-several liability. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The state may not seek personal money judgments or other remedies not provided for in this chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A defendant is not jointly and severally liable for forfeiture awards owed by other defendants. When ownership is unclear, a court may order each defendant to forfeit property on a pro rata basis or by another means the court finds equitable.</span><span class="csEF05ACC"> </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-713. Title.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) At the time of seizure or entry of a restraining order, the state acquires provisional title to the seized property. Provisional title authorizes the state to hold and protect the property.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Title to the property vests with the state when the trier of fact renders a final forfeiture verdict and relates back to the time when the state acquired provisional title. However, this title is subject to claims by third parties adjudicated under this chapter.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-714. Disposition of forfeited property and proceeds.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) At any time when unclaimed property or contraband held for evidentiary purposes is no longer needed for that purpose, the court may order it be delivered to the State Treasurer within 30 days, or, in the case of contraband, be destroyed within 30 days.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If the forfeiture is granted, the court may order the property be delivered to the State Treasurer within 30 days. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Upon motion, the court may order that a portion of the currency seized or proceeds from public auction be used to pay reasonable nonpersonnel expenses of the seizure, storage, and maintenance of custody of any forfeited items.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) All abandoned property shall be delivered to the State Treasurer within 30 days. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)The State Treasurer shall dispose of all noncurrency forfeited and abandoned property at public auction. The auction proceeds and forfeited currency shall first be used to pay all outstanding recorded liens on the forfeited property, then to comply with an order of the court to pay reasonable nonpersonnel expenses, with all remaining funds to be deposited into the State&rsquo;s General Fund.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-715. Prohibition on retaining property; sale restrictions; reporting; return of property, damages, and costs.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(</span><span class="cs46AE26E6">a) No law-enforcement agency may retain forfeited or abandoned property for its own use or sell it directly or indirectly to any employee of the agency, to a person related to an employee by blood or marriage, or to another law-enforcement agency. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) On an annual basis, each law-enforcement agency shall report the following information about seizures and forfeitures completed by the agency under state forfeiture law and federal forfeiture law: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The total number of seizures of currency;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The total number of seizures and the number of items in each class of property seized including vehicles, houses, and other types of property seized.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The market value of each class of property seized including currency, vehicles, houses, and other types of property seized.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The total number of occurrences of each class of crime underlying the forfeitures including controlled substances, driving while intoxicated, and other crimes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Department of Military Affairs and Public Safety may require that information not specified in this section also be reported. The department shall develop standard forms, processes, and deadlines for electronic data entry for annual submission of forfeiture data by law- enforcement agencies.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Each law-enforcement agency shall file with the department the report required under subsection (b) of this section for the law-enforcement agency and the corresponding prosecuting authority. The law-enforcement agency shall file separate reports for forfeitures completed under state forfeiture law and federal forfeiture law. A null report shall be filed by a law-enforcement agency that did not engage in seizures or forfeitures during the reporting period. The department shall compile the submissions and issue an aggregate report of all forfeitures in the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) By April 1 of each year, the department shall make available on its website the reports submitted by law-enforcement agencies and its aggregate report.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The law-enforcement agency that holds the property shall return property to the owner within a reasonable period of time not to exceed five days after:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The court finds that the owner had a bona fide security interest;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The court finds that the owner was an innocent owner;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The acquittal of or dismissal of the owner of the criminal charge that is the basis of the forfeiture proceedings; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The disposal of the criminal charge that is the basis of the forfeiture proceedings by nolle prosequi.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The law-enforcement agency that holds the property is responsible for any damages, storage fees and related costs applicable to property returned under subsection (a) of this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-716. Transfer of forfeitable property to federal government.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Law-enforcement agency or prosecuting authority shall not directly or indirectly transfer seized property to any federal law-enforcement authority or other federal agency unless:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The value of the seized property exceeds $50,000, excluding the potential value of the sale of contraband, or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The seized property is not forfeitable under state law and may only be forfeited under federal law.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60A-7-717. Preemption.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This chapter preempts all law, resolutions, and ordinances by all political subdivisions of the state which regulate civil and criminal forfeiture.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill concerns forfeiture of contraband. The bill establishes criminal forfeiture and the items and property subject to forfeiture. The bill sets forth additional procedures for forfeiture. The bill establishes dates. The bill permits a court to waive a conviction requirement. The bill protects innocent owners. The bill permits seizure of personal property with and without process. The bill provides that there are no additional remedies and no joint and severable liability. The bill establishes title. The bill sets forth the disposition of forfeited property and proceeds. The bill establishes prohibition on retaining property. The bill establishes sales restrictions, return of property, damages, and costs. The bill permits the transfer of forfeited property to the federal government. The bill provides for preemption. The bill defines terms.</span></p><p class="cs637BA255"><span class="cs7FA9C667">The bill repeals &sect;60A-7-704, &sect;60A-7-705a, &sect;60A-7-706, &sect;60A-7-707, and &sect;60A-7-708.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

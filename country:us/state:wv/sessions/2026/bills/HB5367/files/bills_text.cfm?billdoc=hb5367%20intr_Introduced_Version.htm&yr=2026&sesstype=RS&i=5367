@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5367 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5367">&laquo; House Bill 5367 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5367'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5367 - Refugee Absorptive Capacity Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5367+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5367"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs7E56D39A{text-align:left;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csA130ECD1{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs7E56D39A" style="tab-stops:center 234pt left 412.5pt;"><span class="csB0C9F1E0">	2026 </span><span class="csC2FEE544">REGULAR SESSION	</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5367</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Funkhouser and Ridenour</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 09, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;15-17-1, &sect;15-17-2, &sect;15-17-3, &sect;15-17-4, &sect;15-17-5, &sect;15-17-6, &sect;15-17-7, and &sect;15-17-8, relating to enacting the Refugee Absorptive Capacity Act; providing a short title; defining terms; designating a state office within the Department of Human Services which deals with refugees; providing for a moratorium on applications and cessations; providing for a fiscal impact assessment; requiring reports; and providing for administration and severability.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 17. refugee absorptive capacity act.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-1. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This article shall be known and may be cited as the &quot;The West Virginia Refugee Absorptive Capacity Act.&quot;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Absorptive capacity&quot; is a</span><span class="csA130ECD1">s</span><span class="cs46AE26E6"> determination made by the Governor or by a local government evaluating:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The capacity of the social service agencies, child welfare agencies, child care facilities, educational facilities, healthcare facilities, translation and interpreter services, and law-enforcement agencies of the state or in the jurisdiction of the local government to meet the existing needs of the community&#39;s current residents considering budgetary and other restraints;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The capacity to provide medical care to refugees who at the time of resettlement in the state or in the jurisdiction of the local government are determined to have medical conditions requiring, or medical histories indicating a need for treatment or observation, or affecting the public health, both with or without expenditures by this state, including expenditures under this state&#39;s approved Medicaid state plan in accordance with Section 1902(a)(10)(C) of the Social Security Act, State Children&#39;s Health Insurance Program (CHIP), or other public assistance programs;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The capacity to provide affordable housing, low-cost housing, or both, considering existing waiting lists for such housing in the state or in the jurisdiction of the local government;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The capacity of the local school district in the jurisdiction of the local government to meet the needs of the existing or anticipated refugee population, including education of unaccompanied refugee minors and provision of English language training;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) The capacity of the economy of the state or in the jurisdiction of the local government to absorb new workers, including the likelihood of refugees placed in the jurisdiction of the local government becoming employed, self-sufficient, and free from long-term dependence on public assistance, without causing competition with local residents for job opportunities, displacing existing local workers, or adversely affecting the wages or working conditions of the local workforce;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) The capacity of state and local law enforcement in the jurisdiction of the local government to assure that law and order can be maintained and ensure that the refugee population and the general public can be protected from crime, including child abuse, domestic abuse and sex trafficking, as well as threats to national security; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) The capacity of the state and local government to provide services considering whether the jurisdiction of the local government has been highly impacted by the presence of refugees or comparable populations, including the proportion of refugees and comparable entrants in the population in the state or in the jurisdiction of the local government, the amount of secondary migration of refugees to the state or to the jurisdiction of the local government, and the proportion of refugees in the state or in the jurisdiction of the local government receiving cash or medical assistance through public assistance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Department&quot; means Department of Human Services. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Local government&quot; or &quot;local governments&quot; refers to either the city council or county commission that regulates any host community being considered for refugee resettlement activity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Local educational agency&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A public board of education or other public authority legally constituted within a state for either administrative control of or direction of, or to perform service functions for, public elementary or secondary schools in:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) A county; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Such combination of school districts or counties the state recognizes as an administrative agency for its public elementary or secondary schools; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Any other public institution or agency that has administrative control and direction of a public elementary or secondary school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) &quot;Refugee resettlement organization&quot; means any organization that receives federal funding for refugee resettlement, including any replacement designee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) &quot;State office dealing with refugees&quot; means the state office within the Department of Human Services that administers the refugee program for this state, or the entity or agency to whom the state has delegated such function and that has been designated and recognized by the federal government to administer such program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) &quot;State refugee coordinator&quot; means the official designated by the state office dealing with refugees.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-3. State office within the Department Human Services dealing with refugees.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The state office within the department which deals with refugees shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Meet at least quarterly with representatives of local governments to plan and coordinate the appropriate placement of refugees in advance of the refugees&rsquo; arrival; at least 30 days public notice shall be provided, and specific notice shall be provided to all persons who make a request to receive direct notice through the means of the person&#39;s choosing, including, but not limited to, certified mail, regular United States mail, or electronic mail;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Ensure that representatives of local resettlement agencies, local community service agencies, and other publicly-funded or tax-exempt agencies that serve refugees in this state shall meet at least quarterly with representatives of local governments, including representatives of law enforcement and local educational agencies, to plan and coordinate the appropriate placement of refugees in the host community in advance of the refugees&#39; arrival;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Execute a letter of agreement with each agency providing refugee resettlement services in this state. The letter of agreement shall require the parties to mutually consult and prepare a plan for the initial placement of refugees in a host community and set forth the continuing process of consultation between the parties. The provisions of the letter agreement shall be consistent with federal law regulating the resettlement of refugees;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Provide a certification that the refugees settled in the state do not pose a security or health risk to the citizens of the state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) At least quarterly, transmit copies of the letters of agreement and any initial refugee placement plans prepared thereunder to the chairman of the House and Senate committees on Veterans Affairs and Homeland Security and the Judiciary of the Legislature, respectively, to the chairman of the budget committee of the local government hosting the host refugee community, to the Secretary of the Department of Military Affairs and Public Safety, to the Attorney General of the state, to the head of all local law-enforcement agencies in the state, to the Superintendent of the West Virginia State Police, to the sheriff of every county in this state, to the West Virginia Superintendent of Schools, and to the superintendent of schools for all counties in the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) On or before January 1, 2027, &nbsp;the state refugee coordinator shall provide to the Select Committee on Veterans&#39; Affairs and the Joint Standing Committee on the Judiciary of the Legislature, &nbsp;to the chairman of the budget committee of the local government hosting the host refugee community, to the Secretary of the Department of Military Affairs and Public Safety, to the Attorney General of the state, to the head of all local law-enforcement agencies in the state, to the Superintendent of the West Virginia State Police, to the sheriff of every county in this state, to the West Virginia Superintendent of Schools, and to the superintendent of schools for all counties in the state, the fiscal impact refugees have had on the state and the economic impact refugees have had on the state from July 1, 2020, through June 30, 2026.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Within 30 days of the close of the state fiscal year, transmit to the Select Committee on Veterans&#39; Affairs and the Joint Standing Committee on the Judiciary of the Legislature, to the chairman of the budget committee of the local government hosting the host refugee community, to the Secretary of the Department of Military Affairs and Public Safety, to the Attorney General of the state, to the head of all local law-enforcement agencies in the state, to the Superintendent of the West Virginia State Police, to the sheriff of every county in this state, to the West Virginia Superintendent of Schools, and to the superintendent of schools for all counties in the state, the following data for the prior fiscal or calendar year:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Copies of statistical and programmatic information provided to the federal government, including any Reception and Placement Program Proposal or resettlement abstract, but this information shall be provided prior to being provided to the federal government:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Copies of the written policies of the Refugee Cash Assistance program, including agency policies regarding eligibility standards, the duration and amount of cash assistance payments, the requirements for participation in services, the penalties for noncooperation and client rights and responsibilities to ensure that refugees understand what they are eligible for, what is expected of them, and what protections are available to them;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Copies of any written public/private Refugee Cash Assistance program operating at any time in the calendar year;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) A report documenting the number of refugees sanctioned for failure to comply with the requirements of the Refugee Cash Assistance Program, and the number of determinations concerning employability, or failure or refusal to carry out job search or to accept an appropriate offer of employability services or employment, resulting in denial or termination of assistance;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) A certification that women have the same opportunities as men to participate in all services provided, including job placement services;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Any reports, either submitted or received, of crime committed by a refugee who has been resettled in the state, or crime committed against a refugee who has been resettled in the state, including incidents of child abuse, female genital mutilation, domestic abuse, sex trafficking, human trafficking, or terrorism, whether prosecuted or not; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) A report delineating:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The total number of refugees resettled;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) The total number of refugees under the age of 18 resettled;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) The total number of refugees between the ages of 18 and 40 resettled;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) The total number of refugees between the ages of 40 and 65 resettled;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(v) The total number of refugees over the age of 65;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(vi) The total number of refugees who are women and men, respectively;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(vii) The public assistance benefit programs that the refugees have applied for or enrolled into;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(viii) The total number of refugee minors enrolled in a public school;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ix) The total of refugee minors accessing English language learner services;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(x) The education levels of the refugees resettled by gender:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xi) The locations by zip code of initial resettlement for refugees resettled that year;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xii) The locations by zip code of refugees who have migrated from the zip code at which they were initially resettled;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xiii) The numbers of refugees resettled with and without family already residing in the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xiv) The number of refugees for which the President of the United States, the Secretary of State, the Attorney General, or the Secretary of Homeland Security exercised discretionary authority granted by Section 212(d)(3)(B)(i) of the Immigration and Nationality Act, 79 Fed. Reg. 6913 not to apply the material support inadmissibility provisions of Section 212(a)(3)(B) of the Immigration and Nationality Act to admit the refugee into the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xv) The fiscal impact refugees have on the state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xvi) The economic impact refugees have on the state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xvii) The process by which the refugees entering the state were determined to not pose a security risk to the citizens of the state:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xviii) For each and every refugee a description as to what vaccinations the refugee has received and the diseases for which the refugee has been screened;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xix) For each and every refugee their five previous employers and incomes;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xx) The total number of refugees needing translation services throughout the year; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(xxi) A certification that all of the requirements found in this section have been met.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-4. Moratorium.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The State Office for Refugees or the Governor shall accept an application from a local government to a moratorium on new refugee resettlement activities in a host community that lacks sufficient absorptive capacity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A host community lacks sufficient absorptive capacity where the local government, after consultation with the state refugee coordinator, holds a public hearing and issues findings based on the factors in &sect;15-17-2(a) of this code that further resettlement of refugees in the host community would result in an adverse impart to existing residents.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Upon notice of a determination made pursuant to subsection (b) of this section, the State Office for Refugees or the Governor shall thereafter suspend additional resettlement of refugees in that community until the state refugee coordinator and the local government have jointly determined that sufficient absorptive capacity for refugee resettlement exists to implement the initial refugee placement plan prepared for the host refugee community.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The period of validity of a moratorium described in subsection (c) of this section or any extension thereof may not exceed one year.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-5. Fiscal impacts.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The state office in the department which deals with refugees may collect fees stated in this section and each year shall assess the fiscal impact refugees have on the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) On or before July 1 of each year, the state refugee coordinator shall make a determination regarding the total fiscal impact on the state that is not reimbursable through the federal government or otherwise.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The amount each refugee resettlement organization must reimburse to the state shall be proportional to the number of refugees the refugee resettlement organization has facilitated bringing into the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The amount each refugee resettlement organization must reimburse to the state will be transmitted to every refugee resettlement organization each and every year before July 1 of each year.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Payment pursuant to this section shall be made on or before August 1 of each year.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-6. Executive order.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The Governor may issue findings based on the factors in &sect;15-17-2 of this code that further resettlement of refugees in the state would result in an adverse impact to existing residents of the state and issue an executive order declaring that the state, through any entity or designee, will not, until revocation of the executive order, participate in the resettlement of refugees.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-7. Administration of article.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Nothing in this article creates a new agency for administering the implementation of this article. The department, as referenced in the West Virginia Refugee Resettlement Program Plan (the Plan) along with persons and programs referenced in the plan shall enforce this article. &nbsp;This is the same plan signed by the Governor on July 28, 2016 and created pursuant to the provisions of the United States Code of Federal Regulations 45 CFR &sect;400.5.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-8. Severability.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">If any section, subsection, subdivision, paragraph, sentence clause or phrase of this article is for any reason held to be invalid, unlawful or unconstitutional, that decision does not affect the validity of the remaining portions of this article or any part thereof.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to enact the Refugee Absorptive Capacity Act. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

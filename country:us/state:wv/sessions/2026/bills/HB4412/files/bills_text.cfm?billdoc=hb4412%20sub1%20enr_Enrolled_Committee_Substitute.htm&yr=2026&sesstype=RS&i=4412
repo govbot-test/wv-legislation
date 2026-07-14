@@ -1,0 +1,557 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4412 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Enrolled Version  - Final Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4412">&laquo; House Bill 4412 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4412'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4412 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4412" title="HTML  - Committee Substitute (1)
+ - House Bill 4412">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4412 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4412" title="HTML  - Engrossed Version
+ - House Bill 4412">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4412 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4412" title="HTML  - Introduced Version
+ - House Bill 4412">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4412 - Require certain websites to utilize age verification methods to prevent minors from accessing content&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4412+sub1+enr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4412"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs7788C6BC{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs2CFA8611{text-align:left;text-indent:18pt;margin:0pt 36pt 0pt 36pt}
+		.cs53BAC856{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.csF24B3FE4{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.csF5AA9F8B{text-align:center;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs74A86F32{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.cs51F7D470{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs93FA44A8{text-align:right;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs49AF4BA5{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:1.9}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">ENROLLED</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4412</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegates Chiarelli, Pinson, Funkhouser, and Heckert</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Passed March 14, 2026; in effect 90 days from passage (June 12, 2026)]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">AN ACT to amend the Code of West Virginia, 1931, as amended, by adding a new chapter, designated &sect;49A-1-101, &sect;49A-1-102, &sect;49A-1-103, &sect;49A-1-104, &sect;49A-1-105, and &sect;49A-1-106, relating to creating liability for publishers and distributors of sexual material harmful to minors; defining terms; specifying methods of reasonable age verification; providing exceptions to applicability of this article; requiring a commercial entity that provides materials defined as being harmful to minors as a substantial portion of the entity&#39;s content to verify the age of individuals accessing the material; establishing liability and a cause of action; for the retention of data; providing nominal damages for publishing child pornography; imposing liability for publishers and distributors of material harmful to minors who fail to comply with verification requirements; imposing liability for publishers and distributors of material that is obscene or child pornography; and providing that an internet service provider or hosting entity is not liable for hosting or transmitting material harmful to minors to the extent that it is not the creator of the material; providing a five year statute of limitations to these civil actions; permitting civil actions by the Attorney General; providing for civil penalties; providing factors to be considered when imposing civil penalties; creating a five year statute of limitations for civil actions brought by Attorney General; granting rule-making authority for the Office of Technology; and providing for enforcement of the provisions of this article.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 49A. CHILD ONLINE PROTECTION and LIABILITY.</span></h1>
+	<h2 class="cs89687900">
+		<a name="_Hlk147307261"><span class="cs7A33E2F1">ARTICLE 1. </span></a><a name="_Hlk155704735"><span class="cs7A33E2F1">Liability for Publishers and distributors of sexual material harmful to minors</span></a><span class="cs7A33E2F1">.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;49A-1-101. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">As used in this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Application&quot; means, as used in this article, a computer software program designed to run on a smartphone, computer tablet, mobile device, smart television, desktop, or other application enabled devices.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Child pornography&quot; is defined as any material visually portraying a minor engaged in any sexually explicit conduct as those terms are used in &sect;61-8C-1 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&ldquo;Commercial entity&quot; includes a corporation, limited liability company, partnership, limited partnership, sole proprietorship, or other legally recognized entity.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Digital identification&quot; means information stored on a digital network that may be accessed by a commercial entity and that serves as proof of the identity of an individual. &quot;Digital identification&quot; shall include, but not be limited to, the West Virginia Mobile ID.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Distribute&quot; means to issue, sell, give, provide, deliver, transfer, transmute, circulate, or disseminate by any means.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Intentionally&quot; means conduct that is willfully engaged in and the consequences of such conduct results in a violation of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Internet&quot; means the international computer network of both federal and non-federal interoperable packet switched data networks.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Knowingly&quot; means, with respect to conduct or to a circumstance described by a statute defining an offense, that a person is aware by documentation or action that the person&#39;s conduct is of that nature or that the circumstance exists.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Minor&quot; means any person under 18 years old.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;News-gathering organization&quot; means any of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">An employee of a newspaper, news publication, or news source, printed or on an online or mobile platform, of current news and public interest, while operating as an employee as provided in this subsection, who can provide documentation of employment with the newspaper, news publication, or news source; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">An employee of a radio broadcast station, television broadcast station, cable television operator, or wire service while operating as an employee as provided in this subsection, who can provide documentation of employment.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Personally identifiable information&quot; means any information about an individual maintained by an agency, including:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Any information that can be used to distinguish or trace an individual&rsquo;s identity, such as name, social security number, date and place of birth, mother&lsquo;s maiden name, or biometric records; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">Any other information that is linked or linkable to an individual, such as medical, educational, financial, and employment information.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Obscene material&quot; is defined as all of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Any material that the average person, applying contemporary community standards, would find, taking the material as a whole, is designed to appeal to, or is designed to pander to, the prurient interest;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Material that exploits, is devoted to, or principally consists of descriptions of actual, simulated, or animated display or depiction of any of the following, in a manner that is patently and sexually offensive:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Pubic hair, anus, vulva, genitals, or nipple of the female breast;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Touching, caressing, or fondling of nipples, breasts, buttocks, anuses, or genitals; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Sexual intercourse, masturbation, sodomy, bestiality, oral copulation, flagellation, excretory functions, exhibitions, or any other sexual act; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The material taken as a whole lacks serious literary, artistic, political, medical, therapeutic, or scientific value.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Publish&quot; means to communicate or make information available to another person or entity on a publicly available Internet website or application.</span></p><p class="cs53FB8D75"><a name="_Hlk147322810"><span class="csEF05ACC">&quot;Sexual material harmful to minors&quot; includes any material that:</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">The average person, applying contemporary community standards, would find, taking the material as a whole and with respect to minors, is designed to appeal to, or is designed to pander to, the prurient interest;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">In a manner that is patently and sexually offensive in respect to minors, exploits, is devoted to, or principally consists of descriptions of actual, simulated, or animated display or depiction of:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Pubic hair, anus, vulva, genitals, or nipple of the female breast;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Touching, caressing, or fondling of nipples, breasts, buttocks, anuses, or genitals; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Sexual intercourse, masturbation, sodomy, bestiality, oral copulation, flagellation, excretory functions, exhibitions, or any other sexual act; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Taken as a whole lacks serious literary, artistic, political, medical, therapeutic, or scientific value for minors.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Substantial portion&quot; means more than 33.33% of total material on a website or application, which meets the definition of &quot;sexual material harmful to minors&quot; as defined in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Transactional data&quot; means a sequence of information that documents an exchange, agreement, or transfer between an individual, commercial entity, or third party used for the purpose of satisfying a request or event. Transactional data includes records from mortgage, education, and employment entities.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49A-1-102. Reasonable age verification methods.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) A commercial entity that knowingly and intentionally publishes or distributes sexual material harmful to minors on an Internet website or application, or a third party that performs age verification under this article, shall in order to prove that an individual is 18 years of age or older require an individual to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) P</span><a name="_Hlk157877463"><span class="csEF05ACC">rovide digital identification</span></a><span class="csEF05ACC">; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Comply with a commercial or governmental age verification system that verifies age using:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Government-issued identification which may be digital identification; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A commercially reasonable method that relies on public or private transactional data to verify the age of an individual.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) &nbsp;A commercial entity, or third party, that performs the required age verification shall not retain any identifying information of the individual after access has been granted to the material: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That nothing in this subsection shall be interpreted to require the deletion of data that was otherwise held or obtained by a commercial entity or third party, which the commercial entity, or third party, held prior to the age verification or which is, or was, otherwise held by a commercial entity, or third party, and was not gained or compiled as a part of the age verification process.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A commercial entity, or third party, shall implement best practices to comply with the current standards of the National Institute of Standards and Technology to limit the amount of personally identifiable information transferred between entities while effectively accomplishing the age verification requirements of this section.</span></p><p class="cs7788C6BC"><span class="csEF05ACC">(d) A commercial entity shall not publish or distribute material that the entity knows is obscene, or material that the entity knows depicts, describes, or promotes child pornography, on the Internet or via an application.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49A-1-103. Applicability of article.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) This article does not apply to a website, video, report, or event of a bona fide news gathering organization or public interest broadcast. This article may not be construed to affect the rights of a news-gathering organization.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) &nbsp;An Internet service provider or its affiliates or subsidiaries, a search engine, an application distribution provider, web browser provider, or a cloud service provider may not be held to have violated this article for providing access or connection to or from a website or other information or content on the Internet or on a facility, system, or network, including transmission, downloading, intermediate storage, access software, or other services to the extent the provider or search engine is not responsible for the creation of the content that constitutes sexual material harmful to minors.</span></p><h4 class="cs89687900">
+		<a name="_Hlk147307025"></a><a name="_Hlk157864961"><span class="csB9803513">&sect;49A-1-104. Liability for failing to perform reasonable age verification for sexual material harmful to minors; damages; liability for retention of data; damages; creation of cause of action; and statute of limitations.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) A </span><a name="_Hlk155704534"><span class="csEF05ACC">commercial entity that knowingly and intentionally publishes or distributes sexual material harmful to minors on the internet from a website, or through an application, that contains a substantial portion of such sexual material harmful to minors shall be held liable if the entity fails to perform reasonable age verification methods to verify the age of an individual attempting to access the material. &nbsp;A commercial entity that is found to have violated this section is liable to an individual, as defined in subsection (d) of this section, for damages resulting from a minor child accessing the material, and the individual who brings an action under this subsection is entitled to:</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An award of reasonable attorney fees and court costs; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) $10,000 per each incident of violation; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Actual damages for financial, physical, and emotional harm incurred by the person bringing the action, if the court determines that the harm is a direct consequence of the violation or violations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) &nbsp;A commercial entity that knowingly and intentionally publishes or distributes obscene material, or material that depicts or promotes child pornography, on the Internet may be held liable to an individual for nominal damages, actual damages, court costs, and reasonable attorney fees as ordered by the court. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A commercial entity that is found to have violated this section is liable to an individual for damages resulting from retaining, using, sharing, or selling any identifying information, or other data, of the individual after access has been granted to the individual. &nbsp;An individual who brings an action under this subsection is entitled to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An award of reasonable attorney fees and court costs; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) $10,000 per each incident of violation; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Actual damages for financial, physical, and emotional harm incurred by the person bringing the action, if the court determines that the harm is a direct consequence of the violation or violations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The Legislature hereby expressly creates the causes of action described in subsections (a), (b), and (c) of this section for a minor child, parent, guardian, or other person legally permitted to act on the minor child&rsquo;s behalf, that is harmed by a violation of the requirements of &sect;49A-1-102(a) or &sect;49A-1-102(d) of this code. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The statute of limitation for the filing of any civil action under this section shall be within five years after the discovery of the violation, or in the exercise of reasonable diligence should have known of the violation of this section. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) An award of damages pursuant to this section may not be imposed for any violation that occurred prior to the effective date of this article.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49A-1-105. Injunction by action of Attorney General; civil penalties; basis of civil penalties; and statute of limitations.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) If the Attorney General believes that a commercial entity is knowingly and intentionally violating or has knowingly violated this article, and the action is in the public interest, the Attorney General may bring an action in the circuit court located where a minor child, or individual, has accessed the obscene material, sexual material harmful to minors, or child porn or in the circuit court located where an individual resides who has had any identifiable information improperly retained, used, shared, or sold, against a commercial entity or other person to enjoin the violation and recover a civil penalty for violating this article. If a court of competent jurisdiction finds that the commercial entity has engaged in a violation of this article, it may assess a civil penalty for each violation of this article in addition to any other damages that may have been incurred, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) $10,000 per day that the entity operates an Internet website in violation of the age verification requirements of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) $10,000 per instance when the entity retains identifying information in violation of &sect;49A-1-102(b) of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) If, because of the entity&#39;s violation of the age verification requirements of this article, one or more minors accesses sexual material harmful to minors, an additional amount of not more than $250,000.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The amount of a civil penalty under this section shall be based on:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The seriousness of the violation, including the nature, circumstances, extent, and gravity of the violation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The history of previous violations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The amount necessary to deter a future violation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The economic effect of a penalty on the entity on whom the penalty will be imposed; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The entity&#39;s knowledge that the act constituted a violation of this article. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) </span><a name="_Hlk157867889"><span class="csEF05ACC">The statute of limitation for the filing of any civil action under this section shall be within five years after the discovery of the violation, or in the exercise of reasonable diligence should have known of the violation of this section. </span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) An award of damages pursuant to this section may not be imposed for any violation that occurred prior to the effective date of this article. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The Attorney General may recover reasonable and necessary attorney fees and costs incurred in a civil action under this article.</span></p><h4 class="cs89687900">
+		<a name="_Hlk147327551"><span class="csB9803513">&sect;49A-1-106. Rule-making authority.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csB9803513">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) The Office of Technology, under the Department of Administration, may propose rules for legislative approval necessary to implement this article in accordance with &sect;29A-3-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The rules shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Establish processes or means by which a commercial entity may meet the age verification requirements of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Establish requirements for providing confirmation of the receipt of any information provided by a person seeking to verify age under this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Establish requirements </span><a name="_Hlk155774459"><span class="csEF05ACC">for retaining, protecting, and securely disposing of any information obtained by a commercial entity or its agent as a result of compliance with the requirements of this article;</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Require that information obtained by a commercial entity or its agent in order to comply with the requirements of this article are only retained for the purpose of compliance and may not be used for any other purpose;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Require if the Office of Technology permits an agent to process verification requirements required by this article, that the agent have its principal place of business in the United States of America.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs2CFA8611"><span class="csEF05ACC">The Clerk of the House of Delegates and the Clerk of the Senate hereby certify that the foregoing bill is correctly enrolled.</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 130.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the House of Delegates</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">		...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 193.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="cs93AB6E8B">				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">Originated in the House of Delegates.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">In effect 90 days from passage.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">				...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 238.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Speaker of the House of Delegates</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">						...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 310.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">President of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="csF5AA9F8B" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">__________</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">	The within is ................................................ this the...........................................</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">Day of ..........................................................................................................., 2026.</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs93FA44A8"><span class="csEF05ACC">				.............................................................</span></p><p class="cs49AF4BA5"><span class="cs93AB6E8B">								Governor</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

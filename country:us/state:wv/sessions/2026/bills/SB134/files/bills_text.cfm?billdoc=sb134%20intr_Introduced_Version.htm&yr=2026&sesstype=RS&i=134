@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 134 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=134">&laquo; Senate Bill 134 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 134'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 134 - Renaming WV Board of Physical Therapy&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb134+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=134"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.csB98045FF{text-align:justify;text-indent:-76pt;margin:0pt 0pt 0pt 76pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 134</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Rucker</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 14, 2026; referred<br/>to the Committee on Government Organization]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;30-20-2, &sect;30-20-3, &sect;30-20-4, &sect;30-20-7, &sect;30-20-8a, &sect;30-20-13, and &sect;30-20A-2 of the Code of West Virginia, 1931, as amended, relating to changing name of West Virginia Board of Physical Therapy to West Virginia Board of Physical Therapy and Athletic Training. </span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 20. PHYSICAL THERAPISTS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-20-2. Applicable law.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The practices licensed under the provisions of this article and the Board of Physical Therapy </span><span class="cs46AE26E6">and Athletic Training</span><span class="csEF05ACC"> are subject to &sect;30-1-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this </span><span class="cs68EFC440">chapter</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">code</span><span class="csEF05ACC">, the provisions of this article, and any rules promulgated hereunder.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-20-3. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">As used in this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Applicant&quot; means any person making application for an original or renewal license or a temporary permit under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Board&quot; means the West Virginia Board of Physical Therapy </span><span class="cs46AE26E6">and Athletic Training</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Business entity&quot; means any firm, partnership, association, company, corporation, limited partnership, limited liability company or other entity providing physical therapy services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Consultation&quot; means a physical therapist renders an opinion or advice to another physical therapist or health care provider through telecommunications.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Direct supervision&quot; means the actual physical presence of the physical therapist in the immediate treatment area where the treatment is being rendered.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;General supervision&quot; means the physical therapist must be available at least by telecommunications.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;License&quot; means a physical therapist license or license to act as a physical therapist assistant issued under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;Licensee&quot; means a person holding a license under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;On-site supervision&quot; means the supervising physical therapist is continuously on-site and present in the building where services are provided, is immediately available to the person being supervised, and maintains continued involvement in appropriate aspects of each treatment session.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) &quot;Permit&quot; or &quot;temporary permit&quot; means a temporary permit issued under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) &quot;Permittee&quot; means any person holding a temporary permit issued pursuant to the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) &quot;Physical therapy aide&quot; means a person trained under the direction of a physical therapist who performs designated and routine tasks related to physical therapy services under the direction supervision of a physical therapist.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) &quot;Physical therapist&quot; means a person engaging in the practice of physical therapy who holds a license or permit issued under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) &quot;Physical therapist assistant&quot; means a person holding a license or permit issued under the provisions of this article who assists in the practice of physical therapy by performing patient related activities delegated to him or her by a physical therapist and performs under the supervision of a physical therapist and which patient related activities commensurate with his or her education and training, including physical therapy procedures, but not the performance of evaluative procedures or determination and modification of the patient plan of care.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) &quot;Practice of physical therapy&quot; or &quot;physiotherapy&quot; means the care and services as described in section nine of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) &quot;Telecommunication&quot; means audio, video, or data communication.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-20-4. West Virginia Board of Physical Therapy </span><span class="csF3C8A5A3">and Athletic Training</span><span class="csB9803513">.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(a) The West Virginia Board of Physical Therapy is continued </span><span class="cs46AE26E6">as the West Virginia Board of Physical Therapy and Athletic Training. All references in this code to &quot;The West Virginia Board of Physical Therapy&quot; shall be construed as references to the West Virginia Board of Physical Therapy and Athletic Training</span><span class="csEF05ACC">. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The board shall consist of the following members:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Five physical therapists;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) One physical therapist assistant; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) One person who is a certified athletic trainer; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) One citizen member, who is not licensed under the provisions of this article and who does not perform any services related to the practice of the professions regulated under the provisions of this article or have a financial interest in any health care profession, for a term of three years.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) After the initial appointment term, the term shall be for five years. Appointments to the board shall be made by the Governor by and with the advice and consent of the Senate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) A licensed member of the board, at the time of his or her appointment, shall have held a license in this state for a period of not less than five years immediately preceding the appointment.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) A member of the board shall be a resident of this state during the appointment term.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) A member may not serve more than two consecutive full terms. A member may continue to serve until a successor has been appointed and has qualified.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) A vacancy on the board shall be filled by appointment by the Governor for the unexpired term of the member whose office is vacant and the appointment shall be made within 60 days of the vacancy.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The Governor may remove a member from the board for neglect of duty, incompetency, or official misconduct.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) A licensed member of the board immediately and automatically forfeits membership to the board if his or her license to practice is suspended or revoked.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) A member of the board immediately and automatically forfeits membership to the board if he or she is convicted of a felony under the laws of any jurisdiction or becomes a nonresident of this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) The board shall elect annually one of its members as chairperson who serves at the will of the board.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) In the event of a tie vote on any matter properly brought before the board, the chairperson shall cast one additional vote to break the tie. &nbsp;If the chairperson is recused or absent, the longest-serving board member who is present and not recused shall cast one additional vote.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) A member of the board is entitled to compensation and expense reimbursement in accordance with &sect;30-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) A majority of the members of the board constitutes a quorum.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o) The board shall hold at least two annual meetings. Other meetings may be held at the call of the chairperson or upon the written request of two members, at the time and place as designated in the call or request.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) Prior to commencing his or her duties as a member of the board, a member shall take and subscribe to the oath required by section five, article four of the Constitution of this state.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-20-7. Fees; special revenue account; administrative fines.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) All fees and other moneys, except administrative fines, received by the board shall be deposited in a separate special revenue fund in the State Treasury designated the &quot;West Virginia Board of Physical Therapy </span><span class="cs46AE26E6">and Athletic Training</span><span class="csEF05ACC"> Fund&quot;, which is continued. The fund is used by the board for the administration of this article. Except as may be provided in &sect;30-1-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this </span><span class="cs68EFC440">chapter</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">code</span><span class="csEF05ACC">, the board retains the amount in the special revenue account from year to year. No compensation or expense incurred under this article is a charge against the General Revenue Fund.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any amounts received as fines pursuant to this article shall be deposited into the General Revenue Fund of the State Treasury.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-20-8a. West Virginia Board of Physical Therapy </span><span class="csF3C8A5A3">and Athletic Training</span><span class="csB9803513"> criminal history record checks. </span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The West Virginia Board of Physical Therapy </span><span class="cs46AE26E6">and Athletic Training</span><span class="csEF05ACC"> is authorized to require state and national criminal history record checks for the purpose of issuing licenses. The West Virginia Board of Physical Therapy </span><span class="cs46AE26E6">and Athletic Training</span><span class="csEF05ACC"> shall require an applicant, including physical therapists and physical therapy assistants, as a condition of eligibility for initial license to submit to a state and national criminal history record check as set forth in this section. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The applicant shall meet all requirements necessary to accomplish the state and national criminal history record check, including:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Submitting fingerprints for the purposes set forth in this subsection; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Authorizing the board, the West Virginia State Police, and the Federal Bureau of Investigation to use all records submitted and produced for the purpose of screening the applicant for a license.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The results of the state and national criminal history record check may not be released to or by a private entity except:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) To the individual who is the subject of the criminal history record check;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) With the written authorization of the individual who is the subject of the criminal history record check; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Pursuant to a court order.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The criminal history record check and related records are not public records for the purposes of &sect;29B-1-1</span><span class="cs93AB6E8B"> et seq.</span><span class="csEF05ACC"> of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The applicant shall ensure that the criminal history record check is completed as soon as possible after the date of the original application for registration.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The applicant shall pay the actual costs of the fingerprinting and criminal history record check.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The board may not disqualify an applicant for initial licensure because of a prior criminal conviction that has not been reversed unless that conviction is for a crime that bears a rational nexus to the occupation requiring licensure. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The board may not use crimes involving moral turpitude in making licensure determinations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) If an applicant is disqualified for licensure because of a criminal conviction that has not been reversed, the board shall afford the applicant the opportunity to reapply for licensure after the expiration of five years from the date of conviction or date of release from the penalty that was imposed, whichever is later, if the individual has not been convicted of any other crime during that period of time: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That convictions for violent or sexual offenses or offenses shall subject an individual to a longer period of disqualification, to be determined by the board.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) An individual with a criminal record who has not previously applied for licensure, certification, or registration may petition the board at any time for a determination of whether the individual&rsquo;s criminal record will disqualify the individual from obtaining a license or other authorization to practice. This petition shall include sufficient details about the individual&rsquo;s criminal record to enable the board to identify the jurisdiction where the conviction occurred, the date of the conviction, and the specific nature of the conviction. The board shall inform the individual of his or her standing within 60 days of receiving the petition from the applicant. The board may charge a fee established by rule to recoup its costs for each petition.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) The board shall propose rules or amendments to existing rules for legislative approval to comply with the provisions of this section. These rules or amendments to rules shall be proposed pursuant to the provisions of &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code within the applicable time limit to be considered by the Legislature during its regular session in the year 2020.</span></p><h4 class="csB98045FF">
+		<span class="csB9803513">&sect;30-20-13. Special volunteer physical therapist license, physical therapist assistant license; civil immunity for voluntary services rendered to indigents.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) There is established a special volunteer license for physical therapists or physical therapist assistants, as the case may be, retired or retiring from active practice who wish to donate their expertise for the care and treatment of indigent and needy patients in the clinical setting of clinics organized, in whole or in part, for the delivery of health care services without charge. The special volunteer license provided by this section shall be issued by the West Virginia Board of Physical Therapy </span><span class="cs46AE26E6">and Athletic Training</span><span class="csEF05ACC"> to physical therapists or physical therapist assistants licensed or otherwise eligible for licensure under this article and the legislative rules promulgated hereunder without the payment of an application fee, license fee or renewal fee, and the initial license shall be issued for the remainder of the licensing period, and renewed consistent with the boards other licensing requirements. The board shall develop application forms for the special volunteer license provided in this section which shall contain the applicant&rsquo;s acknowledgment that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The applicant&rsquo;s practice under the special volunteer license will be exclusively devoted to providing physical therapy care to needy and indigent persons in West Virginia;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The applicant may not receive any payment or compensation, either direct or indirect, or have the expectation of any payment or compensation but may donate to the clinic the proceeds of any reimbursement for any physical therapy services rendered under the special volunteer license;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The applicant shall supply any supporting documentation that the board may reasonably require; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The applicant shall continue to participate in continuing education as required by the board for special volunteer physical therapists or physical therapist assistants license, as the case may be.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any person engaged in the active practice of physical therapy in this state whose license is in good standing may donate their expertise for the care and treatment of indigent and needy patients pursuant to an arrangement with a clinic organized, in whole or in part, for the delivery of health care services without charge to the patient. Services rendered pursuant to an arrangement may be performed in either the physical therapist&rsquo;s office or the clinical setting.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Any physical therapist or physical therapist assistant who renders any physical therapy service to indigent and needy patients of a clinic organized, in whole or in part, for the delivery of health care services without charge under a special volunteer license authorized under subsection (a) of this section or pursuant to an arrangement with a clinic as authorized pursuant to subsection (b) of this section without payment or compensation or the expectation or promise of payment or compensation is immune from liability for any civil action arising out of any act or omission resulting from the rendering of the physical therapy service at the clinic unless the act or omission was the result of gross negligence or willful misconduct on the part of the physical therapist or physical therapist assistant. In order for the immunity under this subsection to apply, there must be a written agreement between the physical therapist or physical therapist assistant and the clinic stating that the physical therapist or physical therapist assistant will provide voluntary uncompensated physical therapy services under the control of the clinic to patients of the clinic before the rendering of any services by the physical therapist or physical therapist assistant at the clinic: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That any clinic entering into such written agreement is required to maintain liability coverage of not less than $1 million per occurrence.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Notwithstanding the provisions of subsection (b) of this section, a clinic organized, in whole or in part, for the delivery of health care services without charge is not relieved from imputed liability for the negligent acts of a physical therapist or physical therapist assistant rendering voluntary physical therapy services at or for the clinic under a special volunteer license authorized under this section or who renders such care and treatment pursuant to an arrangement with a clinic as authorized pursuant to subsection (b) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) For purposes of this section, &quot;otherwise eligible for licensure&quot; means the satisfaction of all the requirements for licensure for a physical therapist or physical therapist assistant, as the case may be, except the fee requirements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Nothing in this section may be construed as requiring the board to issue a special volunteer license to any physical therapist or physical therapist assistant whose license is or has been subject to any disciplinary action or to any physical therapist or physical therapist assistant who has surrendered a license or caused a license to lapse, expire and become invalid in lieu of having a complaint initiated or other action taken against his or her license, or who has elected to place a license in inactive status in lieu of having a complaint initiated or other action taken against his or her license or who has been denied a license.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Any policy or contract of liability insurance providing coverage for liability sold, issued or delivered in this state to any physical therapist or physical therapist assistant covered under the provisions of this article shall be read so as to contain a provision or endorsement whereby the company issuing such policy waives or agrees not to assert as a defense on behalf of the policy holder or any beneficiary thereof the policy, to any claim covered by the terms of the policy within the policy limits, the immunity from liability of the insured by reason of the care and treatment of needy and indigent patients by a physical therapist or physical therapist assistant who holds a special volunteer license or who renders such care and treatment pursuant to an arrangement with a clinic as authorized pursuant to subsection (b) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 20A. ATHLETIC TRAINERS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-20A-2. Applicable law.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The practices licensed under the provisions of this article and the Board of Physical Therapy </span><span class="cs46AE26E6">and Athletic Training</span><span class="csEF05ACC"> are subject to &sect;30-1-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> and &sect;30-20A-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code and any rules promulgated hereunder. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a)The board has all the powers and duties set forth in this article, by rule, &sect;30-1-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, and elsewhere in law.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b)The board shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Hold meetings, conduct hearings, and administer examinations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Establish requirements for licenses and permits;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Establish procedures for submitting, approving, and rejecting applications for licenses and permits;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Determine the qualifications of any applicant for licenses and permits;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Prepare, conduct, administer, and grade examinations for licenses;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Determine the passing grade for the examinations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Maintain records of the examinations the board or a third party administers, including the number of persons taking the examination and the pass and fail rate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Hire, discharge, establish the job requirements, and fix the compensation of the executive secretary;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Maintain an office, and hire, discharge, establish the job requirements, and fix the compensation of employees, investigators, and contracted employees necessary to enforce the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Investigate alleged violations of the provisions of this article, legislative rules, orders, and final decisions of the board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Conduct disciplinary hearings of persons regulated by the board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) Determine disciplinary action and issue orders;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) Institute appropriate legal action for the enforcement of the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) Maintain an accurate registry of names and addresses of all persons regulated by the board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) Keep accurate and complete records of its proceedings, and certify the same as may be necessary and appropriate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) Establish the continuing education requirements for licenses;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) Issue, renew, combine, deny, suspend, restrict, revoke, or reinstate licenses and permits;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) Establish a fee schedule;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(19) Take all other actions necessary and proper to effectuate the purposes of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(20) Propose rules for legislative approval, in accordance with the provisions of &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code to implement provisions of this article, including:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Establish standards and requirements for licenses and permits;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Establish procedures for examinations and re-examinations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Establish requirements for third parties to prepare and administer examinations and re-examinations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Establish educational and experience requirements;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Establish the passing grade on examinations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Establish standards for approval of courses and curriculum;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Establish procedures for the issuance and renewal of licenses and permits;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Establish a fee schedule;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Establish continuing education requirements for licenses;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) Establish the procedures for denying, suspending, restricting, revoking, reinstating, or limiting the practice of licensees and permittees;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Adopt a standard for ethics;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(L) Establish requirements for inactive or revoked licenses or permits; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(M) Any other rules necessary to effectuate the provisions of this article; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(N) All of the board&rsquo;s rules in effect January 1, 2020, shall remain in effect until they are amended or repealed, and references to provisions of former enactments of this section are interpreted to mean provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(21) All fees and other moneys, except administrative fines, received by the board shall be deposited in a separate special revenue fund in the State Treasury designated the West Virginia Board of Physical Therapy </span><span class="cs46AE26E6">and Athletic Training</span><span class="csEF05ACC"> Fund which is continued. The fund is used by the board for the administration of this article. Except as may be provided in &sect;30-1-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, the board retains the amount in the special revenue account from year to year. No compensation or expense incurred under this article is a charge against the General Revenue Fund;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(22) Any amounts received as fines pursuant to this article shall be deposited into the General Revenue Fund of the State Treasury.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c)The board may:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Contract with third parties to administer examinations required under the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Sue and be sued in its official name as an agency of this state; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Confer with the Attorney General or his or her assistant in connection with legal matters and questions.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to change the name of the West Virginia Board of Physical Therapy to the &quot;West Virginia Board of Physical Therapy and Athletic Training&quot;.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

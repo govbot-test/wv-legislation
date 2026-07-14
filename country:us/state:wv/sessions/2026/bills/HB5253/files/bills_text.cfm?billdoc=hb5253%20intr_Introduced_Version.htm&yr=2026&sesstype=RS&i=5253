@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5253 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5253">&laquo; House Bill 5253 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5253'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5253 - Creating a domestic violence registry&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5253+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5253"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs7788C6BC{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5253</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Pushkin</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 05, 2026; referred to the Committee on the Judiciary then Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;15-2C-1, &sect;15-2C-3, &sect;15-2C-4 and &sect;15-2C-8 &nbsp;of the Code of West Virginia, 1931, as amended; and to amend said code by adding thereto a new section, designated &sect;15-2C-2a, relating to creating a domestic violence registry; providing a purpose; directing the Criminal Identification Bureau of the West Virginia State Police to establish and maintain the registry; providing for confidential inquiry of persons on the registry; establishing criteria for placement on and releasing information from the registry; requiring prosecuting attorneys to provide certain information; and defining terms.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2C. CENTRAL ABUSE REGISTRY.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;15-2C-1. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The following terms when used in this article have meanings ascribed to them in this section, except in those instances where the context clearly indicates a different meaning:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(a)</span><span class="csEF05ACC"> &quot;Central abuse registry&quot; or &quot;registry&quot; means the registry created by this article which contains the names of individuals who have been convicted of a felony or a misdemeanor offense constituting abuse, neglect, or misappropriation of the property of a child or an incapacitated adult or an adult receiving behavioral health services.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b)</span><span class="csEF05ACC"> &quot;Child abuse and neglect&quot; or &quot;child abuse or neglect&quot; means those terms as defined in &sect;49-1-201 of this code, and shall include any act with respect to a child which is a crime against the person pursuant to &sect;61-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, any act which is unlawful pursuant to &sect;61-8D-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">, of this code and any offense with respect to a child which is enumerated in &sect;15-2C-3 of this code.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c)</span><span class="csEF05ACC"> &quot;Abuse or neglect of an incapacitated adult&quot; means &quot;abuse,&quot; &quot;neglect,&quot; and &quot;incapacitated adult&quot; as those terms are defined in &sect;9-6-1 of this code, and shall include any act with respect to an incapacitated adult which is a crime against the person pursuant to &sect;61-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, and any offense with respect to an incapacitated adult which is enumerated in &sect;15-2C-3 of this code.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d)</span><span class="csEF05ACC"> &quot;Adult receiving behavioral health services&quot; means a person over the age of 18 years who is receiving any behavioral health service from a licensed behavioral health provider or any behavioral health provider whose services are paid for, in whole or in part, by Medicaid or Medicare.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(e)</span><span class="csEF05ACC"> &quot;Conviction&quot; of a felony or a misdemeanor means an adjudication of guilt by a court or jury following a hearing on the merits, or entry of a plea of guilty or nolo contendere.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Domestic violence&quot; means an occurrence of one or more acts as provided in &sect;48-27-202.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Domestic violence registry&quot; means the registry created pursuant to &sect;15-2C-2a that contains the names and other identifying factors of individuals who have been convicted of three or more misdemeanor or felony offenses that constitute domestic violence.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(f)</span><span class="csEF05ACC"> &quot;Residential care facility&quot; means any facility where a child or an incapacitated adult or an adult receiving behavioral health services resides which is subject to registration, licensure, or certification by the Office of Health Facility Licensure and Certification, and includes nursing homes, personal care homes, residential board and care homes, adult family care homes, group homes, legally unlicensed service providers, residential child care facilities, family based foster care homes, specialized family care homes, and intermediate care facilities for the mentally retarded.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(g)</span><span class="csEF05ACC"> &quot;Misappropriation of property&quot; means any act which is a crime against property under &sect;61-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code with respect to a child in a residential care facility or an incapacitated adult or an adult receiving behavioral health services in a residential care facility or a child or an incapacitated adult or an adult receiving behavioral health services who is a recipient of home care services.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(h)</span><span class="csEF05ACC"> &quot;Home care&quot; or &quot;home care services&quot; means services provided to children or incapacitated adults or adults receiving behavioral health services in the home through a hospice provider, a community care provider, a home health agency, through the Medicaid waiver program, or through any person when that service is reimbursable under the state Medicaid program.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i)</span><span class="csEF05ACC"> &quot;Requester&quot; means the West Virginia Department of Education, any residential care facility, any state licensed day care center, any qualified entity as defined in this section, or any provider of home care services or an adult receiving behavioral health services, providing to the Central Abuse Registry the name of an individual and other information necessary to identify that individual, and either: </span><span class="cs68EFC440">(1)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(A)</span><span class="csEF05ACC"> Certifying that the individual is being considered for employment or service as a volunteer by the requester or for a contractual relationship with the requester where the individual will provide services to a child or an incapacitated adult or an adult receiving behavioral health services for compensation; or contractors and vendors who have or may have unsupervised access to the child, disabled, or elderly person for whom the qualified entity provides care; or </span><span class="cs68EFC440">(2)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(B)</span><span class="csEF05ACC"> certifying that an allegation of abuse, neglect, or misappropriation of property has been made against the individual. </span><span class="cs46AE26E6">However, the purpose of the domestic violence registry, &quot;requester&quot; means any member of the public that makes an inquiry about whether a specific person is listed in the directory.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(j)</span><span class="csEF05ACC"> &quot;Qualified entity&quot; means any business, agency, or organization that provides care, treatment, education, training, instruction, supervision, or recreation for children, the elderly, or individuals with disabilities and is a public, private, or not-for-profit entity within the State of West Virginia and meets the definition of qualified entity under the federal National Child Protection Act of 1993; P.L. 103-209 as amended by the Volunteers for Children Act; P.L. 105-251.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs7F45F1B">
+		<span class="csF3C8A5A3">&sect;15-2C-2a. &nbsp;Domestic violence registry; required information and procedures.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The purpose of the domestic violence registry is to protect children and other household members by providing a means to alert a person of another person&#39;s prior domestic violence, by creating a database of individuals in which information about their prior conduct can be confidentially verified, allowing a person that may enter into a domestic or other relationship with that person, to be made aware of and take necessary actions to protect his or her personal safety or the safety of a child or children that may be exposed to a person on the registry. &nbsp;The Criminal Identification Bureau of the West Virginia State Police shall establish a domestic violence registry, for the purpose of verifying that a person has or has not had prior domestic violence convictions. &nbsp;The bureau shall confirm to any person that may inquire, whether a person has three or more prior domestic violence convictions. This registry shall be accessible to individual members of public on a request basis, and contain the criminal history of persons that have been convicted of multiple acts of domestic violence. &nbsp;The domestic violence registry shall contain the name of every person who has three or more domestic violence convictions, when the third or subsequent conviction has occurred subsequent to the establishment of the registry. &nbsp;The information provided to a requestor shall include the nature of the convictions and other necessary identification and crime details but will not include the name of any victim or victims of the crimes. All information relating to a request about the domestic violence registry including the identity of any person making a request is confidential, is exempt from the provisions of &sect;29B-1-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, and may not be otherwise released to the public. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The domestic violence registry shall contain, at a minimum, the following information, which shall be provided to a requestor:</span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(1) The individual&#39;s full name;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Sufficient information to identify the individual, including date of birth;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Identification of the criminal offenses constituting domestic violence; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Any statement by the individual disputing the conviction, if he or she chooses to make and file one.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;15-2C-3. Reports of certain convictions by prosecuting attorneys.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The central abuse registry shall maintain information relating to child abuse or neglect, abuse or neglect of an incapacitated adult or adult receiving behavioral health services, and misappropriation of property with respect to individuals convicted of certain offenses pursuant to this code, when the victim of the crime is a child or an incapacitated adult or an adult receiving behavioral health services, to include:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) First or second degree murder pursuant to &sect;61-2-1 this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Voluntary manslaughter pursuant to &sect;61-2-4 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Attempt to kill or injure by poison pursuant to &sect;61-2-7 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Malicious or unlawful assault pursuant to &sect;61-2-9 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Assault during commission of or attempt to commit a felony pursuant to &sect;61-2-10 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Extortion by threats pursuant to &sect;61-2-13 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Abduction of a person or kidnapping or concealing a child pursuant to &sect;61-2-14 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Enticing away or otherwise kidnapping any person pursuant to &sect;61-2-14a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) A misdemeanor or felony sexual offense pursuant to &sect;61-8B-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Filming of sexually explicit conduct of minors pursuant to &sect;61-8C-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Misdemeanor or felony child abuse pursuant to &sect;61-8D-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) A violent crime against the elderly which is an offense under the provisions of &sect;61-2-9 &nbsp;or &sect;61-2-10 of this code which is subject to the sentencing provisions of &sect;61-2-10a of this code; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) A property offense pursuant to &sect;61-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, with respect to a child in a residential care facility or an incapacitated adult or an adult receiving behavioral health services in a residential care facility or a child or an incapacitated adult or an adult receiving behavioral health services who is a recipient of home care services, when the individual committing the offense was providing services for compensation in the residential care facility or within the home.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The prosecuting attorneys in each of the 55 counties within the state, upon conviction of a misdemeanor, a felony or a lesser included misdemeanor offense for those specific offenses set forth in </span><span class="cs68EFC440">subsection (a) of this section</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;15-2C-3(a)</span><span class="csEF05ACC">, shall report the conviction to the central abuse registry, together with additional information, provided in a form, as may be required by the criminal identification bureau for registry purposes. Reporting procedures shall be developed by the criminal identification bureau in conjunction with the prosecuting attorneys&#39; institute and the office of the administrator of the Supreme Court of Appeals.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Information relating to convictions prior to the effective date of this section of a misdemeanor or a felony constituting child abuse or abuse or neglect of an incapacitated adult receiving behavioral health services shall, to the extent which is feasible and practicable, be placed on the central abuse registry. When any requester requests information related to a named individual, the criminal identification bureau may search and release other information maintained by the bureau to determine whether that individual has been convicted of offenses which are subject to inclusion on the </span><span class="cs46AE26E6">central abuse</span><span class="csEF05ACC"> registry.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(</span><span class="cs46AE26E6">d) The prosecuting attorneys in each of the 55 counties within the state, upon conviction of a misdemeanor, a felony or a lesser included misdemeanor offense for domestic violence, as provided in &sect;15-2C-2, shall report to the domestic violence registry, information as may be required by the criminal identification bureau for registry purposes. Reporting procedures shall be developed by the criminal identification bureau in conjunction with the prosecuting attorneys&#39; institute and the office of the administrator of the Supreme Court of Appeals. The prosecuting attorneys shall also provide to the bureau any information regarding the prior history of a person convicted of domestic violence sufficient to determine whether this is a first or subsequent conviction.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;15-2C-4. Disclosure of information.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The information contained in the central abuse registry is confidential, and may not be disclosed except as specifically provided in this section. The criminal identification bureau shall disclose the information described in </span><span class="cs68EFC440">subdivisions (1) through (3) and subdivision (5), subsection (b), section two of this article</span><span class="csEF05ACC"> &sect;15-2C-2(b)(1), &sect;15-2C-2(b)(2), &sect;15-2C-2(b)(3), and &sect;15-2C-2(b)(5) to any requester, except that the name of the victim of the act alleged shall not appear on the information disclosed and shall be stricken from any statement filed by an individual. The Department of Human Services shall certify, not later than 15 days following the effective date of this section, the list of requesters authorized to obtain </span><span class="cs46AE26E6">central abuse</span><span class="csEF05ACC"> registry information, and shall inform the criminal identification bureau promptly of subsequent additions and deletions from the list. The information contained in the </span><span class="cs46AE26E6">central abuse</span><span class="csEF05ACC"> registry with respect to an individual shall be provided to that individual promptly upon request. Individuals on the registry requesting registry information shall be afforded the opportunity to file statements correcting any misstatements or inaccuracies contained in the registry. The criminal identification bureau may disclose </span><span class="cs46AE26E6">central abuse</span><span class="csEF05ACC"> registry information to authorized law-enforcement and governmental agencies of the United States and its territories, of foreign states and of the State of West Virginia upon proper request stating that the information requested is necessary in the interest of and will be used solely in the administration of official duties and the criminal laws. Agreements with other states providing for the reciprocal sharing of abuse registry information are specifically authorized.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) An active file on requests for information by requesters shall be maintained by the criminal identification bureau for a period of one year from the date of a request. If an individual who is the subject of the request is placed on the registry with respect to any conviction within one year of the date of the request, that information shall promptly be disclosed to the requester.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;15-2C-8. Service provider responsibilities.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">All residential care facilities, day care centers, providers to adults with behavioral health needs and home care service providers authorized to operate in West Virginia shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Provide notice to current employees of the agency and other persons providing services under a contract with the agency within 60 days of the effective date of this article, and provide notice to any newly hired employee or person at the time an employment or contractual relationship is entered into, which notice shall be in the following form: &quot;NOTICE: All service providers in the State of West Virginia are subject to provisions of law creating a central abuse registry. Any person providing services for compensation to children or to incapacitated adults or to adults receiving behavioral health services, who is convicted of a misdemeanor or felony offense constituting abuse, neglect or misappropriation of property of a child or an incapacitated adult or an adult receiving behavioral health services, is subject to listing on the central abuse registry. The fact that a person is listed on the </span><span class="cs46AE26E6">central abuse</span><span class="csEF05ACC"> registry may be disclosed in specific instances provided by law. Listing on the </span><span class="cs46AE26E6">central abuse</span><span class="csEF05ACC"> registry may limit future employment opportunities, including opportunities for employment with residential care facilities, day care centers and home care agencies. It is the policy of __________________ [name of agency] to promptly report all suspected instances of abuse, neglect or misappropriation of property to the proper authorities and to cooperate fully in the prosecution of these offenses&quot;.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Cooperate fully with law enforcement, prosecuting attorneys and court personnel in criminal prosecutions of acts of child abuse or neglect or abuse or neglect of an incapacitated adult or adult receiving behavioral health services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(3) Respond promptly to all requests by other service providers for references for former or present employees of the agency, which response may include a subjective assessment as to whether the individual for whom the reference is sought is suited to provide services to children or incapacitated adults or to adults receiving behavioral health services.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create a domestic violence registry. The bill provides a purpose. The bill directs the criminal identification bureau of the West Virginia State Police to establish and maintain the registry. The bill provides for confidential inquiry of persons on the registry. The bill establishes criteria for placement on and releasing information from the registry. The bill requires prosecuting attorneys to provide certain information. The bill defines terms.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

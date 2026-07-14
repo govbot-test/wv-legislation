@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4910 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4910">&laquo; House Bill 4910 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4910'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4910 - To oppose the use of eminent domain in West Virginia for private corporation benefit&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4910+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4910"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4910</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Anders, Dillon, and White</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 29, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;54-1-2 of the Code of West Virginia, 1931, as amended, and to repeal &sect;54-1-2a, &sect;54-1-3, &sect;54-1-3a, &sect;54-1-4, &sect;54-1-5, &sect;54-1-5a, &sect;54-1-6, &sect;54-1-7, &sect;54-1-8, &sect;54-1-9, &sect;54-1-10, &sect;54-1-11, &sect;54-1-12, &sect;54-2-1, &sect;54-2- 2, &nbsp;&sect;54-2-2a, &sect;54-2-3, &sect;54-2-4, &sect;54-2-4a, &sect;54-2-5, &sect;54-2-6, &sect;54-2-7, &sect;54-2-7a, &sect;54-2-7b, &sect;54-2-8, &sect;54-2-9, &sect;54-2-9a, &sect;54-2-10, &sect;54-2-11, &sect;54-2-11a, &sect;54-2-12, &sect;54-2-13, &sect;54-2-14, &sect;54-2-14a, &sect;54-2-15, &sect;54-2-16, &sect;54-2-16a, &sect;54-2-17, &sect;54-2-18, &sect;54-2-19, &sect;54-2-20, &sect;54-2-21, &sect;54-3-1, &sect;54-3-2, &sect;54-3-3, &sect;54-3-4, and &sect;54-3-5, relating to eminent domain; and providing property owners are not subject to eminent domain.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. RIGHT OF EMINENT DOMAIN.</span></h2>
+	<p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;54-1-2. Public uses for which private property may be taken or damaged.</span></h4>
+	<p class="cs53FB8D75"><span class="cs68EFC440">(a) The public uses for which private property may be taken or damaged are as follows:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(1) For the construction, maintenance and operation of railroad and traction lines (including extension, lateral and branch lines, spurs, switches and sidetracks), canals, public landings, wharves, bridges, public roads, streets, alleys, parks and other works of internal improvement, for the public use;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(2) For the construction and maintenance of telegraph, telephone, electric light, heat and power plants, systems, lines, transmission lines, conduits, stations (including branch, spur and service lines), when for public use;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(3) For constructing, maintaining and operating pipelines, plants, systems and storage facilities for manufacturing gas and for transporting petroleum oil, natural gas, manufactured gas, and all mixtures and combinations thereof, by means of pipes, pressure stations or otherwise, (including the construction and operation of telephone and telegraph lines for the service of such systems and plants), and for underground storage areas and facilities, and the operation and maintenance thereof, for the injection, storage and removal of natural gas in subterranean oil and/or gas bearing stratum, which, as shown by previous exploration of the stratum sought to be condemned and within the limits of the reservoir proposed to be utilized for such purposes, has ceased to produce or has been proved to be nonproductive of oil and/or gas in substantial quantities, when for public use, the extent of the area to be acquired for such purpose to be determined by the court on the basis of reasonable need therefor. Nothing in this subsection shall be construed to interfere with the power of the state and its political subdivisions to enact and enforce ordinances and regulations deemed necessary to protect the lives and property of citizens from the effects of explosions of oil or gas;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4) For constructing, maintaining and operating, water plants and systems, including lines for transporting water by any corporate body politic, or private corporation, for supplying water to the inhabitants of any city, town, village or community, for public use, including lands for pump stations, reservoirs, cisterns, storage dams, and other means of storing, purifying and transporting water, and the right to take and damage lands which may be flooded by the impounded waters, and to appropriate any spring, stream and the surrounding property necessary to protect, preserve and maintain the purity of any such spring, stream, reservoir, cistern and water impounded by means of any storage dam;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5) For the purpose of constructing, maintaining and operating sewer systems, lines and sewage disposal plants, to collect, transport and dispose of sewage. When in the interest of the public welfare and the preservation of the public health, the construction of a sewer line to serve a single building or institution shall be deemed a public use, and, for such purpose, the right of eminent domain, if within a municipal corporation, may be exercised in the name of a municipal corporation, and if not within a municipal corporation, in the name of the county commission of the county in which the property is located;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(6) For the reasonable use by an incorporated company engaged in a public enterprise of which the state or any county or municipality is the sole or a part owner;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(7) For courthouses and municipal buildings, parks, public playgrounds, the location of public monuments, and all other public buildings;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(8) For cemeteries, and the extension and enlargement of existing cemeteries: </span><span class="csB65271">Provided,</span><span class="cs68EFC440"> That no lands shall be taken for cemetery purposes which lie within four hundred feet of a dwelling house, unless to extend the boundaries of an existing cemetery, and then only in such manner that the limits of the existing cemetery shall not be extended nearer than four hundred feet of any dwelling house distant four hundred feet or more from such cemetery, or nearer than it was to any dwelling house which is within four hundred feet thereof;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(9) For public schools, public libraries and public hospitals;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(10) For the construction and operation of booms (including approaches, landings and ways necessary for such objects), when for a public use;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(11) By the State of West Virginia for any and every other public use, object and purpose not herein specifically mentioned, but in no event may &quot;public use&quot;, for the purposes of this subdivision, be construed to mean the exercise of eminent domain primarily for private economic development.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">For purposes of this subdivision, no private property may be taken by the State of West Virginia or its political subdivisions without the owner&#39;s consent when the primary purpose of the taking is economic development that will ultimately result in ownership or control of the property transferring to another private entity, other than one having the power of eminent domain, whether by purchase agreement, long-term lease agreement or any other mechanism whereby ownership or control is effectively transferred: </span><span class="csB65271">Provided,</span><span class="cs68EFC440"> That a municipal urban renewal authority may exercise a right of eminent domain as to property only within an area designated a slum area or blighted area under the provisions of article eighteen, chapter sixteen of this code.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">By the United States of America for each and every legitimate public use, need and purpose of the government of the United States, within the purview, and subject to the provisions of chapter one of this code.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(12) For constructing, maintaining and operating pipelines, plants, systems and storage facilities, for the transportation by common carrier as a public utility of coal and its derivatives and all mixtures and combinations thereof with any substance by means of pipes, pressure stations or otherwise (including the construction and operation of telephone and telegraph lines for the service of such systems and plants), for public use: </span><span class="csB65271">Provided,</span><span class="cs68EFC440"> That the common carrier engages in some intrastate activity in this state, if there is any reasonable demand therefor: </span><span class="csB65271">Provided, however,</span><span class="cs68EFC440"> That in addition to all other requisites by federal or state Constitutions, statute or common law required for the taking of private property for public use, a further prerequisite and condition precedent to the exercise of such taking of or damage to private property for public use as in this subsection hereinabove provided, is that the Public Service Commission of this state, in an appropriate hearing and proceeding on due notice to all interested persons, firms or corporations, in accordance with the procedure now or hereafter established by statute and the regulations thereunder, shall have found that such pipeline transportation of coal and its derivatives and all mixtures and combinations thereof is required for the public convenience and necessity, and that the Public Service Commission of this state shall not extend a certificate of convenience and necessity or make such finding of public convenience and necessity unless, in addition to the other facts required to support such findings, it shall have been established by the applicant therefor that the patents and other similar rights under which the applicant proposes to construct, maintain or operate such pipeline, plants, systems and storage facilities shall be and shall remain equally available, insofar as said subsequent applicant may determine such availability, upon fair and reasonable terms, to other bona fide applicants seeking a certificate of convenience and necessity and finding of fact for any other pipeline in West Virginia; for the purpose of making the findings hereinbefore set forth the Public Service Commission shall have and exercise jurisdiction, and that the aforesaid findings in this proviso above set forth shall be subject to judicial review as in other Public Service Commission proceedings.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">It is the intention of the Legislature in amending this section by the addition of subdivision (12) to extend the right of eminent domain to coal pipelines for public use; to provide for regulation of such coal pipelines by the Public Service Commission of this state or the Interstate Commerce Commission of the United States of America, or both; to assure that such rights shall be extended only to public utilities or common carriers as distinguished from private carriers or contract carriers; to make patents covering the same equally available to others on fair and reasonable terms; and to prevent monopolistic use of coal pipelines by any users thereof which would result in any appreciable economic detriment to others similarly situated by reasons of any such monopoly.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Notwithstanding the provisions of any other law, no governmental entity by this state or of this state, its subdivisions, including but not limited to, counties, municipalities, localities, cities, commissions, departments, school districts, mines, boards, railroad authorities, corporations, public-private entities or any other entity operating within this state or by this state, may exercise the right of eminent domain to force private property owners to sell and or lose their property.</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-2a. Notice; good faith purchase.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-3. Entry on lands.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-3a. Entry by political body to obtain data; compensation to owner.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-4. Restrictions as to dwelling houses -- Railroad and other internal improvement companies.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-5. Same -- Lines for transportation of gas, oil, coal, etc., and storage tanks.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-5a. Restrictions as to the exercise of the right of eminent domain by the West Virginia</span><span class="csF3C8A5A3"> </span><span class="csB9803513">Housing Development Fund.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-6. Quantity of land acquired.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-7. Roadways; crossings.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-8. Estate acquired; taxation.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-9. Crossing or alteration of course of works of another entity; civil action.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-10. Taking wood and other materials and water; deposits of waste; cutting trees.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-11. Specific purposes not limitation.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-1-12. Facilities for moving fuel coal to coal fired steam electric power plants.</span></p><p class="cs7F45F1B"><span class="csB9803513">	</span><a name="_Hlk206394868"><span class="csEF05ACC">[Repealed.]</span></a></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. PROCEDURE.</span></h2>
+	<p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-1. Jurisdiction.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-2. Pleadings; verification; parties.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-2a. Additional requirement for condemnation proceeding for right-of-way for certain high voltage transmission line.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-3. Notice; riparian owner affected by taking of water.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-4. Persons under disability.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-4a. Lis pendens notice; effect.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-5. Commissioners; qualifications.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-6. How commissioners appointed.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-7. Oath of commissioners.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-7a. Information for commissioners.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-7b. Supervision of hearings; appointment, powers, duties and compensation of court commissioner; subpoena of witnesses, etc.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-8. Powers of commissioners; hearings; view of property.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-9. Report of commissioners.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-9a. Separate findings of compensation and damages.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-10. Proceedings on report; trial by jury.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-11. Setting aside report; recommittal; new commissioners.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-11a. Waiver of findings by commissioners.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-12. Vesting of title in applicant.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-13. Entry on land on payment of compensation.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-14. Entry by state or its political subdivisions.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-14a. Alternative method for condemnation by state or its political subdivision.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-15. Alternative procedure for condemnation by business corporation; bond.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-16. Increase or decrease in award after payment into court; costs.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-16a. Liability for costs generally.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-17. Effect of judgment against applicant for excess.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-18. Payment to clerk; disposition of money paid into court; determination of conflicting claims; notice to condemnee.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-19. Compensation of commissioners and jurors.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-20. Recordation of certified copy of condemnation order.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-2-21. Effective date of new percent interest rates.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 3. IMPLEMENTATION OF UNIFORM RELOCATION ASSISTANCE AND REAL PROPERTY ACQUISITION POLICIES ACT OF 1970 AND THE 1987 AMENDMENTS THERETO KNOWN AS TITLE IV OF THE SURFACE TRANSPORTATION AND UNIFORM RELOCATION ASSISTANCE ACT OF 1987.</span></h2>
+	<p class="cs7F45F1B"><span class="csB9803513">&sect;54-3-1. Definitions.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-3-2. Statement of purposes.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-3-3. Implementation of federal act; powers of state agencies; payments under act not considered income or resources for certain purposes.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-3-4. Construction of article; assistance for dislocation, etc., occurring prior to effective date.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs7F45F1B"><span class="csB9803513">&sect;54-3-5. Severability.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	[Repealed.]</span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs7F45F1B">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to protect the citizens of the West Virginia from losing their property to eminent domain.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5214 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+hb5214 sub1 
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5214">&laquo; House Bill 5214 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5214'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5214 sub1 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5214" title="HTML  - Enrolled Version  - Final Version
+ - House Bill 5214">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5214 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5214" title="HTML  - Engrossed Version
+ - House Bill 5214">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5214 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5214" title="HTML  - Introduced Version
+ - House Bill 5214">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5214 - Relating to drug testing of parents who have had abuse and/or neglect claims substantiated against them prior to reunification.&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5214+sub1.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5214"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs16A9F08{color:#000000;background-color:transparent;font-family:Calibri;font-size:12pt;font-weight:normal;font-style:normal;}
+		.csDB0815E0{color:#000000;background-color:transparent;font-family:Calibri;font-size:12pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5214</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegate Heckert</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Originating in the Committee on the Judiciary; Reported on February 17, 2026]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;49-4-604 of the Code of West Virginia, 1931, as amended, relating to requiring a parent, who has been adjudicated to have abused and/or neglected their child, to undergo lab confirmed drug testing prior to reunification pursuant to an order entered after a dispositional child abuse or neglect hearing returning a child to his or her own home under supervision of the department; also relating to not permitting a child to return to the home for reunification if either parent residing in that home initially tests positive for alcohol or controlled substance for which they do not possess a valid and current prescription, or medical marijuana card; and requiring a hearing within 10 days of the failure of the initial drug test by the parents. </span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 4. COURT ACTIONS.</span></h2>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-4-604. Disposition of neglected or abused children; case plans; dispositions; factors to be considered; reunification; orders; alternative dispositions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) </span><span class="cs93AB6E8B">Child and family case plans</span><span class="csEF05ACC">. &mdash; Following a determination pursuant to &sect;49&#8209;4&#8209;602 of this code wherein the court finds a child to be abused or neglected, the department shall file with the court a copy of the child&rsquo;s case plan, including the permanency plan for the child. The term &quot;case plan&quot; means a written document that includes, where applicable, the requirements of the family case plan as provided in &sect;49&#8209;4&#8209;408 of this code and that also includes, at a minimum, the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A description of the type of home or institution in which the child is to be placed, including a discussion of the appropriateness of the placement and how the agency which is responsible for the child plans to assure that the child receives proper care and that services are provided to the parents, child, and foster or kinship parents in order to improve the conditions that made the child unsafe in the care of his or her parent(s), including any reasonable accommodations in accordance with the Americans with Disabilities Act of 1990, 42 U. S. C. &sect;12101 </span><span class="cs93AB6E8B">et seq.,</span><span class="csEF05ACC"> to parents with disabilities in order to allow them meaningful access to reunification and family preservation services;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A plan to facilitate the return of the child to his or her own home or the concurrent permanent placement of the child; and address the needs of the child while in kinship or foster care, including a discussion of the appropriateness of the services that have been provided to the child.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The term &quot;permanency plan&quot; refers to that part of the case plan which is designed to achieve a permanent home for the child in the least restrictive setting available. The plan must document efforts to ensure that the child is returned home within approximate time lines for reunification as set out in the plan. Reasonable efforts to place a child for adoption or with a legal guardian should be made at the same time, or concurrent with, reasonable efforts to prevent removal or to make it possible for a child to return to the care of his or her parent(s) safely. If reunification is not the permanency plan for the child, the plan must state why reunification is not appropriate and detail the alternative, concurrent permanent placement plans for the child to include approximate time lines for when the placement is expected to become a permanent placement. This case plan shall serve as the family case plan for parents of abused or neglected children. Copies of the child&rsquo;s case plan shall be sent to the child&rsquo;s attorney and parent, guardian or custodian or their counsel at least five days prior to the dispositional hearing. The court shall forthwith proceed to disposition giving both the petitioner and respondents an opportunity to be heard.</span></p><p class="cs53FB8D75"><a name="_Hlk32398218"><span class="csEF05ACC">(b) </span><span class="cs93AB6E8B">Requirements for a Guardian ad litem</span><span class="csEF05ACC">. &mdash; </span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">A guardian ad litem appointed pursuant to &sect;49&#8209;4&#8209;601(f)(1) of this code, shall, in the performance of &nbsp;his or her duties, adhere to the requirements of the Rules of Procedure for Child Abuse and Neglect Proceedings and the Rules of Professional Conduct and such other rules as the West Virginia Supreme Court of Appeals may promulgate, and any appendices thereto, and must meet all educational requirements for the guardian ad litem. A guardian ad litem may not be paid for his or her services without meeting the certification and educational requirements of the court. The West Virginia Supreme Court of Appeals is requested to provide guidance to the judges of the circuit courts regarding supervision of said guardians ad litem. The West Virginia Supreme Court of Appeals is requested to review the Rules of Procedure for Child Abuse and Neglect Proceedings and the Rules of Professional Conduct specific to guardians ad litem.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) </span><span class="cs93AB6E8B">Disposition decisions</span><span class="csEF05ACC">. &mdash; The court shall give precedence to dispositions in the following sequence:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Dismiss the petition;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Refer the child, the abusing parent, the battered parent or other family members to a community agency for needed assistance and dismiss the petition;</span></p><p class="cs53FB8D75"><span class="cs16A9F08">(3) </span><span class="csDB0815E0">(A) </span><a name="_Hlk222076755"><span class="csEF05ACC">Return the child to his or her own home under supervision of the department</span></a><span class="cs46AE26E6">: </span><span class="cs1489E706">Provided, </span><span class="cs46AE26E6">That in cases where parents have been adjudicated, pursuant to this chapter, as having abused or neglected their child, and the order adjudicating these parents contains findings of fact and conclusions of law that the parents abused, or improperly used, controlled substances which contributed to a situation that resulted in the initial removal of the child, or there is credible evidence to believe that the parents may currently be abusing, or improperly using, controlled substances, prior to returning the child to his or her own home pursuant to this subdivision, the court may require that the parents undergo and successfully pass a drug test which tests for alcohol, amphetamines (amphetamine and methamphetamine) cocaine, marijuana, opiates (codeine and morphine), phencyclidine, barbiturates, benzodiazepines, methadone, propoxyphene, kratom, and expanded opiates (oxycodone, hydromorphone, hydrocodone, oxymorphone): </span><span class="cs1489E706">Provided, </span><span class="cs46AE26E6">however</span><span class="cs1489E706">, </span><span class="cs46AE26E6">That the drug and alcohol testing required by this subdivision shall include laboratory confirmation of any positive test result which shall be immediately provided to the court, the guardian ad litem, and all parties upon receipt by the department. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) If either parent living in the same home as the child initially tests positive for one or more of the substances listed in this subdivision, and who does not possess a valid and current prescription relating to the substance for which the parent tested positive, or a valid and current medical marijuana card issued pursuant to the provisions of &sect;16A-1-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., the department shall not permit the child to return to his or her own home and must immediately notify the court, the guardian ad litem, and all parties of the results of the initial drug testing, pending laboratory confirmation. &nbsp;Upon receiving notice that a parent has tested positive in the initial drug and alcohol test, the court shall schedule a hearing within ten (10) calendar days to address any evidence of a laboratory confirmed positive drug or alcohol test result and the potential impact on any findings of fact and conclusions of law contained within the court&rsquo;s dispositional order.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Order terms of supervision calculated to assist the child and any abusing parent or battered parent or parents or custodian which prescribe the manner of supervision and care of the child and which are within the ability of any parent or parents or custodian to perform;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Upon a finding that the abusing parent or battered parent or parents are presently unwilling or unable to provide adequately for the child&rsquo;s needs, commit the child temporarily to the care, custody, and control of the department, a licensed private child welfare agency, or a suitable person who may be appointed guardian by the court. The court order shall state:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) That continuation in the home is contrary to the best interests of the child and why;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Whether or not the department has made reasonable efforts, with the child&rsquo;s health and safety being the paramount concern, to preserve the family, or some portion thereof, and to prevent or eliminate the need for removing the child from the child&rsquo;s home and to make it possible for the child to safely return home;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Whether the department has made reasonable accommodations in accordance with the Americans with Disabilities Act of 1990, 42 U. S. C. &sect; 12101 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, to parents with disabilities in order to allow them meaningful access to reunification and family preservation services;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) What efforts were made or that the emergency situation made those efforts unreasonable or impossible; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) The specific circumstances of the situation which made those efforts unreasonable if services were not offered by the department. The court order shall also determine under what circumstances the child&rsquo;s commitment to the department are to continue. Considerations pertinent to the determination include whether the child should:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Be considered for legal guardianship;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Be considered for permanent placement with a fit and willing relative; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Be placed in another planned permanent living arrangement, but only in cases where the child has attained 16 years of age and the department has documented to the circuit court a compelling reason for determining that it would not be in the best interests of the child to follow one of the options set forth in subparagraphs (i) or (ii) of this paragraph. The court may order services to meet the special needs of the child. Whenever the court transfers custody of a youth to the department, an appropriate order of financial support by the parents or guardians shall be entered in accordance with &sect;49&#8209;4&#8209;801 through &sect;49&#8209;4&#8209;803 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Upon a finding that there is no reasonable likelihood that the conditions of neglect or abuse can be substantially corrected in the near future and, when necessary for the welfare of the child, terminate the parental, custodial and guardianship rights and responsibilities of the abusing parent and commit the child to the permanent sole custody of the nonabusing parent, if there be one, or, if not, to either the permanent guardianship of the department or a licensed child welfare agency. The court may award sole custody of the child to a nonabusing battered parent. If the court shall so find, then in fixing its dispositional order the court shall consider the following factors:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The child&rsquo;s need for continuity of care and caretakers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The amount of time required for the child to be integrated into a stable and permanent home environment; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Other factors as the court considers necessary and proper. Notwithstanding any other provision of this article, the court shall give consideration to the wishes of a child 14 years of age or older or otherwise of an age of discretion as determined by the court regarding the permanent termination of parental rights. No adoption of a child shall take place until all proceedings for termination of parental rights under this article and appeals thereof are final. In determining whether or not parental rights should be terminated, the court shall consider the efforts made by the department to provide remedial and reunification services to the parent. The court order shall state:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) That continuation in the home is not in the best interest of the child and why;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Why reunification is not in the best interests of the child;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Whether or not the department made reasonable efforts, with the child&rsquo;s health and safety being the paramount concern, to preserve the family, or some portion thereof, and to prevent the placement or to eliminate the need for removing the child from the child&rsquo;s home and to make it possible for the child to safely return home, or that the emergency situation made those efforts unreasonable or impossible; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) Whether or not the department made reasonable efforts to preserve and reunify the family, or some portion thereof, including a description of what efforts were made or that those efforts were unreasonable due to specific circumstances.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) For purposes of the court&rsquo;s consideration of the disposition custody of a child pursuant to this subsection, the department is not required to make reasonable efforts to preserve the family if the court determines:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The parent has subjected the child, another child of the parent or any other child residing in the same household or under the temporary or permanent custody of the parent to aggravated circumstances which include, but are not limited to, abandonment, torture, chronic abuse, and sexual abuse;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The parent has:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Committed murder of the child&rsquo;s other parent, guardian or custodian, another child of the parent, or any other child residing in the same household or under the temporary or permanent custody of the parent;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Committed voluntary manslaughter of the child&rsquo;s other parent, guardian, or custodian, another child of the parent, or any other child residing in the same household or under the temporary or permanent custody of the parent;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Attempted or conspired to commit murder or voluntary manslaughter, or been an accessory before or after the fact to either crime;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) Committed a malicious assault that results in serious bodily injury to the child, the child&rsquo;s other parent, guardian, or custodian, to another child of the parent, or any other child residing in the same household or under the temporary or permanent custody of the parent; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v) Attempted or conspired to commit malicious assault, as outlined in subparagraph (iv), or been an accessory before or after the fact to the same; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vi) Committed sexual assault or sexual abuse of the child, the child&rsquo;s other parent, guardian, or custodian, another child of the parent, or any other child residing in the same household or under the temporary or permanent custody of the parent; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vii) Attempted or conspired to commit sexual assault or sexual abuse, as outlined in subparagraph (vi), or been an accessory before or after the fact to the same.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The parental rights of the parent to another child have been terminated involuntarily;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) A parent has been required by state or federal law to register with a sex offender registry, and the court has determined in consideration of the nature and circumstances surrounding the prior charges against that parent, that the child&rsquo;s interests would not be promoted by a preservation of the family.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) As used in this section, &quot;No reasonable likelihood that conditions of neglect or abuse can be substantially corrected&quot; means that, based upon the evidence before the court, the abusing adult or adults have demonstrated an inadequate capacity to solve the problems of abuse or neglect on their own or with help. Those conditions exist in the following circumstances, which are not exclusive:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The abusing parent or parents have habitually abused or are addicted to alcohol, controlled substances or drugs, to the extent that proper parenting skills have been seriously impaired and the person or persons have not responded to or followed through the recommended and appropriate treatment which could have improved the capacity for adequate parental functioning;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The abusing parent or parents have willfully refused or are presently unwilling to cooperate in the development of a reasonable family case plan designed to lead to the child&rsquo;s return to their care, custody and control;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The abusing parent or parents have not responded to or followed through with a reasonable family case plan or other rehabilitative efforts of social, medical, mental health, or other rehabilitative agencies designed to reduce or prevent the abuse or neglect of the child, as evidenced by the continuation or insubstantial diminution of conditions which threatened the health, welfare, or life of the child;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The abusing parent or parents have abandoned the child;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The abusing parent or parents have repeatedly or seriously injured the child physically or emotionally, or have sexually abused or sexually exploited the child, and the degree of family stress and the potential for further abuse and neglect are so great as to preclude the use of resources to mitigate or resolve family problems, or assist the abusing parent or parents in fulfilling their responsibilities to the child; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The battered parent&rsquo;s parenting skills have been seriously impaired and the person has willfully refused or is presently unwilling or unable to cooperate in the development of a reasonable treatment plan, or has not adequately responded to or followed through with the recommended and appropriate treatment plan.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The court may, as an alternative disposition, allow the parents or custodians an improvement period not to exceed six months. During this period the court shall require the parent to rectify the conditions upon which the determination was based. The court may order the child to be placed with the parents, or any person found to be a fit and proper person, for the temporary care of the child during the period. At the end of the period, the court shall hold a hearing to determine whether the conditions have been adequately improved and at the conclusion of the hearing shall make a further dispositional order in accordance with this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The court may not terminate the parental rights of a parent on the sole basis that the parent is participating in a medication&#8209;assisted treatment program, as regulated in &sect;16&#8209;5Y&#8209;1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, for substance use disorder, as long as the parent is successfully fulfilling his or her treatment obligations in the medication&#8209;assisted treatment program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to require parents with abuse and/or neglect claims substantiated against them to be drug tested prior to reunification.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>
