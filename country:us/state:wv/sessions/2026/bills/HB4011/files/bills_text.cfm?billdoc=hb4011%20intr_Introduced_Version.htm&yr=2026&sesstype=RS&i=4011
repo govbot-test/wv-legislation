@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4011 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4011">&laquo; House Bill 4011 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4011'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4011 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4011" title="HTML  - Committee Substitute (1)
+ - House Bill 4011">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4011 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4011" title="HTML  - Engrossed Version
+ - House Bill 4011">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4011 - Relating to advanced recycling.&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4011+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4011"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs4BD05128{text-align:left;text-indent:0pt;margin:0pt 0pt 11pt 0pt;line-height:19.5pt;background-color:#FFFFFF}
+		.csF6172519{color:#1A1A1A;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs19E44A0C{color:#1A1A1A;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs50974958{color:#1A1A1A;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs9B0077FC{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2;background-color:#FFFFFF}
+		.cs2A272CE2{color:#1A1A1A;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68BCB87{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2;background-color:#FFFFFF}
+		.cs611A7C95{color:#1A1A1A;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4011</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Zatezalo, Heckert, B. Ward, Anderson, Dean, Moore, Akers, Linville, Hott, Mallow, and Clark</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 15, 2026; referred to the Committee on Energy and Public Works]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;22-15-2 and &sect;22-15-5 the Code of West Virginia, 1931, as amended, relating to facilitating the implementation of the certification of mass balance attribution by third party certifies to promote waste reduction practices by facilitating the use of recycled material in the feedstock for new products.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h4 class="cs4BD05128">
+		<span class="csF6172519">&nbsp;</span></h4>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 15. SOLID WASTE MANAGEMENT ACT. </span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;22-15-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs19E44A0C">Unless the context clearly requires a different meaning, as used in this article the terms:</span></p><p class="cs53FB8D75"><span class="cs19E44A0C">&quot;Advanced recycling&quot; means a manufacturing process for the conversion of post-use polymers and recovered feedstocks into basic hydrocarbon raw materials, feedstocks, chemicals, and other products like waxes and lubricants through processes that include pyrolysis, gasification, depolymerization, catalytic cracking, hydrogenation, </span><span class="cs50974958">chemolysis, </span><span class="cs19E44A0C">solvolysis, and other similar technologies. The recycled products produced at advanced recycling facilities include, but are not limited to, monomers, oligomers, plastics, plastics and chemical feedstocks, basic and unfinished chemicals, waxes, lubricants, coatings, and other basic hydrocarbons. Advanced recycling shall not be considered solid waste management or solid waste disposal.</span></p><p class="cs53FB8D75"><span class="cs19E44A0C">&quot;Advanced recycling facility&quot; means a facility that receives, stores, and converts post-use polymers and recovered feedstocks it receives using advanced recycling. An advanced recycling facility is a manufacturing facility subject to applicable department manufacturing regulations for air, water, and land use. Advanced recycling facilities shall not be considered solid waste facilities.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Agronomic rate&quot; means the whole sewage sludge application rate, by dry weight, designed:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(1) To provide the amount of nitrogen needed by the food crop, feed crop, fiber crop, cover crop, or vegetation on the land; and</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(2) To minimize the amount of nitrogen in the sewage sludge that passes below the root zone of the crop or vegetation grown on the land to the groundwater.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Applicant&quot; means the person applying for a commercial solid waste facility permit or similar renewal permit and any person related to such person by virtue of common ownership, common management, or family relationships as the director may specify, including the following: Spouses, parents, children, and siblings.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Approved solid waste facility&quot; means a solid waste facility or practice which has a valid permit under this article.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Back hauling&quot; means the practice of using the same container to transport solid waste and to transport any substance or material used as food by humans, animals raised for human consumption, or reusable item which may be refilled with any substance or material used as food by humans.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Bulking agent&quot; means any material mixed and composted with sewage sludge.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Catalytic cracking&quot; is a manufacturing process through which post-use polymers are heated and melted in the absence of oxygen and then processed in the presence of a catalyst to produce valuable raw materials and intermediate and final products, including, but not limited to, plastic monomers, chemicals, waxes, lubricants, plastic and chemical feedstocks, and other basic hydrocarbons.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Class A facility&quot; means a commercial solid waste facility which handles an aggregate of between 10,000 and 30,000 tons of solid waste per month. Class A facility includes two or more Class B solid waste landfills owned or operated by the same person in the same county, if the aggregate tonnage of solid waste handled per month by such landfills exceeds 9,999 tons of solid waste per month.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Commercial recycler&quot; means any person, corporation, or business entity whose operation involves the mechanical separation of materials for the purpose of reselling or recycling at least 70 percent by weight of the materials coming into the commercial recycling facility.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Commercial solid waste facility&quot; means any solid waste facility that accepts solid waste generated by sources other than the owner or operator of the facility and does not include an approved solid waste facility owned and operated by a person for the sole purpose of the disposal, processing, or composting of solid waste created by that person or such person and other persons on a cost-sharing or nonprofit basis and does not include land upon which reused or recycled materials are legitimately applied for structural fill, road base, mine reclamation, and similar applications, and does not include any solid waste facility that accepts solid waste collected pursuant to and under a common carrier certificate of convenience and necessity issued by the Public Service Commission by the owner or operator (or its affiliate(s)) of the solid waste facility for consolidation and subsequent transport to a disposal or recycling facility:&nbsp;</span><span class="cs2A272CE2">Provided</span><span class="cs19E44A0C">, That the owner or operator of the solid waste facility shall comply with &sect;22-15-12 and &sect;22-15-13 of this code:&nbsp;</span><span class="cs2A272CE2">Provided, however</span><span class="cs19E44A0C">, That any such solid waste facility be located on a site that contains a mixed waste processing and resource recovery facility that possesses a solid waste facility permit from the Department of Environmental Protection.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Compost&quot; means a humus-like material resulting from aerobic, microbial, or thermophilic decomposition of organic materials.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Composting&quot; means the aerobic, microbial, or thermophilic decomposition of natural constituents of solid waste to produce a stable, humus-like material.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Commercial composting facility&quot; means any solid waste facility processing solid waste by composting, including sludge composting, organic waste or yard waste composting, but does not include a composting facility owned and operated by a person for the sole purpose of composting waste created by that person or such person and other persons on a cost-sharing or nonprofit basis and shall not include land upon which finished or matured compost is applied for use as a soil amendment or conditioner.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Cured compost&quot; or &quot;finished compost&quot; means compost which has a very low microbial or decomposition rate which will not reheat or cause odors when put into storage and that has been put through a separate aerated curing cycle stage of 30 to 60 days after an initial composting cycle or compost which meets all regulatory requirements after the initial composting cycle.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Department&quot; means the Department of Environmental Protection.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Depolymerization&quot; means a manufacturing process where post-use polymers are broken into smaller molecules such as monomers and oligomers or raw, intermediate, or final products, plastics and chemical feedstocks, basic and unfinished chemicals,&nbsp;waxes, lubricants, coatings, and other basic hydrocarbons.&nbsp;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Energy recovery incinerator&quot; means any solid waste facility at which solid wastes are incinerated with the intention of using the resulting energy for the generation of steam, electricity, or any other use not specified herein.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Gasification&quot; means a manufacturing process through which recovered feedstocks are heated and converted into a fuel and gas mixture in an oxygen-deficient atmosphere and the mixture is converted into valuable raw materials and intermediate and final products, including, but not limited to, plastic monomers, chemicals, waxes, lubricants, plastic and chemical feedstocks, and other basic hydrocarbons that are returned to economic utility in the form of raw materials and products.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Hydrogenation&quot; is a manufacturing process through which hydrogen is used to remove impurities from post-use polymers or recovered feedstock&nbsp;to enable further processing into valuable raw materials and intermediate and final products, including, but not limited to, plastic monomers, chemicals, waxes, lubricants, plastic and chemical feedstocks, and other basic hydrocarbons.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Incineration technologies&quot; means any technology that uses controlled flame combustion to thermally break down solid waste, including refuse-derived fuel, to an ash residue that contains little or no combustible materials, regardless of whether the purpose is processing, disposal, electric or steam generation, or any other method by which solid waste is incinerated.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Incinerator&quot; means an enclosed device using controlled flame combustion to thermally break down solid waste, including refuse-derived fuel, to an ash residue that contains little or no combustible materials.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Landfill&quot; means any solid waste facility used for the disposal of solid waste on or in the land for the purpose of permanent disposal. The facility is situated, for purposes of this article, in the county where the majority of the spatial area of the facility is located.</span></p><p class="cs9B0077FC"><a name="_Hlk214882250"><span class="cs50974958">&quot;Mass balance attribution&quot; means a chain of custody accounting methodology with rules defined by a third-party certification system that enables the attribution of &quot;recycled material,&quot; &quot;recycled plastics,&quot; and &quot;renewable chemical&quot; as those terms are defined in this article.</span></a></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Materials recovery facility&quot; means any solid waste facility at which source-separated materials or materials recovered through a mixed waste processing facility are manually or mechanically shredded or separated for purposes of reuse and recycling, but does not include a composting facility.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Mature compost&quot; means compost which has been produced in an aerobic, microbial, or thermophilic manner and does not exhibit phytotoxic effects.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Mixed solid waste&quot; means solid waste from which materials sought to be reused or recycled have not been source-separated from general solid waste.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Mixed waste processing facility&quot; means any solid waste facility at which materials are recovered from mixed solid waste through manual or mechanical means for purposes of reuse, recycling, or composting.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Municipal solid waste incineration&quot; means the burning of any solid waste collected by any municipal or residential solid waste disposal company.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Open dump&quot; means any solid waste disposal which does not have a permit under this article, or is in violation of state law, or where solid waste is disposed in a manner that does not protect the environment.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Person&quot; or &quot;persons&quot; means any industrial user, public or private corporation, institution, association, firm, or company organized or existing under the laws of this or any other state or country; State of West Virginia; governmental agency, including federal facilities; political subdivision; county commission; municipal corporation; industry; sanitary district; public service district; drainage district; soil conservation district; watershed improvement district; partnership; trust; estate; person or individual; group of persons or individuals acting individually or as a group; or any legal entity whatever.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Post-use polymer&quot; means a plastic to which all the following apply:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(1) The plastic is derived from any industrial, commercial, agricultural, or domestic activities;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(2) It is not mixed with solid waste or hazardous waste onsite or during processing at the advanced recycling facility;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(3) The plastic&rsquo;s use or intended use is as a feedstock for the manufacturing of plastic and chemical feedstocks, other basic hydrocarbons, raw materials, or other intermediate products or final products using advanced recycling;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(4) The plastic has been sorted from solid waste and other regulated waste but may contain residual amounts of solid waste such as organic material and incidental contaminants or impurities (e.g., paper labels and metal rings); and</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(5) The plastic is processed at an advanced recycling facility or held at the facility prior to processing.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Publicly owned treatment works&quot; means any treatment works owned by the state or any political subdivision thereof, any municipality or any other public entity which processes raw domestic, industrial, or municipal sewage by any artificial or natural processes in order to remove or so alter constituents as to render the waste less offensive or dangerous to the public health, comfort, or property of any of the inhabitants of this state before the discharge of the plant effluent into any of the waters of this state, and which produces sewage sludge.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Pyrolysis&quot; means a manufacturing process through which post-use polymers are heated in the absence of oxygen until melted and thermally decomposed and are then cooled, condensed, and converted into valuable raw materials and intermediate and final products, including, but not limited to, plastic monomers, chemicals, waxes, lubricants, plastic and chemical feedstocks, and other basic hydrocarbons, that are returned to economic utility in the form of raw materials or products.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Recovered feedstock&quot; means one or more of the following materials that has been processed so that it may be used as feedstock in an advanced recycling facility:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(1) Post-use polymers;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(2) Materials for which the United States Environmental Protection Agency has made a nonwaste determination pursuant to 40 C.F.R. 241.3(c), or has otherwise determined are feedstocks and not solid waste;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(3) Recovered feedstock does not include unprocessed municipal solid waste;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(4) Recovered feedstock is not mixed with solid waste or hazardous waste onsite or during processing at an advanced recycling facility.</span></p><p class="cs9B0077FC"><span class="cs50974958">&quot;Recycled material&quot; means </span><span class="cs46AE26E6">materials, goods, or products that consist of recovered recyclable material or materials derived from recoverable feedstocks, post-use polymers, postconsumer waste, industrial waste, or hazardous waste which may be used in place of a raw or virgin material in manufacturing a new product or that are certified under a third-party certification system for mass balance attribution identified by the director under </span><a name="_Hlk218683398"><span class="cs46AE26E6">&sect;22-15-5(i) </span></a><span class="cs46AE26E6">of this code. The term includes recycled plastics.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Recycled plastics&quot; means products that are produced from:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Mechanical recycling of post-use polymers; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Nonmechanical recycling of recoverable feedstocks or post-use polymers that are certified under a third-party certification system for mass balance attribution identified by the director under &sect;22-15-5(i) &nbsp;of this article.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Recycling facility&quot; means any solid waste facility for the purpose of recycling at which neither land disposal nor biological, chemical, or thermal transformation of solid waste occurs:&nbsp;</span><span class="cs2A272CE2">Provided</span><span class="cs19E44A0C">, That mixed waste recovery facilities, sludge processing facilities, and composting facilities are not considered recycling facilities nor considered to be reusing or recycling solid waste within the meaning of this article, &sect;22-15A-1&nbsp;</span><span class="cs2A272CE2">et seq</span><span class="cs19E44A0C">. and &sect;22C-4-1&nbsp;</span><span class="cs2A272CE2">et seq</span><span class="cs19E44A0C">. of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Renewable biomass&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Materials, pre-commercial thinnings, or invasive species from National Forest System land and public lands, as that term is defined by 43 U.S.C. Section 1702, that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) &nbsp;Are byproducts of preventive treatments that are removed:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) &nbsp;To reduce hazardous fuels;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) To reduce or contain disease or insect infestation; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) &nbsp;To restore ecosystem health;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) &nbsp;Would not otherwise be used for higher value products; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) &nbsp;Are harvested in accordance with:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) &nbsp;Applicable law and land management plans; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) &nbsp;Requirements for old growth stand maintenance, restoration, and management direction and large tree retention under Sections 102(e) and (f), Healthy Forests Restoration Act of 2003 (16 U.S.C. Sections 6512(e) and (f)); or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &nbsp;Any organic matter that is available on a renewable or recurring basis from nonfederal land or land belonging to an Indian or Indian tribe that is held in trust by the United States or subject to a restriction against alienation imposed by the United States, including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) &nbsp;Renewable plant material, including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) &nbsp;Feed grains and other agricultural commodities;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) &nbsp;Plants and trees;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) &nbsp;Algae; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iiii) &nbsp;Microorganisms; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) &nbsp;Waste material, including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) &nbsp;Crop residue;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) &nbsp;Vegetative waste material, including wood waste and wood residue;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) &nbsp;Animal waste and byproducts, including fats, oils, greases, and manure;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) &nbsp;Food waste and yard waste;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(v) &nbsp;Plant-derived waste oils;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(vi) &nbsp;Municipal solid waste; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(vii) &nbsp;Waste derived from a wastewater treatment facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Renewable chemical&quot; means a monomer, polymer, plastic, formulated product, or chemical substance produced from renewable biomass feedstocks or certified under a third-party certification system for mass balance attribution identified by the director under &sect;22-15-5(i) of this code.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Sewage sludge&quot; means solid, semisolid, or liquid residue generated during the treatment of domestic sewage in a treatment works. Sewage sludge includes, but is not limited to, domestic septage, scum, or solids removed in primary, secondary, or advanced wastewater treatment processes and a material derived from sewage sludge. &quot;Sewage sludge&quot; does not include ash generated during the firing of sewage sludge in a sewage sludge incinerator.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Sewage sludge processing facility&quot; is a solid waste facility that processes sewage sludge for: (1) Land application; (2) incineration; or (3) disposal at an approved landfill. Such processes include, but are not limited to, composting, lime stabilization, thermophilic, microbial, and anaerobic digestion.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Secretary&quot; means the Secretary of the Department of Environmental Protection or such other person to whom the secretary has delegated authority or duties pursuant to &sect;22-1-1&nbsp;</span><span class="cs2A272CE2">et seq</span><span class="cs19E44A0C">. of this code.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Sludge&quot; means any solid, semisolid, residue, or precipitate, separated from or created by a municipal, commercial, or industrial waste treatment plant, water supply treatment plant, air pollution control facility, or any other such waste having similar origin.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Solid waste&quot; means any garbage, paper, litter, refuse, cans, bottles, waste processed for the express purpose of incineration; sludge from a waste treatment plant; water supply treatment plant or air pollution control facility; and other discarded materials, including offensive or unsightly matter, solid, liquid, semisolid, or contained liquid or gaseous material resulting from industrial, commercial, mining, or community activities but does not include solid or dissolved material in sewage or solid or dissolved materials in irrigation return flows or industrial discharges which are point sources and have permits under &sect;22-5A-1&nbsp;</span><span class="cs2A272CE2">et seq</span><span class="cs19E44A0C">. of this code, or source, special nuclear, or byproduct material as defined by the Atomic Energy Act of 1954, as amended, including any nuclear or byproduct material considered by federal standards to be below regulatory concern, or a hazardous waste either identified or listed under &sect;22-5E-1&nbsp;</span><span class="cs2A272CE2">et seq</span><span class="cs19E44A0C">. of this code or refuse, slurry, overburden, or other wastes or material resulting from coal-fired electric power or steam generation, the exploration, development, production, storage, and recovery of coal, oil, and gas, and other mineral resources placed or disposed of at a facility which is regulated under chapter 22, chapter 22A, or chapter 22B of this code, so long as placement or disposal is in conformance with a permit issued pursuant to those chapters, or post-use polymers and recovered feedstocks converted at an advanced recycling facility or held at the facility prior to conversion.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Solid waste disposal&quot; means the practice of disposing of solid waste including placing, depositing, dumping, throwing, or causing any solid waste to be placed, deposited, dumped, or thrown.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Solid waste disposal shed&quot; means the geographical area which the solid waste management board designates and files in the state register pursuant to &sect;16-26-8 of this code.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Solid waste facility&quot; means any system, facility, land, contiguous land, improvements on the land, structures, or other appurtenances or methods used for processing, recycling, or disposing of solid waste, including landfills, transfer stations, materials recovery facilities, mixed waste processing facilities, sewage sludge processing facilities, commercial composting facilities, and other such facilities not herein specified, but not including land upon which sewage sludge is applied in accordance with &sect;22-15-20 of this code. The facility shall be deemed to be situated, for purposes of this article, in the county where the majority of the spatial area of the facility is located:&nbsp;</span><span class="cs2A272CE2">Provided</span><span class="cs19E44A0C">, That a salvage yard, licensed and regulated pursuant to the terms of &sect;17-23-1&nbsp;</span><span class="cs2A272CE2">et seq</span><span class="cs19E44A0C">. of this code, is not a solid waste facility and an advanced recycling facility is not a solid waste facility.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Solid waste facility operator&quot; means any person or persons possessing or exercising operational, managerial, or financial control over a commercial solid waste facility, whether or not the person holds a certificate of convenience and necessity or a permit for the facility.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">&quot;Solvolysis&quot; means a manufacturing process through which post-use polymers are purified with the aid of solvents, while heated at low temperatures and/or pressurized to make useful products, allowing additives and contaminants to be separated. The products of solvolysis include monomers, intermediates, valuable chemicals, and raw materials. The process includes, but is not limited to, hydrolysis, aminolysis, ammonoloysis, methanolysis, and glycolysis.</span></p><p class="cs53FB8D75"><span class="cs19E44A0C">&quot;Source-separated materials&quot; means materials separated from general solid waste at the point of origin for the purpose of reuse and recycling but does not mean sewage sludge.</span></p><h4 class="cs68BCB87">
+		<span class="csF6172519">&sect;22-15-5. Powers and duties; rules and rulemaking.</span></h4>
+	<p class="cs9B0077FC"><span class="cs19E44A0C">In addition to all other powers, duties, responsibilities and authority granted and assigned to the director in this code and elsewhere described by law, the director is empowered as follows:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(a) The director shall promulgate rules in compliance with the West Virginia administrative procedures act to carry out the provisions of this article including modifying any existing rules and establishing permit application fees up to an amount sufficient to defray the costs of permit review. In promulgating rules the director shall consider and establish requirements based on the quantity of solid waste to be handled, including different requirements for solid waste facilities or approved solid waste facilities which handle more than one hundred tons of solid waste per day, the environmental impact of solid waste disposal, the nature, source or characteristics of the solid waste, potential for contamination of ground, surface and potable waters, requirements for public roadway standards and design for access to the facilities with approval by the commissioner of the Division of Highways, the financial capability of the applicant, soil and geological considerations, environmental and other natural resource considerations.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(b) The director, after public notice and opportunity for public hearing near the affected community, may issue a permit with reasonable terms and conditions for installation, establishment, modification, operation or closure of a solid waste facility: Provided, That the director may deny the issuance of a permit on the basis of information in the application or from other sources including public comment, if the solid waste facility is likely to cause adverse impacts on the environment. The director may also prohibit the installation or establishment of specific types and sizes of solid waste facilities in a specified geographical area of the state based on the above-cited factor and may delete such geographical area from consideration for that type and size solid waste facility.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(c) The director may refuse to grant any permit if he or she has reasonable cause to believe, as indicated by documented evidence, that the applicant, or any officer, director or manager, thereof, or person owning a five percent or more interest, beneficial or otherwise, or other person conducting or managing the affairs of the applicant or of the proposed licensed premises, in whole or in part:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(1) Has demonstrated, either by his or her police record or by his or her record as a permittee under articles eleven through nineteen of this chapter or chapter twenty of this code, a lack of respect for law and order, generally, or for the laws and rules governing the disposal of solid wastes;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(2) Has misrepresented a material fact in applying to the director for a permit;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(3) Has been convicted of a felony or other crime involving moral turpitude;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(4) Has exhibited a pattern of violating environmental laws in any state or the United States or combination thereof; or</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(5) Has had any permit revoked under the environmental laws of any state or the United States.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(d) The director or any authorized representative, employee or agent of the division may, at reasonable times, enter onto any approved solid waste facility, open dump or property where solid waste is present for the purpose of making an inspection or investigation of solid waste disposal.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(e) The director or any authorized representative, employee or agent of the division may, at reasonable times, enter any approved solid waste facility, open dump or property where solid waste is present and take samples of the waste, soils, air or water or may, upon issuance of an order, require any person to take and analyze samples of such waste, soil, air or water.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(f) The director may also perform or require a person, by order, to perform any and all acts necessary to carry out the provisions of this article or the rules promulgated thereunder.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(g) The director or his or her authorized representative, employee or agent shall make periodic inspections at every approved solid waste facility to effectively implement and enforce the requirements of this article or its rules and may, in coordination with the commissioner of the Division of Highways, conduct at weigh stations or any other adequate site or facility inspections of solid waste in transit.</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(h) The director shall require and set the amount of performance bonds for persons engaged in the practice of solid waste disposal in this state, pursuant to section twelve of this article.</span></p><p class="cs9B0077FC"><span class="cs50974958">(i) The director shall identify third-party certification systems for mass balance attribution that may be used for the encouragement of waste reduction programs including those that use recycled material in place of raw or virgin material in manufacturing a new product or certified under a mass balance attribution. &nbsp;The director shall promulgate rules in compliance with the West Virginia administrative procedures act to implement these mass balance attribution third-party certification systems. </span></p><p class="cs9B0077FC"><span class="cs611A7C95">(i)</span><span class="cs19E44A0C"> </span><span class="cs50974958">(j)</span><span class="cs19E44A0C"> The director shall require: (1) That persons disposing of solid waste at commercial solid waste facilities within the state file with the operator of the commercial solid waste facility records concerning the type, amount and origin of solid waste disposed of by them; and (2) that operators of commercial solid waste facilities within the state maintain records and file them with the director concerning the type, amount and origin of solid waste accepted by them.</span></p><p class="cs9B0077FC"><span class="cs611A7C95">(j)</span><span class="cs19E44A0C"> </span><span class="cs50974958">(k)</span><span class="cs19E44A0C"> Identification of interests. -- The director shall require an applicant for a solid waste facility permit to provide the following information:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(1) The names, addresses and telephone numbers of:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(A) The permit applicant;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(B) Any other person conducting or managing the affairs of the applicant or of the proposed permitted premises, including any contractor for gas or energy recovery from the proposed operation, if the contractor is a person other than the applicant; and</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(C) Parties related to the applicant by blood, marriage or business association, including the relationship to the applicant;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(2) The names and addresses of the owners of record of surface and subsurface areas within, and contiguous to, the proposed permit area;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(3) The names and addresses of the holders of record to a leasehold interest in surface or subsurface areas within, and contiguous to, the proposed permit area;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(4) A statement of whether the applicant is an individual, corporation, partnership, limited partnership, government agency, proprietorship, municipality, syndicate, joint venture or other entity. For applicants other than sole proprietorships, the application shall contain the following information, if applicable:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(A) Names and addresses of every officer, general and limited partner, director and other persons performing a function similar to a director of the applicant;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(B) For corporations, the principal shareholders;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(C) For corporations, the names, principal places of businesses and internal revenue service tax identification numbers of United States parent corporations of the applicant, including ultimate parent corporations and United States subsidiary corporations of the applicant and the applicant&#39;s parent corporations; and</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(D) Names and addresses of other persons or entities having or exercising control over any aspect of the proposed facility that is regulated by the division, including, but not limited to, associates and agents;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(5) If the applicant or an officer, principal shareholder, general or limited partner or other related party to the applicant, has a beneficial interest in, or otherwise manages or controls another person or municipality engaged in the business of solid waste collection, transportation, storage, processing, treatment or disposal, the application shall contain the following information:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(A) The name, address and tax identification number or employer identification number of the corporation or other person or municipality; and</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(B) The nature of the relationship or participation with the corporation or other person or municipality;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(6) An application shall list permits or licenses, issued by the division or other environmental regulatory agency to each person or municipality identified in paragraph (1) of this subdivision and to other related parties to the applicant, that are currently in effect or have been in effect in at least part of the previous ten years. This list shall include the type of permit or license, number, location, issuance date and, when applicable, the expiration date;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(7) An application shall identify the solid waste facilities in the state which the applicant or a person or municipality identified in paragraph (1) of this subdivision and other related parties to the applicant currently owns or operates, or owned or operated in the previous ten years. For each facility, the applicant shall identify the location, type of operation and state or federal permits under which they operate or have operated. Facilities which are no longer permitted or which were never under permit shall also be listed.</span></p><p class="cs9B0077FC"><span class="cs611A7C95">(k)</span><span class="cs19E44A0C"> </span><span class="cs50974958">(l)</span><span class="cs19E44A0C"> Compliance information. -- An application shall contain the following information for the ten-year period prior to the date on which the application is filed:</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(1) A description of notices of violation, including the date, location, nature and disposition of the violation, that were sent by the division to the applicant or a related party, concerning any environmental law, rule, or order of the division, or a condition of a permit or license. In lieu of a description, the applicant may provide a copy of notices of violation;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(2) A description of administrative orders, civil penalty assessments and bond forfeiture actions by the division, and civil penalty actions adjudicated by the state, against the applicant or a related party concerning any environmental law, rule, or order of the division, or a condition of a permit or license. The description shall include the date, location, nature and disposition of the actions. In lieu of a description, the applicant may provide a copy of the orders, assessments and actions;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(3) A description of a summary, misdemeanor or felony conviction, a plea of guilty or plea of no contest that has been obtained in this state against the applicant or a related party under any environmental law or rule concerning the storage, collection, treatment, transportation, processing or disposal of solid waste. The description shall include the date, location, nature and disposition of the actions;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(4) A description of a court proceeding concerning any environmental law or rule that was not described under paragraph (3) of this subdivision in which the applicant or a related party has been party. The description shall include the date, location, nature and disposition of the proceedings;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(5) A description of a consent order, consent adjudication, consent decree or settlement agreement involving the applicant or a related party concerning any environmental law or rule in which the division, other governmental agencies, the United States environmental protection agency, or a county health department was a party. The description shall include the date, location, nature and disposition of the action. In lieu of a description, the applicant may provide a copy of the order, adjudication, a decree or agreement;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(6) For facilities and activities identified under paragraph (1) of this subdivision, a statement of whether the facility or activity was the subject of an administrative order, consent agreement, consent adjudication, consent order, settlement agreement, court order, civil penalty, bond forfeiture proceeding, criminal conviction, guilty or no contest plea to a criminal charge or permit or license suspension or revocation under the act or the environmental protection acts. If the facilities or activities were subject to these actions, the applicant shall state the date, location, nature and disposition of the violation. In lieu of a description, the applicant may provide a copy of the appropriate document. The application shall also state whether the division has denied a permit application filed by the applicant or a related party, based on compliance status;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(7) When the applicant is a corporation, a list of the principal shareholders that have also been principal shareholders of other corporations which have committed violations of any environmental law or rule. The list shall include the date, location, nature and disposition of the violation, and shall explain the relationship between the principal shareholder and both the applicant and the other corporation;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(8) A description of a misdemeanor or felony conviction, a plea of guilty and a plea of no contest, by the applicant or a related party for violations outside of this state of any environmental protection laws or regulations. The description shall include the date of the convictions or pleas, and the date, location and nature of the offense;</span></p><p class="cs9B0077FC"><span class="cs19E44A0C">(9) A description of final administrative orders, court orders, court decrees, consent decrees or adjudications, consent orders, final civil penalty adjudications, final bond forfeiture actions or settlement agreements involving the applicant or a related party for violations outside of this state of any environmental protection laws or regulations. The description shall include the date of the action and the location and nature of the underlying violation. In lieu of a description, the applicant may provide a copy of the appropriate document.</span></p><p class="cs9B0077FC"><span class="cs611A7C95">(l)</span><span class="cs19E44A0C"> </span><span class="cs50974958">(m)</span><span class="cs19E44A0C"> All of the information provided by the applicant pursuant to this section is not confidential and may be disclosed pursuant to the provisions of chapter twenty-nine-b of this code.</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to facilitate the implementation of the certification of mass balance attribution by third party certified to promote waste reduction practices by facilitating the use of recycled material in the feedstock for new products.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

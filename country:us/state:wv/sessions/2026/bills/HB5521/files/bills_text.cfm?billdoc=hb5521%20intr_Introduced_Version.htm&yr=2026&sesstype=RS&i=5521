@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5521 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5521">&laquo; House Bill 5521 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5521'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5521 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5521" title="HTML  - Committee Substitute (1)
+ - House Bill 5521">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5521 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5521" title="HTML  - Engrossed Version
+ - House Bill 5521">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5521 - Relating to public adjusters&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5521+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5521"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csC221FD51{color:#000000;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5521</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Hott, Hall, Jeffries, and Green</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 13, 2026; referred to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;33-12B-1, &sect;33-12B-2, and &sect;33-12B-3 of the Code of West Virginia, 1931, as amended, and to amend the code by adding twelve new sections, designated &sect;33-12B-5a, &sect;33-12B-5b, &sect;33-12B-5c, &sect;33-12B-5d, &sect;33-12B-5e, &sect;33-12B-5f, &sect;33-12B-5g, &sect;33-12B-16, &sect;33-12B-17, &sect;33-12B-18, &sect;33-12B-19, &sect;33-12B-20, and &sect;33-12B-21, relating to public adjusters; defining terms; establishing application, licensure, and examination requirements for public adjusters; establishing standards of conduct for public adjusters; and establishing contract requirements for a public adjuster and insured. </span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 12B. ADJUSTERS.</span></h2>
+	<h4 class="cs89687900">
+		<a name="_Hlk25570480"><span class="csB9803513">&sect;33-12B-1. Definitions.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) &quot;Automated claims adjudication system&quot; means a preprogrammed computer system designed for the collection, data entry, calculation, and final resolution of portable electronics insurance claims which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) May only be used by a licensed adjuster, licensed producer, or supervised individuals operating pursuant to &sect;33-12B-3(a)(14) of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Must comply with all claims payments requirements of the insurance code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Must be certified as compliant with this section by a licensed adjuster that is an officer of the entity which employs the individuals operating pursuant to </span><a name="_Hlk33450589"><span class="csEF05ACC">&sect;33-12B-3(a)(14) of this code</span></a><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) &quot;Business entity&quot; means a corporation, association, partnership, limited liability company, limited liability partnership, or other legal entity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) &quot;Catastrophic disaster&quot; according to the Federal Response Plan, means an event that results in large numbers of deaths and injuries; causes extensive damage or destruction of facilities that provide and sustain human needs; produces an overwhelming demand on state and local response resources and mechanisms; causes a severe long-term effect on general economic activity; and severely affects state, local, and private sector capabilities o begin and sustain response activities. A catastrophic disaster shall be declared by the President of the United States, the Governor of West Virginia, or the Commissioner pursuant to W. Va. Code &sect;&sect; 33-2-10a and/or 33-12B-11a when he or she finds that there is an inadequate number of licensed adjusters to meet the demands of the public.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(d)</span><span class="csEF05ACC"> &quot;Company adjuster&quot; means an adjuster who is a staff employee of an insurance company, who is paid by the insurance company, and who investigates, negotiates, or settles claims.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) &quot;Fingerprints&quot; for the purposes of this act, means an impression of the lines on the finger taken for purpose of identification. The impression may be electronic or in ink converted to electronic format.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(f)</span><span class="csEF05ACC"> &quot;Home state&quot; means the District of Columbia or any state, commonwealth, or territory of the United States in which an adjuster maintains his or her principal place of residence or business and in which he or she is licensed to act as a resident adjuster. If a person&rsquo;s principal place of residence or business does not license adjusters for the type of adjuster license sought in this state, he or she shall designate as his or her home state any state in which he or she has such a license. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(e)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(g)</span><span class="csEF05ACC"> &quot;Independent adjuster&quot; means a person who: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Is an individual, a business entity, an independent contractor, or an employee of a contractor, who contracts for compensation with insurers or self-insurers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Is one whom the insurer&rsquo;s or self-insurer&rsquo;s tax treatment of the individual is consistent with that of an independent contractor, rather than as an employee, as defined in the Internal Revenue Code, United States Code, Title 26, Subtitle C; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Investigates, negotiates, or settles property, casualty, or workers&rsquo; compensation claims for insurers or self-insurers.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(f)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(h)</span><span class="csEF05ACC"> &quot;Individual&quot; means a natural person.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(g) &quot;Insurance emergency&quot; means a temporary situation, as declared by the commissioner pursuant to &sect;33-2-10a of this code, when the number of licensed adjusters in this state is inadequate to meet the demands of the public.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) &quot;Emergency adjuster&quot; means a person who is authorized by the Commissioner to perform adjusting activities in West Virginia during a catastrophic disaster.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(h)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(j)</span><span class="csEF05ACC"> &quot;Person&quot; means an individual or business entity.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(k)</span><span class="csEF05ACC"> &quot;Public adjuster&quot; means any person who, for compensation or any other thing of value on behalf of the insured: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Acts or aids, solely in relation to first-party claims arising under insurance contracts that insure the real or personal property of the insured, on behalf of an insured in negotiating for, or effecting the settlement of, a claim for loss or damage covered by an insurance contract; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Advertises for employment as a public adjuster of insurance claims or solicits business or represents himself or herself to the public as a public adjuster of first-party insurance claims for losses or damages arising out of policies of insurance that insure real or personal property; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Directly or indirectly solicits business, investigates or adjusts losses, or advises an insured about first-party claims for losses or damages arising out of policies of insurance that insure real or personal property for another person engaged in the business of adjusting losses or damages covered by an insurance policy on behalf of an insured.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(l) &quot;Uniform individual application&quot; means the current version of the National Association of Insurance Commissioners (NAIC) Uniform Individual Application for resident and nonresident individuals.</span></p><h4 class="cs89687900">
+		<a name="_Hlk25573843"><span class="csB9803513">&sect;33-12B-2. License required.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) No person may act or hold himself, herself, or itself out as a company adjuster, an independent adjuster, or a public adjuster in this state unless the person is licensed in accordance with this article or is exempt from licensure under this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The license shall contain the licensee&rsquo;s name, address, personal identification number, the date of issuance, expiration date, and any other information the commissioner deems necessary.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A person licensed as a public adjuster shall not misrepresent to a claimant that he, she, or it is an adjuster representing an insurer in any capacity, including acting as an employee of the insurer or acting as an independent adjuster unless so appointed by an insurer in writing to act on the insurer&rsquo;s behalf for that specific claim or purpose. A licensed public adjuster is prohibited from charging that specific claimant a fee when appointed by the insurer and the appointment is accepted by the public adjuster.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The commissioner shall license an individual as a company adjuster, independent adjuster, or public adjuster. An individual may be licensed concurrently under separate licenses but shall not act as an adjuster representing the interests of the insured and the insurer with respect to the same claim.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;33-12B-3. Exemptions from license requirement.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) Notwithstanding any other provisions of this article, a company adjuster license</span><span class="cs46AE26E6">, public adjuster,</span><span class="csEF05ACC"> or independent adjuster license shall not be required of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Attorneys-at-law admitted to practice in this state, when acting in their professional capacity as&nbsp;an attorney;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A person employed only for the purpose of obtaining facts surrounding a claim or furnishing technical assistance to a licensed company or independent adjuster;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) An individual who is employed to investigate suspected fraudulent insurance claims but who does not adjust losses, investigate or determine coverage, or determine claim payments;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) A person who solely performs executive, administrative, managerial, or clerical duties, or any combination thereof, and who does not investigate, negotiate, or settle insurance claims with policyholders, claimants, or their legal representative;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) A licensed health care provider or its employee who is not responsible for determining compensability;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) A managed care organization or any of its employees or an employee of any organization providing managed care services, so long as the managed care organization or employee referenced herein is not determining compensability;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) A person who settles reinsurance or subrogation claims between insurers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) An officer, director, or manager of an authorized insurer, surplus lines insurer, a risk retention group, or an attorney-in-fact of a reciprocal insurer;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) A manager of the United States branch of an alien insurer;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) A person who investigates, negotiates, or settles life, accident and health, annuity, or disability insurance claims;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) An individual employee, under a self-insured arrangement, who adjusts claims on behalf of his or her employer;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) A licensed individual producer, attorney-in-fact of a reciprocal insurer, or managing general agent of the insurer to whom claim authority has been granted by the insurer; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) A business entity licensed under the authority of &sect;33-46-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) Individuals who collect claim information from, or furnish claim information to, insureds or claimants, and who conduct data entry, including entering data into an automated claims adjudication system are exempt from licensure under this article: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That the individuals are under the supervision of a licensed adjuster or licensed producer: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That no more than 25 persons are under the supervision of one licensed adjuster or licensed producer; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) </span><a name="_Hlk33438689"><span class="csEF05ACC">Company adjusters employed by an insurer outside of this state who adjust claims solely by telephone, fax, Unites States mail, and electronic mail, and who do not physically enter this state in the course of adjusting such claims: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That such adjusters shall be subject to the jurisdiction of, and regulation by, the commissioner in regard to their adjustment of West Virginia claims: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the commissioner may require such adjusters to complete continuing education, not to exceed requirements pursuant to &sect;33-12B-13(d) of this code, to address any deficiencies with respect to their claims handling practices.</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Notwithstanding any other provisions of this article, a public adjuster license shall not be required of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Attorneys-at-law admitted to practice in this state, when acting in their professional capacity as&nbsp;an attorney;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A person who negotiates or settles claims arising under a life or health insurance policy or an annuity contract; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A person employed only for the purpose of obtaining facts surrounding a loss or furnishing technical assistance to a licensed public adjuster; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) A licensed health care provider, or employee of a licensed health care provider, who prepares or files a health claim form on behalf of a patient; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) A person who settles subrogation claims between insurers.</span></p><h4 class="cs89687900">
+		<a name="_Hlk28249617"></a><a name="_Hlk192580398"><span class="csB9803513">&sect;33-12B-5. Qualifications for resident adjuster&rsquo;s license; examination; exemptions.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) An individual applying for a resident adjuster license shall make application to the commissioner and declare under penalty of suspension, revocation, or refusal of the license that the statements made in the application are true, correct, and complete to the best of the individual&rsquo;s knowledge and belief. Before approving the application, the commissioner shall find that the individual:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Is 18 years of age or more;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Is a resident of West Virginia, or eligible to designate West Virginia as his or her home state;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Is trustworthy, competent, reliable, and of good reputation, evidence of which may be determined by the commissioner;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) </span><a name="_Hlk33437732"><span class="csEF05ACC">Has a business or mailing address in this state for acceptance of service of process or, if residing outside of this state, acknowledges that by adjusting claims in this state he or she is subject to this state&rsquo;s jurisdiction, pursuant to &sect;56-3-33 of this code, and automatically appoints the West Virginia Secretary of State as his or her agent for service of process;</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Has not committed any act that is a ground for probation, suspension, revocation, or refusal of an adjuster&rsquo;s license as set forth in &sect;33-12B-11 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Has successfully passed the written examination for the line or lines of authority for which the person has applied; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Has paid the fees applicable to licensure.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) </span><span class="csC221FD51">A resident individual applying for an adjuster license shall pass a written examination unless exempt pursuant to &sect;33-12B-5(b)(5) or &sect;33-12B-5(b)(6) of this code. The examination shall test the knowledge of the individual concerning the line or lines of authority for which application is made, if applicable, the duties and responsibilities of an adjuster, and the insurance laws and rules of this state. </span><span class="csEF05ACC">However, to qualify for an adjuster license with the crop line of authority, the commissioner may accept, in lieu of such an examination, certification that the individual has passed a proficiency examination approved by the United States Department of Agriculture Risk Management Agency.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Each examinee shall pay a nonrefundable $25 examination fee for each examination to the commissioner, which fees shall be used for the purposes set forth in &sect;33-3-13 of this code. The commissioner may, at his or her discretion, designate an independent testing service to prepare and administer such examination subject to direction and approval by the commissioner, and examination fees charged by such service shall be paid by the applicant.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) An individual who fails to appear for the examination as scheduled, or fails to pass the examination, shall reapply for an examination and remit all required fees and forms before being rescheduled for another examination.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) An individual who initially fails to pass an examination required by this section is limited to seven additional attempts to pass the examination.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) An individual who applies for an adjuster license in this state, who was previously licensed for the same lines of authority in another jurisdiction, shall not be required to complete any prelicensing examination. This exemption is only available if the individual is currently licensed in that jurisdiction, or if the application is received within 90 days of the cancellation of the applicant&rsquo;s previous license, and if the prior jurisdiction issues a certification that, at the time of cancellation, the applicant was in good standing in that jurisdiction or the jurisdiction&rsquo;s adjuster database records, maintained by the National Association of Insurance Commissioners, its affiliates or subsidiaries, indicate that the adjuster is or was licensed in good standing for the line of authority requested. The certification must be of a license with the same line of authority for which the individual has applied.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) An individual licensed as an adjuster in another jurisdiction who moves to this state shall make application within 90 days of establishing legal residence to become a resident licensee pursuant to this section: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That no pre-licensing examination shall be required of that individual to obtain any line of authority previously held in the prior jurisdiction, except where the commissioner determines otherwise by rule. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Examinations may be developed and conducted under rules proposed by the commissioner. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Examinations required by this subsection are applicable for individual adjusters first licensed on or after July 1, 2021, or for individual adjusters who add a line of authority to an existing adjuster license on or after July 1, 2021. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A business entity applying for a resident independent or public adjuster license shall make application to the commissioner on forms proposed by the commissioner and shall declare under penalty of suspension, revocation, or refusal of the license that the statements made in the application are true, correct, and complete to the best of the business entity&rsquo;s knowledge and belief. Before approving the application, the commissioner shall find that the business entity:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Is eligible to designate West Virginia as its home state;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Has a business or mailing address in this state for acceptance of service of process;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Has designated a licensed independent or public adjuster responsible for the business entity&rsquo;s compliance with the insurance laws and rules of this state; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Has not committed an act that is a ground for probation, suspension, revocation, or refusal of an independent or public adjuster&rsquo;s license as set forth in &sect;33-12B-11 of this code. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(d) The requirements of this section do not apply to temporary licenses issued to emergency company adjusters or emergency independent adjusters. </span></p><h4 class="cs89687900">
+		<a name="_Hlk192580867"><span class="csF3C8A5A3">&sect;33-12B-6. Application for public adjuster license</span></a><span class="csF3C8A5A3">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A person applying for a public adjuster license shall make application to the commissioner on the appropriate uniform application or other application prescribed by the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The applicant shall declare under penalty of perjury and under penalty of refusal, suspension or revocation of the license that the statements made in the application are true, correct and complete to the best of the applicant&rsquo;s knowledge and belief.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) In order to make a determination of license eligibility, the insurance commissioner is authorized to require fingerprints of applicants and submit the fingerprints and the fee required to perform the criminal history record checks to the state identification bureau (or state department of justice public state agency) and the Federal Bureau of Investigation (FBI) for state and national criminal history record checks; the insurance commissioner shall require a criminal history record check on each applicant in accordance with this article. The insurance commissioner shall require each applicant to submit a full set of fingerprints in order for the insurance commissioner to obtain and receive National Criminal History Records from the FBI Criminal Justice Information Services Division.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The insurance commissioner may contract for the collection, transmission and resubmission of fingerprints required under this section. If the commissioner does so, the fee for collecting, transmitting and retaining fingerprints shall be payable directly to the contractor by the applicant. The insurance commissioner may agree to a reasonable fingerprinting fee to be charged by the contractor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The insurance commissioner may waive submission of fingerprints by any person that has previously furnished fingerprints and those fingerprints are on file with the Central Repository of the NAIC, its affiliates or subsidiaries.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The insurance commissioner is authorized to receive criminal history records.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The insurance commissioner is authorized to submit electronic fingerprint records and necessary identifying information to the NAIC, its affiliates or subsidiaries for permanent retention in a centralized repository. The purpose of such a centralized repository is to provide insurance commissioners with access to fingerprint records in order to perform criminal history record checks. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A business entity acting as a public adjuster is required to obtain a public adjuster license. Application shall be made using the Uniform Business Entity Application. Before approving the application, the insurance commissioner shall find that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The business entity has paid the fees set forth by the commissioner </span><a name="_Hlk192854865"><span class="cs46AE26E6">in accordance with the authority granted to the commissioner in &sect;33-2-10 of this code</span></a><span class="cs46AE26E6">; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The business entity has designated a licensed public adjuster responsible for the business entity&rsquo;s compliance with the insurance laws, rules and regulations of this state.</span></p><h4 class="cs89687900">
+		<a name="_Hlk192580985"><span class="csF3C8A5A3">&sect;33-12B-5b. Resident public adjuster license.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Before issuing a public adjuster license to an applicant under this article, the commissioner shall find that the applicant: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Is eligible to designate this state as his or her home state or is a nonresident who is not eligible for a license under &sect;33-12B-5e of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Has not committed any act that is a ground for denial, suspension or revocation of a license as set forth in </span><a name="_Hlk193104044"><span class="cs46AE26E6">&sect;33-12B-11 of this code</span></a><span class="cs46AE26E6">;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Is trustworthy, reliable, and of good reputation, evidence of which may be determined by the commissioner;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Is financially responsible to exercise the license and has provided proof of financial responsibility as required in &sect;33-12B-5g of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Has paid the fees as set forth by the commissioner in accordance with the authority granted to the commissioner in &sect;33-2-10 of this code ; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Maintains an office in the home state of residence with public access by reasonable appointment and/or regular business hours. This includes a designated office within a home state of residence.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) In addition to satisfying the requirements of subsection (a), an individual shall</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Be at least eighteen (18) years of age; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Have successfully passed the public adjuster examination.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Designate a licensed individual public adjuster responsible for the business entity&rsquo;s compliance with the insurance laws, rules, and regulations of this state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Designate only licensed individual public adjusters to exercise the business entity&rsquo;s license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The commissioner may require any documents reasonably necessary to verify the information contained in the application.</span></p><h4 class="cs89687900">
+		<a name="_Hlk192581259"><span class="csF3C8A5A3">&sect;33-12B-5c. Public adjuster examination</span></a><span class="csF3C8A5A3">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) An individual applying for a public adjuster license under this act shall pass a written examination unless exempt pursuant to &sect;33-12B-5d of this code. The examination shall test the knowledge of the individual concerning the duties and responsibilities of a public adjuster and the insurance laws and regulations of this state. Examinations required by this section shall be developed and conducted under rules and regulations prescribed by the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The commissioner may make arrangements, including contracting with an outside testing service, for administering examinations and collecting the nonrefundable fee set forth by the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Each individual applying for an examination shall remit a non-refundable fee as prescribed by the commissioner in accordance with the authority granted to the commissioner in &sect;33-2-10 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) An individual who fails to appear for the examination as scheduled or fails to pass the examination, shall reapply for an examination and remit all required fees and forms before being rescheduled for another examination.</span></p><h4 class="cs89687900">
+		<a name="_Hlk192581409"><span class="csF3C8A5A3">&sect;33-12B-5d. Exemptions for public adjuster examination.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) An individual who applies for a public adjuster license in this state who was previously licensed as a public adjuster in another state based on a public adjuster examination shall not be required to complete any prelicensing examination. This exemption is only available if the person is currently licensed in that state or if the application is received within twelve (12) months of the cancellation of the applicant&rsquo;s previous license and if the prior state issues a certification that, at the time of cancellation, the applicant was in good standing in that state or the state&rsquo;s producer database records or records maintained by the NAIC, its affiliates, or subsidiaries, indicate that the public adjuster is or was licensed in good standing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A person licensed as a public adjuster in another state based on a public adjuster examination who moves to this state shall make application within ninety (90) days of establishing legal residence to become a resident licensee pursuant to &sect;33-12B-5b of this code. No prelicensing examination shall be required of that person to obtain a public adjuster license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) An individual who applies for a public adjuster license in this state who was previously licensed as a public adjuster in this state shall not be required to complete any prelicensing examination. This exemption is only available if the application is received within twelve (12) months of the cancellation of the applicant&rsquo;s previous license in this state and if, at the time of cancellation, the applicant was in good standing in this state.</span></p><h4 class="cs89687900">
+		<a name="_Hlk192581549"><span class="csF3C8A5A3">&sect;33-12B-5e. Nonresident public adjuster license reciprocity.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Unless denied licensure pursuant to &sect;33-12B-11 of this code, a nonresident person shall receive a nonresident public adjuster license if: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The person is currently licensed as a resident public adjuster and in good standing in his or her home state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The person has submitted the proper request for licensure, has paid the fees required by this article, and has provided proof of financial responsibility as required in &sect;33-12B-5g of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The person has submitted or transmitted to the commissioner the appropriate completed application for licensure; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The person&rsquo;s home state awards non-resident public adjuster licenses to residents of this state on the same basis.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The commissioner may verify the public adjuster&rsquo;s licensing status through the producer database maintained by the NAIC, its affiliates, or subsidiaries.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) As a condition to continuation of a public adjuster license issued under this section, the licensee shall maintain a resident public adjuster license in his or her home state. The non-resident public adjuster license issued under this section shall terminate and be surrendered immediately to the commissioner if the home state public adjuster license terminates for any reason, unless the public adjuster has been issued a license as a resident public adjuster in his or her new home state. Notification to the state or states where nonresident license is issued must be made as soon as possible, yet no later than thirty (30) days of change in new state resident license. Licensee shall include new and old address. A new state resident license is required for non-resident licenses to remain valid. The new state resident license must have reciprocity with the licensing non-resident state(s) for the non-resident license not to terminate.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;33-12B-5f. Public adjuster license.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Unless denied licensure under this article, persons who have met the requirements of this article shall be issued a public adjuster license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A public adjuster license shall remain in effect unless revoked, terminated or suspended as long as the request for renewal and fee set forth by the commissioner in accordance with the authority granted to the commissioner in &sect;33-2-10 of this code is paid and any other requirements for license renewal are met by the due date.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The licensee shall inform the commissioner by any means acceptable to the commissioner of a change of address, change of legal name, or change of information submitted on the application within thirty (30) days of the change.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A licensed public adjuster shall be subject to &sect;33-11-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, &sect;33-11A-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, and &sect;33-41-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A public adjuster who allows his or her license to lapse may, within twelve (12) months from the due date of the renewal, be issued a new public adjuster license upon the commissioner&rsquo;s receipt of the request for renewal. However, a penalty in the amount of double the unpaid renewal fee shall be required for the issue of the new public adjuster license. The new public adjuster license shall be effective the date the commissioner receives the request for renewal and the late payment penalty.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Any public adjuster licensee that fails to apply for renewal of a license before expiration of the current license shall pay a lapsed license fee of twice the license fee and be subject to other penalties as provided by law before the license will be renewed. If the Department receives the request for reinstatement and the required lapsed license fee within sixty (60) days of the date the license lapsed, the Department shall reinstate the license retroactively to the date the license lapsed. If the Department receives the request for reinstatement and the required lapsed license fee after sixty (60) days but within one year of the date the license lapsed, the Department shall reinstate the license prospectively with the date the license is reinstated. If the person applies for reinstatement more than one year from date of lapse, the person shall reapply for the license under this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) A licensed public adjuster who is unable to comply with license renewal procedures due to military service, a long-term medical disability, or some other extenuating circumstance, may request a waiver of those procedures. The public adjuster may also request a waiver of any examination requirement, fine, or other sanction imposed for failure to comply with renewal procedures.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The license shall contain the licensee&rsquo;s name, city and state of business address, personal identification number, the date of issuance, the expiration date, and any other information the commissioner deems necessary.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) In order to assist in the performance of the commissioner&rsquo;s duties, the commissioner may contract with non-governmental entities, including the NAIC or any affiliates or subsidiaries that the NAIC oversees, to perform any ministerial functions, including the collection of fees and data, related to licensing that the commissioner may deem appropriate.</span></p><h4 class="cs89687900">
+		<a name="_Hlk193104482"><span class="csF3C8A5A3">&sect;33-12B-5g</span></a><span class="csF3C8A5A3">. Public adjuster fees.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Prior to issuance of a license as a public adjuster and for the duration of the license, the applicant shall secure evidence of financial responsibility in a format prescribed by the insurance commissioner through a security bond or irrevocable letter of credit:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A surety bond executed and issued by an insurer authorized to issue surety bonds in this state, which bond:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Shall be in the minimum amount of $20,000;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Shall be in favor of this state and shall specifically authorize recovery by the commissioner on behalf of any person in this state who sustained damages as the result of erroneous acts, failure to act, conviction of fraud, or conviction of unfair practices in his or her capacity as a public adjuster; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Shall not be terminated unless at least thirty (30) days&rsquo; prior written notice will have been filed with the commissioner and given to the licensee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An irrevocable letter of credit issued by a qualified financial institution, which letter of credit: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Shall be in the minimum amount of $20,000;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Shall be to an account to the commissioner and subject to lawful levy of execution on behalf of any person to whom the public adjuster has been found to be legally liable as the result of erroneous acts, failure to act, fraudulent acts, or unfair practices in his or her capacity as a public adjuster; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Shall not be terminated unless at least thirty (30) days&rsquo; prior written notice will have been filed with the commissioner and given to the licensee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The issuer of the evidence of financial responsibility shall notify the commissioner upon termination of the bond or letter of credit, unless otherwise directed by the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The commissioner may ask for the evidence of financial responsibility at any time he or she deems relevant.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The authority to act as a public adjuster shall automatically terminate if the evidence of financial responsibility terminates or becomes impaired.</span></p><h4 class="cs89687900">
+		<a name="_Hlk192584931"><span class="csF3C8A5A3">&sect;33-12B-16. Public adjuster fees.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A public adjuster shall not pay a commission, service fee or other valuable consideration to a person for investigating or settling claims in this state if that person is required to be licensed under this article and is not so licensed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A person shall not accept a commission, service fee or other valuable consideration for investigating or settling claims in this state if that person is required to be licensed under this section and is not so licensed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A public adjuster may pay or assign commission, service fees or other valuable consideration to persons who do not investigate or settle claims in this state, unless the payment would violate &sect;33-11-4(8) or any rule promulgated by the by the commissioner in accordance with the authority granted to the commissioner in &sect;33-2-10 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) There shall be limits on fees. No public adjuster shall charge, agree to or accept as compensation or reimbursement any payment, commission, fee, or another thing of value equal to more than ten percent (10%) for any insurance claim settlement. No public adjuster shall require, demand or accept any fee, retainer, compensation, deposit, or other thing of value, prior to settlement of a claim.</span></p><h4 class="cs89687900">
+		<a name="_Hlk192585231"><span class="csF3C8A5A3">&sect;33-12B-17. Contract between public adjuster and insured.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Public adjusters shall ensure that all contracts for their services are in writing and contain the following terms:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Legible full name of the adjuster signing the contract, as specified in Department of Insurance records;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Permanent home state business address and phone number;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Department of Insurance license number;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Title of &quot;Public Adjuster Contract&quot;;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The insured&rsquo;s full name, street address, insurance company name and policy number, if known or upon notification;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) A description of the loss and its location, if applicable;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Description of services to be provided to the insured;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Signatures of the public adjuster and the insured;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Date contract was signed by the public adjuster and date the contract was signed by the insured;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Attestation language stating that the public adjuster is fully bonded pursuant to state law; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) Full salary, fee, commission, compensation or other considerations the public adjuster is to receive for services; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) a &quot;choice of law&quot; clause requiring the contract be governed under West Virginia law and any dispute be filed in a West Virginia court of competent jurisdiction.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The contract may specify that the public adjuster shall be named as a co-payee on an insurer&rsquo;s payment of a claim.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) If the compensation is based on a share of the insurance settlement, the exact percentage shall be specified.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Initial expenses to be reimbursed to the public adjuster from the proceeds of the claim payment shall be specified by type, with dollar estimates set forth in the contract and with any additional expenses first approved by the insured.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Compensation provisions in a public adjusting contract shall not be redacted in any copy of the contract provided to the commissioner. Such a redaction shall constitute an omission of material fact in violation of &sect;33-41-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If the insurer, not later than seventy-two (72) hours after the date on which the loss is reported to the insurer, either pays or commits in writing to pay to the insured the policy limit of the insurance policy, the public adjuster shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Not receive a commission consisting of a percentage of the total amount paid by an insurer to resolve a claim;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Inform the insured that loss recovery amount might not be increased by insurer; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Be entitled only to reasonable compensation from the insured for services provided by the public adjuster on behalf of the insured, based on the time spent on a claim and expenses incurred by the public adjuster, until the claim is paid or the insured receives a written commitment to pay from the insurer.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A public adjuster contract may not contain any contract term that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Allows the public adjuster&rsquo;s percentage fee to be collected when money is due from an insurance company, but not paid, or that allows a public adjuster to collect the entire fee from the first check issued by an insurance company, rather than as percentage of each check issued by an insurance company;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Requires the insured to authorize an insurance company to issue a check only in the name of the public adjuster; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Imposes collection costs or late fees; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Precludes a public adjuster from pursuing civil remedies.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Prior to the signing of the contract the public adjuster shall provide the insured with a separate disclosure document regarding the claim process that states:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Property insurance policies obligate the insured to present a claim to his or her insurance company for consideration. There are three (3) types of adjusters that could be involved in that process. The definitions of the three types are as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) &quot;Company adjuster&quot; means the insurance adjusters who are employees of an insurance company. They represent the interest of the insurance company and are paid by the insurance company. They will not charge you a fee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) &quot;Independent adjuster&quot; means the insurance adjusters who are hired on a contract basis by an insurance company to represent the insurance company&rsquo;s interest in the settlement of the claim. They are paid by your insurance company. They will not charge you a fee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) &quot;Public adjuster&quot; means the insurance adjusters who do not work for any insurance company. They work for the insured to assist in the preparation, presentation and settlement of the claim. The insured hires them by signing a contract agreeing to pay them a fee or commission based on a percentage of the settlement, or other method of compensation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The insured is not required to hire a public adjuster to help the insured meet his or her obligations under the policy, but has the right to do so.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The insured has the right to initiate direct communications with the insured&rsquo;s attorney, the insurer, the insurer&rsquo;s adjuster, and the insurer&rsquo;s attorney, or any other person regarding the settlement of the insured&rsquo;s claim.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The public adjuster is not a representative or employee of the insurer.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The salary, fee, commission or other consideration is the obligation of the insured, not the insurer.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The contracts shall be executed in duplicate to provide an original contract to the public adjuster, and an original contract to the insured. The public adjuster&#39;s original contract shall be available at all times for inspection without notice by the commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The public adjuster shall provide the insurer a notification letter, which has been signed by the insured, authorizing the public adjuster to represent the insured&rsquo;s interest. The insurer shall verify the public adjuster holds a valid license with the Department of Insurance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The public adjuster shall give the insured written notice of the insured&rsquo;s right as provided in &sect;33-11A-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> and in accordance with the authority granted to the commissioner in &sect;33-11A-4 of this code. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The insured has the right to rescind the contract within three (3) business days after the date the contract was signed. The rescission shall be in writing and mailed or delivered to the public adjuster at the address in the contract within the three (3) business day period.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) If the insured exercises the right to rescind the contract, anything of value given by the insured under the contract will be returned to the insured within fifteen (15) business days following the receipt by the public adjuster of the cancellation notice.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) Subject to its terms relating to assignability, a property insurance policy, whether heretofore or hereafter issued, under the terms of which the policy and its rights and benefits are assignable, may provide that the rights and benefits under the insurance may only be assigned to a person who has the legal authority to represent the named insured, or to a subsequent owner of the property to whom title is transferred, and may explicitly prohibit assignment of rights and benefits to any other person, including a property repair contractor. For purposes of this subsection, having &quot;legal authority to represent the named insured&quot; includes the person named by the named insured as having the named insured&rsquo;s power of attorney, the person who is the named insured&rsquo;s licensed public adjuster, or any other comparable person. Property repair contractors operating in this state may not subvert the public adjuster licensing requirements of &sect;33-12B-3 of this code through the acquisition of a power of attorney from the named insured.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(l) Notwithstanding the terms of this code, only the public adjuster may obtain an executed contract from the insured. All other business entities, persons, including contractors and solicitors, are prohibited from obtaining a signature from the insured on a contract between the public adjuster and the insured.</span><span class="csEF05ACC"> </span></p><h4 class="cs89687900">
+		<a name="_Hlk192585266"><span class="csF3C8A5A3">&sect;33-12B-18. Unlicensed actors.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">A person or entity commits a fraudulent insurance act if he or she:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Represents or advertises themself to be a public adjuster who has not met the requirements of licensure under &sect;33-41-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Conducts business for which a license is required under this section without a license.</span></p><h4 class="cs89687900">
+		<a name="_Hlk192585304"><span class="csF3C8A5A3">&sect;33-12B-19. Public adjuster record retention.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A public adjuster shall maintain a complete record of each transaction as a public adjuster. The records required by this section shall include the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Name of the insured;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Date, location and amount of the loss;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Copy of the contract between the public adjuster and insured;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Name of the insurer, amount, expiration date and number of each policy carried with respect to the loss;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Itemized statement of the insured&rsquo;s recoveries;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Itemized statement of all compensation received by the public adjuster, from any source whatsoever, in connection with the loss;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) A register of all monies received, deposited, disbursed, or withdrawn in connection with a transaction with an insured, including fees transfers and disbursements from a trust account and all transactions concerning all interest bearing accounts;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Name of public adjuster who executed the contract;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Name of the attorney representing the insured, if applicable, and the name of the claims</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">representatives of the insurance company; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Evidence of financial responsibility in a format prescribed by the insurance commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Records shall be maintained for at least five (5) years after the termination of the transaction with an insured and shall be open to examination by the commissioner at all times.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Records submitted to the commissioner in accordance with this section that contain information identified in writing as proprietary by the public adjuster shall be treated as confidential by the commissioner and shall not be subject to &sect;29B-1-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code.</span></p><h4 class="cs89687900">
+		<a name="_Hlk192585439"><span class="csF3C8A5A3">&sect;33-12B-20. Standards of conduct of public adjuster.</span></a></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A public adjuster is obligated, under his or her license, to serve with objectivity and complete loyalty the interest of his client alone; and to render to the insured such information, counsel and service, as within the knowledge, understanding and opinion in good faith of the licensee, as will best serve the insured&rsquo;s insurance claim needs and interest.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A public adjuster shall not solicit, or attempt to solicit, an insured during the progress of a loss-producing occurrence, as defined in the insured&rsquo;s insurance contract.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A public adjuster shall not advertise or infer damage unless an inspection of the property has been completed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A public adjuster shall not offer to pay an insured&rsquo;s deductible, or claim the insured&rsquo;s deductible will be waived, as an inducement to using the services of a public adjuster.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A public adjuster shall not permit an unlicensed employee or representative of the public adjuster to conduct business for which a license is required under this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) A public adjuster shall not have a direct or indirect financial interest in any aspect of the claim, other than the salary, fee, commission or other consideration established in the written contract with the insured. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) A public adjuster shall not acquire any interest in salvage of property subject to the contract with the insured. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The public adjuster shall abstain from referring or directing the insured to get needed repairs or services in connection with a loss from any person: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) With whom the public adjuster has a financial interest; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) From whom the public adjuster may receive direct or indirect compensation for the referral.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Any compensation or anything of value in connection with an insured&rsquo;s specific loss that will be received by a public adjuster shall be disclosed by the public adjuster to the insured in writing including the source and amount of any such compensation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) Public adjusters shall adhere to the following general ethical requirements:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A public adjuster shall not undertake the adjustment of any claim if the public adjuster is not competent and knowledgeable as to the terms and conditions of the insurance coverage, or which otherwise exceeds the public adjuster&rsquo;s current expertise;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A public adjuster shall not knowingly make any oral or written material misrepresentations or statements which are false or maliciously critical and intended to injure any person engaged in the business of insurance to any insured client or potential insured client;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) No public adjuster, while so licensed by the Department, may represent or act as a company adjuster, or independent adjuster on the same claim;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The contract shall not be construed to prevent an insured from pursuing any civil remedy after the three-business day revocation or cancellation period;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) A public adjuster shall not enter into a contract or accept a power of attorney that vests in the public adjuster the effective authority to choose the persons who shall perform repair work; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) A public adjuster shall ensure that all contracts for the public adjuster&rsquo;s services are in writing and set forth all terms and conditions of the engagement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) A public adjuster may not agree to any loss settlement without the insured&rsquo;s knowledge and consent.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;33-12B-21. Reporting of actions by public adjuster.</span></h4>
+	<p class="cs53FB8D75"><a name="_Hlk192585476"><span class="cs46AE26E6">(a) The public adjuster shall report to the commissioner any administrative action taken </span></a><span class="cs46AE26E6">against the public adjuster in another jurisdiction or by another governmental agency in this state within thirty (30) days of the final disposition of the matter. This report shall include a copy of the order, consent to order, or other relevant legal documents.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Within thirty (30) days of the initial pretrial hearing date, the public adjuster shall report to the commissioner any criminal prosecution of the public adjuster taken in any jurisdiction. The report shall include a copy of the initial complaint filed, the order resulting from the hearing, and any other relevant legal documents.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Records of all monies received, deposited, disbursed, withdrawn in connection with a transaction with an insured under this section, including fee transfers and disbursements from a trust account and all transactions concerning all interest bearing accounts, shall be disclosed to the insured within three (3) business days. Such disclosure shall be accompanied by a receipt to the insured detailing the transaction. </span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create application, licensure, and examination requirements for public adjusters and to create standards of conduct which govern public adjusters. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

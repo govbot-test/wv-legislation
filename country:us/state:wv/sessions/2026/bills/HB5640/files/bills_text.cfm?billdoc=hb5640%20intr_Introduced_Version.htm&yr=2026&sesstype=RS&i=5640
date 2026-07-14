@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5640 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5640">&laquo; House Bill 5640 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5640'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5640 - To provide a tax sale process reform by creating two distinct legal tracks&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5640+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5640"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csA130ECD1{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5640</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Green</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 17, 2026; referred to the Committee on Government Organization then the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;11A-3-52, &sect;11A-3-54, &sect;11A-3-55, &sect;11A-3-56, &sect;11A-3-59, and &sect;11A-4-4 of the Code of West Virginia, 1931, as amended; and to amend said code by adding three new sections, designated &sect;11A-3-54a, &sect;11A-3-54b, and &sect;11A-3-54c; relating to tax-delinquent property; preserving existing protections for owner-occupied property; strengthening notice requirements for non-owner-occupied property; eliminating redemption for non-owner-occupied property; limiting remedies for failure of notice; requiring independent title examinations; and providing for prospective application.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 3. SALE OF TAX LIENS AND NONENTERED, ESCHEATED AND WASTE AND UNAPPROPRIATED LANDS.</span></h2>
+	<p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect; 11A-3-52. Duties of purchaser to secure a deed.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) Within 120 days following the approval of the sale by the Auditor pursuant to </span><span class="cs46AE26E6">&sect;11A-3-51 of this code</span><span class="csEF05ACC">, the purchaser, his or her heirs or assigns, in order to secure a deed for the real estate purchased, shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) </span><span class="cs68EFC440">Prepare a list of those to be served with notice to redeem and request the Auditor to prepare and serve the notice as provided in &sect;11A-3-54</span><span class="csA130ECD1"> </span><span class="cs68EFC440">and &sect;11A-3-55 of this code</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Request the Auditor to cause an independent title examination to be performed and a list to be prepared of those persons entitled to notice under &sect;11A-3-55 of this code, and request the Auditor to prepare and serve notice as provided in &sect;11A-3-54, &sect;11A-3-54a, and &sect;11A-3-55 of this code, as applicable: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That the independent title examination and list preparation required by this subdivision shall be performed by an attorney or title examiner selected or assigned by the Auditor from among those approved under subsection (f) of this section, and neither the purchaser nor any assignee may select, direct, supervise, or control the examiner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) When the real property subject to the tax lien was classified as Class II property, provide the Auditor with the actual mailing address of the property that is subject to the tax lien or liens purchased; </span><span class="cs68EFC440">and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Deposit, or offer to deposit, with the Auditor a sum sufficient to cover the costs of preparing and serving the notice</span><span class="cs46AE26E6">; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Provide the Auditor with a sworn certification identifying the person or firm performing the title examination and affirming compliance with subsection (f) of this section</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) If the purchaser fails to fulfill the requirements set forth in subsection (a) of this section, the purchaser shall lose all the benefits of his or her purchase.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) After the requirements of subsection (a) of this section have been satisfied, the Auditor shall issue a notice to redeem as required by &sect;11A-3-54 and &sect;11A-3-55 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) If the person requesting preparation and service of the notice is an assignee of the purchaser, he or she shall, at the time of the request, file with the Auditor a written assignment to him or her of the purchaser&rsquo;s rights, executed, acknowledged, and certified in the manner required to make a valid deed.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Whenever a purchaser has failed to comply with the notice requirements set forth in subsection (a) of this section, the purchaser may receive an additional &nbsp;60 days from the expiration of the time period set forth in subsection (a) of this section to comply with the notice requirements set forth in subsection (a) of this section if the purchaser files with the Auditor a request in writing for the extension within 30 days following the expiration of the time period set forth in subsection (a) of this section and makes payment by U. S. currency, cashier&rsquo;s check, certified check, or money order in the amount of $100 or 10 percent of the total amount paid on the day of sale set forth in &sect;11A-3-45 of this code, whichever is greater. The fee for issuing the certificate of extension shall be $25 made payable to the Auditor. The Auditor may grant the purchaser or his or her heirs or assigns an extension of time, not to exceed 30 days, in which to comply with the requirements of subsection (a) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The Auditor shall each month draw his or her warrant upon the treasury payable to the county board of education of each county for payment received by him or her for the extension of</span><span class="cs68EFC440"> </span><span class="csEF05ACC">the time period set forth in subsection (e) of this section for property located within each such county. </span><span class="cs46AE26E6">Independent title examination; prohibited persons. &ndash; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The title examination and list preparation required by this section shall be performed by an attorney or title examiner approved by the Auditor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The purchaser, any assignee, or any affiliated person may not perform, supervise, direct, derive compensation from, or have a financial interest in the title examination or list preparation for property purchased by that purchaser or affiliated person.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Affiliated person&quot; means a spouse, parent, child, sibling, grandparent, grandchild, or any entity in which the purchaser holds a direct or indirect ownership interest, or any entity that is owned or controlled, in whole or in part, by the purchaser.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &nbsp;The Auditor may require that the purchaser deposit, with the request under subsection (a) of this section, the anticipated reasonable cost of the independent title examination and list preparation, and the Auditor may pay the approved examiner directly from such deposit upon receipt of an invoice or receipt, subject to the limitations applicable to owner-occupied property under &sect;11A-3-56 of this code.</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;11A-3-54. Notice to redeem.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Whenever the provisions of &sect;11A-3-52 of this code have been complied with, the Auditor shall thereupon prepare a notice in form or effect as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">To __________</span></p><p class="cs53FB8D75"><span class="csEF05ACC">You will take notice that __________, the purchaser (or __________, the assignee, heir, or devisee of __________, the purchaser) of the following real estate, __________, (here describe the real estate sold) located in __________, (here name the city, town, or village in which the real estate is situated or, if not within a city, town, or village, give the district and a general description) which was __________ (here put whether the property was returned delinquent or non-entered) in the name of __________, and was sold by the Auditor at the sale for delinquent taxes (or nonentry) on the ___ day of __________, &nbsp;20 ___, has requested that you be notified that a deed for such real estate shall be made on or after the ___ day of __________, &nbsp;20 ___, as provided by law, unless before that day you redeem such real estate. The amount you shall have to pay to redeem on the ___ day of __________, 20___ shall be as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Amount equal to the taxes, interest, and charges due on the date of sale, with interest to __________ .......... $__________</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Amount of taxes paid on the property, since the sale, with interest to __________ .......... $__________</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Amount paid for </span><span class="cs68EFC440">title examination and preparation of list of those to be served, and for preparation and service of the notice with interest to</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">an independent title examination and preparation of list of those to be served, supported by receipts, with no interest allowed, not to exceed $300 in the aggregate</span><span class="csEF05ACC"> __________ .......... $__________</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Amount paid for other statutory costs (describe) __________ .......... $__________</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Total .......... $__________</span></p><p class="cs53FB8D75"><span class="csEF05ACC">You may redeem at any time before __________ by paying the above total less any unearned interest.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">If the above real estate is your primary residence, you may petition the Auditor to redeem the real estate in not more than three incremental payments that equal the total amount required to redeem the real estate prior to the issuance of the deed described above.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Given under my hand this ___ day of __________, &nbsp;20 ___.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Auditor</span></p><p class="cs53FB8D75"><span class="csEF05ACC">_________________________ County,</span></p><p class="cs53FB8D75"><span class="csEF05ACC">State of West Virginia</span></p><p class="cs53FB8D75"><span class="csEF05ACC">For preparing this notice, the Auditor shall receive a fee of $10 for the original and two dollars for each copy required. Any costs which must be expended in addition thereto for publication, or service of such notice in the manner provided for serving process commencing a civil action, or for service of process by certified mail, shall be charged by the Auditor. All costs provided by this section shall be included as redemption costs and included in the notice described herein.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">This section applies only to owner-occupied property as defined in &sect;11A-3-54b of this code.</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;11A-3-54a. Enhanced notice; non-owner-occupied property; no redemption. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs1489E706">Applicability</span><span class="cs46AE26E6">. &ndash; This section applies to any real estate sold by the Auditor that does not qualify as owner-occupied property under &sect;11A-3-54b of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs1489E706">No redemption</span><span class="cs46AE26E6">. &ndash; Notwithstanding any other provision of this code, no right of redemption exists for real estate subject to this section, and no repurchase, buy-back period, or equitable extension of time to redeem shall apply.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs1489E706">Required notice</span><span class="cs46AE26E6">. &ndash; Prior to issuance of a tax deed, the Auditor shall provide notice using all of the following methods:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Certified mail, return receipt requested.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) First-class mail to the same address;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Posting of notice on the property at least 45 days prior to deed issuance;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Publication as required by &sect;11A-3-55 of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) If certified mail is returned undelivered, at least one additional method reasonably calculated to provide actual notice.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) </span><span class="cs1489E706">Affidavit of compliance</span><span class="cs46AE26E6">. &ndash; The Auditor shall execute and record an affidavit detailing all notice efforts made under this section. Substantial compliance with this section shall constitute compliance with the notice requirements of this code; </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That nothing in this subsection limits constitutional due process requirements.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) </span><span class="cs1489E706">Deed issuance</span><span class="cs46AE26E6">. &ndash; The Auditor may issue a deed not earlier than 45 days after the last date on which notice is completed under this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;11A-3-54b. Owner-occupied property; administrative determination.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) &quot;Owner-occupied property&quot; means real property that, at the time of the Auditor&rsquo;s sale, is used as the primary residence of an owner of record, a surviving spouse of an owner of record, or a person holding a present possessory interest under a recorded instrument.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Owner-occupied status shall be determined administratively by the Auditor based on objective indicators, without the need for an evidentiary hearing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Evidence may include, but is not limited to: homestead exemption records, voter registration address, driver&rsquo;s license address, utility usage, or other reliable governmental or commercial records.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The Auditor&rsquo;s determination is presumed correct unless rebutted by clear and convincing evidence.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;11A-3-54c. Prospective application.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The amendments to &sect;11A-3-52, &sect;11A-3-54, &sect;11A-3-56, &sect;11A-3-59, and &sect;11A-4-4 of this code, and the enactment of &sect;11A-3-54a and &sect;11A-3-54b of this code, as provided by this act, apply only to tax sales conducted on or after January 1, 2027.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any tax sale conducted prior to January 1, 2027, and any right of redemption, notice, or remedy arising from such sale, shall be governed by the law in effect on the date of such sale</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;11A-3-55. Service of notice </span><span class="csF3C8A5A3">to redeem</span><span class="csB9803513">. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(a) As soon as the Auditor has prepared the notice provided for in &sect;11A-3-54 of this code, he or she shall cause it to be served upon all persons named on the list generated by the purchaser pursuant to the provisions of &sect;11A-3-52 of this code. Such notice shall be mailed and, if necessary, published at least 45 days prior to the first day a deed may be issued following the Auditor&rsquo;s sale.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b) The notice shall be served upon all such persons residing or found in the state in the manner provided for serving process commencing a civil action or by certified mail, return receipt requested, or other types of delivery service courier that provide a receipt. The notice shall be served on or before the 30th day following the request for such notice.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c) The notice shall be served upon persons not residing or found in the state by certified mail, return receipt requested, or in the manner provided for serving process commencing a civil action or other types of delivery service courier that provide a receipt. The notice shall be served on or before the 30 days following the request for the notice.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d) If the address of a person is unknown to the purchaser and cannot be discovered by due diligence on the part of the purchaser, the notice shall be served by publication as a Class III-0 legal advertisement in compliance with the provisions of &sect;59-3-1 </span><span class="csB65271">et seq</span><span class="cs68EFC440">. of this code and the publication area for the publication shall be the county in which the real property is located. If service by publication is necessary, publication shall be commenced within 60 days following the request for the notice, and a copy of the notice shall, at the same time, be sent pursuant to subsection (b) or (c) of this section, to the last known address of the person to be served. The return of service of the notice and the affidavit of publication, if any, shall be in the manner provided for process generally and shall be filed and preserved by the State Auditor in his or her office, together with any return receipts for notices sent by certified mail.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(e) In addition to the other notice requirements set forth in this section, if the real property subject to the tax lien was classified as Class II property at the time of the assessment, at the same time the Auditor issues the required notices by certified mail, the Auditor shall forward a copy of the notice sent to the delinquent taxpayer by first class mail, or in the manner provided for serving process commencing a civil action, addressed to &quot;Occupant&quot;, to the physical mailing address for the subject property. The physical mailing address for the subject property shall be supplied by the purchaser of the property, pursuant to the provisions of &sect;11A-3-52 of this code. Where the mail is not deliverable to an address at the physical location of the subject property, the copy of the notice shall be sent to any other mailing address that exists to which the notice would be delivered to an occupant of the subject property. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The notice to redeem required by &sect;11A-3-54 of this code shall be served by the Auditor upon each person entitled to notice as their interest appears of record.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Auditor shall cause a copy of the notice to redeem to be served upon each person appearing on the list of those to be served prepared pursuant to &sect;11A-3-52 of this code, in the manner provided by law for the service of process commencing a civil action, or by certified mail, return receipt requested, addressed to the last known address of such person.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">If service of the notice cannot be made by personal service or by certified mail, return receipt requested, because the address of such person is unknown or service by certified mail is returned undelivered, the Auditor shall cause the notice to be published as a Class III-0 legal advertisement in compliance with the provisions of &sect;59-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code. The publication shall be made in a newspaper of general circulation published in the county in which the real estate is located.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The publication shall be made once a week for three successive weeks, and the first publication shall be made at least 30 days prior to the date specified in the notice as the last day to redeem.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">In addition to the publication, the Auditor shall mail a copy of the notice by first-class mail to the last known address of each person entitled to notice.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The return of service, return receipt, affidavit of publication, and any other proof of notice shall be filed and retained by the Auditor as part of the permanent record of the tax sale.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Failure to serve the notice to redeem upon any person entitled thereto shall not invalidate the sale or deed except as otherwise provided in &sect;11A-4-4 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Nothing in this section shall be construed to require actual notice to any person whose identity or address is not reasonably ascertainable after the exercise of due diligence.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">For real estate subject to &sect;11A-3-54a of this code, the notice requirements, methods, and timing set forth in &sect;11A-3-54a shall control. This section applies to such real estate only to the extent not inconsistent with &sect;11A-3-54a.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;11A-3-56. Redemption from purchase; receipt; list of redemptions; lien; lien of person redeeming interest of another; record.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) After the sale of any tax lien on any real estate pursuant to &sect;11A-3-45 or &sect;11A-3-48 of this code, the owner of, or any other person who was entitled to pay the taxes on any real estate for which a tax lien thereon was purchased whose interest is not subject to separate assessment, or any person having a lien on such real estate, or on an undivided interest therein, may redeem at any time before a tax deed is issued therefor. In order to redeem, he or she must pay to the Auditor the following amounts:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An amount equal to the taxes, interest, and charges due on the date of the sale, with interest thereon at the rate of one percent per month from the date of sale;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) All other taxes thereon, which have since been paid by the purchaser, or his or her</span><span class="cs68EFC440"> </span><span class="csEF05ACC">heirs, with interest at the rate of one percent per month from the date of payment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Such additional expenses as may have been incurred in preparing the list of those to be served with notice to redeem, and for any licensed attorney&rsquo;s title examination incident thereto, </span><span class="cs68EFC440">with interest at the rate of one percent per month from the date of payment,</span><span class="csEF05ACC"> but the amount he or she shall be required to pay, excluding said interest, for such expenses incurred for the preparation of the list of those to be served with notice to redeem required by &sect;11A-3-52 of this code, and for any licensed attorney&rsquo;s title examination incident thereto, shall not exceed </span><span class="cs68EFC440">$500</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$300</span><span class="csEF05ACC">. </span><span class="cs46AE26E6">No interest may be charged or collected on the costs described in this subdivision.</span><span class="csEF05ACC"> An attorney may only charge a fee for legal services actually performed and must certify that he or she conducted an examination to determine the list of those to be served required by &sect;11A-3-52 of this code </span><span class="cs46AE26E6">and the amount charged for the costs described in this subdivision shall be supported by receipts or invoices provided to the Auditor</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) All additional statutory costs paid by the purchaser; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The Auditor&rsquo;s fee and commission as provided by &sect;11A-3-66 of this code. </span><span class="cs68EFC440">Where the Auditor has not received from the purchaser satisfactory proof of the expenses incurred in preparing the notice to redeem, or of any licensed attorney&rsquo;s title examination incident thereto, in the form of receipts or other evidence thereof, the person redeeming shall pay the Auditor the sum of $500 plus interest thereon at the rate of one percent per month from the date of the sale for disposition pursuant to the provisions of &sect;11A-3-57, &sect;11A-3-58, and &sect;11A-3-64 of this code. &nbsp;&nbsp;&nbsp;</span><span class="cs46AE26E6">Where the Auditor has not received from the purchaser satisfactory proof of the costs described in subdivision (3) of this subsection, in the form of receipts or invoices or other reliable evidence thereof, the person redeeming shall not be required to pay any amount under subdivision (3) of this subsection.</span><span class="csEF05ACC"> Upon payment to the Auditor of those and any other unpaid statutory charges required by this article, and of any unpaid expenses incurred by the sheriff, the Auditor, and the deputy commissioner in the exercise of their duties pursuant to this article, the Auditor shall prepare an original and five copies of the receipt for payment and shall note on said receipts that</span><span class="cs68EFC440"> </span><span class="csEF05ACC">the property has been redeemed. The original of such receipt shall be given to the person redeeming. The Auditor shall retain a copy of the receipt and forward one copy each to the sheriff, assessor, and the clerk of the county commission. The clerk shall endorse on the receipt the fact and time of such filing and note the fact of redemption on his or her record of delinquent lands </span><span class="cs46AE26E6">having a right to redeem, may redeem the real estate at any time before a tax deed is issued therefor</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">This section applies only to owner-occupied property as defined in &sect;11A-3-54b of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">To redeem, the person redeeming shall pay to the Auditor:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The amount paid by the purchaser;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Interest thereon;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(</span><span class="cs46AE26E6">3) The reasonable and necessary cost of an independent title examination and list preparation, supported by receipts, not to exceed $300 in the aggregate, with no interest allowed;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The actual cost of preparation and service of notice;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The Auditor&rsquo;s fee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any person for reasons of financial hardship may petition the Auditor to redeem his or her primary residence in installments. The petition shall certify to the Auditor that the real estate is the primary residence of the redeeming party. The Auditor may approve a financial hardship plan and it shall be signed by him or her and the party making the request. A copy of the document evidencing such acceptance shall be filed with the clerk of the county commission in which the property is located.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Any person who, by reason of the fact that no provision is made for partial redemption of the tax lien on real estate purchased at the public auction or at a subsequent sale, is compelled in order to protect himself or herself to redeem the tax lien on all of such real estate when it belongs, in whole or in part, to some other person, shall have a lien on the interest of such other person for the amount paid to redeem such interest. He or she shall lose his or her right to the lien, however, unless within 30 days after payment he or she shall file with the clerk of the county commission his or her claim in writing against the owner of such interest, together with the receipt provided for in this section. The clerk shall docket the claim on the judgment lien docket in his or her office and properly index the same. Such lien may be enforced as other judgment liens are enforced.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;11A-3-59. Deed to purchaser; record.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">If the real estate described in the notice is not redeemed within the time specified therein, but in no event prior to 30 days after notices to redeem have been personally served, or an attempt of personal service has been made, or such notices have been mailed or, if necessary, published in accordance with the provisions of &sect;11A-3-55 of this code, following the deputy commissioner&rsquo;s sale, the deputy commissioner shall, upon the request of the purchaser, make and deliver to the person entitled thereto a quitclaim deed for such real estate in form or effect as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">This deed, made this ______ day of _________________, 20____, by and between ___________, deputy commissioner of delinquent and nonentered lands of _____________ County, West Virginia, grantor, and __________________, purchaser (or ____________________ heir, devisee, assignee of _______________________, purchaser) grantee, witnesseth, that</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Whereas, in pursuance of the statutes in such case made and provided, ____________________, deputy commissioner of delinquent and nonentered lands of ____________________ County, did, on the _______ day of ________________, 20_____, sell the real estate hereinafter mentioned and described for the taxes delinquent thereon for the year(s) 20______, (or as nonentered land for failure of the owner thereof to have the land entered on the land books for the years ___________, or as property escheated to the State of West Virginia, or as waste or unappropriated property) for the sum of $____________________, that being the amount of purchase money paid to the deputy commissioner, and ___________ (here insert name of purchaser) did become the purchaser of such real estate, which was returned delinquent in the name of _______________ (or nonentered in the name of, or escheated from the estate of, or which was discovered as waste or unappropriated property); and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Whereas, the deputy commissioner has caused the notice to redeem to be served on all persons required by law to be served therewith; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Whereas, the real estate so purchased has not been redeemed in the manner provided by law and the time for redemption set forth in such notice has expired.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Now, therefore, the grantor for and in consideration of the premises recited herein, and pursuant to the provisions of Article 3, Chapter 11A of the West Virginia Code, doth grant unto ____________________, grantee, his or her heirs and assigns forever, the real estate so purchased, situate in the County of _____________, bounded and described as follows: _____________________________ (here insert description of property)</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Witness the following signature:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">________________________________________</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;Deputy Commissioner of Delinquent and Nonentered Lands of _______________ County</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Except when ordered as provided in &sect;11A-3-60 of this code, the deputy commissioner shall execute and deliver a deed within 120 days after the purchaser&rsquo;s right to the deed accrued.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">For the preparation and execution of the deed and for all the recording required by this section, a fee of $50 and the recording expenses shall be charged, to be paid by the grantee upon delivery of the deed. The deed, when duly acknowledged or proven, shall be recorded by the clerk of the county commission in the deed book in his or her office, together with the assignment from the purchaser, if one was made, the notice to redeem, the return of service of such notice, the affidavit of publication, if the notice was served by publication, and any return receipts for notices sent by certified mail.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Upon payment of the final costs and fees required by this article, the purchaser shall have the right to inspect and perform necessary and reasonable repairs for the preservation of the real property: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the current occupant has a duty to preserve the property to the best of his or her ability and control.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">For real estate subject to &sect;11A-3-54a of this code, the deputy commissioner shall issue a deed upon receipt from the Auditor of a written certification and recorded affidavit of compliance with &sect;11A-3-54a of this code, and upon issuance the deed shall be final except as provided in &sect;11A-4-4(h).</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 4. REMEDIES RELATING TO TAX SALES.</span></h2>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect; 11A-4-4. Right to set aside deed when one entitled to notice not notified.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) If any person entitled to be notified under the provisions of &sect;11A-3-55 of this code is not served with the notice as therein required, and does not have actual knowledge that such notice has been given to others in time to protect his or her interests by redeeming the property, he or she, his or her heirs and assigns may, before the expiration of two years following the delivery of the deed, institute a civil action to set aside the deed. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any person instituting a civil action pursuant to this section seeking to set aside a tax deed shall, as a condition precedent to the court allowing the action to proceed, tender to the clerk of the court in which the suit is pending the funds necessary to redeem the real estate. The court shall enter an order directing the clerk to accept the funds of the applicant, and deposit those funds into an account in the control of the clerk pending the conclusion of the proceeding. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) In any action brought by a tax sale purchaser or his or her grantee seeking to quiet the title pursuant to an Auditor&rsquo;s sale, the previous owner and any person entitled to notice or right to redeem shall have the right to assert as a defense to the requested remedy the existence of both a failure of notice of the right to redeem and a failure of the applicant for the deed to have exercised reasonably diligent efforts to provide notice of his or her intention to acquire title to the real estate. &nbsp;It shall be a condition precedent to raising such a defense that he or she has the funds necessary to redeem the real estate should he or she prevail. Upon application by the person instituting such suit, the court shall enter an order directing the defendant to tender funds in the sufficient amount to the clerk for deposit into an account in the clerk&rsquo;s control pending conclusion of the proceeding. Failure to tender the necessary funds within 30 days following the entry of the order requiring the deposit shall entitle the purchaser to a judgment in his or her favor.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) An answer filed by a purchaser or his or her grantee shall include the amount required for redemption, together with any taxes which have been paid on the property since delivery of the deed, with interest at the rate of 12 percent per annum. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) No title acquired pursuant to this article shall be set aside in the absence of a showing by clear and convincing evidence that the person who originally acquired such title failed to exercise reasonably diligent efforts to provide notice of his intention to acquire such title to the complaining party or his predecessors in title.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(f) Upon a preliminary finding by the court that the deed will be set aside pursuant to this section, such amounts on deposit with the clerk pursuant to this section shall be paid by the clerk to the sheriff within one month of the entry thereof and shall direct the sheriff to pay to the purchaser amounts pursuant to &sect;11A-3-58 of this code. Upon a finding by the court that the deed will not be set aside and with the entry of a judgment dismissing the action with prejudice, the clerk shall return to the plaintiff or other appropriated person whose funds previously tendered, less any accrued costs assessed against such person such funds by the court.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Subsections (a) through (f) of this section apply only to owner-occupied property as defined in &sect;11A-3-54b of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) For non-owner-occupied property subject to &sect;11A-3-54a of this code:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) An action may be brought only within one year after deed issuance and only upon proof, by clear and convincing evidence, of a constitutional failure of notice;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Technical defects or harmless errors do not constitute grounds to disturb title;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The court may not set aside the deed unless the plaintiff proves the failure of notice probably affected the outcome of the sale;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The exclusive remedy is monetary damages; title shall remain vested in the purchaser; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) No redemption, repurchase, or recovery of title is permitted.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Notwithstanding any other provision of this article, for real estate subject to &sect;11A-3-54a of this code, the remedies provided in subsection (h) of this section are the exclusive judicial remedies available after deed issuance, except to the extent constitutionally required. </span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to provide a tax sale process reform by creating two distinct legal tracks: Owner-occupied property (people actively living in the home) and Non-owner-occupied property (abandoned, rental, speculative, or non-primary residence).</span></p><p class="cs637BA255"><span class="cs7FA9C667">This distinction governs notice, redemption, and post-sale remedies.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

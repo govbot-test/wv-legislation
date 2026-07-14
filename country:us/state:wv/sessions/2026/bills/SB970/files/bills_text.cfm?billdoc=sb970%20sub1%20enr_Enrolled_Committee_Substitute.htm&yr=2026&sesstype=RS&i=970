@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 970 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Enrolled Version  - Final Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=970">&laquo; Senate Bill 970 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 970'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb970 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=970" title="HTML  - Committee Substitute (1)
+ - Senate Bill 970">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb970 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=970" title="HTML  - Introduced Version
+ - Senate Bill 970">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 970 - Exempting volunteer fire departments from raffle regulations&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb970+sub1+enr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=970"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs2CFA8611{text-align:left;text-indent:18pt;margin:0pt 36pt 0pt 36pt}
+		.cs53BAC856{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.csF24B3FE4{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.csF5AA9F8B{text-align:center;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs74A86F32{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.cs51F7D470{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs93FA44A8{text-align:right;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs49AF4BA5{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:1.9}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Enrolled</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 970</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Senators Morris and Hamilton</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Passed March 12, 2026; in effect from passage]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">&nbsp;</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">AN ACT to amend and reenact &sect;17A-6-1 and &sect;17A-6-1a of the Code of West Virginia, 1931, as amended, relating to exempting volunteer fire departments and part-time volunteer fire departments from certain regulations relating to the in-person and online raffle of vehicles; and providing that volunteer fire departments and part-volunteer fire departments with valid raffle license that raffle fewer than certain number of vehicles per month are not considered unlicensed dealers or automobile brokers.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 6. LICENSING OF DEALERS AND WRECKERS OR DISMANTLERS; SPECIAL PLATES; TEMPORARY PLATES OR MARKERS. </span></h2>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;17A-6-1. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Unless the context in which used clearly requires a different meaning, as used in this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;New motor vehicle dealer&quot; means every person (other than agents and employees, if any, while acting within the scope of their authority or employment), engaged in, or held out to the public to be engaged in, the business in this state of selling five or more new motor vehicles or new and used motor vehicles in any fiscal year of a type required to be registered under the provisions of this chapter, except, for the purposes of this article only, motorcycles.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Used motor vehicle dealer&quot; means every person (other than agents and employees, if any, while acting within the scope of their authority or employment), engaged in, or held out to the public to be engaged in, the business in this state of selling 10 or more used motor vehicles, and projecting to sell </span><a name="_Hlk127274341"><span class="csEF05ACC">10 or more used motor vehicles</span></a><span class="csEF05ACC">, in any fiscal year of a type required to be registered under the provisions of this chapter, except, for the purposes of this article only, motorcycles.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;House trailer dealer&quot; means every person (other than agents and employees, if any, while acting within the scope of their authority or employment), engaged in, or held out to the public to be engaged in, the business in this state of selling new or used house trailers, or both, or new or used, or both, house trailers and trailers or new or used, or both, manufactured homes, and mobile homes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Trailer dealer&quot; means every person (other than agents and employees, if any, while acting within the scope of their authority or employment), engaged in, or held out to the public to be engaged in, the business in this state of selling new or used trailers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Motorcycle dealer&quot; means every person (other than agents and employees, if any, while acting within the scope of their authority or employment), engaged in, or held out to the public to be engaged in, the business in this state of selling new or used motorcycles.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Used parts dealer&quot; means every person (other than agents and employees, if any, while acting within the scope of their authority or employment), engaged in, or held out to the public to be engaged in, the business in this state of selling any used appliance, accessory, member, portion, or other part of any vehicle.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Wrecker/dismantler/rebuilder&quot; means every person (other than agents and employees, if any, while acting within the scope of their authority or employment), engaged in, or held out to the public to be engaged in, the business in this state of dealing in wrecked or damaged motor vehicles or motor vehicle parts for the purpose of selling the parts thereof or scrap therefrom or who is in the business of rebuilding salvage motor vehicles for the purpose of resale to the public.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;New motor vehicles&quot; means all motor vehicles, except motorcycles and used motor vehicles, of a type required to be registered under the provisions of this chapter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;Used motor vehicles&quot; means all motor vehicles, except motorcycles, of a type required to be registered under the provisions of this chapter which have been sold and operated, or which have been registered or titled, in this or any other state or jurisdiction.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) &quot;House trailers&quot; means all trailers designed and used for human occupancy on a continual nonrecreational basis but may not include fold-down camping and travel trailers, mobile homes, or manufactured homes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) &quot;Trailers&quot; means all types of trailers other than house trailers, and shall include, but not be limited to, pole trailers and semitrailers but excluding recreational vehicles.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) &quot;Sales instrument&quot; means any document resulting from the sale of a vehicle, which shall include, but not be limited to, a bill of sale, invoice, conditional sales contract, chattel mortgage, chattel trust deed, security agreement, or similar document.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) &quot;Sell&quot;, &quot;sale&quot;, or &quot;selling&quot;, in addition to the ordinary definitions of the terms, includes offering for sale, soliciting sales of, negotiating for the sale of, displaying for sale or advertising for sale, any vehicle, whether at retail, wholesale or at auction. &quot;Selling&quot;, in addition to the ordinary definition of that term, also includes buying and exchanging.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) &quot;Applicant&quot; means any person making application for an original or renewal license certificate under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) &quot;Licensee&quot; means any person holding any license certificate issued under the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) &quot;Predecessor&quot; means the former owner or owners or operator or operators of any new motor vehicle dealer business or used motor vehicle dealer business.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) &quot;Established place of business&quot; means, in the case of a new motor vehicle dealer, a permanent location, not a temporary stand or other temporary quarters, owned or leased by the licensee or applicant and actually occupied or to be occupied by him or her, as the case may be, which is or is to be used exclusively for the purpose of selling new motor vehicles or new and used motor vehicles, which shall have space under roof for the display of at least one new motor vehicle and facilities and space therewith for the servicing and repair of at least one motor vehicle, which servicing and repair facilities and space is adequate and suitable to carry out servicing and to make repairs necessary to keep and carry out all representations, warranties, and agreements made or to be made by the dealer with respect to motor vehicles sold by him or her, which is easily accessible to the public, which conforms to all applicable laws of this state and the ordinances of the municipality in which it is located, if any, which displays thereon at least one permanent sign, clearly visible from the principal public street or highway nearest the location and clearly stating the business which is or shall be conducted thereat, and which has adequate facilities to keep, maintain and preserve records, papers and documents necessary to carry on the business and to make the business available to inspection by the commissioner at all reasonable times: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That each established place of business shall have a display area which may be outside or inside or a combination thereof of at least 1,200 square feet which is to be used exclusively for the display of vehicles which are offered for sale by the dealer, office space of at least 144 square feet and a telephone listed in the name of the dealership. Each established place of business shall be open to the public a minimum of 20 hours per week at least 40 weeks per calendar year with at least 10 of those hours being between the hours of 9:30 a.m. and 8:30 p.m., Monday through Saturday: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the requirement of exclusive use is met even though: (A) Some new and any used motor vehicles sold or to be sold by the dealer or sold or are to be sold at a different location or locations not meeting the definition of an established place of business of a new motor vehicle dealer, if each location is or is to be served by other facilities and space of the dealer for the servicing and repair of at least one motor vehicle, adequate and suitable as aforesaid, and each location used for the sale of some new and any used motor vehicles otherwise meets the definition of an established place of business of a used motor vehicle dealer; (B) house trailers, trailers, or motorcycles are sold or are to be sold thereat, if, subject to the provisions of &sect;17A-6-5 of this code, a separate license certificate is obtained for each type of vehicle business, which license certificate remains unexpired, unsuspended, and unrevoked; (C) farm machinery is sold thereat; (D) accessory, gasoline and oil, or storage departments are maintained thereat, if the departments are operated for the purpose of furthering and assisting in the licensed business or businesses; and (E) the established place of business has an attached single residential rental unit with an outside separate entrance and occupied by a person or persons with no financial or operational interest in the dealership where the established place of business has space under roof for the display of at least three new motor vehicles and facilities and space therewith for the concurrent servicing and repair of at least two motor vehicles and otherwise meets the requirements set forth in this subdivision.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) &quot;Farm machinery&quot; means all machines and tools used in the production, harvesting or care of farm products.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(19) &quot;Established place of business&quot;, in the case of a used motor vehicle dealer, means a permanent location, not a temporary stand or other temporary quarters, owned or leased by the licensee or applicant and actually occupied or to be occupied by him or her, as the case may be, which is or is to be used for the purpose of selling used motor vehicles, which shall have facilities and space therewith for the servicing and repair of at least one motor vehicle, which servicing and repair facilities and space shall be adequate and suitable to carry out servicing and to make repairs necessary to keep and carry out all representations, warranties and agreements made or to be made by the dealer with respect to used motor vehicles sold by him or her, which is easily accessible to the public, conforms to all applicable laws of this state, and the ordinances of the municipality in which it is located, if any, which displays thereon at least one permanent sign, clearly visible from the principal public street or highway nearest the location and clearly stating the business which is or shall be conducted thereat, and which has adequate facilities to keep, maintain and preserve records, papers and documents necessary to carry on the business and to make the business available to inspection by the commissioner at all reasonable times: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That if a used motor vehicle dealer has entered into a written agreement or agreements with a person or persons owning or operating a servicing and repair facility or facilities adequate and suitable as aforesaid, the effect of which agreement or agreements is to provide the servicing and repair services and space in like manner as if the servicing and repair facilities and space were located in or on the dealer&#39;s place of business, then, so long as the agreement or agreements are in effect, it is not necessary for the dealer to maintain the servicing and repair facilities and space at the place of business in order for the place of business to be an established place of business as herein defined.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(20) &quot;Established place of business&quot;, in the case of a house trailer dealer, trailer dealer, recreational vehicle dealer, motorcycle dealer, used parts dealer, and wrecker or dismantler, means a permanent location, not a temporary stand or other temporary quarters, owned or leased by the licensee or applicant and actually occupied or to be occupied by the licensee, as the case may be, which is easily accessible to the public, which conforms to all applicable laws of this state and the ordinances of the municipality in which it is located, if any, which displays thereon at least one permanent sign, clearly visible from the principal public street or highway nearest the location and clearly stating the business which is or shall be conducted thereat, and which has adequate facilities to keep, maintain and preserve records, papers and documents necessary to carry on the business and to make the business available to inspection by the commissioner at all reasonable times.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(21) &quot;Manufacturer&quot; means every person engaged in the business of reconstructing, assembling, or reassembling vehicles with a special type of body required by the purchaser if the vehicle is subject to the title and registration provisions of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(22) &quot;Transporter&quot; means every person engaged in the business of transporting vehicles to or from a manufacturing, assembling, or distributing plant to dealers or sales agents of a manufacturer, or purchasers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(23) &quot;Recreational vehicle dealer&quot; means every person (other than agents and employees, if any, while acting within the scope of their authority or employment), engaged in, or held out to the public to be engaged in, the business in this state of selling new or used recreational vehicles, or both.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(24) &quot;Motorboat&quot; means any vessel propelled by an electrical, steam, gas, diesel or other fuel-propelled or -driven motor, whether or not the motor is the principal source of propulsion, but does not include a vessel which has a valid marine document issued by the bureau of customs of the United States government or any federal agency successor thereto.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(25) &quot;Motorboat trailer&quot; means every vehicle designed for or ordinarily used for the transportation of a motorboat.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(26) &quot;All-terrain vehicle&quot; (ATV) means any motor vehicle designed for off-highway use and designed to travel on not less than three low-pressure or nonhighway tires, is 50 inches or less in width and intended by the manufacturer to be used by a single operator or is specifically designed by the manufacturer with seating for each passenger. &quot;All-terrain vehicle&quot; and ATV does not include mini trucks, golf carts, riding lawnmowers, or tractors.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(27) &quot;Travel trailer&quot; means every vehicle, mounted on wheels, designed to provide temporary living quarters for recreational, camping or travel use of such size or weight as not to require special highway movement permits when towed by a motor vehicle and of gross trailer area less than 400 square feet.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(28) &quot;Fold-down camping trailer&quot; means every vehicle consisting of a portable unit mounted on wheels and constructed with collapsible partial sidewalls which fold for towing by another vehicle and unfold at the camp site to provide temporary living quarters for recreational, camping or travel use.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(29) &quot;Motor home&quot; means every vehicle, designed to provide temporary living quarters, built into an integral part of or permanently attached to a self-propelled motor vehicle, chassis or van including: (1) Type A motor home built on an incomplete truck chassis with the truck cab constructed by the second-stage manufacturer; (2) Type B motor home consisting of a van-type vehicle which has been altered to provide temporary living quarters; and (3) Type C motor home built on an incomplete van or truck chassis with a cab constructed by the chassis manufacturer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(30) &quot;Snowmobile&quot; means a self-propelled vehicle intended for travel primarily on snow and driven by a track or tracks in contact with the snow and steered by a ski or skis in contact with the snow.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(31) &quot;Recreational vehicle&quot; means a motorboat, motorboat trailer, all-terrain vehicle, travel trailer, fold-down camping trailer, motor home, snowmobile, or utility-terrain vehicle.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(32) &quot;Major component&quot; means any one of the following subassemblies of a motor vehicle: (A) Front clip assembly consisting of fenders, grille, hood, bumper, and related parts; (B) engine; (C) transmission; (D) rear clip assembly consisting of quarter panels and floor panel assembly; or (E) two or more doors.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(33) &quot;Factory-built home&quot; includes mobile homes, house trailers, and manufactured homes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(34) &quot;Manufactured home&quot; has the same meaning as the term is defined in &sect;21-9-2 of this code which meets the National Manufactured Housing Construction and Safety Standards Act of 1974 (42 U. S. C.&sect; 5401 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">.), effective on June 15, 1976, and the federal manufactured home construction and safety standards and regulations promulgated by the Secretary of the United States Department of Housing and Urban Development.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(35) &quot;Mobile home&quot; means a transportable structure that is wholly, or in substantial part, made, fabricated, formed or assembled in manufacturing facilities for installation or assembly and installation on a building site and designed for long-term residential use and built prior to enactment of the federal Manufactured Housing Construction and Safety Standards Institute (ANSI) &mdash; A119.1 standards for mobile homes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(36) &quot;Utility terrain vehicle&quot; means any motor vehicle with four or more low-pressure or nonhighway tires designed for off-highway use and is greater than 50 inches in width. &quot;Utility terrain vehicle&quot; does not include mini trucks, golf carts, riding lawnmowers, or tractors.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Under no circumstances whatever may the terms &quot;new motor vehicle dealer&quot;, &quot;used motor vehicle dealer&quot;, &quot;house trailer dealer&quot;, &quot;trailer dealer&quot;, &quot;recreational vehicle dealer&quot;, &quot;motorcycle dealer&quot;, &quot;used parts dealer&quot;, or &quot;wrecker/dismantler/ rebuilder&quot; be construed or applied under this article in such a way as to include a banking institution, insurance company, finance company, or other lending or financial institution, or other person, the state or any agency or political subdivision thereof, or any municipality, who or which owns or comes in possession or ownership of, or acquires contract rights, or security interests in or to, any vehicle or vehicles or any part thereof and sells the vehicle or vehicles or any part thereof for purposes other than engaging in and holding out to the public to be engaged in the business of selling vehicles or any part thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) It is recognized that throughout this code the term &quot;trailer&quot; or &quot;trailers&quot; is used to include, among other types of trailers, house trailers. It is also recognized that throughout this code the term &quot;trailer&quot; or &quot;trailers&quot; is seldom used to include semitrailers or pole trailers. However, for the purposes of this article only, the term &quot;trailers&quot; has the meaning ascribed to it in subsection (a) of this section. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) For purposes of this section, volunteer fire departments and part-volunteer fire departments are hereby exempt from being considered &ldquo;automobile brokers&rdquo; or &ldquo;unlicensed dealers&rdquo;, so long as such organizations hold a valid charitable raffle license or valid online charitable raffle license and raffle no more than four vehicles per month.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;17A-6-1a. Unlawful to be an automobile broker; definition; criminal penalties.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) No person, except as provided below, shall arrange or offer to arrange for a fee, commission, or other valuable consideration, a transaction involving the sale of more than two new or used motor vehicles per calendar year. Such person shall be deemed an automobile broker: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That a licensed new or used motor vehicle dealer in the State of West Virginia or an agent or employee of such dealer; an authorized distributor or an agent or employee of such distributor; an authorized automobile auction held by a licensed auctioneer; any person who sells a motor vehicle pursuant to a pledge of security and lien as established in &sect;17A-4a-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code; and an individual or corporation, including banks and financial institutions, who is the owner of the new or used motor vehicle titled in the State of West Virginia which is the object of a sale are not automobile brokers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any person violating the provisions of this section is guilty of a misdemeanor and, upon conviction thereof, shall be fined not more than $1,000, or imprisoned in the county jail not more than 60 days, or both fined and imprisoned.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) For purposes of this section, volunteer fire departments and part-volunteer fire departments are hereby exempt from being considered &ldquo;automobile brokers&rdquo; or &ldquo;unlicensed dealers&rdquo;, so long as such organizations hold a valid charitable raffle license or valid online charitable raffle license and raffle no more than four vehicles per month.</span></p><p class="cs2CFA8611"><span class="csEF05ACC">The Clerk of the Senate and the Clerk of the House of Delegates hereby certify that the foregoing bill is correctly enrolled.</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 130.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the Senate</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">		...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 193.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the House of Delegates</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="cs93AB6E8B">				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">Originated in the Senate.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">In effect from passage.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">				...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 238.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">President of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">						...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 310.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Speaker of the House of Delegates</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="csF5AA9F8B" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">__________</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">	The within is ................................................ this the...........................................</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">Day of ..........................................................................................................., 2026.</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs93FA44A8"><span class="csEF05ACC">				.............................................................</span></p><p class="cs49AF4BA5"><span class="cs93AB6E8B">								Governor</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

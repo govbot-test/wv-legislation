@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5653 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Engrossed Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5653">&laquo; House Bill 5653 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5653'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5653 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5653" title="HTML  - Introduced Version
+ - House Bill 5653">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5653 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5653" title="HTML  - Enrolled Version  - Final Version
+ - House Bill 5653">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5653 - To confirm the confidentiality of internal audit and other manuals, training materials, guidelines, thresholds, and procedures.&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5653+eng.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5653"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">ENGROSSED</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5653</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Hall<br/>(By Request of the Department of Revenue)</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 17, 2026; referred to the Committee on Government Organization]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;11-10-5d of the Code of West Virginia, 1931, as amended, relating to tax procedure and administration; prohibiting disclosure of certain manuals, training materials, guidelines, thresholds, and procedures; and providing an effective date.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 10. Tax Procedure and Administration Act.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;11-10-5d. Confidentiality and disclosure of returns and return information.</span></h4>
+	<p class="cs63FD752D"><span class="csB9803513">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) General rule. &mdash; Except when required in an official investigation by the Tax Commissioner into the amount of tax due under any article administered under this article or in any proceeding in which the Tax Commissioner is a party before a court of competent jurisdiction to collect or ascertain the amount of such tax and except as provided in &sect;11-10-5d(d) through &sect;11-10-5d(n) of this code, it shall be unlawful for any officer, employee, or agent of this state or of any county, municipality, or governmental subdivision to divulge or make known in any manner the tax return, or any part thereof, of any person or disclose information concerning the personal affairs of any individual or the business of any single firm or corporation, or disclose the amount of income, or any particulars set forth or disclosed in any report, declaration, or return required to be filed with the Tax Commissioner by any article of this chapter imposing any tax administered under this article or by any rule of the Tax Commissioner issued thereunder, or disclosed in any audit or investigation conducted under this article. For purposes of this article, tax returns and return information obtained from the Tax Commissioner pursuant to an exchange of information agreement or otherwise pursuant to the provisions of &sect;11-10-5d(d) through &sect;11-10-5d(n) of this code which is in the possession of any officer, employee, agent, or representative of any local or municipal governmental entity or other governmental subdivision is subject to the confidentiality and disclosure restrictions set forth in this article: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That such officers, employees, or agents may disclose the information in an official investigation, by a local or municipal governmental authority or agency charged with the duty and responsibility to administer the tax laws of the jurisdiction, into the amount of tax due under any lawful local or municipal tax administered by that authority or agency, or in any proceeding in which the local or municipal governmental subdivision, authority, or agency is a party before a court of competent jurisdiction to collect or ascertain the amount of the tax. Unlawful disclosure of the information by any officer, employee, or agent of any local, municipal, or governmental subdivision is subject to the sanctions set forth in this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Definitions. &mdash; For purposes of this section:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Background file document. &mdash; The term &quot;background file document&quot;, with respect to a written determination, includes the request for that written determination, any written material submitted in support of the request and any communication (written or otherwise) between the state Tax Department and any person outside the state Tax Department in connection with the written determination received before issuance of the written determination.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Disclosure. &mdash; The term &quot;disclosure&quot; means making known to any person in any manner whatsoever a return or return information.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Inspection. &mdash; The terms &quot;inspection&quot; and &quot;inspected&quot; means any examination of a return or return information.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Return. &mdash; The term &quot;return&quot; means any tax or information return or report, declaration of estimated tax, claim, or petition for refund or credit or petition for reassessment that is required by, or provided for, or permitted under the provisions of this article (or any article of this chapter administered under this article) which is filed with the Tax Commissioner by, on behalf of, or with respect to any person and any amendment or supplement thereto, including supporting schedules, attachments, or lists which are supplemental to, or part of, the filed return.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Return information. &mdash; The term &quot;return information&quot; means:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A taxpayer&rsquo;s identity; the nature, source, or amount of his or her income, payments, receipts, deductions, exemptions, credits, assets, liabilities, net worth, tax liability, tax withheld, deficiencies, overassessments, or tax payments, whether the taxpayer&rsquo;s return was, is being, or will be examined or subject to other investigation or processing, or any other data received by, recorded by, prepared by, furnished to, or collected by the Tax Commissioner with respect to a return or with respect to the determination of the existence, or possible existence, of liability (or the amount thereof) or by any person under the provisions of this article (or any article of this chapter administered under this article) for any tax, additions to tax, penalty, interest, fine, forfeiture, or other imposition or offense; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Any part of any written determination or any background file document relating to such written determination. &quot;Return information&quot; does not include, however, data in a form which cannot be associated with or otherwise identify, directly or indirectly, a particular taxpayer. Nothing in the preceding sentence, or in any other provision of this code, shall be construed to require the disclosure of standards used or to be used for the selection of returns for examination or data used or to be used for determining such standards</span><span class="cs46AE26E6">, including, </span><a name="_Hlk209532359"><span class="cs46AE26E6">but not limited to:</span></a></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Audit manuals (for internal bench audits and external field audits), audit and examination guidelines, and audit procedures, guidelines and algorithms, including sampling methodologies used in auditing, and used in internal and external reviews and examinations of tax returns, tax records and business records, audit trigger thresholds, or assessment trigger thresholds; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Auditor and Tax Division personnel training manuals and training materials; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Scoring and risk assessment models used in audit selection; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) Audit selection criteria, fraud check materials, thresholds, procedures and methodologies;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(v) Internal policy manuals related to audit and enforcement procedures; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(vi) Data analytics models and methodologies used in compliance evaluation; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(vii) Procedural workflow documents or other nonpublic resources used by audit personnel; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(viii) Applications for licensure, licenses and other information relating to telemarketer registration</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Tax administration. &mdash; The term &quot;tax administration&quot; means:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The administration, management, conduct, direction, and supervision of the execution and application of the tax laws or related statutes of this state and the development and formulation of state and local tax policy relating to existing or proposed state and local tax laws and related statutes of this state; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Includes assessment, collection, enforcement, litigation, publication, and statistical gathering functions under the laws of this state and of local governments.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Taxpayer identity. &mdash; The term &quot;taxpayer identity&quot; means the name of a person with respect to whom a return is filed, his or her mailing address, his or her taxpayer identifying number, or a combination thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Taxpayer return information. &mdash; The term &quot;taxpayer return information&quot; means return information as defined in &sect;11-10-5d(b)(5) of this code which is filed with, or furnished to, the Tax Commissioner by or on behalf of the taxpayer to whom such return information relates.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Written determination. &mdash; The term &quot;written determination&quot; means a ruling, determination letter, technical advice memorandum, or letter or administrative decision issued by the Tax Commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Criminal penalty. &mdash; Any officer, employee, or agent (or former officer, employee, or agent) of this state or of any county, municipality, or governmental subdivision who violates this section shall be guilty of a misdemeanor and, upon conviction thereof, shall be fined not more than $1,000, or imprisoned for not more than one year, or both, together with costs of prosecution.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Disclosure to designee of taxpayer. &mdash; Any person protected by the provisions of this article may, in writing, waive the secrecy provisions of this section for any purpose and any period as he or she states in the written waiver. The Tax Commissioner may, subject to such requirements and conditions as he or she may prescribe, thereupon release to designated recipients such taxpayer&rsquo;s return or other particulars filed under the provisions of the tax articles administered under the provisions of this article, but only to the extent necessary to comply with a request for information or assistance made by the taxpayer to such other person. However, return information shall not be disclosed to such person or persons if the Tax Commissioner determines that such disclosure would seriously impair administration of this state&rsquo;s tax laws.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Disclosure of returns and return information for use in criminal investigations. &mdash;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) In general. &mdash; Except as provided in &sect;11-10-5d(e)(3) of this code, any return or return information with respect to any specified taxable period or periods shall, pursuant to and upon the grant of an ex parte order by a federal district court judge, federal magistrate, or circuit court judge of this state, under &sect;11-10-5d(e)(2) of this code, be open (but only to the extent necessary as provided in such order) to inspection by, or disclosure to, officers and employees of any federal agency, or of any agency of this state, who personally and directly engaged in:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Preparation for any judicial or administrative proceeding pertaining to the enforcement of a specifically designated state or federal criminal statute to which this state, the United States, or such agency is or may be a party;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Any investigation which may result in such a proceeding; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Any state or federal grand jury proceeding pertaining to enforcement of such a criminal statute to which this state, the United States, or such agency is or may be a party. Such inspection or disclosure shall be solely for the use of such officers and employees in such preparation, investigation, or grand jury proceeding.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Application of order. &mdash; Any United States attorney, any special prosecutor appointed under Section 593 of Title 28, United States Code, or any attorney in charge of a United States justice department criminal division organized crime strike force established pursuant to Section 510 of Title 28, United States Code, may authorize an application to a circuit court judge or magistrate, as appropriate, for the order referred to in &sect;11-10-5d(e)(1) of this code. Any prosecuting attorney of this state may authorize an application to a circuit court judge of this state for the order referred to in &sect;11-10-5d(e)(1) of this code. Upon the application, the judge or magistrate may grant such order if he or she determines on the basis of the facts submitted by the applicant that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) There is reasonable cause to believe, based upon information believed to be reliable, that a specific criminal act has been committed;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) There is reasonable cause to believe that the return or return information is or may be relevant to a matter relating to the commission of such act; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The return or return information is sought exclusively for use in a state or federal criminal investigation or proceeding concerning such act and the information sought to be disclosed cannot reasonably be obtained, under the circumstances, from another source.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The Tax Commissioner may not disclose any return or return information under &sect;11-10-5d(e)(1) of this code if he or she determines and certifies to the court that the disclosure would identify a confidential informant or seriously impair a civil or criminal tax investigation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Disclosure to person having a material interest. &mdash; The Tax Commissioner may, pursuant to legislative rules promulgated by him or her, and upon such terms as he or she may require, disclose a return or return information to a person having a material interest in the return or return information: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That such disclosure shall only be made if the Tax Commissioner determines, in his or her discretion, that the disclosure would not seriously impair administration of this state&rsquo;s tax laws.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Statistical use. &mdash; This section shall not be construed to prohibit the publication or release of statistics classified to prevent the identification of particular returns and the items thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Disclosure of amount of outstanding lien. &mdash; If notice of lien has been recorded pursuant to &sect;11-10-12 of this code, the amount of the outstanding obligation secured by such lien may be disclosed to any person who furnishes written evidence satisfactory to the Tax Commissioner that such person has a right in the property subject to the lien or intends to obtain a right in such property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Reciprocal exchange. &mdash; The Tax Commissioner may, pursuant to written agreement, permit the proper officer of the United States, or the District of Columbia, or any other state, or any political subdivision of this state, or his or her authorized representative, who is charged by law with responsibility for administration of a similar tax, to inspect reports, declarations, or returns filed with the Tax Commissioner or may furnish to such officer or representative a copy of any document, provided any other jurisdiction grants substantially similar privileges to the Tax Commissioner or to the Attorney General of this state: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That pursuant to written agreement the Tax Commissioner may provide to the assessor of any county, sheriff of any county, or the mayor of any West Virginia municipality the federal employer identification number of any business being carried on within the jurisdiction of the requesting assessor, sheriff, or mayor. The disclosure shall be only for the purpose of, and only to the extent necessary in, the administration of tax laws: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the information may not be disclosed to the extent that the Tax Commissioner determines that such disclosure would identify a confidential informant or seriously impair any civil or criminal tax investigation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) Exchange with municipalities and counties. &mdash; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The Tax Commissioner shall, upon the written request of the mayor or governing body of any West Virginia municipality, allow the duly authorized agent of the municipality to inspect and make copies of the state business and occupation tax return filed by taxpayers of the municipality and any other state tax returns (including, but not limited to, consumers sales and service tax return information and health care provider tax return information) that is reasonably requested by the municipality. Such inspection or copying shall include disclosure to the authorized agent of the municipality for tax administration purposes of all available return information from files of the tax department relating to taxpayers who transact business within the municipality. The Tax Commissioner shall be permitted to inspect or make copies of any tax return and any return information or other information related thereto in the possession of any municipality, or its employees, officers, agents, or representatives, that has been submitted to or filed with the municipality by any person for any tax including, but not limited to, the municipal business and occupation tax, public utility tax, municipal license tax, tax on purchases of intoxicating liquors, license tax on horse racing or dog racing, and municipal amusement tax.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Tax Commissioner shall, upon the written request of the county commission of a West Virginia county, allow the duly authorized agent of the county to inspect and make copies of the following records related to tax on the sale of intoxicating liquor and wine:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) All records of the Tax Commissioner, including available return information, related to the collection of tax in the county or the remittance of tax to the county pursuant to &sect;60-3-9d or &sect;60-3A-21 of this code; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) All records of the Tax Commissioner, including available return information, related to the collection of tax within the corporate limits of a municipality within the county or the remittance of tax to a municipality within the county pursuant to &sect;60-3-9d or &sect;60-3A-21 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The Tax Commissioner shall, upon the written request of the mayor or governing body of a West Virginia municipality, allow the duly authorized agent of the municipality to inspect and make copies of the following records related to tax on the sale of intoxicating liquor and wine:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) All records of the Tax Commissioner, including available return information, related to the collection of tax within the corporate limits of the municipality or the remittance of tax to the municipality pursuant to &sect;60-3-9d and &sect;60-3A-21 of this code; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) All records of the Tax Commissioner, including available return information, related to the collection of tax within the county in which the municipality is located but outside the corporate limits of another municipality pursuant to &sect;60-3-9d and &sect;60-3A-21 of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) All records of the Tax Commissioner, including available return information, related to the remittance of tax to the county in which the municipality is located pursuant to &sect;60-3-9d and &sect;60-3A-21 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) Release of administrative decisions. &mdash; The Tax Commissioner shall release to the public his or her administrative decisions, or a summary thereof: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That unless the taxpayer appeals the administrative decision to a circuit court or waives in writing his or her rights to confidentiality, any identifying characteristics or facts about the taxpayer shall be omitted or modified to an extent so as to not disclose the name or identity of the taxpayer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) Release of taxpayer information. &mdash; If the Tax Commissioner believes that enforcement of the tax laws administered under this article will be facilitated and enhanced thereby, he or she shall disclose, upon request, the names and address of persons:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Who have a current business registration certificate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Who are licensed employment agencies;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Who are licensed collection agencies;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Who are licensed to sell drug paraphernalia;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Who are distributors of gasoline or special fuel;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Who are contractors;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Who are transient vendors;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Who are authorized by law to issue a sales or use tax exemption certificate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Who are required by law to collect sales or use taxes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) Who are foreign vendors authorized to collect use tax;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Whose business registration certificate has been suspended or canceled or not renewed by the Tax Commissioner;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(L) Against whom a tax lien has been recorded under &sect;11-10-12 of this code (including any particulars stated in the recorded lien);</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(M) Against whom criminal warrants have been issued for a criminal violation of this state&rsquo;s tax laws; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(N) Who have been convicted of a criminal violation of this state&rsquo;s tax laws.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) Disclosure of return information to child support enforcement division. &mdash;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) State return information. &mdash; The Tax Commissioner may, upon written request, disclose to the child support enforcement division created by &sect;48A-2-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Available return information from the master files of the tax department relating to the Social Security account number, address, filing status, amounts, and nature of income and the number of dependents reported on any return filed by, or with respect to, any individual with respect to whom child support obligations are sought to be enforced; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Available state return information reflected on any state return filed by, or with respect to, any individual described in &sect;11-10-5d(m)(1)(A) of this code relating to the amount of the individual&rsquo;s gross income, but only if such information is not reasonably available from any other source.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Restrictions on disclosure. &mdash; The Tax Commissioner shall disclose return information under &sect;11-10-5d(m)(1) of this code only for purposes of, and to the extent necessary in, collecting child support obligations from and locating individuals owing such obligations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) Disclosure of names and addresses for purposes of jury selection. &mdash; The Tax Commissioner shall, at the written request of a circuit court or the chief judge thereof, provide to the circuit court within 30 calendar days a list of the names and addresses of individuals residing in the county or counties comprising the circuit who have filed a state personal income tax return for the preceding tax year. The list provided shall set forth names and addresses only. The request shall be limited to counties within the jurisdiction of the requesting court.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The court, upon receiving the list or lists, shall direct the jury commission of the appropriate county to merge the names and addresses with other lists used in compiling a master list of residents of the county from which prospective jurors are to be chosen. Immediately after the master list is compiled, the jury commission shall cause the list provided by the Tax Commissioner and all copies thereof to be destroyed and shall certify to the circuit court and to the Tax Commissioner that the lists have been destroyed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(o) Effective date. &mdash; The amendments to this section enacted in the year 2026 shall become effective upon passage.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

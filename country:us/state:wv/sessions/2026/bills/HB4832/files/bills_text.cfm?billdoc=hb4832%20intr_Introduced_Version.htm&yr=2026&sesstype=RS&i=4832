@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4832 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4832">&laquo; House Bill 4832 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4832'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4832 - Relating to the use of state water resources&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4832+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4832"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs60C11EA{text-align:justify;text-indent:38pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4832</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Hansen, Young, Hamilton, Williams, Garcia, Hornbuckle, Pushkin, Lewis, and Fluharty</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 26, 2026; referred to the Committee on Energy and Public Works]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;5B-2-21a, &sect;5B-2-21b, &sect;22-26-2, &sect;22-26-3 and &sect;22-26-8 of the Code of West Virginia, 1931, as amended, relating to the use of state water resources; establishing high impact data centers water use reporting requirements; designating data centers as high volume water users; providing directives for high impact data center reporting; authorizing the department to prohibit or limit water withdrawals if adverse impacts will occur to a state water resource; providing a public hearing and public comment for a high impact data center; and removing language relating to a previously repealed joint legislative commission.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5B. ECONOMIC DEVELOPMENT ACT OF 1985.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. DEPARTMENT OF ECONOMIC DEVELOPMENT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2-21a. Data Centers.</span></h4>
+	<p class="cs60C11EA"><span class="csEF05ACC">(a) Findings and purpose. &mdash; </span><a name="_Hlk193014819"><span class="csEF05ACC">The Legislature hereby finds and declares the following:</span></a></p><p class="cs60C11EA"><a name="_Hlk193014991"><span class="csEF05ACC">(1) Data centers represent a significant and growing sector of the economy, generating substantial economic activity, including jobs, infrastructure investments, and technological innovation. </span></a></p><p class="cs60C11EA"><span class="csEF05ACC">(2) Data centers are critical national infrastructure that require abundant, low-cost energy to protect sensitive data, operate high-level computation assets, and ensure the resilience of the digital economy.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(3) The People&rsquo;s Republic of China is positioning itself to be the global leader of data centers and is investing in technology to encourage the flow of data toward China instead of toward the United States.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(4) It is in the United States&rsquo; national security interests to limit the flow of data to China and to protect the flow of data and maximize computational power inside the United States. The President has declared that it is the policy of the United States &quot;to sustain and enhance America&rsquo;s global AI dominance in order to promote human flourishing, economic competitiveness and national security.&quot; Removing Barriers to American Leadership in Artificial Intelligence, Executive Order 14179 (Jan 23, 2025).</span></p><p class="cs60C11EA"><span class="csEF05ACC">(5) As of early 2025, the highest concentration of high-level computational power and data centers in the world is located in Loudoun County, Virginia. This severe concentration of data centers in one location is a national security vulnerability because it invites the potential for cyberattacks and espionage against the Nation&rsquo;s critical data infrastructure.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(6) Data centers have historically obtained their electricity from the electric grid. Some data center developers now seek or require the use of microgrids to provide their primary and backup power.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(7) West Virginia is strategically positioned as the best location in the United States to place data centers due to: (A) its close proximity to Washington, D.C., and the federal government; (B) its close proximity to the majority of the Nation&rsquo;s population; (C) its low tax rates; (D) it having the least restrictive regulatory environment in the Nation; (E) its supply of abundant energy and natural resources to power the data centers; (F) its supply of resources, such as coal mine methane blended with natural gas, to assist data centers locating in West Virginia to meet their energy needs and environmental goals; and (G) its skilled and loyal workforce that has some of the lowest turnover rates in the Nation. </span></p><p class="cs60C11EA"><a name="_Hlk193014903"><span class="csEF05ACC">As such, the state has a significant interest in encouraging the development and expansion of data centers, which can serve as drivers of broader economic growth. The Legislature finds that these externalities transcend local borders, including environmental concerns, energy consumption, and regional economic growth. &nbsp;Additionally, the provisions in this section align with the Legislature&rsquo;s goal of fostering a competitive, forward-thinking economy that benefits all residents.</span></a></p><p class="cs60C11EA"><span class="csEF05ACC">(b) Program established. &mdash; The High Impact Data Center Program is hereby created and is to be administered as a program within the Division of Economic Development to encourage the continued development, construction, operation, maintenance, and expansion in West Virginia of high impact data centers. </span><a name="_Hlk193017203"><span class="csEF05ACC">In order to effectuate the purposes of this section, the Division of Economic Development, or any agency, division, or subdivision thereof, may promulgate legislative rules, including emergency rules, in accordance with &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code.</span></a></p><p class="cs60C11EA"><span class="csEF05ACC">(c) Notification. &mdash; Any data center shall compare its current or planned operations against the definition of &quot;high impact data center&quot; established in &sect;11-6N-2 of this code and provide notification to the Division of Economic Development when the data center becomes aware that it will satisfy or has satisfied that definition </span><span class="cs46AE26E6">and has received certification from the Department of Environmental Protection, pursuant to &sect;5B-2-21b(f) of this code, that operating as a high impact data center at the proposed location will not adversely impact existing or future uses of a state water resource pursuant to &sect;5B-2-21b(f) of this code</span><span class="csEF05ACC">. The notification will include information addressing the elements of that definition, including known or expected power consumption of the data center, </span><span class="cs46AE26E6">and a water resource assessment certification from the Department of Environmental Protection</span><span class="csEF05ACC">. This notification shall be made (1) within 30 days after the data center determines that it meets these requirements, or (2) when the data center reasonably anticipates that it will, at some future date, meet these requirements, in which case the data center may provide that anticipated future date in its notification.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(d) Certification. &mdash; The Secretary of the Department of Commerce shall identify and certify high impact data centers in this state upon a finding that a data center satisfies the requirements for the definition of &quot;high impact data center&quot; set forth in &sect;11-6N-2 of this code. &nbsp;The Secretary</span><span class="cs68EFC440"> shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> issue confirmation of certification to a high impact data center within 14 days following receipt of the notification from the data center required by this section </span><span class="cs46AE26E6">and upon verification of completion of the requirements established pursuant to this section.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(e) </span><span class="cs68EFC440">Recordkeeping.</span><span class="csEF05ACC"> &nbsp;</span><span class="cs46AE26E6">Public transparency and protection of confidential information</span><span class="csEF05ACC"> &mdash; &nbsp;Any information provided by a data center pursuant to this section that is identified by the data center as confidential business information shall be exempt from the Freedom of Information Act. The Secretary shall take reasonable and appropriate steps to protect this information. </span><span class="cs68EFC440"> Notwithstanding the foregoing, the Secretary shall maintain a complete list of all certified high impact data centers and all relevant information that can be made available to the Governor and Legislature, removing specifically identifying information to ensure confidentiality of any such information as identified by any high impact data center.</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Prior to the issuance of any final agency approval, permit, or certification for a high impact data center, the Department of Commerce, the Department of Transportation, and the Department of Environmental Protection shall jointly conduct at least one public hearing in the county in which the proposed data center is to be located. The Department of Commerce shall provide public notice by publication as a Class II legal advertisement in the county where the proposed data center is to be located, and by posting notice of the hearing on a publicly accessible website maintained by the Department of Commerce. The notice shall include the date, time, and location of the hearing; a general description of the proposed project; and instructions for accessing any available project-related documents. The Department of Commerce shall maintain a publicly accessible website providing information for each proposed high impact data center. The website shall include all non-exempt documents submitted to or generated by the Department of Commerce, the Department of Transportation, and the Department of Environmental Protection relating to the proposed data center. The Department of Commerce shall provide a public comment period of not less than 30 days following the public hearing. Written public comments may be submitted at the public hearing or during the 30-day comment period electronically through the Department of Commerce website. Each department subject to this section shall consider public comments received prior to issuing any final approval, permit, or certification for the proposed high impact data center.</span></p><p class="cs60C11EA"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2-21b. Authority to assist certified microgrid district projects and certified high impact data center projects; legislative findings.</span></h4>
+	<p class="cs60C11EA"><span class="csEF05ACC">(a) Findings and purpose. &mdash; The Legislature hereby finds and declares the following:</span></p><p class="cs60C11EA"><span class="csEF05ACC">(1) The findings and purpose set forth in &sect;5B-2-21a(a) (2025), except to the extent expressly modified herein, are hereby incorporated herein by reference with the same force and effect as though fully set forth herein.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(2) It is in the best interests of the state to induce and assist in development of these projects, in order to advance the public purposes of relieving unemployment by preserving and creating jobs, and preserving and creating new and greater sources of revenue for the support of public services provided by the state and local government.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(3) It is the intent of the Legislature to occupy the whole field of the creation and regulation of certified microgrid districts and certified high impact data centers. The stated purpose of this section is to promote uniform and consistent application of the act within the state.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(b) The Department of Commerce shall assist projects developing or operating a certified microgrid district pursuant to &sect;5B-2-21 of this code or a certified high impact data center pursuant to &sect;5B-2-21a of this code. &nbsp;The Secretary of Commerce shall designate one of their personnel as &quot;Data Economy Liaison&quot; to serve as a single point-of-contact for certified microgrid districts and high impact data centers to assist coordinate and expedite their development and operation, including, but not limited to site selection and permitting. &nbsp;A &quot;certified microgrid district&quot; is a microgrid project, regardless of stage of development or operation, that has been certified by the Secretary of the Department of Commerce as set forth in &sect;5B-2-21 of this code. &nbsp;A &quot;certified high impact data center&quot; is a data center project, regardless of stage of development or operation, that has been certified by the Secretary of the Department of Commerce as set forth in &sect;5B-2-21a of this code. &nbsp;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(c) This section prohibits:</span></p><p class="cs60C11EA"><span class="csEF05ACC">(1) Counties and municipalities, whether by ordinance, resolution, administrative act, or otherwise, from enacting, adopting, implementing, or enforcing ordinances, regulations, or rules which limit, in any way, the creation of, and acquisition, construction, equipping, development, expansion, and operation of any certified microgrid district or certified high impact data center project; and</span></p><p class="cs60C11EA"><span class="csEF05ACC">(2) Counties and municipalities from imposing or enforcing local laws and ordinances concerning the creation or regulation of any certified microgrid district or certified high impact data center therein.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(d) In accordance with &sect;5B-2-21(b) and &sect;5B-2-21(c) of this code, and notwithstanding any provision of this code to the contrary, or any municipality&rsquo;s home rule powers with respect to ordinances and ordinance procedures, including any authority pursuant to the Municipal Home Rule Program under &sect;8-1-5a of this code, certified microgrid districts and </span><a name="_Hlk193016408"><span class="csEF05ACC">certified </span></a><span class="csEF05ACC">high impact data centers may not be subject to the following:</span></p><p class="cs60C11EA"><span class="csEF05ACC">(1) County or municipal zoning, horticultural, noise, viewshed, lighting, development, or land use ordinances, restrictions, limitations, or approvals;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(2) County or municipal building permitting, inspection, or code enforcement;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(3) County or municipal license requirements;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(4) The legal jurisdiction of the county or municipality in which the certified microgrid district or certified high impact data center is entirely or partially located, except as specifically provided in this article;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(5) Any requirement under state law for the consent or approval of the municipality in which a certified microgrid district or certified high impact data center is entirely or partially located of any state or county action pursuant to this code, specifically including, but not limited to, &sect;7-11B-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, for formal consent of the governing body of a municipality for county or state action regarding the establishment of tax increment financing development or redevelopment districts or the approval of tax increment financing development or redevelopment plans.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(e) Notwithstanding the creation of a certified microgrid district or a certified high impact data center, the owner, operator, or manager, as applicable, and all tenants, lessees or licensees thereof, of a certified microgrid district or a certified high impact data center shall: </span></p><p class="cs60C11EA"><span class="csEF05ACC">(1) Pay business and occupation tax, if applicable, pursuant to &sect;8-13-5 of this code, to the municipality in the same manner as any other business or commercial venture located within the municipality;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(2) Collect and remit municipal sales and service tax and municipal use tax, if applicable, pursuant to &sect;8-1-5a, &sect;8-13C-4, and &sect;8-13C-5 of this code, to the municipality in the same manner as any other business or commercial venture located within the municipality;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(3) Pay ad valorem real and personal property tax pursuant to the same millage rates as any other business or commercial venture located within the county and municipality;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(4) Pay all municipal service fees enacted pursuant to &sect;8-13-13 of this code, including, but not limited to, fire, police, sanitation, or city service fees;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(5) Pay all utility rates, fees, and charges for utilities used or consumed during construction and operation of premises within the certified microgrid district or certified high impact data center, including, but not limited to, water, sewer, stormwater, and garbage and recycling collection: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That (A) The rates, fees, and charges for such services shall be based on the cost of providing such service and the utility shall enter into a contract under the rules of the Public Service Commission for each such service with the developer and file the special contract with the Public Service Commission; and (B) the developer shall only be required to pay any capacity improvement fee or impact fee to the extent that capital additions, betterments, and improvements must be designed, acquired, constructed, and equipped by the utility to provide such service to the project; Utility customers outside of the microgrid district shall not bear any construction or operational costs associated with any new utility property built solely to provide service within a microgrid district; </span></p><p class="cs60C11EA"><span class="csEF05ACC">(6) Be entitled to municipal police protection and municipal fire protection, if available, in the same manner as any other business or commercial venture located within the municipality; and</span></p><p class="cs60C11EA"><span class="csEF05ACC">(7) Design, acquire, construct, and equip the certified microgrid district or certified data center pursuant to the State Building Code in accordance with &sect;8-12-13 of this code and the corresponding State Rule 87 CSR 4.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(f)</span><span class="cs46AE26E6"> Prior to certification of any high impact data center under &sect;5B-2-21 of this code, the owner of the proposed high impact data center shall submit to the Department of Environmental Protection an analysis of potential water quantity and water quality impacts to state water resources for the proposed high impact data center. This analysis shall include the volume of water to be withdrawn and returned per month, the groundwater or surface water resources to be utilized for proposed water withdrawals and returns, the latitude and longitude of proposed water withdrawals and returns, any designations of the groundwater or surface water resource to be utilized for withdrawals and returns under a West Virginia Pollution Control Act at &sect;22-22-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> and the West Virginia Groundwater Protection Act at &sect;22-12-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6">, and whether a West Virginia/National Pollutant Discharge Elimination System permit will be required for water returns, and if so, the expected pollutants, including heat, that will be regulated by the permit. The Department shall limit, condition or prohibit the use of a state water resource if the secretary determines that the water use is located within or will create a &quot;critical water planning area&quot; as provided in &sect;22-26-9 of this code or will adversely impact existing or future uses of a state water resource</span><span class="csEF05ACC">. The Department of Commerce, Department of Environmental Protection, and Department of Transportation may take actions necessary in support of the development of any certified microgrid district or certified data center, including, but not limited to, the development or improvement of such highways, roads, thoroughfares, and sidewalks within any county or municipality in which the certified microgrid district or certified data center is partially or entirely located. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) In order to effectuate the purposes of this section, the Department of Commerce, or any agency, division, or subdivision thereof, may promulgate legislative rules, including emergency rules, in accordance with &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code.</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 22. ENVIRONMENTAL RESOURCES.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 26. WATER RESOURCES PROTECTION ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;22-26-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">For purposes of this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Baseline average&quot; means the average amount of water withdrawn by a large-quantity user over a representative historical time period as defined by the secretary.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Beneficial use&quot; means uses that include, but are not limited to, public or private water supplies, agriculture, tourism, commercial, industrial, coal, oil and gas and other mineral extraction, preservation of fish and wildlife habitat, maintenance of waste assimilation, recreation, navigation and preservation of cultural values.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Commercial well&quot; means a well that serves small businesses and facilities in which water is the prime ingredient of the service rendered, including water wells drilled to support horizontal well operations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Community water system&quot; means a public water system that pipes water for human consumption to at least fifteen service connections used by year-round residents or one that regularly serves at least twenty-five residents.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Consumptive withdrawal&quot; means any withdrawal of water which returns less water to the water body than is withdrawn.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Department&quot; means the West Virginia Department of Environmental Protection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Farm use&quot; means irrigation of any land used for general farming, forage, aquaculture, pasture, orchards, nurseries, the provision of water supply for farm animals, poultry farming or any other activity conducted in the course of a farming operation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;Industrial well&quot; means a well used exclusively for nonpotable purposes, including industrial processing, fire protection, washing, packing or manufacturing of a product excluding food and beverages, or other nonpotable uses.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;Interbasin transfer&quot; means the permanent removal of water from the watershed from which it is withdrawn.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) &quot;Large-quantity user&quot; means any person who withdraws over three hundred thousand gallons of water in any thirty-day period from the state&#39;s waters. &nbsp;</span><span class="cs46AE26E6">A high impact data center certified pursuant to &sect;5B-2-21a of this code,</span><span class="csEF05ACC"> and any person who bottles water for resale are</span><span class="cs46AE26E6"> also </span><span class="cs46AE26E6">deemed </span><span class="cs46AE26E6">a &quot;large-quality user&quot;</span><span class="csEF05ACC"> regardless of quantity of water withdrawn. &quot;Large-quantity user&quot; excludes farm use, including watering livestock or poultry on a farm, though farms may voluntarily report water withdrawals to assist with the accuracy of the survey.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) &quot;Maximum potential&quot; means the maximum designed capacity of a facility to withdraw water under its physical and operational design.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) &quot;Noncommunity nontransient water system&quot; means a public water system that serves at least twenty-five of the same persons over six months per year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) &quot;Nonconsumptive withdrawal&quot; means any withdrawal of water which is not a consumptive withdrawal as defined in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) &quot;Person&quot;, &quot;persons&quot; or &quot;people&quot; means an individual, public and private business or industry, public or private water service and governmental entity.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) &quot;Secretary&quot; means the Secretary of the Department of Environmental Protection or his or her designee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) &quot;Transient water system&quot; means a public water system that serves at least twenty-five transient people at least sixty days a year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) &quot;Test well&quot; means a well that is used to obtain information on groundwater quantity, quality, aquifer characteristics and availability of production water supply for manufacturing, commercial and industrial facilities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) &quot;Water resources&quot;, &quot;water&quot; or &quot;waters&quot; means any and all water on or beneath the surface of the ground, whether percolating, standing, diffused or flowing, wholly or partially within this state, or bordering this state and within its jurisdiction and includes, without limiting the generality of the foregoing, natural or artificial lakes, rivers, streams, creeks, branches, brooks, ponds, impounding reservoirs, springs, wells, watercourses and wetlands: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That farm ponds, industrial settling basins and ponds and waste treatment facilities are excluded from the waters of the state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(19) &quot;Watershed&quot; means a hydrologic unit utilized by the United States Department of Interior&#39;s Geological Survey, adopted in 1974, as a framework for detailed water and related land-resources planning.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(20) &quot;Withdrawal&quot; means the removal or capture of water from water resources of the state regardless of whether it is consumptive or nonconsumptive: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That water encountered during coal, oil, gas, water well drilling and initial testing of water wells, or other mineral extraction and diverted, but not used for any purpose and not a factor in low-flow conditions for any surface water or groundwater, is not deemed a withdrawal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;22-26-3. Waters claimed by state; water resources protection survey; registration requirements; agency cooperation; information gathering.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The waters of the State of West Virginia are claimed as valuable public natural resources held by the state for the use and benefit of its citizens. The state shall manage and protect its waters effectively for present and future use and enjoyment and for the protection of the environment. Therefore, it is necessary for the state to determine the nature and extent of its water resources, the quantity of water being withdrawn or otherwise used and the nature of the withdrawals or other uses: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That no provisions of this article may be construed to amend or limit any other rights and remedies created by statute or common law in existence on the date of the enactment of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The secretary shall conduct an ongoing water resources survey of consumptive and nonconsumptive surface water and groundwater withdrawals by large-quantity users in this state. The secretary shall determine the form and format of the information submitted, including the use of electronic submissions. The secretary shall establish and maintain a statewide registration program to monitor large-quantity users of water resources.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Large-quantity users, except those who purchase water from a public or private water utility or other service that is reporting its total withdrawal, shall register with the department and provide all requested survey information regarding withdrawals of the water resources. Multiple withdrawals from state water resources that are made or controlled by a single person and used at one facility or location shall be considered a single withdrawal of water. Water withdrawals for self-supplied farm use and private households will be estimated. Water utilities regulated by the Public Service Commission pursuant to article two, chapter twenty-four of this code are exempted from providing information on interbasin transfers to the extent those transfers are necessary to provide water utility services within the state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Except as provided in subsection (f) of this section, large-quantity users who withdraw water from a West Virginia water resource shall comply with the survey and registration requirements of this article. Registration shall be maintained annually by every large-quantity user on forms and in a manner prescribed by the secretary.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The secretary shall maintain a listing of all large- quantity users and each user&#39;s baseline average water withdrawal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The secretary shall make a good faith effort to obtain survey and registration information from persons who are withdrawing water from in-state water resources, but who are located outside the state borders.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) All state agencies and local governmental entities that have a regulatory, research, planning or other function relating to water resources, including, but not limited to, the State Geological and Economic Survey, the Division of Natural Resources, the Public Service Commission, the Bureau for Public Health, the Commissioner of the Department of Agriculture, the Division of Homeland Security and Emergency Management, Marshall University, West Virginia University and regional, county and municipal planning authorities may enter into interagency agreements with the secretary and shall cooperate by: (i) Providing information relating to the water resources of the state; (ii) providing any necessary assistance to the secretary in effectuating the purposes of this article; and (iii) assisting in the development of a state water resources management plan. The secretary shall determine the form and format of the information submitted by these agencies.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Persons required to participate in the survey and registration shall provide any reasonably available information on stream flow conditions that impact withdrawal rates.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Persons required to participate in the survey and registration shall provide the most accurate information available on water withdrawal during seasonal conditions and future potential maximum withdrawals or other information that the secretary determines is necessary for the completion of the survey or registration:</span><span class="cs93AB6E8B"> Provided,</span><span class="csEF05ACC"> That a coal-fired electric generating facility shall also report the nominal design capacity of the facility, which is the quantity of water withdrawn by the facility&#39;s intake pumps necessary to operate the facility during a calendar day.*</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) The secretary shall, to the extent reliable water withdrawal data is reasonably available from sources other than persons required to provide data and participate in the survey and registration, utilize that data to fulfill the requirements of this section. If the data is not reasonably available to the secretary, persons required to participate in the survey and registration are required to provide the data. Altering locations of intakes and discharge points that result in an impact to the withdrawal of the water resources shall also be reported.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) The secretary shall report annually to the </span><span class="cs68EFC440">Joint Legislative Oversight Commission on State Water Resources</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Joint Committee on Government and Finance </span><span class="csEF05ACC">on the survey results. The secretary shall also </span><span class="cs68EFC440">make a progress report annually</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">include in the report an update </span><span class="csEF05ACC">on the implementation of the State Water Resources Management Plan and any significant changes that may have occurred since the State Water Resources Management Plan was submitted in 2013. </span><span class="cs46AE26E6">The secretary shall annually publish the report on the agency&#39;s website.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) In addition to any requirements for completion of the survey established by the secretary, the survey must accurately reflect both actual and maximum potential water withdrawal. Actual withdrawal shall be established through metering, measuring or alternative accepted scientific methods to obtain a reasonable estimate or indirect calculation of actual use.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) The secretary shall make recommendations to the </span><span class="cs68EFC440">Joint Legislative Oversight Commission on Water Resources created in section five of this article</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Joint Committee on Government and Finance </span><span class="csEF05ACC">relating to the implementation of a water quantity management strategy for the state or regions of the state where the quantity of water resources are found to be currently stressed or likely to be stressed due to emerging beneficial or other uses, ecological conditions or other factors requiring the development of a strategy for management of these water resources.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) The secretary may propose rules pursuant to article three, chapter twenty-nine-a of this code as necessary to implement the survey registration or plan requirements of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o) The secretary is authorized to enter into cooperative agreements with local, state and federal agencies and private policy or research groups to obtain federal matching funds, conduct research and analyze survey and registration data and other agreements as may be necessary to carry out his or her duties under this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) The department, the Division of Natural Resources, the Division of Highways and the Conservation Agency (cooperating state agencies) shall continue providing matching funds for the United States Geological Survey&#39;s (USGS) stream-gauging network to the maximum extent practicable. Should a cooperating state agency become unable to maintain its contribution level, it should notify the USGS and the commission of its inability to continue funding for the subsequent federal fiscal year by July 1 in order to allow for the possible identification of alternative funding resources.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;22-26-8. State Water Resources Management Plan; powers and duty of secretary.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The secretary shall oversee the development of a State Water Resources Management Plan </span><span class="cs68EFC440">to be completed no later than November 30, 2013</span><span class="csEF05ACC">. The plan shall be reviewed and revised as needed </span><span class="cs68EFC440">after its initial adoption</span><span class="csEF05ACC">. The plan shall be developed with the cooperation and involvement of local and state agencies with regulatory, research or other functions relating to water resources including, but not limited to, those agencies and institutions of higher education set forth in section three of this article and a representative of large-quantity users. The State Water Resources Management Plan shall be developed utilizing the information obtained pursuant to said section and any other relevant information available to the secretary.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The secretary shall develop definitions for use in the State Water Resources Management Plan for terms that are defined differently by various state and federal governmental entities as well as other terms necessary for implementation of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The secretary shall continue to develop and obtain the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An inventory of the surface water resources of each region of this state, including an identification of the boundaries of significant watersheds and an estimate of the safe yield of sources for consumptive and nonconsumptive uses during periods of normal conditions and drought.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A listing of each consumptive or nonconsumptive withdrawal by a large-quantity user, including the amount of water used, location of the water resources, the nature of the use, location of each intake and discharge point by longitude and latitude where available and, if the use involves more than one watershed or basin, the watersheds or basins involved and the amount transferred.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A plan for the development of the infrastructure necessary to identify the groundwater resources of each region of this state, including an identification of aquifers and groundwater basins and an assessment of their safe yield, prime recharge areas, recharge capacity, consumptive limits and relationship to stream base flows.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) After consulting with the appropriate state and federal agencies, assess and project the existing and future nonconsumptive use needs of the water resources required to serve areas with important or unique natural, scenic, environmental or recreational values of national, regional, local or statewide significance, including national and state parks; designated wild, scenic and recreational rivers; national and state wildlife refuges; and the habitats of federal and state endangered or threatened species.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Assessment and projection of existing and future consumptive use demands.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Identification of potential problems with water availability or conflicts among water uses and users including, but not limited to, the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A discussion of any area of concern regarding historical or current conditions that indicate a low-flow condition or where a drought or flood has occurred or is likely to occur that threatens the beneficial use of the surface water or groundwater in the area; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Current or potential in-stream or off-stream uses that contribute to or are likely to exacerbate natural low-flow conditions to the detriment of the water resources.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Establish criteria for designation of critical water planning areas comprising any significant hydrologic unit where existing or future demands exceed or threaten to exceed the safe yield of available water resources.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) An assessment of the current and future capabilities of public water supply agencies and private water supply companies to provide an adequate quantity and quality of water to their service areas.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) An assessment of floodplain and stormwater management problems.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Efforts to improve data collection, reporting and water monitoring where prior reports have found deficiencies.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) A process for identifying projects and practices that are being, or have been, implemented by water users that reduce the amount of consumptive use, improve efficiency in water use, provide for reuse and recycling of water, increase the supply or storage of water or preserve or increase groundwater recharge and a recommended process for providing appropriate positive recognition of those projects or practices in actions, programs, policies, projects or management activities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) An assessment of both structural and nonstructural alternatives to address identified water availability problems, adverse impacts on water uses or conflicts between water users, including potential actions to develop additional or alternative supplies, conservation measures and management techniques.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) A review and evaluation of statutes, rules, policies and institutional arrangements for the development, conservation, distribution and emergency management of water resources.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) A review and evaluation of water resources management alternatives and recommended programs, policies, institutional arrangements, projects and other provisions to meet the water resources needs of each region and of this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) Proposed methods of implementing various recommended actions, programs, policies, projects or management activities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The State Water Resources Management Plan shall consider:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The interconnections and relationships between groundwater and surface water as components of a single hydrologic resource.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Regional or watershed water resources needs, objectives and priorities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Federal, state and interstate water resource policies, plans, objectives and priorities, including those identified in statutes, rules, regulations, compacts, interstate agreements or comprehensive plans adopted by federal and state agencies and compact basin commissions.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The needs and priorities reflected in comprehensive plans and zoning ordinances adopted by a county or municipal government.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The water quantity and quality necessary to support reasonable and beneficial uses.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) A balancing and encouragement of multiple uses of water resources, recognizing that all water resources of this state are capable of serving multiple uses and human needs, including multiple uses of water resources for reasonable and beneficial uses.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The distinctions between short-term and long-term conditions, impacts, needs and solutions to ensure appropriate and cost-effective responses to water resources issues.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Application of the principle of equal and uniform treatment of all water users that are similarly situated without regard to established political boundaries.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) For any high impact data center certified pursuant to &sect;5B-2-21a of this code that has reported water consumption for the prior year, an analysis of consumptive and nonconsumptive surface water and groundwater withdrawals and returns, individually and cumulatively for all such data centers, and an analysis of any impact on water quality, including impacts on existing uses of the water resource, including public water supplies, agriculture, industrial uses, aquatic life, and downstream users.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Each November, the secretary shall report to</span><span class="cs68EFC440"> the Joint Legislative Oversight Commission on State Water Resources</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Joint Committee on Government and Finance</span><span class="csEF05ACC"> on the implementation of the State Water Resources Management Plan.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) </span><span class="cs68EFC440">The State Water Resources Management Plan is adopted</span><span class="csEF05ACC">. Persons identified as large-quantity users </span><span class="cs68EFC440">prior to the effective date of this subsection</span><span class="csEF05ACC"> shall report actual monthly water withdrawals, or monthly water withdrawals by a method approved by the secretary, for the previous calendar year by March 31 of each succeeding year. Persons identified as large-quantity users on or after the effective date of this subsection shall submit their </span><span class="cs68EFC440">initial annual report no later than March 31, 2016, and subsequent</span><span class="csEF05ACC"> annual reports by March 31 of each year thereafter.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to require that all high impact data centers report water use to the Department of Environmental Projection as part of the Water Resource Protection and Management Act&rsquo;s water use monitoring requirements, authorizes the Department of Environmental Protection to limit, condition or prohibit withdrawals by a high impact data center from a state water resource if harm to that water resource or its future or existing uses will occur; removes references to previously repealed Joint Legislative Oversight Commission on State Water Resources; and requires the Department of Environmental Protection to provide analysis of a high impact data centers on public waters of this state.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

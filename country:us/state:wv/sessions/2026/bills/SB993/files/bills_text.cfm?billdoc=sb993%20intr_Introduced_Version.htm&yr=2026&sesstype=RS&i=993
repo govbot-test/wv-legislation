@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 993 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=993">&laquo; Senate Bill 993 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 993'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 993 - Providing requirements for midwife licensure&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb993+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=993"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs7E56D39A{text-align:left;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs7E56D39A" style="tab-stops:left 66pt center 234pt;"><span class="csB0C9F1E0">		2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 993</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Woodrum</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 19, 2026; referred<br/>to the Committee on Health and Human Resources; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virgina, 1931, as amended, by adding a new article, designated &sect;30-44-1, &sect;30-44-2, &sect;30-44-3, &sect;30-44-4, &sect;30-44-5, &sect;30-44-6, &sect;30-44-7, &sect;30-44-8, &sect;30-44-9, &sect;30-44-10, &sect;30-44-11, &sect;30-44-12, &sect;30-44-13, &sect;30-44-14, and &sect;30-44-15, relating to licensing and regulation of professional midwives; defining terms; providing licensing requirements; setting license renewal and reinstatement requirements; requiring a license to contain certain information; permitting the use of certain titles; setting grounds for discipline and procedures for denying, revoking, or suspending a license; setting exceptions; creating prohibitions and penalties; permitting rulemaking; requiring certain tests, medications, and devices; setting responsibilities; providing for confidentiality; creating immunity; setting transitional provisions; and giving a client certain rights. &nbsp;</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">article 44. Professional Midwife Licensing and Regulation.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-1. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Administer&quot; means the direct provision of a prescription drug or device, whether by injection, ingestion, or any other means, to the body of a client.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Client&quot; means a person receiving midwife care and shall be considered synonymous with &quot;patient.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Collaboration&quot; means the process by which a licensed midwife and an appropriate obstetrical provider jointly manage the care of a client.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Consultation&quot; means discussing the aspects of an individual client&#39;s circumstance with other professionals for the purpose of adjusting the client&#39;s treatment plan.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;CPM&quot; means the Certified Professional Midwife credential issued by the North American Registry of Midwives (NARM).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;HIPAA&quot; means the Health Insurance Portability and Accountability Act of 1996, 42 USC 1320d </span><span class="cs1489E706">et seq.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Licensing Authority&quot; means the West Virginia Board of Registered Nurses.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;MEAC&quot; means the Midwifery Education Accreditation Council.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Midwife Care&quot; means providing primary maternity care and routine gynecologic care that is consistent with NARM essential competencies, NACPM Standards for Practice, and NACPM Scope of the CPM Credential.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;NACPM&quot; means the National Association of Certified Professional Midwives.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;NARM&quot; means the North American Registry of Midwives.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Referral&quot; means the process by which a licensed midwife arranges for an accepting obstetrical provider to assume primary responsibility for the condition requiring referral, which shall not preclude the licensed midwife from continuing in the provision of care as mutually agreed upon with the accepting provider.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Transfer&quot; means the act of transporting a client to a licensed healthcare facility providing a higher level of care.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-2. License requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Licensing Authority shall issue a license to practice midwifery to an applicant who meets the following requirements:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Is at least 18 years of age; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Has achieved a high school diploma or equivalent; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Has a current Certified Professional Midwife credential issued by NARM or a successor organization; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Has completed one of the following educational pathways: graduation from a MEAC accredited midwifery program, or completion of the portfolio evaluation process with a midwifery bridge certificate granted by NARM; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Has filed with the Licensing Authority an application as established by the Licensing Authority, demonstrating that they have met the qualifications outlined in this section, and paid an application fee, as established by the Licensing Authority, not to exceed $500; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) If the applicant has been licensed in another jurisdiction, they shall provide information on the status of each license and any disciplinary action taken or pending.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An applicant who meets the requirements of &sect;30-44-2 of this code may be issued a license to practice as a licensed midwife. The license is valid for two years from the date of initial licensure and may be renewed pursuant to &sect;30-44-3 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-3. License renewal and reinstatement.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs1489E706">License renewal.</span><span class="cs46AE26E6"> &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A license to practice as a licensed midwife may be renewed by completing the Licensure Renewal Application for a licensed midwife and paying the fee established in &sect;30-44-2 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The Licensing Authority may deny an application for renewal for any reason which would justify the denial of an original application.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The licensed midwife shall provide evidence of current certification with NARM at the time of renewal.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Renewal applicants will provide proof of participation in data submission on perinatal outcomes to a national or state midwifery data registry or professional organization, in a manner consistent with the requirements established by the Licensing Authority by rule;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Upon approval of the renewal application for a licensed midwife, the license shall be renewed for two years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs1489E706">License reinstatement.</span><span class="cs46AE26E6"> &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) If the license has lapsed, an applicant may file the application for licensure as a licensed midwife to request reinstatement and pay the fee established in &sect;30-44-2 of this code. The licensed midwife shall provide evidence of current certification with NARM at the time of application for reinstatement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A licensed midwife whose license has been suspended may apply for reinstatement upon the expiration of the suspension period by:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Submitting a reinstatement application;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Providing proof of compliance with any terms or conditions of the suspension order;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Demonstrating current certification with NARM; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Paying the reinstatement fee established by the Licensing Authority, not to exceed $500.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A licensed midwife whose license has been revoked may apply for reinstatement after a minimum of one year by:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Submitting a reinstatement application to the Licensing Authority;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Demonstrating evidence of rehabilitation, including completion of any required corrective actions specified in the revocation order;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Providing proof of current certification with NARM; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Paying the reinstatement fee established by the Licensing Authority, not to exceed $500.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The Licensing Authority may expedite reinstatement applications for suspensions or revocations if the applicant demonstrates urgency in returning to practice due to critical community needs or exceptional circumstances.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-4. Contents of license.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Each license issued by the Licensing Authority shall bear:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A serial number;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The full name of the applicant;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The date of expiration;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The date of issuance;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The title of the Licensing Authority; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The signature of an authorized representative of the Licensing Authority.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-5. Use of titles.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">An individual licensed by the Licensing Authority as a licensed midwife pursuant to the provisions of this article shall be known as a licensed midwife in the state of West Virginia, and may use the initials &quot;LM&quot; after his or her name. No other person may assume a title or use abbreviations or any other words, letters, figures, signs, or devices to indicate that the person using the same is a licensed midwife.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-6. Denial, revocation, or suspension of license; grounds for discipline.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Licensing Authority shall have the power to deny, revoke, or suspend any license to provide midwife care issued or applied for in accordance with the provisions of this article, or to otherwise discipline a licensee or applicant upon proof that he or she:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Is or was guilty of fraud or deceit in procuring or attempting to procure a license to provide midwife care; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Has been convicted of a felony; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Is unfit or incompetent by reason of negligence, habits, or other causes; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Is habitually intemperate or is addicted to the use of habit-forming drugs;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Is mentally incompetent; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Is guilty of conduct derogatory to the morals or standing of the profession; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Is calling themselves a licensed midwife without a current license; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Has willfully or repeatedly violated any of the provisions of this article; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Is providing or offering to provide services which are outside of the scope of practice as defined by NACPM.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-7. Exceptions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) This article shall not be construed to prohibit:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) An appropriate licensed health care provider or other person from providing emergency care, including care of a precipitous delivery; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any licensed midwife from delegating to personnel under his or her supervision so long as such activities or functions are nondiscretionary and do not require the exercise of professional judgment for their performance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any person performing tasks related to midwife care under the direct and immediate supervision of a licensed doctor of medicine or osteopathy, a certified nurse-midwife, or a licensed midwife during completion of NARM requirements to achieve a CPM credential.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-8. Prohibitions and penalties.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) It shall be a misdemeanor for any person to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Refer to themselves as a licensed midwife while their license issued under the provisions of this article is suspended or revoked;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Use in connection with his or her name any designation tending to imply that he or she is licensed to provide midwife care unless duly licensed to practice under the provisions of this article; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Provide midwife care with an active CPM credential without being licensed as a licensed midwife; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Otherwise violate any provisions of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Upon conviction, such misdemeanor shall be punishable by a fine of no more than $250.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-9. Regulations for providing midwife care.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Licensing Authority shall propose rules, pursuant to &sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, necessary to implement this article that: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Are consistent with NACPM standards of practice and scope of the credential;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Do not require a written agreement with another health care professional or require assessment by another health care professional as a condition of receiving midwife care services; and &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Require continuing education as determined by the licensing authority and peer review. The contents of such peer review shall be undiscoverable, however nothing in this section shall be construed to prevent medical records or other documents from discovery during the course of legal complaint.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-10. Medical tests, medications, and medical devices.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A licensed midwife may order or request medical testing, obtain, carry, and administer medications, and obtain and use medical devices within the midwife&rsquo;s scope of practice for providing midwife care.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The licensed midwife shall not obtain or use any drug, in Schedule I through V of the Drug Control Act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A licensed midwife may obtain medications and devices to treat conditions from entities including a pharmacy, or a manufacturer, medical equipment supplier, outsourcing facility, warehouser, or wholesale distributor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) An entity that provides medication to a licensed midwife in accordance with this section, and who relies in good faith upon the license information provided by the licensed midwife is not subject to liability for providing the medication.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) All medication administered must be documented in the client&#39;s medical record.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-11. Licensed Midwife responsibilities.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs1489E706">Risk assessment.</span><span class="cs46AE26E6"> &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Upon initiation of care, a licensed midwife shall review the client&#39;s medical history and identify indicators that require disclosure of risk for a planned out-of-hospital birth. If the client is under the care of a licensed healthcare professional for any chronic medical condition, the licensed midwife shall consult with an appropriate obstetrical healthcare provider as part of the risk assessment for evaluating appropriateness of birth outside of a hospital.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The licensed midwife shall offer standard tests and screenings for evaluating risks and shall document client response to such recommendations. The licensed midwife shall continually assess the pregnant woman and baby to recognize conditions that may arise during care that require disclosure of risk for birth outside of a hospital.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) If, on initial or subsequent assessment, one of the conditions listed in this section exists for the client seeking midwife care, the licensed midwife shall consult with an appropriate obstetrical provider and shall consult, collaborate, or refer as appropriate and shall document that recommendation in the client record:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Complete placenta previa;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Partial placenta previa persisting after 32 weeks;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) HIV infection;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Cardiovascular disease, including hypertension;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Severe psychiatric illness;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Pre-eclampsia or eclampsia;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) Intrauterine growth restriction;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) Known potentially serious anatomic fetal abnormalities;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) Any type of diabetes not controlled by diet and exercise;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(J) Labor prior to 37 weeks;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(K) Substance use disorder with current or recent use; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(L) Any other condition or symptom which may threaten the life of the client or fetus, as assessed by the licensed midwife exercising reasonable skill and knowledge.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) If a client with a condition listed in this section declines to accept an indicated consultation, collaboration, or referral, the licensed midwife shall document the refusal in writing. In addition, the licensed midwife shall refer the client to an appropriate provider and document the referral in writing, regardless of the client&rsquo;s refusal.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs1489E706">Transfers.</span><span class="cs46AE26E6"> &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Every licensed midwife shall have a written plan for emergency transfer, transport of an infant to a newborn nursery or neonatal intensive care nursery, or transport of an individual to an appropriate obstetrical department or patient care area. Transport via private vehicle is an acceptable method of transport if it is the most expedient method for accessing medical services.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) When the maternal or fetal health status requires transfer to a health care facility for a higher level of care, the licensed midwife shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Initiate immediate transport according to the written plan for emergency transfer;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Provide emergency stabilization until emergency medical services arrive or transfer is completed; and,</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Notify the receiving provider or hospital, if possible, of:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The reason for the transfer;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) A brief relevant clinical history; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) The expected time of arrival</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The licensed midwife may continue to provide routine or urgent care in coordination with any emergency services personnel and may address the psychosocial needs of the client during the change of birth setting;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs1489E706">Medical records.</span><span class="cs46AE26E6"> &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The licensed midwife shall maintain a complete and accurate record for each client that documents: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The client&#39;s history;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Physical examinations;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Laboratory test results;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Medications administered;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Antepartum visits;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Consultations, collaborations, and referrals;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) Labor and delivery;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) Postpartum visits; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) Neonatal evaluations.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The licensed midwife shall comply with all state and federal laws and regulations regarding the confidentiality of the client&#39;s records such as pursuant to the Health Insurance Portability and Accountability Act (HIPAA) of 1996, Pub.L. No. 104-191, 110 Stat. 1936.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) </span><span class="cs1489E706">Newborn care.</span><span class="cs46AE26E6"> &ndash; The customary scope of care of a newborn up to six weeks of age by a licensed midwife includes, but is not limited to clinical assessment, treatment, education, support, and referral.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-12. Confidentiality</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">A licensed midwife may not willfully or negligently breach the confidentiality between a licensed midwife and a client. A breach of confidentiality that is required or permitted by applicable law or beyond the control of the practitioner shall not be considered negligent or willful.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-13. Immunity.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">No person, other than the licensed midwife who provided care to the patient, shall be liable for the licensed midwife&#39;s negligent, grossly negligent, or willful and wanton acts or omissions.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-14. Transitional provisions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Any individual who, on the effective date of this article, holds a valid Certified Professional Midwife (CPM) credential issued by the North American Registry of Midwives (NARM) and who is actively engaged in the practice of midwifery in West Virginia shall be eligible for licensure under this article without meeting additional educational or clinical requirements, provided that the individual:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Submits an application for licensure to the Licensing Authority within 12 months of the effective date of this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Provides proof of current certification and good standing with NARM; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Pays the applicable application fee established by the Licensing Authority.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) After the expiration of the 12-month transition period, all applicants for licensure must meet the requirements established in &sect;30-44-2 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Licensing Authority shall issue a provisional or temporary license to qualified applicants pending final review of their complete application under timelines established by rule, provided that the applicant meets all minimum qualifications and submits proof of current NARM certification.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Nothing in this section shall be construed to limit the authority of the Licensing Authority to deny or discipline an applicant for reasons enumerated in &sect;30-44-6 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-44-15. Client rights and informed refusal.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A client under the care of a licensed midwife retains the fundamental right to make decisions regarding her pregnancy, labor, birth, and newborn care, including the right to refuse recommended tests, treatments, procedures, or hospital transfer, consistent with the provisions of &sect;16-30-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, which affirms the right of an individual to direct her own maternal health care, choose her birth setting, and decline any medical procedure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A licensed midwife shall provide full and accurate information about the benefits, risks, and alternatives associated with any recommended intervention or transfer and shall document the client&rsquo;s decision and reasoning in the client&rsquo;s medical record.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A client&rsquo;s informed refusal of a recommendation or transfer does not, by itself, constitute unprofessional conduct or negligence on the part of the licensed midwife, provided that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The licensed midwife exercised reasonable skill and judgment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The client&rsquo;s refusal was voluntary and informed; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The refusal and midwife&rsquo;s counseling were fully documented.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) If, during labor or delivery, a new or acute condition arises that places the client or fetus in immediate jeopardy, the licensed midwife shall exercise professional judgment to initiate emergency care, including activating emergency medical services, regardless of prior refusals, and shall continue providing supportive care until an appropriate provider or facility assumes responsibility.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to license and regulate the practice of midwifery in this state. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

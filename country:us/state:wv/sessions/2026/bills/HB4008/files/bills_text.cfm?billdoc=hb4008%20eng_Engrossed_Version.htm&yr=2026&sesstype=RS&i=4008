@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4008 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Engrossed Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4008">&laquo; House Bill 4008 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4008'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4008 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4008" title="HTML  - Introduced Version
+ - House Bill 4008">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4008 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4008" title="HTML  - Enrolled Version  - Final Version
+ - House Bill 4008">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4008 - Relating to Business Ready Sites Program&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4008+eng.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4008"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">ENGROSSED</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4008</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Maynor, Shamblin, Moore, Crouse, Clay, Foggin, Burkhammer, Anderson, Eldridge, Akers, and Parsons</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 14, 2026; referred to the Committee on Energy and Public Works]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;5B-2-19 of the Code of West Virginia, 1931, as amended; and to amend and reenact &sect;24-2-1n of the code; relating to the West Virginia Business Ready Sites Program.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5B. ECONOMIC DEVELOPMENT ACT OF 1985. </span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. DEPARTMENT OF ECONOMIC DEVELOPMENT.</span></h2>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2-19. Certified Sites and Development Readiness Program.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a)(1) The Certified Sites and Development Readiness Program is hereby created and is to be administered as a program within the Division of Economic Development with appropriate rules as necessary. The program shall establish evaluation criteria and site certification levels based upon developmental readiness of an applicant&rsquo;s site. In developing the program, the division shall consider utilizing all available resources and technical support, both public and private.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The division shall establish an application process and forms through which an applicant may begin to participate in the program and identify and describe potential sites for economic development and investment. The application process and forms should include site specific information such as property ownership and control, descriptions and mapping, historical and current uses, access to various forms of transportation, availability of various utility services, environmental studies, conceptual plans, marketing materials, and all other information requested by the department.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Applicants may include only state, county, municipal, or regional governmental entities such as, without limitation, economic development authorities, economic development corporations, economic development alliances, or economic development partnerships.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The division shall select applicant&rsquo;s sites to participate in the program from the application materials. The division will select sites to participate in the program, evaluate the selected sites, and certify each site based upon its readiness to be developed from the established criteria. After evaluation, the division shall provide a report to the applicant detailing the results of the site evaluation, identifying site deficiencies and strengths, and suggesting a prioritized list of site improvements which may be made to improve the site&rsquo;s readiness to develop. The division may thereafter reevaluate and recertify a site as improvements are made to a site and deficiencies cured.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The </span><a name="_Hlk189502021"><span class="csEF05ACC">division</span></a><span class="csEF05ACC"> may provide to applicants funding assistance up to a 50 percent match through a matching grant program which may be spent only for directly improving the developmental readiness of sites which have been selected to participate in the program. The division shall establish criteria and an application process for awarding matching grants to improve an applicant&rsquo;s site readiness: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That no single site may receive any amount greater than a maximum amount established by the division through this grant matching program. Applications for this grant matching program must include details which specifically identify what deficiency or deficiencies will be cured and through what means and all other information required by the division. Grant matching funds must be spent, contracted to be spent, or returned to the department within 12 months of the date of receipt of the grant matching funds. Grant matching funds shall be paid back to the division when a participating site is sold or leased for development. The division shall take prudent steps to receive a security interest in a participating site in the amount of the grant matching funds award including, but not limited to, placing of record in the county where the participating site is located, an appropriate lien against the title. All funds repaid under this section shall remain within the program for use on participating sites. The division shall monitor, and request appropriate evidence documenting the cured deficiencies and thereafter reevaluate and recertify a participating site as part of this grant matching program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6)</span><span class="cs46AE26E6">(A) </span><span class="csEF05ACC">The division may provide funding assistance to applicants through a micro grant program which may be spent only for directly improving the developmental readiness of sites which have been selected to participate in the program. The division shall establish criteria and an application process for awarding the micro grants to improve an applicant&rsquo;s site readiness. </span><span class="csB65271">Provided</span><span class="cs68EFC440">, That no single site may receive any amount greater than $75,000 through this micro grant program</span><span class="csEF05ACC"> Applications for this micro grant program must include details which specifically identify what deficiency or deficiencies will be cured and through what means and all other information required by the division. Micro grant funds must be spent, contracted to be spent, or returned to the division within 12 months of the date of receipt of the micro grant funds. All funds returned under this section shall remain within the program for use on participating sites. The division shall monitor and request appropriate evidence documenting the cured deficiency and thereafter reevaluate and recertify a participating site as part of this micro grant program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) (i) Sites that are a minimum of five acres in size may receive an amount up to $100,000 through the micro grant program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Sites that exceed 20 acres in size may receive an amount up to $250,000 through the micro grant program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Notwithstanding these limitations on acreage, sites eligible for participation in the West Virginia Business Ready Sites Program, as defined in &sect;24-2-1n of this code, are eligible for access to funds from the Certified Sites and Development Readiness Fund as established in</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;5B-2-19(b) of this code: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That the Department of Commerce must approve each such application for funding.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) (1) The </span><a name="_Hlk92282997"><span class="csEF05ACC">Certified Sites and Development Readiness Fund </span></a><span class="csEF05ACC">is hereby created. &nbsp;The fund shall be administered by the Division of Economic Development and shall consist of all moneys made available for the purposes from:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Appropriations provided by the Legislature;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Any moneys available from external sources; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) All interest and other income earned from investment of moneys in the fund.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Division of Economic Development shall use moneys in the fund to support The Certified Sites and Development Readiness Program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Any balance, including accrued interest and any other returns, in the fund at the end of each fiscal year may not expire to the General Revenue Fund but shall remain in the fund and be expended for the purposes provided by this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Fund balances may be invested under &sect;12-6C-6 of this code. Earnings on the investments shall be used solely for the purposes defined in this section.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 24. PUBLIC SERVICE COMMISSION.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. POWERS AND DUTIES OF PUBLIC SERVICE COMMISSION.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;24-2-1n. West Virginia Business Ready Sites Program.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Legislature finds and declares that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Presently, West Virginia&rsquo;s available industrial sites lack competitiveness with industrial sites in surrounding states due in part to the lack of presently constructed, adequate utility infrastructure serving sites having industrial potential;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Having construction-ready industrial sites with adequately developed utility infrastructure will increase the state&rsquo;s potential to attract new industrial projects to the state and advance the state&rsquo;s economic development efforts;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Incentivizing utilities to construct adequate public utility infrastructure and provide services to sites identified as having industrial potential will increase the likelihood that such sites are developed; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Responsibly increasing the number of industrial sites with adequate and fully developed utility services is in the public interest of the state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Definitions. &ndash; For the purpose of this section:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Industrial Development Agency&quot; means any individual, incorporated organization, foundation, association, private incorporated entity, or agency to whose members or shareholders no profit inures, which has as its primary function the promotion, encouragement, and development of industrial, commercial, manufacturing, and tourist enterprises or projects in this state;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Industrial Development Site&quot; means a land development containing a minimum of 50 contiguous acres that is identified by the secretary as having potential for industrial development and that does not currently have adequate public utility services from one or more public utilities regulated by the Public Service Commission;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Secretary&quot; means the Secretary of the Department of Commerce; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Utility&quot; means electricity, natural gas, water, or sewage service provided by a public utility regulated by the Public Service Commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The secretary shall administer a program known hereafter as &quot;The West Virginia Business Ready Sites Program&quot; for the purpose of promoting economic development in certain areas of the state by facilitating the construction of utility infrastructure necessary to increase the attractiveness of such sites for industrial development within the state. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) An industrial development agency may identify a potential industrial development site and apply to the secretary for approval of the site as an industrial development site, including recommendations as to any required criteria for utility service to the site.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Upon receipt of the application, the secretary shall determine whether the potential industrial development site has the attributes to accomplish the public purposes of this section; and, upon determining that the site has such attributes, the secretary may certify the site as an industrial development site subject to, at his or her discretion, all or some of the identified required criteria for utility service and communicate such certification to the Public Service Commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) After the Public Service Commission receives the certification described in subsection (e) of this section, public utilities that are able to meet the required criteria, if any, may file with the Public Service Commission an application for a multi-year comprehensive plan for infrastructure development to construct public utility infrastructure and provide services to industrial development sites. Subject to commission review and approval, a plan may be amended and updated by the public utility as circumstances warrant. The recovery of costs in support of the plans shall be allowed in the manner set forth in this section if the proposed plans have been found to be prudent and useful.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The application submitted to the Public Service Commission under subsection (e) of this section is in lieu of a proceeding, pursuant to &sect;24-2-11 of this code, and shall contain the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A description of the infrastructure program, in such detail as the Public Service Commission prescribes, and the projected annual amount in approximate line sizes and feet, general location, type, and projected installation timing of the facilities that the applicant proposes to replace, construct, or improve;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The projected net cost, on an annual basis, of the replacement, construction, or improvements;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The projected start date for the infrastructure program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The projected numbers of potential new customers that may be served by the infrastructure program and the projected annual demand for public utility services of the customers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The projected debt for the infrastructure program funding and the projected capital structure for infrastructure program funding;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) A proposed full and timely cost recovery mechanism consistent with this section; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Other information the applicant considers relevant, or the Public Service Commission requires.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Upon filing of the application, the applicant shall publish, in the form the Public Service Commission directs, which form shall include, but not be limited to, the anticipated rates and, if any, rate increase under the proposal, by average percentage and dollar amount for customers within a class of service, as a Class I legal advertisement in compliance with the provisions of &sect;59-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, the publication area to be each county in which service is provided by the public utility, a notice of the filing of the application, and that the commission shall hold a hearing on the application within 90 days of the notice; unless no substantial opposition to the rate change is received by the commission within one week of the proposed hearing date, in which case the hearing can be waived, and issue a final order within 150 days of the application filing date.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Upon notice and hearing, if required by the Public Service Commission, the commission shall approve the infrastructure program and allow expedited recovery of costs related to the expenditures, as provided in subsection (i) of this section, if the commission finds that the expenditures and the associated rate requirements are just, reasonable, and are not contrary to the public interest. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) Upon Public Service Commission approval, utilities will be authorized to implement the infrastructure programs and to recover related incremental costs, net of contributions to recovery of return, operation, and maintenance, depreciation and tax expenses directly attributable to the infrastructure program served by the infrastructure program investments, if any, as provided in the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An allowance for return shall be calculated by applying a rate of return to the average planned net incremental increase to rate base attributable to the infrastructure program for the coming year, considering the projected amount and timing of expenditures under the infrastructure program plus any expenditures in previous years of the infrastructure program. The rate of return shall be determined by utilizing the rate of return on equity authorized by the Public Service Commission in the public utility&rsquo;s most recent rate case proceeding or in the case of a settled rate case, a rate of return on equity as determined by the commission, and the projected cost of the public utility&rsquo;s debt during the period of the infrastructure program to determine the weighted cost of capital based upon the public utility&rsquo;s capital structure.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Income taxes applicable to the return allowed on the infrastructure program shall be calculated at the statutory tax rate for inclusion in rates.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Incremental operation and maintenance, depreciation, and property tax expenses directly attributable to the infrastructure program shall be estimated for the upcoming year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Following Public Service Commission approval of its infrastructure program, a public utility shall place into effect rates that include an increment that recovers the allowance for return, related income taxes at the statutory rate, operation and maintenance, depreciation, and property tax expenses associated with the public utility&rsquo;s estimated infrastructure program investments for the upcoming year, net of contributions to recovery of those incremental costs provided by new customers served by the infrastructure program investments, if any. In each year subsequent to the order approving the infrastructure program and the incremental cost recovery increment, the public utility shall file a petition with the Public Service Commission setting forth a new proposed incremental cost recovery increment based on investments to be made in the subsequent year, plus any under-recovery or minus any over-recovery of actual incremental costs attributable to the infrastructure program investments, for the preceding year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The facilities installed in an application approved by the Public Service Commission shall be considered used and useful as of the date of construction expenditure for rate recovery. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) The public utility may make any accounting accruals necessary to establish a regulatory asset or liability through which actual incremental costs incurred and costs recovered through the rate mechanism are tracked.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) Utilities may defer incremental operation and maintenance expenditures attributable to regulatory and compliance-related requirements introduced after the public utility&rsquo;s last rate case proceeding and not included in the public utility&rsquo;s current rates. In a future rate case, the Public Service Commission may allow recovery of the deferred costs amortized over a reasonable period of time to be determined by the commission provided the commission finds that the costs were reasonable and prudently incurred and were not reflected in rates in prior rate cases.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(m)</span><span class="cs68EFC440"> The provisions of this section are effective upon passage</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Notwithstanding any provision of this code to the contrary, sites covered by the provisions of this section are eligible for the disbursement of funds from the Certified Sites and Development Readiness Program, as delineated in &sect;5B-2-19 of this code: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That the Department of Commerce approves each such application for funding.</span><span class="cs68EFC440"> </span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

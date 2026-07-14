@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5060 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5060">&laquo; House Bill 5060 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5060'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5060 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5060" title="HTML  - Committee Substitute (1)
+ - House Bill 5060">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5060 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5060" title="HTML  - Engrossed Version
+ - House Bill 5060">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5060 - Relating to Decentralized Unincorporated Nonprofit Associations&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5060+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5060"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs7E56D39A{text-align:left;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs8ECC2603{color:#000000;background-color:transparent;font-family:'Cambria Math';font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs7E56D39A" style="tab-stops:center 234pt right 468pt;"><span class="csB0C9F1E0">	2026 </span><span class="csC2FEE544">REGULAR SESSION	</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5060</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Leavitt, J. Cannon, B. Smith, Green, Dean, and D. Cannon</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 03, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;31E-17-1701, &sect;31E-17-1702, &sect;31E-17-1703, &sect;31E-17-1704, &sect;31E-17-1705, &sect;31E-17-1706, &sect;31E-17-1707, &sect;31E-17-1708, &sect;31E-17-1709, &sect;31E-17-1710, &sect;31E-17-1711, &sect;31E-17-1712, &sect;31E-17-1713, &sect;31E-17-1714, &sect;31E-17-1715, &sect;31E-17-1716, &sect;31E-17-1717, &sect;31E-17-1718, &sect;31E-17-1719, &sect;31E-17-1720, &sect;31E-17-1721, &sect;31E-17-1722, &sect;31E-17-1723, &sect;31E-17-1724, &sect;31E-17-1725, &sect;31E-17-1726, &sect;31E-17-1727, &sect;31E-17-1728, &sect;31E-17-1729, and &sect;31E-17-1730, relating generally to the making unincorporated nonprofit associations a recognized legal entity in the state; creating the Decentralized Unincorporated Nonprofit Association Act; providing a short title; defining terms; providing for the governing law; using profits; holding certain property; providing for who is liable; creating standing; allowing appointment of service agent; setting the proper venue; addressing dissolution, member removal, member duties, member powers, and member interests; setting permissible governance processes; creating right to inspect records; outlining termination process, mergers, and conversion to another entity; and setting an effective date. &nbsp;</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">article 17. Decentralized Unincorporated Nonprofit Association Act.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1701. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This act shall be known and may be cited as the &quot;Decentralized Unincorporated Nonprofit Association Act.&quot;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1702. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Administrator&quot; means a person authorized by the members of a decentralized unincorporated nonprofit association to fulfill administrative or operational tasks at the direction of the membership.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Decentralized unincorporated nonprofit association&quot; means an unincorporated nonprofit association that meets the following requirements:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Consists of at least 100 members joined by mutual consent under an agreement, that may be in writing or inferred from conduct, for a common nonprofit purpose;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Has elected to be formed under this act; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Is not formed under any other law governing the nonprofit association&#39;s organization or operation. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Digital asset&quot; means a representation of economic, proprietary or access rights that is stored in a computer readable format and is either a digital consumer asset, digital security or virtual currency.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Distributed ledger technology&quot; means a distributed ledger protocol and supporting infrastructure, including blockchain, that uses a distributed, shared and replicated ledger, whether it be public or private, permissioned or permissionless, and that may include the use of digital assets as a medium of electronic exchange.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Established practices&quot; means the practices used by a decentralized unincorporated nonprofit association without material change during the most recent five years of the association&#39;s existence, or if the association has existed for less than five years, during the nonprofit association&#39;s entire existence.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Governing principles&quot; means all agreements and any amendment or restatement of those agreements, including any decentralized unincorporated nonprofit association agreements, consensus formation algorithms, smart contracts or enacted governance proposals, that govern the purpose or operation of a decentralized unincorporated nonprofit association and the rights and obligations of the nonprofit association&#39;s members and administrators, whether contained in a record, implied from the nonprofit association&#39;s established practices or both.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Member&quot; means a person who, under the governing principles of a decentralized unincorporated nonprofit association, may participate in the selection of the nonprofit association&#39;s administrators or the development of the policies and activities of the nonprofit association. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Membership interest&quot; means a member&#39;s voting right in a decentralized unincorporated nonprofit association determined by the nonprofit association&#39;s governing principles, including as ascertained from decentralized ledger technology on which the nonprofit association relies to determine a member&#39;s voting right.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Person&quot; means an individual, corporation, business trust, estate, trust, partnership, association, agency, joint venture, government, governmental subdivision or instrumentality or any other legal commercial entity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Record&quot; means information that is inscribed on a tangible medium or that is stored in an electronic or other medium and is retrievable in perceivable form. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Smart contract&quot; means an automated transaction, as defined in any substantially similar analogue or code, script or programming language relying on distributed ledger technology, including blockchain, which may include facilitating and instructing transfers of an asset, administrating membership interest votes with respect to a decentralized unincorporated nonprofit association or issuing executable instructions for these actions based on the occurrence or nonoccurrence of specified conditions.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;State&quot; means a state of the United States, the District of Columbia, the commonwealth of Puerto Rico or any territory or insular possession subject to the jurisdiction of the United States.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1703. Governing law; territorial application.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The law of this state governs any decentralized unincorporated nonprofit association that is formed in this state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A decentralized unincorporated nonprofit association&#39;s governing principles shall identify the jurisdiction in which the decentralized unincorporated nonprofit association is formed.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1704. Profits; prohibitions on distributions and dividends; compensation and other permitted payments.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A decentralized unincorporated nonprofit association may engage in profit</span><span class="cs8ECC2603">&#8209;</span><span class="cs46AE26E6">making activities, but profits from any activities shall be used in furtherance of, or set aside for, the nonprofit association&#39;s common nonprofit purpose.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Except as provided in subsection (c) of this section, a decentralized unincorporated nonprofit association may not make distributions to its members or administrators.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A decentralized unincorporated nonprofit association may:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Pay reasonable compensation or reimburse reasonable expenses to its members, administrators and persons outside the nonprofit association for services rendered, including with respect to the administration and operation of the nonprofit association, which may include the provisions of collateral for the self</span><span class="cs8ECC2603">&#8209;</span><span class="cs46AE26E6">insurance of the nonprofit association, voting or participation in the nonprofit association&#39;s operations and activities;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Confer benefits on its members and administrators in conformity with its common nonprofit purpose;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Repurchase membership interests to the extent authorized by the nonprofit association&#39;s governing principles; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Make distributions of property to members upon winding up and termination of the decentralized unincorporated nonprofit association to the extent permitted by &sect;31E-17-1726 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1705. Real and personal property; decentralized unincorporated nonprofit association as beneficiary, legatee, or devisee.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A decentralized unincorporated nonprofit association in its name may acquire, hold, encumber or transfer an estate or interest in real or personal property.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A decentralized unincorporated nonprofit association may be a legatee, devisee, or beneficiary of a trust or contract. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1706. Statement of authority as to real property.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A decentralized unincorporated nonprofit association shall execute and record a statement of authority to transfer an estate or interest in real property in the name of the nonprofit association.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An estate or interest in real property in the name of a decentralized unincorporated nonprofit association may be transferred by a person so authorized in a statement of authority recorded in the office of the county clerk in which a transfer of the property will be recorded. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A statement of authority shall set forth:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The name of the decentralized unincorporated nonprofit association;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The address in this state, including the street address, if any, of the nonprofit association. If the nonprofit association does not have an address in this state, the statement of authority shall include the nonprofit association&#39;s address out of state; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The name or title of the person authorized to transfer an estate or interest in real property held in the name of the nonprofit association; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The action, procedure or vote of the decentralized unincorporated nonprofit association which authorizes the person to transfer the real property of the nonprofit association and which authorizes the person to execute the statement of authority.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A statement of authority shall be executed in the same manner as a deed. The person who executes the statement of authority shall not be the named person in the statement of authority authorized to transfer the estate or interest.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The filing officer may collect a fee for recording the statement of authority in the amount authorized for recording a transfer of real property.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) An amendment, including cancellation, of a statement of authority shall meet the requirements for execution and recording of an original statement. Unless canceled earlier, a recorded statement of authority or its most recent amendment is canceled by operation of law five years after the date of the most recent recording. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) If the record title to the real property is in the name of a decentralized unincorporated nonprofit association and the statement of authority is recorded in the office of the county clerk in which a transfer of real property would be recorded, the authority of the person named in a statement of authority is conclusive in favor of a transferee who gives value without notice that the person named in the statement of authority lacks authority.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1707. Liability in tort or contract.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A decentralized unincorporated nonprofit association is a legal entity separate from its members for the purposes of determining and enforcing rights, duties and liabilities in contract and tort. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A person is not liable for a breach of a decentralized unincorporated nonprofit association&#39;s contract merely because the person is a member, administrator, authorized to participate in the management of the affairs of the nonprofit association or considered as a member by the nonprofit association.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A person is not liable for a tortious act or omission for which a decentralized unincorporated nonprofit association is liable merely because the person is a member or administrator of the nonprofit association, or is a person authorized to participate in the management of the affairs of the nonprofit association or considered as a member by the nonprofit association.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A tortious act or omission of a member, administrator or other person for which a decentralized unincorporated nonprofit association is liable is not imputed to a person merely because the person is a member or administrator of the nonprofit association, or is a person authorized to participate in the management of the affairs of the nonprofit association or considered as a member by the nonprofit association. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A member, administrator, person authorized to participate in the management of the affairs of the nonprofit association, or person considered as a member by the nonprofit association may assert a claim against the decentralized unincorporated nonprofit association. A decentralized unincorporated nonprofit association may assert a claim against a member, administrator, person authorized to participate in the management of the affairs of the nonprofit association or person considered as a member by the nonprofit association.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1708. Capacity to assert and defend; standing.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A decentralized unincorporated nonprofit association, in its name, may institute, defend, intervene or participate in a judicial, administrative or other governmental proceeding or in an arbitration, mediation or any other form of alternative dispute resolution. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A decentralized unincorporated nonprofit association may assert a claim on behalf of its members if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) One or more members of the nonprofit association have standing to assert a claim in their own right;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The interests the nonprofit association seeks to protect are germane to its purposes; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Neither the claim asserted, nor the relief requested requires the participation of a member.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1709. Effect of judgement or order.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">A judgment or order against a decentralized unincorporated nonprofit association is not by itself a judgment or order against a member or administrator of the nonprofit association.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1710. Appointment of agent to receive service of process.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A decentralized unincorporated nonprofit association may file in the Office of the Secretary of State a statement appointing an agent authorized to receive service of process.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A statement appointing an agent shall set forth:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The name of the decentralized unincorporated nonprofit association;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The address in this state, including the street address, if any, of the nonprofit association. If the nonprofit association does not have an address in this state, the statement shall include the nonprofit association&#39;s address out of state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The name of the person in this state authorized to receive service of process and the person&#39;s address, including the state address, in this state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A statement appointing an agent shall be signed and acknowledged by a person authorized to administer the affairs of the decentralized unincorporated nonprofit association. The statement shall also be signed and acknowledged by the person appointed agent, who thereby accepts the appointment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A filing officer may collect a fee of $5.00 for filing a statement appointing an agent to receive service of process, an amendment or a resignation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) An amendment to a statement appointing an agent to receive service of process shall meet the requirements for execution of an original statement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) If the Secretary of State refuses to file a statement appointing an agent, the Secretary of State shall return the statement to the decentralized unincorporated nonprofit association or its representative within 15 days after the statement was received by the Secretary of State, together with a brief, written explanation of the reason for the refusal.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1711. Summons and complaint; service on whom.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">In an action or proceeding against a decentralized unincorporated nonprofit association a summons and complaint shall be served on an agent authorized to receive service of process or a person authorized to administer the affairs of the nonprofit association. If none of them can be served, service may be made on a member of the nonprofit association.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1712. Claim not abated by change of members, administrators or persons authorized.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">A claim for relief against a decentralized unincorporated nonprofit association shall not abate merely because of a change in its members or persons authorized to administer the affairs of the nonprofit association.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1713. Venue. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) For purposes of venue, a decentralized unincorporated nonprofit association is a resident of a county in which:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The nonprofit association has an office; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The agent authorized to receive service of process under &sect;31E-17-1710 of this code resides.</span></p><h4 class="cs89687900">
+		<a name="_Hlk219975982"><span class="csF3C8A5A3">&sect;31E-17-1714</span></a><span class="csF3C8A5A3">. Perpetual existence, dissolution, continuation of existence. &nbsp;&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A decentralized unincorporated nonprofit association shall have perpetual existence unless its governing principles otherwise specify. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A decentralized unincorporated nonprofit association may be dissolved by any of the following methods:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) If the governing principles of the nonprofit association provide a time or method for dissolution, by that method;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If the governing principles of the nonprofit association do not provide a method for dissolution, by approval of its members in accordance with &sect;31E-17-1720 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) If membership in the decentralized unincorporated nonprofit association falls below 100 members and the decentralized unincorporated nonprofit association does not meet the requirements of a West Virginia unincorporated nonprofit association under this article. In the event membership in the nonprofit association falls below 100 members and the nonprofit association meets the requirements of a West Virginia unincorporated nonprofit association under this article, the entity automatically transitions to a West Virginia unincorporated nonprofit association unless the governing principles otherwise specify; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) By court order.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) After dissolution, a decentralized unincorporated nonprofit association continues in existence until its activities have been wound up and terminated pursuant to &sect;31E-17-1726 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1715. Admission, suspension, dismissal or expulsion of members.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A person becomes a member in accordance with the governing principles of the decentralized unincorporated nonprofit association. If there are no applicable governing principles, a person shall be considered a member upon purchase or assumption of ownership of a membership interest and the person shall continue as a member absent the person&#39;s suspension, dismissal or expulsion pursuant to subsection (b) of this section, resignation pursuant to &sect;31E-17-1726 of this code or the nonprofit association&#39;s dissolution and wind</span><span class="cs8ECC2603">&#8209;</span><span class="cs46AE26E6">up pursuant to &sect;31E-17-1714 to &sect;31E-17-1726 of this code. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Subject to the governing principles, a member may be suspended, dismissed or expelled from a decentralized unincorporated nonprofit association. If there are no applicable governing principles, a member may be suspended, dismissed or expelled by approval of its members in accordance with &sect;31E-17-1720 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Unless otherwise provided for in the governing principles, suspension, dismissal or expulsion of a member does not relieve the member of any obligation incurred, or commitment made by the member, before the suspension, dismissal or expulsion.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1716. Member resignation.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A member may resign as a member of a decentralized unincorporated nonprofit association in accordance with the governing principles of the nonprofit association. If there are no applicable governing principles, a member shall be deemed to have resigned as a member upon the disposal, whether voluntary or involuntary, of all membership interests or other property or instruments that confer upon the person a voting right within the nonprofit association.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Unless otherwise provided for in the governing principles, resignation of a member does not relieve the member of any obligation incurred, or commitment made by the member, before the resignation.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1717. Duties of members.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Unless otherwise provided for in the governing principles, a member shall not have any fiduciary duty to a decentralized unincorporated nonprofit association or to any other member of the nonprofit association merely by reason of being a member. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) All members shall be subject to the implied contractual covenant of good faith and fair dealing.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1718. Member has no agency powers.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A member is not an agent of a decentralized unincorporated nonprofit association merely by reason of being a member. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A person&#39;s status as a member does not prevent or restrict laws other than this act from imposing liability on a decentralized unincorporated nonprofit association because of the member&#39;s conduct.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1719. Member interests transferable.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Except as otherwise provided in the decentralized unincorporated nonprofit association&#39;s governing principles, a member interest or any right thereunder is freely transferable to another person through conveyance of the membership interest.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1720. Approval by members.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Except as otherwise provided in the governing principles, a decentralized unincorporated nonprofit association shall have the approval of the majority of membership interests participating in a vote to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Suspend, dismiss or expel a member;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Select or dismiss an administrator;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Adopt, amend, or repeal the governing principles;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Sell, lease, exchange or otherwise dispose of the decentralized unincorporated nonprofit association&#39;s property;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Dissolve the decentralized unincorporated nonprofit association under &sect;31E-17-1714 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Undertake any other act outside the ordinary course of the decentralized unincorporated nonprofit association&#39;s activities;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Determine the policy and purpose of the decentralized unincorporated nonprofit association.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A decentralized unincorporated nonprofit association shall have the approval of its members in accordance with its governing principles to perform any acts or exercise a right that the governing principles require to be approved by members.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Unless otherwise provided for in the governing principles, membership interest in a decentralized unincorporated nonprofit association shall be calculated in proportion to a member&#39;s voting rights within the nonprofit association.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1721. Utilization of distributed ledger technology. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A decentralized unincorporated nonprofit association may provide for its governance, in whole or in part, through distributed ledger technology, including smart contracts.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The governing principles for a decentralized unincorporated nonprofit association may:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Specify whether any distributed ledger technology utilized or enabled by the decentralized unincorporated nonprofit association will be fully immutable or subject to change by the nonprofit association and whether any distributed ledger will be fully or partially public or private, including the extent of a member&#39;s access to information; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Adopt voting procedures, which may include smart contracts deployed to distributed ledger technology that provide for the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Proposals from members or administrators in the decentralized unincorporated nonprofit association for upgrades, modifications or additions to software systems or protocols;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Other proposed changes to the decentralized unincorporated nonprofit association&#39;s governing principles; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Any other matters of governance or activities within the purpose of the decentralized unincorporated nonprofit association. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1722. Consensus formation algorithms and governance process.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">In accordance with its governing principles, a decentralized unincorporated nonprofit association may:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Adopt any reasonable algorithmic means for establishing consensus for the validation of records, as well as for establishing requirements, processes and procedures for conducting operations or making organizational decisions with respect to the distributed ledger technology used by the decentralized unincorporated nonprofit association; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) In accordance with any procedure specified pursuant to &sect;31E-17-1721 of this code, modify the consensus mechanism, as well as the requirements, processes and procedures or substitute a new consensus mechanism, requirements, processes or procedures that comply with this state&#39;s law and the governing principles of the nonprofit association.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1723. Selection of administrators; rights and duties of administrators.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Unless otherwise provided for in the decentralized unincorporated nonprofit association&#39;s governing principles, the members of a nonprofit association may select the nonprofit association&#39;s administrators in accordance with &sect;31E-17-1720 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If no administrators are selected, none of the members shall be considered administrators for the decentralized unincorporated nonprofit association.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) No decentralized unincorporated nonprofit association shall be required to have an administrator, and the rights and duties of all administrators shall be established as part of the authorization of authority to act as an administrator. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) If in a record, the governing principles of a decentralized unincorporated nonprofit association may limit or eliminate the liability of an administrator to the nonprofit association or its members for money damages for any action taken, or failure to take any action, as an administrator except liability for:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The amount of financial benefit improperly received by an administrator;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An intentional infliction of harm on the nonprofit association or its members;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) An intentional violation of criminal law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Breach of the duty of loyalty should one exist, unless, following full disclosure of all material facts to the nonprofit association members, the specific act or transaction that would otherwise breach the duty of loyalty is authorized or ratified by approval of the disinterested members pursuant to &sect;31E-17-1720 of this code; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Improper distributions.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1724. Right to inspect records.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Except as provided by subsection (b) of this section, on reasonable notice, a member or administrator of a decentralized unincorporated nonprofit association shall be entitled to an electronic record of any record maintained by the nonprofit association regarding the nonprofit association&#39;s activities, financial condition and other circumstances, to the extent the information is material to a member or administrator&#39;s rights and duties under the nonprofit association&#39;s governing principles or this act. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A decentralized unincorporated nonprofit association shall not be obligated to provide records requested from a member or administrator if access to the information is contained in a record available to the member or administrator on decentralized ledger technology.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A decentralized unincorporated nonprofit association may impose reasonable restrictions on access to and use of information that may be provided under this section, including by designating the information confidential and imposing nondisclosure or other safeguarding obligations on the recipient of the information. In a dispute concerning the reasonableness of a restriction under this subsection, the nonprofit association shall have the burden of proving reasonableness.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A former member or administrator may have access to information to which the former member or administrator was entitled to as a member or administrator if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The information relates to the period of time during which the former member or administrator was a member or administrator;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The former member or administrator seeks the information in good faith; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The former member or administrator satisfies the requirements of subsection (a) through (c) of this section with respect to the information. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A decentralized unincorporated nonprofit association shall not be obligated to collect and maintain a list of members or individual member information, including the names or addresses of its members.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1725. Indemnification; advancement of expenses.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Unless otherwise provided in its governing principles, a decentralized unincorporated nonprofit association may reimburse a member or administrator for authorized expenses reasonably incurred on behalf of the nonprofit association.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A decentralized unincorporated nonprofit association may indemnify a member or administrator for any debt, obligation or other liability incurred in the course of the member or administrator&#39;s activities on behalf of the nonprofit association. To be eligible for indemnification, an administrator must have complied with the duties stated in &sect;31E-17-1723 of this code. If in a record, a nonprofit association&#39;s governing principles may broaden or limit this right of indemnification.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If a person is made, or threatened to be made, a party in a proceeding based on that person&#39;s conduct in the affairs of a decentralized unincorporated nonprofit association, that person is entitled, upon written request to the nonprofit association, including through decentralized ledger technology, to receive payment of or reimbursement by the nonprofit association, of reasonable expenses, including attorney&#39;s fees and disbursements, incurred by that person in advance of the final disposition of the proceeding. To be entitled to these payments or advances the person making the request shall make a written affirmation that the person has a good faith belief that the criteria for indemnification in subsection (a) of this section have been satisfied and that the person will repay the amounts paid or reimbursed if it is determined that the criteria for reimbursement have not been satisfied. No payment or reimbursement under this subsection shall be made without prior approval, in a record, of the disinterested members under &sect;31E-17-1702 of this code. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A decentralized unincorporated nonprofit association may purchase and maintain insurance on behalf of a member or administrator for liability asserted against or incurred by the member or administrator in that capacity, whether or not the nonprofit association would have the power to indemnify or advance expenses to the member or administrator against the same liability under this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) These rights of reimbursement, indemnification and advancement of expense apply to former members or administrators for activities undertaken on behalf of the decentralized unincorporated nonprofit association while they were members or administrators.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1726. Winding up; termination.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A dissolved decentralized unincorporated nonprofit association shall wind up its operations and the nonprofit association shall continue after dissolution only for the purpose of winding up. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) In winding up a decentralized unincorporated nonprofit association, the members:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Shall discharge the nonprofit association&#39;s debts, obligations and other liabilities, settle and close the nonprofit association&#39;s business and distribute any remaining property:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) To another entity or person with similar nonprofit purposes, if required by law other than this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) In accordance with the nonprofit association&#39;s governing principles. In the absence of applicable governing principles, to the current members of the nonprofit association in proportion to their membership interests; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) If neither subdivision (A) or (B) of this paragraph applies, in accordance with the law of unclaimed property contained in &sect;36-8-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) May:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Authorize an administrator to wind up the nonprofit association in accordance with &sect;31E-17-1720 of this code. Any administrator so authorized shall owe the nonprofit association a duty of care in the conduct or winding up of the nonprofit to refrain from grossly negligent or reckless conduct, willful or intentional misconduct or a knowing violation of the law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Preserve the nonprofit association&#39;s operations and property as a going concern for a reasonable time;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Prosecute and defend actions and proceedings, whether civil, criminal or administrative;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Transfer the nonprofit association&#39;s property;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Settle disputes by mediation or arbitration;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Perform other acts necessary or appropriate to the winding up.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) If the members of a nonprofit association do not appoint an administrator or administrators to wind up the nonprofit association, the members shall owe the nonprofit association a duty of care in the conduct or winding up of the nonprofit association&#39;s operations to refrain from engaging in grossly negligent or reckless conduct, willful or intentional misconduct or a knowing violation of the law.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1727. Mergers.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) As used in this section:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Constituent organization&quot; means an organization that is merged with one or more other organizations and includes the surviving organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Charitable purpose&quot; means any purpose of an organization that has attained exemption under section 501(c)(3) of the Internal Revenue Code or any successor section, or that upon dissolution shall distribute its assets to a public benefit corporation, the United States, a state or a person that is recognized as exempt under section 501(c)(3) of the Internal Revenue Code or any successor section; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Disappearing organization&quot; means a constituent organization that is not the surviving organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Governing statute&quot; means the statute that governs an organization&#39;s internal affairs;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) &quot;Organization&quot; means a decentralized unincorporated nonprofit association, an unincorporated nonprofit association, a general partnership, including a limited liability partnership, a limited partnership, including a limited liability limited partnership, a limited liability company, a business or statutory trust, a corporation or any other legal or commercial person having a governing statute. The term includes a domestic or foreign organization regardless of whether the organization is organized for profit;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) &quot;Organizational document&quot; means the basic records that create the organization and determine its internal governance and the relations among the persons that own it, have an interest in it or are members of it; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) &quot;Surviving organization&quot; means an organization into which one or more other organizations are merged.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A decentralized unincorporated nonprofit association may merge with any organization that is not expressly prohibited by the law. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A merger involving a decentralized unincorporated nonprofit association is subject to the following requirements:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Each of the constituent merging organizations shall comply with its governing law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Each party to the merger shall approve a plan of merger in accordance with its governing principles. The plan shall be in a record and shall include the following provisions:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The name and form of each organization that is party to the merger;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The name and form of the surviving organization and, if the surviving organization is to be created by the merger, a statement to that effect;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The terms and conditions of the merger, including the manner and basis for converting the interests in each constituent organization into any combination of money, interests in the surviving organization or other considerations;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) If the surviving organization is to be created by the merger, the surviving organization&#39;s organizational documents that are proposed to be in a record; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) If the surviving organization is not to be created by the merger, any amendments to be made by the merger to the surviving organization&#39;s organizational documents that are, or are proposed to be, in a record.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The plan of merger shall be approved by the members of each decentralized unincorporated nonprofit association that is a constituent organization in the merger, subject to &sect;31E-17-1720 of this code. If a member of a nonprofit association that is party to a merger will have personal liability with respect to an obligation of a constituent or surviving organization, the consent in a record of that member to the plan of merger shall also be obtained;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Subject to the contractual rights of third parties, after a plan of merger is approved and at any time before the merger is effective, a constituent organization may amend the plan or abandon the merger as provided in the plan, or except as otherwise prohibited in the plan, with the same consent as was required to approve the plan;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Following approval of the plan, a merger under this section shall be effective if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A constituent organization is required to give notice to or obtain the approval of a governmental agency or officer in order to be a party to a merger, the notice has been given and the approval has been obtained; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The surviving organization is a decentralized unincorporated nonprofit association, as specified in the plan of merger and upon compliance by any constituent organization that is not a nonprofit association with any requirements, including any required filings in the office of the secretary of state, of the organization&#39;s governing statute; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The surviving organization is not a decentralized unincorporated nonprofit association under the state law governing the surviving organization. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) When a merger becomes effective:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The surviving organization continues or comes into existence;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Each constituent organization that merges into the surviving organization ceases to exist as a separate entity;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) All property owned by each constituent organization that ceases to exist vests in the surviving organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) All debts, obligations or other liabilities of each constituent organization that ceases to exist continue as debts, obligations or other liabilities of the surviving organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) An action or proceeding pending by or against any constituent organization that ceases to exist may be continued as if the merger had not occurred;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Except as prohibited by other law, all of the rights, privileges, immunities, powers and purposes of each constituent organization that ceases to exist vest in the surviving organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Except as otherwise provided in the plan of merger, the terms and conditions of the plan of merger take effect;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) The merger shall not affect the personal liability, if any, of a member, administrator or manager of a constituent association for a debt, liability or obligation of the nonprofit association incurred before the merger is effective; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) A surviving organization that is a foreign organization consents to the jurisdiction of the courts of this state to enforce any debt, obligation or other liability owed by a constituent organization, if before the merger the constituent organization was subject to suit in this state on the debt, obligation or other liability. A surviving organization that is a foreign organization and not authorized to transact business in this state appoints the secretary of state as agent for service of process for the purpose of enforcing a debt, obligation or other liability under this subsection. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Property held for a charitable purpose under the law of this state by a domestic or foreign organization immediately before a merger under this section becomes effective shall not, as a result of the merger, be diverted from the objects for which it was donated, granted or devised, unless, to the extent required by or pursuant to the law of this state concerning nondiversion of charitable assets, the organization obtains an appropriate order of the attorney general or of the district court in a proceeding for which the attorney general has been given notice specifying the disposition of the property. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) A bequest, devise, gift, grant or promise contained in a will or other instrument of donation, subscription or conveyance that is made to a disappearing organization and that takes effect or remains payable after the merger inures to the benefit of the surviving organization. A trust obligation that would govern property if transferred to the disappearing entity applies to property that is instead transferred to the surviving organization under this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1728. Conversion of entities.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">A decentralized unincorporated nonprofit association may effect a conversion by complying with the applicable provisions of this article and any applicable provisions of the nonprofit association&#39;s governing principles. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1729. &nbsp;Supplemental principles of law.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Principles of law and equity supplement this article unless displaced by a specific provision of this act.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;31E-17-1730. Effective Date.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">This article is effective July 1, 2026.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to make decentralized unincorporated nonprofit associations a recognized legal entity in the state and create the Decentralized Unincorporated Nonprofit Association Act.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4460 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4460">&laquo; House Bill 4460 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4460'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4460 - Relating to balancing urban and rural sewage treatment needs&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4460+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4460"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4460</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Hillenbrand, Horst, Kump, Ridenour, Rohrbach, Funkhouser, and Green.</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 16, 2026; referred to the Committee on Energy and Public Works]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;8-18-22 and &sect;16-13A-9 of the Code of West Virginia, 1931, as amended, relating to balancing urban and rural sewage treatment needs; providing exceptions to mandatory connections to public sewer systems for properties with functional onsite wastewater systems; allowing mandatory connections in densely populated areas where septic systems are impractical; providing an exemption for properties where the connection distance exceeds 200 feet; and providing financial assistance options for homeowners on fixed or limited incomes who are required to connect.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 18. ASSESSMENTS TO IMPROVE STREETS, SIDEWALKS AND SEWERS; SEWER CONNECTIONS AND BOARD OF HEALTH; ENFORCEMENT OF DUTY TO PAY FOR SERVICE.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;8-18-22. Connection to sewers; board of health; penalty.</span></h4>
+	<p class="cs53FB8D75"><span class="cs68EFC440">Regardless of whether a lot or parcel is within any municipality&rsquo;s geographical limits, the owner or owners of any lot or parcel of land abutting on any street, alley, public way or easement on which a municipal sewer is now located or may hereafter be constructed and laid (whether constructed and laid under the provisions of this article or any other provisions of law) upon which lot or parcel of land any business or residence building is now located or may hereafter be erected, not connected with a public sewer, may be required and compelled by the municipality or by the board of health to connect any such building with such sewer. Notice so to connect shall be given by the municipality or by the board of health to the owner and to the lessee or occupant of such building. The owner or owners shall connect to the municipal sewer within thirty days after notice to connect has been sent by the municipality. Regardless of whether the owner or owners connect to such sewer, the municipality may bill the owner or owners of the lot or parcel and the owner or owners shall pay the municipality&rsquo;s charge based on the actual water consumption on the lot or parcel. If the lot or parcel is not metered, the municipality&rsquo;s charge shall be based on the municipality&rsquo;s good faith estimate of the consumption on the lot or parcel</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The municipality or board of health may require connection to a municipal sewer if the Bureau for Public Health determines that the sewer facilities are available and adequate to serve the property. However, no owner, tenant, or occupant shall be compelled to connect to the sewer facilities and cease use of an existing onsite wastewater system if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The existing onsite wastewater system is properly permitted, maintained, and functioning, as certified by an inspection conducted by the Bureau for Public Health or a licensed professional engineer within the past 12 months using standards and protocols established by the National Association of Wastewater Technicians (NAWT);</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The property is not located in a densely populated area where onsite systems with leach fields are impractical due to population density, soil conditions, or other factors as determined by the Bureau for Public Health. For purposes of this section, &quot;densely populated area&quot; means an area within municipal boundaries or where the population density exceeds 500 persons per square mile; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The distance from the building to the nearest municipal sewer line exceeds 200 feet, </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That in densely populated areas or where the existing onsite system is failing or poses a significant public health risk, as determined by the Bureau for Public Health, the municipality or board of health may require connection. If a connection is required, the municipality shall provide notice and an opportunity for the owner to appeal the determination to the circuit court.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If the municipality requires the property owner to connect with the sewer facilities even when sewage from dwellings may not flow to the main line by gravity and the property owner incurs costs for any changes in the existing dwellings&rsquo; exterior plumbing in order to connect to the main sewer line, the municipality shall authorize payment of all reasonable costs for the changes in the exterior plumbing, including, but not limited to, installation, operation, maintenance, and purchase of a pump or any other method approved by the Bureau for Public Health. Additionally,</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">if the property owner qualifies as low-income (as defined by eligibility for federal low-income home energy assistance programs or similar criteria established by the Public Service Commission), the municipality shall offer payment plans, subsidies, or waivers for connection fees and costs to the extent feasible and funded. Maintenance and operation costs for the extra installation should be reflected in the users charge for approval of the Public Service Commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Notice so to connect shall be given by the municipality or by the board of health to the owner and to the lessee or occupant of such building. The owner or owners refusing or failing to make such connection, after 90 days from the date of service of such notice upon him or her, shall be guilty of a misdemeanor, and shall, upon conviction thereof, be fined not exceeding $25. A like notice may be given and like penalty imposed for each period of 90 days during which such failure, refusal or neglect is continued.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 13A. PUBLIC SERVICE DISTRICTS.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;16-13A-9. Rules; service rates and charges; discontinuance of service; required water and sewer connections; lien for delinquent fees.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a)(1) The board may make, enact, and enforce all needful rules in connection with the acquisition, construction, improvement, extension, management, maintenance, operation, care, protection, and the use of any public service properties owned or controlled by the district. The board shall establish, in accordance with this article, rates, fees, and charges for the services and facilities it furnishes, which shall be sufficient at all times, notwithstanding the provisions of any other law or laws, to pay the cost of maintenance, operation, and depreciation of the public service properties and principal of and interest on all bonds issued, other obligations incurred under the provisions of this article, and all reserve or other payments provided for in the proceedings which authorized the issuance of any bonds under this article. The schedule of the rates, fees, and charges may be based upon:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The consumption of water or gas on premises connected with the facilities, taking into consideration domestic, commercial, industrial, and public use of water and gas;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The number and kind of fixtures connected with the facilities located on the various premises;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The number of persons served by the facilities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Any combination of paragraphs (A), (B), and (C) of this subdivision; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Any other basis or classification which the board may determine to be fair and reasonable, taking into consideration the location of the premises served and the nature and extent of the services and facilities furnished. However, no rates, fees, or charges for stormwater services may be assessed against highways, road, and drainage easements or stormwater facilities constructed, owned, or operated by the West Virginia Division of Highways.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The board of a public service district with at least 4,500 customers and annual combined gross revenue of $3 million providing water or sewer service separately or in combination may make, enact, and enforce all needful rules in connection with the enactment or amendment of rates, fees, and charges of the district. At a minimum, these rules shall provide for:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Adequate prior public notice of the contemplated rates, fees, and charges by causing a notice of intent to effect such a change to be provided to the customers of the district for the month immediately preceding the month in which the contemplated change is to be considered at a hearing by the board. The notice shall include a statement that a change in rates, fees, and charges is being considered, the time, date, and location of the hearing of the board at which the change will be considered, and that the proposed rates, fees, and charges are on file at the office of the district for review during regular business hours. The notice shall be printed on, or mailed with, the monthly billing statement, or provided in a separate mailing. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Adequate prior public notice of the contemplated rates, fees, and charges by causing to be published, after the first reading and approval of a resolution of the board considering the revised rates, fees, and charges but not less than one week prior to the public hearing of the board on the resolution, as a Class I legal advertisement, of the proposed action, in compliance with the provisions of &sect;59-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. The publication area for publication shall be all territory served by the district. If the district provides service in more than one county, publication shall be made in a newspaper of general circulation in each county that the district provides service.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The public notice of the proposed action shall summarize the current rates, fees, and charges and the proposed changes to said rates, fees, and charges; the date, time, and place of the public hearing on the resolution approving the revised rates, fees, and charges, and the place or places within the district where the proposed resolution approving the revised rates, fees, and charges may be inspected by the public. A reasonable number of copies of the proposed resolution shall be kept at the place or places and be made available for public inspection. The notice shall also advise that interested parties may appear at the public hearing before the board and be heard with respect to the proposed revised rates, fees, and charges.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) The resolution proposing the revised rates, fees, and charges shall be read at two meetings of the board with at least two weeks intervening between each meeting. The public hearing may be conducted by the board prior to, or at, the meeting at which the resolution is considered for adoption on the second reading.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Rates, fees, and charges approved by resolution of the board shall be forwarded in writing to the county commission with the authority to appoint the members of the board. The county commission shall publish notice of the proposed revised rates, fees, and charges by a Class I legal advertisement in compliance with the provisions of &sect;59-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. Within 45 days of receipt of the proposed rates, fees, and charges, the county commission shall take action to approve, modify, or reject the proposed rates, fees, and charges, in its sole discretion. If, after 45 days, the county commission has not taken final action to approve, modify, or reject the proposed rates, fees, and charges, as presented to the county commission, the proposed rates, fees, and charges shall be effective with no further action by the board or county commission. In any event, this 45-day period shall be mandatory unless extended by the official action of both the board proposing the rates, fees, and charges, and the appointing county commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Enactment of the proposed or modified rates, fees, and charges shall follow an affirmative vote by the county commission and shall be effective no sooner than 45 days following action. The 45-day waiting period may be waived by public vote of the county commission only if the commission finds and declares the district to be in financial distress such that the 45-day waiting period would be detrimental to the ability of the district to deliver continued and compliant public services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) The public service district, or a customer aggrieved by the changed rates or charges who presents to the circuit court a petition signed by at least 750 customers or 25 percent of the customers served by the public service district, whichever is fewer, when dissatisfied by the approval, modification, or rejection by the county commission of the proposed rates, fees, and charges under the provisions of this subdivision may file a complaint regarding the rates, fees, and charges resulting from the action of, or failure to act by, the county commission in the circuit court of the county in which the county commission sits: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That any complaint or petition filed hereunder shall be filed within 30 days of the county commission&rsquo;s final action approving, modifying, or rejecting the rates, fees, and charges, or the expiration of the 45-day period from the receipt by the county commission, in writing, of the rates, fees, and charges approved by resolution of the board, without final action by the county commission to approve, modify, or reject the rates, fees, and charges, and the circuit court shall resolve the complaint: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the rates, fees, and charges so fixed by the county commission, or those adopted by the district upon which the county commission failed to act, shall remain in full force and effect, until set aside, altered, or amended by the circuit court in an order to be followed in the future.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Where water, sewer, stormwater, or gas services, or any combination thereof, are all furnished to any premises, the schedule of charges may be billed as a single amount for the aggregate of the charges. The board shall require all users of services and facilities furnished by the district to designate on every application for service whether the applicant is a tenant or an owner of the premises to be served. If the applicant is a tenant, he or she shall state the name and address of the owner or owners of the premises to be served by the district. Notwithstanding the provisions of &sect;24-3-8 of this code to the contrary, all new applicants for service shall deposit the greater of a sum equal to two twelfths of the average annual usage of the applicant&rsquo;s specific customer class or $50 with the district to secure the payment of service rates, fees, and charges in the event they become delinquent as provided in this section. If a district provides both water and sewer service, all new applicants for service shall deposit the greater of a sum equal to two twelfths of the average annual usage for water service or $50 and the greater of a sum equal to two twelfths of the average annual usage for wastewater service of the applicant&rsquo;s specific customer class or $50. In any case where a deposit is forfeited to pay service rates, fees, and charges which were delinquent at the time of disconnection or termination of service, no reconnection or reinstatement of service may be made by the district until another deposit equal to the greater of a sum equal to two twelfths of the average usage for the applicant&rsquo;s specific customer class or $50 has been remitted to the district. After 12 months of prompt payment history, the district shall return the deposit to the customer or credit the customer&rsquo;s account at a rate as the Public Service Commission may prescribe: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That where the customer is a tenant, the district is not required to return the deposit until the time the tenant discontinues service with the district. Whenever any rates, fees, rentals, or charges for services or facilities furnished remain unpaid for a period of 20 days after the same become due and payable, the user of the services and facilities provided is delinquent and the user is liable at law until all rates, fees, and charges are fully paid. The board may, under reasonable rules promulgated by the Public Service Commission, shut off and discontinue water or gas services to all delinquent users of either water or gas facilities, or both, 10 days after the water or gas services become delinquent: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That nothing contained within the rules of the Public Service Commission may be considered to require any agents or employees of the board to accept payment at the customer&rsquo;s premises in lieu of discontinuing service for a delinquent bill: </span><span class="cs93AB6E8B">Provided further</span><span class="csEF05ACC">, That  the water service for a user may not be shut off or discontinued for the nonpayment of a stormwater fee except as provided in subsections (i) and (j) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) If any publicly or privately owned utility, city, incorporated town, other municipal corporation or other public service district included within the district owns and operates separate water facilities, sewer facilities, or stormwater facilities, and the district owns and operates another kind of facility, either water or sewer, or both, as the case may be, then the district and the publicly or privately owned utility, city, incorporated town or other municipal corporation, or other public service district shall covenant and contract with each other to shut off and discontinue the supplying of water service for the nonpayment of sewer service fees and charges: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That any contracts entered into by a public service district pursuant to this section shall be submitted to the Public Service Commission for approval. Any public service district which provides water and sewer service, water and stormwater service or water, sewer, and stormwater service has the right to terminate water service for delinquency in payment of water or sewer bills. Where one public service district is providing sewer service and another public service district or a municipality included within the boundaries of the sewer or stormwater district is providing water service and the district providing sewer or stormwater service experiences a delinquency in payment, the district or the municipality included within the boundaries of the sewer or stormwater district that is providing water service, upon the request of the district providing sewer or stormwater service to the delinquent account, shall terminate its water service to the customer having the delinquent sewer account: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That any termination of water service must comply with all rules and orders of the Public Service Commission: </span><span class="cs93AB6E8B">Provided further</span><span class="csEF05ACC">, That nothing contained within the rules of the Public Service Commission shall be deemed to require any agents or employees of the public service districts to accept payment at the customer&rsquo;s premises in lieu of discontinuing service for a delinquent bill: </span><span class="cs93AB6E8B">And provided further</span><span class="csEF05ACC">, That the water service for a user may not be shut off or discontinued for the nonpayment of a stormwater fee except as provided in subsections (i) and (j) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) </span><span class="cs68EFC440">Any district furnishing sewer facilities within the district may require or may, by petition to the circuit court of the county in which the property is located, compel or may require the Bureau for Public Health to compel all owners, tenants, or occupants of any houses, dwellings, and buildings located near any sewer facilities where sewage will flow by gravity or be transported by other methods approved by the Bureau for Public Health, including, but not limited to, vacuum and pressure systems, approved under the provisions of &sect;16-1-9 of this code, from the houses, dwellings, or buildings into the sewer facilities, to connect with and use the sewer facilities and to cease the use of all other means for the collection, treatment, and disposal of sewage and waste matters from the houses, dwellings, and buildings where there is gravity flow or transportation by any other methods approved by the Bureau for Public Health, including, but not limited to, vacuum and pressure systems, approved under the provisions of &sect;16-1-9 of this code and the houses, dwellings, and buildings can be adequately served by the sewer facilities of the district and it is declared that the mandatory use of the sewer facilities provided for in this subsection is necessary and essential for the health and welfare of the inhabitants and residents of the districts and of the state</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">The board may only require connection to sewer facilities if the Bureau for Public Health determines that the sewer facilities are available and adequate to serve the property as set forth in &sect;8-18-22 of this code. However, no owner, tenant, or occupant shall be compelled to connect to the sewer facilities and cease use of an existing onsite wastewater system if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The existing onsite wastewater system is properly permitted, maintained, and functioning, as certified by an inspection conducted by the Bureau for Public Health or a licensed professional engineer within the past 12 months using standards and protocols established by the National Association of Wastewater Technicians (NAWT);</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The property is not located in a densely populated area where onsite systems with leach fields are impractical due to population density, soil conditions, or other factors as determined by the Bureau for Public Health. For purposes of this section, &quot;densely populated area&quot; means an area within municipal boundaries or where the population density exceeds 500 persons per square mile; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The distance from the building to the nearest sewer line exceeds 200 feet, </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That in densely populated areas or where the existing onsite system is failing or poses a significant public health risk, as determined by the Bureau for Public Health, the board may require connection. If a connection is required, the district shall provide notice and an opportunity for the owner to appeal the determination to the circuit court.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">If the public service district requires the property owner to connect with the sewer facilities even when sewage from dwellings may not flow to the main line by gravity and the property owner incurs costs for any changes in the existing dwellings&rsquo; exterior plumbing in order to connect to the main sewer line, the public service district board shall authorize the district to pay all reasonable costs for the changes in the exterior plumbing, including, but not limited to, installation, operation, maintenance, and purchase of a pump or any other method approved by the Bureau for Public Health. </span><span class="cs46AE26E6">Additionally, if the property owner qualifies as low-income (as defined by eligibility for federal low-income home energy assistance programs or similar criteria established by the Public Service Commission), the district shall offer payment plans, subsidies, or waivers for connection fees and costs to the extent feasible and funded. </span><span class="csEF05ACC">Maintenance and operation costs for the extra installation should be reflected in the users charge for approval of the Public Service Commission. The circuit court shall adjudicate the merits of the petition by summary hearing to be held not later than 30 days after service of petition to the appropriate owners, tenants, or occupants.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Whenever any district has made available sewer facilities to any owner, tenant, or occupant of any house, dwelling, or building located near the sewer facility and the engineer for the district has certified that the sewer facilities are available to and are adequate to serve the owner, tenant, or occupant and sewage will flow by gravity or be transported by other methods approved by the Bureau for Public Health from the house, dwelling, or building into the sewer facilities, </span><span class="cs68EFC440">the district may charge, and the owner, tenant, or occupant shall pay, the rates and charges for services established under this article only after 30 days&rsquo; notice of the availability of</span><span class="csEF05ACC"> </span><span class="cs68EFC440">the facilities has been received by the owner, tenant, or occupant</span><span class="csEF05ACC"> &nbsp;</span><span class="cs46AE26E6">If the owner, tenant, or occupant is required to connect pursuant to subsection (c) and fails to do so after 90 days&rsquo; notice of the availability of the facilities, the district may charge the owner, tenant, or occupant the rates and charges for services established under this article.</span><span class="csEF05ACC"> Rates and charges for sewage services shall be based upon actual water consumption or the average monthly water consumption based upon the owner&rsquo;s, tenant&rsquo;s, or occupant&rsquo;s specific customer class.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The owner, tenant, or occupant of any real property may be determined and declared to be served by a stormwater system only after each of the following conditions is met: (1) The district has been designated by the Environmental Protection Agency as an entity to serve a West Virginia Separate Storm Sewer System community, as defined in 40 C. F. R. &sect; 122.26; (2) the district&rsquo;s authority has been properly expanded to operate and maintain a stormwater system; (3) the district has made available a stormwater system where stormwater from the real property affects or drains into the stormwater system; and (4) the real property is located in the Municipal Separate Storm Sewer System&rsquo;s designated service area. It is further hereby found, determined, and declared that the mandatory use of the stormwater system is necessary and essential for the health and welfare of the inhabitants and residents of the district and of the state. The district may charge and the owner, tenant, or occupant shall pay the rates, fees, and charges for stormwater services established under this article only after 30 days&rsquo; notice of the availability of the stormwater system has been received by the owner. An entity providing stormwater service shall provide a tenant a report of the stormwater fee charged for the entire property and, if appropriate, that portion of the fee to be assessed to the tenant. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) All delinquent fees, rates, and charges of the district for either water facilities, sewer facilities, gas facilities, or stormwater systems or stormwater management programs are liens on the premises served of equal dignity, rank, and priority with the lien on the premises of state, county, school, and municipal taxes. Nothing contained within the rules of the Public Service Commission may require agents or employees of the public service districts to accept payment at the customer&rsquo;s premises in lieu of discontinuing service for a delinquent bill. In addition to the other remedies provided in this section, public service districts are granted a deferral of filing fees or other fees and costs incidental to the bringing and maintenance of an action in magistrate court for the collection of delinquent water, sewer, stormwater, or gas bills. If the district collects the delinquent account, plus reasonable costs, from its customer or other responsible party, the district shall pay to the magistrate the normal filing fee and reasonable costs which were previously deferred. In addition, each public service district may exchange with other public service districts a list of delinquent accounts: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That an owner of real property may not be held liable for the delinquent rates or charges for services or facilities of a tenant, nor may any lien attach to real property for the reason of delinquent rates or charges for services or facilities of a tenant of the real property unless the owner has contracted directly with the public service district to purchase the services or facilities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Anything in this section to the contrary notwithstanding, any establishment, as defined in &sect;22-11-3 of this code, now or hereafter operating its own sewage disposal system pursuant to a permit issued by the Department of Environmental Protection, as prescribed by &sect;22-11-11 of this code, is exempt from the provisions of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Notwithstanding any code provision to the contrary, a public service district may accept payment for all fees and charges due, in the form of a payment by a credit or check card transaction or a direct withdrawal from a bank account. The public service district may set a fee to be added to each transaction equal to the charge paid by the public service district for use of the credit or check card or direct withdrawal by the payor. The amount of the fee shall be disclosed to the payor prior to the transaction and no other fees for the use of a credit or check card or direct withdrawal may be imposed upon the payor and the whole of the charge or convenience fee shall be borne by the payor: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That to the extent a public service district desires to accept payments in the forms described in this subsection and does not have access to the equipment or receive the services necessary to do so, the public service district shall first obtain three bids for services and equipment necessary to effect the forms of transactions described in this subsection and use the lowest qualified bid received. Acceptance of a credit or check card or direct withdrawal as a form of payment shall comport with the rules and requirements set forth by the credit or check card provider or banking institution.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The board collecting the rates, fees, or charges may shut off and discontinue water services to users with delinquent stormwater fees, provided that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The water service and stormwater fee are in the name of the same user;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The rates, fees, or charges incurred by the user are at least 90 days past due; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The provider has given the user written notice of termination of water service for nonpayment. Such notice must be given to the user at least 10 days before the termination of service and must notify the user of the user&rsquo;s right to enter into a deferred payment plan; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The provider has attempted to make personal contact with the user at least twice in the 24 hours immediately before the termination of the service. If the provider makes personal contact with the user, the provider must inform the user of the user&rsquo;s right to enter into a deferred payment plan.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The water service for a user who has entered into a deferred payment plan under this subsection may not be shut off or discontinued as long as the user is in conformance with the agreed-to payment plan. In the event the user falls out of compliance with the deferred payment plan, no sooner than five days after the missed payment, the provider may terminate service: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the provider must make one attempt to make personal contact with the user in the 24 hours immediately before the termination of the service.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) All rates, fees, or charges, if not paid when due, shall constitute a lien upon the premises served by the works. If any service rate, fee, or charge is not paid within 20 days after it is due, the amount thereof, together with a penalty of 10 percent and a reasonable attorney&#39;s fee, may be recovered by the board in a civil action in the name of the public service district. The lien may be foreclosed against the lot, parcel of land, or building in accordance with the laws relating thereto. Where water, stormwater, and sewer services are furnished by any public service district to any premises, the schedule of charges may be billed as a single amount or individually itemized and billed for the aggregate thereof.</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to amend the requirements for mandatory connections to public sewer systems in both municipalities and public service districts by providing exceptions for properties with functional septic systems in rural or less densely populated areas, while allowing mandatory connections in urban or densely populated areas where septic systems are impractical. It provides an exemption if the connection distance exceeds 200 feet, incorporates objective inspection standards from the National Association of Wastewater Technicians (NAWT), extends the notice period for non-connection penalties to 90 days, removes the ability to bill for sewer services not provided, and provides for financial assistance to homeowners on fixed or limited incomes who are required to connect, citing changes to &sect;8-18-22 and &sect;16-13A-9 to add provisos for exceptions and assistance.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

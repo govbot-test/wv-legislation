@@ -1,0 +1,621 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5381 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Engrossed Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5381">&laquo; House Bill 5381 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5381'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5381 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5381" title="HTML  - Committee Substitute (1)
+ - House Bill 5381">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5381 sub1 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5381" title="HTML  - Enrolled Version  - Final Version
+ - House Bill 5381">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5381 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5381" title="HTML  - Introduced Version
+ - House Bill 5381">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5381 - Relating to developing a comprehensive energy development policy and plan for the Office of Energy &amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5381+sub1+eng.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5381"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs4F282BEE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: line-through;text-transform:uppercase;}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs5F28C1DD{color:#212121;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csE0BD53B6{color:#212121;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csFCE4DED{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: line-through;}
+		.cs7788C6BC{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs60C11EA{text-align:justify;text-indent:38pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.csB69F1115{color:#000000;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csADE11BC3{color:#212121;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.csDA607FC2{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">ENGROSSED</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5381</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegates Hanshaw (Mr. Speaker) and Hornbuckle</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">(By Request of the Executive)</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Originating in the Committee on Energy and Public Works, February 24, 2026.]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;5B-2A-1, &sect;5B-2A-3, &sect;5B-2A-4, &sect;5B-2A-9, &sect;5B-2A-12, &sect;5B-2F-1, &sect;5B-2F-2, &sect;5B-2F-3, &sect;5B-2F-4, &sect;5B-2H-2, &sect;5B-2J-2, &sect;5B-2N-1, &sect;5B-2N-2, &sect;5B-2N-3, and &sect;5B-2N-4 of the Code of West Virginia, 1931, as amended, to amend the code by adding new sections, designated &sect;5B-2F-1a, &sect;5B-2F-2a, &sect;5B-2N-1a, &sect;5B-2N-2b, &sect;5B-2N-4a, &sect;5B-2N-5, &sect;5B-2N-6, and to repeal &sect;5B-2A-10, &sect;5B-2A-14, &sect;5B-2F-5, &sect;5B-2O-1, &sect;5B-2O-2, &sect;5B-2O-3, &sect;5B-2O-4, all relating to the consolidation and development of a comprehensive energy development policy and plan under the direction of the West Virginia Office of Energy; transferring the Office of Coalfield Community Development as a program within the Office of Energy; eliminating annual report of the Office of Coalfield Community Development; eliminating the sunset date of the Office of Coalfield Community Development; establishing the Comprehensive Energy Policy and Development Plan Act of 2026; eliminating outdated and misaligned duties of the Office of Energy; repurposing the Office of Energy with developing a long-lasting energy policy that embraces coal, natural gas, nuclear, hydropower, renewable, hydrogen, and geothermal sources of energy that emphasizes stability, efficiency, innovation, stable baseload generation, low cost, independence, and security; eliminating the Office of Energy&rsquo;s responsibility to develop an energy savings contracting program; empowering the Office of Energy to hold stakeholder meetings to develop a comprehensive energy plan and policy; granting the Office of Energy rulemaking powers; including the Office of Energy in the list of agencies empowered to assist in the growth of the Marcellus gas and natural gas liquid industries; repealing Coal Fired Grid Stabilization Act of 2023 and merging its elements into the newly created Comprehensive Grid Stabilization and Energy Security Act of 2026; creating definitions for the act; directing the Office of Energy to develop strategies for developing coal, geothermal, hydrogen, hydropower, natural gas, nuclear, and renewable fueled energy; directing the Office of Energy to submit an annual report of its findings and recommendations; authorizing the Office of Energy to identify and designate suitable sites for coal, geothermal, hydrogen, hydropower, natural gas, renewable, or nuclear electric generation projects; authorizing the Office of Energy to develop and adopt criteria for energy-ready community designations for local governments; directing the Office of Energy to develop a state energy security plan and to conduct energy emergency exercises to access the state&rsquo;s energy emergency readiness; providing for reporting regarding emergency readiness; and technical cleanup of amended and reenacted sections.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5B. ECONOMIC DEVELOPMENT ACT OF 1985.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2A. </span><span class="cs4F282BEE">OFFICE</span><span class="cs7A33E2F1"> </span><span class="cs456817A0">Transfer </span><span class="cs7A33E2F1">OF COALFIELD COMMUNITY DEVELOPMENT</span><span class="cs456817A0"> Program To the Office of Energy</span><span class="cs7A33E2F1">.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2A-1. Legislative findings and declaration.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The Legislature hereby finds and declares the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) Coal mining has made and continues to make significant contributions to the economy of West Virginia. These contributions include the creation of quality jobs that pay high wages and provide good benefits; the consequent stimulation and support of mining contractors, suppliers of mining equipment and services, other mining-related industries and numerous providers of goods and services that are indirectly related to coal mining and dependent upon its existence and prosperity; the generation of significant severance and other tax revenues that support important economic development, infrastructure and education initiatives in mining communities and throughout the state; the support of civic, education and service groups in mining communities; and, in the case of surface mining operations, including mountaintop mining, the creation of much-needed flat land for economic development and recreational uses.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The development and increasing prominence of surface mining operations, including mountaintop mining, has brought increasingly high levels of productivity, safety and efficiency to the state&#39;s mining industry, enabling the recovery of coal that could not otherwise be mined and marketed profitably, increasing the severance tax revenues and other economic benefits described in subsection (a) of this section and ensuring the competitiveness of the state&#39;s coal industry from a national and international perspective.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Where implemented, surface mining operations, particularly mountaintop mining, tend to extract most, if not all, of the recoverable coal reserves in an accelerated fashion. For a state long dependent on the employment and revenue coal mining provides, this reality should be sobering and there is no place in which the comprehension of this reality is more crucial than the coalfields of West Virginia. Long dependent primarily on mining, this area must plan for a future without coal. The state and its subdivisions have a legitimate interest in securing that future.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The coal industry and those related to the extraction of mineral resources benefit from the mining of our state&#39;s coal through mining practices which impact its citizens &mdash; some in a negative way &mdash; and through practices which will extract significant portions of coal reserves in an accelerated fashion. Those industries must therefore accept a greater responsibility to help address the long-term needs of the communities and citizens impacted by their activities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Once it becomes public knowledge that a permit is being sought, the marketability of property may change and the relative bargaining power of the parties may change with it. The potential for negative impact on those living in communities near surface mining operations may limit the options and bargaining power of the property owners.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Surface mining operations, including mountaintop mining, present unique challenges to the coal mining industry and the state and its citizens, especially those living and working in communities that rely heavily upon these methods of mining. This requires that these communities, in conjunction with county commissions, state, local, county and regional development authorities, landowners and civic, community and business groups and interested citizens, develop plans related to the communities&#39; long-term economic viability.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The </span><span class="cs68EFC440">Division</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Office </span><span class="csEF05ACC">of Energy, as the state agency charged with energy policy and development activities, shall </span><span class="cs68EFC440">take a more active role in</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">engage in planning and coordinating </span><span class="csEF05ACC">the long-term economic development of communities in which these mining methods are prevalent and shall establish a formal process to assist property owners in the determination of the fair market value where the property owner and the coal company voluntarily enter into an agreement relating to the purchase and sale of such property.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2A-3. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) For the purpose of this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Department&quot; means the Department of Environmental Protection established in &sect;22-1-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Office&quot; means </span><span class="cs68EFC440">the Office of Coalfield Community Development; </span><span class="cs46AE26E6">the Office of Energy established in &sect;5B-2F-1</span><span class="cs1489E706"> et seq. </span><span class="cs46AE26E6">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Operator&quot; means the definition in &sect;22-3-3 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Program&quot; means the Coalfield Community Development Program within the Office of Energy;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(5)</span><span class="csEF05ACC"> &quot;Renewable and alternative energy&quot; means energy produced or generated from natural or replenishable resources other than traditional fossil fuels or nuclear resources and includes, without limitation, solar energy, wind power, hydropower, geothermal energy, biomass energy, biologically derived fuels, energy produced with advanced coal technologies, coalbed methane, fuel produced by a coal gasification or liquefaction facility, synthetic gas, waste coal, tire-derived fuel, pumped storage hydroelectric power or similar energy sources; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5)</span><span class="cs46AE26E6">(6)</span><span class="csEF05ACC"> &quot;Secretary&quot; means the Secretary of the Department of </span><span class="cs68EFC440">Economic Development</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Commerce</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Unless used in a context that clearly requires a different meaning or as otherwise defined herein, terms used in this article shall have the definitions set forth in this section.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2A-4. </span><span class="csF3C8A5A3">Transferring the powers, duties, and responsibilities of the </span><span class="csB9803513">Office of Coalfield Community Development into a </span><span class="csF3C8A5A3">program within the Office of Energy</span><span class="csB9803513">.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Office of Coalfield Community Development </span><span class="cs46AE26E6">all the powers, rules, duties, and responsibilities previously granted and authorized to the Office pursuant to this article are hereby transferred into a program within the Office of Energy</span><span class="cs68EFC440"> is continued within the Department of Economic Development</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The </span><span class="cs68EFC440">Governor shall appoint</span><span class="csEF05ACC"> </span><span class="cs68EFC440">and set the salary of the director of the office who shall be responsible for hiring</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Director of the Office of Energy may hire </span><span class="csEF05ACC">such assistants and clerical staff as may be necessary to carry out the responsibilities of the </span><span class="cs68EFC440">office</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">program</span><span class="csEF05ACC">.</span><span class="cs68EFC440">&nbsp; The initial appointment for the director shall be made by July 1, 2026. </span><a name="_Hlk128205108"><span class="cs68EFC440">Funding for this position and to carry out the duties of the office shall be as provided by appropriation of the Legislature</span></a><span class="cs68EFC440">.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c) The director shall report quarterly to the energy and finance committees of the legislature on projects funded by the office. &nbsp;The report shall include the amount, the recipient and a description of each project funded.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2A-9. Securing developable land and infrastructure.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The office shall determine the land and infrastructure needs in the general area of the surface mining operations for which it makes the determination authorized in &sect;5B-2A-6 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) For the purposes of this section, the term &quot;general area&quot; shall mean the county or counties in which the mining operations are being conducted or any adjacent county.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) To assist the office, the operator, upon request by the office, shall be required to prepare and submit to the office the information set forth in this subsection as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A map of the area for which a permit under &sect;22-3-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code is being sought or has been obtained;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The names of the surface and mineral owners of the property to be mined pursuant to the permit; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A statement of the post-mining land use for all land which may be affected by the mining operations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) In making a determination of the land and infrastructure needs in the general area of the mining operations, the office shall consider at least the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The availability of developable land in the general area;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The needs of the general area for developable land;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The availability of infrastructure, including, but not limited to, access roads, water service, wastewater service, and other utilities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The amount of land to be mined and the amount of valley to be filled;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The amount, nature, and cost to develop and maintain the community assets identified in &sect;5B-2A-8 of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The availability of federal, state, and local grants and low-interest loans to finance all or a portion of the acquisition and construction of the identified land and infrastructure needs of the general area.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) In making a determination of the land and infrastructure needs in the general area of the surface mining operations, the office shall give significant weight to developable land on or near existing or planned multilane highways.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The office may secure developable land and infrastructure for a Development Office or county through the preparation of a master land use plan for inclusion into a reclamation plan prepared pursuant to the provisions of &sect;22-3-10 of this code. No provision of this section may be construed to modify requirements of &sect;22-3-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The county commission or other governing body for each county in which there are surface mining operations that are subject to this article shall determine land and infrastructure needs within their jurisdictions through the development of a master land use plan which incorporates post-mining land use needs, including, but not limited to, renewable</span><span class="cs46AE26E6">, nonrenewable,</span><span class="csEF05ACC"> and alternative energy uses, residential uses, highway uses, industrial uses, commercial uses, agricultural uses, public facility uses, or recreational facility uses. A county commission or other governing body of a county may designate a local, county, or regional development or redevelopment authority to assist in the preparation of a master land use plan. A county commission or other governing body of a county may adopt a master land use plan developed after July 1, </span><span class="cs68EFC440">2009</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">2026</span><span class="csEF05ACC">, only after a reasonable public comment period.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Upon the request of a county or designated development or redevelopment authority, the office shall assist the county or development or redevelopment authority with the development of a master land use plan.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3)(A) The Department of Environmental Protection and the </span><span class="cs68EFC440">Office of Coalfield Community Development</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Office </span><span class="csEF05ACC">shall review master land use plans existing as of July 1, </span><span class="cs68EFC440">2009</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">2026</span><span class="csEF05ACC">. If the office determines that a master land use plan complies with the requirements of this article and the rules promulgated pursuant to this article, the office shall approve the plan on or before July 1, </span><span class="cs68EFC440">2010</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">2027</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Master land use plans developed after July 1, </span><span class="cs68EFC440">2009</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">2026</span><span class="csEF05ACC">, shall be submitted to the department and the office for review. The office shall determine whether to approve a master land use plan submitted pursuant to this subdivision within three months of submission. The office shall approve the plan if it complies with the requirements of this article and the rules promulgated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The office shall review a master land use plan approved under this section every three years. No later than six months before the review of a master land use plan, the county or designated development or redevelopment authority shall submit an updated master land use plan to the department and the office for review. The county may submit its updated master land use plan only after a reasonable public comment period. The office shall approve the master land use plan if the updated plan complies with the requirements of this article and the rules promulgated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) If the office does not approve a master land use plan, the county or designated development or redevelopment authority shall submit a supplemental master land use plan to the office for approval.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The required infrastructure component standards needed to accomplish the designated post-mining land uses identified in a master land use plan shall be developed by the county or its designated development or redevelopment authority. These standards </span><span class="cs68EFC440">must</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">shall</span><span class="csEF05ACC"> be in place before the respective county or development or redevelopment authority can accept ownership of property donated pursuant to a master land use plan. Acceptance of ownership of such property by a county or development or redevelopment authority may not occur unless it is determined that: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The property use is compatible with adjacent land uses; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The use satisfies the relevant county or development or redevelopment authority&rsquo;s anticipated need and market use;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The property has in place necessary infrastructure components needed to achieve the anticipated use;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) The use is supported by all other appropriate public agencies;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) The property is eligible for bond release in accordance with &sect;22-3-23 of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) The use is feasible.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Required infrastructure component standards require approval of the relevant county commission, commissions, or other county governing body before such standards are accepted. County commission or other county governing body approval may be rendered only after a reasonable public comment period.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The provisions of this subsection shall not take effect until legislative rules are promulgated pursuant to this code governing bond releases which assure sound future maintenance by the local or regional economic development, redevelopment, or planning agencies.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2A-10. Action report; annual update.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed</span><span class="cs46AE26E6">]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2A-12. Rulemaking.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The office shall propose rules for legislative approval in accordance with </span><span class="cs68EFC440">article three, chapter twenty-nine-a</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;29A-3-</span><span class="cs5F28C1DD">1</span><span class="csE0BD53B6"> et seq. </span><span class="csEF05ACC">of this code to establish, implement and enforce the provisions of this article, which rules shall include, but not be limited to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The development of standards for establishing the value of property by the office; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Criteria for the development of a master plan by local, county, regional or redevelopment authorities which coordinates the permitting and reclamation requirements of the Department of Environmental Protection with these authorities.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2A-14. Sunset.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">[</span><span class="csEF05ACC">Repealed.]</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2F. </span><span class="cs4F282BEE">DIVISION OF ENERGY.</span><span class="cs7A33E2F1"> </span><span class="cs456817A0">Comprehensive ENERGY POLICY AND DEVELOPMENT PLAN of 2026.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2F-1. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">This </span><span class="cs68EFC440">chapter</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">article</span><span class="csEF05ACC"> shall be known and cited as the </span><span class="cs68EFC440">West Virginia Energy Policy and Development Act</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Comprehensive Energy Policy and Development Plan Act of 2026</span><span class="csEF05ACC">.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-2F-1a. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">For purposes of this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Director&quot; means the Director of the West Virginia Office of Energy.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Office&quot; means the West Virginia Office of Energy. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Pipeline&quot; or &quot;pipelines&quot; means any actual lines of pipe for the transmission and distribution of natural gas together with all appurtenances, facilities, structures, equipment, machinery and other items related to the transmission and distribution of gas through lines of pipe.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2F-2. Purpose; Office of Energy;</span><span class="csFCE4DED"> office to developenergy policy and development plan; contents of energy policy and development plan; and office to promote energy initiatives</span><span class="csB9803513"> </span><span class="csF3C8A5A3">Development of Comprehensive Energy Policy</span><span class="csB9803513">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs68EFC440">(a) Effective July 1, 2017, the Division of Energy is hereby continued, but shall be designated and known as the Office of Energy and shall be organized within the Department of Economic Development. All references throughout this code to the Division of Energy shall be construed to refer to the Office of Energy. The office may receive federal funds. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b) The office is intended to provide leadership for developing energy policies emphasizing the increased efficiency of energy use, the increased development and production of new and existing domestic energy sources, the increased awareness of energy use on the environment and the economy, dependable, efficient and economical statewide energy systems capable of supporting the needs of the state, increased energy self-sufficiency where the ratio of indigenous to imported energy use is increased, reduce the ratio energy consumption to economic activity and maintain low-cost energy. The energy policies and development plans shall also provide direction for the private sector.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c) The office shall have authority over the energy efficiency program existing under the Department of Economic Development. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs46AE26E6">West Virginia and the nation are in need of energy that is reliable, efficient, affordable and locally produced. &nbsp;To meet this need, the Office of Energy shall develop a long-lasting energy solution that embraces all forms of energy including, without limitation, coal, natural gas, nuclear energy, hydropower, hydrogen, </span><span class="cs46AE26E6">renewable,</span><span class="cs46AE26E6"> and geothermal energy, by developing a comprehensive energy policy that emphasizes: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Increased reliability from stable baseload generation; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Increased efficiency through innovation; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Low-cost energy as the bedrock of economic development; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Energy independence and security through increased domestic production.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(b)</span><span class="csEF05ACC"> The </span><span class="cs68EFC440">office</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Office of Energy </span><span class="csEF05ACC">shall develop an energy policy and shall report the same back to the Governor and the Joint Committee on Government and Finance before December 1, </span><span class="cs68EFC440">2007</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">2026</span><span class="csEF05ACC">. The energy policy shall </span><span class="cs68EFC440">be a five-year plan setting</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">set </span><span class="csEF05ACC">forth the state&rsquo;s energy policies </span><span class="cs46AE26E6">through at least 2050 </span><span class="csEF05ACC">and shall provide a direction for the private sector. </span><span class="cs46AE26E6">The Office may amend this policy at any time to reflect changes in energy opportunities.</span><span class="csEF05ACC"> Prior to the expiration of the energy policy, the </span><span class="cs68EFC440">office</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Office of Energy </span><span class="csEF05ACC">shall begin review of the policy and submit a revised energy policy to the Governor and the Joint Committee on Government and Finance six months before the expiration of the policy.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs46AE26E6">The Comprehensive Energy Policy developed by the </span><span class="cs46AE26E6">Office of Energy</span><span class="cs46AE26E6"> and submitted to the Governor and the Joint Committee on Government and Finance shall provide recommendations that at a minimum:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Prioritize baseload generation over intermittent generation; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Allow the state&rsquo;s existing coal-fired power plants to remain fully operational through at least 2050; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Develop a strategy for developing baseload electricity generating projects throughout the state, including, but not limited to, coal, natural gas, nuclear, hydropower, hydrogen, geothermal, and, if technically feasible,</span><span class="cs46AE26E6"> renewable,</span><span class="cs46AE26E6"> and; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Set a goal of; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Increasing the state&rsquo;s current baseload generating capacity from 16 gigawatts to at least 50 gigawatts by 2050; and </span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(B) Making West Virginia the leading per-capita generator, situs of commercial and industrial users, and exporter of electricity in the nation by 2050; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Expand the international market for West Virginia coal and develop economical uses for West Virginia coal in addition to its use in electricity generation and steel manufacturing; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Create a robust in-state market for natural gas through increased manufacturing and electricity generation; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Address the need for sufficient electricity transmission lines and natural gas pipelines to support the increase in baseload electricity generation; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Suggest the placement of natural gas pipelines and electricity transmission lines in locations throughout the state that lack sufficient access to electricity or natural gas and in locations where access to increased supplies of electricity or natural gas will spur manufacturing or other economic development</span><span class="csEF05ACC">.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-2F-2a. Comprehensive Energy Plan.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Office of Energy shall prepare and submit a five-year energy development plan to the Governor and the Joint Committee on Government and Finance on or before December 1 of 2026 and every five years thereafter. The development plan shall identify how the office anticipates implementing the state&rsquo;s energy policy during the subsequent five-year period, as well as the policies enacted and actions taken in the previous five-year period in furtherance of said policy. The development plan shall provide direction for the private sector and shall include any recommended legislation. The Department of Environmental Protection and the Public Service Commission, in addition to their other duties prescribed by this code, shall assist the office in the development of an energy policy and related development plans. The energy development plan shall recognize the powers of the office as to development and financing of projects under its jurisdiction and shall make such recommendations as are reasonable and practicable for the exercise of such powers.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(b) The energy policy and development plans required by &sect;5B-2F-1 and &sect;5B-2F-2 of this code shall further identify and report on the energy infrastructure in this state and include without limitation energy infrastructure related to protecting the state&rsquo;s essential data, information systems and critical government services in times of emergency, inoperativeness or disaster. In consultation with the Secretary of the Department of Homeland Security and the Director of the Division of Emergency Management, the office shall encourage the development of energy infrastructure and strategic resources that will ensure the continuity of governmental operations in situations of emergency, inoperativeness or disaster.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(c) In preparing or revising the energy policy and development plan, the office may rely upon internal staff reports or the advice of outside advisors or consultants and may procure such services with the consent of the Secretary of Commerce. The Office of Energy may also involve national, state and local government leadership and energy experts.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(d) Any documentary material, data or other writing made or received by the Office of Energy or other public body for the purposes of preparing the energy policy and development plan is exempt from the Freedom of Information Act under <a class="cs46AE26E6" href="https://1.next.westlaw.com/Link/Document/FullText?findType=L&amp;pubNum=1000041&amp;cite=WVSTS29B-1-1&amp;originatingDoc=N068B8A40273A11F0807ADF7F380A28C6&amp;refType=LQ&amp;originationContext=document&amp;transitionType=DocumentItem&amp;ppcid=16f51436df0b4594ab7d57feb8d21d56&amp;contextData=(sc.Search)"><span>&sect; 29B-1-1</span><span class="cs1489E706"> et seq. </span><span class="cs5F28C1DD">o</span><span>f this code</span></a></span><span class="cs46AE26E6">.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2F-3. </span><span class="csFCE4DED">Energy Savings Contracting Program</span><span class="csB9803513"> </span><span class="csF3C8A5A3">Stakeholder Meetings</span><span class="csB9803513">. </span></h4>
+	<p class="cs53FB8D75"><span class="cs68EFC440">The secretary shall, working with such other agencies of the state as the secretary deems appropriate, establish an energy savings contracting program to support the design and installation of energy-savings contracts that may be entered into by agencies of the state under &sect;5A-3B-1</span><span class="csB65271"> et seq. </span><span class="cs68EFC440">of the code. Such program shall include the development and provision of model, template, or standardized contracts, guidelines, procedures, manuals, and other related documents regarding the use of energy-savings contracts.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The office may hold regular scheduled meetings with stakeholders including from various industries, policy groups, energy developers, utility companies, mineral owners, and private citizens to receive public input on its energy policies and development plans</span><span class="csEF05ACC">. </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2F-4. </span><span class="csFCE4DED">Energy savings program</span><span class="csB9803513"> </span><span class="csF3C8A5A3">Rulemaking</span><span class="csB9803513">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs68EFC440">(a) No later than October 1, 2021, the secretary shall establish an energy savings program designed to reduce energy usage for electricity, natural gas, fuel oil, and steam in all state buildings under the care, custody, and control of the state by 25% below 2018 levels by 2030. The secretary shall report annually to the Legislature regarding the energy-conservation measures, as defined by &sect;5A-3B-1(b) of this code, installed under the energy savings program, achieved reductions in energy usage, and additional energy-conservation measures, if any, necessary to achieve the required reductions by 2030. The secretary is authorized to enter into energy-savings contracts as defined in &sect;5A-3B-1</span><span class="csB65271"> et seq. </span><span class="cs68EFC440">of this code, as necessary, to implement the energy savings program. Energy-savings contracts entered into as part of the energy savings program shall require an annual energy audit performed by a third party and at the cost of the qualified provider. Energy audits shall include (1) A comparative analysis of anticipated to actual energy savings; and (2) the terms and conditions of agency payment and performance guarantees. Any such performance guarantees shall provide that the contractor is responsible for maintenance and repair services for any energy related equipment, including computer software. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b) The department will collaborate with the Department of Administration to develop energy saving strategies and improve energy efficiency in state buildings under the control and care of the Department of Administration</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The office may propose rules for legislative approval in accordance with &sect;29A-3-1</span><span class="cs1489E706"> et seq. </span><span class="cs46AE26E6">of this code as needed to implement an energy policy and development plan in accordance with the provisions of this chapter.</span></p><h4 class="cs89687900">
+		<a name="_Hlk66963821"><span class="csB9803513">&sect;5B-2F-</span></a><span class="csB9803513">5. Disclosure of energy usage. </span></h4>
+	<p class="cs53FB8D75"><span class="csB69F1115">[Repealed]</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2H. MARCELLUS GAS AND MANUFACTURING DEVELOPMENT ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2H-2. Legislative findings; declaration of public policy.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Legislature finds that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The advent and advancement of new and existing technologies and drilling practices have created the opportunity for the efficient development of natural gas contained in underground shales and other geological formations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) With development of the Marcellus shale comes the opportunity for economic development in related areas of the economy including, but not limited to, manufacturing, transmission of natural gas and related products and the transportation of manufactured products.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) It is in the interest of national security to encourage post-production uses of natural gas and its various components as a replacement for oil imported from other countries.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Producers of natural gas, transporters of natural gas and manufacturers of products using natural gas face a significant number of regulatory requirements, some of which may be redundant, inconsistent, or overlapping. Agencies should work together, where practical, to avoid duplication, promote better coordination and reduce these requirements, thus reducing costs, simplifying and harmonizing rules and streamlining regulatory oversight.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) In developing regulatory actions and identifying appropriate approaches, agencies should attempt to promote coordination, simplification, and harmonization.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Agencies should also seek to identify, as appropriate, means to achieve regulatory goals that are designed to promote innovation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Agencies should review their existing significant legislative, interpretive and procedural rules to determine whether any such rules should be modified, streamlined, expanded or repealed so as to make the agency&#39;s regulatory program more effective or less burdensome in achieving the regulatory objectives.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The West Virginia Economic Development Authority established in &sect;31-15-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> the West Virginia Infrastructure and Jobs Development Council created in &sect;31-15a-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code</span><span class="cs46AE26E6">, and the Office of Energy created under &sect;5B-2F-1</span><span class="cs1489E706"> et seq. </span><span class="cs46AE26E6">of this code</span><span class="csEF05ACC">, should, where appropriate, provide assistance that grows or sustains this segment of the economy.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Legislature declares that facilitating the development of business activity directly and indirectly related to development of the Marcellus shale serves the public interest of the citizens of this state by promoting economic development and improving economic opportunities for the citizens of this state.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2J. NATURAL GAS LIQUIDS </span><span class="cs4F282BEE">ECONOMIC </span><span class="cs7A33E2F1">DEVELOPMENT ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2J-2. Legislative findings; declaration of public policy.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) The Legislature finds that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The advent and advancement of new and existing technologies and drilling practices have created the opportunity for the efficient development of natural gas, including natural gas liquids such as ethane, propane, butane, isobutane and pentanes, contained in underground shales and other geological formations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) With the development of natural gas liquids from shales and other geological formations comes the opportunity for economic development in related areas of the economy including, but not limited to, manufacturing, transmission and storage of natural gas liquids and related products, the use of such products in manufacturing, the consumption of such products, and the transportation of manufactured products.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Producers of natural gas liquids, transporters and storers of natural gas liquids, and manufacturers of products using natural gas liquids face a significant number of regulatory requirements, some of which may be redundant, inconsistent, or overlapping. Agencies should work together, where practical, to avoid duplication, promote better coordination and reduce these requirements, thus reducing costs, simplifying and harmonizing rules, and streamlining regulatory oversight.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) In developing regulatory actions and identifying appropriate approaches, agencies should attempt to promote coordination, simplification, and harmonization.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Agencies should also seek to identify, as appropriate, means to achieve regulatory goals that are designed to promote innovation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Agencies should review their existing significant legislative, interpretive and procedural rules to determine whether any such rules should be modified, streamlined, expanded or repealed so as to make the agency&rsquo;s regulatory program more effective and less burdensome in achieving the regulatory objectives.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The West Virginia Economic Development Authority established in &sect;31-15-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code</span><span class="cs46AE26E6">,</span><span class="csEF05ACC"> </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> the West Virginia Infrastructure and Jobs Development Council created in &sect;31-15a-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, of this code</span><span class="cs46AE26E6"> and the Office of Energy created under &sect; 5B-2F-1</span><span class="cs1489E706"> et seq. </span><span class="cs46AE26E6">of this code</span><span class="csEF05ACC">,  should, where appropriate, provide assistance that grows or sustains the natural gas liquids segment of the economy.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Legislature declares that facilitating the development of business activity directly and indirectly related to development, transportation, storage and use of the natural gas liquids serves the public interest of the citizens of this state by promoting economic development and improving economic opportunities for the citizens of this state.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2N. </span><span class="cs456817A0">Comprehensive </span><span class="cs7A33E2F1">Grid Stabilization and </span><span class="cs456817A0">Energy</span><span class="cs7A33E2F1"> Security Act OF </span><span class="cs4F282BEE">2023 </span><span class="cs456817A0">of 2026.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2N-1. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">This article shall be known and cited as the </span><span class="cs46AE26E6">Comprehensive </span><span class="csEF05ACC">Grid Stabilization and </span><span class="cs46AE26E6">Energy </span><span class="csEF05ACC">Security Act </span><span class="cs46AE26E6">of 2026</span><span class="csEF05ACC">.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-2N-1a. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">For the purpose of this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Company&quot; means a for-profit sole proprietorship, organization, association, corporation, limited liability partnership, limited liability company, including a wholly owned subsidiary, majority owned subsidiary, parent company, or affiliate of those entities or business associations that exist to make a profit.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Critical Energy Infrastructure&quot; means a communication infrastructure system, cybersecurity system, electric grid, hazardous waste treatment system or water treatment facility that directly or indirectly affects the ability to generate, transmit, transport or distribute electricity, coal, oil and natural gas, or hydrogen within the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cybersecurity means the measure taken to protect a computer, computer network, computer system or other technology infrastructure against unauthorized use or access.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Director&quot; means the Director of the West Virginia Office of Energy.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Office&quot; means the West Virginia Office of Energy.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2N-2. Legislative findings; declaration of public policy.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Legislature finds that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The advent and advancement of new and existing technologies and </span><span class="cs68EFC440">drilling</span><span class="csEF05ACC"> practices have created the opportunity for efficient </span><span class="cs68EFC440">development of</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">use of coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, and nuclear</span><span class="csEF05ACC"> in West Virginia, including opportunities for the production of electricity; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Production of electricity utilizing </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower, renewable, </span><span class="csEF05ACC">natural gas</span><span class="cs46AE26E6">, and nuclear </span><span class="csEF05ACC">produced in West Virginia is highly underdeveloped in comparison to nearby states with which West Virginia competes for economically beneficial projects. </span><span class="cs68EFC440">Natural gas</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Coal, geothermal, hydrogen, hydropower, natural gas, and nuclear</span><span class="csEF05ACC"> electric generation projects have been undermined by existing regulatory requirements and related time delays;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) In developing regulatory actions and identifying appropriate approaches to encourage development of </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, and nuclear</span><span class="csEF05ACC"> electric generation projects, agencies should attempt to promote coordination, simplification, and harmonization. Agencies should also seek to identify appropriate means to achieve regulatory goals that are designed to promote innovation and enhance West Virginia&#39;s competitiveness with surrounding states; &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Agencies should review their existing legislative and procedural rules to determine whether any such rules should be modified, streamlined, expanded, or repealed to make the agency&#39;s regulatory program more effective or less burdensome in achieving the regulatory objectives related to </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, and nuclear</span><span class="csEF05ACC"> electric generation projects. &nbsp;Agencies should also evaluate the data that they have to determine what information might be useful to prompt permitting and approving </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, and nuclear</span><span class="csEF05ACC"> generated electricity; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The </span><span class="cs68EFC440">West Virginia Department of Economic Development, established in &sect;5B-2-1</span><span class="csB65271"> et seq. </span><span class="cs68EFC440">of this code,</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Office of Energy </span><span class="csEF05ACC">is responsible for implementing this Grid Stabilization and Security Act </span><span class="cs46AE26E6">of 2026 </span><span class="csEF05ACC">and providing as much assistance as possible to grow and sustain the </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, and nuclear</span><span class="csEF05ACC"> electric generation segment of the economy.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Legislature declares that facilitating the development of business activity directly and indirectly related to </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, and nuclear</span><span class="csEF05ACC"> electric generation development, transportation, storage, and use serves the public interest of the citizens of this state by promoting economic development, improving economic opportunities for the citizens of this state, and providing additional opportunities to stabilize the price of electricity while increasing its reliability and availability. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-2N-2b. Strategy for Developing Coal, Geothermal, Hydrogen, Hydropower, Natural Gas, Renewable, and Nuclear Energy.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Office of Energy shall develop a recommended strategy to the Governor and Secretary of Commerce for developing coal, geothermal,</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hydrogen, hydropower, natural gas, renewable, and nuclear fueled energy in West Virginia&#39;s economy and energy infrastructure. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Such strategy shall include, without limitation:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A review of regulations and legislation needed to guide the development and achievement of economies of scale for the energy ecosystem in the state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Recommendations for post-secondary education or workforce initiatives to prepare the state&#39;s workforce for coal, geothermal,</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hydrogen, hydropower, natural gas, renewable, and nuclear fueled energy</span><span class="cs5F28C1DD">-related jobs;</span></p><p class="cs53FB8D75"><span class="cs5F28C1DD">(3) </span><span class="cs46AE26E6">Recommendations, legislation, and policies to support coal, geothermal, hydrogen, </span><span class="cs5F28C1DD">hydropower, natural gas, </span><span class="cs46AE26E6">renewable,</span><span class="cs5F28C1DD"> and nuclear</span><span class="csADE11BC3"> </span><span class="cs5F28C1DD">fueled energy facilities at sites throughout West Virginia; </span></p><p class="cs53FB8D75"><span class="cs5F28C1DD">(4) </span><span class="cs46AE26E6">Recommendations regarding funding sources for developing coal, geothermal,</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hydrogen, hydropower, natural gas, renewable, and nuclear fueled energy programs and infrastructure; and </span></p><p class="cs53FB8D75"><span class="cs5F28C1DD">(5) Recommendations </span><span class="cs46AE26E6">for potential end uses of coal, geothermal, hydrogen, hydropower, natural gas, renewable, and nuclear fueled energy. </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2N-3. Identification of suitable sites for </span><span class="csF3C8A5A3">coal, geothermal, hydrogen, hydropower, </span><span class="csB9803513">natural gas</span><span class="csF3C8A5A3">, renewable, or nuclear </span><span class="csB9803513">electric generation projects.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The </span><span class="cs68EFC440">Secretary of the Department of Economic Development</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Director of the Office of Energy </span><span class="csEF05ACC">is authorized and directed to identify economically viable sites within the state that are:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Located near a convenient and sufficient supply of </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, or nuclear energy</span><span class="csEF05ACC">; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Likely to create economically viable </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, or nuclear</span><span class="csEF05ACC"> electric generation projects that provide economic benefits to the local and state governmental units and the citizens of the state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Optimally located to provide a convenient supply of the generated electricity to consumers; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The </span><span class="cs68EFC440">Secretary of the Department of Economic Development</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Director of the Office of Energy</span><span class="csEF05ACC"> shall use the following criteria in identifying economically viable sites for </span><span class="cs68EFC440">natural gas</span><span class="csEF05ACC"> electric generation projects:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Geographic locations near </span><span class="cs46AE26E6">coal deposits, geothermal resources, hydrogen projects, hydropower resources</span><span class="csEF05ACC">, </span><span class="cs46AE26E6">renewable resources,</span><span class="csEF05ACC"> producing natural gas wells, or pipelines carrying natural gas </span><span class="cs46AE26E6">or hydrogen</span><span class="csEF05ACC"> produced in the state, </span><span class="cs46AE26E6">or nuclear electric generation facilities,</span><span class="csEF05ACC"> capable of supplying and sustaining one or more </span><span class="cs68EFC440">natural gas</span><span class="csEF05ACC"> electric generation facilities for the economic life of the facilities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Geographic locations near existing electric transmission infrastructure capable of transmitting the generated electricity to wholesale markets </span><span class="cs46AE26E6">by one or more coal, geothermal,</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hydrogen, hydropower, natural gas, renewable, or nuclear electric generation facilities for the economic life of the facilities</span><span class="csEF05ACC">;</span><span class="cs46AE26E6"> </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Geographic locations that fulfill the air quality conditions imposed by the Division of Air Quality of the West Virginia Department of Environmental Protection </span><span class="cs68EFC440">for one or more natural gas</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> electric generation facilities; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Geographic locations that can demonstrate that allowable emission increases from one or more </span><span class="cs68EFC440">natural gas electric</span><span class="csEF05ACC"> generation facilities, in conjunction with all other applicable emission increases or reductions (including secondary emissions), would not cause or contribute to air pollution in violation of:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Any national or West Virginia ambient air quality standard in any air quality control region; or </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Any applicable maximum allowable increase over the baseline concentration in any area.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2N-4. Designation of sites suitable for </span><span class="csFCE4DED">natural gas</span><span class="csB9803513"> electric generation projects.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Following identification of economically viable sites that may be suitable for </span><span class="cs68EFC440">natural gas</span><span class="csEF05ACC"> electric generation projects, the </span><span class="cs68EFC440">Secretary of the Department of Economic Development</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Director of the Office of Energy</span><span class="csEF05ACC"> shall identify and designate each site it has determined to be suitable for </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, or nuclear </span><span class="csEF05ACC">electric generation projects as a &quot;designated site&quot;, and shall communicate the designated sites to the West Virginia Department of Environmental Protection&#39;s Division of Air Quality and the West Virginia Public Service Commission as sites suitable for the construction and operation of </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, or nuclear </span><span class="csEF05ACC">electric generation projects.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any application for a siting certificate pursuant to &sect;24-2-11c of </span><span class="cs68EFC440">the West Virginia Code</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">this code</span><span class="csEF05ACC"> filed with the Public Service Commission to construct or to construct and operate a </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, or nuclear </span><span class="csEF05ACC">electric generation project at a designated site shall be adjudicated, inclusive of public hearings, and a final order issued by the Public Service Commission, within 270 calendar days after the date of the filing of the application, notwithstanding the requirements of any other provision of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Nothing in this section is intended to preclude, modify, or establish new Public Service Commission jurisdiction over:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Any exercise of powers, duties, and obligations pursuant to the West Virginia Public Energy Authority Act;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The right of end-user consumers of electricity to develop, invest in, or otherwise contract for on-site electric self-generation or cogeneration facilities, including those utilizing natural gas as a fuel source;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) This section does not alter, modify, or cancel any existing cogeneration tariffs authorized by the Public Service Commission; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) This section does not authorize the sale of electricity to end-users in the state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) &nbsp;Where a designated site has been identified, in accordance with &sect;22-5-11b(b) of this code, as a location where additional data would be helpful for modeling or other evaluation of the potential emission of a </span><span class="cs46AE26E6">coal, geothermal, hydrogen, hydropower,</span><span class="csEF05ACC"> natural gas</span><span class="cs46AE26E6">, renewable, or nuclear </span><span class="csEF05ACC">electric generation project, the </span><span class="cs68EFC440">Department of Economic Development </span><span class="cs46AE26E6"> Office of Energy</span><span class="csEF05ACC"> </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may consult with or retain such experts as </span><span class="cs68EFC440">construct such facilities as</span><span class="csEF05ACC"> are necessary to acquire such data.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-2N-4a. Energy-Ready Community Designation; Criteria; Application Process; Award Process.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Office of Energy shall propose rules for legislative approval in accordance with the provisions of &sect;29A-3-1</span><span class="cs1489E706"> et seq. </span><span class="cs46AE26E6">of this code to establish a procedure and criteria for awarding a coal, geothermal, hydrogen, hydropower, natural gas, renewable, or nuclear-ready community designation to demonstrate a community&#39;s voluntary readiness to welcome electric generation-related development. The procedure and criteria to attain the designation shall include:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The holding of local public educational meetings, by a county or municipality, to educate the community on coal, geothermal, hydrogen, hydropower, natural gas, renewable, or nuclear electric generation technologies, the related ecosystem, and the role that energy-related development could play in the community; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The availability of at least one site within the community that has been designated by the Office of Energy as a &quot;Designated Site&quot; suitable for a coal, geothermal, hydrogen, hydropower, natural gas, renewable, or nuclear electric generation project; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The adoption of resolutions from the county or the municipalities within the designation area requesting a designation of the community&#39;s readiness for energy-related projects to be developed and sited there. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Communities may voluntarily apply to the Office of Energy for an energy-ready community designation in the form and manner as the office may require, and the office shall evaluate the application and award the designation based on the criteria established under subsection (a) of this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-2N-5. Development of State Energy Security Plan.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Office of Energy shall develop a State Energy Security Plan and shall submit a report of its plan to the Governor and the Joint Committee on Government and Finance before on or before December 1, 2026, and every five years thereafter. &nbsp;The State Security Energy Plan shall at a minimum:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Provide a state energy profile, including an assessment of energy production, transmission, distribution and end-use; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Identify all energy sources and regulated and unregulated energy providers; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Address potential hazards to each energy sector or system, including physical threats, cybersecurity threats and vulnerabilities; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Provide a risk assessment of energy infrastructure and cross-sector interdependencies; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Provide a risk-mitigation approach to enhance reliability and end-use resilience; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Identify existing legislation and institutions responsible for energy security in West Virginia, including federal and state agencies and emergency response procedures;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Address coordination between state agencies, local governments and energy providers; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Describe response processes and responsible authorities for energy emergencies.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Nothing in this section is intended to preclude, modify or interfere with other state agencies in the performance of their duties and obligations during an energy emergency.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Any plan and any information obtained or developed by the Office of Energy pursuant to this section shall be kept confidential and exempt from disclosure under the Freedom of Information Act under &sect;29B-1-</span><span class="cs5F28C1DD">1 </span><span class="csE0BD53B6">et seq</span><span class="cs46AE26E6">., of this code. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;5B-2N-6. Biennial Energy Emergency Exercise.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Office of Energy shall conduct an energy emergency exercise by no later than July 1, 2027. It shall conduct additional energy emergency exercises every two years thereafter. &nbsp;The office shall invite representatives from the following entities to participate in the energy emergency exercise and shall provide said representatives with at least 30-days advance written notice of the energy emergency exercise:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) All electric utilities regulated by the West Virginia Public Service Commission;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) West Virginia Public Service Commission; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) West Virginia Office of Technology;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) West Virginia Governor&rsquo;s Office;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) West Virginia Legislature;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) West Virginia Fusion Center;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) West Virginia Department of Homeland Security;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) West Virginia Emergency Management Division;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) West Virginia National Guard;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) West Virginia Department of Transportation;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) West Virginia Department of Environmental Protection;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Federal Emergency Management Administration;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) United States Department of Energy, Office of Cybersecurity, Energy Security and Emergency Response;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(14) United States Department of Homeland Security;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(15) United States Cybersecurity and Infrastructure Security Agency;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(16) West Virginia University; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(17) Marshall University.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Office of Energy shall conduct the energy emergency exercise so as to allow the various participating state and federal agencies and other entities to access their energy emergency preparedness in a risk-free environment. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Within 30 days of completing the energy emergency exercise, the office shall provide a strictly confidential report to the Governor and the Joint Committee on Government and Finance. &nbsp;The report shall: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Address whether the State Energy Security Plan properly delineates the roles and responsibilities of the various entities participating in the exercise and provide recommendations for improving the State Energy Security Plan; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Recommend improvements in the communication protocols among state agencies, the federal government, the private sector, other participating entities and the public.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Any plan and any information obtained or developed by the Office of Energy pursuant to this section shall be kept confidential and exempt from disclosure under the Freedom of Information Act under &sect;29B-1-</span><span class="cs5F28C1DD">1 </span><span class="csE0BD53B6">et seq</span><span class="cs5F28C1DD">., of </span><span class="cs46AE26E6">this code</span><span class="csDA607FC2">.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2O. COAL FIRED GRID STABILIZATION AND SECURITY ACT </span><span class="cs4F282BEE">OF 2023</span><span class="cs7A33E2F1">.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2O-1. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2O-2. Legislative findings; declaration of public policy.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2O-3. Identification of suitable sites for coal electric generation projects.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2O-4. Designation of sites suitable for coal electric generation projects.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">[Repealed.]</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

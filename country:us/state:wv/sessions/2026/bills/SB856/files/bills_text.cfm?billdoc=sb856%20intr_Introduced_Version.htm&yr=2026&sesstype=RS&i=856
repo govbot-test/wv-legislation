@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 856 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=856">&laquo; Senate Bill 856 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 856'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb856 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=856" title="HTML  - Committee Substitute (1)
+ - Senate Bill 856">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 856 - Extending State Fire Marshal inspections to include municipalities with certified fire code&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb856+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=856"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs75EB5AF2{text-align:left;text-indent:-86pt;margin:0pt 35pt 0pt 81pt;line-height:2}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csEA1688{text-align:center;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D" style="tab-stops:left 468pt;"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 856</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Morris</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[Introduced February 9, 2026; referred<br/>to the Committee on Government Organization; and then to the Committee on Finance]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs75EB5AF2" style="tab-stops:left 76.5pt left 414pt;"><span class="cs7B75DFFE">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL </span><a name="_Hlk206497625"><span class="csEF05ACC">to amend and reenact &sect;15A-10-3 and &sect;15A-10-5 of the Code of West Virginia, 1931, as amended, relating to extending State Fire Marshal inspections, generally, to include municipalities with certified fire code officials, certified fire code inspectors, and certified fire code plans examiners to perform duties in occupancies under the jurisdiction of the State Fire Marshal; clarifying the difference between certified and uncertified fire officials, fire inspectors, and fire plans examiners; explaining how training and examination for Fire Code Disciplines and Categories are completed; and delineating the approved categories of examinations.</span></a></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="csEA1688">
+		<span class="cs7A33E2F1">CHAPTER 15A. &nbsp;DEPARTMENT OF HOMELAND SECURITY</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 10. FIRE MARSHAL.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;15A-10-3. &nbsp;Additional powers, duties and authority of State Fire Marshal relating to law enforcement; statewide contracts; penalties; authority to carry firearms.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a)&nbsp;</span><span class="cs93AB6E8B">Enforcement of laws.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal, and any of his or her assistant fire marshals or deputy fire marshals, are fully authorized to enforce the fire code, the building code, this article, &sect;15A-11-1&nbsp;</span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, and any laws over of the state having to do with:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Prevention of fire;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The storage, sale, and use of any explosive, combustible, or other dangerous article or articles in solid, flammable liquid, or gas form;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The installation and maintenance of equipment of all sorts intended to extinguish, detect, and control fires;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The means and adequacy of exit, in case of fire, from buildings and all other places in which persons work, live, or congregate, from time to time, for any purpose, except buildings used wholly as dwelling houses for no more than two families;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The suppression of arson; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Any other thing necessary to carry into effect the provisions of this article and &sect;15A-11-1&nbsp;</span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code including, but not limited to, confiscating any materials, chemicals, items, or personal property owned, possessed, or used in direct violation of the State Fire Code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b)&nbsp;</span><span class="cs93AB6E8B">Assistance upon request.</span><span class="csEF05ACC">&nbsp;&mdash; Upon request, the State Fire Marshal shall assist any chief of any recognized fire company or department. Upon the request of any federal law-enforcement officer, State Police officer, Natural Resources police officer, or any county or municipal law-enforcement officer, the State Fire Marshal, any deputy state fire marshal, or assistant state fire marshal employed pursuant to the provisions of this article and any person deputized pursuant to subsection (j) of this section may assist in the lawful execution of the requesting officer&rsquo;s official duties:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the State Fire Marshal, or other person authorized to act under this subsection, shall at all times work under the direct supervision of the requesting officer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c)&nbsp;</span><span class="cs93AB6E8B">Enforcement of rules.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal shall enforce the rules promulgated by the State Fire Commission as authorized by this article and &sect;15A-11-1&nbsp;</span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d)&nbsp;</span><span class="cs93AB6E8B">Inspections generally.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal shall inspect all structures and facilities, other than one- and two-family dwelling houses, subject to the State Fire Code and this article, including, but not limited to, state, county, and municipally owned institutions, all public and private schools, health care facilities, theaters, churches, and other places of public assembly to determine whether the structures or facilities are in compliance with the State Fire Code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Municipalities with certified fire code officials, inspectors, and plans examiners may perform their duties in occupancies that are under the jurisdiction of the State Fire Marshal, limited to the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Business occupancies;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Mercantile occupancies; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Public assembly occupancies.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Uncertified fire officials, fire inspectors, and fire plans examiners who are employed by municipal fire departments shall be granted probationary status for a period not to exceed 2 years, during which the certification requirements shall be satisfied. &nbsp;Upon proof of qualification for certification, the individual shall be certified in the respective categories listed in &sect;15A-10-5.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any municipality or local governmental entity enforcing the State Fire Code may have designated code enforcers on a full-time, part-time, or on a contractual basis who are certified for the specific duties of a fire code official, fire code inspector, or fire code plans examiner for a single or multiple municipalities or local governmental entities. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Any municipality or local governmental entity may indemnify their full-time, part-time, or contractual fire code officials, inspectors, and plans examiners.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The municipality or local governmental entity shall be considered the authority having jurisdiction with the fire code official, fire code inspectors, and fire code plans examiner acting under their authority and jurisdiction. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e)&nbsp;</span><span class="cs93AB6E8B">Right of entry.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal may, at any hour necessary, enter any building or premises, other than dwelling houses, for the purpose of making an inspection which he or she may consider necessary under the provisions of this article. The State Fire Marshal and any deputy state fire marshal or assistant state fire marshal approved by the State Fire Marshal may enter upon any property, or enter any building, structure, or premises, including dwelling houses during construction and prior to occupancy, for the purpose of ascertaining compliance with the conditions set forth in any permit or license issued by the office of the State Fire Marshal pursuant to &sect;15A-10-7 or &sect;29-3B-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f)&nbsp;</span><span class="cs93AB6E8B">Investigations.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal may, at any time, investigate as to the origin or circumstances of any fire or explosion or attempt to cause fire or explosion occurring in the state. The State Fire Marshal has the authority at all times of the day or night, in performance of the duties imposed by the provisions of this article, to investigate where any fires or explosions or attempt to cause fires or explosions may have occurred, or which at the time may be burning. Notwithstanding the above provisions of this subsection, prior to entering any building or premises for the purposes of the investigation, the State Fire Marshal shall obtain a proper search warrant:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a search warrant is not necessary where there is permissive waiver or the State Fire Marshal is an invitee of the individual having legal custody and control of the property, building or premises to be searched.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g)&nbsp;</span><span class="cs93AB6E8B">Testimony.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal, in making an inspection or investigation when in his or her judgment the proceedings are necessary, may take the statements or testimony under oath of all persons who may be cognizant of any facts or have any knowledge about the matter to be examined and inquired into and may have the statements or testimony reduced to writing; and shall transmit a copy of the statements or testimony so taken to the prosecuting attorney for the county wherein the fire or explosion or attempt to cause a fire or explosion occurred. Notwithstanding the above, no person may be compelled to testify or give any statement under this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h)&nbsp;</span><span class="cs93AB6E8B">Arrests; warrants</span><span class="csEF05ACC">. &mdash; The State Fire Marshal, any full-time deputy fire marshal, or any full-time assistant fire marshal employed by the State Fire Marshal pursuant to this article is hereby authorized and empowered and any person deputized pursuant to this article may be authorized and empowered by the State Fire Marshal:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) To arrest any person anywhere within the confines of the State of West Virginia, or have him or her arrested, for any violation of the arson-related offenses of &sect;61-3-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code or of the explosives-related offenses of &sect;61-3E-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of said code:&nbsp;</span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC">&nbsp;That any and all persons so arrested shall be forthwith brought before the magistrate or circuit court:&nbsp;</span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the State Fire Marshal, any full-time deputy fire marshal or any full-time assistant fire marshal is authorized to arrest persons for violations of &sect;61-5-17 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) To make complaint in writing before any court or officer having jurisdiction and obtain, serve, and execute an arrest warrant when knowing or having reason to believe that anyone has committed an offense under any provision of this article, of the arson-related offenses of &sect;61-3-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code or of the explosives-related offenses of &sect;61-3E-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code. Proper return shall be made on all arrest warrants before the tribunal having jurisdiction over the violation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) To make a complaint in writing before any court or officer having jurisdiction and obtain, serve, and execute a warrant for the search of any premises that may possess evidence or unlawful contraband relating to violations of this article, of the arson-related offenses of &sect;61-3-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code or of the explosives-related offenses of &sect;61-3E-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of said code. Proper return shall be made on all search warrants before the tribunal having jurisdiction over the violation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Any member of the West Virginia State Police, Natural Resources police officer, or any county or municipal law-enforcement officer may assist, upon request, the State Fire Marshal or any of his or her employees authorized to enforce the provisions of this section in any duties for which the State Fire Marshal has jurisdiction.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i)&nbsp;</span><span class="cs93AB6E8B">Witnesses and oaths.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal may issue subpoenas and subpoenas duces tecum to compel the attendance of persons before him or her to testify in relation to any matter which is, by the provision of this article, a subject of inquiry and investigation by the State Fire Marshal and cause to be produced before him or her such papers as he or she may require in making the examination. The State Fire Marshal may administer oaths and affirmations to persons appearing as witnesses before him or her. False swearing in any matter or proceeding is considered perjury and is punishable as perjury.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j)&nbsp;</span><span class="cs93AB6E8B">Deputizing members of fire departments in this state.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal may deputize a member of any fire department, duly organized and operating in this state, who is approved by the chief of his or her department and who is properly qualified to act as his or her assistant for the purpose of making inspections with the consent of the property owner or the person in control of the property and the investigations as may be directed by the State Fire Marshal, and the carrying out of orders as may be prescribed by him or her, to enforce and make effective the provisions of this article and any and all rules promulgated by the State Fire Commission under authority of this article:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That in the case of a volunteer fire department, only the chief thereof or his or her single designated assistant may be so deputized.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k)&nbsp;</span><span class="cs93AB6E8B">Written report of examinations.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal shall, at the request of the county commission of any county or the municipal authorities of any incorporated municipality in this state, make to them a written report of the examination made by him or her regarding any fire happening within their respective jurisdictions.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l)&nbsp;</span><span class="cs93AB6E8B">Report of losses by insurance companies.</span><span class="csEF05ACC">&nbsp;&mdash; Each fire insurance company or association doing business in this state, within 10 days after the adjustment of any loss sustained by it that exceeds $1,500, shall report to the State Fire Marshal information regarding the amount of insurance, the value of the property insured, and the amount of claim as adjusted. This report is in addition to any information required by the State Insurance Commissioner. Upon the request of the owner or insurer of any property destroyed or injured by fire or explosion, or in which an attempt to cause a fire or explosion may have occurred, the State Fire Marshal shall report in writing to the owner or insurer the result of the examination regarding the property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m)&nbsp;</span><span class="cs93AB6E8B">Issuance of permits and licenses.</span><span class="csEF05ACC">&nbsp;&mdash; The State Fire Marshal may issue permits, documents, and licenses in accordance with the provisions of this article or &sect;29-3B-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That unless otherwise provided, the State Fire Marshall shall take final action upon any completed permit applications within 30 days of receipt if the application is uncontested, or within 90 days if the application is contested. The State Fire Marshal may require any person who applies for a permit to use explosives, other than an applicant for a license to be a pyrotechnic operator under &sect;29-3E-6 of this code, to be fingerprinted and to authorize the State Fire Marshal to conduct a criminal records check through the Criminal Identification Bureau of the West Virginia State Police and a national criminal history check through the Federal Bureau of Investigation. The results of any criminal records or criminal history check shall be sent to the State Fire Marshal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n)&nbsp;</span><span class="cs93AB6E8B">Issuance of citations for fire and life safety violations</span><span class="csEF05ACC">. &mdash; The State Fire Marshal, any deputy fire marshal, and any assistant fire marshal employed pursuant to this article, and any person deputized pursuant to subsection (j) of this section may be authorized by the State Fire Marshal to issue citations, in his or her jurisdiction, for fire and life safety violations of the State Fire Code and as provided for by the rules promulgated by the State Fire Commission in accordance with &sect;15A-11-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a summary report of all citations issued pursuant to this section by persons deputized under subsection (j) of this section shall be forwarded monthly to the State Fire Marshal in the form and containing information as he or she may by rule require, including the violation for which the citation was issued, the date of issuance, the name of the person issuing the citation, and the person to whom the citation was issued. The State Fire Marshal may at any time revoke the authorization of a person deputized pursuant to subsection (j) of this section to issue citations, if in the opinion of the State Fire Marshal, the exercise of authority by the person is inappropriate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Violations for which citations may be issued include, but are not limited to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Overcrowding places of public assembly;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Locked or blocked exits in public areas;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Failure to abate a fire hazard;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Blocking of fire lanes or fire department connections; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Tampering with, or rendering inoperable, except during necessary maintenance or repairs, on-premise firefighting equipment, fire detection equipment, and fire alarm systems.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o)&nbsp;</span><span class="cs93AB6E8B">Required training; liability coverage.&nbsp;</span><span class="csEF05ACC">â”€ No person deputized pursuant to subsection (j) of this section may be authorized to issue a citation unless that person has satisfactorily completed the mandatory training as described in &sect;15A-10-1 of this code, or a law-enforcement officer training course designed specifically for fire marshals. The course shall be approved by the Law-enforcement Training Subcommittee of the Governor&rsquo;s Committee on Criminal Justice and Highway Safety and the State Fire Commission. In addition, no person deputized pursuant to subsection (j) of this section may be authorized to issue a citation until evidence of liability coverage of the person has been provided, in the case of a paid municipal fire department, by the municipality wherein the fire department is located, or in the case of a volunteer fire department, by the county commission of the county wherein the fire department is located, or by the municipality served by the volunteer fire department and that evidence of liability coverage has been filed with the State Fire Marshal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p)&nbsp;</span><span class="cs93AB6E8B">Statewide contracts</span><span class="csEF05ACC">. &mdash; The State Fire Marshal may cooperate with the Department of Administration, Purchasing Division, to establish one or more statewide contracts for equipment and supplies utilized by fire companies and departments in accordance with &sect;5A-3-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Any statewide contract established hereunder shall be made available to any fire company and department in this state, as well as any other state agency or political subdivision that has a need for the equipment or supplies included in those contracts.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The State Fire Marshal may develop uniform standards for equipment and supplies used by fire companies and departments in accordance with &sect;5A-3-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The State Fire Commission shall propose legislative rules for promulgation in accordance with &sect;29A-3-1&nbsp;</span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">&nbsp;of this code to effectuate the provisions of this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(q)&nbsp;</span><span class="cs93AB6E8B">Penalties for violations.</span><span class="csEF05ACC">&nbsp;&mdash; Any person who violates any fire and life safety rule of the State Fire Code is guilty of a misdemeanor and, upon conviction thereof, shall be fined not less than $100 nor more than $1,000, or confined in jail not more than 90 days, or both fined and confined. Every day during which any violation of the provisions of this article continues after knowledge or official notice that it is illegal is a separate offense.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(r) The State Fire Marshal, any full-time deputy fire marshal, or any full-time assistant fire marshal employed by the State Fire Marshal, pursuant to this article may carry a firearm while acting in the course of his or her official duties, if he or she has successfully completed a firearms training and certification program equivalent to that provided to officers attending the entry level law-enforcement certification course provided at the West Virginia State Police Academy. The person shall thereafter successfully complete an annual firearms qualification course equivalent to that required of certified law-enforcement officers as established by legislative rule. The State Fire Marshal may reimburse the person for the cost of the training and requalification.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;15A-10-5. &nbsp;General rule-making authority; appointment of advisory boards.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) The State Fire Marshal may propose rules for legislative approval in accordance with the provisions of &sect;29A-3-1 et seq. of this code, establishing state standards and fee schedules for the licensing, registration, certification, regulation and continuing education of persons which will conduct inspections relating to the State Building Code </span><span class="cs46AE26E6">and the State Fire Code</span><span class="csEF05ACC">, which include, but are not limited to, building code </span><span class="cs46AE26E6">and fire code</span><span class="csEF05ACC"> officials, inspectors, plans examiners, and home inspectors.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Fire Code Disciplines and Categories &ndash; To be a certified fire code official, certified fire code inspector, or certified fire code plans examiner, the applicant must successfully complete the training and examination necessary by the National Fire Protection Association (NFPA) or an equivalent certification by an examination authority that bases their testing upon the applicable NFPA codes that is acceptable by the State Fire Commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The State Fire Marshal will issue certification for a fire code official, fire code inspector, or fire code plans examiner in a specific category to an applicant who receives a passing grade in all examinations or certifications required for that category.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The approved categories of examinations or certifications are as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Fire Code Official &ndash; NFPA Certified Fire Protection Specialist, or the combination of NFPA Certified Fire Inspector and Certified Fire Plans Examiner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Fire Code Inspector &ndash; NFPA Certified Fire Protection Specialist, or NFPA Certified Fire Inspector.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Fire Code Plans Examiner &ndash; NFPA Certified Fire Protection Specialist or NFPA Certified Plans Examiner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The State Fire Marshal shall propose rules for legislative approval requiring applicants for home inspector licensing, registration, or certification to submit to a state and national criminal history record check as set forth in this section and may deny licensing, registration, or certification based upon the results of the criminal history record check.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The State Fire Marshal may establish advisory boards as it considers appropriate to encourage representative participation in subsequent rulemaking from groups or individuals with an interest in any aspect of the rules promulgated by the State Fire Marshal.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to extend State Fire Marshal inspections, generally, to include municipalities with certified fire code officials, certified fire code inspectors and certified fire code plans examiners to perform duties in occupancies under the jurisdiction of the State Fire Marshal; to clarify the difference between certified and uncertified fire officials, fire inspectors, and fire plans examiners; to explain how training and examination for Fire Code Disciplines and Categories are completed; and to delineate the approved categories of examinations.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

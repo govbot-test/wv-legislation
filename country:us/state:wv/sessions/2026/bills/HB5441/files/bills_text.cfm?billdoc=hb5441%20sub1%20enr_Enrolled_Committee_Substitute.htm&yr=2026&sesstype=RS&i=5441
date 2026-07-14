@@ -1,0 +1,609 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5441 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Enrolled Version  - Final Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5441">&laquo; House Bill 5441 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5441'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5441 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5441" title="HTML  - Committee Substitute (1)
+ - House Bill 5441">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5441 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5441" title="HTML  - Engrossed Version
+ - House Bill 5441">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5441 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5441" title="HTML  - Introduced Version
+ - House Bill 5441">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5441 - Reforming State Personnel System&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5441+sub1+enr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5441"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs6421BC5F{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2.05}
+		.csF5B7C975{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+		.cs60287397{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs2CFA8611{text-align:left;text-indent:18pt;margin:0pt 36pt 0pt 36pt}
+		.cs53BAC856{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.csF24B3FE4{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.csF5AA9F8B{text-align:center;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs74A86F32{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.cs51F7D470{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs93FA44A8{text-align:right;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs49AF4BA5{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:1.9}
+		.cs16A9F08{color:#000000;background-color:transparent;font-family:Calibri;font-size:12pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">ENROLLED</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5441</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegate Hanshaw (Mr. Speaker)<br/>(By Request of the Executive)</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Passed March 14, 2026; in effect July 1, 2026]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">AN ACT to amend and reenact &sect;5F-2-8, &sect;11B-1-8, &sect;29-6-1, &sect;29-6-2, &sect;29-6-4, &sect;29-6-5, &sect;29-6-6, &sect;29-6-7, &sect;29-6-10, &sect;29-6-16, &sect;29-6-24, and &sect;49-10-101 of the Code of West Virginia, 1931, as amended; and to repeal &sect;29-6-8, &sect;29-6-9, &sect;29-6-10a, &sect;29-6-14, &sect;29-6-25, &sect;29-6-27, &sect;49-10-102, and &sect;49-10-103 of said code, relating to streamlining and reforming the Division of Personnel systems; eliminating special merit-based personnel system for Department of Transportation employees; transferring duplicative Department of Transportation personnel duties to the Division of Personnel; exempting new hires and promoted employees within the Department of Transportation from the classified civil service system and the state grievance procedures beginning on July 1, 2026; eliminating special merit-based personnel system for the State Tax Division and Bureau for Social Services; transferring duplicative State Tax Division and Bureau for Social Services personnel duties to the Division of Personnel; clarifying definitions related to the state&rsquo;s personnel systems; defining classified and classified-exempt service; removing provisions allowing additions to the classified service; identifying and defining exemptions from the classified service; streamlining the functions of the Division of Personnel; terminating the State Personnel Board; transferring authority from the State Personnel Board to the Division of Personnel; clarifying and identifying the duties of the Division of Personnel; clarifying the rulemaking authority for the Division of Personnel; clarifying that the records of the division are subject to the Freedom of Information Act and its exemptions for personal identifying and personal health information; shortening the time frames for classified job openings and appointments; shifting the leave donation program to a program provided for through rulemaking; modernizing processes for posting job openings in classified service; removing archaic provisions; and technical cleanup throughout.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5F. REORGANIZATION OF THE EXECUTIVE BRANCH OF STATE GOVERNMENT.</span></h1>
+	<p class="cs7F45F1B"><span class="csE70BDF83">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. TRANSFER OF AGENCIES AND BOARDS.</span></h2>
+	<p class="cs7F45F1B"><span class="cs7A33E2F1">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5F-2-8. Transfer of Department of Transportation Personnel System to the Division of Personnel; Transfer of new hires and promoted employees within the Department of Transportation to the Classified-Exempt System.</span></h4>
+	<p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a)&nbsp;</span><span class="cs93AB6E8B">Legislative findings and intent.</span><span class="csEF05ACC"> &ndash;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The several exemptions from centralized administration of the state&rsquo;s personnel have created multiple, redundant, inefficient, and overly complex personnel and human resources systems in several parts of state government; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Shifting to a centralized oversight system that includes necessary flexibility for all state agencies&mdash;instead of a few favored agencies&mdash;would facilitate the streamlining of state government and the proper management of the state executive personnel systems. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Beginning on July 1, 2026, the Department of Transportation&rsquo;s authority to establish personnel system under this section is abolished and all personnel within the special merit system created under this section shall be subject to the provisions of &sect;29-6-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code except that: &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Any and all job classifications, specifications, and compensation structures established by the Department of Transportation, prior to July 1, 2026, under the authority granted by this section, shall transfer to the oversight and administration of the Division of Personnel; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Following the transfer, the Division of Personnel shall not modify the job classifications, specifications, and compensation structures created pursuant to this section prior to July 1, 2026, except with the consent of the Secretary of the Department of Transportation or as provided in subsection (c) of this section.(c) Notwithstanding any provision of this code or any rule to the contrary, beginning on July 1, 2026, all employees of the Department of Transportation shall be exempt from the state grievance procedures as set forth in &sect;6C-2-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code and from the classified civil service system except that: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) All employees of the Department of Transportation who are members of a classified civil service system as of June 30, 2026, shall retain their status as long as they remain in their current position; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) All employees of the Department of Transportation who as of June 30, 2026, have recourse to the state grievance procedures will continue to have access to the state grievance procedures as long as they remain in their current position; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Any employee of the Department of Transportation that leaves his or her position and remains an employee within any department governed by &sect;5B-1-2, &sect;5B-2-1, &sect;5B-2i-4, &sect;5F-2-9, &sect;5F-2-10, or &sect;29-1-1a of this code shall, at that time, be transferred to the classified exempt service system as defined in &sect;29-6-2(g) of this code and be exempted from the state grievance procedures as set forth in &sect;6C-2-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The secretary of the Department of Transportation shall have the authority to designate certain employees&#39; status under the classified civil service system and grievance procedures as may be deemed necessary to comply with federal law, federal regulation, or the requirements for receipt of federal funding or assistance. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Subsection (c) of this section shall not apply to any position appointed by the Governor.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Nothing in this section exempts the Department of Transportation from the provisions of this code prohibiting nepotism, favoritism, discrimination, or unethical practices related to the promotion, transfer, layoff, removal, discipline, and compensation of state employees.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Notwithstanding any provision of this code to the contrary, the Department of Transportation may not provide any probationary employee of the Department of Transportation who is terminated for failing a drug or alcohol screen or refusing a drug or alcohol screen severance pay.</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 11B. DEPARTMENT OF REVENUE.</span></h1>
+	<p class="cs7F45F1B"><span class="csE70BDF83">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. DEPARTMENT OF REVENUE.</span></h2>
+	<p class="cs7F45F1B"><span class="cs7A33E2F1">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk220760877"><span class="csB9803513">&sect;11B-1-8. Eliminating Division of Personnel Exemption for Tax Division personnel.</span></a></h4>
+	<p class="cs53FB8D75"><a name="_Hlk220759163"><span class="csEF05ACC">(a)&nbsp;</span><span class="cs93AB6E8B">Legislative findings and intent</span><span class="csEF05ACC">. &mdash;</span></a></p><p class="cs53FB8D75"><a name="_Hlk220758621"><span class="csEF05ACC">(1) The several exemptions from centralized administration of the state&rsquo;s personnel have created multiple, redundant, inefficient, and overly complex personnel and human resources systems in several parts of state government; and</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Shifting to a centralized oversight system that includes necessary flexibility for all state departments&mdash;instead of a few favored agencies&mdash;would facilitate the streamlining of state government and the proper management of the state executive personnel systems. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b)&nbsp;</span><span class="cs93AB6E8B">Definitions</span><span class="csEF05ACC">. &mdash; As used in this section:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1)&nbsp;&quot;Commissioner&quot; means the Commissioner of the Tax Division of the Department of Revenue or his or her designee; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2)&nbsp;&quot;Division&quot; means the Tax Division of the Department of Revenue.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Beginning on July 1, 2026, the division&rsquo;s authority to establish a classified system for personnel administration under this section is abolished and all personnel within the special merit system created under this section are subject to the provisions of &sect;29-6-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code except that: &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Any and all job classifications, specifications, and compensation structures established by the division, prior to July 1, 2026, by the authority granted under this section, shall transfer to the oversight and administration of the Division of Personnel; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Following the transfer, the Division of Personnel shall not modify the job classifications, specifications, and compensation structures created pursuant to this section prior to July 1, 2026, except with the consent of the Secretary of the Department of Revenue or as provided in &sect;5F-2-9 of this code.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 29. MISCELLANEOUS BOARDS AND OFFICERS.</span></h1>
+	<p class="cs7F45F1B"><span class="csE70BDF83">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 6. DIVISION OF PERSONNEL Systems.</span></h2>
+	<p class="cs7F45F1B"><span class="cs7A33E2F1">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk219300079"><span class="csB9803513">&sect;29-6-1. General purpose. </span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The general purpose of this article is to attract to the service of this state personnel of the highest ability and integrity by the establishment of a system of personnel administration based on merit principles governing the appointment, promotion, transfer, layoff, removal, discipline, classification, compensation, and welfare of its personnel systems employees, and other incidents of state employment. All appointments and promotions to positions in the personnel systems shall be made solely on the basis of merit and fitness.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The personnel system shall be founded on effective performance management principles that set clear goals, provide efficient and effective services for our citizens, and appraise and reward employees for being responsible and performing as required. To that end, the core functions of the Division of Personnel is to attract and retain highly qualified and skilled employees and to serve as a beneficial resource, working collaboratively with all agencies using its services.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk219300857"><span class="csB9803513">&sect;29-6-2. Definition of terms.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">As used in this article, unless the context indicates otherwise, the term:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Administrator&quot; means any person who fills a statutorily created position within or related to an agency or board (other than a board member) and who is designated by statute as the head of the agency or board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Agency&quot; means any authority, board, bureau, commission, division, or other entity of state government, however designated, transferred to or incorporated in one of the departments created in &sect;5F-1-2 of this code, as well as any affiliated county or municipal agency: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That individual districts, offices, regions, sections and units within the same agency, however designated, shall not be considered a separate agency;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Appointing authority&quot; means the executive head of a department or agency who is authorized by statute to appoint employees in the classified or classified-exempt service;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Class&quot; or &quot;class of positions&quot; means one or more positions sufficiently similar in duties, training, experience, and responsibilities, as determined by specifications, that the same qualifications, the same title, and the same schedule of compensation and benefits may be equitably applied to each position in the class;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Class specification&quot; means the official description of a class of positions for the purpose of describing the nature of the work, providing examples of work performed, and identifying the knowledge, skills, and abilities required for the work while stating the generally accepted minimum qualifications required for employment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Classification plan&quot; means the plan by which positions in the classified service have been allocated by class;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Classified-exempt service&quot; means those positions that: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) May be categorized in the Division of Personnel&rsquo;s system by job title, knowledge, skill, abilities, experience, or description;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) May be filled by a department or agency of the state even if the applicant does not meet the knowledge, skill, abilities, experience, or description established by the Division of Personnel; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Are at the will and pleasure of the hiring department or agency;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Are not subject to Division of Personnel pay schedules; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) May not be covered under the Division of Personnel classified system or employed by the Higher Education Policy Commission, Council for Community and Technical College Education, or higher education governing boards, as defined in &sect;18B-1-2 of this code;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Classified service&quot; means those positions which satisfy the definitions for &quot;class&quot; and &quot;classify&quot; and which are covered under the Division of Personnel classified system;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Classify&quot; means the process of ascertaining, analyzing, and evaluating the duties and responsibilities of positions to determine the number and kind of classes existing in the service and to group the positions in classes;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Department&quot; or &quot;departments&quot; means the departments of the executive branch of state government provided in &sect;5F-1-2 of this code;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Director&quot; means the head of the Division of Personnel as appointed by section seven of this article;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Division&quot; means the Division of Personnel; </span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Exempt service&quot; means all positions specifically exempted by statute from administrative oversight of the Division of Personnel;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Policy-making position&quot; means a position in which the person occupying it: (1) Acts as an advisor to or formulates plans for the implementation of broad goals for an administrator or the Governor; (2) is in charge of a major administrative component of the agency; or (3) reports directly and is directly accountable to the administrator or the Governor;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Position&quot; means an authorized and identified group of duties and responsibilities assigned by the hiring authority requiring the full-time or part-time employment of at least one person;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Promotion&quot; means a change in the status of an employee from a position to another position of higher rank as measured by salary range and increased level of duties or responsibilities;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Secretary&quot; means the Secretary of the Department of Administration created in &sect;5F-1-2 of this code;</span></p><p class="cs6421BC5F"><span class="csEF05ACC">&quot;Veteran&quot; means any person who meets the requirements of &sect;6-13-1 of this code.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk219303497"><span class="csF5B7C975">&sect;29-6-4. Classified-exempt and exempt service; exemptions. </span></a></h4>
+	<p class="cs53FB8D75"><a name="_Hlk220180136"><span class="csEF05ACC">(a) The following offices and positions are exempt from the Division of Personnel:</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) All judges, officers, and employees of the judiciary;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) All members, officers, and employees of the Legislature;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) All officers elected by popular vote, those persons appointed to the positions, and all employees of those officers including all employees of the constitutional officers listed in section one, article VII of the constitution of this state; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) All secretaries of departments and employees within the office of a secretary pursuant to &sect;5F-2-2(a)(1) of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Members of boards and commissions and heads of departments appointed by the Governor or heads of departments selected by commissions or boards when expressly exempt by law or board order;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Patients or inmates employed in state institutions;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Persons employed in a professional or scientific capacity to make or conduct a temporary and special inquiry, investigation or examination on behalf of the Legislature or a committee of the Legislature, an executive department, affiliated county or municipal agency, or by authority of the Governor;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) All employees of the office of the Governor, including all employees assigned to the executive mansion; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Temporary employees;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Members and employees of the board of trustees and board of directors or their successor agencies; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Uniformed personnel of the State Police.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The following offices and positions, in addition to those specifically made classified-exempt by statute, are in the classified-exempt service:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) One principal assistant or deputy and one private secretary for each board or commission or head of an agency elected or appointed by the Governor or Legislature, unless specifically provided otherwise by statute;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) All policy-making positions, which includes all Deputy Commissioners within the Department of Health and Department of Human Services, unless specifically provided otherwise by statute;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Part-time professional personnel engaged in professional services without administrative duties; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Any person hired as an attorney beginning July 1, 2022; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Any employee transferred into the classified-exempt service pursuant to any other provision of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The Legislature finds that the holding of political beliefs and party commitments consistent or compatible with those of the Governor contributes in an essential way to the effective performance of and is an appropriate requirement for occupying certain offices or positions in state government, such as the secretaries of departments and the employees within their offices, the heads of agencies appointed by the Governor and, for each such head of agency, a private secretary and one principal assistant or deputy, all employees of the office of the Governor including all employees assigned to the executive mansion, as well as any persons appointed by the Governor to fill policy-making positions, in that those offices or positions are confidential in character and require their holders to act as advisors to the Governor or the Governor&rsquo;s appointees, to formulate and implement the policies and goals of the Governor or the Governor&rsquo;s appointees, or to help the Governor or the Governor&rsquo;s appointees communicate with and explain their policies and views to the public, the Legislature, and the press.</span></p><h4 class="cs89687900">
+		<a name="_Hlk219303854"><span class="csF5B7C975">&sect;29-6-5. Division of Personnel continued; functions.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Division of Personnel is continued within the Department of Administration.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Division of Personnel shall perform the following functions:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Evaluating applicants for appointment or promotion to positions in the classified service subject to the requirements of &sect;5B-1-2, &sect;5B-2-1, &sect;5B-2i-4, &sect;5F-2-8, &sect;5F-2-9, &sect;5F-2-10, and &sect;29-1-1a of this code;(2) Establishing and applying, in consultation with the appointing authorities, a system of classification for positions in the classified service including, as needed, department-specific classifications and positions;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Establishing and applying a system of compensation for positions in the classified service;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Establishing and maintaining records of employment for classified employees;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Advising appointing authorities and supervisory personnel regarding disciplinary matters, the provisions of this article, rules implementing the provisions of this article, and laws and rules affecting human resource management;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Providing training in human resource management and the operation of the state personnel systems;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Assuring compliance with this article and rules implementing the provisions of this article; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Accessing performance and disciplinary records of all classified and classified-exempt employees and serving as a central clearinghouse pertaining to employment eligibility for positions in state service; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Assisting departments and agencies in marketing and advertising available positions in the classified-exempt system; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Assisting departments in creating categories and general job descriptions for positions in the classified-exempt system; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Other functions necessary to the establishment of a system of personnel administration as provided in this article.</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-6. State Personnel Board terminated; transfer of records, assets, equipment, powers, duties, and responsibilities.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The State Personnel Board is terminated, and all of the board&rsquo;s records, assets, equipment, powers, duties, and responsibilities&mdash;including the authority to promulgate or repeal any rule of the board under &sect; 29A-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code&mdash;shall be transferred to the Director of the Division of Personnel. </span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-7. Director of personnel; qualifications; powers and duties.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Secretary of the Department of Administration shall appoint the director. The director shall be a person knowledgeable of the application of the merit principles in public employment as evidenced by the obtainment of a degree in business administration, personnel administration, public administration or the equivalent or adequate administrative experience. The salary for the director is set out in &sect;6-7-2a of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The director shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Consistent with the provisions of this article, administer the operations of the division, allocating the functions and activities of the division among sections as the director may establish;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Maintain systems necessary to carry out the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Plan, evaluate, administer and implement personnel programs and policies in state government and to political subdivisions after agreement by the parties;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Prescribe and provide training and consultation to appointing authorities regarding the employee selection process and employ performance evaluation procedures;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Develop programs to improve efficiency and effectiveness of the public service, including, but not limited to, employee training, development, assistance and incentives, which, notwithstanding any provision of this code to the contrary, may include monetary incentives for recruitment and retention of employees; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Establish pilot programs and other projects for a maximum of one year outside of the provisions of this article, to be included in the annual report;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Establish and apply, in consultation with appointing authorities, department-specific classification and compensation plans for classified employees;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Establish an internship program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Assist the Governor and Secretary of the Department of Administration in general workforce planning and other personnel matters;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Make an annual report to the Governor and Legislature and all other special or periodic reports as may be required;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Assess costs for special or other services; and</span></p><p class="cs53FB8D75"><a name="_2et92p0"></a><span class="csEF05ACC">(12) Improve the effectiveness and efficiency of state government through the development of a skilled workforce by providing: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Classroom and online training programs for employees and managers; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Coaching services to improve the performance of employees, managers, and executives; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Consulting to foster higher competency in critical managerial functions, ensure that public funds are expended judiciously, and promote respectful and satisfying customer service.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-8. Duties of board generally. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-9. Civil service commission abolished; transfer of duties and responsibilities; rule of construction; transfer of employees, equipment, and records; continuation of programs, protections and rules.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk219304207"><span class="csB9803513">&sect;29-6-10. Rule-making authority.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The division may promulgate, adopt, amend, or repeal rules, pursuant to &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, to implement the provisions of this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) For the preparation, maintenance, and revision of a position classification plan for all positions in the classified service, including, as needed, department-specific classifications and positions based upon similarity of duties performed and responsibilities assumed. </span><a name="_Hlk220216154"><span class="csEF05ACC">After each classification plan has been approved by the director and the head of the department, the director shall allocate every position in the classified service to one of the classes in the classified plan. Any employee affected by the allocation of a position to a class shall, after filing with the director of personnel a written request for reconsideration thereof in such manner and form as the director may prescribe, be given a reasonable opportunity to be heard thereon by the director. The interested appointing authority shall be given like opportunity to be heard.</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) For the preparation, maintenance, and revision of a pay plan for all employees in the classified service, including, as needed, department-specific classifications and positions, after consultation with appointing authorities and the state fiscal officers. The pay plan shall become effective only after approval by the Governor. Amendments to the pay plan may be made in the same manner. Each classified employee shall be paid at one of the rates set forth in the pay plan for the class of position in which he or she is employed. The principle of equal pay for equal work shall be followed in the pay plan as established hereby. The Governor or his or her designee shall have authority to restrict the implementation of annual adjustments of the pay plan as necessitated by fiscal constraints. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) For the open competition of applicants for the respective positions in the classified service. The competition may be by examination or by review of the training, experience, and other qualifications required for a position and shall be announced publicly at least five calendar days in advance of the date fixed for the filing of applications therefor, and may be advertised through the press, radio, or other media. The director may, however, in his or her discretion, continue to receive applications and examine candidates long enough to assure a sufficient number of eligible candidates to meet the needs of the service and may add the names of eligible candidates to existing eligible lists in accordance with their respective ratings.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Any veteran shall have an additional five points added to his or her examination or review score: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a disabled veteran is entitled to an additional 10 points, rather than five points. </span></p><p class="cs53FB8D75"><a name="_Hlk220847566"></a><a name="_Hlk220845942"><span class="csEF05ACC">(4) For promotions within the classified service which shall consider the applicant&#39;s qualifications, record of performance, seniority, and his or her score on a written examination, when such examination is practicable.. When any benefit such as a promotion, wage increase, or transfer is to be awarded, or when a withdrawal of a benefit such as a reduction in pay, a layoff, or job termination is to be made, and a choice is required between two or more employees in the classified service as to who will receive the benefit or have the benefit withdrawn, and if some or all of the eligible employees have substantially equal qualifications and records of performance, consideration shall be given to the level of seniority of each of the respective employees as a factor in determining which of the employees will receive the benefit or have the benefit withdrawn. The division in its classification plans may, for designated classifications, permit substitution of qualifying experience for specific educational or training requirements at a rate determined by the director.</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) For layoffs due to business necessity and for recall of laid off employees, consideration shall be given to an employee&#39;s seniority as measured by permanent employment in the classified service or a state agency. In the event that the agency wishes to lay off a more senior employee, the agency must demonstrate that the senior employee cannot perform the job duties of a position held by less senior employees within that agency in the job class or any other equivalent or lower job class for which the senior employee is qualified: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That if an employee refuses to accept a position in a lower job class, such employee shall retain all rights of recall as provided.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) For recall of employees, recall shall be by reverse order of layoff to any job class that the employee has previously held or a lower class in the series within the agency as that job class becomes vacant. An employee will retain his or her place on the recall list for the same period of time as his or her seniority on the date of his or her layoff or for a period of two years, whichever is less. No new employees may be hired for any vacancy in his or her job class or in a lower job class in the series until all eligible employees on layoff are given the opportunity to refuse that job class. An employee shall be recalled into jobs within the county wherein his or her last place of employment is located or within a county contiguous to that county. Any laid-off employee who is eligible for a vacant position shall be notified by certified mail of the vacancy. It is the responsibility of the employee to notify the agency of any change in his or her address.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) When filling vacancies in the classified system the appointing authority shall, for a period of 12 months after the layoff of a permanent classified employee in another agency, give preference to qualified permanent classified employees based on seniority and fitness over all but existing employees of the agency or its facilities. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Employment</span><span class="cs93AB6E8B"> </span><span class="csEF05ACC">of these persons who are qualified and who were permanently employed immediately prior to their layoff shall not supersede the recall rights of employees who have been laid off in such agency or facility.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) For the establishment of lists of eligible candidates for appointment and promotion within the classified service. Eligibility for appointment from any such list shall continue for not longer than three years. An appointing authority shall make his or her selection from the top 20 names on the appropriate lists of eligible candidates or may choose any person scoring at or above the 80th percentile on the examination.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) For the establishment of lists of eligible candidates for preference as provided in subdivision (6) of this section, a list shall be provided according to seniority. An appointing authority shall make the selection of the most senior qualified person: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That eligibility for appointment from any list shall continue not longer than one year and shall cease immediately upon appointment to a classified position.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) For the rejection of candidates within the classified, classified-exempt, and exempt service who fail to comply with reasonable requirements regarding such factors as age, physical condition, character, criminal background, training, or experience, who are addicted to alcohol or narcotics or who have attempted any deception or fraud in connection with an examination.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) For a probationary period not to exceed one year before appointment may be made permanent within the classified service.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) For provisional employment without competitive examination within the classified service when there is no appropriate list of eligible candidates available. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) For the maintenance of records of performance of all employees in the classified service, which may be considered in determining salary increases and decreases provided in the pay plan; as a factor in promotions; and as a factor in suspensions, demotions, dismissals, and transfers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp; (13) For dismissal or reduction in rank or grade only for cause of employees in the classified service. Dismissal or reduction of these employees shall take place only after the person to be dismissed or reduced has been presented with the reasons for the dismissal or reduction stated in writing, and has been allowed a reasonable time to reply thereto in writing, or upon request to appear personally and reply to the appointing authority or his or her designee: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That upon an involuntary dismissal for cause, the employer may require immediate separation from the workplace, or the employee may elect immediate separation. If separation is required by the employer in lieu of any advance notice of dismissal, or if immediate separation is elected by an employee who receives notice of an involuntary dismissal for cause, the employee is entitled to receive severance pay attributable to time the employee otherwise would have worked, up to a maximum of 15 calendar days following separation. Receipt of severance pay does not affect any other right to which the employee is entitled with respect to the dismissal. The statement of reasons for the dismissal and any reply shall be filed as a public record with the director. Notwithstanding the foregoing provisions of this subdivision, a permanent employee shall not be dismissed from the classified service for absenteeism solely due to exhausting all annual leave and sick leave when such use has been due to illness or injury as verified by a physician&#39;s certification or for other extenuating circumstances beyond the employee&#39;s control except when his or her disability is of such a nature as to permanently incapacitate him or her from the performance of the duties of his or her position or renders his or her services unreliable. Upon exhaustion of annual leave and sick leave for the reasons specified herein and with certification by a physician that the employee is temporarily unable to perform his or her duties, a permanent employee shall be granted a medical leave of absence without pay for a period not to exceed six months: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That such employee is not permanently unable to satisfactorily perform the duties of his or her position. Probationary and permanent state employees are eligible for a medical leave of absence without pay for the period of time during which he or she is receiving temporary total disability benefits for a personal injury that occurred in the course of and resulting from state employment.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) For facilitating the efficient hiring, allocation, and assignment of personnel by the departments and agency heads; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) For a program under which annual leave accrued or accumulated by an employee of an agency may, if voluntarily agreed to by the employee, be donated to another designated employee if the other employee has exhausted his or her leave because of a medical emergency: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That none of the leave transferred may be used to qualify for or add to service for any retirement system administered by the State of West Virginia; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) For any other rules, not inconsistent with this article, as may be proper and necessary for its enforcement. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The director shall periodically review the establishment of all classified-exempt positions by the departments and agencies of the state to ensure consistent interpretation of the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The provisions of this section are subject to any modifications contained in &sect;5F-1-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code. The division may include in the rules provided for in this article such provisions as are necessary to conform to regulations and standards of any federal agency governing the receipt and use of federal grants-in-aid by any state agency, anything in this article to the contrary notwithstanding. The director shall see that rules and practices meeting such standards are in effect continuously after the effective date of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Nothing in the rules provided for in this section may conflict with the requirements of &sect;5B-1-2, &sect;5B-2-1, &sect;5B-2i-4, &sect;5F-2-8, &sect;5F-2-9, &sect;5F-2-10, or &sect;29-1-1a of this code.</span><span class="csB9803513"> </span></p><p class="cs7F45F1B"><span class="csB9803513">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-10a. Reduction in work force.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-14. Certification of payrolls; wrongfully withholding certification of payroll.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-16. Records of division.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The records of the division are subject to the Freedom of Information Act in &sect;29B-1-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, of this code and the personal information of employees and applicants are subject to the exemption from disclosure under &sect;29B-1-4(a)(2) of this code. </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-24. Posting of job openings.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Whenever a job opening occurs within the classified service, the appointing authority shall, in addition to any other requirement of law or rule for the posting of job opening notices, at least five calendar days before making an appointment to fill the job opening, post a notice within the building or facility where the duties of the job will be performed and throughout the agency, or through electronic or social media readily available to the public and the employees of the agency. The notice shall state that a job opening has occurred and describe the duties to be performed by a person employed in that position..</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) If a person selected for a posted vacancy within the first 30 calendar days of employment: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) refuses the offer of employment; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) fails to report to work; or </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) resigns or otherwise separates from employment, </span></p><p class="cs53FB8D75"><span class="csEF05ACC">the appointing authority is not required to repost the vacancy prior to another appointment to the position if the appointment is made within 60 calendar days and the selection is made from the pool of eligible applicants from which the first employee was hired.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-25. Implementation; report to Governor and Legislature.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-6-27. Leave donation program.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 49. CHILD WELFARE.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs60287397">&nbsp;</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 10. ELIMINATING the Bureau of Social Services EXEMPTION FROM the DIVISION OF PERSONNEL.</span></h2>
+	<h2 class="cs89687900">
+		<span class="csB9803513">&sect;49-10-101. Legislative findings.</span></h2>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a)&nbsp;</span><span class="cs93AB6E8B">Legislative findings and intent.</span><span class="csEF05ACC"> &ndash;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The several exemptions from centralized administration of the state&rsquo;s personnel have created multiple, redundant, inefficient, and overly complex personnel and human resources systems in several parts of state government; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Shifting to a centralized oversight system that includes necessary flexibility for all state departments&mdash;instead of a few favored agencies&mdash;would facilitate the streamlining of state government and ensure the proper management of the state executive personnel systems. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Beginning on July 1, 2026, the Bureau for Social Service&rsquo;s authority to establish a classified system for personnel administration under this article is abolished and all personnel within the classified system created under this article shall be subject to the provisions of &sect;29-6-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code except that: &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Any and all job classifications, specifications, and compensation structures established by the bureau, prior to July 1, 2026, by the authority granted under this section, shall transfer to the oversight and administration of the Division of Personnel; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Following the transfer, the Division of Personnel shall not modify the job classifications, specifications, and compensation structures created pursuant to this article prior to July 1, 2026, except with the consent of the Secretary of the Department of Human Services or as provided in &sect;5F-2-10 of this code.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-10-102. &nbsp;Bureau for Social Service employees exempt from Division of Personnel.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-10-103. &nbsp;Bureau for Social Service employees no requirement uniformity in pay scale.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><p class="cs2CFA8611"><span class="csEF05ACC">The Clerk of the House of Delegates and the Clerk of the Senate hereby certify that the foregoing bill is correctly enrolled.</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 130.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the House of Delegates</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">		...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 193.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="cs93AB6E8B">				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">Originated in the House of Delegates.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">In effect July 1, 2026.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">				...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 238.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Speaker of the House of Delegates</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">						...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 310.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">President of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="csF5AA9F8B" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">__________</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">	The within is ................................................ this the...........................................</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">Day of ..........................................................................................................., 2026.</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs93FA44A8"><span class="csEF05ACC">				.............................................................</span></p><p class="cs49AF4BA5"><span class="cs93AB6E8B">								Governor</span></p><p class="cs53FB8D75"><span class="cs16A9F08">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

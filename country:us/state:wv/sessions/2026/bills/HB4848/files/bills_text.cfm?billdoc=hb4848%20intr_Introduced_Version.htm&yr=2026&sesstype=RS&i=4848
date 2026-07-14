@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4848 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4848">&laquo; House Bill 4848 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4848'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4848 - Requiring certain disclosures of election expenditures&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4848+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4848"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.csA130ECD1{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4848</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Funkhouser, Hott, and Ridenour</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 27, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;3-8-2 of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;3-8-8a, &nbsp;relating to requiring certain disclosures of election expenditures; clarifying when contributions are required to be disclosed; creating exceptions; clarifying that certain federal entities must make certain state disclosures; requiring disclosure of covered transfers; stating legislative findings; defining terms; providing requirements for disclosure of donations related to the transfer of certain sums of money regarding campaign-related disbursements; requiring certain disclosures be made within 48 hours; specifying information required in the disclosures; clarifying the relationship between covered transfers and other regulated areas of election expenditures; creating criminal penalties; and authorizing rulemaking.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 8. REGULATION AND CONTROL OF ELECTIONS.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;3-8-2. Requirements for reporting independent expenditures.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) In addition to any other reporting required by the provisions of this chapter, any person who makes independent expenditures in an aggregate amount or value in excess of $1,000 during a calendar year shall file a disclosure statement, according to the requirements of &sect;3-8-5 of this code, that contains all of the following information:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The name of the person making the expenditure; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The name of any person sharing or exercising direction or control over the activities of the person making the expenditure; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The name of the custodian of the books and accounts of the person making the expenditure;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) If the person making the expenditure is an entity, the principal place of business of the partnership, corporation, committee, association, organization, or group which made the expenditure;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The amount of each independent expenditure during the period covered by the statement and the name of the person to whom the expenditure was made;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The elections to which the independent expenditure pertains, the names, if known, of the candidates referred to or to be referred to therein, whether the expenditure is intended to support or oppose the identified candidates, and the amount of the total expenditure reported pursuant to subdivision (5) of this subsection spent to support or oppose each of the identified candidates;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The name and address of any person who contributed a total of more than $1,000 &nbsp;</span><span class="cs46AE26E6">to the entity making the expenditure</span><span class="csEF05ACC"> between the first day of the preceding calendar year, and the disclosure date: </span><span class="cs68EFC440">and whose contributions were made for the purpose of furthering the expenditure</span><span class="csEF05ACC"> </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That any contribution placed into a separate segregated account that is not used for campaign-related expenditures, any money received in the ordinary course of any trade or business, or any contribution that is explicitly made for a nonpolitical purpose is not required to be reported;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) With regard to the contributors required to be listed pursuant to subdivision (7) of this subsection the statement shall also include:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The month, day, and year that the contributions of any single contributor exceeded $1,000;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) If the contributor is a political action committee, the name and address the political action committee registered with the Secretary of State, county clerk, or municipal clerk;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) If the contributor is an individual, the name and address of the individual, his or her occupation, the name and address of the individual&rsquo;s current employer, if any, or, if the individual is self-employed, the name and address of the individual&rsquo;s business, if any;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) If the contributor is an entity other than a registered political action committee subject to the requirements of this article or an individual, the information required by &sect;3-8-8a(e) of this code;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(D)</span><span class="cs46AE26E6">(E)</span><span class="csEF05ACC"> A description of the contribution, if other than money; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(E)</span><span class="cs46AE26E6">(F)</span><span class="csEF05ACC"> The value in dollars and cents of the contribution; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) A certification that such independent expenditure was not made in cooperation, consultation, or concert, with, or at the request or suggestion of, any candidate or any authorized committee or agent of such candidate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any person who makes a contribution for the purpose of funding an independent expenditure under this subsection shall, at the time the contribution is made, provide his or her name, address, occupation, his or her current employer, if any, or, if the individual is self-employed, the name of his or her business, if any, to the recipient of the contribution.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The Secretary of State shall expeditiously prepare indices setting forth, on a candidate-by-candidate basis, all independent expenditures separately, made by, on behalf of, for, or against each candidate, as reported under this subsection, and shall periodically publish such indices on a timely pre-election basis.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d)(1) Any person or political committee that makes or contracts to make independent expenditures aggregating $5,000 or more for any statewide, legislative, or multicounty judicial candidate, or $500 or more for any county office candidate, single-county judicial candidate, committee supporting or opposing a candidate on the ballot in more than one county, or any municipal candidate on a municipal election ballot, after the 15th day, but more than 12 hours before the date of an election, shall file a report on a form prescribed by the Secretary of State describing the expenditures within 24 hours: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a person making expenditures for any statewide or legislative candidate on or after the 15th day, but more than 12 hours before the day of any election meeting the criteria of this section, but which are subject to the disclosure requirements of &sect;3-8-2b of this code, shall report such expenditures in accordance with the requirements of &sect;3-8-2b of this code and may not file the report otherwise required by this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Any person who files a report under subdivision (1) of this subsection shall file an additional report within 24 hours after each time the person makes or contracts to make independent expenditures aggregating an additional $5,000 or more for any statewide, legislative, or multicounty judicial candidate, or $500 with respect to the same election, for any county office, single-county judicial candidate, committee supporting or opposing a candidate on the ballot in more than one county, or any municipal candidate on a municipal election ballot, as that to which the initial report relates.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e)(1) A person, including a political committee, who makes or contracts to make independent expenditures aggregating $10,000 or more at any time, up to and including the 15th day before the date of an election, shall file a report on a form prescribed by the Secretary of State describing the expenditures within 48 hours.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Any person who files a report under subdivision (1) of this subsection shall file an additional report within 48 hours after each time the person makes or contracts to make independent expenditures aggregating an additional $10,000 with respect to the same election as that to which the initial report relates.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Any communication paid for by an independent expenditure must include a clear and conspicuous public notice that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Clearly states that the communication is not authorized by the candidate or the candidate&rsquo;s committee; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Clearly identifies the person making the expenditure: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That if the communication appears on or is disseminated by broadcast, cable or satellite transmission, the statement required by this subsection must be both spoken clearly and appear in clearly readable writing at the end of the communication.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Any person who has spent a total of $5,000 or more for the direct costs of purchasing, producing, or disseminating electioneering communications during any calendar year shall maintain all financial records and receipts related to such expenditure for a period of five years following the filing of a disclosure pursuant to &sect;3-8-2b of this code and, upon request, shall make such records and receipts available to the Secretary of State or county clerk for the purpose of an audit as provided in &sect;3-8-7 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Any person who willfully fails to comply with this section is guilty of a misdemeanor and, upon conviction thereof, shall be fined not less than $500, or confined in jail for not more than one year, or both fined and confined.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i)(1) Any person or political committee who is required to file a statement under this section shall file the statement electronically in accordance with rules promulgated by the Secretary of State.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Secretary of State shall make any document filed electronically, pursuant to this subsection, accessible to the public on the Internet not later than 24 hours after the document is received by the secretary.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) In promulgating a rule under this subsection, the secretary shall provide methods, other than requiring a signature on the document being filed, for verifying the documents covered by the rule. Any document verified by such methods shall be treated for all purposes, including penalties for perjury, in the same manner as a document verified by signature.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) This section does not apply to candidates for federal office.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) The Secretary of State may propose emergency and legislative rules for legislative approval in accordance with &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. </span><span class="cs46AE26E6">However, this section does apply to any federal political action committee that makes state level independent expenditures or engages in state level electioneering communications.</span></p><p class="cs7F45F1B"><span class="csF3C8A5A3">&sect;3-8-8A. Disclosure requirements for covered transfers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) This section may be known as the &quot;Smear Merchant Transparency and Accountability Act&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Legislature finds that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) An informed public is critical for the government of this state to function successfully as a true democracy;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) There has been a dramatic influx of &quot;dark money&quot; political advertising in recent election cycles that make it difficult or sometimes impossible for the public to determine who is funding campaign-related disbursements for or against certain candidates;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The United States Supreme Court has found that campaign-related disbursements are protected speech under the First Amendment and, therefore, states have a limited ability to restrict campaign-related disbursements;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The United States Supreme Court has found, on the other hand, that requiring reasonable disclosures does not violate the First Amendment because the disclosure requirements do not restrict the speech, but rather help inform the public about the speech;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) It is now common practice for the money used to fund campaign-related disbursements to be transferred through multiple entities in an effort to sidestep state and federal campaign finance disclosure laws, thereby creating the so-called dark money;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The prevalence of dark money funding political advertising, combined with the increase in dubious and misleading names for these organizations, serves to potentially mislead the voting public by eliminating the public&rsquo;s ability to know who funded the communication and, therefore, who is exercising their First Amendment protected speech; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Requiring greater disclosures of covered transfers, as defined in this section, will serve the state&rsquo;s interest and the public&rsquo;s interest in shining light on dark money and ensuring that the voters of this state will know who pays for campaign-related disbursements made by these currently unknown organizations.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) For the purposes of this section:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Affiliate&quot; means two or more persons where: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The governing instrument of one person is required to be bound by decisions of the other person; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The governing board of one person includes individuals who are specifically designated representatives of the other person or are members of the governing board, officers or paid executive staff members of the other person, or whose service on the governing board is contingent upon the approval of the other person; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The person is chartered by the other person;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Campaign-related disbursement&quot; means an independent expenditure consisting of a public communication or an electioneering communication, as those terms are defined in this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Covered transfer&quot; means any transfer or payment of funds by a person to another person if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The person making the transfer designates, requests or suggests that the amounts be</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">used for one or more campaign-related disbursements or for making a transfer to another person for the purpose of making or paying for one or more campaign-related disbursements; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The person made the transfer or payment in response to a solicitation or other request for donation or payment for the making of or paying for one or more campaign-related disbursements or for making a transfer to another person for the purpose of making or paying for one or more campaign-related disbursements; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The person engaged in discussions with the recipient of the transfer or payment regarding the making of or paying for campaign-related disbursements or donating or transferring any amount of that transfer or payment to another person for the purpose of making or paying for one or more campaign-related disbursements;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Covered transfer&quot; does not include: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A disbursement made by a person in the ordinary course of any trade or business or in the form of investment; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A disbursement made by a person if the person prohibited, in writing, the use of that disbursement for campaign-related disbursements and the recipient of the funds agreed to follow the prohibition and deposited the disbursement in an account which is segregated from any account used to make campaign-related disbursements; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Person&quot; means an individual, corporation, partnership, committee, association and any other legal entity, organization or group of individuals, including, but not limited to, an organization described in Section 501(c) of the Internal Revenue Code of 1986, and any political organization under Section 527 of the Internal Revenue Code of 1986, other than a political committee with an account established under this article that complies with the contribution limits and source prohibitions of this article with respect to accounts established for that purpose.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) When a person receives a covered transfer of $10,000 or more, the recipient shall notify the contributor that the contributor must submit the information required in &sect;3-8-8a(d) of this code within 48 hours of the transfer: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That if the contributor and the recipient of the covered transfer are affiliates then this subsection only applies to transfers of $50,000 or more. The recipient of the covered transfer may not make a covered transfer of funds or a campaign-related disbursement until it receives the information required by &sect;3-8-8a(d) of this code from the contributor. If the contributor of the covered transfer fails to send the information required by &sect;3-8-8a(d) of this code, then the recipient shall return the covered transfer funds to the contributor or immediately transfer the funds into another account that is not used to campaign-related expenditures in this state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) All persons making covered transfers that meet the thresholds set forth in &sect;3-8-8a(c) of this code, shall submit within 48 hours of the covered transfer the following information to the recipient:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(</span><span class="cs46AE26E6">1) The name and address of any person who contributed a total of more than the maximum contribution amount that an individual may make to a political candidate, as stated in &sect;11-15-12 of this code, to the person making the covered transfer within the previous 12 months; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The month, day, and year that the contributions of any single contributor exceeded the maximum contribution amount that an individual may make to a political candidate, as stated in &sect;11-15-12 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) If the person is a political action committee, the name and address the political action committee registered with the Secretary of State, county clerk or municipal clerk;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) If the person is an individual, the person&rsquo;s name, occupation, employer name, if any, and if the individual is self-employed, the name of the individual&rsquo;s business and address of the business; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) A description of the contribution, if other than money, and the value in dollars and cents of the contribution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) If a person makes a campaign-related disbursement that is an independent expenditure regulated by &sect;11-15-2 of this code, then it shall disclose in the filing required by &sect;11-15-2 of this code, all of the information required by &sect;11-15-2 of this code and all of the information</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">received pursuant to &sect;3-8-8a(c) and &sect;3-8-8a(d) of this code from any covered transfer received in the 24 months prior to the campaign-related disbursement. If a person makes a campaign-related disbursement that is an electioneering communication regulated by &sect;11-15-2 of this code, then it shall disclose in the filing required by &sect;11-15-2 of this code, all of the information required by &sect;11-15-2 of this code and all of the information received pursuant to &sect;3-8-8a(c), and &sect;3-8-8a(d) of this code from any covered transfer received in the 24 months prior to the campaign-related disbursement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Any person who willfully fails to comply with this section is guilty of a misdemeanor and, upon conviction, shall be fined not less than $1,000 and not more than $100,000, or confined in jail for not more than one year, or both fined and confined.</span></p><p class="cs53FB8D75"><span class="csA130ECD1">(g)</span><span class="cs46AE26E6"> (h) The Secretary of State may promulgate emergency rules and propose legislative rules, in accordance with &sect;29A-1-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, to implement the provisions of this section.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to require disclosure of dark money political expenditures to allow the public to know who is paying for political advertisements.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

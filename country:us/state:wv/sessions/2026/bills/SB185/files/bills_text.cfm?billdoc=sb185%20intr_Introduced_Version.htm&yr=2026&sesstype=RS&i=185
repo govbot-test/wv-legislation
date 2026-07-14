@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 185 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=185">&laquo; Senate Bill 185 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 185'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb185 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=185" title="HTML  - Committee Substitute (1)
+ - Senate Bill 185">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 185 - Allowing appointment of more than one chief deputy by sheriff&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb185+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=185"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 185</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Helton</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 14, 2026; referred<br/>to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;6-3-1 of the Code of West Virginia, 1931, as amended, relating to appointment of more than one chief deputy by the sheriff.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 3. DEPUTY OFFICERS AND CONSERVATORS OF THE PEACE.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;6-3-1. Appointment of deputies and local conservators of the peace; powers and duties; compensation; vacating appointment of deputy sheriff; removal of conservators.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) (1) The clerk of the Supreme Court of Appeals, or of any circuit, criminal, common pleas, intermediate or county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC">, or of any tribunal established by law in lieu thereof, may, with the consent of the court, or such tribunal, duly entered of record, appoint any person or persons his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> deputy or deputies.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A sheriff, surveyor of lands, or assessor may, with the consent of the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> duly entered of record, appoint any person or persons his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> deputy or deputies:</span><span class="cs46AE26E6"> </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That the sheriff may have and appoint more than one chief deputy by and with the consent of the county commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A sheriff, when in the opinion of the judge of the circuit court the public interest requires it, may, with the assent of </span><span class="cs68EFC440">said court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the commission</span><span class="csEF05ACC">, duly entered of record, appoint any person or persons his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> deputy or deputies to perform any temporary service or duty.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Each deputy so appointed shall take the same oath of office required of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> principal, and may, during his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> continuance in office, perform and discharge any of the official duties of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> principal, and any default or misfeasance in office of the deputy shall constitute a breach of the conditions of the official bond of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> principal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) A sheriff in any county in which there are more than four deputies shall devote his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> full time to the performance of the services or duties required by law of </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> sheriff, and </span><span class="cs68EFC440">he</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the sheriff</span><span class="csEF05ACC"> </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not receive any compensation or reimbursement, directly or indirectly, from any person, firm or corporation for the performance of any private or public services or duties: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That any </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> sheriff may retain or make any investment and receive income therefrom, unless </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> investment is otherwise prohibited by law or will impair his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> independence of judgment in the exercise of, or might reasonably tend to conflict with the proper discharge of, the services or duties of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> office. A sheriff in any county in which there are four or fewer deputies, or a deputy sheriff in any county irrespective of the number of deputies, need not devote his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> full time to the services or duties of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> office as sheriff or his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> employment as deputy sheriff, as the case may be; but any such sheriff or deputy sheriff </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not engage in any business or transaction, accept other employment or make any investment which is otherwise prohibited by law or which will impair his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> independence of judgment in the exercise of, or might reasonably tend to conflict with the proper discharge of, the services or duties of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> office as sheriff or his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> employment as deputy sheriff, as the case may be. A sheriff and his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> deputies in any county, irrespective of the number of deputies, </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> receive for the performance of their public services and duties no compensation or remuneration except such as may be regularly provided and paid out of public funds to the amount and in the manner provided by law. No sheriff or deputy sheriff in any county, irrespective of the number of deputies, may receive, directly or indirectly, any gift or donation from any person, firm or corporation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Except as hereinafter expressly provided by subsection (b) of this section no sheriff </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> appoint or continue the appointment of any deputy contrary to the provisions hereof. Any sheriff or deputy sheriff who </span><span class="cs68EFC440">shall violate</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">violates</span><span class="csEF05ACC"> any of the provisions of this section </span><span class="cs68EFC440">shall be</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">is</span><span class="csEF05ACC"> guilty of a misdemeanor, and, upon conviction thereof, shall be fined not less than $500 nor more than $5,000, or confined in jail not to exceed one year, or both, </span><span class="cs68EFC440">in the discretion of the court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">fined and confined</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Circuit courts </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> have jurisdiction in equity and mandamus, and the Supreme Court of Appeals </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> have jurisdiction in mandamus, upon the filing of a petition by the prosecuting attorney, the Attorney General, or any three or more citizens of the county, to require any sheriff and the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> to vacate the appointment of any deputy, the appointment of which is made or continued in violation of the provisions hereof. Any such proceeding may be instituted and prosecuted by the Attorney General either in the circuit court of Kanawha county or in the county for which </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> appointment was made.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) (1) Any resident or group of residents of any unincorporated community, as hereinafter defined, may petition the sheriff for the appointment of a local conservator of the peace and </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> sheriff, when in his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> opinion the public interests require it, may with the assent of </span><span class="cs68EFC440">said</span><span class="csEF05ACC"> </span><span class="cs68EFC440">county court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the commission</span><span class="csEF05ACC"> and the judge of the circuit court duly entered of record, either in term or vacation of any such court, appoint any person or persons a local conservator or conservators of the peace to perform the duties of a conservator of the peace outside of any incorporated city, town or village. No person </span><span class="cs68EFC440">shall </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> be appointed such local conservator of the peace who has not been a bona fide resident and taxpayer of the county for at least one year prior to his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> appointment. </span><span class="cs68EFC440">Such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">The</span><span class="csEF05ACC"> local conservator of the peace during his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> continuance in office, may perform and discharge any of the official duties of the sheriff, subject nevertheless to the provisions of this section. No local conservator so appointed </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> be subject to the direction or control of any person other than his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> principal and he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> </span><span class="cs68EFC440">shall </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not perform any services or duties, either private or public, except the duties required by law of conservators of the peace pursuant to the provisions hereof, for any person, firm, or corporation. No such local conservator </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> be entitled to collect or receive any fees provided by law to be paid to the sheriff or to a deputy sheriff, but all fees provided by law for the sheriff, when such duties and services are rendered by </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator, shall be paid to the sheriff as regular collections of the sheriff&#39;s office. The local conservator shall be paid for the public services performed by him </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> a salary of not less than $75 per month out of the county treasury from a fund to be paid into </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> treasury by a resident or the residents of the community for which he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> is appointed, for the sole purpose of compensating </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator or conservators and no such local conservator </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> receive any other compensation, directly or indirectly, from any person, firm, or corporation, for any private or public service, except the salary payable to him </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> for his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> public services and duties and from such fund, except that he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> shall be entitled to witness and mileage fees when a witness in a court of record. Each local conservator so appointed shall take the same oath of office required of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> principal and any default or misfeasance in the office of </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator </span><span class="cs68EFC440">shall constitute</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">constitutes</span><span class="csEF05ACC"> a breach of the conditions of the official bond of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> principal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) When the sheriff </span><span class="cs68EFC440">shall have</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">has</span><span class="csEF05ACC"> been petitioned for the appointment of a local conservator and has determined that the appointment is proper, he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> shall select the person whom he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> proposes to have appointed </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> conservator and shall notify the county </span><span class="cs68EFC440">court </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> of the community for which </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> conservator is to be appointed and the name of the person proposed for </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">that</span><span class="csEF05ACC"> appointment. The county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> shall thereupon cause notice that the sheriff has recommended the appointment of the person named as conservator for the community named to be published as a Class II legal advertisement in compliance with the provisions of article three, chapter fifty-nine of this code, and the publication area for such publication shall be the county. The notice shall designate a day not less than five days after the date of the last publication when the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> will act upon the petition and recommendation. Neither the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> nor the judge of the circuit court </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> assent and approve the appointment of </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator until </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> publication has been made. The costs of the publication shall be paid by the person or persons petitioning for the appointment of the conservator.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">No local conservator </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> be appointed except it be made to appear to the satisfaction of the county </span><span class="cs68EFC440">cour</span><span class="csEF05ACC">t </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> and the judge of the circuit court that because of the lack of sufficient funds, geographical location of the unincorporated community for which </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> conservator is to be appointed, or other good reason, the sheriff and his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> regular deputies and the constables of the county are not sufficient to afford proper local policing of </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> community and that the person or persons moving for the appointment of </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator have made satisfactory arrangements to compensate him </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> for his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> services as </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator of the peace.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) </span><span class="cs68EFC440">Such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">The</span><span class="csEF05ACC"> local conservator of the peace </span><span class="cs68EFC440">shall have</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may exercise</span><span class="csEF05ACC"> all the powers and duties of a regularly appointed deputy sheriff except that he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not execute any civil process except such process as may be necessary to bring parties before the court in any action at law or suit in equity and subpoenas for witnesses within the unincorporated community for which he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> is appointed and within a distance of one mile outside the boundaries thereof, except as hereinafter expressly provided, but </span><span class="cs46AE26E6">he or she </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not participate in any strike, unemployment boycott, or other industrial or labor dispute, nor serve any court process of any character relating thereto. He </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> shall act as </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator only in the unincorporated community for which he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> is appointed, and within a distance of one mile from the boundaries thereof as fixed by the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC">: </span><span class="cs93AB6E8B">Provided, </span><span class="csB65271">however,</span><span class="csEF05ACC"> That the authority of one local conservator </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not extend into any other unincorporated community for which another local conservator is appointed and acting, except as otherwise expressly provided by subdivision (6) of this subsection, except that in fresh pursuit he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> may effect arrests anywhere in the county. He </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> may also exercise the powers of a regularly appointed deputy anywhere in the county when required to guard or assist in guarding a payroll, or any other property of value in transit to or from the unincorporated community for which he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> is appointed. Any person arrested by </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator shall, with all convenient speed, be turned over to the sheriff, or one of his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> regular deputies, or to a regular constable of the county to be dealt with according to law, and his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> authority for that purpose shall be coextensive with the county.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Any local conservator appointed to perform the duties of conservator of the peace shall be a public officer and the payment, or contribution to the payment of compensation of </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator </span><span class="cs68EFC440">shal</span><span class="csEF05ACC">l </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not constitute the person, firm or corporation making </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> payment or contribution the employer of such local conservator and no person, firm or corporation paying, or contributing to the payment of compensation to such local conservator shall be answerable in law or in equity for any damages to person or property resulting from any official act of such local conservator.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) No person appointed such local conservator </span><span class="cs68EFC440">shall thereby be entitled to</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> carry weapons, but </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator may carry weapons when he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> shall </span><span class="cs68EFC440">be</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">is</span><span class="csEF05ACC"> duly licensed and </span><span class="cs68EFC440">shall have</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">has</span><span class="csEF05ACC"> given bond as provided by &sect;61-7-2 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Not more than one local conservator of the peace </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> be appointed, to perform the duties of conservator of the peace, for each 2,500 inhabitants of the county as ascertained by the last regular decennial census after deducting the number of inhabitants of the county residing in the incorporated cities, towns and villages in </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> county. Not more than one local conservator </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> be appointed for any unincorporated community unless the population thereof </span><span class="cs68EFC440">exceed</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">exceeds</span><span class="csEF05ACC"> 1,500 people and in such case not more than two conservators </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> be appointed for </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">that</span><span class="csEF05ACC"> community.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The phrase &quot;unincorporated community&quot; within the meaning of this section </span><span class="cs68EFC440">shall mean</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">means</span><span class="csEF05ACC"> any center of population wherein 50 or more persons reside within an area of not more than one square mile.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> and the judge of the circuit court in approving the appointment of a local conservator shall enter of record an order making such appointment and shall show therein the necessity for the appointment, the person or persons on whose motion the appointment is made, the arrangement for the payment of compensation to </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator, the unincorporated community or communities, for which the appointment is made, including the general boundary of each unincorporated community for which he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> is appointed.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) No local conservator </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> act as an election official or remain in, about or near any voting place or place of political convention, further than is necessary for him </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> to promptly cast his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> vote and retire from the voting place.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Any local conservator violating any of the provisions of subdivisions (3) and (9) of this subsection </span><span class="cs68EFC440">shall be</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">is</span><span class="csEF05ACC"> guilty of a misdemeanor, and, upon conviction thereof, shall be fined not less than $50 nor more than $300, or be confined in the county jail not more than six months, or both </span><span class="cs46AE26E6">fined and confined</span><span class="csEF05ACC">, </span><span class="cs68EFC440">in the discretion of the court</span><span class="csEF05ACC">; and </span><span class="cs68EFC440">it shall be the duty of</span><span class="csEF05ACC"> the sheriff and the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> </span><span class="cs68EFC440">to</span><span class="csEF05ACC"> shall forthwith revoke his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> appointment irrespective of any criminal prosecution. A proceeding in mandamus or injunction shall lie in the circuit court and a proceeding in mandamus shall lie in the Supreme Court of Appeals at the instance of the prosecuting attorney, the Attorney General, or of any three or more citizens of the community for which </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> conservator is appointed, to require the performance of such that duty by the sheriff and the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) </span><span class="cs68EFC440">Such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">The</span><span class="csEF05ACC"> local conservator shall serve during the joint will and pleasure of the sheriff and the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> and his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> appointment may be revoked by order entered of record by the county </span><span class="cs68EFC440">cour</span><span class="csEF05ACC">t </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> either with or without the assignment of cause therefor.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">A local conservator may be removed by the judge of the circuit court, either in term or vacation, for drunkenness, gross immorality, incompetence, neglect of duty, or other good cause, upon the petition of three or more residents of the community for which he </span><span class="cs46AE26E6">or she</span><span class="csEF05ACC"> has been appointed. The petition shall set forth the cause or causes for which </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> removal is asked and shall show that demand for removal has been made of the sheriff and the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> and that the sheriff and the county </span><span class="cs68EFC440">court</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">commission</span><span class="csEF05ACC"> have failed to remove the local conservator. At least three copies of the petition shall be filed, and upon the filing of the petition the judge shall fix a time and place for a hearing thereon, which time </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> not be less than 10 days after the filing of the petition, and shall cause a copy thereof to be served upon the sheriff and </span><span class="cs68EFC440">such</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the</span><span class="csEF05ACC"> local conservator at least 10 days before the hearing thereon.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to allow the appointment of more than one chief deputy by the sheriff.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>
