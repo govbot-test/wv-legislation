@@ -1,0 +1,525 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5126 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5126">&laquo; House Bill 5126 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5126'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5126 - To make it explicit that both the lottery fund and the excess lottery fund can be utilized for early childhood education throughout West Virginia&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5126+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5126"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><div style="width:3.25pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	<span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5126</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Young</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 03, 2026; referred to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;18-5-44 of the Code of West Virginia, 1931, as amended, relating to early childhood education programs; and providing that funds from the Lottery Education Fund, the State Lottery fund, and the Excess Lottery Fund be used for childhood education in the state.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 5. COUNTY BOARD OF EDUCATION.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5-44. &nbsp;Early childhood education programs.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) For the purposes of this section, an &quot;early childhood education program&quot; means a program created under this section for children who have attained the age of four prior to September 1 of the school year in which the children enter the program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) For the purposes of this section beginning in the school year 2018-2019, an &quot;early childhood education program&quot; means a program created under this section for children who have attained the age of four prior to July 1 of the school year in which the children enter the program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Findings. &ndash;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Among other positive outcomes, early childhood education programs have been determined to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Improve overall readiness when children enter school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Decrease behavioral problems;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Improve student attendance;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Increase scores on achievement tests;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Decrease the percentage of students repeating a grade; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Decrease the number of students placed in special education programs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Quality early childhood education programs improve school performance and low-quality early childhood education programs may have negative effects, especially for at-risk children;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) West Virginia has the lowest percentage of its adult population 25 years of age or older with a bachelor&#39;s degree and the education level of parents is a strong indicator of how their children will perform in school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) During the 2006-2007 school year, West Virginia ranked 39th among the 50 states in the percentage of school children eligible for free and reduced lunches and this percentage is a strong indicator of how the children will perform in school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) For the school year 2008-2009, 13,135 students were enrolled in prekindergarten, a number equal to approximately 63 percent of the number of students enrolled in kindergarten;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Excluding projected increases due to increases in enrollment in the early childhood education program, projections indicate that total student enrollment in West Virginia will decline by one percent, or by approximately 2,704 students, by the school year 2012-2013;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) In part, because of the dynamics of the state aid formula, county boards will continue to enroll four-year-old students to offset the declining enrollments;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) West Virginia has a comprehensive kindergarten program for five-year-olds, but the program was established in a manner that resulted in unequal implementation among the counties, which helped create deficit financial situations for several county boards;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Expansion of current efforts to implement a comprehensive early childhood education program should avoid the problems encountered in kindergarten implementation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Because of the dynamics of the state aid formula, counties experiencing growth are at a disadvantage in implementing comprehensive early childhood education programs; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) West Virginia citizens will benefit from the establishment of quality comprehensive early childhood education programs.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) County boards shall provide early childhood education programs for all children who have attained the age of four prior to September 1 of the school year in which the children enter the early childhood education program. These early childhood education programs shall provide at least 48,000 minutes annually and no less than 1,500 minutes of instruction per week.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Beginning in the school year 2018-2019, county boards shall provide early childhood education programs for all children who have attained the age of four prior to July 1 of the school year in which the children enter the early childhood education program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The program shall meet the following criteria:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) It shall be voluntary, except that, upon enrollment, the provisions of section one-a, article eight of this chapter apply to an enrolled student, subject to subdivision (4) of this subsection;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) It shall be open to all children meeting the age requirement set forth in this section; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) It shall provide no less than 1,500 minutes of instruction per week, in a full-day program with at least 48,000 minutes of instruction annually; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) It shall permit a parent of an enrolled child to withdraw the child from that program by notifying the district in writing. &nbsp;A child withdrawn under this section is not subject to the attendance provisions of this chapter until that child again enrolls in a public school in this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Enrollment of students in Head Start, or in any other program approved by the state superintendent as provided in this section, may be counted toward satisfying the requirement of subsection (c) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) For the purposes of implementation financing, all counties are encouraged to make use of funds from existing sources, including:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Federal funds provided under the Elementary and Secondary Education Act pursuant to 20 U. S. C. &sect;6301, </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">.;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Federal funds provided for Head Start pursuant to 42 U. S. C. &sect;9831, </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">.;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Federal funds for temporary assistance to needy families pursuant to 42 U. S. C. &sect;601, </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">.;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Funds provided by the School Building Authority pursuant to &sect;18-9D-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) In the case of counties with declining enrollments, funds from the state aid formula above the amount indicated for the number of students actually enrolled in any school year; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Any other public or private funds.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Each county board shall develop a plan for implementing the program required by this section. &nbsp;The plan shall include the following elements:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An analysis of the demographics of the county related to early childhood education program implementation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) An analysis of facility and personnel needs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Financial requirements for implementation and potential sources of funding to assist implementation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Details of how the county board will cooperate and collaborate with other early childhood education programs including, but not limited to, Head Start, to maximize federal and other sources of revenue;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Specific time lines for implementation; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Any other items the state board may require by policy.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) A county board shall submit its plan to the Secretary of the Department of Human Services. &nbsp;The secretary shall approve the plan if the following conditions are met:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The county board has maximized the use of federal and other available funds for early childhood programs; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The county board has provided for the maximum implementation of Head Start programs and other public and private programs approved by the state superintendent pursuant to the terms of this section; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The secretary finds that, if the county board has not met one or more of the requirements of this subsection, the county board has acted in good faith and the failure to comply was not the primary fault of the county board. &nbsp;Any denial by the secretary may be appealed to the circuit court of the county in which the county board is located.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) The county board shall submit its plan for approval to the state board. &nbsp;The state board shall approve the plan if the county board has complied substantially with the requirements of subsection (g) of this section and has obtained the approval required in subsection (h) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) Every county board shall submit its plan for reapproval by the Secretary of the Department of Human Services and by the state board at least every two years after the initial approval of the plan and until full implementation of the early childhood education program in the county. &nbsp;As part of the submission, the county board shall provide a detailed statement of the progress made in implementing its plan. &nbsp;The standards and procedures provided for the original approval of the plan apply to any reapproval.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) A county board may not increase the total number of students enrolled in the county in an early childhood program until its program is approved by the Secretary of the Department of Human Services and the state board.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) The state board annually may grant a county board a waiver for total or partial implementation if the state board finds that all of the following conditions exist:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The county board is unable to comply either because:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) It does not have sufficient facilities available; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) It does not and has not had available funds sufficient to implement the program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The county has not experienced a decline in enrollment at least equal to the total number of students to be enrolled; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Other agencies of government have not made sufficient funds or facilities available to assist in implementation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Any county board seeking a waiver shall apply with the supporting data to meet the criteria for which they are eligible on or before March 25 for the following school year. The state superintendent shall grant or deny the requested waiver on or before April 15 of that same year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o) The provisions of &sect;18-5-18 (b), (c) and (d) of this code relating to kindergarten apply to early childhood education programs in the same manner in which they apply to kindergarten programs.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) Except as required by federal law or regulation, no county board may enroll students who will be less than four years of age prior to September 1 for the year they enter school.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(q) Except as required by federal law or regulation, beginning in the school year 2018-2019, no county board may enroll students who will be less than four years of age prior to July 1 for the year they enter school.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(r) Neither the state board nor the state department may provide any funds to any county board for the purpose of implementing this section unless the county board has a plan approved pursuant to subsections (h), (i) and (j) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(s) The state board shall promulgate a rule in accordance with the provisions of &sect;29A-3B-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code for the purposes of implementing the provisions of this section. &nbsp;The state board shall consult with the Secretary of the Department of Human Services in the preparation of the rule. &nbsp;The rule shall contain the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Standards for curriculum;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Standards for preparing students;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Attendance requirements;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Standards for personnel; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Any other terms necessary to implement the provisions of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(t) The rule shall include the following elements relating to curriculum standards:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A requirement that the curriculum be designed to address the developmental needs of four-year-old children consistent with prevailing research on how children learn;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A requirement that the curriculum be designed to achieve long-range goals for the social, emotional, physical and academic development of young children;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A method for including a broad range of content that is relevant, engaging and meaningful to young children;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) A requirement that the curriculum incorporate a wide variety of learning experiences, materials and equipment, and instructional strategies to respond to differences in prior experience, maturation rates and learning styles that young children bring to the classroom;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) A requirement that the curriculum be designed to build on what children already know in order to consolidate their learning and foster their acquisition of new concepts and skills;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) A requirement that the curriculum meet the recognized standards of the relevant subject matter disciplines;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) A requirement that the curriculum engage children actively in the learning process and provide them with opportunities to make meaningful choices;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) A requirement that the curriculum emphasize the development of thinking, reasoning, decision making and problem-solving skills;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) A set of clear guidelines for communicating with parents and involving them in decisions about the instructional needs of their children; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) A systematic plan for evaluating program success in meeting the needs of young children and for helping them to be ready to succeed in school.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp; (u) After the school year 2012-2013, on or before July 1 of each year, each county board shall report the following information to the Secretary of the Department of Human Services and the state superintendent:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Documentation indicating the extent to which county boards are maximizing resources by using the existing capacity of community-based programs, including, but not limited to, Head Start and child care; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) For those county boards that are including eligible children attending approved, contracted community-based programs in their net enrollment for the purposes of calculating state aid pursuant to &sect;18-9A-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, documentation that the county board is equitably distributing funding for all children regardless of setting.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(v) Notwithstanding any other provision of this code to the contrary, funds from the Lottery Education Fund, The Lottery fund and the Excess Lottery fund may be used for early childhood education in the state.</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to provide that funds from the Lottery Education Fund, the State Lottery fund, and the Excess Lottery Fund be used for childhood education in the state. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

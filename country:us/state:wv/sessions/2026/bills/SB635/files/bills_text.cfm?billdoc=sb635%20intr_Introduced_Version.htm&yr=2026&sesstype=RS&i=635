@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 635 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=635">&laquo; Senate Bill 635 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 635'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 635 - Creating Mountain Bike Responsibility Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb635+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=635"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A021A8C{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs50BA8E8{color:#212121;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.csF9E82F3C{color:#212121;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs2B881944{color:#212121;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs4E345552{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 635</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Senators Willis, Helton, and M. Maynard</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 28, 2026; referred</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;20-20-1, &sect;20-20-2, &sect;20-20-3, &sect;20-20-4, &sect;20-20-5, &sect;20-20-6, &sect;20-20-7, &sect;20-20-8, &sect;20-20-9, and &sect;20-20-10, relating to creating the Mountain Bike Responsibility Act; stating a legislative purpose; defining terms; providing for the duties and liabilities of trail system operators, mountain bicyclists, and passengers on aerial passenger tramways; providing for competition responsibilities; and providing a release for minor participants.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A021A8C">ARTICLE 20. MOUNTAIN BIKE RESPONSIBILITY ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-1. Legislative findings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The West Virginia Legislature finds that our natural resources and topography provide world-class opportunities to attract both resident and nonresident bicyclists to this state to enjoy the sport of mountain biking, significantly contributing to the economy of West Virginia. Further, it is recognized that there are inherent risks in the sport of bicycling, and the purpose of this article is to define those areas of responsibilities and affirmative acts for which the mountain operators are liable for loss, damage, or injury and to define those risks that the bicyclist expressly assume. Nothing in this article impacts other defenses that may be raised by mountain operators against claims asserted by bicyclists.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The terms in this article have the following meaning, unless the context clearly requires a different meaning: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Aerial passenger tramway&quot; means any device operated by a trail system operator used to transport passengers by single or double reversable tramway, chairlift or gondola lift, T-bar lift, J-bar lift, platter lift, or similar device, a fiber rope or wire rope tow, or a conveyor. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Bicycle&quot;&nbsp;has the same meaning as defined in &sect;17C-1-18 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Competitor&quot; means a mountain bicyclist actually engaged in competition, a special event, or training or practicing for competition or a special event on any portion of the area made available by the trail system operator.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Mountain bicyclist&quot; means any person present at a trail system area under the control of a trail system operator for the purpose of engaging in activities, including, without limitation, bicycling downhill or uphill, or jumping on a bicycle. &quot;Mountain bicyclist&quot; does not include a person using an aerial passenger tramway. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Mountain bike trails&quot; means all mountain bike trails designated by the trail system operator to be used by mountain bicyclists for the purpose of participating in the sport of mountain biking including, but not limited to, downhill trails, cross-country trails, free ride trails, pump tracks, and skills areas. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Passenger&quot; means any person who is lawfully using an aerial passenger tramway, or is waiting to embark, or has recently disembarked from an aerial passenger tramway and is in its immediate vicinity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Trail system area&quot; means the property owned, leased, or authorized under a special use permit, and under the control of the trail system operator.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Trail system operator&quot; means any person, partnership, corporation, or other commercial entity, its agents, officers, employees, or representatives, who has, as part of a commercial, private, or for-profit endeavor, operational responsibility for mountain bicycling activities at any trail system area and the use of an aerial passenger tramway for that purpose. Trail system operator does not include any public or non-profit corporation, its agents, officers, employees, or representatives, who has operational responsibility of mountain bicycling activities at any trail system area. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-3. Duties of trail system operators with respect to trail system.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Every trail system operator shall: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &nbsp;Maintain trail boards at prominent locations on the trail system area, including, but not limited to, at each aerial passenger tramway used by mountain bicyclists, and at any confluence of three or more mountain bike trails. Each trail board shall display that trail system area&#39;s network of mountain bike trails;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Designate and mark conspicuously all mountain bike trails with a name and color, or symbol recognized in the mountain biking industry reflecting the relative degree of difficulty of the mountain bike trail. &nbsp;The designation shall be at or near the top or entrance of the mountain bike trail and at each place where one or more mountain bike trails intersect with one another. &nbsp;Any mountain bike trail which is closed shall be marked as closed at the trailhead and at each place where the closed trail intersects with another mountain bike trail; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Follow published operational industry standards and guidelines; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Establish a written emergency operations plan, and post at the trail boards maintained under subdivision (1) of this section instructions on how to contact emergency response personnel. The emergency operations plan shall be provided to the emergency management authority responsible for the trail system area, as well as the primary response agency serving the trail system area; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Maintain the mountain bike trails in a reasonably safe condition, except that the trail system operator is not responsible for any injury, loss, or damage caused by the following: Uneven or slippery rail and feature conditions; varying slopes and terrain; bumps; stumps; trees; roots; forest growth; cliffs; rock and rock drops; loose gravel and dirt; wet surfaces; holes and potholes; downed timber; debris; depressions; other bicyclists; dark tunnels; jumps; bridges; dirt or wood features/jumps; elevated features; lift loading and unloading; padded and nonpadded barriers; paved surfaces; collisions with vehicles, pedestrians, wildlife, heavy equipment that is identified as dangerous and/or a hazardous work zone; and properly marked permanent structures, or other similar objects; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Post at the trail board maintained under subdivision (1) of this section the following language:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;WARNING &ndash; ASSUMPTION OF RISKS: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Under West Virginia law, every mountain bicyclist is considered to have accepted, and to have knowledge of, the risk of injury (including death) to the mountain bicyclist, as well as damage to property of the mountain bicyclist. &nbsp;Under West Virginia law, every mountain bicyclist has the duty to take the precautions that are necessary to avoid injury or death, as well as damage to property. &nbsp;West Virginia law sets forth certain limitations on the liability of trail system operators for injury or death to a bicyclist, as well as damage to property; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Post a sign at all aerial passenger tramways that advises the passengers to seek advice if not familiar with riding the aerial passenger tramway; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Construct, operate, maintain, and repair any aerial passenger tramway in accordance with relevant and published national standards and safety requirements for the machinery;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Construct, operate, maintain, and repair any mountain bike trail in accordance with relevant mountain biking industry standards; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Repair and maintain all mountain bicycling equipment which is made available to mountain bicyclists, whether by rental agreement or otherwise.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-4. Duties of passengers. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">A passenger shall not: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Board or embark upon, or disembark from, an aerial passenger tramway except at an area designated for that purpose; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Drop, throw, or expel any object from an aerial passenger tramway; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Perform any act that interferes with the running or operation of an aerial passenger tramway; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Use any aerial passenger tramway if the passenger does not have the ability to use it safely without instruction, until the passenger has received sufficient instruction to permit safe usage;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Embark on an aerial passenger tramway without engaging safety or restraining devices that are provided;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Embark on an aerial passenger tramway without the authority, expressed or implied, of the trail system operator; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Embark on an aerial passenger tramway while impaired by alcohol or drugs. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-5. Duties of mountain bicyclists.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) It is expressly recognized that mountain bicycling as a recreational sport is hazardous, regardless of all feasible safety measures which can be taken. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Each mountain bicyclist expressly assumes the risk of, and legal responsibility for, any injury, loss, or damage to person or property which results from participation in the sport of mountain bicycling including, but not limited to, any injury, loss, or damage caused by the following: Uneven or slippery trail and feature conditions; varying slopes and terrain; bumps, stumps; trees; roots; forest growth; cliffs; rock and rock drops; loose gravel and dirt; wet surfaces; holes and potholes; downed timber; debris; depressions; other bicyclists; dark tunnels; jumps; bridges; dirt or wood features/jumps; elevated features; lift loading and unloading; padded and nonpadded barriers; paved surfaces; collisions with vehicles, pedestrians, wildlife, and heavy equipment that is identified as dangerous and/or a hazardous work zone; and properly marked permanent structures, or other similar objects.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Each mountain bicyclist has the sole individual responsibility for knowing the range of his or her own ability to negotiate any trail. &nbsp;Further, each mountain bicyclist shall ride within the limits of the mountain bicyclist&#39;s own ability; maintain reasonable control of speed and course at all times while mountain bicycling; to heed all posted warnings; operate a mountain bicycle only on a bike trail area designated by the trail system operator; assess the difficulty of mountain bike trails; be able to stop or avoid other individuals and objects; and refrain from acting in a manner which may cause or contribute to the injury of anyone. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) If involved in a collision with another individual that results in injury, a mountain bicyclist, if physically able to do so, shall remain in the vicinity of the collision until giving his or her name and current address to a representative of the trail system operator or to all other parties to the collision except to secure aid for a person injured in a collision. &nbsp;A mountain bicyclist who leaves the vicinity to secure aid shall provide his or her name and current address after securing the aid.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) If while mountain bicycling any mountain bicyclist collides with any object or person, except an obviously intoxicated person of whom the trail system operator is aware, the responsibility for the collision is solely that of the mountain bicyclist or mountain bicyclists involved and not that of the trail system operator. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-6. Liability of trail system operator.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A trail system operator may be liable for injury, loss, or damage caused by its failure to follow the duties set forth in &sect;20-20-3 of this code where the violation of duty is causally related to the injury, loss, or damage suffered.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A trail system operator is not liable for any injury, loss, or damage caused by the negligence of any person who is not an agent or employee of the trail system operator. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A trail system operator is not liable for any injury, loss, or damage caused by a mountain bicyclist or passenger&#39;s violation of any duty described in this article. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Every trail system operator shall carry public liability insurance in limits of no less than $100,000 per person, $300,000 per occurrence, and $10,000 for property damage. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-7. Liability of passengers.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any passenger may be liable for injury, loss, or damage resulting from violations of the duties established in &sect;20-20-4 of this code where the violation of duty is causally related to the injury, loss, or damage suffered. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-8. Liability of mountain bicyclist.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any mountain bicyclist may be liable for injury, loss, or damage resulting from violations of the duties established in </span><a name="_Hlk191044488"><span class="cs46AE26E6">&sect;20-20-5 of this code</span></a><span class="cs46AE26E6"> where the violation of duty is causally related to the injury, loss, or damage suffered. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;20-20-9. Competition.</span></h4>
+	<p class="cs53FB8D75"><span class="cs50BA8E8">&nbsp;</span></p><p class="cs53FB8D75"><span class="csF9E82F3C">(a) The trail system operator shall, prior to use of any portion of the area made available by the trail system operator, allow each competitor the opportunity to conduct a reasonable visual inspection of the trails used in the competition.</span></p><p class="cs53FB8D75"><span class="csF9E82F3C">(b) The competitor shall be held to assume the risk of all trail terrain conditions including, but not limited to, weather conditions, obstacles, course or feature location, construction or layout, terrain configuration and conditions, and other courses, layouts, or configurations of the area to be used. Liability does not attach to a trail system operator for injury or death to any competitor caused by course, venue, or area conditions that a visual inspection should have revealed or by collisions with other competitors.</span></p><p class="cs7F45F1B"><span class="cs2B881944">&sect;20-20-10. Release of minor participant.</span></p><p class="cs53FB8D75"><span class="csF9E82F3C">A parent or guardian of a minor participant may execute a release assuming responsibility for the risks of the minor participant. The release must give notice to the minor participant, and the parent or guardian, of the risks associated with the release.</span></p><p class="cs53FB8D75"><span class="cs50BA8E8">&nbsp;</span></p><p class="cs4E345552"><span class="cs7FA9C667">NOTE: The purpose of this bill is to define those areas of responsibilities and affirmative</span></p><p class="cs4E345552"><span class="cs7FA9C667">acts for which the mountain operators are liable for loss, damage, or injury and to define</span></p><p class="cs4E345552"><span class="cs7FA9C667">those risks that the bicyclist expressly assume.</span></p><p class="cs4E345552"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs4E345552"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present</span></p><p class="cs4E345552"><span class="cs7FA9C667">law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

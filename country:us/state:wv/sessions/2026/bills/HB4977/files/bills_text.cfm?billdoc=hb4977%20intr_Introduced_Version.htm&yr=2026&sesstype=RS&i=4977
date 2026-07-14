@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4977 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4977">&laquo; House Bill 4977 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4977'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4977 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4977" title="HTML  - Committee Substitute (1)
+ - House Bill 4977">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4977 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4977" title="HTML  - Engrossed Version
+ - House Bill 4977">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4977 - Relating to authorizing municipalities to adopt an ordinance to recover demolition costs as special tax assessments&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4977+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4977"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4977</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Flanigan, Stephens, Roop, Mallow, Rohrbach, Shamblin, Pritt, Phillips, Martin, Ferrell, and Akers</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 29, 2026; referred to the Committee on Government Organization]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;8-12-16 of the Code of West Virginia, 1931, as amended, relating to authorizing municipalities to adopt an ordinance to recover demolition costs as special tax assessments.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 12. GENERAL AND SPECIFIC POWERS, DUTIES AND ALLIED RELATIONS OF MUNICIPALITIES, GOVERNING BODIES AND MUNICIPAL OFFICERS AND EMPLOYEES; SUITS AGAINST MUNICIPALITIES.</span></h2>
+	<h4 class="cs89687900">
+		<a name="_Hlk193630404"><span class="csB9803513">&sect;</span></a><span class="csB9803513">8-12-16. Ordinances regulating the repair, alteration, improvement, closing, demolition, etc., of structures, dwellings, or buildings that are unsafe, unsanitary, dangerous, or detrimental to the public safety or welfare; procedures.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) For the purposes of this section:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Code enforcement agency&quot; means either a code enforcement department as defined by 87 CSR 7-2, as may be amended, or an enforcement agency as permitted by subsection (c) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Code enforcement agency official&quot; means any lawful agent of a code enforcement agency. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Owner&quot; or &quot;landowner&quot; means a person who individually or jointly with others:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has legal title to the property, with or without actual possession of the property;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Has charge, care, or control of the property as owner or agent of the owner;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Is an executor, administrator, trustee, or guardian of the estate of the owner;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Is the agent of the owner for the purpose of managing, controlling, or collecting rents; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) May control or direct the management or disposition of the property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Unsafe, unsanitary, dangerous, or detrimental to the public safety or welfare&quot; means:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Any door, aisle, passageway, stairway, exit, or other means of egress that does not conform to the approved building or fire code of the jurisdiction as related to the requirements for existing buildings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The walking surface of any aisle, passageway, stairway, exit, or other means of egress is so warped, worn loose, torn, or otherwise unsafe as to not provide safe and adequate means of egress;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Any portion of a dwelling, building, structure, or appurtenance that has been damaged by fire, earthquake, wind, flood, deterioration, neglect, abandonment, vandalism, or by any other cause to an extent that it is likely to partially or completely collapse, or to become detached or dislodged;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Any portion of a structure or building, or any member, appurtenance, or ornamentation on the exterior that is not of sufficient strength or stability, or is not so anchored, attached, or fastened in place so as to be capable of resisting natural or artificial loads of one and one-half the original designed value;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) The dwelling, building, or structure, or part of the building or structure, because of dilapidation, deterioration, decay, faulty construction, the removal or movement of some portion of the ground necessary for the support, or for any other reason, is likely to partially or completely collapse, or some portion of the foundation or underpinning of the dwelling, building or structure is likely to fail or give way;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) The dwelling, building, or structure, or any portion, is clearly unsafe for its use;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) The dwelling, building, or structure is neglected, damaged, dilapidated, unsecured, or abandoned so as to become an attractive nuisance to children, becomes a harbor for vagrants, criminals, and criminal activity, or enables persons to resort to the dwelling, building, or structure for committing a nuisance or an unlawful act;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Any dwelling, building, or structure constructed, exists or is maintained in violation of any specific requirement or prohibition applicable to any dwelling, building, or structure provided by the approved building or fire code of the jurisdiction or of any law or ordinance that presents either a substantial risk of fire, building collapse, or any other threat to life and safety;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) A dwelling, building, or structure, used or intended to be used for dwelling purposes, because of inadequate maintenance, dilapidation, decay, contamination by any hazardous substance or material, including, but not limited to, substance resulting from the illegal manufacture of drugs, damage, faulty construction or arrangement, inadequate light, ventilation, mechanical, or plumbing system, or otherwise, is determined by the code enforcement agency to be unsanitary, unfit for human habitation, or in a condition that is likely to cause sickness or disease;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) Any dwelling, building, or structure, because of a lack of sufficient or proper fire resistance-rated construction, fire protection systems, electrical system, fuel connections, mechanical system, plumbing system, or other cause, is determined by the code official to be a threat to life or health; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Any portion of a building that remains on a site after the demolition or destruction of the building or structure, or whenever any building or structure is abandoned. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Plenary power and authority are hereby conferred upon every municipality to adopt ordinances regulating the repair, alteration, or improvement, or the vacating and closing or removal or demolition, or any combination, of any structure, dwelling, or building, whether used for human habitation or not, that is unsafe, unsanitary, dangerous, or detrimental to the public safety or welfare.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) In formally adopting any ordinance under this section, the governing body shall designate the enforcement agency, which shall consist of the code enforcement agency as provided by the state building code and authorized by &sect;29-3-5b and &sect;8-12-13 of this code; or municipal officials as may otherwise be authorized by this code; or municipal officials or agents as authorized by rules promulgated by the State Fire Commission and approved by the Legislature; or municipal officials or agents as may otherwise be authorized by the State Fire Commission. Notwithstanding any provision of this code to the contrary, for the purposes of this section any municipality that has not adopted the state building code may designate an enforcement agency consisting of the mayor, the municipal engineer or building inspector, and one member at large, to be selected by and to serve at the will and pleasure of the mayor, and the ranking health officer and fire chief or their designees, who shall serve as ex officio members of the enforcement agency.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Any ordinance adopted under the provisions of this section must provide fair and equitable rules of procedure and any other procedures required by law or necessary and appropriate to guide the code enforcement agency, or its officials, in the investigation of any structure, dwelling, or building conditions, and in any corrective action taken by the code enforcement agency.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) When a code enforcement agency official enters the premises of the property for investigating or inspecting any structure, dwelling, or building, the investigation shall be performed to minimize the inconvenience to the owner or persons in possession and shall be consistent with the following: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Except in exigent circumstances and as permitted by law, the enforcement agency shall provide reasonable advance notice to the owner and request permission from the owner to enter the property; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) If the owner cannot be located after reasonable inquiry by the code enforcement agency as required by this section, or if the owner refuses entry, the code enforcement agency may obtain an administrative search warrant from either the municipal court or the magistrate court located in the jurisdiction of the municipality or county where the structure, dwelling, or building is located. Before obtaining an administrative search warrant, a code enforcement agency official is required to make a sworn statement and prima facie case showing that the code enforcement agency was unable to gain access to the structure, dwelling, or building after reasonable and good faith efforts, and that there is a legitimate and substantial safety concern involving the structure, dwelling, or building that supports the requested entry;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) If granted by the court, and if the owner can be located, the code enforcement agency shall provide the owner a copy of the administrative search warrant five days before entering the property. If applicable, the code enforcement agency shall also provide the same notice to any tenant or other person in possession of the structure, dwelling, or building; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Entry is for the sole purpose of inspection of the structure, dwelling, or building for unsafe or unsanitary conditions and not for the purpose of criminal prosecution or gathering evidence for use in any criminal charge or proceeding unrelated to the unsafe or unsanitary condition of the structure, dwelling, or building.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The governing body of every municipality has plenary power and authority to adopt an ordinance providing for the vacating, closing, removal, or demolition of any dwelling, structure or building by the municipality in the absence of owner agreement or court order: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the ordinance requires the code enforcement agency to provide lawful notice to and undertake reasonable efforts to seek agreement from the owner before taking any action permitted by this section and shall comply with the requirements set forth in this subsection:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Any ordinance adopted under this subsection applies only to dwellings, structures, or buildings which meet the definition of unsafe, unsanitary, dangerous, or detrimental to the public safety or welfare as set forth in:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Paragraph (C), (E) or (H), subdivision (4), subsection (a) of this section; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Paragraph (F), (G), (I) or (K), subdivision (4), subsection (a) of this section: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the dwelling, building, or structure is vacant, abandoned, or has been lawfully declared unfit for human habitation; and the reasonable estimated cost of repair, rehabilitation, or corrective action exceeds the fair market value of the dwelling, building, or structure.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Any ordinance adopted under this subsection must provide for the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The code enforcement agency shall produce a written notice containing the date of the last inspection, the name of the inspector, a reasonable description of the unsafe, unsanitary, dangerous, or detrimental conditions, the corrective measures required, the allotted time to correct the substandard conditions and the allotted time the owner has to apply to the circuit court for a temporary injunction or other similar relief restraining action by the enforcement agency. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The notice shall be served upon the owner or landowner by conspicuously posting and attaching a copy of the notice to the subject property, and by serving the notice on the owner or landowner in the same manner as service of a complaint as set forth in subsection (j) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) If the code enforcement agency cannot effect personal service on the owner, a code enforcement agency official shall subscribe a written affidavit, to be maintained for a minimum of two years, that demonstrates the structure, dwelling, or building falls within one of the categories set forth in paragraph (A) or (B), subdivision (1), subsection (f) of this section and sets forth the basis in reasonable detail, including documentation of same, and memorializes the code enforcement agency official&rsquo;s efforts to contact or get permission for entry and any corrective action from the owner; and the code enforcement agency shall publish notice of its intent to enter the property for the purpose of demolition or correction, along with the address of the property, the name of the owners and the date of the proposed action, as a Class II legal advertisement consistent with the requirements of &sect;59-3-2 of this code, the first of which shall run at least 30 days before the date of the proposed action by the enforcement agency, and the last being no later than 20 days before the date of the proposed action by the enforcement agency.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) If there is no response to the notice by the owner or landowner in the time specified in the notice, then the municipality may proceed in correction or demolition of the subject dwelling, building, or structure. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) It is an absolute defense to any civil action by an owner, landowner, or tenant for damages resulting from the closure, demolition, or other corrective action taken by a municipality under this section: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the municipality acted in good faith, can demonstrate that the structure, dwelling, or building falls within one of the categories set forth in paragraph (A) or (B), subdivision (1), subsection (f) of this section, that the municipality followed the procedures set forth in this subsection, and that the municipality had adopted the state building code at the time of the closure, demolition, or other corrective action occurred.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Any ordinance adopted under this subsection must also provide for notice to the owner of the owner&rsquo;s right to apply to the circuit court for a temporary injunction or other similar relief restraining correction or demolition by the enforcement agency. If the application is made by the owner, a hearing shall be had within 20 days of the application, or as soon as reasonably possible.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Continuances of the hearing provided for in this subdivision may be made for cause only. If a continuance is granted upon request by the owner, the owner is required to pay into court, in the form of a bond, any reasonable and necessary costs related to the property likely to be incurred by the municipality during the continuance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) At the conclusion of a hearing held under this subdivision, if the court finds that the property is unsafe, unsanitary, dangerous, or detrimental to the public safety or welfare, the court shall make and enter an order granting the relief as requested by the municipality. The court may disburse any moneys paid into court by the owner in accordance with this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g)(1) The governing body of every municipality has plenary power and authority to adopt an ordinance requiring the owner of any dwelling or building under determination of the State Fire Marshal, as provided in </span><a name="_Hlk193718163"><span class="csEF05ACC">&sect;</span></a><span class="csEF05ACC">29-3-12 of this code, or under order of the code enforcement agency of the municipality, to pay for the costs of repairing, altering, or improving, or of vacating and closing, removing or demolishing any dwelling or building, and may file a lien against the real property in question for an amount that reflects all costs incurred by the municipality for repairing, altering, or improving, or of vacating and closing, removing, or demolishing any dwelling or building, or structure. Any municipality that adopts an ordinance under this section may authorize the municipal court to place a structure, dwelling, or building into receivership when the following circumstances are present:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The owner cannot be located after reasonable inquiry by the code enforcement agency as required by this section or if the owner refuses entry; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The code enforcement agency has obtained an administrative search warrant from either the municipal court or the magistrate court located in the jurisdiction of the municipality or county where the structure, dwelling, or building is located; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Upon entry, the code enforcement agency has determined that the structure, dwelling, or building is salvageable and does not require immediate demolition; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) The code enforcement agency has proffered to the court that the structure, dwelling or building will require demolition or presents a substantial threat to nearby structures, property, or residents due to risk of fire, structural instability, or attractive nuisance if it is not repaired, altered, or improved in the near future.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) If all of these circumstances are present, the municipal court may place the structure, dwelling, or building into receivership with the municipality or another entity that is capable of making the necessary repairs, alterations, and improvements to the structure, dwelling or building. Any owner of the structure, dwelling, or building may petition the municipal court to terminate the receivership at any time and, upon showing that the owner will either demolish the structure, dwelling, or building or make the necessary repairs, alterations, and improvements to the satisfaction of the code enforcement agency, the municipal court may terminate the receivership.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) </span><span class="cs46AE26E6">In addition to any lien authorized by this section, a municipality may, by ordinance, provide that the reasonable costs incurred for the repair, alteration, improvement, removal, or demolition of a building or structure pursuant to this section shall constitute a special assessment against the real property on which such costs were incurred. Prior to the imposition of any such special assessment, the owner of the property shall be provided notice of the amount to be assessed, consistent with the procedures provided in &sect;8-18-1, </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code. Any special assessment imposed pursuant to this section may be certified by the municipality to the county sheriff or other appropriate tax official and shall be entered on the land books and collected in the same manner, with the same priority, interest, penalties, and enforcement remedies, as ad valorem real property taxes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i)</span><span class="csEF05ACC"> Every municipality may also institute a civil action in circuit court against the landowner or other responsible party to obtain an order allowing the municipality to take corrective action up to and including demolition of any structure, dwelling or building that is unsafe, unsanitary, dangerous, or detrimental to the public safety or welfare; and to recover all reasonable costs and expenses incurred by the municipality with respect to the property and for reasonable attorney fees and court costs incurred in the prosecution of the action:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) No fewer than 10 days before instituting a civil action as provided in this subsection, the municipality shall send notice to the landowner by certified mail, return receipt requested, advising the landowner of the governing body&rsquo;s intention to institute such action. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The notice shall be sent to the most recent address of the landowner of record in the office of the assessor of the county where the subject property is located and to any other address for the landowner as may exist on record with the municipality. If, for any reason, the certified mail is returned without evidence of proper receipt, the municipality shall resend the notices by first class mail, postage prepaid, and shall also post notice on the front door or other conspicuous location on the subject property.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(j)</span><span class="csEF05ACC"> To the extent not otherwise authorized by state law, all notices of violation or correction for violations that do not fall within one of the categories set forth in paragraph (A) or (B), subdivision (1), subsection (f) of this section issued by the enforcement agency of a municipality that has adopted the state building code shall be served in accordance with the process set forth in the state building code. All notices of violation or correction orders for violations that do not fall within one of the categories set forth in paragraph (A) or (B), subdivision (1), subsection (f) of this section issued by a code enforcement agency of a municipality that has not adopted the state building code shall be served in accordance with the law of this state concerning the service of process in civil actions, except that personal service may be made by a code enforcement agency official and the method of service effectuated by mail by the clerk of a court as permitted by Rule 4(d)(1)(D) of the West Virginia Rules of Civil Procedure is effectuated by mailing by a code enforcement agency official and shall be posted in a conspicuous place on the property that is the subject of the notice of violation or correction.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(j)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(k)</span><span class="csEF05ACC"> Any violation of an ordinance adopted under this section, may be prosecuted by the municipality consistent with state and local laws. Unless otherwise authorized by state law, prosecution of a violation shall be initiated by a complaint presented to and sworn or affirmed before a municipal judge or other municipal official with lawful authority to hear and determine violations of municipal code in the municipality where the offense is alleged to have occurred. Unless otherwise provided by statute, the presentation and oath or affirmation shall be made by a code enforcement agency official or municipal attorney showing reason to have reliable information and belief. If from the facts stated in the complaint the municipal judge or other municipal official with lawful authority to hear and determine violations of municipal code finds probable cause, the complaint becomes the charging instrument initiating a criminal proceeding. A complaint lawfully authorized by this subsection along with a summons setting forth the date, time, and place of appearance before a municipal judge or other municipal official with lawful authority to hear and determine violations of municipal code shall be served in accordance with the law of the State of West Virginia concerning the service of process in civil actions, except that personal service of a summons and complaint may be made by a code enforcement agency official. If service is made by certified mail under Rule 4(d)(1)(D) of the West Virginia Rules of Civil Procedure and delivery of the summons and complaint is refused, the code enforcement agency official, promptly upon the receipt of the notice of the refusal, shall mail to the person or entity being noticed, by first class mail, postage prepaid, a copy of the summons and complaint. If the first class mailing is not returned as undeliverable by the U. S. Postal Service, service of the summons and complaint is presumed to have been effectuated. Upon service of the summons and complaint consistent with this subsection, the violation may be prosecuted consistent with state and local law.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(k)</span><span class="csEF05ACC"> (l) In addition to the authority granted by this section, a municipality may seek the aid of a county commission by entering into a memorandum of understanding with the county commission to destroy or demolish certain dilapidated structures within the municipality. In those agreements, the parties may use the procedures outlined this code section or &sect;7-1-3ff </span><span class="cs46AE26E6">of this code</span><span class="csEF05ACC">.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to permit municipalities to adopt an ordinance to recover demolition costs as special tax assessments.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

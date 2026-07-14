@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5222 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5222">&laquo; House Bill 5222 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5222'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5222 - Providing for an increase service of process fees and fees in shipping and handling expenses for execution of service of process&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5222+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5222"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5222</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Funkhouser and Akers<br/>[by request of the secretary of state]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 05, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;59-1-2 of the Code of West Virginia, 1931, as amended, providing for an increase service of process fees and fees in shipping and handling expenses for execution of service of process by certified mail upon any defendant and providing for certain exemptions for foreign veteran-owned businesses.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. FEES AND ALLOWANCES.</span></h2>
+	<p class="cs53FB8D75"><span class="csB9803513">&sect;59-1-2. Fees to be charged by Secretary of State. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) Except as may be otherwise provided in this code, the Secretary of State shall charge for services rendered in his or her office the following fees to be paid by the person to whom the service is rendered at the time it is done:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) For filing, recording, indexing, preserving a record of, and issuing a certificate relating to, the formation, amendment, change of name, registration of trade name, merger, consolidation, conversion, renewal, dissolution, termination, cancellation, withdrawal, revocation, and reinstatement of business entities organized within the state, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Articles of incorporation of for-profit corporation, $100;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Articles of incorporation of nonprofit corporation, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Articles of organization of limited liability company, $100;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Agreement of a general partnership, $50;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Certificate of a limited partnership, $100;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Agreement of a voluntary association, $50;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Articles of organization of a business trust, $50;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Amendment or correction of articles of incorporation, including change of name or increase of capital stock, in addition to any applicable license tax, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Amendment or correction, including change of name, of articles of organization of business trust, limited liability partnership, limited liability company, or professional limited liability company; or of certificate of limited partnership; or of agreement of voluntary association, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) Amendment and restatement of articles of incorporation, certificate of limited partnership, agreement of voluntary association or articles of organization of limited liability partnership, limited liability company or professional limited liability company or business trust, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Registration of trade name, otherwise designated as a true name, fictitious name or D. B. A. (doing business as) name for any domestic business entity as permitted by law, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(L) Articles of merger of two corporations, limited partnerships, limited liability partnerships, limited liability companies or professional limited liability companies, voluntary associations or business trusts, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(M) Plus for each additional party to the merger in excess of two, $15;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(N) Statement of conversion, when permitted, from one business entity into another business entity, in addition to the cost of filing the appropriate documents to organize the surviving entity, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(O) Articles of dissolution of a corporation, voluntary association or business trust, or statement of dissolution of a general partnership, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(P) Revocation of voluntary dissolution of a corporation, voluntary association or business trust, $15;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(Q) Articles of termination of a limited liability company, cancellation of a limited partnership or statement of withdrawal of limited liability partnership, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(R) Reinstatement of a limited liability company or professional limited liability company after administrative dissolution, $25.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) For filing, recording, indexing, preserving a record of and issuing a certificate relating to the registration, amendment, change of name, merger, consolidation, conversion, renewal, withdrawal or termination within this state of business entities organized in other states or countries, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Certificate of authority of for-profit corporation, $100;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Certificate of authority of nonprofit corporation, $50;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Certificate of authority of foreign limited liability companies, $150;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Certificate of exemption from certificate of authority, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Registration of a general partnership, $50;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Registration of a limited partnership, $150;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Registration of a limited liability partnership for two-year term, $500;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Registration of a voluntary association, $50;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Registration of a trust or business trust, $50;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) Amendment or correction of certificate of authority of a foreign corporation, including change of name or increase of capital stock, in addition to any applicable license tax, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Amendment or correction of certificate of limited partnership, limited liability partnership, limited liability company or professional limited liability company, voluntary association or business trust, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(L) Registration of trade name, otherwise designated as a true name, fictitious name or D. B. A. (doing business as) name for any foreign business entity as permitted by law, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(M) Amendment and restatement of certificate of authority or of registration of a corporation, limited partnership, limited liability partnership, limited liability company or professional limited liability company, voluntary association or business trust, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(N) Articles of merger of two corporations, limited partnerships, limited liability partnerships, limited liability companies or professional limited liability companies, voluntary associations or business trusts, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(O) Plus, for each additional party to the merger in excess of two, $5;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(P) Statement of conversion, when permitted, from one business entity into another business entity, in addition to the cost of filing the appropriate articles or certificate to organize the surviving entity, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(Q) Certificate of withdrawal or cancellation of a corporation, limited partnership, limited liability partnership, limited liability company, voluntary association or business, trust $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Notwithstanding any other provision of this section to the contrary, after June 30, 2008, the fees described in this subdivision that are collected for the issuance of a certificate relating to the initial registration of a corporation, limited partnership, domestic limited liability company or foreign limited liability company shall be deposited in the general administrative fees account established by this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) For receiving, filing and recording a change of the principal or designated office, change of the agent of process and/or change of officers, directors, partners, members or managers, as the case may be, of a corporation, limited partnership, limited liability partnership, limited liability company or other business entity as provided by law, $15.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) For receiving, filing and preserving a reservation of a name for each 120 days or for any other period in excess of seven days prescribed by law for a corporation, limited partnership, limited liability partnership or limited liability company, $15;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) For issuing a certificate relating to a corporation or other business entity, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Certificate of good standing of a domestic or foreign corporation, $10;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Certificate of existence of a domestic limited liability company and certificate of authorization foreign limited liability company, $10;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Certificate of existence of any business entity, trademark or service mark registered with the Secretary of State, $10;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Certified copy of corporate charter or comparable organizing documents for other business entities, $15;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Plus, for each additional amendment, restatement or other additional document, $5;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Certificate of registration of the name of a foreign corporation, limited liability company, limited partnership or limited liability partnership, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) And for the annual renewal of the name registration, $10;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Any other certificate not specified in this subdivision, $10.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) For issuing a certificate other than those relating to business entities, as provided in this subsection, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Certificate or apostille relating to the authority of certain public officers, including the membership of boards and commissions, $10;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Plus, for each additional certificate pertaining to the same transaction, $5;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Any other certificate not specified in this subdivision, $10;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) For acceptance, indexing and recordation of service of process for any corporation, limited partnership, limited liability partnership, limited liability company, voluntary association, business trust, insurance company, person or other entity as permitted by law, </span><span class="cs68EFC440">$15</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$20</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) For shipping and handling expenses for execution of service of process by certified mail upon any defendant within the United States, which fee is to be deposited to the special revenue account established in this section for the operation of the office of the Secretary of State, </span><span class="cs68EFC440">$5</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$15</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) For shipping and handling expenses for execution of service of process upon any defendant outside the United States by registered mail, which fee is to be deposited to the special revenue account established in this section for the operation of the office of the Secretary of State, </span><span class="cs68EFC440">$15</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$20</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) For a search of records of the office conducted by employees of or at the expense of the Secretary of State upon request, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) For any search of archival records maintained at sites other than the office of the Secretary of State no less than, $10;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) For searches of archival records maintained at sites other than the office of the Secretary of State which require more than one hour, for each hour or fraction of an hour consumed in making a search, $10;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) For any search of records maintained on site for the purpose of obtaining copies of documents or printouts of data, $5;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) For any search of records maintained in electronic format which requires special programming to be performed by the state information services agency or other vendor any actual cost, but not less than, $25;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) The cost of the search is in addition to the cost of any copies or printouts prepared or any certificate issued pursuant to or based on the search.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) For recording any paper for which no specific fee is prescribed, $5.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) For producing and providing photocopies or printouts of electronic data of specific records upon request, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) For a copy of any paper or printout of electronic data, if one sheet, $1;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) For each sheet after the first, 50 cents;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) For sending the copies or lists by fax transmission, $5;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) For producing and providing photocopies of lists, reports, guidelines and other documents produced in multiple copies for general public use, a publication price to be established by the Secretary of State at a rate approximating $2 plus 10 cents per page and rounded to the nearest dollar;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) For electronic copies of records obtained in data format on disk, the cost of the record in the least expensive available printed format, plus, for each required disk, which shall be provided by the Secretary of State, $5.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Secretary of State may propose rules for legislative approval, in accordance with the provisions of &sect;29A-3-1 et seq. of this code, for charges for online electronic access to database information or other information maintained by the Secretary of State.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) For any other work or service not enumerated in this section, the fee prescribed elsewhere in this code or a rule promulgated under the authority of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The records maintained by the Secretary of State are prepared and indexed at the expense of the state and those records shall not be obtained for commercial resale without the written agreement of the state to a contract including reimbursement to the state for each instance of resale.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The Secretary of State may provide printed or electronic information free of charge as he or she considers necessary and efficient for the purpose of informing the general public or the news media.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) There is hereby continued in the State Treasury a special revenue account to be known as the Service Fees and Collections Account. Expenditures from the account shall be used for the operation of the office of the Secretary of State and are not authorized from collections, but are to be made only in accordance with appropriation by the Legislature and in accordance with the provisions of &sect;12-3-1 et seq. of this code and upon the fulfillment of the provisions set forth in &sect;5A-2-1 et seq. of this code. Notwithstanding any other provision of this code to the contrary, except as provided in subsection (h) of this section and &sect;59-1-2a of this code, one half of all the fees and service charges established in the following sections and for the following purposes shall be deposited by the Secretary of State or other collecting agency to that special revenue account and used for the operation of the office of the Secretary of State:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The annual attorney-in-fact fee for corporations and limited partnerships established in &sect;11-12C-5 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The fees received for the sale of the State Register, Code of State Rules and other copies established by rule and authorized by &sect;29A-2-7 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The registration fees, late fees and legal settlements charged for registration and enforcement of the charitable organizations and professional solicitations established in &sect;29-19-5, &sect;29-19-9, and &sect;29-19-15b this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The annual attorney-in-fact fee for limited liability companies as designated in &sect;31B-1-108 of this code and the annual report fee established in &sect;31B-2-211 of this code: Provided, That after June 30, 2008, the annual report fees designated in &sect;31B-1-108 of this code shall upon collection, be deposited in the General Administrative Fees Account described in subsection (h) of this section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The filing fees and search and copying fees for uniform commercial code transactions established by &sect;46-9-525 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The annual attorney-in-fact fee for licensed insurers established in &sect;33-4-12 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The fees for the application and record maintenance of all notaries public established by &sect;39-4-20 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The fees for registering credit service organizations as established by &sect;46A-6C-5 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) The fees for registering and renewing a West Virginia limited liability partnership as established by &sect;47B-10-1 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) The filing fees for the registration and renewal of trademarks and service marks established in &sect;47-2-17 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) All fees for services, the sale of photocopies and data maintained at the expense of the Secretary of State as provided in this section; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) All registration, license and other fees collected by the Secretary of State not specified in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Any balance in the service fees and collections account established by this section which exceeds $500,000 as of June 30, 2003, and each year thereafter, shall be expired to the state fund, General Revenue Fund</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h)(1) Effective July 1, 2008, there is hereby created in the State Treasury a special revenue account to be known as the General Administrative Fees Account. Expenditures from the account shall be used for the operation of the office of the Secretary of State and are not authorized from collections, but are to be made only in accordance with appropriation by the Legislature and in accordance with the provisions of &sect;12-3-1 et seq. of this code and upon the fulfillment of the provisions set forth in &sect;11B-2-1 et seq. of this code: Provided, That for the fiscal year ending June 30, 2009, expenditures are authorized from collections rather than pursuant to an appropriation by the Legislature. Any balance in the account at the end of each fiscal year shall not revert to the General Revenue Fund, but shall remain in the fund and be expended as provided by this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) After June 30, 2008, all the fees and service charges established in &sect;59-1-2a of this code for the following purposes shall be collected and deposited by the Secretary of State or other collecting agency in the general administrative fees account and used for the operation of the office of the Secretary of State:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The annual report fees paid to the Secretary of State by corporations, limited partnerships, domestic limited liability companies and foreign limited liability companies;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The fees for the issuance of a certificate relating to the initial registration of a corporation, limited partnership, domestic limited liability company or foreign limited liability company described in subdivision (a)(2) of this section; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The fees for the purchase of data and updates related to the state&rsquo;s Business Organizations Database described in &sect;59-1-2a of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) There is continued in the office of the Secretary of State a noninterest-bearing, escrow account to be known as the Prepaid Fees and Services Account. This account shall be for the purpose of allowing customers of the Secretary of State to prepay for services, with payment to be held in escrow until services are rendered. Payments deposited in the account shall remain in the account until services are rendered by the Secretary of State and at that time the fees will be reallocated to the appropriate general or special revenue accounts. There shall be no fee charged by the Secretary of State to the customer for the use of this account and the customer may request the return of any moneys maintained in the account at any time without penalty. The assets of the prepaid fees and services account do not constitute public funds of the state and are available solely for carrying out the purposes of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) A veteran-owned business, as defined in &sect;59-1-2a(a)(13), commenced on or after July 1, 2015, or an active-duty member business, as defined in &sect;59-1-2a(a)(13), commenced on or after July 1, 2021, is exempt from paying the fees prescribed in paragraphs (a)(1)(A), (a)(1)(B), (a)(1)(C), (a)(1)(D), (a)(1)(E), (a)(1)(F), and(a)(1)(G) of this section</span><span class="cs46AE26E6">, (a)(2)(A), (a)(2)(B), (a)(2)(C), (a)(2)(E), (a)(2)(F), (a)(2)(G), (a)(2)(H), and (a)(2)(I) of this section</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) Notwithstanding any other provisions of this article, after July 1, 2017, the Secretary of State may offer a fee for expedited services which shall not exceed, $500.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) The fees provided for in this section shall remain in effect until such time as the Legislature has approved rules promulgated by the Secretary of State, in accordance with the provisions of &sect;29A-3-1 et seq. of this code, establishing a schedule of fees for services.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to provide for an increase in service of process fees and fees in shipping and handling expenses for execution of service of process by certified mail upon any defendant and to provide for certain exemptions for foreign veteran-owned businesses.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

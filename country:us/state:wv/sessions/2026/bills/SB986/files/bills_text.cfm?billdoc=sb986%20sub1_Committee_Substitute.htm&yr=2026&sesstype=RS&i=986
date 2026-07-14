@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 986 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+sb986 sub1 
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=986">&laquo; Senate Bill 986 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 986'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb986 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=986" title="HTML  - Introduced Version
+ - Senate Bill 986">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 986 - Relating to child torture and abused children&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb986+sub1.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=986"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 986</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Senators Willis, Woelfel, Tarr, and Helton</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Reported March 2, 2026, from the Committee on Judiciary]</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;49-1-201 the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;61-8D-3b, relating to child torture and abused children; clarifying that reasonable discipline, including spanking, does not constitute abuse of a child; providing definitions; creating the crime of child torture; and creating criminal penalties.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">Chapter 49. Child Welfare.</span></h1>
+	<h2 class="cs7F45F1B">
+		<span class="cs7A33E2F1">Article 1. General provisions and Definitions.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-1-201. Definitions related, but not limited to, child abuse and neglect.</span></h4>
+	<p class="cs63FD752D"><span class="csB9803513">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">When used in this chapter, terms defined in this section have the meanings ascribed to them that relate to, but are not limited to, child abuse and neglect, except in those instances where a different meaning is provided or the context in which the word is used clearly indicates that a different meaning is intended.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Abandonment&quot; means any conduct that demonstrates the settled purpose to forego the duties and parental responsibilities to the child;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;&quot;Abused child&quot; means:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A child whose health or welfare is being harmed or threatened by:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A parent, guardian, or custodian who knowingly or intentionally inflicts, attempts to inflict, or knowingly allows another person to inflict, physical injury, or mental or emotional injury upon the child or another child in the home. Physical injury may include an injury to the child as a result of excessive corporal punishment</span><span class="cs46AE26E6">: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That physical injury or mental or emotional injury does not include an injury to a child as a result of reasonable corporal discipline, including, but not limited to, spanking</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Sexual abuse or sexual exploitation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The sale or attempted sale of a child by a parent, guardian, or custodian in violation of &sect;61-2-14h of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Domestic violence as defined in &sect;48-27-202 of this code; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Human trafficking or attempted human trafficking in violation of &sect;61-14-2 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A child conceived as a result of sexual assault, as that term is defined in this section, or as a result of the violation of a criminal law of another jurisdiction which has the same essential elements: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That </span><span class="cs68EFC440">no</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">a </span><span class="csEF05ACC">victim of sexual assault may </span><span class="cs46AE26E6">not </span><span class="csEF05ACC">be determined to be an abusive parent as that term is defined in this section, based upon being a victim of sexual assault.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;&quot;Abusing parent&quot; means a parent, guardian, or other custodian, regardless of his or her age, whose conduct has been adjudicated by the court to constitute child abuse or neglect as alleged in the petition charging child abuse or neglect.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Battered parent&quot; for the purposes of &sect;49-4-601 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code means a respondent parent, guardian, or other custodian who has been adjudicated by the court to have not condoned the abuse or neglect and has not been able to stop the abuse or neglect of the child or children due to being the victim of domestic violence as defined by &sect;48-27-202 of this code, which was perpetrated by the same person or persons determined to have abused or neglected the child or children.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Child abuse and neglect&quot; or &quot;child abuse or neglect&quot; means any act or omission that creates an abused child or a neglected child as those terms are defined in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Child abuse and neglect services&quot; means social services which are directed toward:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Protecting and promoting the welfare of children who are abused or neglected;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Identifying, preventing, and remedying conditions which cause child abuse and neglect;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Preventing the unnecessary removal of children from their families by identifying family problems and assisting families in resolving problems which could lead to a removal of children and a breakup of the family;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) In cases where children have been removed from their families, providing time-limited reunification services to the children and the families so as to reunify those children with their families, or some portion of the families;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Placing children in suitable adoptive homes when reunifying the children with their families, or some portion of the families, is not possible or appropriate; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Assuring the adequate care of children or juveniles who have been placed in the custody of the department or third parties.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Condition requiring emergency medical treatment&quot; means a condition which, if left untreated for a period of a few hours, may result in permanent physical damage; that condition includes, but is not limited to, profuse or arterial bleeding, dislocation or fracture, unconsciousness, and evidence of ingestion of significant amounts of a poisonous substance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Imminent danger to the physical well-being of the child&quot; means an emergency situation in which the welfare or the life of the child is threatened. These conditions may include an emergency situation when there is reasonable cause to believe that any child in the home is or has been sexually abused or sexually exploited, or reasonable cause to believe that the following conditions threaten the health, life, or safety of any child in the home:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Nonaccidental trauma inflicted by a parent, guardian, custodian, sibling, babysitter, or other caretaker;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A combination of physical and other signs indicating a pattern of abuse which may be medically diagnosed as battered child syndrome;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Nutritional deprivation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Abandonment by the parent, guardian, or custodian;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Inadequate treatment of serious illness or disease;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Substantial emotional injury inflicted by a parent, guardian, or custodian;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Sale or attempted sale of the child by the parent, guardian, or custodian;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) The parent, guardian, or custodian&rsquo;s abuse of alcohol or drugs or other controlled substance as defined in &sect;60A-1-101 of this code, has impaired his or her parenting skills to a degree as to pose an imminent risk to a child&rsquo;s health or safety; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Any other condition that threatens the health, life, or safety of any child in the home.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Neglected child&quot; means a child:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Whose physical or mental health is harmed or threatened by a present refusal, failure, or inability of the child&rsquo;s parent, guardian, or custodian to supply the child with necessary food, clothing, shelter, supervision, medical care, or education, when that refusal, failure, or inability is not due primarily to a lack of financial means on the part of the parent, guardian, or custodian; </span><span class="cs46AE26E6">or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Who is presently without necessary food, clothing, shelter, medical care, education, or supervision because of the disappearance or absence of the child&rsquo;s parent or custodian: </span><span class="cs68EFC440">or</span><span class="csEF05ACC"> </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That </span><span class="cs68EFC440">(C)</span><span class="csEF05ACC"> &quot;</span><span class="cs68EFC440">Neglected</span><span class="cs46AE26E6"> neglected</span><span class="csEF05ACC"> child&quot; does not mean a child whose education is conducted within the provisions of &sect;18-8-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Parent Resource Navigator&quot; means an individual established through the Court Improvement Program (CIP) or Public Defender Services (PDS) model who is assisting a parent or parents through requirements to be unified or reunified with their child or children. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Petitioner or co-petitioner&quot; means the department or any reputable person who files a child abuse or neglect petition pursuant to &sect;49-4-601 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Permanency plan&quot; means the part of the case plan which is designed to achieve a permanent home for the child in the least restrictive setting available.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Respondent&quot; means all parents, guardians, and custodians identified in the child abuse and neglect petition who are not petitioners or co-petitioners.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Sexual abuse&quot; means:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Sexual intercourse, sexual intrusion, sexual contact, or conduct proscribed by &sect;61-8c-3 of this code, which a parent, guardian, or custodian engages in, attempts to engage in, or knowingly procures another person to engage in, with a child notwithstanding the fact that for a child who is less than 16 years of age, the child may have willingly participated in that conduct or the child may have suffered no apparent physical, mental, or emotional injury as a result of that conduct or, for a child 16 years of age or older, the child may have consented to that conduct or the child may have suffered no apparent physical injury or mental, or emotional injury as a result of that conduct;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Any conduct where a parent, guardian, or custodian displays his or her sex organs to a child, or procures another person to display his or her sex organs to a child, for the purpose of gratifying the sexual desire of the parent, guardian, or custodian, of the person making that display, or of the child, or for the purpose of affronting or alarming the child; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Any of the offenses proscribed in &sect;61-8b-7, &sect;61-8b-8, or &sect;61-8b-9 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Sexual assault&quot; means any of the offenses proscribed in &sect;61-8b-3, &sect;61-8b-4, or &sect;61-8b-5 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Sexual contact&quot; means sexual contact as that term is defined in &sect;61-8b-1 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Sexual exploitation&quot; means an act where:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A parent, custodian, or guardian, whether for financial gain or not, persuades, induces, entices, or coerces a child to engage in sexually explicit conduct as that term is defined in &sect;61-8c-1 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A parent, guardian, or custodian persuades, induces, entices, or coerces a child to display his or her sex organs for the sexual gratification of the parent, guardian, custodian, or a third person, or to display his or her sex organs under circumstances in which the parent, guardian, or custodian knows that the display is likely to be observed by others who would be affronted or alarmed; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) A parent, guardian, or custodian knowingly maintains or makes available a child for the purpose of engaging the child in commercial sexual activity in violation of &sect;61-14-5 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Sexual intercourse&quot; means sexual intercourse as that term is defined in &sect;61-8b-1 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Sexual intrusion&quot; means sexual intrusion as that term is defined in &sect;61-8b-1 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Serious physical abuse&quot; means bodily injury which creates a substantial risk of death, causes serious or prolonged disfigurement, prolonged impairment of health, or prolonged loss or impairment of the function of any bodily organ.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">Chapter 61. crimes and their punishment.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 8D. CHILD ABUSE.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;61-8D-3b. Child torture.</span></h4>
+	<p class="cs63FD752D"><span class="csB9803513">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) For the purposes of this section:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&ldquo;Bodily injury&rdquo; has the same meaning as defined in &sect;61-8B-1 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&ldquo;Course of conduct&rdquo; means two or more acts or omissions directed at the same child, which evidence a continuing pattern of abuse, injury, deprivation, or emotional distress and which are not a single isolated event.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&ldquo;Emotional distress&rdquo; means significant psychological or emotional suffering or distress that may, but does not necessarily, require&nbsp;medical or other professional treatment or counseling.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&ldquo;Sadistic gratification&rdquo; means pleasure gained from the pain and suffering of someone else. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&ldquo;Serious bodily injury&rdquo; has the same meaning as defined in &sect;61-8B-1 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Severe emotional distress&quot; means severe psychological or emotional suffering that results in substantial physical or cognitive impairment, a clinically diagnosable psychological or physical condition, or observable and verifiable symptoms. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&ldquo;Terrorize&rdquo; means to create or maintain a state of extreme fear in someone.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Torture&quot; means a course of conduct against a child that involves extreme cruelty resulting in physical pain, emotional distress, or a substantial risk of bodily injury. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If a parent, guardian, custodian, or person in a position of trust in relation to a child intentionally or knowingly tortures that child, the parent, guardian, custodian, or person in a position of trust in relation to the child is guilty of the felony of child torture and upon conviction shall be imprisoned in a state correctional facility for two to 10 years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If a parent, guardian, custodian, or person in a position of trust in relation to a child intentionally and knowingly tortures a child and, in the course of their conduct of torture they have done so with any of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) An intent to terrorize a child;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An intent to cause severe emotional distress in a child;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) An intent to gain sadistic gratification; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) An intent to cause or an act that causes serious bodily injury or a substantial risk of serious bodily injury or death to the child; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The use of a firearm or other deadly weapon as defined in &sect;61-7-2;</span></p><p class="cs7F45F1B"><span class="cs46AE26E6">The parent, guardian, custodian, or person in a position of trust in relation to the child is guilty of the felony offense of aggravated child torture, and upon conviction shall be imprisoned in a state correctional facility for five to 15 years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The offense in this section is established as a separate and distinct offense, and in addition to any and all other offenses provided for in this code.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>
