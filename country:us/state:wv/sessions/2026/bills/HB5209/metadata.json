@@ -1,0 +1,199 @@
+{
+  "legislative_session": "2026",
+  "identifier": "HB 5209",
+  "title": "Create a registry of persons convicted of animal abuse",
+  "from_organization": "~{\"classification\": \"lower\"}",
+  "classification": [
+    "bill"
+  ],
+  "subject": [
+    "Crime"
+  ],
+  "abstracts": [],
+  "other_titles": [],
+  "other_identifiers": [
+    {
+      "identifier": "ocd-bill-wv-2026-hb5209"
+    }
+  ],
+  "actions": [
+    {
+      "description": "Filed for introduction",
+      "date": "2026-02-05",
+      "organization_id": "~{\"classification\": \"lower\"}",
+      "classification": [
+        "filing"
+      ],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:08Z"
+      }
+    },
+    {
+      "description": "To Judiciary",
+      "date": "2026-02-05",
+      "organization_id": "~{\"classification\": \"lower\"}",
+      "classification": [
+        "referral-committee"
+      ],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:08Z"
+      }
+    },
+    {
+      "description": "Introduced in House",
+      "date": "2026-02-05",
+      "organization_id": "~{\"classification\": \"lower\"}",
+      "classification": [
+        "introduction"
+      ],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:08Z"
+      }
+    },
+    {
+      "description": "To House Judiciary",
+      "date": "2026-02-05",
+      "organization_id": "~{\"classification\": \"lower\"}",
+      "classification": [
+        "referral-committee"
+      ],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:08Z"
+      }
+    }
+  ],
+  "sponsorships": [
+    {
+      "name": "Eldridge",
+      "classification": "primary",
+      "entity_type": "person",
+      "primary": true,
+      "person_id": "~{\"name\": \"Eldridge\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Holstein",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Holstein\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Mazzocchi",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Mazzocchi\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Chiarelli",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Chiarelli\"}",
+      "organization_id": null
+    },
+    {
+      "name": "McGeehan",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"McGeehan\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Kimble",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Kimble\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Worrell",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Worrell\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Dittman",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Dittman\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Hanshaw",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Hanshaw\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Akers",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Akers\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Maynor",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Maynor\"}",
+      "organization_id": null
+    }
+  ],
+  "related_bills": [],
+  "versions": [
+    {
+      "note": "Introduced Version",
+      "links": [
+        {
+          "url": "https://www.wvlegislature.gov/Bill_Status/bills_text.cfm?billdoc=hb5209%20intr.htm&yr=2026&sesstype=RS&i=5209",
+          "media_type": "text/html"
+        },
+        {
+          "url": "https://www.wvlegislature.gov/Bill_Text_HTML/2026_SESSIONS/RS/bills/hb5209 intr.pdf",
+          "media_type": "application/pdf"
+        },
+        {
+          "url": "https://www.wvlegislature.gov/Bill_Text_HTML/2026_SESSIONS/RS/bills/hb5209 intr.docx",
+          "media_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        }
+      ],
+      "date": "",
+      "classification": ""
+    }
+  ],
+  "documents": [],
+  "citations": [],
+  "sources": [
+    {
+      "url": "https://www.wvlegislature.gov/Bill_Status/Bills_history.cfm?input=5209&year=2026&sessiontype=RS&btype=bill",
+      "note": ""
+    }
+  ],
+  "extras": {},
+  "jurisdiction": {
+    "id": "ocd-jurisdiction/country:us/state:wv/government",
+    "name": "West Virginia",
+    "classification": "state",
+    "division_id": "ocd-division/country:us/state:wv"
+  },
+  "_processing": {
+    "logs_latest_update": "2026-07-14T13:19:08Z"
+  }
+}

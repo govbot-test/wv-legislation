@@ -1,0 +1,20 @@
+{
+  "action": {
+    "description": "Introduced in House",
+    "occurred_at": "2026-02-16",
+    "jurisdiction_id": "~{\"classification\": \"lower\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [
+      "introduction"
+    ],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Bills_history.cfm?input=5538&year=2026&sessiontype=RS&btype=bill",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "HB 5538"
+}

@@ -1,0 +1,165 @@
+{
+  "legislative_session": "2026",
+  "identifier": "HCR 27",
+  "title": "A Resolution requesting a comprehensive legislative study of disaster recovery and flood resiliency funding, coordination, statutory compliance, and disaster case management capacity within the State of West Virginia",
+  "from_organization": "~{\"classification\": \"lower\"}",
+  "classification": [
+    "concurrent resolution"
+  ],
+  "subject": [
+    "Resolutions (Interim Study)"
+  ],
+  "abstracts": [],
+  "other_titles": [],
+  "other_identifiers": [
+    {
+      "identifier": "ocd-bill-wv-2026-hcr27"
+    }
+  ],
+  "actions": [
+    {
+      "description": "Filed for introduction",
+      "date": "2026-03-03",
+      "organization_id": "~{\"classification\": \"lower\"}",
+      "classification": [
+        "filing"
+      ],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:08Z"
+      }
+    },
+    {
+      "description": "To Rules",
+      "date": "2026-03-03",
+      "organization_id": "~{\"classification\": \"lower\"}",
+      "classification": [],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:08Z"
+      }
+    },
+    {
+      "description": "Introduced in House",
+      "date": "2026-03-03",
+      "organization_id": "~{\"classification\": \"lower\"}",
+      "classification": [
+        "introduction"
+      ],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:08Z"
+      }
+    },
+    {
+      "description": "To House Rules",
+      "date": "2026-03-03",
+      "organization_id": "~{\"classification\": \"lower\"}",
+      "classification": [
+        "referral-committee"
+      ],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:08Z"
+      }
+    }
+  ],
+  "sponsorships": [
+    {
+      "name": "Jeffries",
+      "classification": "primary",
+      "entity_type": "person",
+      "primary": true,
+      "person_id": "~{\"name\": \"Jeffries\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Howell, T.",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Howell, T.\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Riley",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Riley\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Jennings",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Jennings\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Green",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Green\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Campbell",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Campbell\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Stephens",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Stephens\"}",
+      "organization_id": null
+    },
+    {
+      "name": "Moore",
+      "classification": "cosponsor",
+      "entity_type": "person",
+      "primary": false,
+      "person_id": "~{\"name\": \"Moore\"}",
+      "organization_id": null
+    }
+  ],
+  "related_bills": [],
+  "versions": [
+    {
+      "note": "Introduced Version",
+      "links": [
+        {
+          "url": "https://www.wvlegislature.gov/Bill_Status/bills_text.cfm?billdoc=hcr27%20intr.htm&yr=2026&sesstype=RS&i=27&houseorig=h&billtype=cr",
+          "media_type": "text/html"
+        }
+      ],
+      "date": "",
+      "classification": ""
+    }
+  ],
+  "documents": [],
+  "citations": [],
+  "sources": [
+    {
+      "url": "https://www.wvlegislature.gov/Bill_Status/Resolution_History.cfm?year=2026&sessiontype=RS&input4=27&billtype=cr&houseorig=h&btype=res",
+      "note": ""
+    }
+  ],
+  "extras": {},
+  "jurisdiction": {
+    "id": "ocd-jurisdiction/country:us/state:wv/government",
+    "name": "West Virginia",
+    "classification": "state",
+    "division_id": "ocd-division/country:us/state:wv"
+  },
+  "_processing": {
+    "logs_latest_update": "2026-07-14T13:19:12Z"
+  }
+}

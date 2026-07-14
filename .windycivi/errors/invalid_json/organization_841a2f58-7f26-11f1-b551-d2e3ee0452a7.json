@@ -1,0 +1,5 @@
+{
+  "error": "Could not parse JSON",
+  "raw": "<<<<<<<< HEAD:_data/wv/organization_c8221700-7f13-11f1-930a-0ee59a2a7266.json\n{\"name\": \"West Virginia Legislature\", \"classification\": \"legislature\", \"parent_id\": null, \"links\": [], \"sources\": [], \"extras\": {}, \"_id\": \"c8221700-7f13-11f1-930a-0ee59a2a7266\"}\n========\n{\"name\": \"West Virginia Legislature\", \"classification\": \"legislature\", \"parent_id\": null, \"links\": [], \"sources\": [], \"extras\": {}, \"_id\": \"841a2f58-7f26-11f1-b551-d2e3ee0452a7\"}\n>>>>>>>> 6dc9a9d9b96f4b3c30727f36348a6e53dd2f8318:_data/wv/organization_841a2f58-7f26-11f1-b551-d2e3ee0452a7.json\n",
+  "_original_filename": "organization_841a2f58-7f26-11f1-b551-d2e3ee0452a7.json"
+}

@@ -1,0 +1,20 @@
+{
+  "action": {
+    "description": "Adopted by Senate (Roll No. 311)",
+    "occurred_at": "2026-03-03",
+    "jurisdiction_id": "~{\"classification\": \"upper\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [
+      "passage"
+    ],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Resolution_History.cfm?year=2026&sessiontype=RS&input4=11&billtype=jr&houseorig=s&btype=res",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "SJR 11"
+}

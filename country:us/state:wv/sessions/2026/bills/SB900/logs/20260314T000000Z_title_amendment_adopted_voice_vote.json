@@ -1,0 +1,18 @@
+{
+  "action": {
+    "description": "Title amendment adopted (Voice vote)",
+    "occurred_at": "2026-03-14",
+    "jurisdiction_id": "~{\"classification\": \"lower\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Bills_history.cfm?input=900&year=2026&sessiontype=RS&btype=bill",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "SB 900"
+}

@@ -1,0 +1,20 @@
+{
+  "action": {
+    "description": "Filed for introduction",
+    "occurred_at": "2026-01-14",
+    "jurisdiction_id": "~{\"classification\": \"lower\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [
+      "filing"
+    ],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Bills_history.cfm?input=4166&year=2026&sessiontype=RS&btype=bill",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "HB 4166"
+}

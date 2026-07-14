@@ -1,0 +1,20 @@
+{
+  "action": {
+    "description": "Chapter 232, Acts, Regular Session, 2026",
+    "occurred_at": "2026-06-29",
+    "jurisdiction_id": "~{\"classification\": \"lower\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [
+      "became-law"
+    ],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Bills_history.cfm?input=5462&year=2026&sessiontype=RS&btype=bill",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "HB 5462"
+}

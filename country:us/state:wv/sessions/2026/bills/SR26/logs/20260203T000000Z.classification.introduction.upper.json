@@ -1,0 +1,20 @@
+{
+  "action": {
+    "description": "Introduced in Senate",
+    "occurred_at": "2026-02-03",
+    "jurisdiction_id": "~{\"classification\": \"upper\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [
+      "introduction"
+    ],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Resolution_History.cfm?year=2026&sessiontype=RS&input4=26&billtype=r&houseorig=s&btype=res",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "SR 26"
+}

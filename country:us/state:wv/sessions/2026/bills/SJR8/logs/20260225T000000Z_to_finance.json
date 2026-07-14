@@ -1,0 +1,20 @@
+{
+  "action": {
+    "description": "To Finance",
+    "occurred_at": "2026-02-25",
+    "jurisdiction_id": "~{\"classification\": \"upper\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [
+      "referral-committee"
+    ],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Resolution_History.cfm?year=2026&sessiontype=RS&input4=8&billtype=jr&houseorig=s&btype=res",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "SJR 8"
+}

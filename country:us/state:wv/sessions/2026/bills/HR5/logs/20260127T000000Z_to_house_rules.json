@@ -1,0 +1,20 @@
+{
+  "action": {
+    "description": "To House Rules",
+    "occurred_at": "2026-01-27",
+    "jurisdiction_id": "~{\"classification\": \"lower\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [
+      "referral-committee"
+    ],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Resolution_History.cfm?year=2026&sessiontype=RS&input4=5&billtype=r&houseorig=h&btype=res",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "HR 5"
+}

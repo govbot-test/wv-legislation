@@ -1,0 +1,18 @@
+{
+  "action": {
+    "description": "Amendment reported by the Clerk",
+    "occurred_at": "2026-03-12",
+    "jurisdiction_id": "~{\"classification\": \"lower\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Bills_history.cfm?input=586&year=2026&sessiontype=RS&btype=bill",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "SB 586"
+}

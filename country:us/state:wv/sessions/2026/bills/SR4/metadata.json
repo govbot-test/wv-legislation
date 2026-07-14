@@ -48,6 +48,46 @@
       "_processing": {
         "log_file_created": "2026-07-13T06:05:56Z"
       }
+    },
+    {
+      "description": "Committee reference dispensed",
+      "date": "2026-01-15",
+      "organization_id": "~{\"classification\": \"upper\"}",
+      "classification": [],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:09Z"
+      }
+    },
+    {
+      "description": "Immediate consideration",
+      "date": "2026-01-15",
+      "organization_id": "~{\"classification\": \"upper\"}",
+      "classification": [],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:09Z"
+      }
+    },
+    {
+      "description": "Adopted (Roll No. 1)",
+      "date": "2026-01-15",
+      "organization_id": "~{\"classification\": \"upper\"}",
+      "classification": [],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:09Z"
+      }
+    },
+    {
+      "description": "Completed legislative action",
+      "date": "2026-01-15",
+      "organization_id": "~{\"classification\": \"upper\"}",
+      "classification": [],
+      "related_entities": [],
+      "_processing": {
+        "log_file_created": "2026-07-14T13:19:09Z"
+      }
     }
   ],
   "sponsorships": [
@@ -98,7 +138,7 @@
     "division_id": "ocd-division/country:us/state:wv"
   },
   "_processing": {
-    "logs_latest_update": "2026-07-13T06:05:56Z",
+    "logs_latest_update": "2026-07-14T13:19:13Z",
     "text_extraction_latest_update": "2026-07-13T09:43:54.641512Z"
   }
 }

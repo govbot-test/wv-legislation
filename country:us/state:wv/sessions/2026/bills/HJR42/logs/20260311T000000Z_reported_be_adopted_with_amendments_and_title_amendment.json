@@ -1,0 +1,18 @@
+{
+  "action": {
+    "description": "Reported be adopted, with amendments and title amendment",
+    "occurred_at": "2026-03-11",
+    "jurisdiction_id": "~{\"classification\": \"upper\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Resolution_History.cfm?year=2026&sessiontype=RS&input4=42&billtype=jr&houseorig=h&btype=res",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "HJR 42"
+}

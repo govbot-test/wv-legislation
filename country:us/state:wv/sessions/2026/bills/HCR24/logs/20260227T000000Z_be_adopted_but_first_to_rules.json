@@ -1,0 +1,18 @@
+{
+  "action": {
+    "description": "Be adopted, but first to Rules",
+    "occurred_at": "2026-02-27",
+    "jurisdiction_id": "~{\"classification\": \"lower\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Resolution_History.cfm?year=2026&sessiontype=RS&input4=24&billtype=cr&houseorig=h&btype=res",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "HCR 24"
+}

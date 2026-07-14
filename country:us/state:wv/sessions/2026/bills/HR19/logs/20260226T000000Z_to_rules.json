@@ -1,0 +1,18 @@
+{
+  "action": {
+    "description": "To Rules",
+    "occurred_at": "2026-02-26",
+    "jurisdiction_id": "~{\"classification\": \"lower\"}",
+    "session_id": "2026",
+    "entity_type": "bill",
+    "classifications": [],
+    "related_entities": [],
+    "sources": [
+      {
+        "url": "https://www.wvlegislature.gov/Bill_Status/Resolution_History.cfm?year=2026&sessiontype=RS&input4=19&billtype=r&houseorig=h&btype=res",
+        "note": ""
+      }
+    ]
+  },
+  "bill_id": "HR 19"
+}
