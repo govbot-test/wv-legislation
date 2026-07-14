@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 1037 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=1037">&laquo; Senate Bill 1037 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 1037'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb1037 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=1037" title="HTML  - Committee Substitute (1)
+ - House Bill 1037">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 1037 - Allowing death penalty for first degree murder during commission of sexual assault&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb1037+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=1037"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs2CFB8C73{color:#70AD47;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	<span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 1037</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Bartlett</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 20, 2026; referred<br/>to the Committee on the Judiciary; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;61-2-2, &sect;62-3-3, &sect;62-3-5, and &sect;62-3-15 of the Code of West Virginia, 1931, as amended; to amend the code by adding four new sections, designated &sect;62-7-4, &sect;62-7-5, &sect;62-7-6, and &sect;62-7-6a; and to repeal &sect;61-11-2, relating to permitting the imposition of the death penalty for first degree murder when the defendant is convicted of sexual abuse in first degree, the defendant is over 18, and the victim is under 12; requiring the prosecutor provide notice that the death penalty is being sought and the aggravating factors the prosecutor seeks to prove; providing for the jury selection process for capital felonies; providing for sentencing procedures relating to imposition of death penalty; setting forth aggravating and mitigating circumstances for the imposition of capital punishment; describing contents of sentencing verdict and requiring it be recorded; allowing a victim impact statement; providing automatic review of death penalty sentence by the Supreme Court of Appeals; authorizing the Supreme Court of Appeals to promulgate rules to review the sentence; providing for forensic DNA testing in death penalty cases; directing the West Virginia Division of Corrections and Rehabilitation to carry out death sentence; authorizing West Virginia Division of Corrections and Rehabilitation to promulgate rules and emergency rules; providing exception for death penalty sentence in murder cases; providing for the execution of death sentence; providing for delivery of sentence of death; providing for transmission of certain court records to warden of the state correctional facility; transferring of person sentenced to death to the state correctional facility; providing for presence of certain persons at execution; providing for record of execution; providing for disposition of deceased defendant&rsquo;s body; and repealing the prohibition of the death penalty in West Virginia.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">Chapter 61</span><span class="cs2CFB8C73">.</span><span class="csE70BDF83"> Crimes and their punishment.</span></h1>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-2-2. Penalty for murder of first degree.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Murder of the first degree shall be punished by confinement in the penitentiary for life </span><span class="cs46AE26E6">pursuant to &sect;62-3-15 or death under &sect;62-3-5 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">If the prosecutor intends to seek the death penalty, the prosecutor must give notice to the defendant and file the notice with the court within 45 days after arraignment. The notice must indicate that charges under this section and &sect;61-8B-3(c) of this code are being sought and must contain a list of the aggravating factors the state intends to prove and has reason to believe it can prove beyond a reasonable doubt. The court may allow the prosecutor to amend the notice upon a showing of good cause.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 11. GENERAL PROVISIONS CONCERNING CRIMES.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-11-2. Capital punishment abolished.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">Chapter 62. Criminal Procedure.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">Article 3. Trial of Criminal Cases.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;62-3-3. Selection of jury in felony cases; striking jurors; alternate jurors.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="csEF05ACC">In a case of felony, twenty jurors shall be drawn from those in attendance for the trial of the accused. If a sufficient number of jurors for such panel cannot be procured in this way, the court shall order others to be forthwith summoned and selected, until a panel of twenty jurors, free from exception, be completed, from which panel the accused may strike off six jurors and the prosecuting attorney may strike off two jurors. The prosecuting attorney shall first strike off two jurors, and then the accused six. If the accused failed to strike from such panel the number of jurors this section allows him to strike, the number not stricken off by him shall be stricken off by the prosecuting attorney, so as to reduce the panel to twelve, who shall compose the jury for the trial of the case.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="csEF05ACC">Whenever, in the opinion of the court the trial is likely to be a protracted one, the court may direct that not more than four jurors, in addition to the regular jury, be called and impanelled to sit as alternate jurors. Alternate jurors in the order in which they are called shall replace jurors who, prior to the time the jury retires to consider its verdict, become unable or disqualified to perform their duties. Alternate jurors shall be drawn in the same manner, shall have the same qualifications, shall be subject to the same examination and challenges, shall take the same oath and shall have the same functions, powers, facilities and privileges as the regular jurors. An alternate juror who does not replace a regular juror shall be discharged after the jury retires to consider its verdict. Each side is entitled to one peremptory challenge in addition to those otherwise allowed by law if one or two alternate jurors are to be impanel</span><span class="cs68EFC440">l</span><span class="csEF05ACC">ed, and two peremptory challenges if three or four alternate jurors are to be impane</span><span class="cs68EFC440">l</span><span class="csEF05ACC">led. The additional peremptory challenges may be used against an alternate juror only, and the other peremptory challenges allowed by this section may not be used against an alternate juror.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A person who has beliefs which preclude her or him from finding a defendant guilty of an offense punishable by death shall not be qualified as a juror in a capital case.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;62-3-5. Capital punishment and proceedings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) SENTENCE PROCEEDINGS. &mdash; Upon conviction or adjudication of guilt of a defendant under both &sect;61-2-2 and &sect;61-8B-3(c) of this code, the court shall conduct a separate sentencing proceeding to determine whether the defendant should be sentenced to death or life imprisonment of this code. The proceeding shall be conducted by the trial judge before the trial jury as soon as practicable. If, through impossibility or inability, the trial jury is unable to reconvene for a hearing on the issue of penalty, having determined the guilt of the accused, the trial judge may summon a special juror or jurors as provided in chapter 62 of this code to determine the issue of the imposition of the penalty. If the trial jury has been waived, or if the defendant pleaded guilty, the sentencing proceeding shall be conducted before a jury impaneled for that purpose, unless waived by the defendant. In the proceeding, evidence may be presented as to any matter that the court deems relevant to the nature of the crime and the character of the defendant and shall include matters relating to any of the aggravating factors enumerated in subsection (e) and for which notice has been provided pursuant to &sect;61-2-2 of this code or mitigating circumstances enumerated in subsection (f). Any such evidence that the court deems to have probative value may be received, regardless of its admissibility under the exclusionary rules of evidence, provided the defendant is accorded a fair opportunity to rebut any hearsay statements. However, this subsection shall not be construed to authorize the introduction of any evidence secured in violation of the United States Constitution or the State Constitution. The state and the defendant or the defendant&rsquo;s counsel shall be permitted to present argument for or against a sentence of death.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)&emsp;FINDINGS AND RECOMMENDED SENTENCE BY THE JURY.&mdash;This subsection applies only if the defendant has not waived his or her right to a sentencing proceeding by a jury.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&emsp;After hearing all of the evidence presented regarding aggravating factors and mitigating circumstances, the jury shall deliberate and determine if the state has proven, beyond a reasonable doubt, the existence of at least two aggravating factors set forth in subsection (e).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&emsp;The jury shall return findings identifying each aggravating factor found to exist. A finding that at least two aggravating factors exist must be unanimous. If the jury:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A)&emsp;Does not unanimously find at least two aggravating factors, the defendant is ineligible for a sentence of death.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B)&emsp;Unanimously finds at least two aggravating factors, the defendant is eligible for a sentence of death and the jury shall make a recommendation to the court as to whether the defendant shall be sentenced to life imprisonment without the possibility of parole or to death. The recommendation shall be based on a weighing of all of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i)&emsp;Whether sufficient aggravating factors exist.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii)&emsp;Whether aggravating factors exist which outweigh the mitigating circumstances found to exist.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii)&emsp;Based on the considerations in sub-subparagraphs (i) and (ii), whether the defendant should be sentenced to life imprisonment without the possibility of parole or to death.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&emsp;If at least eight jurors determine that the defendant should be sentenced to death, the jury&rsquo;s recommendation to the court shall be a sentence of death. If fewer than eight jurors determine that the defendant should be sentenced to death, the jury&rsquo;s recommendation to the court shall be a sentence of life imprisonment without the possibility of parole.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)&emsp;IMPOSITION OF SENTENCE OF LIFE IMPRISONMENT OR DEATH.&mdash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&emsp;If the jury has recommended a sentence of:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A)&emsp;Life imprisonment without the possibility of parole, the court shall impose the recommended sentence of life imprisonment without the possibility of parole.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B)&emsp;Death, the court, after considering each aggravating factor found by the jury and all mitigating circumstances, may impose a sentence of life imprisonment without the possibility of parole or a sentence of death. The court may consider only an aggravating factor that was unanimously found to exist by the jury. The court may impose a sentence of death only if the jury unanimously found at least two aggravating factors beyond a reasonable doubt.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&emsp;If the defendant waived his or her right to a sentencing proceeding by a jury, the court, after considering all aggravating factors and mitigating circumstances, may impose a sentence of life imprisonment without the possibility of parole or a sentence of death. The court may impose a sentence of death only if the court finds that at least two aggravating factors have been proven to exist beyond a reasonable doubt.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)&emsp;ORDER OF THE COURT IN SUPPORT OF SENTENCE OF LIFE IMPRISONMENT OR DEATH.&mdash;In each case in which the court imposes a sentence of life imprisonment without the possibility of parole or death, the court shall, considering the records of the trial and the sentencing proceedings, enter a written order addressing the aggravating factors set forth in subsection (e) found to exist, the mitigating circumstances in subsection (f) reasonably established by the evidence, whether there are sufficient aggravating factors to warrant the death penalty, and whether the aggravating factors outweigh the mitigating circumstances reasonably established by the evidence. The court shall include in its written order the reasons for not accepting the jury&rsquo;s recommended sentence, if applicable. If the court does not issue its order requiring the death sentence within 30 days after the rendition of the judgment and sentence, the court shall impose a sentence of life imprisonment without the possibility of parole in accordance with &sect;62-3-15 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)&emsp;AGGRAVATING FACTORS.&mdash;Aggravating factors shall be limited to the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&emsp;The capital felony was committed by a person previously convicted of a felony violation of &sect;61-8B-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, and under sentence of imprisonment or placed on community control or on felony probation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&emsp;The defendant was previously convicted of another felony involving the use or threat of violence to the person.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&emsp;The capital felony was committed by a sexual offender who is required to register under &sect;15-12-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&emsp;The defendant used a firearm or knowingly directed, advised, authorized, or assisted another to use a firearm to threaten, intimidate, assault, or injure a person in committing the offense or in furtherance of the offense.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5)&emsp;The capital felony was committed for pecuniary gain.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6)&emsp;The capital felony was especially heinous, atrocious, or cruel.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7)&emsp;The victim of the capital felony was particularly vulnerable due to age or disability, or because the defendant stood in a position of familial or custodial authority over the victim.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8)&emsp;The capital felony was committed by a person subject to an injunction issued pursuant to &sect;48-27-501 or &sect;48-27-403 of this code, or a foreign protection order accorded full faith and credit pursuant to &sect;48-27-310 of this code, and was committed against the petitioner who obtained the injunction or protection order or any spouse, child, sibling, or parent of the petitioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f)&emsp;MITIGATING CIRCUMSTANCES.&mdash;Mitigating circumstances shall be the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)&emsp;The defendant has no significant history of prior criminal activity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2)&emsp;The capital felony was committed while the defendant was under the influence of extreme mental or emotional disturbance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3)&emsp;The defendant was an accomplice in the capital felony committed by another person and his or her participation was relatively minor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)&emsp;The defendant acted under extreme duress or under the substantial domination of another person.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5)&emsp;The capacity of the defendant to appreciate the criminality of his or her conduct or to conform his or her conduct to the requirements of law was substantially impaired at the time of the commission of the murder.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6)&emsp;The age of the defendant at the time of the crime.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) The defendant was under the influence of extreme mental or emotional disturbance at the time of the commission of the murder.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8)&emsp;The existence of any other factors in the defendant&rsquo;s background that would mitigate against imposition of the death penalty.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g)&emsp;VICTIM IMPACT EVIDENCE.&mdash;Once the prosecution has provided evidence of the existence of two or more aggravating factors as described in subsection (e), the prosecution may introduce, and subsequently argue, victim impact evidence to the jury by family. Such evidence shall be designed to demonstrate the victim&rsquo;s uniqueness as an individual human being and the physical and psychological harm to the victim. Characterizations and opinions about the crime, the defendant, and the appropriate sentence shall not be permitted as a part of victim impact evidence.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h)&emsp;REVIEW OF JUDGMENT AND SENTENCE.&mdash;The judgment of conviction and sentence of death shall be subject to automatic review by the Supreme Court of Appeals West Virginia and disposition rendered within two years after the filing of a notice of appeal. The review by the Supreme Court of Appeals of West Virginia shall have priority over all other cases and shall be heard in accordance with rules adopted by the Supreme Court of Appeals of West Virginia, which shall require both the defendant and the state the opportunity to submit briefs and present oral arguments. The review shall consider at a minimum:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Whether the sentence of death was imposed under the influence of passion, prejudice, or any other arbitrary factor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Whether the evidence supports the jury&#39;s finding of a statutory aggravating circumstance; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Whether the sentence of death is excessive or disproportionate to the penalty imposed in similar cases, considering both the circumstances of the murder and the defendant.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) DNA TESTING.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Notwithstanding any other provision of law to the contrary, a person in custody pursuant to the judgment of a court of this state in which the death penalty has been imposed may, at any time after conviction, apply to the court that entered the judgment for the testing of any forensic deoxyribonucleic acid (&quot;DNA&quot;) biological material that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Is related to the investigation or prosecution that resulted in the judgment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Is in the actual or constructive possession of the state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Was not previously subjected to DNA testing or can be subjected to retesting with DNA techniques that were previously not available that provide a reasonable likelihood of more accurate and probative results.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The court shall notify the prosecutor of the county in which the sentence of death was entered and the Attorney General of an application made under paragraph (1) of this subsection and shall afford the state an opportunity to respond.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Upon receiving notice of an application made under paragraph (1) of this subsection, the prosecutor of the county in which the sentence of death was entered or the Attorney General shall take necessary steps to ensure that any remaining biological material that was secured in connection with the case is preserved pending the completion of proceedings under this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The court shall order DNA testing pursuant to an application made under paragraph (1) of this subsection upon a determination that testing may produce noncumulative, exculpatory evidence relevant to the claim of the applicant that the applicant was wrongfully convicted or sentenced.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The cost of DNA testing ordered under paragraph (4) of this subsection shall be borne by the state or the applicant, as the court may order in the interests of justice, if it is shown that the applicant is not indigent and possesses the means to pay.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The court may at any time appoint counsel for an indigent applicant under this subsection.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) If the results of DNA testing conducted under this subsection are unfavorable to the applicant, the court:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Shall dismiss the application; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) In the case of an applicant who is not indigent, may assess the applicant for the cost of such testing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) If the results of DNA testing conducted under this subsection are favorable to the applicant, the court shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Notwithstanding any other provision of law to the contrary that would bar a hearing, order a hearing, and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Enter any order that serves the interests of justice, including an order:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Vacating and setting aside the judgment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Discharging the applicant, if the applicant is in custody;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Resentencing the applicant; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) Granting a new trial.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Nothing in this subsection may be construed to limit the circumstances under which a person may obtain DNA testing or other post-conviction relief under any other provision of law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Notwithstanding any other provision of law, the state shall preserve any biological material secured in connection with a death penalty case for such period of time as a person remains incarcerated awaiting execution under a death penalty sentence.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;62-3-15. Verdict and sentence in murder cases.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">If a person indicted for murder </span><span class="cs68EFC440">be</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">is </span><span class="csEF05ACC">found </span><span class="cs46AE26E6">guilty </span><span class="csEF05ACC">by the jury </span><span class="cs68EFC440">guilty thereof</span><span class="csEF05ACC">, </span><span class="cs68EFC440">they</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the jury </span><span class="csEF05ACC">shall in their verdict find whether he or she is guilty of murder of the first degree or second degree. If</span><span class="cs68EFC440"> the person indicted for murder is found by the jury guilty thereof, and if</span><span class="csEF05ACC"> the jury find in their verdict that he or she is guilty of murder of the first degree, or if a person indicted for murder pleads guilty of murder of the first degree, he or she shall be punished by imprisonment in the penitentiary for life, and he or she, notwithstanding </span><span class="cs68EFC440">the provisions of</span><span class="csEF05ACC"> </span><span class="cs68EFC440">article twelve, chapter sixty-two</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;62-12-1 </span><span class="cs1489E706">et seq.</span><span class="csEF05ACC"> of this code, shall not be eligible for parole: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That the jury may, in their discretion, recommend mercy, and if such recommendation is added to their verdict, such person shall be eligible for parole in accordance with the provisions of </span><span class="cs68EFC440">said article twelve</span><span class="cs46AE26E6">&sect;62-12-1 </span><span class="cs1489E706">et seq.</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">of this code</span><span class="csEF05ACC">, except that, notwithstanding any other provision of this code to the contrary, such person shall not be eligible for parole until he or she has served fifteen years: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That if the accused pleads guilty of murder of the first degree, the court may, in its discretion, provide that such person shall be eligible for parole in accordance with the provisions of </span><span class="cs68EFC440">said article twelve</span><span class="cs46AE26E6">&sect;62-12-1 </span><span class="cs1489E706">et seq.</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">of this code</span><span class="csEF05ACC">, and, if the court so provides, such person shall be eligible for parole in accordance with the provisions of </span><span class="cs68EFC440">said article twelve</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;62-12-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code</span><span class="csEF05ACC"> in the same manner and with like effect as if such person had been found guilty by the verdict of a jury and the jury had recommended mercy, except that, notwithstanding any provision </span><span class="cs68EFC440">said article twelve </span><span class="cs46AE26E6">of &sect;62-12-1 </span><span class="cs1489E706">et seq.</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">of this code</span><span class="csEF05ACC"> or any other provision of this code to the contrary, such person shall not be eligible for parole until he or she has served 15 years.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 7. EXECUTION OF SENTENCES; STAYS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;62-7-4. Execution of death sentence.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The West Virginia Division of Corrections and Rehabilitation shall propose rules for legislative approval in accordance with the provisions of &sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, and may promulgate emergency rules pursuant to &sect;29A-3-15 of this code when necessary, to adopt the procedures and methods that the West Virginia Division of Corrections and Rehabilitation will use to carry out a sentence of death. The rules authorized by this section shall at a minimum provide for the carrying out of a death sentence within the walls of a West Virginia correctional facility under the direction of West Virginia corrections officials. The method of execution shall comply with both the United states and West Virginia Constitution and shall be carried out according to current evidence-based scientific research, including but not limited to, lethal injection or firing squad. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The execution shall be performed under the direction of the warden of the state correctional facility and the authorities in control of the facility. The warden of the state correctional facility or, in the case of his or her death, absence or inability to act, the Commissioner of West Virginia Division of Corrections and Rehabilitation shall be the executioner. In carrying out the execution of the sentence, the warden or the Commissioner of West Virginia Division of Corrections and Rehabilitation may secure the services and advice of any person or persons either considers appropriate.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;62-7-5. Certificate of death sentence and indictment to be sent to warden; transfer of convict to a state correctional facility; persons present at execution.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The clerk of the court which pronounces the sentence of death shall, as soon as possible after sentence, deliver a certified copy of the sentence to the sheriff, who shall retain the custody of the convict sentenced to death until he or she is delivered to a properly authorized guard sent by the warden for the removal of the convict to the state correctional facility. The clerk of the court shall also immediately transmit to the warden of the state correctional facility a copy of the indictment, order of conviction and the sentence and judgment entered thereon. As soon as possible after receipt of the copies, the warden shall send a guard or guards to remove the convict to the state correctional facility. Unless a suspension of execution is ordered, the execution shall take place at the time and in the manner prescribed in the sentencing order. At the execution there may be present those officers, guards, and assistants as the warden or Commissioner of West Virginia Division of Corrections and Rehabilitation considers appropriate. The warden or the commissioner, as the case may be, shall request the presence of the prosecuting attorney of the county in which the conviction occurred, the clerk of the circuit court of the county, 12 respectable citizens, including a physician and representatives of the press as may be considered appropriate. The counsel of the convict, or any clergymen the convict may desire and any of the convict&#39;s relations may be permitted to attend</span><span class="csEF05ACC">.</span></p><p class="cs63FD752D"><span class="csB9803513">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;62-7-6. Record of execution.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The warden or Commissioner of West Virginia Division of Corrections and Rehabilitation</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">who executes the sentence of death shall certify to the clerk of the circuit court, by which the sentence was imposed, that the sentence has been executed. The clerk of the circuit court shall file the certificate with the papers of the case and enter the certificate and papers upon the records of the court.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;62-7-6a. Disposition of body of executed convict.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">If the friends or relatives of the convict make a request in writing to the warden at any time within two days after the sentence of death has been executed, the body of the convict shall be returned to the friends or relatives, in any county of the state, for burial. The warden may draw his or her order on the Auditor of the state for whatever sum is necessary to pay for transportation of the body, to be paid out of funds appropriated to the West Virginia Division of Corrections and Rehabilitation. If no request is made by friends or relatives, the body shall be disposed of as provided for other convicts who die within a state correctional facility.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to impose the death penalty on defendants convicted of first degree murder and first degree sexual abuse of a child in the same proceeding. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

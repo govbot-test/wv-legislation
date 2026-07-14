@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4659 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4659">&laquo; House Bill 4659 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4659'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4659 - Transfer oversight of childcare from the Department of Human Services to the Department of Education&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4659+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4659"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csFCE4DED{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: line-through;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4659</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Hornby, Clark, Fehrenbacher, Stephens, Heckert, Browning, Pritt, Holstein, Rohrbach, Ellington, and Maynor</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 21, 2026; referred to the Committee on Education then Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;49-2-113, &sect;49-2-114, &sect;49-2-115, &sect;49-2-115a, &sect;49-2-116, &sect;49-2-117, &sect;49-2-118, &sect;49-2-119, &sect;49-2-120, &sect;49-2-121, &sect;49-2-122, and &sect;49-2-123 of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;49-2-1007, relating to the transfer of childcare services from the Department of Human Services to the West Virginia Department of Education; providing for the implementation of Early Childhood Education Centers; providing for funding; and providing for certification.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. state responsibilities for children.</span><span class="cs456817A0"> </span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-113. Residential child-care centers; licensure, certification, approval, and registration; requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) Any person, corporation, or child welfare agency, other than a state agency, which operates a residential child-care center shall obtain a license from the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any residential child-care facility, day-care center, or any child-placing agency operated by the state shall obtain approval of its operations from the </span><span class="cs68EFC440">secretary </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Any family day-care facility which operates in this state, including family day-care facilities approved by the department for receipt of funding, shall obtain a statement of certification from the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Every family day-care home which operates in this state, including family day-care homes approved by the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> for receipt of funding, shall obtain a certificate of registration from the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">. The facilities and placing agencies shall maintain the same standards of care applicable to licensed facilities, centers, or placing agencies of the same category.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) This section does not apply to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A kindergarten, preschool, or school education program which is operated by a public school or which is accredited by the West Virginia Department of Education or any other kindergarten, preschool, or school programs which operate with sessions not exceeding four hours per day for any child;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) An individual or facility which offers occasional care of children for brief periods while parents are shopping, engaging in recreational activities, attending religious services, or engaging in other business or personal affairs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Summer recreation camps operated for children attending sessions for periods not exceeding 30 days;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Hospitals or other medical facilities which are primarily used for temporary residential care of children for treatment, convalescence, or testing;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Persons providing family day care solely for children related to them;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Any juvenile detention facility or juvenile correctional facility operated by or under contract with the Division of Corrections and Rehabilitation for the secure housing or holding of juveniles committed to its custody;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Any out-of-school time program that has been awarded a grant by the West Virginia Department of Education to provide out-of-school time programs to kindergarten through 12th grade students when the program is monitored by the West Virginia Department of Education;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Any out-of-school time program serving children six years of age or older and meets all of the following requirements, or is an out-of-school time program that is affiliated and in good standing with a national congressionally chartered organization or is an out-of-school time, summer recreation camp, or day camp program operated by a county parks and recreation commission, boards, and municipalities and meets all of the following requirements:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The program is located in a facility that meets all fire and health codes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The program performs state and federal background checks on all volunteers and staff;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The program&rsquo;s primary source of funding is not from fees for service except for programs operated by county parks and recreation commissions, boards, and municipalities; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) The program has a formalized monitoring system in place; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Any kindergarten, preschool, or school education program which is operated by a private, parochial, or church school that is recognized by the West Virginia Department of Education under Policy 2330. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> is authorized to issue an emergency rule relating to conducting a survey of existing facilities in this state in which children reside on a temporary basis in order to ascertain whether they should be subject to licensing under this article or applicable licensing provisions relating to behavioral health treatment providers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Any informal family child-care home or relative family child-care home may voluntarily register and obtain a certificate of registration from the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) All facilities or programs that provide out-of-school time care shall register with the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> upon commencement of operations and on an annual basis thereafter. The </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall obtain information such as the name of the facility or program, the description of the services provided, and any other information relevant to the determination by the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> as to whether the facility or program meets the criteria for exemption under this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Any child-care service that is licensed or receives a certificate of registration shall have a written plan for evacuation in the event of fire, natural disaster, or other threatening situation that may pose a health or safety hazard to the children in the child-care service.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The plan shall include, but not be limited to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A designated relocation site and evacuation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Procedures for notifying parents of the relocation and ensuring family reunification;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Procedures to address the needs of individual children including children with special needs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Instructions relating to the training of staff or the reassignment of staff duties, as appropriate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Coordination with local emergency management officials; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) A program to ensure that appropriate staff are familiar with the components of the plan.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A child-care service shall update the evacuation plan by December 31 of each year. If a child-care service fails to update the plan, no action shall be taken against the child-care services license or registration until notice is provided and the child-care service is given 30 days after the receipt of notice to provide an updated plan.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A child-care service shall retain an updated copy of the plan for evacuation and shall provide notice of the plan and notification that a copy of the plan will be provided upon request to any parent, custodian, or guardian of each child at the time of the child&rsquo;s enrollment in the child-care service and when the plan is updated.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) All child-care centers and family child-care facilities shall provide the plan and each updated copy of the plan to the Director of the Office of Emergency Services in the county where the center or facility is located.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) A residential child-care center which has entered into a contract with the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> to provide services to a certain number of foster children, shall accept any foster child who meets the residential child-care center&rsquo;s program criteria, if the residential child-care center has not met its maximum capacity as provided for in the contract. Any residential child-care center which has entered into a contract with the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may not discharge any child in its program, except as provided in the contract, including that if the youth does not meet the residential treatment level and target population, the provider shall request a </span><span class="cs68EFC440">MDT</span><span class="csEF05ACC"> Multi-Disciplinary Team and work toward an alternative placement.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-114. Application for license or approval.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Any person or corporation or any governmental agency intending to act as a child welfare agency shall apply for a license, approval or registration certificate to operate child care facilities regulated by this chapter. Applications for licensure, approval or registration shall be made separately for each child care facility to be licensed, approved, certified or registered.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall prescribe by legislative rule forms and reasonable application procedures including, but not limited to, fingerprinting of applicants and other persons responsible for the care of children for submission to the State Police and, if necessary, to the Federal Bureau of Investigation for criminal history record checks.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Before issuing a license, or approval, the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall investigate the facility, program and persons responsible for the care of children. The investigation shall include, but not be limited to, review of resource need, reputation, character and purposes of applicants, a check of personnel criminal records, if any, and personnel medical records, the financial records of applicants, review of the facilities emergency evacuation plan and consideration of the proposed plan for child care from intake to discharge.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Before a home registration is granted, the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall make inquiry as to the facility, program and persons responsible for the care of children. The inquiry shall include self-certification by the prospective home of compliance with standards including, but not limited to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Physical and mental health of persons present in the home while children are in care;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Criminal and child abuse or neglect history of persons present in the home while children are in care;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Discipline;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Fire and environmental safety;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Equipment and program for the children in care; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Health, sanitation and nutrition.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Further inquiry and investigation may be made as the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may direct and sees as necessary.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall make a decision on each application within sixty days of its receipt and shall provide to unsuccessful applicants written reasons for the decision.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-115. Conditions of licensure, approval and registration.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) A license or approval is effective for a period up to two years from the date of issuance, unless revoked or modified to provisional status based on evidence of a failure to comply with this chapter or any legislative rules promulgated by the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">. The license or approval shall be reinstated upon application to the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> and a determination of compliance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) An initial six-month license or approval shall be issued to an applicant establishing a new service found to be in compliance on initial review with regard to policy, procedure, organization, risk management, human resources, service environment and record keeping regulations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A provisional license or approval may be issued when a licensee is not in compliance with the legislative rules promulgated by the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> but does not pose a significant risk to the rights, well-being, health and safety of a consumer. It shall expire not more than six months from date of issuance, and not be consecutively reissued unless the provisional recommendation is that of the State Fire Marshal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) A renewal license or approval may be issued of any duration up to two years at the discretion of the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">. In the event a renewal license is not issued, the facility must make discharge plans for residents and cease operation within thirty days of the expiration of the license.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) A certificate of registration is effective for a period up to two years from the date of issuance, unless revoked based on evidence of a failure to comply with this article or any rules promulgated pursuant to this article. The certificate of registration shall be reinstated upon application to the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">, including a statement of assurance of continued compliance with the legislative rules promulgated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The license, approval or registration issued under this article is not transferable and applies only to the facility and its location stated in the application. The license, registration or approval shall be publicly displayed. The foster and adoptive family homes, informal family child care homes and relative family child care homes shall be required to display registration certificates of registration or approval upon request rather than by posting.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Provisional certificates of registration may be issued to family child care homes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">, as a condition of issuing a license, registration or approval, may:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Limit the age, sex or type of problems of children allowed admission to a particular facility;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Prohibit intake of any children; or </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Reduce the number of children which the agency, facility or home operated by the agency is licensed, approved, certified or registered to receive.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-115a. Head Start program licenses.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) A Head Start program in good standing with the United States Department of Health and Human Services pursuant to 42 USC &sect; 9381 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. may request to be deemed a licensee to operate a child care program for the sole purpose of utilizing the West Virginia Clearance for Access: Registry and Employment Screenings program. At the discretion of the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">, a deemed license may not permit the licensee to access the other services provided by the Bureau for Family Assistance as it relates to the specific deemed child care license.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The section may not be construed to prevent the department from investigating complaints regarding the health, safety, or welfare of children. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall propose a legislative rule for promulgation by July 1, </span><span class="cs68EFC440">2022</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">2026</span><span class="csEF05ACC">, to effectuate this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-116. Investigative authority; evaluation; complaint.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall enforce this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) An on-site evaluation of every facility regulated pursuant to this chapter, except registered family child care homes, informal family child care and relative family child care homes shall be conducted no less than once per year by announced or unannounced visits.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A random sample of not less than five percent of the total number of registered family child care homes, informal family child care homes and relative family child care homes shall be monitored annually through on-site evaluations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall have access to the premises, personnel, children in care and records of each facility subject to inspection, including at a minimum, case records, corporate and financial records and board minutes. Applicants for licenses, approvals, and certificates of registration shall consent to reasonable on-site administrative inspections, made with or without prior notice, as a condition of licensing, approval, or registration.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) When a complaint is received by the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> alleging violations of licensure, approval, or registration requirements, the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall investigate the allegations. The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may notify the facility&#39;s director before or after a complaint is investigated and shall cause a written report of the results of the investigation to be made.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may enter any unlicensed, unregistered or unapproved child care facility or personal residence for which there is probable cause to believe that the facility or residence is operating in violation of this article. Those entries shall be made with a law-enforcement officer present. The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may enter upon the premises of any unregistered residence only after two attempts by the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> to bring this facility into compliance. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-117. Revocation; provisional licensure and approval.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may revoke or make provisional the licensure registration of any home facility or child welfare agency regulated pursuant to this chapter if a facility materially violates this article, or any terms or conditions of the license, registration or approval issued, or fails to maintain established requirements of child care. This section does not apply to family child care homes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may revoke the certificate of registration of any family child care home if a facility materially violates this article, or any terms or conditions of the registration certificate issued, or fails to maintain established requirements of child care. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49&#8209;2&#8209;118. Closing of facilities by the </span><span class="csFCE4DED">secretary</span><span class="csB9803513"> </span><span class="csF3C8A5A3">West Virginia Department of Education</span><span class="csB9803513">; placement of children.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">When the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> finds that the operation of a residential care facility constitutes an immediate danger the </span><span class="cs46AE26E6">West Virginia Department of Education </span><span class="csEF05ACC">shall issue an order of closure terminating operation of the facility. When necessary, the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall place or direct the placement of the children in a residential facility which has been closed into appropriate facilities. A facility closed by the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may not operate pending administrative or judicial review without court order.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-119. Supervision; consultation; State Fire Marshal to cooperate.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall provide supervision to ascertain compliance with the rules promulgated pursuant to this chapter through regular monitoring, visits to facilities, documentation, evaluation and reporting. The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> is responsible for training and education, within fiscal limitations, specifically for the improvement of care in family child care homes and facilities. The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall consult with applicants, the personnel of child welfare agencies, and children under care to assure the highest quality child care possible.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The State Fire Marshal shall cooperate with the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> in the administration of this article by providing reports and assistance as may be requested by the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-120. Penalties; injunctions; venue.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Any individual or corporation which operates a child welfare agency, residential facility or child care center without a license when a license is required is guilty of a misdemeanor and, upon conviction, shall be confined in jail not exceeding one year, or fined not more than $500, or both fined and confined.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any family child care facility which operates without a license when a license is required is guilty of a misdemeanor and, upon conviction, shall be fined not more than $500.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Where a violation of this article or a legislative rule promulgated by the </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may result in serious harm to children under care, the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> may seek injunctive relief against any person, corporation, child welfare agency, child placing agency, child care center, family child care facility, family child care home or governmental official through proceedings instituted by the Attorney General, or the appropriate county prosecuting attorney, in the Circuit Court of Kanawha County or in the circuit court of any county where the children are residing or may be found. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49&#8209;2&#8209;121. Rule&#8209;making.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall promulgate legislative rules in accordance with &sect;29A&#8209;3&#8209;1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code regarding the licensure, approval, certification, and registration of child care facilities and the implementation of this article. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall review the rules promulgated pursuant to this article at least once every five years, making revisions when necessary or convenient.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The rules shall incorporate, by reference, the requirements of the Integrated Pest Management Program established by legislative rule by the Department of Agriculture under &sect;19&#8209;16A&#8209;4 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-122. Waivers and variances to rules.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Waivers or variances of rules may be granted by the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> if the health, safety or well-being of a child would not be endangered thereby. The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall promulgate by legislative rule criteria and procedures for the granting of waivers or variances so that uniform practices may be maintained throughout the state. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;49-2-123. Annual reports; directory; licensing reports and recommendations.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> shall submit on or before January 1, of each year a report to the Governor and the Legislative Oversight Commission on Health and Human Resources Accountability, concerning the regulation of child welfare agencies, child placing agencies, child care centers, family child care facilities, family child care homes, informal family child care homes, relative family child care homes and child care facilities during the year. The report shall include at a minimum, data on the number of children and staff at each facility (except family child care, informal family child care homes and relative family child care), applications received, types of licenses, approvals and registrations granted, denied, made provisional or revoked and any injunctions obtained or facility closures ordered.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC"> also shall compile annually a directory of licensed, certified and approved child care providers including a brief description of their program and facilities, the program&#39;s capacity and a general profile of children served. A listing of family child care homes shall also be compiled annually.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Licensing reports and recommendations for licensure which are a part of the yearly review of each licensed facility shall be sent to the facility director. Copies shall be available to the public upon written request to the </span><span class="cs68EFC440">secretary</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">West Virginia Department of Education</span><span class="csEF05ACC">. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;49-2-1007. Transfer of Child Care Services from Department of Human Services to Department of Education; implementation of Early Childhood Education Centers; funding; certification.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs1489E706">Legislative findings</span><span class="cs46AE26E6">. &ndash; The Legislature finds that the current system for childcare in the State of West Virginia is broken, and alternatives are necessary to correct this issue. &nbsp;Moving childcare services from the care of the Department of Human Services to the West Virginia Department of Education is necessary to effectuate this change. By moving childcare services in this manner and renaming it as &quot;Early Childhood Education,&quot; this will create a better funding stream for the Legislature. Additionally, this will advance children&#39;s learning and prepare them for entering elementary school at an advanced level compared to what is currently observed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs1489E706">Implementation</span><span class="cs46AE26E6">. &ndash; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) All childcare services in this state shall be transferred from the Department of Human Services to the West Virginia Department of Education, under the title of Early Childhood Education.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Parents may choose in home care for children rather than mandatory public childcare services.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Transportation shall not be provided to public childcare services.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Early Childhood Education Centers are not required to be on public school grounds and may be operated off-site.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Early Childhood Education Centers may be conducted in licensed home businesses that are registered with the West Virginia Secretary of State&#39;s office, as otherwise provided in this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs1489E706">Funding</span><span class="cs46AE26E6">. &ndash; In order to provide funding for childcare services in this state as Early Childhood Education, there is hereby established a three tiered funding formula.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Thirty-three percent of the funds for Early Childhood Education shall be taken from allocated funds that were originally going to the Department of Human Services for this purpose.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Thirty-three percent of the funds for Early Childhood Education shall be provided from the employer of the parent or guardian, and the employer shall be eligible to receive a state tax credit for participating in the program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Thirty-three percent of the funds for Early Childhood Education shall be provided from the parent or guardian, or from the state, based off the current scholarship guidelines.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Children who obtain a scholarship for Early Childhood Education shall have that scholarship paid by the state based off of enrollment, not off of attendance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) </span><span class="cs1489E706">Certification</span><span class="cs46AE26E6">. &ndash; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The West Virginia Department of Education shall be responsible for the certification of providers and staff.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Local health departments shall be responsible for inspections and food safety standards at Early Childhood Education centers.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) There is hereby provided an exemption for in-home day cares that have six or less kids enrolled in the program.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to transfer all childcare services from the Department of Human Services to West Virginia Department of Education. The bill provides for the implementation of Early Childhood Education Centers. The bill provides for funding. Finally, the bill provides for certification.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

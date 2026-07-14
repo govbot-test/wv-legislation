@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 1060 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Enrolled Version  - Final Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=1060">&laquo; Senate Bill 1060 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 1060'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb1060 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=1060" title="HTML  - Committee Substitute (1)
+ - House Bill 1060">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb1060 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=1060" title="HTML  - Introduced Version
+ - House Bill 1060">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 1060 - Providing WV certified thoroughbred eligibility and increase restricted race caps&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb1060+sub1+enr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=1060"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csD0C4453E{color:#000000;background-color:transparent;font-family:'Courier New';font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs2CFA8611{text-align:left;text-indent:18pt;margin:0pt 36pt 0pt 36pt}
+		.cs53BAC856{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.csF24B3FE4{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.csF5AA9F8B{text-align:center;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs74A86F32{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.cs51F7D470{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs93FA44A8{text-align:right;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs49AF4BA5{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:1.9}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Enrolled</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 1060</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Senator Barrett</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Passed March 9, 2026; in effect 90 days from passage (June 7, 2026)]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">AN ACT to amend and reenact &sect;19-23-3, &sect;19-23-12c, &sect;19-23-13b, &sect;29-22A-10, and &sect;29-22A-10b of the Code of West Virginia, 1931, as amended, relating to horse and greyhound racing; providing a definition; setting requirements and purse calculations for West Virginia-certified thoroughbred horses to race in restricted races; changing distribution of funds required from interstate simulcasts; providing eligibility requirements for West Virginia-accredited restricted races; increasing the $1 million cap on funding of restricted races by thoroughbred horse racetracks that did not participate in the West Virginia Development Fund for a period of not more than four consecutive years prior to December 31, 1992; and modifying distribution scheme of net terminal income and excess net terminal income of racetrack video lottery.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">chapter 19. agriculture.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">article 23. horse and dog racing.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-23-3. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Unless the context clearly requires a different meaning, as used in this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) </span><span class="csD0C4453E">&quot;</span><span class="csEF05ACC">Horse racing&quot; means any type of horse racing, including, but not limited to, thoroughbred racing and harness racing;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Thoroughbred racing&quot; means flat or running type horse racing in which each horse participating is a thoroughbred and mounted by a jockey;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Harness racing&quot; means horse racing in which the horses participating are harnessed to a sulky, carriage or other vehicle and does not include any form of horse racing in which the horses are mounted by jockeys;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Horse race meeting&quot; means the whole period of time for which a license is required by the provisions of section one of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Dog racing&quot; means any type of dog racing, including, but not limited to, greyhound racing;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Purse&quot; means any purse, stake, or award for which a horse or dog race is run;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Racing association&quot; or &quot;person&quot; means any individual, partnership, firm, association, corporation, or other entity or organization of whatever character or description;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;Applicant&quot; means any racing association making application for a license under the provisions of this article or any person making application for a permit under the provisions of this article or any person making application for a construction permit under the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;License&quot; means the license required by the provisions of section one of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) &quot;Permit&quot; means the permit required by the provisions of section two of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) &quot;Construction permit&quot; means the construction permit required by the provisions of section eighteen of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) &quot;Licensee&quot; means any racing association holding a license required by the provisions of section one of this article and issued under the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) &quot;Permit holder&quot; means any person holding a permit required by the provisions of section two of this article and issued under the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) &quot;Construction permit holder&quot; means any person holding a construction permit required by the provisions of section 18 of this article and issued under the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) &quot;Hold or conduct&quot; includes &quot;assist, aid or abet in holding or conducting&quot;;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) &quot;Racing commission&quot; means the West Virginia Racing Commission;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) &quot;Stewards&quot; means the steward or stewards representing the Racing Commission, the steward or stewards representing a licensee and any other steward or stewards whose duty it is to supervise any horse or dog race meeting, all as may be provided by reasonable rules of the Racing Commission which rules shall specify the number of stewards to be appointed, the method and manner of their appointment and their powers, authority and duties;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) &quot;Pari-mutuel&quot; means a mutuel or collective pool that can be divided among those who have contributed their wagers to one central agency, the odds to be reckoned in accordance to the collective amounts wagered upon each contestant running in a horse or dog race upon which the pool is made, but the total to be divided among the first three contestants on the basis of the number of wagers on these;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(19) &quot;Pari-mutuel clerk&quot; means any employee of a licensed racing association who is responsible for the collection of wagers, the distribution of moneys for winning pari-mutuel tickets, verification of the validity of pari-mutuel tickets and accounting for pari-mutuel funds;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(20) &quot;Pool&quot; means a combination of interests in a joint wagering enterprise or a stake in such enterprise;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(21) &quot;Legitimate breakage&quot; is the percentage left over in the division of a pool;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(22) &quot;To the dime&quot; means that wagers shall be figured and paid to the dime;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(23) &quot;Code&quot; means the Code of West Virginia, 1931, as heretofore and hereinafter amended;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(24) &quot;Accredited thoroughbred horse&quot; means a thoroughbred horse that is registered with the West Virginia Thoroughbred Breeders Association and that is:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Foaled in West Virginia; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Sired by an accredited West Virginia sire; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) As a yearling, finished twelve consecutive months of verifiable residence in the state, except for 30 days&#39; grace: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) For the horse to be shipped to and from horse sales where the horse is officially entered in the sales catalogue of a recognized thoroughbred sales company; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) For obtaining veterinary services, documented by veterinary reports;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(25) &quot;Accredited West Virginia sire&quot; is a sire that is permanently domiciled in West Virginia, stands a full season in West Virginia and is registered with West Virginia Thoroughbred Breeders Association;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(26) &quot;Breeder of an accredited West Virginia horse&quot; is the owner of the foal at the time it was born in West Virginia;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(27) &quot;Raiser of an accredited West Virginia horse&quot; is the owner of the yearling at the time it finished 12 consecutive months of verifiable residence in the state. During the period, the raiser will be granted one month of grace for his or her horse to be shipped to and from thoroughbred sales where the horse is officially entered in the sales catalogue of a recognized thoroughbred sales company. In the event the yearling was born in another state and transported to this state, this definition does not apply after the December 31, 2007, to any pari-mutuel racing facility located in Jefferson County nor shall it apply after the December 31, 2012, and thereafter to any pari-mutuel racing facility located in Hancock County. Prior to the horse being shipped out of the state for sales, the raiser must notify the Racing Commission of his or her intentions;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(28) The &quot;owner of an accredited West Virginia sire&quot; is the owner of record at the time the offspring is conceived;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(29) The &quot;owner of an accredited West Virginia horse&quot; means the owner at the time the horse earned designated purses to qualify for restricted purse supplements provided in section 13b of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(30) &quot;Registered greyhound owner&quot; means an owner of a greyhound that is registered with the National Greyhound Association;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(31) &quot;Fund&quot; means the West Virginia Thoroughbred Development Fund established in section 13(b) of this article; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(32) &quot;Regular purse&quot; means both regular purses and stakes purses; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(33) &quot;West Virginia Certified Thoroughbred&quot; means a thoroughbred horse that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Is registered with the West Virginia Thoroughbred Breeds Association; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Prior to its three year-old year finished six consecutive months of verifiable residence in the state, except for 30 days&#39; grace:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) For the horse to be shipped to and from horse sales where the horse is officially entered in the sales catalogue of a recognized thoroughbred sales company; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) For obtaining veterinary services, documented by veterinary reports;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Is subject to an affidavit, certification, or audit/inspection by the WV</span></p><p class="cs7F45F1B"><span class="csEF05ACC">Thoroughbred Breeders Association;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Is ineligible to participate in WV Accredited Stakes Races or WV Breeders</span></p><p class="cs7F45F1B"><span class="csEF05ACC">Classics; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Is ineligible for the West Virginia Thoroughbred Fund.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-23-12c. Interstate simulcasts by licensed racetracks.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Any licensed racing association may be authorized by the commission to transmit broadcasts of races conducted at its racetrack to legal wagering entities located outside this state, which legal wagering entities located outside this state shall not be subject to the provisions of subsection (e), section twelve-b of this article: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That as consideration for the televised racing services it provides, the host racing association shall receive a signal transmission fee to be paid by the receiving legal wagering entity which shall be in an amount agreed upon by the receiving legal wagering entity and the host racing association. All broadcasts of horse races shall be in accordance with all of the provisions of the &quot;Federal Interstate Horseracing Act of 1978,&quot; also known as Public Law 95-515, Section 3001-3007 of Title 15 of the United States Code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) One percent of the total signal transmission fee provided in subsection (a) of this section shall be paid into a special fund to be established by the Racing Commission for and on behalf of all employees of the licensed racing association to be used for payments into the pension plan for all employees of the licensed racing association, and any thoroughbred horse racetrack which has participated in the West Virginia Thoroughbred Development Fund for a period of more than four consecutive calendar years prior to December 31, 1992, shall pay seven and one-half percent of the signal transmission fee into the West Virginia Thoroughbred Development Fund established by the Racing Commission according to section thirteen-b of this article. After deducting: (i) The amounts required to be placed into the pension plan for all employees of the licensed racing association under this section; (ii) the amounts, if any, required to be paid into the West Virginia Thoroughbred Development Fund under this section; and (iii) the direct costs necessary to send a live audio and visual signal of horse races or dog races from any racetrack licensed under the provisions of section one of this article to any legal wagering entities outside this state for the purpose of pari-mutuel wagering, which direct costs shall include the cost of satellite equipment necessary to transmit the signal, a satellite operator and the satellite time necessary to broadcast the signal and the cost of telecommunication and facsimile services needed to communicate necessary information to all legal wagering entities for the purpose of pari-mutuel wagering, racing associations shall make a deposit equal to 50 percent of the remainder into the purse fund established under section nine of this article: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That the funds deposited in the purse fund pursuant to this section may be used for the payment of regular purses or, upon agreement between the horse racing association and the representative of the majority of owners and trainers at a particular thoroughbred racetrack, may be used for capital improvements supporting simulcast operations.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-23-13b. West Virginia Thoroughbred Development Fund; distribution; restricted races; nonrestricted purse supplements; preference for West Virginia accredited thoroughbreds.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Racing Commission shall deposit moneys required to be withheld by an association or licensee in subsection 9(b) of this article in a banking institution of its choice in a special account to be known as West Virginia Racing Commission Special Account &ndash; West Virginia Thoroughbred Development Fund:</span><span class="cs93AB6E8B"> Provided,</span><span class="csEF05ACC"> That after the West Virginia Lottery Commission has divided moneys between the West Virginia Thoroughbred Development Fund and the West Virginia Greyhound Breeding Development Fund, pursuant to the provisions of sections &sect;29-22-10 and &sect;29-22-10b, the Racing Commission shall, beginning October 1, 2005, deposit the remaining moneys required to be withheld from an association or licensee designated to the Thoroughbred Development Fund under the provisions of subsection (b), section nine of this article, subdivision (3), subsection (e), 12(b) of this article, subsection (b), section 12(c) of this article, paragraph (B), subdivision (3), subsection (b), section 13(c) of this article and sections &sect;29-22A-10 and &sect;29-22A-10b of this code into accounts for each thoroughbred racetrack licensee with a banking institution of its choice with a separate account for each association or licensee. Each separate account shall be a special account to be known as West Virginia Racing Commission Special Account &ndash; West Virginia Thoroughbred Development Fund and shall name the licensee for which the special account has been established:</span><span class="cs93AB6E8B"> Provided, however,</span><span class="csEF05ACC"> That the Racing Commission shall deposit all moneys paid into the Thoroughbred Development Fund by a thoroughbred racetrack licensee that did not participate in the Thoroughbred Development Fund for at least four consecutive calendar years prior to December 31, 1992, from July 8, 2005, until the effective date of the amendment to this section passed during the fourth extraordinary session of the 77th Legislature shall be paid into the purse fund of that thoroughbred racetrack licensee:</span><span class="cs93AB6E8B"> Provided further,</span><span class="csEF05ACC"> That the moneys paid into the Thoroughbred Development Fund by a thoroughbred racetrack licensee that did not participate in the Thoroughbred Development Fund for at least four consecutive calendar years prior to December 31, 1992, shall be transferred into that licensee&#39;s purse fund until April 1, 2006. Notice of the amount, date and place of the deposits shall be given by the Racing Commission, in writing, to the State Treasurer. The purpose of the funds is to promote better breeding and racing of thoroughbred horses in the state through awards and purses for accredited breeders/raisers, sire owners and thoroughbred race horse owners:</span><span class="cs93AB6E8B"> Provided,</span><span class="csEF05ACC"> That five percent of the deposits required to be withheld by an association or licensee in subsection (b), section nine of this article shall be placed in a special revenue account hereby continued in the State Treasury called the Administration and Promotion Account:</span><span class="cs93AB6E8B"> Provided, however,</span><span class="csEF05ACC"> That four and one-half percent of the deposits into the Thoroughbred Development Fund shall be placed in the Administration and Promotion Account, except that of this percentage, no more than $305,000 shall be placed in the account in any year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The Racing Commission is authorized to expend the moneys deposited in the administration and promotion account at times and in amounts as the commission determines to be necessary for purposes of administering and promoting the thoroughbred development program:</span><span class="cs93AB6E8B"> Provided,</span><span class="csEF05ACC"> That during any fiscal year in which the commission anticipates spending any money from the account, the commission shall submit to the executive department during the budget preparation period prior to the Legislature convening before that fiscal year for inclusion in the executive budget document and budget bill the recommended expenditures, as well as requests of appropriations for the purpose of administration and promotion of the program. The commission shall make an annual report to the Legislature on the status of the administration and promotion account, including the previous year&#39;s expenditures and projected expenditures for the next year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The fund or funds and the account or accounts established in subsection (a) of this section shall operate on an annual basis.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Funds in the Thoroughbred Development Fund or funds in the separate accounts for each association or licensee as provided in subsection (a) of this section shall be expended for awards and purses except as otherwise provided in this section. Annually, the first $800,000 shall be available for distribution for a minimum of 14 accredited stakes races at a racetrack which has participated in the West Virginia Thoroughbred Development Fund for a period of more than four consecutive calendar years prior to December 31, 1992. The weights for all accredited stakes races shall be weight for age. One of the stakes races shall be the West Virginia Futurity and the second shall be the Frank Gall Memorial Stakes. The accredited stake races shall be chosen by the committee set forth in subsection (f) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Awards and purses shall be distributed as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The breeders/raisers of accredited thoroughbred horses that earn a purse at a participating West Virginia meet shall receive a bonus award calculated at the end of the year as a percentage of the fund dedicated to the breeders/raisers, which shall be 60 percent of the fund available for distribution in any one year. The total amount available for the breeders&#39;/raisers&#39; awards shall be distributed according to the ratio of purses earned by an accredited racehorse to the total amount earned in the participating races by all accredited racehorses for that year as a percentage of the fund dedicated to the breeders/raisers. However, no breeder/raiser may receive from the fund dedicated to breeders&#39;/raisers&#39; awards an amount in excess of the earnings of the accredited horse at West Virginia meets. In addition, should a horse&#39;s breeder and raiser qualify for the same award on the same horse, they will each be awarded one half of the proceeds. The bonus referred to in this subdivision may only be paid on the first $100,000 of any purse and not on any amounts in excess of the first $100,000.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The owner of an accredited West Virginia sire of an accredited thoroughbred horse that earns a purse in any race at a participating West Virginia meet shall receive a bonus award calculated at the end of the year as a percentage of the fund dedicated to sire owners, which shall be 15 percent of the fund available for distribution in any one year. The total amount available for the sire owners&#39; awards shall be distributed according to the ratio of purses earned by the progeny of accredited West Virginia stallions in the participating races for a particular stallion to the total purses earned by the progeny of all accredited West Virginia stallions in the participating races. However, no sire owner may receive from the fund dedicated to sire owners an amount in excess of 35 percent of the accredited earnings for each sire. The bonus referred to in this subdivision shall only be paid on the first $100,000 of any purse and not on any amounts in excess of the first $100,000.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The owner of an accredited thoroughbred horse that earns a purse in any participating race at a West Virginia meet shall receive a restricted purse supplement award calculated at the end of the year, which shall be 25 percent of the fund available for distribution in any one year, based on the ratio of the earnings in the races of a particular race horse to the total amount earned by all accredited race horses in the participating races during that year as a percentage of the fund dedicated to purse supplements. However, the owners may not receive from the fund dedicated to purse supplements an amount in excess of 35 percent of the total accredited earnings for each accredited race horse. The bonus referred to in this subdivision shall only be paid on the first $100,000 of any purse and not on any amounts in excess of the first $100,000.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) In no event may purses earned at a meet held at a track which did not make a contribution to the Thoroughbred Development Fund out of the daily pool on the day the meet was held qualify or count toward eligibility for an award under this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Any balance in the breeders/raisers, sire owners and purse supplement funds after yearly distributions shall first be used to fund the races established in subsection (f) of this section. Any amount not so used shall revert into the general account of the Thoroughbred Development Fund for each racing association or licensee for distribution in the next year.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Distribution shall be made on the 15th day of each February for the preceding year&#39;s achievements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f)(1) Each pari-mutuel thoroughbred horse track shall provide at least one restricted race per racing day:</span><span class="cs93AB6E8B"> Provided,</span><span class="csEF05ACC"> That sufficient horses and funds are available. For purposes of the one restricted race required by this subdivision, there are sufficient horses if there are at least seven single betting interests received for the race: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That, if sufficient horses and funds are available, any thoroughbred horse racetrack whose licensee participated in the Thoroughbred Development Fund for at least four consecutive calendar years prior to December 31, 1992, shall provide three restricted races per racing day, at least one of which may be split at the discretion of the racing secretary. For the purposes of a second restricted race there shall be at least seven single betting interests and for purposes of a third restricted race there must be at least nine single betting interests in one of the restricted races run that day. The restricted race required by this section must be included in the first nine races written in the condition book for that racing day. Effective May 1, 2026, West Virginia certified thoroughbred horses are also eligible for restricted races under this subsection for purse money only, provided that accredited thoroughbreds shall receive preference over West Virginia certified thoroughbreds only in the event of an oversubscribed field. Effective July 1, 2026, accredited West Virginia thoroughbreds may race for an additional percentage of purses in restricted races under this subsection as by written agreement between the racing association and the organization that represents the majority of owners and trainers at that racetrack.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The restricted races established in this subsection shall be administered by a three-member committee at each track consisting of:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The racing secretary at each track;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A member appointed by the authorized representative of a majority of the owners and trainers at the thoroughbred track; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) A member appointed by the West Virginia Thoroughbred Breeders Association.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Restricted races shall be funded by each racing association from:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Moneys placed in the general purse fund:</span><span class="cs93AB6E8B"> Provided,</span><span class="csEF05ACC"> That a thoroughbred horse racetrack which did not participate in the West Virginia Thoroughbred Development fund for a period of more than four consecutive years prior to December 31, 1992, may fund restricted races in an amount not to exceed $2 million per year;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Moneys as provided in subdivision (5), subsection (e) of this section, which shall be placed in a special fund called the West Virginia Accredited Race Fund.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The racing schedules, purse amounts and types of races are subject to the approval of the West Virginia Racing Commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) As used in this section, &quot;West Virginia-bred foal&quot; means a horse that was born in the State of West Virginia.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) To qualify for the West Virginia Accredited Race Fund, the breeder must qualify under one of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The breeder of the West Virginia-bred foal is a West Virginia resident;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The breeder of the West Virginia-bred foal is not a West Virginia resident, but keeps his or her breeding stock in West Virginia year round; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The breeder of the West Virginia-bred foal is not a West Virginia resident and does not qualify under subdivision (2) of this subsection, but either the sire of the West Virginia-bred foal is a West Virginia stallion, or the mare is covered only by a West Virginia accredited stallion or stallions before December 31 of the calendar year following the birth of that West Virginia-bred foal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) From July 1, 2001, West Virginia accredited thoroughbred horses have preference for entry in all accredited races at a thoroughbred race track at which the licensee participates in the West Virginia Thoroughbred Development Fund.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) Beginning July 1, 2006, any racing association licensed by the Racing Commission to conduct thoroughbred racing and permitting and conducting pari-mutuel wagering under the provisions of this article must have a West Virginia Thoroughbred Racing Breeders Program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 29. MISCELLANEOUS BOARDS AND OFFICERS.</span></h1>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 22A. RACETRACK VIDEO LOTTERY.</span></h2>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-22A-10. Accounting and reporting; commission to provide communications protocol data; distribution of net terminal income; remittance through electronic transfer of funds; establishment of accounts and nonpayment penalties; commission control of accounting for net terminal income; settlement of accounts; manual reporting and payment may be required; request for reports; examination of accounts and records.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The commission shall provide to manufacturers, or applicants applying for a manufacturer&rsquo;s permit, the protocol documentation data necessary to enable the respective manufacturer&rsquo;s video lottery terminals to communicate with the commission&rsquo;s central computer for transmitting auditing program information and for activation and disabling of video lottery terminals.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The gross terminal income of a licensed racetrack shall be remitted to the commission through the electronic transfer of funds. Licensed racetracks shall furnish to the commission all information and bank authorizations required to facilitate the timely transfer of moneys to the commission. Licensed racetracks must provide the commission 30 days&rsquo; advance notice of any proposed account changes to assure the uninterrupted electronic transfer of funds. From the gross terminal income remitted by the licensee to the commission:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The commission shall deduct an amount sufficient to reimburse the commission for its actual costs and expenses incurred in administering racetrack video lottery at the licensed racetrack and the resulting amount after the deduction is the net terminal income. The amount deducted for administrative costs and expenses of the commission may not exceed four percent of gross terminal income:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That any amounts deducted by the commission for its actual costs and expenses that exceeds its actual costs and expenses shall be deposited into the State Lottery Fund. For the fiscal years ending June 30, 2011, through June 30, 2030, the term &quot;actual costs and expenses&quot; may include transfers of up to $9 million in surplus allocations for each fiscal year, as calculated by the commission when it has closed its books for the fiscal year, to the Licensed Racetrack Modernization Fund created by subdivision (2), of this subsection. For all fiscal years beginning on or after July 1, 2001, the commission shall not receive an amount of gross terminal income in excess of the amount of gross terminal income received during the fiscal year ending on June 30, 2001, but four percent of any amount of gross terminal income received in excess of the amount of gross terminal income received during the fiscal year ending on June 30, 2001, shall be deposited into the fund established in &sect;29-22-18a of this code; and</span></p><p class="cs53FB8D75"><a name="_Hlk127435471"><span class="csEF05ACC">(2) A Licensed Racetrack Modernization Fund is created within the Lottery Fund. For all fiscal years beginning on or after July 1, 2011, and ending with the fiscal year beginning July 1, 2030, the commission shall deposit such amounts as are available according to subdivision (1) of this subsection into a separate facility modernization account maintained within the Licensed Racetrack Modernization Fund for each racetrack. Each racetrack&rsquo;s share of each year&rsquo;s deposit shall be calculated in the same ratio as each racetrack&rsquo;s apportioned contribution to the four percent administrative costs and expenses allowance provided for in subdivision (1) of this subsection for that year. For each $2 expended by a licensed racetrack for facility modernization improvements or capital improvements at facilities located in this state that are on or contiguous to the premises of the licensed racetrack, having a useful life of three or more years and placed in service after July 1, 2011, the licensed racetrack shall receive $1 in recoupment from its facility modernization account. If the licensed racetrack&rsquo;s facility modernization account contains a balance in any fiscal year, the unexpended balance from that fiscal year will be available for matching for one additional fiscal year, after which time, the remaining unused balance carried forward shall revert to the lottery fund. For purposes of this section, the term &quot;facility modernization improvements&quot; includes acquisitions of new and unused video lottery terminals and related equipment, and the term &quot;capital improvements&quot; means </span></a><a name="_Hlk127437968"><span class="csEF05ACC">real property that is expected to replace or modernize buildings, equipment, machinery and other tangible property used in connection with the operation of the gaming, hospitality, or entertainment at the facility</span></a><span class="csEF05ACC">. Video lottery terminals financed through the recoupment provided in this subdivision must be retained by the licensee in its West Virginia licensed location for a period of not less than five years from the date of initial installation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The amount resulting after the deductions required by subsection (b) of this section constitutes net terminal income that shall be divided as set out in this subsection. For all fiscal years beginning on or after July 1, 2001, any amount of net terminal income received in excess of the amount of net terminal income received during the fiscal year ending on June 30, 2001, shall be divided as set out in &sect;29-22A-10b of this code. The licensed racetrack&rsquo;s share is in lieu of all lottery agent commissions and is considered to cover all costs and expenses required to be expended by the licensed racetrack in connection with video lottery operations. The division shall be made as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The commission shall receive 30 percent of net terminal income, which shall be paid into the State Lottery Fund as provided in &sect;29-22A-10a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Until July 1, 2005, 14 percent of net terminal income at a licensed racetrack shall be deposited in the special fund established by the licensee, and used for payment of regular purses in addition to other amounts provided for in &sect;19-23-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, on and after July 1, 2005, the rate shall be seven percent of net terminal income;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The county where the video lottery terminals are located shall receive two percent of the net terminal income: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Beginning July 1, 1999, and thereafter, any amount in excess of the two percent received during the fiscal year 1999 by a county in which a racetrack is located that has participated in the West Virginia Thoroughbred Development Fund since on or before January 1, 1999, shall be divided as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The county shall receive 50 percent of the excess amount; and</span></p><p class="cs53FB8D75"><a name="_Hlk125524071"><span class="csEF05ACC">(ii) The municipalities of the county shall receive 50 percent of the excess amount, said 50 percent to be divided among the municipalities on a per capita basis as determined by the most recent decennial United States census of population; and</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Beginning July 1, 1999, and thereafter, any amount in excess of the two percent received during the fiscal year 1999 by a county in which a racetrack other than a racetrack described in paragraph (A) of this subdivision is located and where the racetrack has been located in a municipality within the county since on or before January 1, 1999, shall be divided, if applicable, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The county shall receive 50 percent of the excess amount; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The municipality shall receive 50 percent of the excess amount; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) In a county in which a racetrack other than a racetrack described in paragraphs (A) or (B) of this subdivision is located and where the racetrack has been located within that county since on or before January 1, 1999, and where the racetrack is not located in a municipality, the two percent of net terminal income shall be divided, if applicable, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The county shall receive one percent; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The remaining one percent shall be distributed in equal shares to all municipalities within the county. Per capita population has no effect on distributions under this paragraph; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) One percent of net terminal income shall be paid for and on behalf of all employees of the licensed racing association by making a deposit into a special fund to be established by the Racing Commission to be used for payment into the pension plan for all employees of the licensed racing association;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) (A) The West Virginia Thoroughbred Development Fund created pursuant to &sect;19-23-13b of this code shall receive one and one-half percent of the net terminal income originating at licensed thoroughbred racetracks;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Effective July 1, 2026, the West Virginia Greyhound Breeding Development Fund created pursuant to &sect;19-23-10 of this code shall receive one and one-half percent of the net terminal income originating at licensed greyhound tracks;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The West Virginia Racing Commission shall receive one percent of the net terminal income which shall be deposited and used as provided in &sect;19-23-13c of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) A licensee shall receive 46 and one-half percent of net terminal income;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8)(A) The Tourism Promotion Fund established in &sect;5B-2-12 of this code shall receive three percent of the net terminal income:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That for the fiscal year beginning July 1, 2003, the tourism commission shall transfer from the Tourism Promotion Fund $5 million of the three percent of the net terminal income described in this section and &sect;29-22A-10b of this code into the fund administered by the West Virginia Economic Development Authority pursuant to &sect;31-15-7 of this code, $5 million into the Capitol Renovation and Improvement Fund administered by the Department of Administration pursuant to &sect;5A-4-6 of this code, and $5 million into the Tax Reduction and Federal Funding Increased Compliance Fund; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Notwithstanding any provision of paragraph (A) of this subdivision to the contrary, for each fiscal year beginning after June 30, 2004, this three percent of net terminal income and the three percent of net terminal income described in &sect;29-22a-10b(a)(8)(B) of this code shall be distributed as provided in this paragraph as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) 1.375 percent of the total amount of net terminal income described in this section and &sect;29-22A-10b of this code shall be deposited into the Tourism Promotion Fund created pursuant to &sect;5B-2-12 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) 0.375 percent of the total amount of net terminal income described in this section and in &sect;29-22A-10b of this code shall be deposited into the Development Office Promotion Fund created pursuant to &sect;5B-2-3b of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) 0.5 percent of the total amount of net terminal income described in this section and in &sect;29-22A-10b of this code shall be deposited into the Research Challenge Fund created pursuant to &sect;18B-1B-10 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) 0.6875 percent of the total amount of net terminal income described in this section and in &sect;29-22A-10b of this code shall be deposited into the Capitol Renovation and Improvement Fund administered by the Department of Administration pursuant to &sect;5A-4-6 of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v) 0.0625 percent of the total amount of net terminal income described in this section and in &sect;29-22A-10b of this code shall be deposited into the 2004 Capitol Complex Parking Garage Fund administered by the Department of Administration pursuant to &sect;5A-4-5a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9)(A) On and after July 1, 2005, seven percent of net terminal income shall be deposited into the Workers&rsquo; Compensation Debt Reduction Fund created in &sect;23-2d-5 of this code:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That in any fiscal year when the amount of money generated by this subdivision totals $11 million, all subsequent distributions pursuant to this subdivision shall be deposited in the special fund established by the licensee and used for the payment of regular purses in addition to the other amounts provided in &sect;19-23-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The deposit of the seven percent of net terminal income into the Workers&rsquo; Compensation Debt Reduction Fund pursuant to this subdivision shall expire and not be imposed with respect to these funds and shall be deposited in the special fund established by the licensee and used for payment of regular purses in addition to the other amounts provided in &sect;19-23-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code on and after the first day of the month following the month in which the Governor certifies to the Legislature that: (i) The revenue bonds issued pursuant to &sect;23-2D-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code have been retired or payment of the debt service provided for; and (ii) that an independent certified actuary has determined that the unfunded liability of the old fund, as defined in chapter 23 of this code, has been paid or provided for in its entirety; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) The remaining one percent of net terminal income shall be deposited as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) For the fiscal year beginning July 1, 2003, the Veterans Memorial Program shall receive one percent of the net terminal income until sufficient moneys have been received to complete the veterans memorial on the grounds of the State Capitol Complex in Charleston, West Virginia. The moneys shall be deposited in the State Treasury in the Division of Culture and History special fund created pursuant to &sect;29-1I-3 of this code:&nbsp;</span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That only after sufficient moneys have been deposited in the fund to complete the veterans memorial and to pay in full the annual bonded indebtedness on the veterans memorial, not more than $20,000 of the one percent of net terminal income provided in this subdivision shall be deposited into a special revenue fund in the State Treasury, to be known as the John F. &quot;Jack&quot; Bennett Fund. The moneys in this fund shall be expended by the Division of Veterans Affairs to provide for the placement of markers for the graves of veterans in perpetual cemeteries in this state. The Division of Veterans Affairs shall promulgate legislative rules pursuant to the provisions of &sect;29-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code specifying the manner in which the funds are spent, determine the ability of the surviving spouse to pay for the placement of the marker and setting forth the standards to be used to determine the priority in which the veterans&rsquo; grave markers will be placed in the event that there are not sufficient funds to complete the placement of veterans&rsquo; grave markers in any one year, or at all. Upon payment in full of the bonded indebtedness on the veterans memorial, $100,000 of the one percent of net terminal income provided in this subdivision shall be deposited in the special fund in the Division of Culture and History created pursuant to &sect;29-1I-3 of this code and be expended by the Division of Culture and History to establish a West Virginia veterans memorial archives within the Cultural Center to serve as a repository for the documents and records pertaining to the veterans memorial, to restore and maintain the monuments and memorial on the capitol grounds:&nbsp;</span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That $500,000 of the one percent of net terminal income shall be deposited in the State Treasury in a special fund of the Department of Administration, created pursuant to &sect;5A-4-5 of this code, to be used for construction and maintenance of a parking garage on the State Capitol Complex; and the remainder of the one percent of net terminal income shall be deposited in equal amounts in the Capitol Dome and Improvements Fund created pursuant to &sect;5A-4-2 of this code and Cultural Facilities and Capitol Resources Matching Grant Program Fund created pursuant to &sect;29-1-3 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) For each fiscal year beginning after June 30, 2004:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Five hundred thousand dollars of the one percent of net terminal income shall be deposited in the State Treasury in a special fund of the Department of Administration, created pursuant to &sect;5A-4-5 of this code, to be used for construction and maintenance of a parking garage on the State Capitol Complex; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The remainder of the one percent of net terminal income and all of the one percent of net terminal income described in &sect;29-22A-10b(a)(9)(B) of this code shall be distributed as follows: The net terminal income shall be deposited in equal amounts into the Capitol Dome and Capitol Improvements Fund created pursuant to &sect;5A-4-2 of this code and the Cultural Facilities and Capitol Resources Matching Grant Program Fund created pursuant to &sect;29-1-3 of this code until a total of $1,500,000 is deposited into the Cultural Facilities and Capitol Resources Matching Grant Program Fund; thereafter, the remainder shall be deposited into the Capitol Dome and Capitol Improvements Fund.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Each licensed racetrack shall maintain in its account an amount equal to or greater than the gross terminal income from its operation of video lottery machines, to be electronically transferred by the commission on dates established by the commission. Upon a licensed racetrack&rsquo;s failure to maintain this balance, the commission may disable all of a licensed racetrack&rsquo;s video lottery terminals until full payment of all amounts due is made. Interest shall accrue on any unpaid balance at a rate consistent with the amount charged for state income tax delinquency pursuant to chapter 11 of this code. The interest shall begin to accrue on the date payment is due to the commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The commission&rsquo;s central control computer shall keep accurate records of all income generated by each video lottery terminal. The commission shall prepare and mail to the licensed racetrack a statement reflecting the gross terminal income generated by the licensee&rsquo;s video lottery terminals. Each licensed racetrack shall report to the commission any discrepancies between the commission&rsquo;s statement and each terminal&rsquo;s mechanical and electronic meter readings. The licensed racetrack is solely responsible for resolving income discrepancies between actual money collected and the amount shown on the accounting meters or on the commission&rsquo;s billing statement.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Until an accounting discrepancy is resolved in favor of the licensed racetrack, the commission may make no credit adjustments. For any video lottery terminal reflecting a discrepancy, the licensed racetrack shall submit to the commission the maintenance log which includes current mechanical meter readings and the audit ticket which contains electronic meter readings generated by the terminal&rsquo;s software. If the meter readings and the commission&rsquo;s records cannot be reconciled, final disposition of the matter shall be determined by the commission. Any accounting discrepancies which cannot be otherwise resolved shall be resolved in favor of the commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Licensed racetracks shall remit payment by mail if the electronic transfer of funds is not operational or the commission notifies licensed racetracks that remittance by this method is required. The licensed racetracks shall report an amount equal to the total amount of cash inserted into each video lottery terminal operated by a licensee, minus the total value of game credits which are cleared from the video lottery terminal in exchange for winning redemption tickets and remit the amount as generated from its terminals during the reporting period. The remittance shall be sealed in a properly addressed and stamped envelope and deposited in the United States mail no later than noon on the day when the payment would otherwise be completed through electronic funds transfer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Licensed racetracks may, upon request, receive additional reports of play transactions for their respective video lottery terminals and other marketing information not considered confidential by the commission. The commission may charge a reasonable fee for the cost of producing and mailing any report other than the billing statements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The commission has the right to examine all accounts, bank accounts, financial statements, and records in a licensed racetrack&rsquo;s possession, under its control or in which it has an interest and the licensed racetrack shall authorize all third parties in possession or in control of the accounts or records to allow examination of any of those accounts or records by the commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) If a court of competent jurisdiction finds that the provisions of this section as amended and reenacted in 2021 and the provisions of &sect;29-22A-10d of this code conflict and cannot be harmonized, the provisions of &sect;29-22A-10d of this code shall control.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;29-22A-10b. Distribution of excess net terminal income.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) For all years beginning on or after July 1, 2001, any amount of net terminal income generated annually by a licensed racetrack in excess of the amount of net terminal income generated by that licensed racetrack during the fiscal year ending on June 30, 2001, shall be divided as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The commission shall receive 41 percent of net terminal income, which the commission shall deposit in the state Excess Lottery Revenue Fund created in &sect;29-22-18a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Until July 1, 2005, eight percent of net terminal income at a licensed racetrack shall be deposited in the special fund established by the licensee and used for payment of regular purses in addition to other amounts provided in &sect;19-23-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code; on and after July 1, 2005, the rate shall be four percent of net terminal income;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The county where the video lottery terminals are located shall receive two percent of the net terminal income: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Any amount by which the total amount under this section and &sect;29-22A-10(c)(3) of this code is in excess of the two percent received during fiscal year 1999 by a county in which a racetrack is located that has participated in the West Virginia Thoroughbred Development Fund since on or before January 1, 1999, shall be divided as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The county shall receive 50 percent of the excess amount; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The municipalities of the county shall receive 50 percent of the excess amount, the 50 percent to be divided among the municipalities on a per capita basis as determined by the most recent decennial United States census of population; and</span></p><p class="cs53FB8D75"><a name="_Hlk125524408"><span class="csEF05ACC">(B) Any amount by which the total amount under this section and &sect;29-22A-10(c)(3) of this code is in excess of the two percent received during fiscal year 1999 by a county in which a racetrack other than a racetrack described in paragraph (A) of this proviso is located and where the racetrack has been located in a municipality within the county since on or before January 1, 1999, shall be divided, if applicable, as follows:</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The county shall receive 50 percent of the excess amount; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The municipality shall receive 50 percent of the excess amount; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) In a county in which a racetrack other than a racetrack described in paragraphs (A) or (B) of this subdivision is located and where the racetrack has been located within that county since on or before January 1, 1999, and where the racetrack is not located in a municipality, the two percent of net terminal income shall be divided, if applicable, as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The county shall receive one percent; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The remaining one percent shall be distributed in equal shares to all municipalities within the county. Per capita population has no effect on distributions under this paragraph;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) One half of one percent of net terminal income shall be paid for and on behalf of all employees of the licensed racing association by making a deposit into a special fund to be established by the Racing Commission to be used for payment into the pension plan for all employees of the licensed racing association;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) (A) The West Virginia Thoroughbred Development Fund created pursuant to &sect;19-23-13b of this code shall receive one and one-half percent of the net terminal income originating at licensed thoroughbred racetracks;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Effective July 1, 2026, the West Virginia Greyhound Breeding Development Fund created pursuant to &sect;19-23-10 of this code shall receive one and one-half percent of the net terminal income originating at licensed greyhound tracks;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The West Virginia Racing Commission shall receive one percent of the net terminal income which shall be deposited and used as provided in &sect;19-23-13c of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) A licensee shall receive 42 percent of net terminal income;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The Tourism Promotion Fund established in &sect;5B-2-12 of this code shall receive three percent of the net terminal income: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That for each fiscal year beginning after June 30, 2004, this three percent of net terminal income shall be distributed pursuant to the provisions of &sect;29-22A-10(c)(8)(B) of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) (A) On and after July 1, 2005, four percent of net terminal income shall be deposited into the Workers&rsquo; Compensation Debt Reduction Fund created in &sect;23-2D-5 of this code: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That in any fiscal year when the amount of money generated by this subdivision together with the total allocation transferred by the operation of &sect;29-22A-10(c)(9) of this code totals $11 million, all subsequent distributions under this subdivision during that fiscal year&nbsp;shall be deposited in the special fund established by the licensee and used for payment of regular purses in addition to other amounts provided in &sect;19-23-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The deposit of the four percent of net terminal income into the Worker&rsquo;s Compensation Debt Reduction Fund pursuant to this subdivision shall expire and not be imposed with respect to these funds, which shall be deposited in the special fund established by the licensee and used for payment of regular purses in addition to the other amounts provided in &sect;19-23-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code on and after the first day of the month following the month in which the Governor certifies to the Legislature that: (i) The revenue bonds issued pursuant to &sect;23-2D-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code have been retired or payment of the debt service is provided for; and (ii) that an independent certified actuary has determined that the unfunded liability of the Old Fund, as defined in chapter 23 of this code, has been paid or provided in its entirety; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) (A) One percent of the net terminal income shall be deposited in equal amounts in the capitol dome and improvements fund created under &sect;5A-4-2 of this code and cultural facilities and capitol resources matching grant program fund created under &sect;29-1-3 of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Notwithstanding any provision of paragraph (A) of this subdivision to the contrary, for each fiscal year beginning after June 30, 2004, this one percent of net terminal income shall be distributed pursuant to the provisions of &sect;29-22A-10(c)(9)(B)(ii) of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The commission may establish orderly and effective procedures for the collection and distribution of funds under this section in accordance with the provisions of this section and &sect;29-22A-10 of this code.</span></p><p class="cs2CFA8611"><span class="csEF05ACC">The Clerk of the Senate and the Clerk of the House of Delegates hereby certify that the foregoing bill is correctly enrolled.</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 130.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the Senate</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">		...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 193.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the House of Delegates</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="cs93AB6E8B">				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">Originated in the Senate.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">In effect 90 days from passage.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">				...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 238.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">President of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">						...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 310.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Speaker of the House of Delegates</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="csF5AA9F8B" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">__________</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">	The within is ................................................ this the...........................................</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">Day of ..........................................................................................................., 2026.</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs93FA44A8"><span class="csEF05ACC">				.............................................................</span></p><p class="cs49AF4BA5"><span class="cs93AB6E8B">								Governor</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

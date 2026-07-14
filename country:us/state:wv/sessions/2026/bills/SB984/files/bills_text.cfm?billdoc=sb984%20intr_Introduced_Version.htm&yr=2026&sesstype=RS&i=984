@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 984 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=984">&laquo; Senate Bill 984 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 984'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 984 - Clarifying that petition to restore firearms rights may include right to serve on jury&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb984+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=984"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 984</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Phillips</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 18, 2026; referred <br/>to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;61-7-7 of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;62-12-30, relating to the restoration of civil rights; clarifying that a petition to restore firearms rights may include restoration of the right to serve on a jury; authorizing the automatic restoration of the rights to serve on a jury and possess firearms for certain nonviolent felons; clarifying the persons who may seek a petition to restore firearms rights; clarifying that the court has authority to restore certain rights to serve on a jury; creating definitions; clarifying applicability; and requiring the publication of certain guidance by the Attorney General.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 61. CRIMES AND THEIR PUNISHMENT.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 7. Dangerous Weapons.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;61-7-7. Persons prohibited from possessing firearms; classifications; right of nonprohibited persons over twenty-one years of age to carry concealed deadly weapons; offenses and penalties; reinstatement of rights to possess; offenses; penalties.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Except as provided in this section, no person shall possess a firearm, as such is defined in </span><span class="cs68EFC440">section two of this article</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;61-7-2 of this code</span><span class="csEF05ACC">, who:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Has been convicted in any court of a crime punishable by imprisonment for a term exceeding one year;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Is habitually addicted to alcohol;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Is an unlawful user of or habitually addicted to any controlled substance;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Has been adjudicated to be mentally incompetent or who has been involuntarily committed to a mental institution pursuant to the provisions of </span><span class="cs68EFC440">chapter twenty-seven</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;27-1-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">.</span><span class="csEF05ACC"> of this code or in similar law of another jurisdiction: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That once an individual has been adjudicated as a mental defective or involuntarily committed to a mental institution, he or she shall be duly notified that they are to immediately surrender any firearms in their ownership or possession: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That the mental hygiene commissioner or circuit judge shall first make a determination of the appropriate public or private individual or entity to act as conservator for the surrendered property;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Is an alien illegally or unlawfully in the United States;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Has been discharged from the armed forces under dishonorable conditions;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Is subject to a domestic violence protective order that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Was issued after a hearing of which such person received actual notice and at which such person had an opportunity to participate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Restrains such person from harassing, stalking or threatening an intimate partner of such person or child of such intimate partner or person, or engaging in other conduct that would place an intimate partner in reasonable fear of bodily injury to the partner or child; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C)(i) Includes a finding that such person represents a credible threat to the physical safety of such intimate partner or child; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) By its terms explicitly prohibits the use, attempted use or threatened use of physical force against such intimate partner or child that would reasonably be expected to cause bodily injury; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Has been convicted of a misdemeanor offense of assault or battery either under the provisions of </span><span class="cs68EFC440">section twenty-eight, article two of this chapter</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;61-2-28 of this code</span><span class="csEF05ACC"> or the provisions of subsection (b) or (c)</span><span class="cs68EFC440">, section nine of said article</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">of &sect;61-2-9 of this code</span><span class="csEF05ACC"> or a federal or state statute with the same essential elements in which the victim was a current or former spouse, current or former sexual or intimate partner, person with whom the defendant has a child in common, person with whom the defendant cohabits or has cohabited, a parent or guardian, the defendant&#39;s child or ward or a member of the defendant&#39;s household at the time of the offense or has been convicted in any court of any jurisdiction of a comparable misdemeanor crime of domestic violence.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Any person who violates the provisions of this subsection shall be guilty of a misdemeanor and, upon conviction thereof, shall be fined not less than $100 nor more than $1,000 or confined in </span><span class="cs68EFC440">the county</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">a regional</span><span class="csEF05ACC"> jail for not less than </span><span class="cs68EFC440">ninety</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">90</span><span class="csEF05ACC"> days nor more than one year, or both.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Notwithstanding the provisions of subsection (a) of this section, any person:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Who has been convicted in this state or any other jurisdiction of a felony crime of violence against the person of another or of a felony sexual offense; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Who has been convicted in this state or any other jurisdiction of a felony controlled substance offense involving a Schedule I controlled substance other than marijuana, a Schedule II or a Schedule III controlled substance as such are defined in </span><span class="cs68EFC440">sections two hundred four, two hundred five and two hundred six, article two, chapter sixty-a</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;60A-2-204, &sect; 60A-2-206, and &sect;60A-2-208</span><span class="csEF05ACC"> of this code and who possesses a firearm as such is defined in </span><span class="cs68EFC440">section two of this article</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;61-7-2 of this code</span><span class="csEF05ACC"> shall be guilty of a felony and, upon conviction thereof, shall be confined in a state correctional facility for not more than five years or fined not more than $5,000, or both. The provisions of subsection (f) of this section shall not apply to persons convicted of offenses referred to in </span><span class="cs46AE26E6">subdivision (1) of</span><span class="csEF05ACC"> this subsection or to persons convicted of a violation of this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Any person may carry a concealed deadly weapon without a license therefor who is:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) At least </span><span class="cs68EFC440">twenty-one</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">21</span><span class="csEF05ACC"> years of age;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A United States citizen or legal resident thereof;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Not prohibited from possessing a firearm under the provisions of this section; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Not prohibited from possessing a firearm under the provisions of 18 U. S. C. &sect;922(g) or (n).</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) As a separate and additional offense to the offense provided for in subsection (a) of this section, and in addition to any other offenses outlined in this code, and except as provided by subsection (e) of this section, any person prohibited by subsection (a) of this section from possessing a firearm who carries a concealed firearm is guilty of a felony and, upon conviction thereof, shall be confined in a state correctional facility for not more than three years or fined not more than $5,000, or both.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) As a separate and additional offense to the offense described in subsection (b) of this section, and in additional to any other offenses outlined in this code, any person prohibited by subsection (b) of this section from possessing a firearm who carries a concealed firearm is guilty of a felony and, upon conviction thereof, shall be confined in a state correctional facility for not more than ten years or fined not more than $10,000, or both.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Any person prohibited from possessing a firearm by the provisions of subsection (a) of this section may petition the circuit court of the county in which he or she resides to regain the ability to </span><span class="cs46AE26E6">serve on a jury and to</span><span class="csEF05ACC"> possess a firearm and if the court finds by clear and convincing evidence that the person is competent and capable of exercising the responsibility concomitant with the possession of a firearm, the court may enter an order allowing the person to </span><span class="cs46AE26E6">serve on a jury and to</span><span class="csEF05ACC"> possess a firearm if such possession would not violate any federal law: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a person prohibited from possessing a firearm by the provisions of subdivision (4), subsection (a) of this section may petition to regain the ability to possess a firearm in accordance with the provisions of </span><span class="cs68EFC440">section five, article seven-a of this chapter</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;61-7A-5 of this code</span><span class="csEF05ACC">.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Any person who has been convicted of an offense which disqualifies him or her from possessing a firearm by virtue of a criminal conviction whose conviction was expunged or set aside, </span><span class="cs68EFC440">or</span><span class="csEF05ACC"> who subsequent thereto receives an unconditional pardon for said offense, </span><span class="cs46AE26E6">or whose rights have been restored pursuant to subsection (f) of this section or &sect;62-12-30 of this code</span><span class="csEF05ACC"> shall not be prohibited from possessing a firearm by the provisions of the section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 62. CRIMINAL PROCEDURE.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 12. PROBATION AND PAROLE.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;62-12-30. Automatic restoration of civil rights for first offenders; firearms rights.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)(1) Notwithstanding the provisions of &sect;52-1-8 or &sect;61-7-7 of this code, on completion of parole or probation or absolute discharge from imprisonment for a nonviolent felony offense committed in this state, the right to serve on a jury and the right to possess a firearm that were lost as a result of the conviction shall be automatically restored to any person who has not previously been convicted of a felony offense or other disqualifying offense under state or federal law: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That the automatic restoration of rights under this subdivision shall not apply to any person whose right to hold elected office or right to vote have not been restored by operation of law. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A person who is entitled to the restoration of rights pursuant to this subdivision (1) of this subsection is not required to file a petition pursuant to &sect;61-7-7(f) of this code to have his or her rights to possess a firearm automatically restored: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That he or she may file a petition pursuant to that subsection in order to obtain documentation that his or her right to serve on a jury and right to possess a firearm have been automatically restored, and the court shall summarily grant the petition without holding a hearing: </span><span class="cs1489E706">Provided, however</span><span class="cs46AE26E6">, That nothing in this subdivision precludes the court from requiring supporting documentation from an eligible petitioner for purposes of verifying that the petitioner is entitled to automatic restoration prior to entry of an order granting the petition.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) This section shall not apply to a person convicted of any of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Any offenses outlined in &sect;61-7-7(b) of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any felony offense where the victim is a minor child;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any felony offense of cruelty to animals;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Any felony offense involving the use or presentment of a deadly weapon as that term is defined in &sect;61-7-2 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Any felony offense which involves potential, actual, or threatened violence to a person or the public or the solicitation of another to commit a violation of the law which constitutes a felony crime of violence against the person; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Any felony offense of conspiracy to commit any of the offenses listed in this subdivision;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Any felony offense involving the intentional infliction of bodily injury; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Any felony offense punishable by life imprisonment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) For purposes of this subsection, &quot;nonviolent felony&quot; means any felony offense under the provisions of this code not listed in subsection (b) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Nothing in this section shall be construed as limiting or amending the restoration of the rights to hold elected office or to vote as otherwise set forth and restored pursuant to the provisions of this code or otherwise by operation of law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) On or before January 1, 2027, and as often thereafter as he or she shall consider necessary, the Attorney General shall publish guidance on concealed deadly weapon laws in this state which shall include guidance on the restoration of rights provided in this section.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to provide for the automatic restoration of civil rights for certain nonviolent first offenders.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5239 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5239">&laquo; House Bill 5239 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5239'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5239 - To increase the minimum starting salary for a teacher to $50,000&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5239+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5239"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs60C11EA{text-align:justify;text-indent:38pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs9C0293DF{text-align:center;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csB3A83C3B{}
+		.csF31AFDC7{width:32pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.cs6821BE01{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt -1pt}
+		.cs7F14C2F4{width:50pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.csEC72749F{width:51pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.csA03A6ECA{width:42pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.csD4B792A2{width:48pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.cs44187BF0{width:39pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.cs7EE2DB11{width:41pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.csD8BB4A4D{width:49.2pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.cs216B30E8{width:1.8pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.csF44CD7B7{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.cs5B0D040D{color:#000000;background-color:transparent;font-family:'Times New Roman';font-size:10pt;font-weight:normal;font-style:normal;}
+		.cs9DCB252D{width:38.5pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.cs35C2FF{width:57.45pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.csBA3739E6{width:11.1pt;padding:0pt 5.4pt 0pt 5.4pt;border-top:none;border-right:none;border-bottom:none;border-left:none}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><div style="width:109.5pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	<span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5239</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Hornbuckle, Lewis, and Hansen</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 05, 2026; referred to the Committee on Education then Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;18A-4-2 of the Code of West Virginia, 1931, as amended, relating to </span><a name="_Hlk189237746"><span class="csEF05ACC">raising the state minimum salary schedule for teachers; and raising the state minimum salary for teachers to $50,000.</span></a></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 4. SALARIES, WAGES AND OTHER BENEFITS.</span></h2>
+	<h4 class="cs7F45F1B">
+		<span class="csB9803513">&sect;18A-4-2. State minimum salaries for teachers.</span></h4>
+	<h5 class="cs60C11EA">
+		<span class="csEF05ACC">(a) For school year </span><span class="cs68EFC440">2023-2024</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">2026-2027</span><span class="csEF05ACC">, and continuing thereafter, each teacher shall receive the amount prescribed in the State Minimum Salary Schedule as set forth in this section, specific additional amounts prescribed in this section or article, and any county supplement in effect in a county pursuant to &sect;18A-4-5a of this code during the contract year.</span></h5>
+	<p class="cs9C0293DF"><span class="csEF05ACC">STATE MINIMUM SALARY SCHEDULE</span></p><table class="csB3A83C3B" border="0" cellspacing="0" cellpadding="0" width="650" style="border-collapse:collapse;">
+		<tr style="height:25.3pt;">
+			<td class="csF31AFDC7" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">Years Exp</span></p></td><td class="cs7F14C2F4" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">4th Class</span></p></td><td class="csEC72749F" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">3rd Class</span></p></td><td class="cs7F14C2F4" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">2nd Class</span></p></td><td class="csA03A6ECA" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">A.B.</span></p></td><td class="csD4B792A2" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">A.B. 15</span></p></td><td class="cs44187BF0" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">M.A.</span></p></td><td class="csA03A6ECA" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">M.A. 15</span></p></td><td class="cs7EE2DB11" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">M.A. 30</span></p></td><td class="cs7EE2DB11" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">M.A.</span></p></td><td class="csD8BB4A4D" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">Doctorate</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs216B30E8" valign="bottom" nowrap=""><p class="csAC81313F"><span class="csEF05ACC">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">0</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">36,597</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">37,286</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">37,552</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">38,995</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,756</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,523</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,284</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,045</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,806</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,841</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">1</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">36,925</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">37,614</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">37,880</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,513</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,274</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,042</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,803</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,563</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,324</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,359</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">2</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">37,254</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">37,942</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">38,208</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,032</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,793</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,560</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,321</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,082</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,843</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,878</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">3</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">37,582</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">38,270</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">38,536</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,551</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,311</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,079</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,840</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,600</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,361</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,396</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">4</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">38,154</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">38,842</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,108</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,313</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,074</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,842</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,603</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,363</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,124</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,159</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">5</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">38,482</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,170</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,436</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,832</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,593</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,360</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,121</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,882</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,643</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,678</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">6</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">38,810</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,498</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,764</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,350</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,111</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,879</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,640</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,400</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,161</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,196</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">7</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,138</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,827</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,092</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,869</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,630</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,397</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,158</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,919</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,680</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,715</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">8</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,466</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,155</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,421</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,387</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,148</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,916</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,677</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,437</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,198</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,233</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">9</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">39,794</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,483</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,749</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,906</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,667</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,434</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,195</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,956</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,717</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,752</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">10</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,123</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,811</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,077</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,426</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,186</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,954</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,715</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,476</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,236</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,271</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">11</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,451</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,139</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,405</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,944</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,705</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,473</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,233</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,994</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,755</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,790</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">12</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">40,779</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,467</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,733</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,463</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,223</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,991</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,752</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,513</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,273</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,308</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">13</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,107</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,795</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,061</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,981</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,742</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,510</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,270</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,031</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,792</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,827</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">14</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,435</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,123</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,389</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,500</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,260</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,028</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,789</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,550</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,310</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,345</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">15</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">41,763</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,451</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,717</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,018</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,779</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,547</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,307</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,068</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,829</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,864</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">16</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,091</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,779</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,045</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,537</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,297</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,065</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,826</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,587</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,347</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,382</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">17</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,419</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,108</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,373</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,055</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,816</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,584</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,345</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,105</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,866</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,901</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">18</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">42,747</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,436</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,702</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,574</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,335</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,102</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,863</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,624</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,385</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,420</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">19</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,075</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,764</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,030</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,092</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,853</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,621</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,382</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,142</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,903</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,938</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">20</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,403</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,092</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,358</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,611</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,372</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,139</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,900</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,661</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,422</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,457</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">21</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">43,732</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,420</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,686</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,129</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,890</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,658</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,419</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,179</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,940</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,975</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">22</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,060</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,748</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,014</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">50,648</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,409</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,176</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,937</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,698</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,459</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,494</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">23</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,388</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,076</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,342</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,167</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,927</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,695</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,456</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,216</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,977</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,012</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">24</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">44,716</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,404</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,670</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">51,685</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,446</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,214</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,974</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,735</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,496</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,531</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">25</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,044</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,732</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,998</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,204</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,964</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,732</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,493</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,254</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,014</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,049</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">26</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,372</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,060</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,326</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">52,722</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,483</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,251</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,011</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,772</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,533</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,568</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">27</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">45,700</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,388</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,654</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,241</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,001</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,769</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,530</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,291</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,051</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,086</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">28</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,028</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,717</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,982</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">53,759</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,520</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,288</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,048</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,809</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,570</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,605</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">29</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,356</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,045</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,311</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,278</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,038</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,806</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,567</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,328</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,088</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">60,123</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">30</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">46,684</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,373</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,639</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">54,796</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,557</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,325</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,085</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,846</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,607</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">60,642</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">31</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,013</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,701</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,967</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,315</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,076</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,843</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,604</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,365</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">60,125</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">61,160</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">32</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,341</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,029</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,295</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">55,833</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,594</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,362</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,123</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,883</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">60,644</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">61,679</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">33</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,669</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,357</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,623</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,352</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,113</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,880</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,641</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">60,402</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">61,163</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">62,198</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">34</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">47,997</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,685</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,951</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">56,870</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,631</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,399</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">60,160</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">60,920</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">61,681</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">62,716</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csF31AFDC7" nowrap=""><p class="cs6821BE01"><span class="csEF05ACC">35</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">48,325</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,013</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">49,279</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">57,389</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">58,150</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">59,917</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">60,678</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">61,439</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">62,200</span></p></td><td class="csD8BB4A4D" nowrap=""><p class="cs6821BE01"><span class="cs68EFC440">63,235</span></p></td><td class="cs216B30E8"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+	</table>
+	<p class="cs63FD752D" style="tab-stops:left 36pt left 79.2pt left 126pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs9C0293DF"><span class="cs46AE26E6">STATE MINIMUM SALARY SCHEDULE</span></p><table class="csB3A83C3B" border="0" cellspacing="0" cellpadding="0" width="682" style="border-collapse:collapse;">
+		<tr style="height:25.3pt;">
+			<td class="cs9DCB252D" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">Years Exp</span></p></td><td class="cs7F14C2F4" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">4th Class</span></p></td><td class="csEC72749F" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">3rd Class</span></p></td><td class="cs7F14C2F4" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">2nd Class</span></p></td><td class="csA03A6ECA" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">A.B.</span></p></td><td class="csD4B792A2" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">A.B. 15</span></p></td><td class="cs44187BF0" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">M.A.</span></p></td><td class="csA03A6ECA" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">M.A. 15</span></p></td><td class="cs7EE2DB11" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">M.A. 30</span></p></td><td class="cs7EE2DB11" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">M.A.</span></p></td><td class="cs35C2FF" rowspan="2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">Doctorate</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="csBA3739E6" valign="bottom" nowrap=""><p class="csAC81313F"><span class="csEF05ACC">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">0</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">50,000</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">50,689</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">50,955</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,398</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,159</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,926</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,687</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,448</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,209</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,244</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">1</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">50,328</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">51,017</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">51,283</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,916</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,677</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,445</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,206</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,966</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,727</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,762</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">2</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">50,657</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">51,345</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">51,611</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,435</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,196</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,963</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,724</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,485</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,246</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,281</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">3</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">50,985</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">51,673</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">51,939</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,954</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,714</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,482</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,243</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,003</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,764</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,799</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">4</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">51,557</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,245</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,511</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,716</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,477</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,245</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,006</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,766</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,527</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,562</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">5</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">51,885</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,573</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,839</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,235</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,996</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,763</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,524</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,285</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,046</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,081</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">6</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,213</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,901</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,167</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,753</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,514</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,282</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,043</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,803</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,564</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,599</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">7</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,541</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,230</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,495</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,272</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,033</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,800</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,561</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,322</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,083</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,118</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">8</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">52,869</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,558</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,824</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,790</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,551</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,319</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,080</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,840</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,601</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,636</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">9</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,197</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,886</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,152</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,309</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,070</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,837</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,598</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,359</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,120</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,155</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">10</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,526</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,214</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,480</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,829</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,589</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,357</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,118</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,879</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,639</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,674</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">11</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">53,854</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,542</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,808</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,347</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,108</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,876</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,636</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,397</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,158</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,193</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">12</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,182</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,870</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,136</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,866</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,626</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,394</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,155</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,916</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,676</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,711</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">13</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,510</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,198</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,464</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,384</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,145</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,913</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,673</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,434</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,195</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,230</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">14</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">54,838</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,526</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,792</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,903</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,663</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,431</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,192</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,953</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,713</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,748</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">15</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,166</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,854</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,120</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,421</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,182</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,950</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,710</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,471</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,232</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,267</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">16</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,494</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,182</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,448</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,940</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,700</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,468</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,229</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,990</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,750</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,785</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">17</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">55,822</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,511</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,776</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,458</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,219</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,987</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,748</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,508</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,269</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,304</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">18</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,150</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,839</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,105</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,977</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,738</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,505</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,266</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,027</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,788</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,823</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">19</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,478</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,167</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,433</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,495</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,256</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,024</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,785</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,545</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,306</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,341</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">20</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">56,806</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,495</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,761</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,014</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,775</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,542</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,303</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,064</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,825</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,860</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">21</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,135</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,823</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,089</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">63,532</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,293</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,061</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,822</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,582</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,343</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,378</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">22</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,463</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,151</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,417</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,051</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,812</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,579</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,340</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,101</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,862</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,897</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">23</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">57,791</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,479</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,745</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">64,570</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,330</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,098</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,859</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,619</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,380</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,415</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">24</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,119</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,807</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,073</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,088</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,849</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,617</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,377</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,138</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,899</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,934</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">25</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,447</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,135</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,401</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">65,607</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,367</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,135</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,896</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,657</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,417</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,452</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">26</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">58,775</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,463</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,729</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,125</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,886</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,654</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,414</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,175</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,936</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,971</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">27</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,103</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,791</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,057</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">66,644</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,404</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,172</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,933</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,694</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,454</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">72,489</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">28</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,431</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,120</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,385</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,162</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,923</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,691</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,451</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,212</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,973</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,008</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">29</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">59,759</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,448</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,714</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">67,681</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,441</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,209</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,970</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,731</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">72,491</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,526</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">30</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,087</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,776</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,042</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,199</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,960</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,728</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,488</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">72,249</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,010</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">74,045</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">31</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,416</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,104</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,370</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">68,718</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,479</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,246</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">72,007</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">72,768</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,528</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">74,563</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">32</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">60,744</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,432</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,698</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,236</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,997</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,765</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">72,526</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,286</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">74,047</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">75,082</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">33</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,072</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,760</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,026</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">69,755</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,516</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">72,283</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,044</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,805</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">74,566</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">75,601</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">34</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,400</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,088</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,354</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,273</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,034</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">72,802</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,563</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">74,323</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">75,084</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">76,119</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+		<tr style="height:15pt;">
+			<td class="cs9DCB252D" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">35</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">61,728</span></p></td><td class="csEC72749F" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,416</span></p></td><td class="cs7F14C2F4" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">62,682</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">70,792</span></p></td><td class="csD4B792A2" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">71,553</span></p></td><td class="cs44187BF0" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">73,320</span></p></td><td class="csA03A6ECA" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">74,081</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">74,842</span></p></td><td class="cs7EE2DB11" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">75,603</span></p></td><td class="cs35C2FF" nowrap=""><p class="cs6821BE01"><span class="cs46AE26E6">76,638</span></p></td><td class="csBA3739E6"><p class="csF44CD7B7"><span class="cs5B0D040D">&nbsp;</span></p></td></tr>
+	</table>
+	<p class="cs63FD752D" style="tab-stops:left 36pt left 79.2pt left 126pt;"><span class="csEF05ACC">&nbsp;</span></p><h5 class="cs60C11EA">
+		<span class="csEF05ACC">(b) Six hundred dollars shall be paid annually to each classroom teacher who has at least 20 years of teaching experience. The payments: (i) Shall be in addition to any amounts prescribed in the applicable State Minimum Salary Schedule; (ii) shall be paid in equal monthly installments; and (iii) shall be considered a part of the state minimum salaries for teachers.</span></h5>
+	<p class="cs60C11EA"><span class="csEF05ACC">(c) Effective July 1, 2019, each classroom teacher providing math instruction in the teacher&rsquo;s certified area of study for at least 60 percent of the time the teacher is providing instruction to students shall be considered to have three additional years of experience only for the purposes of the salary schedule set forth in subsection &nbsp;(a) of this section: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That for any classroom teacher who satisfies these requirements and whose years of experience plus the three additional years due to them exceeds the years of experience provided for on the salary schedule shall be paid the additional amount equivalent to three additional years of experience notwithstanding the maximum experience provided on the salary schedule.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(d) Effective July 1, 2019, each classroom teacher certified in special education and employed as a full-time special education teacher, as defined by the State Superintendent, shall be considered to have three additional years of experience only for the purposes of the salary schedule set forth in subsection (a) of this section: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That for any classroom teacher who satisfies these requirements and whose years of experience plus the three additional years due to them exceeds the years of experience provided for on the salary schedule shall be paid the additional amount equivalent to three additional years of experience notwithstanding the maximum experience provided on the salary schedule.</span></p><p class="cs60C11EA"><span class="csEF05ACC">(e) In accordance with &sect;18A-4-5 of this code, each teacher shall be paid the supplement amount as applicable for his or her classification of certification or classification of training and years of experience as follows, subject to the provisions of that section: </span></p><p class="cs60C11EA"><span class="csEF05ACC">(1) For &quot;4th Class&quot; at zero years of experience, $1,781. An additional $38 shall be paid for each year of experience up to and including 35 years of experience;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(2) For &quot;3rd Class&quot; at zero years of experience, $1,796. An additional $67 shall be paid for each year of experience up to and including 35 years of experience;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(3) For &quot;2nd Class&quot; at zero years of experience, $1,877. An additional $69 shall be paid for each year of experience up to and including 35 years of experience;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(4) For &quot;A.B.&quot; at zero years of experience, $2,360. An additional $69 shall be paid for each year of experience up to and including 35 years of experience;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(5) For &quot;A.B. + 15&quot; at zero years of experience, $2,452. An additional $69 shall be paid for each year of experience up to and including 35 years of experience;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(6) For &quot;M.A.&quot; at zero years of experience, $2,644. An additional $69 shall be paid for each year of experience up to and including 35 years of experience;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(7) For &quot;M.A. + 15&quot; at zero years of experience, $2,740. An additional $69 shall be paid for each year of experience up to and including 35 years of experience;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(8) For &quot;M.A. + 30&quot; at zero years of experience, $2,836. An additional $69 shall be paid for each year of experience up to and including 35 years of experience;</span></p><p class="cs60C11EA"><span class="csEF05ACC">(9) For &quot;M.A. + 45&quot; at zero years of experience, $2,836. An additional $69 shall be paid for each year of experience up to and including 35 years of experience; and</span></p><p class="cs60C11EA"><span class="csEF05ACC">(10) For &quot;Doctorate&quot; at zero years of experience, $2,927. An additional $69 shall be paid for each year of experience up to and including 35 years of experience.</span></p><p class="cs60C11EA"><span class="csEF05ACC">These payments: (i) Shall be in addition to any amounts prescribed in the applicable State Minimum Salary Schedule, any specific additional amounts prescribed in this section and article and any county supplement in effect in a county pursuant to &sect;18A-4-5a of this code; (ii) shall be paid in equal monthly installments; and (iii) shall be considered a part of the state minimum salaries for teachers.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to increase the state minimum salary schedule for teachers; and to raise the state minimum salary for teachers to $50,000.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

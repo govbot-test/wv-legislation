@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4119 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4119">&laquo; House Bill 4119 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4119'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4119 - Establishing the West Virginia TEACH Scholarship Program &amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4119+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4119"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs7788C6BC{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.csD266862B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.cs7F85AE1E{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4119</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Fehrenbacher</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced; referred <br/>to the Committee on]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;18C-10-1, &sect;18C-10-2, &sect;18C-10-3, &sect;18C-10-4, &sect;18C-10-5, and &sect;18C-10-6 relating generally to establishing the West Virginia TEACH Scholarship Program; defining terms; authorizing the West Virginia Higher Education Policy Commission to award West Virginia TEACH Scholarship Program scholarships under certain terms and conditions; requiring the West Virginia Higher Education Policy Commission to report certain information on the West Virginia TEACH Scholarship Program; requiring the West Virginia Higher Education Policy Commission to propose legislative rules; providing eligibility and renewal requirements for a West Virginia TEACH Scholarship Program scholarship; requiring applicants enter into certain agreements; and establishing the West Virginia TEACH Scholarship Program Fund. </span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">Article 10. West virginia TEACH Scholarship Program.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;18C-10-1. Short Title. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This article shall be known and cited as &quot;The Education and Child-Care Help Scholarship Program,&quot; the &quot;</span><a name="_Hlk177463767"><span class="cs46AE26E6">West Virginia TEACH Scholarship Program</span></a><span class="cs46AE26E6">,&quot; or &quot;West Virginia TEACH.&quot; </span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk97538099"><span class="csF3C8A5A3">&sect;18C-10-2. Legislative findings; declaration of public policy.</span></a></h4>
+	<p class="cs7788C6BC"><span class="cs46AE26E6">(a) The Legislature finds and declares that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Every West Virginian should have access to education and training that will lead to gainful employment opportunities within the state. For West Virginia to retain and attract a qualified workforce, it must ensure that its workers have access to affordable and quality education and training. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) West Virginia currently faces a child-care crisis, as the state is struggling to provide access to affordable, high-quality child-care for all families. In turn, this lack of child-care is a barrier to workforce participation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) </span><span class="cs46AE26E6">According to the United States Department of Labor&rsquo;s Bureau of Labor Statistics, West Virginia&rsquo;s workforce participation rate was 54.9% in 2023, making it the second lowest participation rate in the country. More specific, in 2022, West Virginia had a female workforce participation rate of 49.5% -- the only state below 50%. The lack of affordable, quality child-care contributes to this problem.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) One of the biggest barriers to child-care is the significant cost to both parents and providers. Many parents struggle to pay the average rate of $800/month &ndash; and as a result, many families make the decision to have a parent leave the workforce to stay home. Providers are also experiencing cost-related issues pertaining to staffing. Many providers are losing potential staff members to other industries because of pay. As such, it is very difficult for providers to attract and retain quality employees. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) </span><span class="cs46AE26E6">Due to the aforementioned challenges, child-care providers are searching for ways to enhance the wages and/or benefits of their employees while also providing better, high-standard services for the children in their care. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) An investment by the state into increasing access to affordable higher education for child-care workers will provide its citizens the opportunity for self-betterment and will provide the state with an educated and inspired pipeline of early childhood-educated individuals to staff our child-care facilities across the state in an effort to increase our workforce participation needed to attract significant economic development. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs46AE26E6">In enacting this legislation, it is the intention of the Legislature to provide West Virginia with hope and quality child-care by offering opportunities to child-care workers and providers that is needed to remedy the lack of affordable quality child-care and in turn, allow workers to return to the workforce. &nbsp;</span></p><h2 class="cs89687900">
+		<span class="csD266862B">&sect;18C-10-3. </span><span class="csF3C8A5A3">Definitions.</span></h2>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article, the term:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Commission&quot; means the West Virginia Higher Education Policy Commission; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Eligible child-care facility&quot; means an early childhood education (ECE) facility maintained by the state or any county or municipality thereof, or any agency or facility maintained by an individual, firm, corporation, association, or organization, public or private, for the care of six or more children for child care services in any setting, if the facility is open for more than 30 days per year per child; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Eligible institution&quot; means a state community and technical college institution under the authority of the West Virginia Commission for Community and Technical College Education; or a publicly supported four-year college or university in this state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Tuition&quot; means the semester or term charges imposed by an eligible institution and, additionally, all mandatory fees required as a condition of enrollment by all students.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;18C-10-4. West Virginia TEACH Scholarship Program.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) There is hereby created a scholarship program known as &quot;The Education and Child-Care Help Scholarship Program&quot; or the West Virginia TEACH Scholarship Program, which shall be administered by the West Virginia Higher Education Policy Commission in accordance with this article. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Commission shall award West Virginia TEACH scholarships pursuant to the following terms and conditions: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A West Virginia TEACH scholarship may only be awarded to applicants satisfying the requirements provided in &sect;18C-10-5 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The maximum amount of a West Virginia TEACH scholarship shall be the cost of tuition charged to all students for coursework leading to completion of the chosen associate degree or bachelor&rsquo;s degree, less all other state and federal scholarships and scholarships for which the student is eligible. All other state and federal scholarships and scholarships for which the recipient is eligible shall be deducted from the amount of the West Virginia TEACH scholarship for each individual student. The amount of a West Virginia TEACH scholarship at an eligible institution shall not exceed the average cost of tuition and mandatory fees of the eligible institution;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Scholarship payments shall be made directly to the eligible institutions;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) If a scholarship recipient transfers from one eligible institution to another, the scholarship is transferable only with approval of the Commission;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) A West Virginia TEACH scholarship may be used at any eligible institution to seek an associate degree or bachelor&rsquo;s degree in an eligible early childhood education (ECE) program. An institution is not required to accept a scholarship recipient for enrollment and may enforce its own admission requirements, standards, and policies; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) If a West Virginia TEACH scholarship recipient terminates enrollment for any reason during the academic year, the unused portion of the scholarship shall be returned by the institution to the Commission in accordance with the Commission&rsquo;s policy for issuing refunds. The Commission shall transfer such funds to the West Virginia TEACH Scholarship Program Fund for allocation and expenditure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">On or before January 1 annually, the Commission shall provide to the Legislature and the Governor a report on the West Virginia TEACH Scholarship Program, which shall include, but not be limited to, research and data concerning student success and scholarship retention.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The Commission may propose legislative rules for legislative approval pursuant to &sect;29A-3A-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code to implement the provisions of this article, which may provide for:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Application requirements and deadlines fully implementing requirements of this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Appeal procedures for the denial or revocation of the scholarship; and</span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(3) Any other provisions necessary to effectuate the purposes of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The Legislature hereby declares that an emergency situation exists and, therefore, the</span></p><p class="cs7F45F1B"><span class="cs46AE26E6">Commission may establish, by emergency rule, under the procedures of &sect;29A-3A-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, a rule to implement the provisions of this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;18C-10-5. Eligibility requirements; agreements.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) To be eligible for a West Virginia TEACH scholarship, an individual must satisfy the following requirements:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Be a citizen or legal resident of the United States and have been a resident of West Virginia for at least one year immediately preceding the date of application for a scholarship;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Have completed a secondary education program in a public, private, or home school;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Have not been previously awarded a post-secondary degree;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Be currently employed at least 20 hours per week at an eligible child-care facility;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Be at least 18 years of age: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, that individuals younger than 18 years of age may qualify for the scholarship upon completion of a secondary education program in a public, private, or home school;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Meet the admission requirements of, and be admitted into, an eligible institution;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Satisfactorily meet any additional qualifications of enrollment, academic promise, or achievement as established by the Commission through rule;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Have filed a completed free application for federal student aid (FAFSA) for the academic year in which the scholarship award is sought;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Be enrolled in an eligible post-secondary program;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Be enrolled in at least six credit hours per semester;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) Have completed a West Virginia TEACH Scholarship Program application as provided by the Commission in accordance with a schedule established by the Commission; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Have, prior to the start of each semester, satisfactorily passed a drug test administered by the eligible institution: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, that the applicant shall be responsible for the actual cost of the drug test.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Each scholarship may be renewed until the course of study is completed as long as the following qualifications, as determined by the Commission are satisfied:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Maintaining satisfactory academic standing, including a cumulative grade point average of at least 2.0;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Making adequate progress toward completion of the eligible early childhood education program; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Maintaining employment at an eligible child-care facility until the course of study is completed or until a recipient wishes to forfeit the scholarship. The Commission may include in the legislative rules, required by &sect;18C-10-4 of this code, provisions for the employment requirements, including, but not limited to, requiring employment of at least 20 hours per week at an eligible child-care facility during the time of study;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Continued satisfaction of eligibility requirements provided by &sect;18C-10-5(a) of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Satisfaction of any additional eligibility criteria established by the Commission through legislative rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Each recipient of a West Virginia TEACH scholarship shall enter into an agreement with the Commission, which shall require repayment of an amount of the scholarship or scholarships awarded to the recipient, in whole or in part, if a recipient chooses to reside outside the state within two years following obtainment of the degree for which the scholarship or scholarships were awarded. The Commission may not require a recipient to repay scholarships, in whole or in part, unless the prospective recipient has been informed of this requirement in writing before initial acceptance of the scholarship award. Each West Virginia TEACH Scholarship agreement shall include the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Disclosure of the full terms and conditions under which assistance under this article is provided and under which repayment may be required; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A description of the appeals procedure required to be established under this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) West Virginia TEACH scholarship recipients found to be in noncompliance with the agreement entered into under &sect;18C-10-5(c) of this code shall be required to repay the amount of the scholarship awards received, plus interest, and, where applicable, reasonable collection fees, on a schedule and at a rate of interest prescribed in rules promulgated by the Commission. The Commission shall also provide for proration of the amount to be repaid by a recipient who maintains employment in the state for a period of time within the time period required under &sect;18C-10-5(c) of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A recipient is not in violation of an agreement entered into pursuant to &sect;18C-10-5(c) of this code during any period in which the recipient is meeting any of the following conditions:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Pursuing a half-time course of study at an accredited institution of higher education;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Serving as a member of the armed services of the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Failing to comply with the terms of the agreement due to death or permanent or temporary disability as established by sworn affidavit of a qualified physician; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Satisfying the provisions of any additional repayment exemptions prescribed by the Commission through rule.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;18C-10-6. West Virginia TEACH Scholarship Program Fund; established.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The West Virginia TEACH Scholarship Program Fund is hereby created in the State Treasury as a special revenue account. The fund shall be administered by the Commission and may consist of:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) All appropriations by the Legislature for the West Virginia TEACH Scholarship Program Fund;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any gifts, scholarships, or contributions received for the West Virginia TEACH Scholarship Program Fund; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) All interest or other income earned from investment of the West Virginia TEACH Scholarship Program Fund.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The West Virginia TEACH Scholarship Program Fund shall be expended for the purpose of administering the West Virginia TEACH Scholarship Program, including the awarding of scholarships authorized by this article. Any funds remaining in the fund at the close of the fiscal year are carried forward for use in the next fiscal year.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Nothing in this section requires any specific level of funding by the Legislature nor</span></p><p class="cs7F45F1B"><span class="cs46AE26E6">guarantees or entitles any individual to any benefit or scholarship of funds.</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to establish the West Virginia TEACH Scholarship Program. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

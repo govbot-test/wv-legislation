@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 514 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=514">&laquo; Senate Bill 514 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 514'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 514 - Prohibiting geoengineering activities&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb514+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=514"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 514</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Rucker</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 20, 2026; referred<br/>to the Committee on Natural Resources; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;22-37-1, &sect;22-37-2, &sect;22-37-3, and &sect;22-37-4, relating to protecting the environment and humans by prohibiting geoengineering activities; providing definitions; and creating penalties for violations.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">article 37. prohibition on atmospheric geoengineering.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;22-37-1. Legislative findings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The Legislature finds that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Atmospheric polluting activities involving the intentional release of polluting emissions, including weather modification, stratospheric aerosol injection, solar radiation modification, and other forms of geoengineering:</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	</span><span class="cs46AE26E6">(A) Endanger human health and safety and the environment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Threaten air, water, soil, and wildlife resources;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Disrupt agricultural operations; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Potentially interfere with aviation, state security, and the economy of the state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Pursuant to the Tenth Amendment of the Constitution of the United States and the inherent right for West Virginia citizens to engage in thoughtful deliberation and determine public policy by voting, the citizens of the state do not consent to any unconstitutional actions or efforts made by the federal government or international bodies that intentionally release polluting emissions into the state&#39;s atmosphere, through geoengineering, cloud seeding, weather modification, or any other means; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;(3) To preserve the safe and healthful uses of the state&#39;s atmosphere for its people, environment, and agriculture, and to improve beneficial climate efforts, it is necessary to prohibit geoengineering and to provide for enforcement and penalties for violative activities.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;22-37-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Aerosol injection&quot; means the release of reflective sulfate or other aerosol particles in the stratosphere by high altitude planes, tethered balloons, high altitude blimps, artillery, or other means;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Artificial intelligence&quot; or &quot;AI&quot; means systems or machines that mimic human intelligence to perform tasks and that can iteratively improve themselves based on the information they collect;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Atmospheric contaminant&quot; means any type of aerosol, biological, nonbiological, or hazardous agent, chaff, genetically modified agent, metal, radioactive material, vapor, electromagnetic radiation or field, mechanical vibration, particulate of any size, or any air pollutant regulated by the state, and any combination thereof. &quot;Atmospheric contaminant&quot; does not include any engine exhaust from an aircraft using unadulterated certified aviation fuel;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Atmospheric polluting activity&quot; means any deliberate release of an atmospheric contaminant by any human, or by artificial intelligence, or any combination thereof, that occurs in the atmosphere and that may have harmful consequences on human health, the environment, or agriculture; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Chaff&quot; means aluminum-coated silica glass fibers, typically dispersed in bundles containing millions of inhalable fibers, which break apart and fall to the ground;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cloud seeding&quot; means a type of weather modification that involves the deliberate introduction of various substances into a cloud in order to induce or increase precipitation from the cloud;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Entity&quot; means any individual, trust, firm, joint stock company, corporation, quasi-governmental corporation, nongovernmental organization, partnership, association, syndicate, club, college, university, any agency, subdivision, or instrumentality of federal, state, or local government, or any interstate or international governance body;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Geoengineering&quot; means the intentional manipulation of the environment, through an atmospheric polluting activity, to effect changes to the earth&#39;s atmosphere or surface, including but not limited to the practices of weather modification, aerosol injection, and cloud seeding;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Hazardous&quot; means a substance or physical agent that by its nature is harmful to living organisms, property, or any other valuable interest;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Individual&quot; means a natural person;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Maser&quot; means a device using the stimulated emission of radiation by excited atoms to amplify or generate radiation in the microwave range;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Person&quot; means an individual, business association, financial organization, estate, trust, government, governmental subdivision, agency, or instrumentality, or any other legal or commercial entity;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Physical agent&quot; means a source of energy that may cause injury through excessive exposure, including but not limited to radiofrequency, microwave, and other electromagnetic radiation and fields, barometric pressure, temperature, gravity, mechanical vibration, and sound;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Release&quot; means any activity that results in the issuance of atmospheric contaminants such as the emitting, transmitting, discharging, or injecting of one or more nuclear, biological, chemical, or physical agents into the ambient atmosphere, whether once, intermittently, or continuously;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Solar radiation modification&quot; means any attempt to reduce global temperatures by reflecting more sunlight into space or allowing more infrared radiation from earth to escape than would naturally occur; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Weather modification&quot; means the changing, controlling, or interfering with or attempting to change, control, or interfere with the natural development of cloud forms, precipitation, barometric pressure, temperature, conductivity or other electromagnetic or sonic characteristics of the atmosphere.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;22-37-3. Prohibitions on geoengineering activities; rules.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) An entity may not engage in any form of geoengineering activities within or over the state of West Virginia. The secretary shall investigate any credible reports of geoengineering occurring in the state received under this article and shall issue an order to any entity that he or she finds is engaging in geoengineering to immediately cease all geoengineering activities. Upon issuing the order, the secretary shall pursue the imposition of all penalties for engaging in geoengineering authorized under this article and the administrative regulations promulgated hereunder.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If any activity that the department has deemed to be geoengineering has been approved, explicitly or implicitly, by the federal government, the department shall issue a notice to the appropriate federal agency that the geoengineering activity cannot lawfully be carried out within or over the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If the department finds that a foreign state or international body funds, in part or in whole, or engages in any geoengineering activity, the department shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Provide it with notice that the geoengineering activity cannot lawfully be carried out within or over this state; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Prohibit it from engaging in any atmospheric activities in or above the state. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The department shall publish quarterly notices in newspapers of general circulation and shall post notices on the department&#39;s website to encourage the public to monitor, measure, document, and report present, potential, and past incidents that may constitute geoengineering activities. An individual who wishes to present evidence of geoengineering may submit to the secretary, by electronic mail or other means of communication, any of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Evidentiary photographs, each separately titled as an electronic or hard copy document, and specifying the date, time, location, and direction from which the photograph was taken; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any other collected samples of video or audio recordings, lab tests, microscopy, spectrometry, metering, and other forms of evidence that the individual may have.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Any local or state official who has received information that causes him or her to suspect geoengineering activity is occurring shall report that information to the commissioner within 24 hours of receiving it.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The department shall investigate reports of excessive electromagnetic radiation or fields caused by human activity in any part of the spectrum, including but not limited to radiofrequency, microwave, maser, infrared, laser, and ionizing radiation to ensure that they are not the result of violations of the requirements of this article or the legislative rules promulgated hereunder.</span></p><h4 class="cs89687900">
+		<a name="_Hlk211429084"><span class="csF3C8A5A3">&sect;</span></a><span class="csF3C8A5A3">22-37-4. Penalties.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Any person who violates:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Any provisions of this article, except as provided in subsection (2) of this subsection, or fails to perform any duties &nbsp;imposed by this article, or who violates any determination, permit, rule, or order of the department promulgated pursuant thereto shall be liable for a civil penalty not to exceed the sum of $25,000 for each day during which such violation or failure continues. Additionally, the person concurrently may be enjoined from any violations as provided in this article; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any provision of this article relating to noise, or who fails to perform any relevant determination, permit, administrative regulation, or order of the department promulgated pursuant to this article is subject to a civil penalty not to exceed $5,000 and an additional civil penalty not to exceed $5,000 for each day during which such violation continues. Additionally, the person concurrently may be enjoined from any violations as hereinafter provided in this article. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any person who knowingly violates this article, knowingly provides false information in any document filed or required to be maintained under this article, or who knowingly renders inaccurate any monitoring device or method, or tampers with a water supply, water purification plant, or water distribution system so as to knowingly endanger human life, is guilty of a felony, and upon conviction thereof, shall be punished by a fine not to exceed $25,000, imprisonment for a term of not less than one year and not more than five years, or by both fine and imprisonment, for each separate violation. Each day upon which a violation occurs shall constitute a separate offense.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The secretary may issue an order requiring compliance within a specified time-period or may commence a civil action in a court of competent jurisdiction for any person who: (i) engages in generation, treatment, storage, transportation, or disposal of hazardous waste in violation of the hazardous waste management provisions of this article or contrary to a permit, order, or rule issued or promulgated under this article; or (ii) fails to provide information or to meet reporting requirements required by terms and conditions of a permit or administrative regulations promulgated pursuant to this article. The violator is subject to a civil penalty not to exceed $25,000 for each day during which the violation continues, and in addition, may be enjoined from any violation in a court of competent jurisdiction.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any person who knowingly is engaged in generation, treatment, storage, transportation, or disposal of hazardous waste in violation of this article or contrary to a permit, order, or administrative regulation issued or promulgated under this article, or knowingly makes a false statement, representation, or certification in an application for or form pertaining to a permit or in a notice or report required by the terms and conditions of an issued permit, shall be guilty of a felony, and upon conviction thereof, shall be punished by a fine not to exceed $25,000 for each day of violation, or by imprisonment for a term of not less than one year and not more than five years, or by both fine and imprisonment, for each separate violation. Each day upon which a violation occurs shall constitute a separate offense.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Nothing contained in this section shall abridge the right of any person to recover actual compensatory damages resulting from any violation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Any person who violates any provision of this article to which no express penalty &nbsp;provision applies, except as provided in this article, or who fails to perform any duties imposed by this article, or who violates any determination or order of the cabinet promulgated pursuant thereto shall be liable for a civil penalty not to exceed the sum of $1,000 for said violation and an additional civil penalty not to exceed $1,000 for each day during which the violation continues, and in addition, may be concurrently enjoined from any violations as hereinafter provided in this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The Circuit Court of Kanawha County shall hold concurrent jurisdiction and venue of all civil and injunctive actions instituted by the Attorney General on behalf of the state for the enforcement of the provisions of this article or the orders and administrative regulations of the department promulgated pursuant to this article. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) In addition to any other penalties that may apply, any person who knowingly engages in geoengineering activities in violation of this article shall be guilty of a felony and subject to a civil penalty of not less than $500,000. Each day that a person knowingly engages in geoengineering activities shall constitute a separate offense.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to ban geoengineering activities in this state and provide for penalties for engaging in such activities. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5520 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5520">&laquo; House Bill 5520 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5520'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5520 - Foreign Adversary and Terrorist Agent Registration and Transnational Repression Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5520+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5520"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.csCA63F0B4{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csD4913168{color:#000000;background-color:transparent;font-family:'Javanese Text';font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs7F85AE1E{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csDCDA41A9{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 0pt}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5520</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegates Ridenour, Martin, B. Ward, Hillenbrand, Butler, Masters, Kimble, Jennings, Phillips, and McGeehan</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 13, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;6B-3-2 the Code of West Virginia, 1931, as amended</span><span class="csCA63F0B4">, </span><span class="csEF05ACC">and to amend the code by adding a new article, designated </span><a name="_Hlk219364183"><span class="csEF05ACC">&sect;6D-2-1, to amend the code by adding a new article, designated &sect;15-17-1, </span></a><span class="csEF05ACC">&sect;15-17-2, &sect;15-17-3, &sect;15-17-4, &sect;15-17-5, &sect;15-17-6, &sect;15-17-7, &sect;15-17-8, &sect;15-17-9, &sect;15-17-10, &sect;15-17-11, &sect;15-17-12, &sect;15-17-13, &sect;15-17-14, &sect;15-17-15 &sect;15-17-16, &sect;15-17-17, &sect;15-17-18, &sect;15-17-19, and &sect;15-17-20, relating &nbsp;to creating the Foreign Adversary Contracting Prohibition Act, the Foreign Adversary and Terrorist Agent Registration Act and the Transnational Repression Act; providing titles and purposes; providing definitions; clarifying registration; providing exceptions; creating record retention; establishing the duties of the Attorney General; creating penalties; authorizing a portal and website; authorizing rules; defining crimes; requiring reporting; establishing training; clarifying how to register as a lobbyist;</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 6B. PUBLIC OFFICERS AND EMPLOYEES; ETHICS; CONFLICTS OF INTEREST; FINANCIAL DISCLOSURE.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 3. LOBBYISTS.</span></h2>
+	<p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;6B-3-2. Registration of lobbyists.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Before engaging in any lobbying activity, or within thirty days after being employed as a lobbyist, whichever occurs first, a lobbyist shall register with the Ethics Commission by filing a lobbyist registration statement. The registration statement shall contain information and be in a form prescribed by the Ethics Commission by legislative rule, including, but not limited to, the following information:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(1) The registrant&#39;s name, business address, telephone numbers and any temporary residential and business addresses and telephone numbers used or to be used by the registrant while lobbying during a legislative session;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(2) The name, address and occupation or business of the registrant&#39;s employer;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(3) A statement as to whether the registrant is employed or retained by his or her employer solely as a lobbyist or is a regular employee performing services for the employer which include, but are not limited to, lobbying;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4) A statement as to whether the registrant is employed or retained by his or her employer under any agreement, arrangement or understanding according to which the registrant&#39;s compensation, or any portion of the registrant&#39;s compensation, is or will be contingent upon the success of his or her lobbying activity;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5) The general subject or subjects, if known, on which the registrant will lobby or employ some other person to lobby in a manner which requires registration under this article; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(6) An appended written authorization from each of the lobbyist&#39;s employers confirming the lobbyist&#39;s employment and the subjects on which the employer is to be represented.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The name, permanent residence address, and office address of the lobbyist;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The name and address of the principal of such lobbyist;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The nature of the business of such principal and the amounts or sums given or to be given to the lobbyist as compensation or reimbursement for lobbying. A lobbyist who is salaried or retained by a principal need only report that portion of compensation or reimbursement reasonably attributable to lobbying;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) A description of the business activity of the lobbyist;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) An identification of the matters on which the principal or lobbyist expects to lobby;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) If the principal is a PRC-affiliated military company, an affirmative acknowledgment by the lobbyist that such lobbyist is lobbying on behalf of, and thereby acting as an agent of, a foreign adversary of the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) If the principal is an industry, trade, or professional association, a specific description of the industry, trade, or profession represented by the principal and the names and addresses of its officers;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) If the principal is not an industry, trade, or professional association, a specific description of the interests and groups represented by the principal and the names and addresses of its officers; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) The name and address of any official in the legislative, executive or judicial branches, and of any members of any such official&rsquo;s staff or immediate family, who are employed by the lobbyist or any person acting on behalf of such lobbyist if such information is known or reasonably</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">should have been known to the lobbyist.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If any such lobbying activity is on behalf of a PRC-affiliated military company, disclose that such PRC-affiliated military company is a foreign adversary of the United States. For purposes of this subdivision (b), lobbying activity includes, but is not limited to, lobbying by means of telephone, electronic mail, United States mail or other mail delivery service, in-person meetings, or testimony at legislative hearings.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Every person employed, retained, or authorized as a consultant for a PRC-affiliated military company shall, before commencing any influencing activity in this state for such PRC-affiliated military company file with the Commission, on a form prescribed by the Commission , information that shall include as a minimum, the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The name, permanent residence address, and office address of the consultant;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The name and address of the PRC-affiliated military company represented by such consultant;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A description of the business activity of the consultant;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) An identification of the matters on which the consultant expects to conduct influencing activity on behalf of such PRC-affiliated military company;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) An affirmative acknowledgment by the consultant that such consultant is influencing on behalf of, and thereby acting as an agent of, a foreign adversary of the United States; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The name and address of any official in the legislative, executive or judicial branches, and of any members of any such official&rsquo;s staff or immediate family, who are employed by the consultant or any person acting on behalf of such consultant if such information is known or reasonably should have been known to the consultant; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Disclose that such PRC-affiliated military company is a foreign adversary of the United States.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">For purposes of this subsection, influencing activity includes, but is not limited to, influencing by means of telephone, electronic mail, United States mail or other mail delivery service, or in-person meetings.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Any person who violates subdivision (a)(6) or subsection (b) or (c) of this section shall be fined $100,000 and confined in a state correctional facility for not less than one year nor more than three years for each violation. All penalties collected under this section shall be remitted to the State Treasurer for distribution in accordance with the relevant section of West Virginia Constitution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">For purposes of this section, &quot;PRC-affiliated military company&quot; means &nbsp;any company operating in China&#39;s defense or surveillance sectors, or any entity directly/indirectly owned by, controlled by, or acting as an agent for the People&#39;s Liberation Army (PLA), Chinese military/paramilitary, or related government bodies, including contributors to China&#39;s Military-Civil Fusion (MCF) strategy, blurring commercial and military tech development, and includes any subsidiary of a PRC-affiliated military company or any company owned or controlled, in whole or in part, by a PRC-affiliated military company.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(e)</span><span class="csEF05ACC"> Any lobbyist who receives or is to receive compensation from more than one person for services as a lobbyist shall file a separate notice of representation with respect to each person compensating him or her for services performed as a lobbyist. When a lobbyist whose fee for lobbying with respect to the same subject is to be paid or contributed by more than one person, then the lobbyist may file a single statement, in which he or she shall detail the name, business address and occupation of each person paying or contributing to the fee.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(f)</span><span class="csEF05ACC"> Whenever a change, modification or termination of the lobbyist&#39;s employment occurs, the lobbyist shall, within one week of the change, modification or termination, furnish full information regarding the change, modification or termination by filing with the commission an amended registration statement.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(g)</span><span class="csEF05ACC"> Each lobbyist who has registered shall file a new registration statement, revised as appropriate, on the Monday preceding the second Wednesday in January of each odd-numbered year and failure to do so terminates his or her authorization to lobby. Until the registration is renewed, the person may not engage in lobbying activities unless he or she is otherwise exempt under paragraph (B), subdivision (7), section one of this article.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(e)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(h)</span><span class="csEF05ACC"> The following public officers or employees may not, during or up to one year after the termination of their public employment or service, be allowed to register as lobbyists:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Members of the Legislature;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Members of the Executive Department as referenced in article VII, section one of the Constitution of West Virginia;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Will and pleasure professional employees of the Legislature under the direct supervision of a member of the Legislature;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Will and pleasure professional employees of members of the Executive Department under the direct supervision of the Executive Department officer and who regularly, personally and substantially participates in a decision-making or advisory capacity regarding agency or department policy;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Members of the Supreme Court of Appeals;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Any department secretary of an executive branch department created by the provisions of section two, article one, chapter five-f of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Heads of any state departments or agencies.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) (1) The West Virginia Ethics Commission, upon finding that there has been a violation of &sect;6B-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, or any rule or regulation promulgated thereunder, may issue an order requiring the violator to do one or more of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Cease and desist from the violation;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) File any report, statement, or other information as required;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Pay a civil penalty of not more than $5 thousand for each violation of the act, rule, or regulation; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Pay the costs of the hearing in a contested case if the violator did not appear at the hearing personally or by counsel.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Upon finding that there has been a violation of the relevant statute, the Commission shall issue an order paying any person who provided the Commission information that resulted in the finding of such violation a sum of fifty thousand dollars. Such payment shall be contingent upon the Commission recovering any civil penalty sought under the statute.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j)(1) The statement of financial interests filed pursuant to the relevant section of the relevant statute shall be on a form prescribed by the Commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Individuals required to file shall file the following information for themselves:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The name and address of and the nature of association with any business with which the individual was associated;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The name and address of any entity in which a position of trustee was held;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The name, address, and nature of business of a person or government body from whom any income in the value of one thousand dollars or more was received and the nature of the services rendered, except that the identification of patrons, customers, patients, or clients of such person from which employment income was received is not required;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) A description, but not the value, of the following, if the fair market value thereof exceeded $1 thousand:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The nature and location of all real property in the state, except any such real property used as a residence of the individual;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) The depository of checking and savings accounts;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii)The issuer of stocks, bonds, and government securities; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) A description of all other property owned or held for the production of income, except property owned or used by a business with which the individual was associated;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) The name and address of each creditor to whom the value of $1,000 or more was owed or guaranteed by the individual or a member of the individual&rsquo;s immediate family, except for the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Accounts payable;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Debts arising out of retail installment transactions;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Loans made by financial institutions in the ordinary course of business;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Loans from a relative; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Land contracts that have been properly recorded with the county clerk or the register of deeds;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(l) The name, address, and occupation or nature of business of any person from whom a gift in the value of more than one hundred dollars was received, a description of the gift and the circumstances of the gift, and the monetary value category of the gift, based on a good faith estimate by the individual, reported in the following categories:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) $100.01 &ndash; $200;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) $200.01 &ndash; $500;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) $500.01 &ndash; $1,000; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) $1,000.01 or more; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(m) An attestation that the individual is not an agent of a foreign principal from an adversary nation or a foreign terrorist organization, as such terms are defined in the Foreign Adversary and Terrorist Agent Registration Act. Such attestation shall be made by checking a box on the form attesting to such fact; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(n) Such other information as the individual or the Commission deems necessary, after notice and hearing, to carry out the purposes of West Virginia Code Chapter 6B.</span></p><p class="cs53FB8D75"><span class="csD4913168">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">Chapter 6d. public contracts.</span></h1>
+	<p class="cs53FB8D75"><span class="csD4913168">&nbsp;</span></p><p class="cs53FB8D75"><span class="csD4913168">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 2. Foreign Adversary Contracting Prohibition Act.</span></h2>
+	<p class="cs53FB8D75"><span class="csD4913168">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;6D-2-1. Foreign adversary contracting.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) For purposes of this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &ldquo;Company&rdquo; means any sole proprietorship, organization, association, corporation, partnership, joint venture, limited partnership, limited liability partnership, limited liability company,</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">or other entity or business association that exists for the purpose of making a profit, including all</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">wholly owned subsidiaries, majority owned subsidiaries, parent companies, or affiliates of any such entity or business association;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &ldquo;Foreign adversary&rdquo; means those countries identified pursuant to the processes in &sect;37-3A-2 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &ldquo;Owned in whole or in part&rdquo; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) For a publicly traded company, any share of ownership that entails the ability to direct or influence the operations of the company, the ability to appoint or discharge any board members, officers, or directors, or any other rights beyond those available to a retail investor holding an equivalent share of ownership; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) For a privately held company, any share of ownership;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Public entity means the state or any department, agency, commission, or other body of state government, including publicly funded institutions of higher education, any political subdivision of the state, and any other public or private agency, person, partnership, corporation, or business entity acting on behalf of any such public entity;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Scrutinized company means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Any company organized under the laws of a foreign adversary or having its principal place of business within a foreign adversary, and any subsidiary of any such company;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Any company owned in whole or in part or operated by the government of a foreign adversary, an entity controlled by the government of a foreign adversary, or any subsidiary or parent of any such company;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Any company that sells to a public entity a final technology related product or service that originates with a company described in subdivision (5)(a) or (b) of this section without incorporating that product or service into another final product or service; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) &quot;Technology-related product or service&quot; means a product or service used for information systems, surveillance, light detection and ranging, or communications article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) &ldquo;Foreign adversarial company&rdquo; means a company that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Is organized under the laws of a foreign adversary;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Is owned in whole or in part, operated, or controlled by the government of a foreign adversary; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Is a subsidiary or parent of any company otherwise described in this section; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) &ldquo;Government of a foreign adversary&rdquo; means any person or group of persons exercising sovereign de facto or de jure political jurisdiction over any foreign adversary country, or over any part of such country, and includes any subdivision of any such group and any group or agency to which such sovereign de facto or de jure authority or functions are directly or indirectly delegated. Such term shall include any faction or body of insurgents within a country assuming to exercise governmental authority whether such faction or body of insurgents has or has not been recognized by the United States. A foreign adversarial company shall be ineligible to receive any benefits under an incentive program of this state. </span></p><p class="cs53FB8D75"><span class="cs7F85AE1E">&nbsp;</span><span class="cs46AE26E6">A foreign adversarial company shall be ineligible to receive any benefits under an incentive program of this state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A public entity shall require a company that submits a bid or proposal or enters into any contract or contract renewal with any public entity for any technology-related product or service to certify:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) That the company is not a scrutinized company;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) That the company will not subcontract with any scrutinized company for any aspect of performance of the contemplated contract; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) That any products or services to be provided do not originate with a scrutinized company.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) (1) No public entity shall enter into any contract or contract renewal that would result in any state or local government funds being transferred:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) To a scrutinized company in connection with any technology-related product or service; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) To any company in connection with any technology-related product or service that originates with a scrutinized company.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Notwithstanding subdivision (1) of this section, a public entity may enter into a contract for goods manufactured by a scrutinized company if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) There is no other reasonable option for procuring such good;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The contract is preapproved by the Department of Administration; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Not procuring such good would pose a greater threat to the state than the threat associated with the good itself; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The purchasing entity is an electric supplier that is not out of compliance with the Critical Infrastructure Protection requirements issued by the North American Electric Reliability Corporation.</span></p><p class="cs53FB8D75"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 15. PUBLIC SAFETY.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 17. Foreign Adversary and Terrorist Agent Registration and Transnational Repression Act.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-1. Title.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Sections 1 to 13 of this act shall be known and may be cited as the &quot;Foreign Adversary and Terrorist Agent Registration Act&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Sections 14 to 20 of this act shall be known and may be cited as the &quot;Transnational Repression Act&quot;.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;</span><span class="csF3C8A5A3">15-17-2. Purpose.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The purpose of the Foreign Adversary and Terrorist Agent Registration Act is to provide public transparency for the political and propaganda activities and influence operations of agents of adversary nations and foreign terror organizations. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-3. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">For purposes of the Foreign Adversary and Terrorist Agent Registration Act:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Adversary nation&quot; means those countries identified pursuant to the processes in &sect;37-3A-2 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Agent of a foreign principal&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Any person who directly, or through any other person, within this state, engages in covered activities and who acts:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) As an agent, representative, employee, or servant, of a foreign principal; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) In any other capacity at the order or request or under the direction or control of a foreign principal or of a person acting for a foreign principal, any of whose activities are directly or indirectly supervised, directed, controlled, financed, or subsidized in whole or in part by a foreign principal; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Any person who agrees, consents, assumes, or purports to act as, or who is or purports to be, whether or not pursuant to a contractual relationship, an agent of a foreign principal as defined in this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Agent of a foreign principal does not include any media entity, solely by virtue of any bona fide news or journalistic activities, including the solicitation or acceptance of advertisements, subscriptions, or other compensation therefor, so long as:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The media entity is at least eighty percent beneficially owned by citizens of the United States; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) At least 50 percent of the officers and directors of the media entity are citizens of the United States; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) The media entity is not owned, directed, supervised, controlled, subsidized, or financed, and none of its policies are determined by any foreign principal or by any agent of a foreign principal required to register under the Foreign Adversary and Terrorist Agent Registration Act;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Covered activities&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Engaging in political activities for, or in the interests of, a foreign principal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Acting as a public relations counsel, publicity agent, information-service employee or political consultant for, or in the interests of, a foreign principal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Soliciting, collecting, disbursing, or dispensing contributions, loans, money, or other things of value for, or in the interests of, a foreign principal; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Representing the interests of such foreign principal before any agency or official of this state or a political subdivision of this state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;False statement of material&quot; fact includes any of the following with respect to a registration statement, a supplement to such statement, or any document filed with or furnished to the Attorney General under the Foreign Adversary and Terrorist Agent Registration Act:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A false statement of material fact;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) An omission of a material fact required to be reported; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) An omission of a material fact or copy of a material document necessary to make the statements made in such statement, supplement, or document that is misleading;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) &quot;Foreign political party&quot; means any organization or any other combination of individuals in a country other than the United States, or any unit or branch thereof, having for an aim or purpose, or which is engaged in any activity devoted in whole or in part to, the establishment, administration, control, or acquisition of administration or control, of a government of a foreign country or a subdivision thereof, or the furtherance or influencing of the political or public interests, policies, or relations of a government of a foreign country or a subdivision thereof;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) &quot;Foreign principal&quot;&rsquo; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A government of a foreign country, any agency, subdivision or instrumentality of such government, or a foreign political party, or any member or subdivision of such party;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A person outside of the United States, unless it is established that such person is an individual and a citizen or permanent resident of and domiciled within the United States, or that such person is not an individual and is organized under or created by the laws of the United States or of any state or other place subject to the jurisdiction of the United States and has its principal place of business within the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A partnership, association, corporation, organization, or other combination of persons organized under the laws of, or having its principal place of business in, a foreign country;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) A partnership, association, corporation, organization, or other combination of persons that is at least 20 percent beneficially owned by a partnership, association, corporation, organization, or other combination of persons organized under the laws of, or having its principal place of business in, a foreign country;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Any person that owns or operates in whole or in part an entity described in subdivision (6)(d) of this section;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Any entity that is owned or operated in whole or in part by a person or entity described in subdivision (6)(a), (b), (c), or (e) of this section; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) A foreign terrorist organization or any member or subdivision of such organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) &quot;Foreign terrorist organization&quot; means an organization included on the list of Designated Foreign Terrorist Organizations (FTOs) as identified by the United States Secretary of State Bureau of Counterterrorism pursuant to Section 219 of the Immigration and Nationality Act 8 U.S.C. 1189, as such section existed on April 1, 2026;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">&quot;Government of a foreign country&quot; means any person or group of persons exercising sovereign de facto or de jure political jurisdiction over any country, other than the United States, or over any part of such country, and includes any subdivision of any such group and any group or agency to which such sovereign de facto or de jure authority or functions are directly or indirectly delegated. Such term shall include any faction or body of insurgents within a country assuming to exercise governmental authority whether such faction or body of insurgents has or has not been recognized by the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">&quot;Information service employee&quot; means any person who is engaged in furnishing, disseminating, or publishing accounts, descriptions, information, or data with respect to the political, industrial, employment, economic, social, cultural, or other benefits, advantages, facts, or conditions of any country other than the United States, any government of a foreign country, any foreign political party, or a partnership, association, corporation, organization, or other combination of individuals organized under the laws of, or having its principal place of business in, a foreign country;	</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) &quot;Media entity&quot; means any:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) News or press service or association organized under the laws of the United States, any state, or any other place subject to the jurisdiction of the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Newspaper, magazine, periodical, or other publication; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Website or application that enables users to create and share content or to participate in social networking;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) &quot;Owned or operated in whole or in part&quot; means that a person has the power, directly or indirectly, whether or not exercised, to determine, direct, or decide important matters affecting an entity, including through:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The ownership of at least twenty percent of the total outstanding voting interest in an entity;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Board representation;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The ability to appoint or discharge any board members, officers, or directors;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Proxy voting, a special share, contractual arrangements, legal obligations, or formal or informal arrangements to act in concert; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Any other means;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) &quot;Person&quot; means an individual, a partnership, an association, a corporation, an organization, or any other entity or combination of individuals;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) &quot;Political activities&quot; means any activity that the person engaging in believes will, or that the person intends to, in any way influence any agency or official of this state or a political subdivision of this state with reference to formulating, adopting, or changing the domestic or foreign policies of the United States or of this state, or the general population, or a subdivision of the population, of the United States or this state, with reference to the political or public interests, policies, or relations of a government of a foreign country or a foreign political party;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(14)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">&quot;Political consultant&quot; means any person who engages in informing or advising any other person with reference to the policies of the United States or this state or the political or public interest, policies, or relations of a foreign country or of a foreign political party;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(15)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">&quot;Political propaganda&quot; means information, especially of a biased or misleading nature, used to promote the political cause or point of view of an adversary nation, a foreign terrorist organization, or a political party associated with an adversary nation or a foreign terrorist organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(16) &quot;Postsecondary educational institution&quot; means any school offering education after high school, providing specialized knowledge, skills, and credentials like certificates, diplomas, or degrees to prepare for careers or further study;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(17)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">&quot;Printed material&quot; means newspapers, periodicals, books, pamphlets, sheet music, visiting cards, address cards, printing proofs, engravings, photographs, pictures, drawings, plans, maps, patterns to be cut out, catalogs, prospectuses, and advertisements; printed, engraved, lithographed, or autographed notices of various kinds; and, in general, all impressions or reproductions obtained on paper or other material assimilable to paper, on parchment or on cardboard, by means of printing, engraving, lithography, autography, or any other easily recognizable mechanical process, with the exception of the copying press, stamps with movable or immovable type, and the typewriter;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(18)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">&quot;Public relations counsel&quot; means any person who engages directly or indirectly in informing, advising, or in any way representing a principal in any public relations matter pertaining to political or public interests, policies, or relations of such principal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(19)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">&quot;Publicity agent&quot; means any person who engages directly or indirectly in the publication or dissemination of oral, visual, graphic, written, or pictorial information or matter of any kind, including publication by means of advertising, books, periodicals, newspapers, lectures, broadcasts, motion pictures, or otherwise;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(20)</span><span class="cs7F85AE1E"> </span><span class="cs46AE26E6">&quot;Registration statement&quot; means the registration statement required to be filed with the Attorney General under section 4 of this act, and any supplements to such statement required to be filed under such section, and includes all documents and papers required to be filed with, or in amendment to, such statement or supplements, whether attached or incorporated by reference; and expenditures.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-4. Registration.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) No person shall act as an agent of a foreign principal from an adversary nation or a foreign terrorist organization unless such person has filed with the Attorney General a true and complete registration statement and supplements to such statement as required by this section or unless such person is exempt from registration under the Foreign Adversary and Terrorist Agent Registration Act. Except as otherwise provided under the act, every person who becomes an agent of a foreign principal from an adversary nation or a foreign terrorist organization shall, within ten days thereafter, file with the Attorney General, in duplicate, a registration statement, under oath on a form prescribed by the Attorney General. The obligation of such an agent to file a registration statement shall, after the tenth day of such person becoming such an agent, continue from day to day, and termination of such status shall not relieve such agent from the obligation to file a registration statement for the period during which such agent was an agent of a foreign principal from an adversary nation or a foreign terrorist organization. The registration statement shall include the following, which shall be regarded as material for the purposes of this subsection:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The registrant&rsquo;s name, principal business address, and all other business addresses in the United States or elsewhere, and all residence addresses, if any;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The status of the registrant, including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) If an individual, such individual&rsquo;s citizenship;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) If a partnership, the name, residence addresses, and citizenship of each partner and a true and complete copy of its partnership agreement;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) If an association, corporation, organization, or any other combination of individuals, the name, residence addresses, and citizenship of each director and officer and of each person performing the functions of a director or officer and a true and complete copy of its charter, articles of incorporation, association, constitution, operating agreement, certificate of organization, articles of organization, and bylaws and any amendments thereto; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) A copy of every other instrument or document and a statement of the terms and conditions of every oral agreement relating to the registrant&rsquo;s organization, powers, and purposes, and a statement of ownership and control;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) (A) A comprehensive statement of the nature of the registrant&rsquo;s business;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A complete list of the registrant&rsquo;s employees and a statement of the nature of the work of each;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The name and address of every foreign principal from an adversary nation or a foreign terrorist organization for whom the registrant is acting, assuming or purporting to act, or has agreed to act;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The character of the business or other activities of every such foreign principal from an adversary nation or a foreign terrorist organization, and, if any such principal is not an individual, a statement of the ownership and control of each; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) The extent, if any, to which each such foreign principal from an adversary nation or a foreign terrorist organization is supervised, directed, owned, controlled, financed, or subsidized, in whole or in part, by any government of a foreign country or foreign political party, or by any other foreign principal from an adversary nation or a foreign terrorist organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4)(A) Copies of each written agreement and the terms and conditions of each oral agreement, including all modifications of such agreements, or, if no agreement exists, a full statement of all the circumstances, by reason of which the registrant is an agent of a foreign principal from an adversary nation or a foreign terrorist organization; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A comprehensive statement of the nature and method of performance of each such agreement, and of the existing and proposed activity or activities engaged in or to be engaged in by the registrant as agent of a foreign principal from an adversary nation or a foreign terrorist organization for each such principal, including a detailed statement of any such activity that is a political activity;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The nature and amount of any contributions, income, money, or thing of value that the registrant has received within the preceding six months from each such foreign principal from an adversary nation or a foreign terrorist organization, either as compensation or for disbursement or otherwise, and the form and time of each such payment and from whom received;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) (A) A detailed statement of every activity that the registrant is performing, assuming or purporting to perform, directing others to perform, or has agreed to perform for the registrant or for any person other than a foreign principal from an adversary nation or a foreign terrorist organization and that requires registration under this section, including a detailed statement of any such activity that is a political activity;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The name, business, and residence addresses, and if an individual, such individual&rsquo;s citizenship, of any such other person;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The extent to which each such other person is supervised, directed, owned, controlled, financed, or subsidized, in whole or in part, by any government of a foreign country or foreign political party, or by any other foreign principal from an adversary nation or a foreign terrorist organization; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The nature and amount of contributions, income, money, or thing of value, if any, that the registrant has received during the preceding six months from each such other person in connection with any of the activities referred to in subdivision (1)(f)(i) of this section, either as compensation or for disbursement or otherwise, and the form and time of each such payment and from whom received;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7)(A) A detailed statement of the money and other things of value spent or disposed of by the registrant during the preceding six months in furtherance of or in connection with activities that require registration under this section and that have been undertaken by the registrant either as an agent of a foreign principal from an adversary nation or a foreign terrorist organization, for the registrant, or for any other person or in connection with any activities relating to the registrant becoming an agent of such principal; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A detailed statement of any contributions of money or other things of value made by the registrant during the preceding six months, other than contributions prohibited under 52 U.S.C. 30121, as such section existed on April 1, 2026, in connection with an election to any political office or in connection with any primary election, convention, or caucus held to select candidates for any political office;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Copies of each written agreement and the terms and conditions of each oral agreement, including all modifications of such agreements, or, if no agreement exists, a full statement of all the circumstances, by reason of which the registrant is performing, assuming or purporting to perform, directing others to perform, or has agreed to perform for the registrant, for a foreign principal from an adversary nation or a foreign terrorist organization, or for any other person, any activities that require registration under this section;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Such other statements, information, or documents pertinent to the purposes of this subsection as the West Virginia Attorney General, having due regard for the national security and the public interest, may from time to time require; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Such further statements and such further copies of documents as are necessary to make the statements made in the registration statement and supplements to such statement, and the copies of documents furnished therewith, not misleading.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Every agent of a foreign principal from an adversary nation or a foreign terrorist organization who has filed a registration statement required by subsection of this section shall, within thirty days after the expiration of each period of six months succeeding such filing, file with the Attorney General a supplement to such statement under oath, on a form prescribed by the Attorney General. Such statement shall set forth, with respect to such preceding six-month period, such facts as the Attorney General, having due regard for the national security and the public interest, deems necessary to make the information required under this section accurate, complete, and current with respect to such six-month period. In connection with the information furnished under subsections (a)(3), (a)(4), (a)(6)(A), and (a) (8) of this section, the registrant shall give notice to the Attorney General of any change therein within ten days after such change occurs. If the Attorney General, having due regard for the national security and the public interest, determines that it is necessary to carry out the purposes of the Foreign Adversary and Terrorist Agent Registration Act, the Attorney General may, in any particular case, require supplements to the registration statement to be filed at more frequent intervals with respect to all or particular items of information to be furnished.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The registration statement and supplements to such statement shall be executed under oath as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) If the registrant is an individual, by such individual;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If the registrant is a partnership, by the majority of the partners thereof; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) If the registrant is a person other than an individual or a partnership, by a majority of the officers thereof or persons performing the functions of officers or by a majority of the board of directors thereof or persons performing the functions of directors, if any.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The fact that a registration statement or supplement has been filed shall not:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Necessarily be deemed full compliance with the Foreign Adversary and Terrorist Agent Registration Act and the rules and regulations adopted and promulgated under the act on the part of the registrant;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Indicate that the Attorney General has in any way passed judgement upon the merits of such statement or supplement; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Preclude liability for willfully:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Failing to file a registration statement or supplement when due; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Making a false statement of a material fact in such statement, supplement, or any other document filed with or furnished to the Attorney General under the Foreign Adversary and Terrorist Agent Registration Act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) If any agent of a foreign principal required to register under the Foreign Adversary and Terrorist Agent Registration Act has previously registered with the Attorney General under the act, the Attorney General, in order to eliminate inappropriate duplication, may permit the incorporation by reference in the registration statement or supplements of any information or documents previously filed by such agent.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-5. Exceptions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) &sect;15-17-4 of this code shall not apply to the following agents of foreign principals:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A duly accredited diplomatic or consular officer of a foreign government who is so recognized by the United States Department of State, while such officer is engaged exclusively in activities that are recognized by the United States Department of State as being within the scope of the functions of such officer;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any official of a foreign government, if such government is recognized by the United States, who is not a public relations counsel, publicity agent, information service employee, or a citizen of the United States, whose name and status and the character of whose duties as such official are of public record in the United States Department of State, while such official is engaged exclusively in activities that are recognized by the United States Department of State as being within the scope of the functions of such official;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any foreign member of the staff of, or any person employed by, a duly accredited diplomatic or consular officer of a foreign government who is so recognized by the United States Department of State, other than a public relations counsel, publicity agent, or information service employee, whose name and status and the character of whose duties as such member or employee are of public record in the United States Department of State, while such member or employee is engaged exclusively in the performance of activities that are recognized by the United States Department of State as being within the scope of the functions of such member or employee;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Any person qualified to practice law in this state, insofar as such person engages or agrees to engage only in the legal representation of a foreign principal from an adversary nation or a foreign terrorist organization before any state or federal court or agency or any agency of a political subdivision of this state, except that for the purposes of the Foreign Adversary and Terrorist Agent Registration Act, legal representation does not include political activities or attempts to influence or persuade agency personnel or officials other than in the course of judicial proceedings, criminal or civil law enforcement inquiries, investigations, or proceedings, or agency proceedings required by statute or regulation to be conducted on the record; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Any person who advocates on behalf of an individual for individualized legal immigration relief.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) No person acting as an agent of a foreign principal from an adversary nation or a foreign terrorist organization shall subcontract for services for activities regulated under the Foreign Adversary and Terrorist Agent Registration Act requiring registration as an agent of a foreign principal, or otherwise induce another person to carry out activities that are so regulated under the act unless such person fully informs all parties of their status as such an agent. The requirements of this subsection apply to any person carrying out services or activities regulated under the act requiring registration as an agent of a foreign principal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-6. Foreign agent or principal.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Every person in West Virginia who is an agent of a foreign principal from an adversary nation or a foreign terrorist organization and who is required to register under the Foreign Adversary and Terrorist Agent Registration Act and who transmits or causes to be transmitted in the United States mail, through digital communication, or by any means or instrumentality of interstate or foreign commerce any informational materials for, or in the interests of, such foreign principal in the form of printed material &nbsp;or in any other form that is reasonably adapted to being, that such person believes will be, or that such person intends to be, disseminated or circulated among two or more persons shall, not later than 48 hours after the beginning of the transmittal thereof, file with the Attorney General two copies thereof.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) It shall be unlawful for any person in West Virginia who is an agent of a foreign principal from an adversary nation or a foreign terrorist organization and required to register under the Foreign Adversary and Terrorist Agent Registration Act to transmit or cause to be transmitted in the United States mail, through digital communication, or by any means or instrumentality of interstate or foreign commerce any informational materials for, or in the interests of, such foreign principal without placing in such informational materials a conspicuous statement that the materials are distributed by the agent on behalf of such foreign principal, and that additional information is on file with the Attorney General. The Attorney General may by rule and regulation define what constitutes a conspicuous statement for the purposes of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The copies of informational materials required by this section to be filed with the Attorney General shall be available for public inspection under such rules and regulations as the Attorney General may adopt and promulgate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) It shall be unlawful for any person who is an agent of a foreign principal from an adversary nation or a foreign terrorist organization required to register under the Foreign Adversary and Terrorist Agent Registration Act to transmit, convey, or otherwise furnish to any agency or official of the state, including any agency or official of a political subdivision of the state, for or in the interests of such foreign principal, any political propaganda, or to request from any such agency or official for, or in the interests of, such foreign principal, any information or advice with respect to any matter pertaining to the political or public interests, policies, or relations of an adversary nation, a foreign terrorist organization, or a political party from an adversary nation or a foreign terrorist organization, or pertaining to the foreign or domestic policies of the United States or this state, unless the propaganda or the request is prefaced or accompanied by a true and accurate statement to the effect that such person is registered as an agent of such foreign principal under the Foreign Adversary and Terrorist Agent Registration Act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Whenever any agent of a foreign principal from an adversary nation or a foreign terrorist organization required to register under the Foreign Adversary and Terrorist Agent Registration Act appears before any committee of the Legislature or a local government to testify for, or in the interests of, such foreign principal, such agent shall, at the time of such appearance, furnish the committee with a copy of such agent&rsquo;s most recent registration statement filed with the Attorney General for inclusion in the records of the committee as part of such agent&rsquo;s testimony. &nbsp;Such agent shall also state at the beginning of any testimony or interaction with any government official of this state in a voice sufficiently loud enough for all in the area to hear &quot;I, (state their name), am a Lobbyist for (full name of the foreign adversary).&quot;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-7. Record retention.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Every person who is an agent of a foreign principal from an adversary nation or a foreign terrorist organization registered under the Foreign Adversary and Terrorist Agent Registration Act shall keep, maintain and preserve, while such person is such an agent, such books of account and other records with respect to all activities, the disclosure of which is required under the act, in accordance with such business and accounting practices, as the Attorney General, having due regard for the national security and the public interest, may by rule and regulation require as necessary or appropriate for the enforcement of the act and shall preserve such records for a period of five years following the termination of such status. Until rules and regulations are in effect under this section, every agent of a foreign principal from an adversary nation or a foreign terrorist organization shall keep books of account and shall preserve all written records with respect to such agent&rsquo;s activities. Such books and records shall be open at all reasonable times to the inspection of any official charged with the enforcement of the act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) No person shall willfully</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Conceal, destroy, obliterate, mutilate, or falsify, any book or record that is required to be kept under the act,</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Attempt such conduct, or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Cause such conduct to be done.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-8. Duties of the Attorney General.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Attorney General shall retain in permanent form one copy of each registration statement furnished under the Foreign Adversary and Terrorist Agent Registration Act, and such statement shall be a public record and open to public examination and inspection at such reasonable hours, under such rules and regulations as the Attorney General may adopt and promulgate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Attorney General shall, upon receipt, promptly transmit one copy of any registration statement filed, and one copy of every amendment or supplement to such statement filed, to the United States Secretary of State for such comment and use as the secretary may determine to be appropriate from the point of view of the foreign relations of the United States. Failure of the Attorney General to transmit such copy shall not be a bar to prosecution under the Foreign Adversary and Terrorist Agent Registration Act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Attorney General may furnish information obtained by the Attorney General in the administration of the act to state and federal agencies and to committees of the Legislature. The Attorney General may furnish such information as may be appropriate in light of the purposes of the act. This includes, but is not limited to, the names of registrants under the act, copies of registration statements, or parts thereof, and other documents or information filed under the act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The Attorney General shall annually report to the Legislature concerning administration of the Foreign Adversary and Terrorist Agent Registration Act, including registrations filed pursuant to the act, and the nature, sources, and content of political propaganda disseminated and distributed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Every six months, the Attorney General shall post a report on the portal described in the section of this act concerning administration of the Foreign Adversary and Terrorist Agent Registration Act, including registrations filed pursuant to the act, and the nature, sources, and content of political propaganda disseminated and distributed.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-9. Supplemental registration.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">For an agent of a foreign principal from an adversary nation or a foreign terrorist organization that is not an individual, each officer or director of such agent or person performing the functions of an officer or a director shall cause such agent to execute and file a registration statement and supplements to such statement as and when such filing is required under section 4 of this act and shall also cause such agent to comply with sections 6 and 7 of this act and all other requirements of the Foreign Adversary and Terrorist Agent Registration Act. Dissolution of any organization acting as an agent of a foreign principal from an adversary nation or a foreign terrorist organization shall not relieve any such agent from complying with this section. In case of the failure of any such agent to comply with any of the requirements of the act, each of such agent&rsquo;s officers, directors, or persons performing the functions of officers or directors shall be subject to prosecution under the act.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-10. Penalties.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A person shall not:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Willfully violate any provision of the Foreign Adversary Terrorist Agent Registration Act or any rule or regulation under the act; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;(2) Willfully make a false statement of a material fact in any registration statement, supplement to such statement, or any other document filed with or furnished to the Attorney General under the act. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;(b) A person who violates this section shall be fined not less than $10,000 nor more than $50,000 and confined in a state correctional facility for not less than one year nor more than three years. Foreign nationals who violate this section are subject to deportation. All penalties collected under this section shall be remitted to the State Treasurer for distribution in accordance with the relevant section of the West Virginia Constitution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;(c) If a person found to be in violation of subsection (a) of this section is a student, a faculty member, a researcher, or an adjunct or is otherwise employed by or associated with a postsecondary educational institution, such person may be expelled or dismissed from any role with any postsecondary educational institution in this state and may be prohibited from entering</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">any campus of such an institution in West Virginia. It shall be the purview of the postsecondary educational institution to establish additional appropriate responses to violations of subsection (a) of this section, in addition to penalties prescribed in subsection (a) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Each postsecondary educational institution in West Virginia shall adopt a policy regarding any permanent expulsion and dismissal of persons found to be in violation of subsection (a) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Failure to file any registration statement or supplements to such statement as required by section 4 of this act shall be considered a continuing violation for as long as such failure exists, notwithstanding any statute of limitation or other statute to the contrary.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Whenever, in the judgment of the Attorney General, any person has engaged in any act or practice that constitutes a violation of the Foreign Adversary and Terrorist Agent Registration Act or any rule or regulation under the act, the Attorney General may apply to the circuit court for an order enjoining such acts or practices or for an order directing compliance. Upon a showing by the Attorney General that such person has engaged in any such acts or practices, the court may issue a temporary or permanent injunction, restraining order, or such other order that it may deem proper.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) If the Attorney General determines that a registration statement does not comply with the requirements of the Foreign Adversary and Terrorist Agent Registration Act or the rules and regulations adopted and promulgated under the act, the Attorney General shall notify the registrant in writing, specifying in what respects the statement is deficient. No person shall act as an agent of a foreign principal from an adversary nation or a foreign terrorist organization at any time ten days or more after receipt of such notification without filing an amended registration statement in full compliance with the requirements of the act and the rules and regulations adopted and promulgated under the act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) It shall be unlawful for any agent of a foreign principal from an adversary nation or a foreign terrorist organization required to register under the Foreign Adversary and Terrorist Agent Registration Act to be a party to any contract, agreement, or understanding, either express or implied, with such foreign principal pursuant to which the amount or payment of the compensation, fee, or other remuneration of such agent is contingent, in whole or in part, upon the success of any political activities carried on by such agent.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;</span><span class="csF3C8A5A3">15-17-11. Businesses and non-profit organizations.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) All businesses and nonprofit organizations operating within West Virginia shall attest that they are cognizant of and in compliance with the Foreign Adversary and Terrorist Agent Registration Act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The attestation required by this section shall be filed as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) For a domestic or foreign limited liability company, the attestation shall be included in the biennial report in each odd-numbered year under the relevant section of the relevant statute;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) For a domestic or foreign corporation subject to the West Virginia Business Corporation Act or other relevant Act, the attestation shall be included in the biennial report in each even-numbered year under the relevant section of the relevant statute;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) For a domestic or foreign nonprofit corporation, the attestation shall be included in the biennial report in each odd-numbered year under the relevant section of the relevant statute;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) For a domestic or foreign limited liability partnership, the attestation shall be included in the annual report under the relevant section of the relevant statute;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) For banking, insurance, and building and loan association corporations paying fees and making reports to the West Virginia Insurance Commissioner or the West Virginia Commissioner of Financial Institutions, the attestation shall be included on a report filed with the Insurance Commissioner or the Commissioner of Financial Institutions. Each Commissioner shall determine the frequency with which such reports must be filed but shall not require a report to be filed more frequently than on an annual basis; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) For any other business or nonprofit organization not described in subdivisions (b)(1) through (5) of this section, the attestation shall be included on the annual or biennial report</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">submitted to the West Virginia Secretary of State as required by the organic law of the business or nonprofit organization.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Attorney General shall develop the attestation required by this section in consultation with the Secretary of State.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The Secretary of State may adopt and promulgate rules and regulations to carry out this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) An unincorporated entity that is of a type that is not created by filing a public organic document with the Secretary of State is exempt from this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-12. Portal.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) In order to increase public transparency, the Attorney General shall provide information about agents of foreign principals registered in West Virginia on a portal of the Attorney General&rsquo;s website. The portal shall contain the information about each registrant and each registrant&rsquo;s activities within West Virginia.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Attorney General may exchange data with government officials in other states and the federal government in order to increase the transparency and registration compliance of foreign principals from adversary nations or foreign terrorist organizations that operate in multiple states.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-13. Rules.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) In order to ensure compliance with the Foreign Adversary and Terrorist Agent Registration Act, if the Attorney General has reasonable cause to believe that any person has engaged in or is engaging in any act or practice in violation of the Foreign Adversary and Terrorist Agent Registration Act, the Attorney General shall have the power to issue civil investigative demands to persons suspected of being agents of foreign principals from adversary nations or foreign terrorist organizations.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Attorney General may adopt and promulgate rules and regulations to carry out the act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) In conducting investigations of potential violations of the Foreign Adversary and Terrorist Agent Registration Act and in enforcing the act, the Attorney General shall not infringe upon the protections set forth in the Personal Privacy Protection Act. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-14. Purpose.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The purpose of the Transnational Repression Act is to counter the threat and practice of transnational repression committed by foreign governments or foreign terrorist organizations against the citizens and residents of this state, and to counter the threat and practice of foreign government interstate harassment through extranational enforcement of foreign government laws and directives.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-15. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) For purposes of the Transnational Repression Act:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Agent of a foreign principal&quot; means an agent directed or controlled by a foreign principal, or the proxies of such agent;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Foreign adversary&quot; means those countries identified pursuant to the processes in &sect;37-3A-2 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Foreign political party&quot; has the same meaning as in the Foreign Adversary and Terrorist Agent Registration Act;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Foreign principal&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The government of a foreign country or any official or subdivision of such government;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A foreign political party or any member or subdivision of such party;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A foreign terrorist organization or any member or subdivision of such organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) A partnership, association, corporation, organization, or other combination of persons that is:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Organized under the laws of, or has its principal place of business in, a foreign adversary, or a subsidiary of such entity; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Owned or controlled wholly or in part by any person or combination of persons of a foreign adversary or foreign terrorist organization; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Any entity that is owned or controlled in whole or in part by a person or entity described in subdivision (4)(A), (B), (C), or (D) of this section;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) &quot;Foreign terrorist organization&quot; has the same meaning as in the Foreign Adversary and Terrorist Agent Registration Act;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) &quot;Government of a foreign country&quot; has the same meaning as in the Foreign Adversary and Terrorist Agent Registration Act; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Transnational repression includes actions and behaviors emanating from or attributable to a foreign principal committed by an agent of such foreign principal, acting outside or within the foreign principal&rsquo;s territory, with the intention of harassing, intimidating, censoring, or otherwise extending such principal&rsquo;s ability to influence, control, or impose such principal&rsquo;s preferences on the behavior of individuals outside of the principal&rsquo;s territory or jurisdiction. Such actions and behaviors include direct and indirect methods, including physical contact, threats, electronic targeting, actual or credible threats of collective punishment or harassment of individuals under the principal&rsquo;s effective control, financial coercion, abuse of administrative processes, selective prosecution of laws of general application, or the use or direction of social media and telecommunications entities. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-16 Crimes.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">For purposes of this section:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Covered offense&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Assault in the first degree;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Assault in the second degree;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Assault in the third degree;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Terroristic threats;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Stalking;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Violation of a harassment protection order;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) False imprisonment in the first degree;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) False imprisonment in the second degree; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) Attempt, conspiracy, solicitation, being an accessory to, aiding and abetting, aiding the consummation of, or compounding a felony with any of the other offenses in subdivision (a)(1) of this section as the underlying offense.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Protected conduct&quot; means conduct that is lawful under local, state, and federal law and consists of:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The free exercise of religion;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Speech, orally or in writing in print or digital form, on a matter of public interest or concern;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Petitioning any local, state, or federal government entity for redress of grievances; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Peaceably assembling.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any person who commits a covered offense shall be punished by the imposition of the next higher penalty classification than the penalty classification prescribed for the covered offense if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The person committing the offense is an agent of a foreign principal who acts knowingly at the direction of, on behalf of, or under the influence of such foreign principal; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The person committed the offense with the intent to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Coerce another person to act on behalf of a foreign principal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Coerce another person to leave the United States or cause another person to leave the United States;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) Cause another person to forebear from engaging in protected conduct; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) Retaliate against another person for engaging in protected conduct.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) If an offense is punishable as a misdemeanor, the enhanced penalty under this section is a felony.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The allegations supporting an enhancement under this section shall be set forth in the indictment or information, and it shall be the burden of the prosecuting attorney to prove such allegations beyond a reasonable doubt to the judge or jury in the state&rsquo;s case in chief.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-17. Legal standard.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A person commits an offense if, while acting as the agent of a foreign principal, such person:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Intentionally engages in the prevention, detection, investigation, monitoring, surveilling, or prosecution of an offense under the law or rule of a government of a foreign country or a foreign terrorist organization at the direction of such foreign principal, government, or organization; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Such person acts without the knowledge and approval of the appropriate state or federal law enforcement agency of the United States.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A violation of this section is a felony.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-18. Reporting.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The West Virginia State Police may prepare or commission an empirical and qualitative report on the threat of transnational repression in West Virginia and electronically submit such report to the Legislature. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-19. Repression recognition and response training.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The West Virginia State Police may develop transnational repression recognition and response training. The training may be regularly updated to address emerging threats and specific information on tactics used by specific foreign principals.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Such training may include:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) How to identify different tactics of transnational repression in physical and nonphysical forms;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Those foreign principals that are known to employ transnational repression, including not only those who use it most frequently, but also those who use it most egregiously, including, but not limited to, tools of digital surveillance and other Internet-based tools frequently used to carry out transnational repression activities;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Best practices for appropriate local and state law enforcement prevention, reporting, and response tactics; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Information about communities targeted by transnational repression and propaganda that may be perpetuated by foreign principals.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;15-17-20. Website to report transnational repression.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The West Virginia State Police may develop a centralized and convenient website that allows members of the public to report instances of transnational repression. The website may include options for reporting in commonly spoken languages, including particularly languages of communities affected more frequently by transnational repression.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The State Police may conduct a public awareness campaign to inform the public:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) How to identify and report instances of transnational repression;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) How to use the website created under this section; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) What tools and remedies are available for victims of transnational repression.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The State Police may electronically submit reports to the Legislature concerning complaints received on the website, outcomes of such complaints, and any instances of interference by foreign principals in the reporting process.</span></p><p class="csDCDA41A9"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create the Foreign Adversary Contracting Prohibition Act, the Foreign Adversary and Terrorist Registration Act and the Transnational Repression Act, and to clarify application requirements to become a lobbyist.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

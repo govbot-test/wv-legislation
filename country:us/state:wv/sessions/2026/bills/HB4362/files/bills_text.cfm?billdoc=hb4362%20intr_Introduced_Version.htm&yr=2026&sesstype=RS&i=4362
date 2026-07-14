@@ -1,0 +1,565 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4362 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4362">&laquo; House Bill 4362 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4362'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4362 - Relating generally to the Municipal Bond Commission governance&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4362+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4362"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csFCE4DED{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: line-through;}
+		.csF5B7C975{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs1A31708{color:#1F1F1F;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csF96CDBB6{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4362</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegate Riley</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 15, 2026; referred to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;5F-2-1, &sect;11B-1-2, &sect;13-3-3, &sect;13-3-6, and &sect;13-3-7 of the Code of West Virginia, 1931, as amended, to amend said code by adding a new section, designated &sect;12-6A-8, relating generally to the Municipal Bond Commission governance; designating the State Treasurer as chairman of the commission; requiring the State Treasurer to provide office space and staff to support the commission; increasing the per diem rate for members of the commission; requiring the commission to produce quarterly financial statements; requiring the commission to undergo an annual audit; providing for an exemption from state purchasing; permitting the commission to conduct business via video conferencing; authorizing the commission to enter into any existing contracts or agreements with financial institutions; removing obsolete language; and making technical corrections.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5F. REORGANIZATION OF THE EXECUTIVE BRANCH OF STATE GOVERNMENT.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. TRANSFER OF AGENCIES AND BOARDS.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5F-2-1. Transfer and incorporation of agencies and boards; funds.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are incorporated in and administered as a part of the Department of Administration:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Public Employees Insurance Agency provided in &sect;5-16-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Governor&#39;s Mansion Advisory Committee provided in &sect;5A-5-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Commission on Uniform State Laws provided in &sect;29-1A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) West Virginia Public Employees Grievance Board provided in &sect;6C-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Board of Risk and Insurance Management provided in &sect;29-12-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Boundary Commission provided in &sect;29-23-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Public Defender Services provided in &sect;29-21-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Division of Personnel provided in &sect;29-6-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) West Virginia Ethics Commission provided in &sect;6B-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Consolidated Public Retirement Board provided in &sect;5-10D-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Real Estate Division provided in &sect;5A-10-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are incorporated in and administered as a part of the Department of Commerce:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Division of Labor provided in &sect;21-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, which includes the Board of Manufactured Housing Construction and Safety provided in &sect;21-9-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Office of Miners&#39; Health, Safety, and Training provided in &sect;22A-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. The Board of Coal Mine Health and Safety and the Coal Mine Safety and Technical Review Committee provided in &sect;22A-6-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code are transferred to the Office of Miners&#39; Health, Safety, and Training for purposes of administrative support and liaison with the Office of the Governor.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Division of Natural Resources and Natural Resources Commission provided in &sect;20-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Division of Forestry provided in &sect;19-1A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Geological and Economic Survey provided in &sect;29-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Workforce West Virginia provided in chapter 21A of this code, which includes:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Division of Unemployment Compensation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Division of Employment Service;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Division of Workforce Development;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Division of Research, Information and Analysis; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Division of Rehabilitation Services provided in &sect;18-10A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Division of Economic Development provided in &sect;5B-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, which includes:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Office of Broadband provided for in 31G-1A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">.;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Small Business Development Center provided for in &sect;12-1A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">.; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The Office of Energy provided for in &sect;5B-2F-2 of this code. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The Economic Development Authority provided in &sect;31-15-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code is continued as an independent agency within the executive branch.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The Water Development Authority and the Water Development Authority Board provided in &sect;22C-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code is continued as an independent agency within the executive branch.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The West Virginia Educational Broadcasting Commission provided in &sect;10-5-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code is continued as a separate agency within the Department of Tourism, which shall provide administrative support for the authority.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The following agencies and boards, including all of the allied, advisory, and affiliated entities, are transferred to the Department of Environmental Protection for purposes of administrative support and liaison with the Office of the Governor:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Air Quality Board provided in &sect;22B-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Solid Waste Management Board provided in &sect;22C-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Environmental Quality Board, or its successor board, provided in &sect;22B-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Surface Mine Board provided in &sect;22B-4-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Shallow Gas Well Review Board provided in &sect;22C-8-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Oil and Gas Conservation Commission provided in &sect;22C-9-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Subject to the provisions of &sect;5F-2-1a of this code, the following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are incorporated in and administered as a part of the Department of Health:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Human Rights Commission provided in &sect;5-11-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Bureau for Public Health provided in &sect;16-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Office of Emergency Medical Services and the Emergency Medical Service Advisory Council provided in &sect;16-4C-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Health Care Authority provided in &sect;16-29B-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The Developmental Disabilities Council established by Executive Order No. 6-88 and continued by Executive Order No. 15-99.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Subject to the provisions of &sect;5F-2-1a of this code, the following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are incorporated in, and administered as a part of, the Department of Human Services:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Women&#39;s Commission provided in &sect;29-20-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Bureau for Child Support Enforcement provided in &sect;48-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are incorporated in and administered as a part of the Department of Homeland Security:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) West Virginia State Police; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Division of Emergency Management provided in &sect;15-5-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code and Emergency Response Commission provided in &sect;15-5A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That notwithstanding any other provision of this code to the contrary, whenever in this code, or a rule promulgated thereunder, a reference is made to the Division of Homeland Security and Emergency Management, it shall be construed to mean the Division of Emergency Management;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Division of Administrative Services; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Division of Corrections and Rehabilitation; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Fire Commission; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) State Fire Marshal; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Board of Probation and Parole; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The West Virginia Fusion Center;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Division of Protective Services; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Any other agency or entity hereinafter established within the Department of Homeland Security by an act of the Legislature.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are incorporated in and administered as a part of the Department of Revenue:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Tax Division provided in &sect;11-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Racing Commission provided in &sect;19-23-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Lottery Commission and position of Lottery Director provided in &sect;29-22-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Insurance Commissioner provided in &sect;33-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) West Virginia Alcohol Beverage Control Commissioner provided in &sect;11-16-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code and &sect;60-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Board of Banking and Financial Institutions provided in &sect;31A-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Lending and Credit Rate Board provided in &sect;47A-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Division of Financial Institutions provided in &sect;31A-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) The State Budget Office provided in &sect;11B-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(10) The Municipal Bond Commission provided in &sect;13-3-1 </span><span class="csB65271">et seq</span><span class="cs68EFC440">. of this code;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(11)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(10)</span><span class="csEF05ACC"> The Office of Tax Appeals provided in &sect;11-10A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(12)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(11)</span><span class="csEF05ACC"> The State Athletic Commission provided in &sect;29-5A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp; (k) The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are incorporated in and administered as a part of the Department of Transportation:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Division of Highways provided in &sect;17-2A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Parkways Authority provided in &sect;17-16A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Division of Motor Vehicles provided in &sect;17A-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Driver&#39;s Licensing Advisory Board provided in &sect;17B-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Division of Multimodal Transportation Facilities provided in &sect;17-16F-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) Effective July 1, 2011, the Veterans&#39; Council provided in &sect;9A-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, including all of the allied, advisory, affiliated, or related entities and funds associated with it, is incorporated in and administered as a part of the Department of Veterans&#39; Assistance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) Except for powers, authority, and duties that have been delegated to the secretaries of the departments by &sect;5F-2-2 of this code, the position of administrator and the powers, authority, and duties of each administrator and agency are not affected by the enactment of this chapter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) Except for powers, authority, and duties that have been delegated to the secretaries of the departments by &sect;5F-2-2 of this code, the existence, powers, authority, and duties of boards and the membership, terms, and qualifications of members of the boards are not affected by the enactment of this chapter. All boards that are appellate bodies or are independent decision makers may not have their appellate or independent decision-making status affected by the enactment of this chapter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o) Any department previously transferred to and incorporated in a department by prior enactment of this section means a division of the appropriate department. Wherever reference is made to any department transferred to and incorporated in a department created in &sect;5F-1-2 of this code, the reference means a division of the appropriate department and any reference to a division of a department so transferred and incorporated means a section of the appropriate division of the department.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) When an agency, board, or commission is transferred under a bureau or agency other than a department headed by a secretary pursuant to this section, that transfer is solely for purposes of administrative support and liaison with the Office of the Governor, a department secretary, or a bureau. Nothing in this section extends the powers of department secretaries under &sect;5F-2-2 of this code to any person other than a department secretary and nothing limits or abridges the statutory powers and duties of statutory commissioners or officers pursuant to this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(q) The Department of Economic Development as established in &sect;5B-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code is continued as a division of the Department of Commerce. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(r) The Department of Tourism as established in &sect;5B-2I-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code is continued as a separate independent agency within the Executive Branch, which includes the following sections and commissions listed under &sect;29-1-1 of this code: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The Arts Section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Archives and History Section; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The Museums Section; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The Historic Preservation Section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The State Library Section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The National Coal Heritage Area Commission; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The Administrative Section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The Educational Broadcasting Commission; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) A Commission on the Arts;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) A Commission on Archives and History; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) A Library Commission; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) An Educational Broadcasting Council.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 11B. DEPARTMENT OF REVENUE.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. DEPARTMENT OF REVENUE.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;11B-1-2. Agencies, boards, commissions, divisions and offices comprising the department of </span><span class="csFCE4DED">finance and</span><span class="csB9803513"> revenue.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) There shall be in the Department of Revenue the following agencies, boards, commissions, divisions and offices, including all of the allied, advisory, affiliated or related entities which are incorporated in and shall be administered as part of the Department of Revenue:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The Alcohol Beverage Control Commissioner provided for in article sixteen, chapter eleven of this code and article one, chapter sixty of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Division of Banking provided for in article two, chapter thirty-one-a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The board of banking and financial institutions provided for in article three, chapter thirty-one-a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The state budget office</span><span class="cs68EFC440">, heretofore known as the budget section of the Finance Division, Department of Administration, previously provided for in article two, chapter five-a of this code and now</span><span class="csEF05ACC"> provided for in article two of this chapter;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The agency of Insurance Commissioner provided for in article two, chapter thirty-three of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The lending and credit rate board provided for in chapter forty-seven-a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The Lottery Commission and the position of lottery director provided for in article twenty-two, chapter twenty-nine of this code;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(8) The Municipal Bond Commission provided for in article three, chapter thirteen of this code;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(9)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(8)</span><span class="csEF05ACC"> The office of tax appeals provided for in article ten-a, chapter eleven of this code;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(10)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(9)</span><span class="csEF05ACC"> The state athletic commission provided for in article five-a, chapter twenty-nine of this code;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(11)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(10)</span><span class="csEF05ACC"> The Tax Division provided for in article one, chapter eleven of this code; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(12)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(11)</span><span class="csEF05ACC"> The West Virginia Racing Commission provided for in article twenty-three, chapter nineteen of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The department shall also include any other agency, board, commission, division, office or unit subsequently incorporated in the department by the Legislature.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 12. PUBLIC MONEYS AND SECURITIES.</span></h1>
+	<h4 class="cs89687900">
+		<span class="csF5B7C975">ARTICLE 6A. THE DEBT MANAGEMENT ACT OF 1991.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;12-6A-8. Treasurer as chair of Municipal Bond Commission, the state&#39;s fiscal agent, and to provide support to the Municipal Bond Commission.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Treasurer shall chair the Municipal Bond Commission as specified in &sect;13-3-1 </span><span class="cs1489E706">et seq. </span><span class="cs46AE26E6">of this code</span><span class="cs1489E706">,</span><span class="cs46AE26E6"> and his or her office </span><span class="cs1A31708">shall hire its own employees, consultants, managers, and advisors, fix compensation, prescribe job duties, and provide suitable office space necessary to provide support to the Municipal Bond Commission. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The commission shall produce quarterly financial statements for the assets managed by the commission and send them to each member of the commission and provide copies as reasonably requested.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The commission shall provide any other information requested in writing by the Department of Revenue, the Joint Committee on Finance, or any member of the Legislature.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) </span><span class="cs1489E706">Annual Audits</span><span class="cs46AE26E6">. -- Beginning with fiscal year ending June 30, 2026, and each fiscal year thereafter, the commission shall have an annual financial and compliance audit of the assets, accounts, payments, and transfers made by the commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) </span><span class="cs1489E706">Purchasing Exemption</span><a name="_Hlk11139283"><span class="cs46AE26E6">. -- Notwithstanding any other provision to the contrary, the commission is exempt from all requirements of the Purchasing Division, authorized under W. Va. Code &sect;5A-3-1 </span><span class="cs1489E706">et seq</span></a><span class="cs46AE26E6">. of this code.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 13. PUBLIC BONDED INDEBTEDNESS.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 3. MUNICIPAL BOND COMMISSION.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;13-3-3. Officers; employees; chief administrative officer; meetings; quorum; compensation and expenses; legal representation.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The </span><span class="cs68EFC440">Tax Commissioner</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">State Treasurer</span><span class="csEF05ACC"> or his or her designee shall be chair of the commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The members of the commission shall appoint a chief administrative officer and may fix his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> title and duties. Notwithstanding the provisions of section two-a, article seven, chapter six of this code, the commission shall have the authority to set the compensation of the chief administrative officer. The chief administrative officer shall serve as secretary to the board and treasurer of the commission. The chair may designate a board member to serve as secretary in the absence of the chief administrative officer. The chair is authorized with the approval of the commission, to employ other employees and consultants as the commission deems advisable and fix their compensation and prescribe their duties.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Appointed members of the commission shall be paid </span><span class="cs68EFC440">$50</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">$500</span><span class="csEF05ACC"> for each day or substantial portion thereof that they are engaged in the work of the commission. Each member of the commission may be reimbursed for all reasonable and necessary expenses actually incurred in the performance of duties on behalf of the commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The commission shall hold at least three meetings in each fiscal year, one of which meetings shall be within sixty days of the end of the fiscal year and shall be the annual meeting. The meetings shall be held on dates and at places prescribed by the chair. Additional meetings may be held at the call of the chair or upon the written request of three members at such time and place as designated in such call or request. Three members of the commission constitute a quorum.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The chair with the consent of the commission is authorized to provide or designate legal advisory services to the commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;13-3-6. Powers and duties of commission.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The commission shall serve as fiscal agent for all issuers of general obligation bonds issued by the counties, municipalities, and school districts of the State of West Virginia when the commission is specifically named as the fiscal agent by statute.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The commission shall serve as fiscal agent for all issuers of revenue bonds issued by the counties, municipalities, and school districts of this state when the commission is specifically named as the fiscal agent by statute.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The commission shall serve as fiscal agent for the issuers of revenue bonds issued by the State of West Virginia through its departments, commissions, boards, or agencies, when the commission is specifically named as the fiscal agent by statute.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The commission may serve as fiscal agent for the issuer of other public purpose revenue bond issues when so provided by bond ordinance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The commission may agree to serve as paying agent for all issuers when so provided by bond ordinance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The commission may conduct business by telephonic conference when necessary.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) </span><span class="cs46AE26E6">The commission may use any contract or agreement of the State Treasurer&#39;s Office, Investment Management Board, or the West Virginia Board of Treasury Investments.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h)</span><span class="csEF05ACC"> The commission is hereby granted, has and may exercise all powers necessary or appropriate to effectuate the purposes of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;13-3-7. Permissible investments; limitations and prohibitions on purchase, sale or exchange of securities; public records; combining funds and proration of interest; custody of securities.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Notwithstanding any provisions of this code to the contrary, the commission may invest funds under its control in the following classes of securities and not otherwise:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Securities of the United States or any agency thereof which are guaranteed by or for which the full faith and credit of the United States is pledged for the payment of the principal and interest;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(2) General obligations of this state or any of its agencies, boards or commissions;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(3) General obligations of any county, municipality or school district in this state;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(2)</span><span class="csEF05ACC"> Pools of investment operated by the West Virginia Board of Investments provided that their investments are limited to the above named securities, and provided that securities purchased for these pools following the date of the enactment of this article shall not have maturities greater than five years in length; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(3)</span><span class="csEF05ACC"> Repurchase agreements or similar banking arrangements with a member bank of banks of the federal reserve system or a bank, the deposits of which are insured by the federal deposit insurance corporation, or its successor: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That such investments shall only be made to the extent insured by the federal deposit insurance corporation or to the extent that the principal amount thereof shall be fully collateralized by direct obligations of or obligations guaranteed by the United States of America.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Securities purchased or held under the provisions of this article may be sold or exchanged for other securities: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That: (1) No security shall be purchased, sold or exchanged without the concurrence or ratification of a majority of all members of the commission; (2) no security shall be purchased at a price above, nor sold or exchanged at a price below, its prevailing fair market value; (3) no security shall be purchased, sold or exchanged for the purpose of aiding any individual, firm or corporation by the payment of brokerage commissions or fees thereto; (4) no security purchased, sold or exchanged shall benefit any member or employee of the commission; and (5) no security shall be received in exchange which does not comply with the requirements of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The commission shall record all pertinent information related to any purchase, sale or exchange of securities and make such information available for public inspection during normal office hours of the commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Funds from several or all accounts may be combined for investment and any interest earned shall be prorated and credited quarterly to the various contributing accounts </span><span class="cs68EFC440">on the basis of</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">based on the</span><span class="csEF05ACC"> amount thereof invested, calculated according to an average periodic balance or other generally accepted accounting principle.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) All securities purchased by the commission as an investment for the funds shall remain in the custody of the state Board of Investments until the same are sold, exchanged, retired or mature and are paid.</span></p><p class="csF96CDBB6"><span class="cs7FA9C667">NOTE: The purpose of this bill is to change how the Municipal Bond Commission is governed.</span></p><p class="csF96CDBB6"><span class="cs7FA9C667">&nbsp;</span></p><p class="csF96CDBB6"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

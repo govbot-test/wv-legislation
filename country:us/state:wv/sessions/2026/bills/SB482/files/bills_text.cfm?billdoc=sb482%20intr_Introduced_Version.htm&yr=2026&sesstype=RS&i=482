@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 482 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=482">&laquo; Senate Bill 482 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 482'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 482 - Creating WV Driver Safety Modernization Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb482+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=482"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs60C11EA{text-align:justify;text-indent:38pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 482</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Woodrum</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 19, 2026; referred<br/>to the Committee on Transportation and Infrastructure; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;17B-8-1, &sect;17B-8-2, &sect;17B-8-3, &sect;17B-8-4, &sect;17B-8-5, &sect;17B-8-6, &sect;17B-8-7, &sect;17B-8-8, &sect;17B-8-9, &sect;17B-8-10, &sect;17B-8-11, &sect;17B-8-12, &sect;17B-8-13, &sect;17B-8-14, &sect;17B-8-15, &sect;17B-8-16, &sect;17B-8-17, and &sect;17B-8-18, relating to creating the West Virginia Driver Safety Modernization &nbsp;Act; providing legislative findings; definitions; age-based renewal and screening requirements for advanced age; establishing a medical review unit, due process, appeals and appeal, and authority of the medical review unit; providing for mandatory medical reporting, immunity, and confidentiality; permitting voluntary medical reporting and driver concern reports; confidentiality of medical information with limitation on use; requirement of periodic medical certification; providing for wrong way incident reporting and law-enforcement procedures; providing for temporary restrictions and review; &nbsp;reinstatement, license restrictions, and appeals; providing for senior mobility planning and safe-driving longevity resources and mature driver safety course incentive; requiring the Division of Highways to identify and evaluate all interchanges, ramps, and divided-highway access points where a wrong-way incident has occurred within the prior 10 years; and providing for interagency data-sharing for roadway safety and driver review, rule-making authority and legislative review.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">Article 8. THE WEST VIRGINIA DRIVER SAFETY MODERNIZATION ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-1. Short title; legislative findings; purpose.</span></h4>
+	<p class="cs60C11EA"><span class="cs46AE26E6">(a) This article shall be known and may be cited as &quot;The West Virginia Driver Safety Modernization Act.&quot;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(b) The Legislature finds that:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) West Virginia&rsquo;s population includes a significant and growing number of drivers whose medical conditions, functional limitations, or age-related factors may affect their ability to safely operate a motor vehicle;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) The state has experienced incidents, including wrong-way entries onto divided highways and other serious driving-confusion events, which demonstrate the need for a modernized and evidence-based system to identify and evaluate drivers whose medical or cognitive conditions may impair safe driving;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Existing provisions of this code require periodic medical certification for certain restricted-vision drivers pursuant to &sect;17B-2-7 of this code; and the Legislature finds that a broader, medically-grounded driver review system is necessary and that such system should employ procedures consistent with those established for restricted-vision drivers;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(4) A system of functional screening, medical reporting, periodic medical certification, and individualized restrictions protects public safety while preserving the dignity, mobility, and independence of drivers who remain fit to operate a motor vehicle;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(5) National driver-safety research indicates that all drivers, regardless of age, may experience medical, cognitive, or functional impairment affecting driving ability; and therefore, any review or monitoring process must be based on demonstrated functional ability and medically substantiated conditions rather than age alone;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(6) Modernizing West Virginia&rsquo;s driver-review and medical-reporting framework will reduce preventable collisions, protect road users, and provide clear procedures for drivers, medical providers, law enforcement, the Division of Motor Vehicles, and the Division of Highways;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(7) The Legislature further recognizes that medical diagnoses and functional assessments may evolve, improve, or be corrected over time, and therefore an effective driver-safety review system must permit the rescission or amendment of prior medical determinations and provide for the timely restoration of regular licensing status when medical evidence supports that action;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(8) The Legislature further finds that physicians and other licensed health-care providers must be able to participate in the medical reporting, certification, review, monitoring, and correction processes established under this article without fear of civil or criminal liability, and therefore immunity protections for good-faith submissions and corrections are essential to the effective and fair operation of this driver-safety framework;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(9) Senior mobility planning, including education on safe-driving longevity, recognition of declining ability, and identification of alternative transportation options, supports safe road use and promotes the continued independence of older adults; and</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(10) It is the policy of the State of West Virginia to ensure that driver-review procedures are applied consistently, fairly, respectfully, and with due process, and that no adverse licensing action shall be taken solely on the basis of a driver&rsquo;s age.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(c) The purposes of this article are to:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Establish a comprehensive, medically informed driver fitness review system;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Improve roadway safety through functional screening for drivers of advanced age and through behavior-based review triggers applicable to drivers of all ages;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Provide mandatory and voluntary medical reporting pathways with appropriate immunity protections;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(4) Establish procedures for periodic medical certification, monitoring, correction of medical misdiagnoses, and sunset of monitoring requirements upon documented medical stability;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(5) Require review of drivers involved in certain serious wrong-way roadway incidents while recognizing a narrowly tailored weather- and visibility-based exception for law enforcement;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(6) Improve coordination between the Division of Motor Vehicles and the Division of Highways regarding wrong-way mitigation measures and interchange safety;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(7) Establish senior mobility-planning resources and incentives to encourage lifelong safe driving; and</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(8) Ensure that all review procedures under this article are applied in a manner consistent with due process, medical confidentiality, and the prohibition against adverse action based solely on age.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-2. Definitions</span><span class="cs46AE26E6">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">For the purposes of this article:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Commissioner&quot; means the Commissioner of the Division of Motor Vehicles or the commissioner&rsquo;s designee.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Division&quot; means the West Virginia Division of Motor Vehicles (DMV).</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Medical Review Unit&quot; or &quot;MRU&quot; means the unit within the Division responsible for administering medical review, functional screening, periodic medical certification, and licensing determinations under this article.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Mandatory reportable condition&quot; means a medically substantiated condition required to be reported pursuant to &sect;17B-8-6 of this code, including but not limited to:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Advanced dementia or significant cognitive impairment;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Recurrent unexplained loss of consciousness;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Uncontrolled seizure disorder;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(4) Severe visual impairment not correctable to the legal driving standard;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(5) Progressive neurodegenerative disorder presenting motor or cognitive impairment; or</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(6) Any other condition the provider determines, in good faith, renders the individual unsafe to operate a motor vehicle on an ongoing basis.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Medical certification&quot; means a form completed by a licensed physician, physician assistant, or advanced practice registered nurse that documents a driver&rsquo;s medical condition, functional ability, stability, or risk factors as required under this article.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Periodic medical certification&quot; means annual or otherwise physician-recommended medical documentation required under &sect;17B-8-8a of this code for drivers whose medical conditions warrant ongoing monitoring.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Driver Concern Report&quot; means a written report submitted by a family member, law-enforcement officer, emergency medical services provider, or other authorized individual under &sect;17B-8-7 of this code regarding a driver&rsquo;s observed cognitive, medical, or behavioral indicators of unsafe driving.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Wrong-way incident&quot; means any confirmed instance in which a driver enters or attempts to enter a divided highway, interstate, or controlled-access facility in the wrong direction.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Weather/Visibility Exception&quot; means the narrowly drawn exception under &sect;17B-8-9 of this code allowing law enforcement to decline mandatory submission of a wrong-way incident report upon documented finding of extraordinary weather-related visibility impairment and absence of driver impairment.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Functional screening&quot; means a brief, non-diagnostic screening procedure administered by the Division at driver-license renewal for persons of advanced age under &sect;17B-8-3 of this code, including but not limited to assessments of cognitive orientation, reaction time, and visual-motor integration.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Stable medical condition&quot; means a condition which, over three consecutive years, shows no medically significant progression affecting driving ability, as certified by the driver&rsquo;s treating provider in accordance with &sect;17B-8-8a of this code.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">&quot;Review status&quot; means a temporary licensing designation indicating that a driver is subject to medical review, functional testing, or periodic certification pending final determination by the Medical Review Unit.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-3. Age-based renewal requirements; functional screening requirements for advanced age</span><span class="cs46AE26E6">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Notwithstanding any provision of this code to the contrary, the renewal cycle for driver&rsquo;s licenses shall be modified as follows:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Drivers under 75 years of age shall continue to be issued licenses in accordance with the standard renewal period provided under this chapter.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Drivers 75 years of age or older but under 80 shall renew in person at the division not less than once every five years.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Drivers 80 years of age or older shall renew in person at the division not less than once every three years.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(b) At each in-person renewal required under subsection (a) of this section, a driver shall be subject to:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) A standard vision screening consistent with &sect;17B-2-12a and &sect;17B-2-14 of this code;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) A functional screening, which shall be a brief, non-diagnostic assessment administered by the Division to evaluate indicators of safe driving capability. The screening may include, but is not limited to:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(A) Cognitive orientation tasks; </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(B) Reaction-time measures; </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(C) Divided-attention or visual-motor integration tasks; and </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(D) Such other evidence-based screening tools as the Commissioner may adopt by rule.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(c) A functional screening administered under this section is not a medical examination and may not be construed as such. It is solely a screening tool to identify drivers who may require further evaluation by the Medical Review Unit.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(d) If a driver does not successfully complete the functional screening, the Division shall:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Refer the driver to the Medical Review Unit for additional review under &sect;17B-8-5 of this code; and</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Require submission of medical certification or a driving re-examination, or both, as determined appropriate by the Medical Review Unit.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(e) A driver&rsquo;s age may not be the sole basis for denying renewal, imposing restrictions, or requiring retesting. Any such action must be based on functional or medical evidence gathered pursuant to this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-4. Establishment of Medical Review Unit; authority; timelines; decisions; appeals.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Medical Review Unit (MRU) is hereby established within the Division of Motor Vehicles and shall be responsible for receiving, evaluating, and acting upon:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Mandatory medical reports submitted under &sect;17B-8-6 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Voluntary medical reports and Driver Concern Reports submitted under &sect;17B-8-7 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Referrals from law enforcement pursuant to &sect;17B-8-9 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Results of functional screenings under &sect;17B-8-3 of this code; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Periodic medical certifications under &sect;17B-8-8a of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Upon receipt of any report or referral described in subsection (a), the MRU shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Conduct an intake review within 10 days;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Determine whether additional information, medical certification, or screening is required; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Issue a preliminary determination within 30 days of intake, unless additional medical information is reasonably necessary.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Following preliminary determination, the MRU shall: Issue a final determination within 60 days, except where good cause exists for a reasonable extension, which shall be documented in the record.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The MRU may:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Require submission of a medical certification;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Require the driver to undergo a driving re-examination;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Impose individualized driving restrictions tailored to the driver&rsquo;s functional ability, including but not limited to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Daylight-only driving;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Speed limitations;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Geographic or distance-based driving limits;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Prohibition from interstate or controlled-access highway driving;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Place the driver in review status pending further evaluation;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Require periodic medical certification under &sect;17B-8-8a of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Order immediate suspension where there is substantial evidence of an immediate safety risk; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Terminate medical monitoring upon receipt of a corrective medical certification or three-year stability certification as provided under this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Due process protections. A driver who is the subject of an adverse action shall receive:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Written notice of the MRU&rsquo;s decision;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A concise statement of reasons;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The evidence or reports relied upon, subject to medical confidentiality restrictions; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The right to request an administrative hearing in accordance with &sect;29A-5-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) All MRU decisions shall be appealable to circuit court pursuant to &sect;29A-5-4 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-5. Authority of the Medical Review Unit to require medical certification, retesting, or restrictions</span><span class="cs46AE26E6">.</span></h4>
+	<p class="cs60C11EA"><span class="cs46AE26E6">(a) The MRU may require a driver to undergo medical evaluation or submit medical certification when:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) A mandatory medical report has been received;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) A Driver Concern Report provides credible evidence of cognitive, medical, or functional impairment;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) A functional screening indicates significant concern;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(4) The driver has been involved in a wrong-way incident under &sect;17B-8-9 of this code; or </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(5) The MRU has other reliable evidence indicating the driver may be unsafe to operate a motor vehicle.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(b) Medical certification required under this article shall follow procedures consistent with &sect;17B-2-14 of this code, including but not limited to:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Submission directly from the medical provider to the Division;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Acceptance of secure electronic transmission, in-person delivery, or mail; and </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Review by the MRU for completeness and medical sufficiency.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(c) The MRU may require a driver to undergo a driving re-examination under &sect;17B-2-7 of this code if:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Medical evidence indicates potential impairment; or </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Restrictions or reinstatement determinations require functional confirmation of driving ability.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(d) Restrictions imposed under this article shall be individualized and medically justified. The MRU may modify or remove restrictions upon receipt of updated medical information.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(e) No fee may be charged to a driver for any medical review, functional screening, or certification required under this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-6. Mandatory medical reporting; immunity; confidentiality</span><span class="cs46AE26E6">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A licensed physician, physician assistant, or advanced practice registered nurse shall report to the Division any driver diagnosed with a mandatory reportable condition, as defined in &sect;17B-8-2 of this code, when the provider determines, in good faith, that the condition materially impairs the driver&rsquo;s ability to safely operate a motor vehicle and the impairment is expected to be ongoing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A report under this section shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Be made on a form prescribed by the Division; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) State the medical basis for the determination; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Be submitted directly by the provider to the Division by secure electronic transmission, in person, or by mail.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A provider submitting a report under this section in good faith shall be immune from civil or criminal liability, including but not limited to liability arising from:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The act of reporting;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Omissions in reporting;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any resulting licensing actions taken by the Division; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Subsequent changes in the driver&rsquo;s condition.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Reports submitted under this section are:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Confidential and privileged;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Not subject to disclosure under &sect;29B-1-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Not subject to subpoena or discovery; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Admissible only in proceedings related to licensing under this chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) No adverse action may be taken against a driver solely because a report was submitted. The Division shall evaluate the report in accordance with &sect;17B-8-4 and &sect;17B-8-5 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-7. Voluntary medical reporting; Driver Concern Reports; immunity; confidentiality</span><span class="cs46AE26E6">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A licensed physician, physician assistant, or advanced practice registered nurse may voluntarily report, in good faith, any driver whom the provider believes may be unsafe to operate a motor vehicle due to a medical or functional condition not required to be reported under &sect;17B-8-6 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A Driver Concern Report may be submitted by:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A law-enforcement officer;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An emergency medical services provider; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A family member or caregiver who has observed behavior or symptoms indicating that the driver may be unsafe.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Reports submitted under this section shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Be signed and include contact information;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Describe the observed behavior or condition; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Be submitted on a form prescribed by the Division.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Anonymous reports may not be accepted.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A provider or authorized reporter submitting a voluntary report or Driver Concern Report in good faith shall be immune from civil or criminal liability arising from:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Making the report;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The consequences of the report; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Licensing actions taken thereafter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Reports submitted under this section are confidential and privileged to the same extent as reports under &sect;17B-8-6 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The Division shall temporarily evaluate all credible reports and may require medical certification, functional screening, restrictions, or other action under &sect;&sect;17B-8-4 and 17B-8-5 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-8. Confidentiality of medical information; limitations on use.</span></h4>
+	<p class="cs60C11EA"><span class="cs46AE26E6">(a) Medical certifications, reports, evaluations, and provider submissions under this article are confidential and shall:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Be maintained in a secure manner by the Division; </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Not be disclosed except to the extent necessary for licensing determinations;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Not be released under &sect;29B-1-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(4) Not be subject to subpoena or used in civil litigation; and</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(5) Not be used for purposes other than those expressly authorized by this article.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(b) Unauthorized disclosure of medical information under this article is punishable under applicable state privacy and confidentiality laws.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-9. Periodic medical certification; frequency; stability sunset; corrective medical certification; immunity.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) General authority. The Medical Review Unit may require a driver to submit periodic medical certification when:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The driver has been reinstated following medical review;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The driver has a progressive or fluctuating medical condition affecting driving ability;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The driver was involved in a wrong-way incident;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) A mandatory medical report indicates ongoing risk; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) A treating provider recommends periodic monitoring.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Frequency. Periodic medical certification:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) May be required not more than once every 12 months, unless the provider specifies a shorter medically necessary interval; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) May not alter the underlying license issuance period.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Submission. Medical certifications shall be:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Completed by the driver&rsquo;s treating physician, physician assistant, or advanced practice registered nurse;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Submitted directly by the provider to the division; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Accepted by secure electronic transmission, in person, or by mail, consistent with procedures used under &sect;17B-2-14 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) DMV reminder. The Division shall provide written or electronic notice to drivers subject to periodic medical certification not less than 45 days before the submission deadline.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Noncompliance. If the driver fails to submit required certification, the Division may:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Place the driver in review status;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Impose temporary restrictions; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Suspend the license until certification is received or evaluation is completed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Stability sunset. The MRU shall terminate the periodic medical certification requirement when:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The driver demonstrates three consecutive years of stable medical findings, as defined in &sect;17B-15A-2; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The treating provider certifies, in good faith, that ongoing monitoring is not medically necessary.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Corrective medical certification. If a treating provider determines that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A prior diagnosis was incorrect;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A condition has resolved; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The driver does not require continued monitoring, then the provider may submit a corrective medical certification, and the MRU:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Shall terminate any monitoring or restrictions based solely on the rescinded diagnosis;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) May require one-time functional screening or road testing only if other evidence justifies it.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Immunity for providers. A provider submitting:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Periodic medical certifications,</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Stability certifications, or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Corrective medical certifications in good faith shall be immune from civil or criminal liability for the certification, for its contents, and for any licensing outcome resulting from it.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Age neutrality. Periodic medical certification may not be required solely on the basis of age.</span></p><h4 class="cs89687900">
+		<span class="csEF05ACC">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-10. Wrong-way incident review; mandatory referral; Weather/Visibility Exception; law-enforcement procedures.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Mandatory referral. Except as provided in subsection (b) of this section, any law-enforcement officer who confirms that a driver has entered or attempted to enter a divided highway, interstate, or controlled-access facility in the wrong direction shall submit a wrong-way incident report to the Division.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Weather/Visibility Exception. A law-enforcement officer may decline to submit a mandatory report under subsection (a) only when all of the following conditions are met:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The incident occurred during extraordinary weather-related visibility impairment, including but not limited to dense fog, whiteout conditions, heavy snowfall, severe glare, or sudden darkness;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The officer determines, after a reasonable investigation and interaction with the driver, that the driver exhibits no observable signs of:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Impairment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Cognitive confusion inconsistent with weather conditions;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Medical distress; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Diminished functional capacity;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The roadway geometry, detour configuration, or signage conditions, when combined with the extraordinary weather conditions, could reasonably contribute to mistaken entry; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The officer completes a Weather/Visibility Exception Form developed by the West Virginia law-enforcement training division, documenting:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The weather conditions;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Roadway conditions;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Observed driver behavior;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The factual basis for applying the exception; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) A statement affirming the officer&rsquo;s good-faith judgment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Supervisory review. A Weather/Visibility Exception Form shall be submitted to a supervisory officer for review within 72 hours. The supervisory officer shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Ensure the exception meets all criteria;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Forward approved exceptions to the Division; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Notify the Division if any concerns arise regarding application of the exception.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Driver placed in review status. When a wrong-way incident report is received by the Division:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The driver shall be immediately placed in review status;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The report shall be transmitted to the Medical Review Unit within two business days; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The driver shall be notified of review status and required to comply with MRU directives in accordance with &sect;17B-8-4 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) MRU requirements following wrong-way incident. Upon receiving a wrong-way incident report, the MRU shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Require the driver to submit medical certification, unless clearly unnecessary based on previous or concurrent evaluations;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Determine whether functional screening or a road examination is warranted;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Permit temporary, restricted driving privileges during review when consistent with public safety; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Suspend, restrict, or reinstate the driver&rsquo;s license upon final determination.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Liability protection for law enforcement. A law-enforcement officer who submits a wrong-way incident report or applies the Weather/Visibility Exception in good faith shall be immune from civil or criminal liability for that action.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-11. Review status; temporary restrictions; safety determinations.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) A driver placed in review status under this article shall remain licensed, subject to temporary restrictions or conditions imposed by the MRU, unless immediate suspension is necessary for public safety.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Temporary restrictions may include:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Daylight-only driving;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Speed limitations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Restrictions on driving radius or geographic area;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Prohibition from interstate or controlled-access facilities; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Any other condition determined by the MRU to be necessary pending review.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Drivers shall comply with temporary restrictions during review status. Failure to comply constitutes grounds for immediate suspension.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Nothing in this section prevents the MRU from ordering immediate suspension when the available information demonstrates an imminent safety risk.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-12. Reinstatement; license restrictions; appeals</span><span class="csEF05ACC">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Upon satisfactory completion of required medical certification, functional screening, or road testing, the MRU shall issue a final determination reinstating the driver&rsquo;s regular license status, imposing individualized restrictions, or suspending the license, as appropriate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If reinstated with restrictions, the restrictions shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Be noted in the driver&rsquo;s electronic record; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Appear on the face of the license when required for enforcement clarity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Drivers reinstated after medical review may be required to undergo periodic medical certification under &sect;17B-8-8a of this code, until medically stable or until monitoring is terminated under that section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A driver whose license is suspended or restricted under this article may request:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) An administrative hearing pursuant to &sect;29A-5-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Judicial review pursuant to &sect;29A-5-4 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Upon receipt of a corrective medical certification under &sect;17B-8-8a of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The MRU shall promptly terminate any restrictions or monitoring requirements based solely on the rescinded diagnosis;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The Division shall reinstate unrestricted driving privileges within five business days, unless other independent grounds for review or restriction exist.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Nothing in this article prevents the MRU from imposing new or continued restrictions based on evidence unrelated to the rescinded diagnosis.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-13. Senior mobility planning; safe-driving longevity resources.</span></h4>
+	<p class="cs60C11EA"><span class="cs46AE26E6">(a) The Division shall develop and make available a Safe Driving Longevity &amp; Mobility Planning Guide for drivers 70 years of age and older, which shall include:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Common indicators of declining driving ability;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Guidance for planning reduced or limited driving;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Recommended strategies for family conversations regarding driving safety; </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(4) information on statewide mature driver safety courses; and </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(5) Information on alternative transportation, local mobility services, and community resources.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(b) The Guide may be distributed:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Electronically at the time of renewal;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) In print form at Division offices; or</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) By any method determined effective by the Commissioner.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(c) The Division shall maintain an online Senior Mobility Resource Page, updated at least annually, listing:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Approved mature driver courses;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) County-level senior transportation and mobility programs;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Volunteer ride services where available; and </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(4) Educational materials on safe-driving longevity.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(d) Nothing in this section creates a requirement that a senior driver complete any planning tool or course as a condition of licensing.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-14. Mature driver safety course incentive</span><span class="cs46AE26E6">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Division shall maintain a list of approved mature driver safety courses, including nationally recognized programs such as the AARP Smart Driver Course, the AAA Mature Operator Program, and other evidence-based courses approved by the Commissioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A driver 70 years of age or older who completes an approved mature driver course shall receive:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A renewal fee discount of up to $10 on the next driver&rsquo;s license renewal; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If 75 years of age or older, an exemption from the functional screening required under &sect;17B-8-3 of this code for that single renewal cycle, provided that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The course completion certificate was issued within the previous 36 months;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The driver successfully completes the required vision screening; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) No medical or behavioral review has been triggered under this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Functional screening exemption under this section may not:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Exempt a driver from medical review requirements;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Limit the authority of the MRU under &sect;&sect;17B-8-4 or 17B-8-5 of this code; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Apply to any driver placed in review status.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-15. Division of Highways wrong-way mitigation; signage, markings, and safety evaluation.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Division of Highways (DOH) shall identify and evaluate </span><a name="_Hlk218598342"><span class="cs46AE26E6">all interchanges, ramps, and divided-highway access points</span></a><span class="cs46AE26E6"> at which:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) </span><a name="_Hlk218598372"><span class="cs46AE26E6">A wrong-way incident has occurred within the prior 10 years</span></a><span class="cs46AE26E6">; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Engineering review indicates a heightened risk of wrong-way entry.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) For each identified location, DOH shall evaluate and, where feasible, implement improvements including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Enhanced &quot;Do Not Enter&quot; and &quot;Wrong Way&quot; signage;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Additional retroreflective signpost markings;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Pavement arrows and lane-direction indicators;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) High-visibility delineators or channelization devices; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Improved lighting, especially at night; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Geometric or design modifications to reduce the likelihood of mistaken entry.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Standards. Wrong-way mitigation measures under this section shall be:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Consistent with applicable guidance of the American Association of State Highway and Transportation Officials (AASHTO); and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Implemented in accordance with all existing state requirements governing signage, traffic control devices, and roadway safety.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Unfunded mandate. Nothing in this section may be construed to require additional appropriations. DOH shall prioritize improvements using existing funds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) DOH may consult with the Division of Motor Vehicles, law-enforcement agencies, and national transportation safety entities as necessary.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-16. Interagency data-sharing for roadway safety and driver review.</span></h4>
+	<p class="cs60C11EA"><span class="cs46AE26E6">(a) The Division of Highways shall annually transmit to the Division:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) A list of high-risk wrong-way locations;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Any engineering analyses completed under &sect;17B-8-14 of this code; and </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Data regarding serious roadway-confusion events.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(b) The Division shall use this data to:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Support MRU evaluations;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Identify environmental or engineering factors contributing to driving errors; and </span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Improve functional screening tools and educational materials.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(c) No shared data under this section may include personally identifiable driver information, except for the driver involved in a specific wrong-way incident that triggered a referral under this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-17. Rulemaking authority.</span></h4>
+	<p class="cs60C11EA"><span class="cs46AE26E6">(a) The Commissioner shall propose legislative rules and may promulgate emergency rules, pursuant to &sect;29A-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, to implement and administer this article.</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(b) Rules may include, but are not limited to:</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(1) Procedures for functional screening;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(2) Standardized forms for mandatory reports, voluntary reports, Driver Concern Reports, and corrective medical certifications;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(3) Secure electronic submission procedures;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(4) MRU review processes and timelines;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(5) Restrictions and reinstatement procedures;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(6) Appeals processes consistent with &sect;&sect;29A-5-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code;</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(7) Senior mobility resource materials; and</span></p><p class="cs60C11EA"><span class="cs46AE26E6">(8) Any additional provisions necessary to give effect to this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;17B-8-18. Legislative review</span><span class="cs46AE26E6">.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) No later than three years after the effective date of this article, the Division shall submit a report to the Joint Committee on Government and Finance evaluating:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The operation and effectiveness of the Medical Review Unit;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The volume and outcomes of medical reports and certifications;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The use and effectiveness of the Weather/Visibility Exception;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Wrong-way incident trends and DOH mitigation measures;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The effectiveness of senior mobility resources and mature driver incentives; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Any recommended statutory revisions.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Legislature shall review the report and determine whether amendments to this article are warranted to improve public safety, administrative efficiency, or fairness to drivers.</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create The West Virginia Driver Safety Modernization &nbsp;Act. The bill deals with age-based renewal and screening requirements for advanced age and medical conditions and senior mobility planning and safe-driving longevity resources and mature driver safety course incentive.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

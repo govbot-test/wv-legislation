@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 890 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=890">&laquo; Senate Bill 890 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 890'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb890 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=890" title="HTML  - Committee Substitute (1)
+ - Senate Bill 890">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb890 sub1 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=890" title="HTML  - Enrolled Version  - Final Version
+ - Senate Bill 890">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 890 - Changing certain school calendar requirements from days or months to hours&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb890+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=890"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 890</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Roberts</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 9, 2026; referred<br/>to the Committee on Education]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;18-5-45, &sect;18-28-2, and &sect;18A-4-8 of the Code of West Virginia, 1931, as amended, relating to the school calendar; changing minimum public school 180 instructional day requirement into a minimum 900 instructional hour requirement; changing the minimum public school employment term from 200 days to 1,600 hours; converting other public school calendar provisions from days or months to hours; increasing the time to be designated by the county board to be used by the employees for preparation for opening school; and allowing nonpublic schools to deliver instruction through alternative methods that count toward up to 25 hours of instructional time when schools are closed due to inclement weather or other unforeseen circumstance.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 5. COUNTY BOARD OF EDUCATION.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5-45. School calendar.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) As used in this section:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Instructional </span><span class="cs68EFC440">day</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hour</span><span class="csEF05ACC">&quot; means </span><span class="cs68EFC440">a day within the instructional term which meets the following criteria:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(A) Instruction is offered to students for at least the minimum number of minutes as follows:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i) For early childhood programs as provided in subsection (d) section forty-four of this article;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(ii) For schools with grade levels kindergarten through and including grade five, 315 minutes of instructional time per day;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(iii) For schools with grade levels six through and including grade eight, 330 minutes of instructional time per day; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(iv) For schools with grade levels nine through and including grade twelve, 345 minutes of instructional time per day. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(B) Instructional time is</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">an hour</span><span class="csEF05ACC"> used for instruction and cocurricular activities and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(C) Other</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">that meets any other</span><span class="csEF05ACC"> criteria as the state board determines appropriate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Cocurricular activities&quot; are activities that are closely related to identifiable academic programs or areas of study that serve to complement academic curricula as further defined by the state board; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Instruction delivered through alternative methods&quot; means a plan developed by a county board and approved by the state board for teachers to assign and grade work to be completed by students on days </span><span class="cs46AE26E6">or hours</span><span class="csEF05ACC"> when schools are closed due to inclement weather or other unforeseen circumstances.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) </span><span class="cs93AB6E8B">Findings</span><span class="csEF05ACC">. &ndash; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The primary purpose of the school system is to provide instruction for students.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The school calendar, as defined in this section, is designed to define the school term both for employees and for instruction.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The school calendar shall provide for </span><span class="cs68EFC440">one hundred eighty separate instructional days or an equivalent amount</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">900 hours</span><span class="csEF05ACC"> of instructional time as provided in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The county board shall provide a school term for its schools that contains the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An employment term that excludes Saturdays and Sundays and consists of at least </span><span class="cs68EFC440">two hundred days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">1,600 hours</span><span class="csEF05ACC">, which need not be successive. The beginning and closing dates of the employment term may not exceed forty-eight weeks;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Within the employment term, an instructional term for students of no less than </span><span class="cs68EFC440">one hundred eighty separate instructional days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">900 hours</span><span class="csEF05ACC">, which includes an inclement weather and emergencies plan designed to guarantee an instructional term for students of no less than </span><span class="cs68EFC440">one hundred eighty separate instructional days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">900 hours,</span><span class="csEF05ACC"> subject to the following: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A county board </span><span class="cs68EFC440">may increase the length of the instructional day as defined in this section by at least thirty minutes per day to</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">shall establish a length for the days of instruction, which may vary, that will</span><span class="csEF05ACC"> ensure that it achieves at least </span><span class="cs68EFC440">an amount of instructional time equivalent to one hundred and eighty separate instructional days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">900 instructional hours</span><span class="csEF05ACC"> within its school calendar; </span><span class="cs68EFC440">and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i) Apply up to five days of this equivalent time to cancel days lost due to necessary school closures;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(ii) Plan</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(B) A county board may plan</span><span class="csEF05ACC"> within its school calendar and not subject to cancellation and rescheduling as instructional </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC"> up to an additional </span><span class="cs68EFC440">five days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">25 hours</span><span class="csEF05ACC"> or equivalent portions of </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC">, without students present, to be used as determined by the county board exclusively for activities by educators at the school level designed to improve instruction; </span><span class="cs68EFC440">and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(iii) Apply any additional equivalent time to recover time lost due to late arrivals and early dismissals;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(B)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(C)</span><span class="csEF05ACC"> Subject to approval of its plan by the state board, a county board may deliver instruction through alternative methods </span><span class="cs68EFC440">on</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">that count toward</span><span class="csEF05ACC"> up to </span><span class="cs68EFC440">five days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">25 hours of instructional time</span><span class="csEF05ACC"> when schools are closed due to inclement weather or other unforeseen circumstances and these </span><span class="cs46AE26E6">hours of instruction</span><span class="csEF05ACC"> </span><span class="cs68EFC440">days, are instructional days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">count toward meeting the 900-hour instructional time requirement</span><span class="csEF05ACC"> notwithstanding the closure of schools. </span><span class="cs46AE26E6">The number of hours of instruction that count toward the 900-hour instructional time requirement is subject to the approval of the state board. The plan shall include the number of hours of instruction the instruction through alternative methods counts toward meeting the 900-hour instructional time requirement and state board approval of the plan shall be considered to be the state board&rsquo;s approval of the number of hours included in the plan</span><span class="csEF05ACC">; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(C)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(D)</span><span class="csEF05ACC"> The use of </span><span class="cs68EFC440">equivalent time gained by lengthening the school day to cancel days lost, and</span><span class="csEF05ACC"> the delivery of instruction through alternative methods, </span><span class="cs68EFC440">both</span><span class="csEF05ACC"> as defined in this section, shall be considered instructional </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC"> for the purpose of meeting the </span><span class="cs68EFC440">180 separate day</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">900-hour instructional time</span><span class="csEF05ACC"> requirement and as employment </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC"> for the purpose of meeting the </span><span class="cs68EFC440">200-day</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">1,600 hour</span><span class="csEF05ACC"> employment term.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Within the employment term, noninstructional </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC"> shall total </span><span class="cs68EFC440">twenty</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">160</span><span class="csEF05ACC"> and shall be comprised of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) </span><span class="cs68EFC440">Seven</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Eight hours for each of seven</span><span class="csEF05ACC"> paid holidays;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) </span><span class="cs68EFC440">Election</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Eight hours for election</span><span class="csEF05ACC"> day as specified in section two, article five, chapter eighteen-a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) </span><span class="cs68EFC440">Six</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Eight hours for each of six</span><span class="csEF05ACC"> days to be designated by the county board to be used by the employees outside the school environment, with at least four outside the school environment days scheduled to occur after the </span><span class="cs68EFC440">one hundred and thirtieth</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">650th</span><span class="csEF05ACC"> instructional </span><span class="cs68EFC440">day</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hour</span><span class="csEF05ACC"> of the school calendar;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) </span><span class="cs68EFC440">One day</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">At least 16 hours for a minimum of two days</span><span class="csEF05ACC"> to be designated by the county board to be used by the employees for preparation for opening school and </span><span class="cs46AE26E6">eight hours for</span><span class="csEF05ACC"> one day to be designated by the county board to be used by the employees for preparation for closing school: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That the school preparation days may be used for the purposes set forth in paragraph (E) of this subdivision at the teacher&rsquo;s discretion; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) The remaining </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC"> to be designated by the county board for purposes to include, but not be limited to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Curriculum development;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Professional development;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Teacher-pupil-parent conferences;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) Professional meetings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v) Making up </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC"> when instruction was scheduled but not conducted; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vi) At least six two-hour blocks of time for faculty senate meetings with at least one two-hour block of time scheduled in the first </span><span class="cs68EFC440">month</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">160 hours</span><span class="csEF05ACC"> of the employment term, at least one two-hour block of time scheduled in the last </span><span class="cs68EFC440">month</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">160 hours</span><span class="csEF05ACC"> of the employment term and at least one two-hour block of time scheduled in each of the months of October, December, February, and April; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Scheduled out-of-calendar days that are to be used </span><span class="cs68EFC440">for</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">to schedule</span><span class="csEF05ACC"> instructional </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">and employment hours</span><span class="csEF05ACC"> in the event school is canceled for any reason.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) A county board of education shall develop a policy that requires additional minutes </span><span class="cs46AE26E6">or hours</span><span class="csEF05ACC"> of instruction </span><span class="cs68EFC440">in the school day or additional days of instruction</span><span class="csEF05ACC"> to recover time lost due to late arrivals and early dismissals.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) If it is not possible to complete </span><span class="cs68EFC440">one hundred eighty separate instructional days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">900 hours</span><span class="csEF05ACC"> with the current school calendar, </span><span class="cs68EFC440">and the additional five days of instructional time gained by increasing the length of the instructional day as provided in subsection (c) of this section are insufficient to offset the loss of separate instructional days</span><span class="csEF05ACC"> the county board shall </span><span class="cs46AE26E6">increase the amount of instruction on a day when instruction was previously scheduled or</span><span class="csEF05ACC"> schedule instruction on any available </span><span class="cs68EFC440">noninstructional</span><span class="csEF05ACC"> day </span><span class="cs46AE26E6">for which instruction was not originally scheduled</span><span class="csEF05ACC">, regardless of the purpose for which the day originally was scheduled, or an out-of-calendar day and the day will be used for instruction of students: </span><span class="cs93AB6E8B">Provided, </span><span class="csEF05ACC">That the provisions of this subsection do not apply to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Holidays;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Election day;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Saturdays and Sundays; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The </span><span class="cs68EFC440">five days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">25 hours</span><span class="csEF05ACC"> or equivalent portions of </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC"> planned within the school calendar exclusively for activities by educators at the school level to improve instruction. </span><span class="cs68EFC440">that are gained by increasing the length of the instructional day as provided in subsection (c) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The instructional term shall commence and terminate on a date selected by the county board.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The state board may not schedule the primary statewide assessment program more than </span><span class="cs68EFC440">thirty days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">150 hours</span><span class="csEF05ACC"> prior to the end of the instructional year unless the state board determines that the nature of the test mandates </span><span class="cs68EFC440">an</span><span class="csEF05ACC"> earlier testing. </span><span class="cs68EFC440">date.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) The following applies to cocurricular activities:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The state board shall determine what activities may be considered cocurricular;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The state board shall determine the amount of instructional time that may be consumed by cocurricular activities; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Other requirements or restrictions the state board may provide in the rule required to be promulgated by this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Extracurricular activities may not be used for instructional time.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) Noninstructional interruptions to </span><span class="cs68EFC440">the instructional day</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">scheduled instruction</span><span class="csEF05ACC"> shall be minimized to allow the classroom teacher to teach.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) Prior to implementing the school calendar, the county board shall secure approval of its proposed calendar from the state board or, if so designated by the state board, from the state superintendent.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) In formulation of a school&rsquo;s calendar, a county school board shall hold at least two public meetings that allow parents, teachers, teacher organizations, businesses and other interested parties within the county to discuss the school calendar. The public notice of the date, time and place of the public hearing must be published in a local newspaper of general circulation in the area as a Class II legal advertisement, in accordance with the provisions of article three, chapter fifty-nine of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) The county board may contract with all or part of the personnel for a longer term of employment.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) The minimum instructional term may be decreased by order of the state superintendent in any county declared a federal disaster area and in any county subject to an emergency or disaster declaration by the Governor when the event causing the declaration is substantially related to the loss of instructional </span><span class="cs68EFC440">days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hours</span><span class="csEF05ACC"> in the county.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o) Notwithstanding any provision of this code to the contrary, the state board may grant a waiver to a county board for its noncompliance with provisions of chapter eighteen, eighteen-a, eighteen-b and eighteen-c of this code to maintain compliance in reaching the mandatory </span><span class="cs68EFC440">one hundred eighty separate instructional days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">900 annual hours of instruction</span><span class="csEF05ACC"> established in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) The state board shall promulgate a rule in accordance with the provisions of article three-b, chapter twenty-nine-a of this code for the purpose of implementing the provisions of this section.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 28. PRIVATE, PAROCHIAL OR CHURCH SCHOOLS, OR SCHOOLS OF A RELIGIOUS ORDER.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-28-2. Attendance; health and safety regulations.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The following is applicable to private, parochial, or church schools or schools of a religious order:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) Each school shall observe a minimum instructional term of 900 hours per school year: </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That the school may deliver instruction through alternative methods that count toward up to 25 hours of instructional time when schools are closed due to inclement weather or other unforeseen circumstance and these hours of instruction count toward meeting the 900-hour instructional time requirement notwithstanding the closure of the school</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Each school shall make and maintain annual attendance and disease immunization records for each pupil enrolled and regularly attending classes. The attendance records shall be made available to the parents or legal guardians;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Upon the request of the county superintendent, a school (or a parents&rsquo; organization composed of the parents or guardians of children enrolled in the school) shall furnish to the county board a list of the names and addresses of all children enrolled in the school between the ages of seven and 16 years;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Attendance by a child at any school which complies with this article satisfies the requirements of compulsory school attendance;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Each school is subject to reasonable fire, health, and safety inspections by state, county, and municipal authorities as required by law, and is required to comply with the West Virginia school bus safety regulations; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Each school shall establish, file, and update a school specific crisis response plan which complies with the requirements established for it by the state board and the Division of Homeland Security and Emergency Management pursuant to &sect;18-9F-9 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 18A. SCHOOL PERSONNEL.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 4. SALARIES, WAGES AND OTHER BENEFITS.</span></h2>
+	<h4 class="cs89687900">
+		<a name="_Hlk94623109"><span class="csB9803513">&sect;18A-4-8</span></a><span class="csB9803513">. Employment term and class titles of service personnel; definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The purpose of this section is to establish an employment term and class titles for service personnel. The employment term for service personnel may not be less than 10 months. A month is defined as </span><span class="cs68EFC440">20 employment days</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">160 employment hours</span><span class="csEF05ACC">. The county board may contract with, all or part of, these service personnel for a longer term.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Service personnel employed on a yearly or 12-month basis may be employed by calendar months. Whenever there is a change in job assignment during the school year, the minimum pay scale and any county supplement are applicable.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Service personnel employed in the same classification for more than the </span><span class="cs68EFC440">200-day</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">1,600 hour</span><span class="csEF05ACC"> minimum employment term are paid for additional employment at a </span><span class="cs68EFC440">daily</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hourly</span><span class="csEF05ACC"> rate of not less than the </span><span class="cs68EFC440">daily</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">hourly</span><span class="csEF05ACC"> rate paid for the </span><span class="cs68EFC440">200-day</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">1,600 hour</span><span class="csEF05ACC"> minimum employment term.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) A service person may not be required to report for work more than five days per week without his or her agreement, and no part of any working day may be accumulated by the employer for future work assignments, unless the employee agrees thereto.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) If a service person whose regular work week is scheduled from Monday through Friday agrees to perform any work assignments on a Saturday or Sunday, the service person is paid for at least one-half day of work for each day he or she reports for work. If the service person works more than three and one-half hours on any Saturday or Sunday, he or she is paid for at least </span><span class="cs68EFC440">a </span><span class="csEF05ACC">full day of work for each day.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) A custodian, aide, maintenance, office, and school lunch service person required to work a daily work schedule that is interrupted is paid additional compensation in accordance with this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A maintenance person means a person who holds a classification title other than in a custodial, aide, school lunch, office or transportation category as provided in &sect;18A-1-1 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A service person&rsquo;s schedule is considered to be interrupted if he or she does not work a continuous period in one day. Aides are not regarded as working an interrupted schedule when engaged exclusively in the duties of transporting students;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The additional compensation provided in this subsection:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Is equal to at least one eighth of a service person&rsquo;s total salary as provided by the state minimum pay scale and any county pay supplement; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Is payable entirely from county board funds.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) When there is a change in classification or when a service person meets the requirements of an advanced classification, his or her salary shall be made to comply with the requirements of this article and any county salary schedule in excess of the minimum requirements of this article, based upon the service person&rsquo;s advanced classification and allowable years of employment.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) A service person&rsquo;s contract, as provided in &sect;18A-2-5 of this code, shall state the appropriate monthly salary the employee is to be paid, based on the class title as provided in this article and on any county salary schedule in excess of the minimum requirements of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The column heads of the state minimum pay scale and class titles, set forth in &sect;18A-4-8a of this code, are defined as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Pay grade&quot; means the monthly salary applicable to class titles of service personnel;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Years of employment&quot; means the number of years which an employee classified as a service person has been employed by a county board in any position prior to or subsequent to the effective date of this section and includes service in the Armed Forces of the United States, if the employee was employed at the time of his or her induction. For the purpose of &sect;18A-4-8a of this code, years of employment is limited to the number of years shown and allowed under the state minimum pay scale as set forth in &sect;18A-4-8a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Class title&quot; means the name of the position or job held by a service person;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Accountant I&quot; means a person employed to maintain payroll records and reports and perform one or more operations relating to a phase of the total payroll;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Accountant II&quot; means a person employed to maintain accounting records and to be responsible for the accounting process associated with billing, budgets, purchasing and related operations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Accountant III&quot; means a person employed in the county board office to manage and supervise accounts payable, payroll procedures, or both;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Accounts payable supervisor&quot; means a person employed in the county board office who has primary responsibility for the accounts payable function and who either has completed 12 college hours of accounting courses from an accredited institution of higher education or has at least eight years of experience performing progressively difficult accounting tasks. Responsibilities of this class title may include supervision of other personnel;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Aide I&quot; means a person selected and trained for a teacher-aide classification such as monitor aide, clerical aide, classroom aide or general aide;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Aide II&quot; means a service person referred to in the &quot;Aide I&quot; classification who has completed a training program approved by the state board, or who holds a high school diploma or has received a general educational development certificate. Only a person classified in an Aide II class title may be employed as an aide in any special education program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Aide III&quot; means a service person referred to in the &quot;Aide I&quot; classification who holds a high school diploma or a general educational development certificate; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has completed six semester hours of college credit at an institution of higher education; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Is employed as an aide in a special education program and has one year&rsquo;s experience as an aide in special education;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Aide IV&quot; means a service person referred to in the &quot;Aide I&quot; classification who holds a high school diploma or a general educational development certificate; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has completed 18 hours of State Board-approved college credit at a regionally accredited institution of higher education, or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Has completed 15 hours of State Board-approved college credit at a regionally accredited institution of higher education; and has successfully completed an in-service training program determined by the state board to be the equivalent of three hours of college credit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;&quot;Aide V (Special Education Assistant Teacher) &ndash; Temporary Authorization&quot; means a person who does not possess minimum requirements for the Aide V permanent authorization, but is enrolled in and pursuing requirements as prescribed by the state board of education. No service person shall be entitled to receive the paygrade associated with this classification unless he or she has applied for and been selected to fill a posted position which specifically requires the successful candidate to hold or be enrolled in and pursuing the requirements for the classification. &nbsp;The determination as to whether a position will be posted requiring this classification is solely at the discretion of the county;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;&quot;Aide V (Special Education Assistant Teacher)&quot; means a service person referred to in the &quot;Aide I&quot; classification who holds a high school diploma or a general educational development certificate and who has completed the requirements and experience to be prescribed by the state board of education. No service person shall be entitled to receive the paygrade associated with this classification unless he or she has applied for and been selected to fill a posted position which specifically requires the successful candidate to hold or be enrolled in and pursuing the requirements for the classification. &nbsp;The determination as to whether a position will be posted requiring this classification is solely at the discretion of the county;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;&quot;Aide VI (Behavioral Support Assistant Teacher &ndash; Temporary Authorization)&quot; means a person who does not possess minimum requirements for the Aide VI permanent authorization, but is enrolled in and pursuing the requirements as prescribed by the state board of education. No service person shall be entitled to receive the paygrade associated with this classification unless he or she has applied for and been selected to fill a posted position which specifically requires the successful candidate to hold or be enrolled in and pursuing the requirements for the classification. The determination as to whether a position will be posted requiring this classification is solely at the discretion of the county; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;&quot;Aide VI (Behavioral Support Assistant Teacher)&quot; means a person who works with a student or students who have identified behavior difficulties, holds at least an Aide III classification &nbsp;and has completed the requirements and experience to be prescribed by the state board of education. No service person shall be entitled to receive the paygrade associated with this classification unless he or she has applied for and been selected to fill a posted position which specifically requires the successful candidate to hold or be enrolled in and pursuing the requirements for the classification. The determination as to whether a position will be posted requiring this classification is solely at the discretion of the county; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Audiovisual technician&quot; means a person employed to perform minor maintenance on audiovisual equipment, films, and supplies and who fills requests for equipment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Auditor&quot; means a person employed to examine and verify accounts of individual schools and to assist schools and school personnel in maintaining complete and accurate records of their accounts;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Autism mentor&quot; means a person who works with students having been identified as a person of autism and who meets standards and experience to be determined by the state Board. A person who has held or holds an aide title and becomes employed as an autism mentor shall hold a multiclassification status that includes both aide and autism mentor titles, in accordance with &sect;18A-4-8b of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Braille specialist&quot; means a person employed to provide braille assistance to students. A service person who has held or holds an aide title and becomes employed as a braille specialist shall hold a multiclassification status that includes both aide and braille specialist title, in accordance with &sect;18A-4-8b of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Bus operator&quot; means a person employed to operate school buses and other school transportation vehicles as provided by the state board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Buyer&quot; means a person employed to review and write specifications, negotiate purchase bids and recommend purchase agreements for materials and services that meet predetermined specifications at the lowest available costs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Cabinetmaker&quot; means a person employed to construct cabinets, tables, bookcases and other furniture;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Cafeteria manager&quot; means a person employed to direct the operation of a food services program in a school, including assigning duties to employees, approving requisitions for supplies and repairs, keeping inventories, inspecting areas to maintain high standards of sanitation, preparing financial reports, and keeping records pertinent to food services of a school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Carpenter I&quot; means a person classified as a carpenter&rsquo;s helper;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Carpenter II&quot; means a person classified as a journeyman carpenter;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Chief mechanic&quot; means a person employed to be responsible for directing activities which ensure that student transportation or other county board-owned vehicles are properly and safely maintained;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Clerk I&quot; means a person employed to perform clerical tasks;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Clerk II&quot; means a person employed to perform general clerical tasks, prepare reports and tabulations, and operate office machines;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Computer operator&quot; means a qualified person employed to operate computers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Cook I&quot; means a person employed as a cook&rsquo;s helper;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Cook II&quot; means a person employed to interpret menus and to prepare and serve meals in a food service program of a school. This definition includes a service person who has been employed as a &quot;Cook I&quot; for a period of four years;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Cook III&quot; means a person employed to prepare and serve meals, make reports, prepare requisitions for supplies, order equipment and repairs for a food service program of a school system;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Crew leader&quot; means a person employed to organize the work for a crew of maintenance employees to carry out assigned projects;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Custodian I&quot; means a person employed to keep buildings clean and free of refuse;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Custodian II&quot; means a person employed as a watchman or groundsman;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Custodian III&quot; means a person employed to keep buildings clean and free of refuse, to operate the heating or cooling systems and to make minor repairs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Custodian IV&quot; means a person employed as a head custodian. In addition to providing services as defined in &quot;Custodian III&quot; duties may include supervising other custodian personnel;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Director or coordinator of services&quot; means an employee of a county board who is assigned to direct a department or division.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Nothing in this subdivision prohibits a professional person or a professional educator from holding this class title: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That after July 1, 2024, all persons employed for the first time in a position with this classification title as a director, assistant director, or coordinator of transportation shall possess a commercial driver&rsquo;s license within one year of employment except that this requirement shall not apply to persons who are multiclassified, hold multiple job titles, or provide documentation from a physician that they have a medical diagnosis that renders them physically unqualified to obtain a commercial driver&rsquo;s license;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Professional personnel holding this class title may not be defined or classified as service personnel unless the professional person held a service personnel title under this section prior to holding the class title of &quot;director or coordinator of services;&quot;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The director or coordinator of services is classified either as a professional person or a service person for state aid formula funding purposes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Funding for the position of director or coordinator of services is based upon the employment status of the director or coordinator either as a professional person or a service person; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) A person employed under the class title &quot;director or coordinator of services&quot; may not be exclusively assigned to perform the duties ascribed to any other class title as defined in this subsection: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That nothing in this paragraph prohibits a person in this position from being multiclassified;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Draftsman&quot; means a person employed to plan, design, and produce detailed architectural/engineering drawings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Early Childhood Classroom Assistant Teacher I&quot; means a person who does not possess minimum requirements for the permanent authorization requirements, but is enrolled in and pursuing requirements;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Early Childhood Classroom Assistant Teacher II&quot; means a person who has completed the minimum requirements for a state-awarded certificate for early childhood classroom assistant teachers as determined by the state board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Early Childhood Classroom Assistant Teacher III&quot; means a person who has completed permanent authorization requirements, as well as additional requirements comparable to current paraprofessional certificate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Educational Sign Language Interpreter I&quot; means a person employed to provide communication access across all educational environments to students who are deaf or hard of hearing, and who holds the Initial Paraprofessional Certificate &ndash; Educational Interpreter pursuant to state board policy;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Educational Sign Language Interpreter II&quot; means a person employed to provide communication access across all educational environments to students who are deaf or hard of hearing, and who holds the Permanent Paraprofessional Certificate &ndash; Educational Interpreter pursuant to state board policy;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Electrician I&quot; means a person employed as an electrician helper or one who holds an electrician helper license issued by the State Fire Marshal;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Electrician II&quot; means a person employed as an electrician journeyman or one who holds a journeyman electrician license issued by the State Fire Marshal;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Electronic technician I&quot; means a person employed to repair and maintain electronic equipment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Electronic technician II&quot; means a person employed at the journeyman level to repair and maintain electronic equipment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Executive secretary&quot; means a person employed as secretary to the county school superintendent or as a secretary who is assigned to a position characterized by significant administrative duties;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Food services supervisor&quot; means a qualified person who is not a professional person or professional educator as defined in &sect;18A-1-1 of this code. The food services supervisor is employed to manage and supervise a county school system&rsquo;s food service program. The duties include preparing in-service training programs for cooks and food service employees, instructing personnel in the areas of quantity cooking with economy and efficiency and keeping aggregate records and reports;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Foreman&quot; means a skilled person employed to supervise personnel who work in the areas of repair and maintenance of school property and equipment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;General maintenance&quot; means a person employed as a helper to skilled maintenance employees, and to perform minor repairs to equipment and buildings of a county school system;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Glazier&quot; means a person employed to replace glass or other materials in windows and doors and to do minor carpentry tasks;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Graphic artist&quot; means a person employed to prepare graphic illustrations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Groundsman&quot; means a person employed to perform duties that relate to the appearance, repair, and general care of school grounds in a county school system. Additional assignments may include the operation of a small heating plant and routine cleaning duties in buildings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Handyman&quot; means a person employed to perform routine manual tasks in any operation of the county school system;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Heating and air conditioning mechanic I&quot; means a person employed to install, repair and maintain heating and air conditioning plants and related electrical equipment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Heating and air conditioning mechanic II&quot; means a person employed at the journeyman level to install, repair, and maintain heating and air conditioning plants and related electrical equipment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Heavy equipment operator&quot; means a person employed to operate heavy equipment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Inventory supervisor&quot; means a person employed to supervise or maintain operations in the receipt, storage, inventory and issuance of materials and supplies;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Licensed practical nurse&quot; means a nurse, licensed by the West Virginia Board of Examiners for Licensed Practical Nurses, employed to work in a public school under the supervision of a school nurse;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Locksmith&quot; means a person employed to repair and maintain locks and safes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Lubrication man&quot; means a person employed to lubricate and service gasoline or diesel-powered equipment of a county school system;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Machinist&quot; means a person employed to perform machinist tasks which include the ability to operate a lathe, planer, shader, threading machine and wheel press. A person holding this class title also should have the ability to work from blueprints and drawings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Mail clerk&quot; means a person employed to receive, sort, dispatch, deliver or otherwise handle letters, parcels, and other mail;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Maintenance clerk&quot; means a person employed to maintain and control a stocking facility to keep adequate tools and supplies on hand for daily withdrawal for all school maintenance crafts;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Mason&quot; means a person employed to perform tasks connected with brick and block laying and carpentry tasks related to these activities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Mechanic&quot; means a person employed to perform skilled duties independently in the maintenance and repair of automobiles, school buses and other mechanical and mobile equipment to use in a county school system;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Mechanic assistant&quot; means a person employed as a mechanic apprentice and helper;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Multiclassification&quot; means a person employed to perform tasks that involve the combination of two or more class titles in this section. In these instances, the minimum salary scale is the higher pay grade of the class titles involved;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Office equipment repairman I&quot; means a person employed as an office equipment repairman apprentice or helper;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Office equipment repairman II&quot; means a person responsible for servicing and repairing all office machines and equipment. A person holding this class title is responsible for the purchase of parts necessary for the proper operation of a program of continuous maintenance and repair;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Painter&quot; means a person employed to perform duties painting, finishing and decorating wood, metal and concrete surfaces of buildings, other structures, equipment, machinery and furnishings of a county school system;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Paraprofessional&quot; means a person certified pursuant to &sect;18A-3-2a of this code to perform duties in a support capacity including, but not limited to, facilitating in the instruction and direct or indirect supervision of students under the direction of a principal, a teacher or another designated professional educator.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A person employed on the effective date of this section in the position of an aide may not be subject to a reduction in force or transferred to create a vacancy for the employment of a paraprofessional;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A person who has held or holds an aide title and becomes employed as a paraprofessional shall hold a multiclassification status that includes both aide and paraprofessional titles in accordance with &sect;18A-4-8b of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) When a service person who holds an aide title becomes certified as a paraprofessional and is required to perform duties that may not be performed by an aide without paraprofessional certification, he or she shall receive the paraprofessional title pay grade;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Payroll supervisor&quot; means a person employed in the county board office who has primary responsibility for the payroll function and who either has completed 12 college hours of accounting from an accredited institution of higher education or has at least eight years of experience performing progressively difficult accounting tasks. Responsibilities of this class title may include supervision of other personnel;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Plumber I&quot; means a person employed as an apprentice plumber and helper;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Plumber II&quot; means a person employed as a journeyman plumber;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Printing operator&quot; means a person employed to operate duplication equipment, and to cut, collate, staple, bind and shelve materials as required;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Printing supervisor&quot; means a person employed to supervise the operation of a print shop;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Programmer&quot; means a person employed to design and prepare programs for computer operation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Roofing/sheet metal mechanic&quot; means a person employed to install, repair, fabricate and maintain roofs, gutters, flashing and duct work for heating and ventilation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Sanitation plant operator&quot; means a person employed to operate and maintain a water or sewage treatment plant to ensure the safety of the plant&rsquo;s effluent for human consumption or environmental protection;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;School bus supervisor&quot; means a qualified person:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Employed to assist in selecting school bus operators and routing and scheduling school buses, operate a bus when needed, relay instructions to bus operators, plan emergency routing of buses and promote good relationships with parents, students, bus operators and other employees; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Certified to operate a bus or previously certified to operate a bus;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Secretary I&quot; means a person employed to transcribe from notes or mechanical equipment, receive callers, perform clerical tasks, prepare reports, and operate office machines;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Secretary II&quot; means a person employed in any elementary, secondary, kindergarten, nursery, special education, vocational, or any other school as a secretary. The duties may include performing general clerical tasks; transcribing from notes; stenotype, mechanical equipment, or a sound-producing machine; preparing reports; receiving callers and referring them to proper persons; operating office machines; keeping records and handling routine correspondence. Nothing in this subdivision prevents a service person from holding or being elevated to a higher classification;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Secretary III&quot; means a person assigned to the county board office administrators in charge of various instructional, maintenance, transportation, food services, operations and health departments, federal programs, or departments with particular responsibilities in purchasing and financial control or any person who has served for eight years in a position which meets the definition of &quot;Secretary II&quot; or &quot;Secretary III&quot;;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Sign Support Specialist&quot; means a person employed to provide sign supported speech assistance to students who can access environments through audition. A person who has held or holds an aide title and becomes employed as a sign support specialist shall hold a multiclassification status that includes both aide and sign support specialist titles, in accordance with &sect;18A-4-8b of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Supervisor of maintenance&quot; means a skilled person who is not a professional person or professional educator as defined in &sect;18A-1-1 of this code. The responsibilities include directing the upkeep of buildings and shops, and issuing instructions to subordinates relating to cleaning, repairs and maintenance of all structures and mechanical and electrical equipment of a county board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Supervisor of transportation&quot; means a qualified person employed to direct school transportation activities properly and safely, and to supervise the maintenance and repair of vehicles, buses and other mechanical and mobile equipment used by the county school system. After July 1, 2010, all persons employed for the first time in a position with this classification title or in a multiclassification position that includes this title shall have five years of experience working in the transportation department of a county board. Experience working in the transportation department consists of serving as a bus operator, bus aide, assistant mechanic, mechanic, chief mechanic or in a clerical position within the transportation department;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Switchboard operator-receptionist&quot; means a person employed to refer incoming calls, to assume contact with the public, to direct and to give instructions as necessary, to operate switchboard equipment and to provide clerical assistance;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Truck driver&quot; means a person employed to operate light or heavy duty gasoline and diesel-powered vehicles;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Warehouse clerk&quot; means a person employed to be responsible for receiving, storing, packing, and shipping goods;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Watchman&quot; means a person employed to protect school property against damage or theft. Additional assignments may include operation of a small heating plant and routine cleaning duties;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;Welder&quot; means a person employed to provide acetylene or electric welding services for a school system; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;WVEIS data entry and administrative clerk&quot; means a person employed to work under the direction of a school principal to assist the school counselor or counselors in the performance of administrative duties, to perform data entry tasks on the West Virginia Education Information System, and to perform other administrative duties assigned by the principal.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) Notwithstanding any provision in this code to the contrary, and in addition to the compensation provided for service personnel in &sect;18A-4-8a of this code, each service person is entitled to all service personnel employee rights, privileges and benefits provided under this or any other chapter of this code without regard to the employee&rsquo;s hours of employment or the methods or sources of compensation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) A service person whose years of employment exceeds the number of years shown and provided for under the state minimum pay scale set forth in &sect;18A-4-8a of this code may not be paid less than the amount shown for the maximum years of employment shown and provided for in the classification in which he or she is employed.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) Each county board shall review each service person&rsquo;s job classification annually and shall reclassify all service persons as required by the job classifications. The state superintendent may withhold state funds appropriated pursuant to this article for salaries for service personnel who are improperly classified by the county boards. Further, the state superintendent shall order a county board to immediately correct any improper classification matter and, with the assistance of the Attorney General, shall take any legal action necessary against any county board to enforce the order.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) Without his or her written consent, a service person may not be:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Reclassified by class title; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Relegated to any condition of employment which would result in a reduction of his or her salary, rate of pay, compensation or benefits earned during the current fiscal year; or for which he or she would qualify by continuing in the same job position and classification held during that fiscal year and subsequent years.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) Any county board failing to comply with the provisions of this article may be compelled to do so by mandamus and is liable to any party prevailing against the board for court costs and the prevailing party&rsquo;s reasonable attorney fee, as determined and established by the court.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o) Notwithstanding any provision of this code to the contrary, a service person who holds a continuing contract in a specific job classification and who is physically unable to perform the job&rsquo;s duties as confirmed by a physician chosen by the employee, shall be given priority status over any employee not holding a continuing contract in filling other service personnel job vacancies if the service person is qualified as provided in &sect;18A-4-8e of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) Any person employed in an aide position on the effective date of this section may not be transferred or subject to a reduction in force for the purpose of creating a vacancy for the employment of a licensed practical nurse.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(q) Without the written consent of the service person, a county board may not establish the beginning work station for a bus operator or transportation aide at any site other than a county board-owned facility with available parking. The workday of the bus operator or transportation aide commences at the bus at the designated beginning work station and ends when the employee is able to leave the bus at the designated beginning work station, unless he or she agrees otherwise in writing. The application or acceptance of a posted position may not be construed as the written consent referred to in this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(r) Itinerant status means a service person who does not have a fixed work site and may be involuntarily reassigned to another work site. A service person is considered to hold itinerant status if he or she has bid upon a position posted as itinerant or has agreed to accept this status. A county board may establish positions with itinerant status only within the aide and autism mentor classification categories and only when the job duties involve exceptional students. A service person with itinerant status may be assigned to a different work site upon written notice 10 days prior to the reassignment without the consent of the employee and without posting the vacancy. A service person with itinerant status may be involuntarily reassigned no more than twice during the school year. At the conclusion of each school year, the county board shall post and fill, pursuant to &sect;18A-4-8b of this code, all positions that have been filled without posting by a service person with itinerant status. A service person who is assigned to a beginning and ending work site and travels at the expense of the county board to other work sites during the daily schedule, is not considered to hold itinerant status.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(s) Any service person holding a classification title on June 30, 2013, that is removed from the classification schedule pursuant to amendment and reenactment of this section in the year 2013, has his or her employment contract revised as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Any service person holding the Braille or Sign Language Specialist classification title has that classification title renamed on his or her employment contract as either Braille Specialist or Sign Support Specialist. This action does not result in a loss or reduction of salary or supplement by any employee. Any seniority earned in the Braille or Sign Language Specialist classification prior to July 1, 2013, continues to be credited as seniority earned in the Braille Specialist or Sign Support Specialist classification;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Any service person holding the Paraprofessional classification title and holding the Initial Paraprofessional Certificate &ndash; Educational Interpreter has the title Educational Sign Language Interpreter I added to his or her employment contract. This action does not result in a loss or reduction of salary or supplement by any employee. Any seniority earned in the Paraprofessional classification prior to July 1, 2013, continues to be credited as seniority earned in the Educational Sign Language Interpreter I classification; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Any service person holding the Paraprofessional classification title and holding the Permanent Paraprofessional Certificate &ndash; Educational Interpreter has the title Educational Sign Language Interpreter II added to his or her employment contract. This action does not result in a loss or reduction of salary or supplement by any employee. Any seniority earned in the Paraprofessional classification prior to July 1, 2013, continues to be credited as seniority earned in the Educational Sign Language Interpreter II classification;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(t) Any person employed as an aide in a kindergarten program who is eligible for full retirement benefits before the first day of the instructional term in the 2020-2021 school year, may not be subject to a reduction in force or transferred to create a vacancy for the employment of a less senior Early Childhood Classroom Assistant Teacher;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(u) A person who has held or holds an aide title and becomes employed as an Early Childhood Classroom Assistant Teacher shall hold a multiclassification status that includes aide and/or paraprofessional titles in accordance with &sect;18A-4-8b of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to change the minimum public school 180 instructional day requirement into a minimum 900 instructional hour requirement; change the minimum public school employment term from 200 days to 1,600 hours; convert other public school calendar provisions from days or months to hours; increase the time to be designated by the county board to be used by the employees for preparation for opening school; and allow nonpublic schools to deliver instruction through alternative methods that count toward up to 25 hours of instructional time when schools are closed due to inclement weather or other unforeseen circumstance.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

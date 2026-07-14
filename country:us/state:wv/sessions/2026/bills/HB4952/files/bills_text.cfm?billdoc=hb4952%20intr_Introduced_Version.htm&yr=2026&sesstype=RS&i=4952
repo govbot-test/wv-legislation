@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4952 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4952">&laquo; House Bill 4952 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4952'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4952 - Related to the establishment of the Charter School Direct Loan Program and the Charter School Credit Enhancement Program within the West Virginia Economic Development Authority &amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4952+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4952"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs30EF9964{color:#70AD47;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs8258605C{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.cs7F85AE1E{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csA130ECD1{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	<span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4952</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Crouse</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 29, 2026; referred to the Committee on Education then Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new section, designated &sect;18-5G-4a, relating to the establishment of the Charter School Direct Loan Program and the Charter School Credit Enhancement Program within the West Virginia Economic Development Authority to support the growth of public charter schools.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 5G. PUBLIC CHARTER SCHOOLs.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;18-5G-4a. Establishment of the West Virginia Charter School Direct Loan Program and the Charter School Credit Enhancement Program.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Definitions</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">As used in this part: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Authority&quot; refers to the West Virginia Economic Development Authority or its designee. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Charter school&quot; means a public charter school created under this chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Credit enhancement program&quot; means the Charter School Credit Enhancement Program established in Section (h) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Debt service reserve fund&quot; means the reserve fund created or established by, or for the benefit of, a qualifying charter school for the purpose of paying principal of and interest on bonds issued under the credit enhancement program as the payments become due and other money of the qualifying charter school is not available to make the payments.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) &quot;Debt service reserve fund requirement&quot; means, as of a particular date of computation, and with respect to a particular issue of bonds, the amount required to be on deposit in the debt service reserve fund, which amount: (a) may be a sum certain or as set forth in a formula; and (b) may not be less than the maximum annual debt service requirement for the related bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) &quot;Direct loan program&quot; means the Charter School Direct Loan Program established in Section (g) of this part.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) &quot;Obligations&quot; mean any notes, debentures, revenue bonds, or other evidences of financial indebtedness, but do not include general obligation bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) &quot;Project&quot; means: (a) any building, structure, or property owned, to be acquired, or used by a charter school for any of its educational purposes and the related appurtenances, easements, rights-of-way, improvements, paving, utilities, landscaping, parking facilities, and lands; or (b) any capital equipment owned, to be acquired, or used by a charter school for any of its educational purposes, interests in land, and grounds, together with the personal property necessary, convenient, or appurtenant to them. A Project as used in this part includes any related costs, such as architectural or engineering fees.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) &quot;Qualifying charter school&quot; means a charter school that: (a) meets standards adopted by the West Virginia Economic Development Authority for participation in the credit enhancement program or the direct loan program; and (b) is designated by the West Virginia Economic Development Authority as a qualifying charter school for purposes of participation in the credit enhancement program or the direct loan program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Authority purpose; services</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The West Virginia Economic Development Authority shall govern and oversee the Charter School Direct Loan Program and the Charter School Credit Enhancement Program. &nbsp;In overseeing these programs, the mission of the authority is to provide an efficient and cost-effective method of financing initiatives related to charter school startup, operation, and facility acquisition and improvement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Upon request, staff employed by the West Virginia Professional Charter School Board may provide staff support to the authority.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Additional powers and duties of the authority</span><span class="cs30EF9964">:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) In addition to the powers and duties of the authority identified in &sect;31-15-6, as it relates specifically to the oversight of the Charter School Direct Loan Program and the Charter School Credit Enhancement Program, the authority may:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) In accordance with Section (h) of this part, designate a charter school as a qualifying charter school for purposes of participation in the credit enhancement program or the direct loan program; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) To the extent practicable, establish geographic preferences in its lending programs to prioritize school development in rural areas of the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Except as provided in Sections (g), (h), (i), or (j) of this section, the West Virginia Economic Development Authority may not exercise power in any manner which would create general or moral obligations of the state or of any agency, department, or political subdivision of the state while administering the Charter School Direct Loan Program or the Charter School Credit Enhancement Program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The authority&#39;s area of operation shall include all areas of the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Limited obligations</span><span class="cs30EF9964">:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Except as provided in Sections (g), (h), (i), or (j) of this section, bonds, notes, and other obligations issued by the authority pursuant to this part: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Do not constitute a debt, moral obligation, or liability of the state, or of any county, city, town, school district, or any other political subdivision of the state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Do not constitute the loan of credit of the state or of any county, city, town, school district, or any other political subdivision of the state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) May not be paid from funds other than loan payments or lease revenues received from a charter school or other funds pledged by a charter school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Establishment of funds:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) There is hereby created in the State Treasury a special revenue fund designated and known as the </span><a name="_Hlk220003529"><span class="cs46AE26E6">Charter School Direct Loan Program Fund</span></a><span class="cs46AE26E6">. The fund shall be administered by the West Virginia Economic Development Authority. All interest and other returns derived from the deposit and investment of moneys in the Charter School Direct Loan Program Fund shall be credited to the fund. Any balance, including accrued interest and other returns, remaining in the fund at the end of each fiscal year shall not revert to the General Revenue Fund but shall remain in the fund and be expended as provided by this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) There is hereby created in the State Treasury a special revenue fund designated and known as the Charter School Credit Enhancement Program Fund. The fund shall be administered by the West Virginia Economic Development Authority. All interest and other returns derived from the deposit and investment of moneys in the </span><a name="_Hlk220003542"><span class="cs46AE26E6">Charter School Credit Enhancement Program Fun</span></a><span class="cs46AE26E6">d shall be credited to the fund. Any balance, including accrued interest and other returns, remaining in the fund at the end of each fiscal year shall not revert to the General Revenue Fund but shall remain in the fund and be expended as provided by this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) There is hereby created in the State Treasury a special revenue fund designated and known as the </span><a name="_Hlk220003563"><span class="cs46AE26E6">Charter School Facilities Expense Fund</span></a><span class="cs46AE26E6">. The account shall consist of moneys received pursuant to this section; moneys, if any, transferred from special revenue funds administered by the authority; or any governmental or private grants and any state general fund appropriations, if any, for the direct loan program or credit enhancement program. All interest and other returns derived from the deposit and investment of moneys in the Charter School Facilities Expense Fund shall be credited to the fund. Any balance, including accrued interest and other returns, remaining in the fund at the end of each fiscal year shall not revert to the General Revenue Fund but shall remain in the fund and be expended as provided by this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) All expenses incurred by the authority in developing and administering the direct loan program or the credit enhancement program shall be payable from the Charter School Facilities Expense Fund.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Expenditures from the Charter School Direct Loan Program Fund and the Charter School Credit Enhancement Program Fund shall be limited to the purposes set forth in this article:&nbsp;</span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, That an amount not to exceed three percent of the funds may be transferred annually to the Charter School Finance Authority Fund to cover the annual administrative costs of the direct loan program and the credit enhancement program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Charter School Direct Loan Program:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The West Virginia Economic Development Authority shall administer the Charter School Direct Loan Program. The purpose of the direct loan program is to meet charter school building construction and renovation needs, and to pay for expenses related to the startup of a new charter school, the expansion of an existing charter school, or other conditions as the authority may deem appropriate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The authority shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Establish standards for a charter school to be designated as a qualifying charter school to participate in the direct loan program;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Establish the interest rate, amortization schedules, and terms of repayment for loans created pursuant to this section. Except as otherwise provided in this section, in determining the rates and terms of a loan granted to a qualifying charter school, the authority should endeavor to provide low interest options and flexible terms;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Review requests by any eligible applicant for loans under this section, and approve or reject each request in writing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Ensure that the West Virginia Professional Charter School Board is consulted with respect to each request by qualifying charter schools for loans under this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Ensure that each loan issued pursuant to this section is secured by a promissory note, or if applicable a deed of trust, from the applicant.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Require a recipient of a loan issued pursuant to this section to repay the funds if the recipient sells or refinances any collateral associated with the loan.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) To be eligible for a loan under this subsection, an applicant shall be one of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A qualifying charter school, as determined by the authority;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A limited liability company that participates in a New Markets Tax Credit program transaction structure with an identified qualifying public charter school or schools; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A nonprofit corporation that develops and finances a facility that will be occupied by a qualifying charter school throughout the term of the loan: </span><span class="cs1489E706">Provided, </span><span class="cs46AE26E6">That in the event the facility financed under this subsection is not occupied by a qualifying charter school, the loan shall be deemed to be in default. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Loans distributed under this section shall not exceed $2,000,000 per qualifying charter school. In the event a qualifying charter school operates more than one campus, it may request a loan pursuant to this section for each campus, subject to the </span><span class="cs8258605C">$2,000,000</span><span class="cs7F85AE1E"> $2 million </span><span class="cs46AE26E6">cap per qualifying charter school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Term of loans. The term of a loan within the context of a New Markets Tax Credit as this term is defined in the Internal Revenue Code, may extend to seven years; all other loan terms under this subsection shall not exceed five years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Charter School Credit Enhancement Program</span><span class="cs30EF9964">:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The authority shall administer the Charter School Credit Enhancement Program to assist a qualifying charter school in obtaining favorable financing by providing a means of replenishing a qualifying charter school&#39;s debt service reserve fund.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The authority shall establish standards for a charter school to be designated as a qualifying charter school pursuant to this part.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) In establishing the standards for a charter school to be designated as a qualifying charter school pursuant to this part, the authority shall consider the financial strength of the qualifying charter school, as demonstrated by: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Debt service coverage ratios;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Days cash on hand; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Other financial metrics as determined by the authority; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Any other criteria the authority determines are relevant. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Based on a qualifying charter school&#39;s credit rating from at least one nationally recognized rating agency, the authority shall: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) For a rating of investment grade: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Approve a qualifying charter school for a bond issuance pursuant to this section; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Assess an annual maintenance fee of 0.10% of outstanding debt; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) For a rating of BB+ or equivalent rating:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Approve a qualifying charter school for a bond issuance pursuant to this section; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Assess an annual maintenance fee of 0.15% of outstanding debt;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) For a rating of BB or equivalent rating:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Apply the standards described in (g)(2) of this section in determining whether to approve a qualifying charter school for a bond issuance pursuant to this section; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) If the qualifying charter is approved in accordance with Subsection (3)(iii)(1), assess an annual maintenance fee of 0.25% of outstanding debt; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Adjust any maintenance fee described in this (g)(3) of this section to reflect a change in the qualifying charter school&#39;s credit rating based on a new credit rating from at least one nationally recognized rating agency. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The bonds the authority issues for a qualifying charter school are not an indebtedness of the state or of the authority but are special obligations payable solely from: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The revenues or other funds pledged by the qualifying charter school; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Amounts appropriated by the Legislature pursuant to Subsection </span><span class="csA130ECD1">(10)</span><span class="cs46AE26E6"> (11). </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) If the qualifying charter school is authorized by any entity other than the West Virginia Professional Charter School Board, the authority shall notify such authorizer that the charter school is participating in the credit enhancement program if the authority: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Designates the charter school as a qualifying charter school; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Issues bonds for the qualifying charter school under the credit enhancement program described in this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) One or more debt service reserve funds shall be established for a qualifying charter school with respect to bonds issued pursuant to the credit enhancement program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Except as provided in (g)(11) of this section, money in a debt service reserve fund may not be withdrawn from the debt service reserve fund if the amount withdrawn would reduce the level of money in the debt service reserve fund to less than the debt service reserve fund requirement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) So long as the applicable bonds issued under the credit enhancement program remain outstanding, money in a debt service reserve fund may be withdrawn in an amount that would reduce the level of money in the debt service reserve fund to less than the debt service reserve fund requirement if the money is withdrawn for the purpose of: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Paying the principal of, redemption price of, or interest on a bond when due and if no other money of the qualifying charter school is available to make the payment, as determined by the authority; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Paying any redemption premium required to be paid when the bonds are redeemed prior to maturity if no bonds will remain outstanding upon payment from the funds in the qualifying charter school&#39;s debt service reserve fund. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Money in a qualifying charter school&#39;s debt service reserve fund that exceeds the debt service reserve fund requirement may be withdrawn by the qualifying charter school. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) The authority shall annually, on or before December 1, certify to the governor the amount, if any, required to restore amounts on deposit in the debt service reserve funds of qualifying charter schools to the respective debt service reserve fund requirements, which certification shall include: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Detailed calculations supporting the certified amount; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A report on the current status of each qualifying charter school&#39;s debt service reserve fund.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) The Governor shall request from the Legislature an appropriation of the certified amount to restore amounts on deposit in the debt service reserve funds of qualifying charter schools to the respective debt service reserve fund requirements.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) The Legislature may appropriate money to the authority to restore amounts on deposit in the debt service reserve funds of qualifying charter schools to the respective debt service reserve fund requirements.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(14) A qualifying charter school that receives money from an appropriation to restore amounts on deposit in a debt service reserve fund to the debt service reserve fund requirement, shall repay the state at the time and in the manner as the authority shall require, provided that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The repayment schedule shall not exceed five years from the date of the appropriation;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The authority shall establish a minimum annual repayment amount; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The authority shall provide annual reports to the Legislature on the status of all outstanding repayment obligations.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(15) The authority may create and establish other funds for its purposes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Charter School Reserve Account contribution requirements for qualifying charter schools.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) When bonds are issued under the credit enhancement program for a qualifying charter school, the qualifying charter school shall contribute money to the reserve account in the amount determined as provided in subsection (2).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The authority shall determine the up-front and ongoing requirements for contributions of money to the reserve account for each qualifying charter school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Bond issuance:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The state may not alter, impair, or limit the rights of bondholders or persons contracting with a qualifying charter school until the bonds, including interest and other contractual obligations, are fully met and discharged. Nothing in this part precludes an alteration, impairment, or limitation if provision is made by law for the protection of bondholders or persons entering into contracts with a qualifying charter school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The authority may require a qualifying charter school to vest in the authority the right to enforce any covenant made to secure bonds issued under the credit enhancement program by making appropriate provisions in the indenture related to the qualifying charter school&#39;s bonds.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The authority may require a qualifying charter school to make covenants and agreements in indentures or in a reimbursement agreement to protect the interests of the state and to secure repayment to the state of any money received by the qualifying charter school from an appropriation to restore amounts deposited in the qualifying charter school&#39;s debt service reserve fund to the debt service reserve fund requirement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The authority may charge a fee to administer the issuance of bonds for a qualifying charter school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) Limitation on participation in Charter School Credit Enhancement Program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">At the establishment of the credit enhancement program, the authority&rsquo;s bond issuance limitation shall be $75 million. On or before January 1 of each year, the authority shall determine the credit enhancement program&#39;s bond issuance limitation.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to establish the Charter School Direct Loan Program and the Charter School Credit Enhancement Program within the West Virginia Economic Development Authority to support the growth of public charter schools.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

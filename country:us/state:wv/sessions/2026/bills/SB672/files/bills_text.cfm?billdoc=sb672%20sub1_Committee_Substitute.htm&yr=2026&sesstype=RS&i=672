@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 672 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+sb672 sub1 
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=672">&laquo; Senate Bill 672 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 672'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb672 sub1 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=672" title="HTML  - Enrolled Version  - Final Version
+ - Senate Bill 672">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb672 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=672" title="HTML  - Introduced Version
+ - Senate Bill 672">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 672 - Relating to acts for which WV Real Estate Commission may refuse, suspend, or revoke licenses&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb672+sub1.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=672"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.csF5B7C975{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs3F3AC45F{text-align:left;text-indent:0pt;margin:0pt 90pt 0pt 0pt;line-height:2}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 672</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Senator Morris</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Reported February 20, 2026, from the Committee on Government Organization]</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;30-40-19 of the Code of West Virginia, 1931, as amended, relating to acts in which the West Virginia Real Estate Commission may refuse, suspend, or revoke a license.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="csF5B7C975">ARTICLE 40. WEST VIRGINIA REAL ESTATE LICENSE ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-40-19. Refusal, suspension, or revocation of a license.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The commission may refuse a license for reasonable cause or revoke, suspend, or impose any other sanction against a licensee if the licensee:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Obtains, renews, or attempts to obtain or renew a license, for himself, herself, or another, through the submission of any application or other writing that contains false, fraudulent, or misleading information;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Makes any substantial misrepresentation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Makes any false promises or representations of a character likely to influence, persuade, or induce a person involved in a real estate transaction;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Pursues a course of misrepresentation or makes false promises or representations through agents or any medium of advertising or otherwise;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Uses misleading or false advertising;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Uses any trade name or insignia of membership in any organization in which the licensee is not a member;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Acts for more than one party in a transaction without the knowledge and written consent of all parties for whom he or she acts;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Fails, within a reasonable time, to account for or to remit moneys or other assets coming into his or her possession, which belong to others;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Commingles moneys belonging to others with his or her own funds;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Advertises or displays a &quot;for sale&quot;, &quot;for rent&quot;, or other such sign on any property without an agency relationship being established or without the owner&rsquo;s knowledge and written consent;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Advertises any property on terms other than those authorized by the owner;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) Fails to disclose, on the notice of agency relationship form promulgated by the commission, whether the licensee represents the seller, buyer, or both;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) Fails to voluntarily furnish copies of the notice of agency relationship, listing contract, sale contract, lease contract, or any other contract to each party executing the same;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) Pays or receives any rebate, profit, compensation, commission, or other valuable consideration, resulting from a real estate transaction, to or from any person other than the licensee&rsquo;s principal: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That this subsection may not be construed to prevent the sharing of compensation or other valuable consideration between licensed brokers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) Induces any person to a contract to break the contract for the purpose of substituting a new contract with a third party;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) Accepts compensation as a salesperson or associate broker for any act specified in this article from any person other than his or her broker;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) Pays compensation to any person for acts or services performed either in violation of this article or the real estate licensure laws of any other jurisdiction;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) Pays compensation to any person knowing that they will pay a portion or all of that which is received, in a manner that would constitute a violation of this article if it were paid directly by a licensee of this state;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(19) Violates any provision of this article, any rule, or any order or final decision issued by the commission;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(20) Procures an attorney for any client or customer, or solicits legal business for any attorney-at-law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(21) Engages in the unlawful or unauthorized practice of law as defined by the Supreme Court of Appeals of West Virginia;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(22) Commits or is a party to any material fraud, misrepresentation, concealment, conspiracy, collusion, trick, scheme, or other device whereby any other person relies upon the word, representation, or conduct of the licensee;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(23) Continues in the capacity of, or accepts the services of, any broker, associate broker, or salesperson who is not properly licensed;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(24) Fails to disclose any information within his or her knowledge or to produce any document, book, or record in his or her possession for inspection of and copying by the commission or its duly authorized representatives;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(25) Accepts payment other than cash or its equivalent as earnest money or other deposit unless this fact is disclosed in the contract to which the deposit relates;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(26) Accepts, takes, or charges any undisclosed compensation on expenditures made by or on behalf of the licensee&rsquo;s principal;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(27) Discriminates against any person involved in a real estate transaction which is in violation of any federal or state anti-discrimination law, including any fair housing law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(28) Fails to preserve for five years following its consummation, records relating to any real estate transaction;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(29) Fails to maintain accurate records on the broker&rsquo;s trust fund account;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(30) If a broker, fails to supervise all associate brokers and salespersons affiliated with him or her;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(31) Breaches a fiduciary duty owed by a licensee to his or her principal in a real estate transaction;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(32) Directs any party to a real estate transaction in which the licensee is involved, to any lending institution for financing or to any affiliated business with the expectation of receiving a financial incentive, rebate, or other compensation, without first obtaining from his or her principal the signed acknowledgment of and consent to the receipt of the financial incentive, rebate, or other compensation: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That this subsection may not be construed to prevent the sharing of compensation or other valuable consideration between licensed brokers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(33) Represents to any lending institution, or other interested party either verbally or through the preparation of false documents, an amount in excess of the true and actual sale price of the real estate or terms differing from those actually agreed upon;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(34) Fails to disclose to an owner the licensee&rsquo;s true position if he or she directly or indirectly through a third party purchases for himself or herself or acquires or intends to acquire any interest in or any option to purchase the property;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(35) Lends a broker&rsquo;s license to any person, including a salesperson, or permits a salesperson to operate as a broker;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(36) Has been convicted in a court of competent jurisdiction in this or any other jurisdiction of forgery, embezzlement, obtaining money under false pretense, bribery, larceny, extortion, conspiracy to defraud, any other similar offense, a crime involving moral turpitude, or a felony;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(37) Engages in any act or conduct which constitutes or demonstrates bad faith, incompetency, untrustworthiness, or dishonest, fraudulent, or improper dealing;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(38) Induces any person to alter, modify, or change another licensee&rsquo;s fee or commission for brokerage services, without that licensee&rsquo;s prior written consent;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(39) Negotiates a real estate transaction directly with any person that is represented exclusively by another broker, unless the conduct is specifically authorized by the other broker;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(40) Obtains, negotiates, or attempts to obtain or negotiate, a contract whereby the broker is entitled to a commission only to the extent that the sales price exceeds a given amount, commonly referred to as a net listing;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(41) Fails or refuses, on demand, to furnish copies of a document to a person whose signature is affixed to the document;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(42) In the case of an associate broker or salesperson, represents or attempts to represent a broker other than his or her employing broker;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(43) Fails to reduce a bona fide offer to writing;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(44) Guarantees, or authorizes or permits another licensee to guarantee, future profits which may result from a real estate transaction;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(45) Is disciplined by another jurisdiction if at least one of the grounds for that discipline is the same as or equivalent to one of the grounds for discipline in this article; </span><span class="cs68EFC440">or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(46) Engages in any other act or omission in violation of professional conduct requirements of licensees established by legislative rule of the commission</span><span class="cs68EFC440">.</span><span class="cs46AE26E6">; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(47) Leads a &quot;team&quot; as defined in this chapter outside the direct supervision, authority, and responsibility of the supervising broker of record, or holds oneself out as exercising independent broker authority without possessing a broker or associate broker license.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The provisions of this section shall be liberally construed in order to carry out the objectives and purposes of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) As used in this section:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The words &quot;convicted in a court of competent jurisdiction&quot; mean a plea of guilty or nolo contendere entered by a person or a verdict of guilt returned against a person at the conclusion of a trial;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A certified copy of a conviction order entered in a court is sufficient evidence to demonstrate a person has been convicted in a court of competent jurisdiction.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Every person licensed by the commission has an affirmative duty to report, in a timely manner, any known or observed violation of this article or the rules, orders, or final decisions of the commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The revocation of a broker&rsquo;s license shall automatically suspend the license of every associate broker and salesperson affiliated with the broker: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the commission shall issue a replacement license for any licensee so affected to a new broker, without charge, if a proper application is submitted to the commission during the same license term.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Nothing in this section shall be construed to prohibit a licensee salesperson from participating in, coordinating, or leading a real estate team provided that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1)The team operates under a single supervising broker of record;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The supervising broker retains full responsibility for supervision, compliance, advertising, trust accounts, and agency disclosures; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) No team member represents or implies that he or she is acting as a broker unless duly licensed as such.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) &nbsp;Each real estate team must identify a team lead, who shall register with the commission upon acceptance of a team lead role. Thereafter, team leads shall register with the commission on an annual basis.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) For identified team leads, three additional hours of education shall be required on an annual basis from a team lead-centered education curriculum approved by the commission.</span><span class="csF3C8A5A3"> </span></p><p class="cs3F3AC45F"><span class="cs7B75DFFE">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

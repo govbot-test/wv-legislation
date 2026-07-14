@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5015 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Engrossed Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5015">&laquo; House Bill 5015 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5015'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5015 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5015" title="HTML  - Committee Substitute (1)
+ - House Bill 5015">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5015 sub1 enr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5015" title="HTML  - Enrolled Version  - Final Version
+ - House Bill 5015">
+Enrolled Version  - Final Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5015 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5015" title="HTML  - Introduced Version
+ - House Bill 5015">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5015 - Relating to the Respiratory Care Interstate Compact&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5015+sub1+eng.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5015"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs7788C6BC{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs5251900E{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2.1}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">ENGROSSED</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5015</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegate Jeffries </span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Originating in the Committee on Government Organization; Reported on February 19, 2026]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new section, designated &sect;30-34-6b; and to amend the code by adding a new article, designated &sect;30-34A-1, &sect;30-34A-2, &sect;30-34A-3, &sect;30-34A-4, &sect;30-34A-5, &sect;30-34A-6, &sect;30-34A-7, &sect;30-34A-8, &sect;30-34A-9, &sect;30-34A-10, &sect;30-34A-11, &sect;30-34A-12, and &sect;30-34A-13, relating to the Respiratory Care Interstate Compact; permitting and requiring the Board of Respiratory Care Practitioners to perform criminal history record checks; enacting the Respiratory Care Interstate Compact; providing definitions; authorizing interstate practice of respiratory therapy; establishing the Respiratory Care Interstate Compact Commission; providing for licensure privileges, enforcement, rulemaking, and data sharing; providing for withdrawal, severability, and effective dates; and declaring legislative intent.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 34. BOARD OF RESPIRATORY CARE PRACTITIONERS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34-6b. Criminal history record checks.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The West Virginia Board of Respiratory Care Practitioners may require state and national criminal history record checks for the purpose of issuing licenses. The West Virginia Board of Respiratory Care Practitioners shall require a new licensee to submit to a state and national criminal history record check, as set forth in this section, at the time of initial licensure. The board shall also require any applicant for initial privilege to practice in a remote state under the Respiratory Care Interstate Compact to submit to a state and national criminal history record check, as set forth in this section, if the applicant did not complete a criminal history record check at the time of the applicant&rsquo;s initial licensure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The applicant shall meet all requirements necessary to accomplish the state and national criminal history record check, including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Submitting fingerprints for the purposes set forth in this subsection; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Authorizing the board, the West Virginia State Police, and the Federal Bureau of Investigation to use all records submitted and produced for the purpose of screening the applicant for a license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The results of the state and national criminal history record check may not be released to or by a private entity except:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) To the individual who is the subject of the criminal history record check;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) With the written authorization of the individual who is the subject of the criminal history record check; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Pursuant to a court order.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The criminal history record check and related records are not public records for the purposes of &sect;29B-1-1</span><span class="cs1489E706"> et seq. </span><span class="cs46AE26E6">of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The applicant shall ensure that the criminal history record check is completed as soon as possible after the date of the original application for privilege to practice.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The applicant shall pay the actual costs of the fingerprinting and criminal history record check.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The board may propose rules or amendments to existing rules for legislative approval, pursuant to the provisions of &sect;29A-3-1</span><span class="cs1489E706"> et seq. </span><span class="cs46AE26E6">of this code, or may promulgate emergency rules, pursuant to &sect;29A-3-15 of this code, to comply with the provisions of this section.</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 34A. RESPIRATORY CARE INTERSTATE COMPACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-1. Title and purpose.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) This compact shall be known and cited as the &quot;Respiratory Care Interstate Compact.&quot; The purpose of this compact is to facilitate the interstate practice of respiratory therapy with the goal of improving public access to respiratory therapy services by providing respiratory therapists licensed in a member state the ability to practice in other member states. The compact preserves the regulatory authority of states to protect public health and safety through the current system of State licensure. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) This compact is designed to achieve the following objectives:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Increase public access to respiratory therapy services by creating a responsible, streamlined pathway for licensees to practice in member states with the goal of improving outcomes for patients;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Enhance states&rsquo; ability to protect the public&rsquo;s health and safety; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Promote the cooperation of member states in regulating the practice of respiratory therapy within those member states;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Ease administrative burdens on states by encouraging the cooperation of member states in regulating multi-state respiratory therapy practice;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Support relocating active military members and their spouses; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Promote mobility and address workforce shortages.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">As used in this compact, unless the context requires otherwise, the following definitions shall apply:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Active military member&quot; means any person with a full-time duty status in the armed forces of the United States, including members of the National Guard and Reserve.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Adverse action&quot; means any administrative, civil, equitable, or criminal action permitted by a state&rsquo;s laws which is imposed by any state authority with regulatory authority over respiratory therapists, such as license denial, censure, revocation, suspension, probation, monitoring of the licensee, or restriction on the licensee&rsquo;s practice, not including participation in an alternative program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Alternative program&quot; means a non-disciplinary monitoring or practice remediation process applicable to a respiratory therapist approved by any state authority with regulatory authority over respiratory therapists. This includes, but is not limited to, programs to which licensees with substance abuse or addiction issues are referred in lieu of adverse action.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Charter member states&quot; means those member states who were the first seven states to enact the compact into the laws of their state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Commission&quot; or &quot;Respiratory care interstate compact commission&quot; means the government instrumentality and body politic whose membership consists of all member states that have enacted the compact.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Commissioner&quot; means the individual appointed by a member state to serve as the member of the Commission for that member state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Compact&quot; means the respiratory care interstate compact.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Compact privilege&quot; means the authorization granted by a remote state to allow a licensee from another member state to practice as a respiratory therapist in the remote state</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">under the remote state&rsquo;s laws and rules. The practice of respiratory therapy occurs in the member state where the patient is located at the time of the patient encounter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Criminal background check&quot; means the submission by the member state of fingerprints or other biometric-based information on license applicants at the time of initial licensing for the purpose of obtaining that applicant&rsquo;s criminal history record information, as defined in 28 C.F.R. &sect; 20.3(d) or successor provision, from the Federal Bureau of Investigation and the state&rsquo;s criminal history record repository, as defined in 28 C.F.R. &sect; 20.3(f) or successor provision. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Data system&quot; means the commission&rsquo;s repository of information about licensees as further set forth in section 8 of this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Domicile&quot; means the jurisdiction which is the licensee&rsquo;s principal home for legal purposes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Encumbered license&quot; means a license that a state&rsquo;s respiratory therapy licensing authority has limited in any way.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Executive committee&quot; means a group of directors elected or appointed to act on behalf of, and within the powers granted to them by the commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Home state&quot; except as set forth in &sect;30-34A-5 of this code, means the member state that is the licensee&rsquo;s primary domicile.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Home state license&quot; means an active license to practice respiratory therapy in a home state that is not an encumbered license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Jurisprudence requirement&quot; means an assessment of an individual&rsquo;s knowledge of the state laws and regulations governing the practice of respiratory therapy in such state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Licensee&quot; means an individual who currently holds an authorization from the state to practice as a respiratory therapist.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Member state&quot; means a state that has enacted the compact and been admitted to the commission in accordance with the provisions herein and commission rules.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Model compact&quot; means the model for the respiratory care interstate compact on file</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">with the council of state governments or other entity as designated by the commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Remote state&quot; means a member state where a licensee is exercising or seeking to exercise the compact privilege.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Respiratory therapist&quot; or &quot;respiratory care practitioner&quot; means an individual who holds a credential issued by the national board for respiratory care (or its successor) and holds a license in a state to practice respiratory therapy. For purposes of this compact, any other title or status adopted by a state to replace the term &quot;respiratory therapist&quot; or &quot;respiratory care practitioner&quot; shall be deemed synonymous with &quot;respiratory therapist&quot; and shall confer the same rights and responsibilities to the licensee under the provisions of this compact at the time of its enactment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Respiratory therapy,&quot; &quot;respiratory therapy practice,&quot; &quot;respiratory care,&quot; &quot;the practice of respiratory care,&quot; and &quot;the practice of respiratory therapy&quot; means the care and services provided by or under the direction and supervision of a respiratory therapist or respiratory care practitioner.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Respiratory therapy licensing authority&quot; means the agency, board, or other body of a state that is responsible for licensing and regulation of respiratory therapists.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Rule&quot; means a regulation promulgated by an entity that has the force and effect of law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Scope of practice&quot; means the procedures, actions, and processes a respiratory therapist licensed in a state or practicing under a compact privilege in a state is permitted to undertake in that state and the circumstances under which the respiratory therapist is permitted to undertake those procedures, actions, and processes. such procedures, actions, and processes, and the circumstances under which they may be undertaken may be established through means, including, but not limited to, statute, regulations, case law, and other processes available to the state respiratory therapy licensing authority or other government agency.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Significant investigative information&quot; means information, records, and documents received or generated by a state respiratory therapy licensing authority pursuant to an investigation for which a determination has been made that there is probable cause to believe that the licensee has violated a statute or regulation that is considered more than a minor infraction for which the state respiratory therapy licensing authority could pursue adverse action against the licensee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;State&quot; means any state, commonwealth, district, or territory of the United States.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-3. State participation in the compact.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) In order to participate in this compact and thereafter continue as a member state, a member state shall:</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	</span><span class="cs46AE26E6">(1) Enact a compact that is not materially different from the model compact;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) License respiratory therapists; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Participate in the commission&rsquo;s data system;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Have a mechanism in place for receiving and investigating complaints against licensees and compact privilege holders;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Notify the commission, in compliance with the terms of this compact and commission rules, of any adverse action against a licensee, a compact privilege holder, or a license applicant; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Notify the commission, in compliance with the terms of this compact and commission rules, of the existence of significant investigative information; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Comply with the rules of the commission; &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Grant the compact privilege to a holder of an active home state license and otherwise meet the applicable requirements of &sect;30-34A-4 of this code in a member state; and,</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Complete a criminal background check for each new licensee at the time of initial licensure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Where expressly authorized or permitted by federal law, whether such federal law is in effect prior to, at, or after the time of a member state&rsquo;s enactment of this compact, a member state&rsquo;s enactment of this compact shall hereby authorize the member state&rsquo;s respiratory therapy licensing authority to perform criminal background checks as defined herein. The absence of such a federal law as described in this subsection shall not prevent or preclude such authorization where it may be derived or granted through means other than the enactment of this compact. &nbsp;&nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Nothing in this compact prohibits a member state from charging a fee for granting &nbsp;and renewing the compact privilege. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-4. Compact privilege requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a)(1) Hold and maintain an active home state license as a respiratory therapist; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Hold and maintain an active credential from the National Board for Respiratory Care (or its successor) that would qualify them for licensure in the remote state in which they are seeking the privilege; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Have not had any adverse action against a license within the previous two years; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Notify the commission that the licensee is seeking the compact privilege within a remote state(s); </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Pay any applicable fees, including any state and commission fees and renewal fees, for the compact privilege;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Meet any jurisprudence requirements established by the remote state in which the licensee is seeking a compact privilege; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Report to the commission adverse action taken by any non-member state within 30 days from the date the adverse action is taken; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Report to the commission, when applying for a compact privilege, the address of the licensee&rsquo;s domicile and thereafter promptly report to the commission any change in the address of the licensee&rsquo;s domicile within thirty days of the effective date of the change in address; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Consent to accept service of process by mail at the licensee&rsquo;s domicile on record with the commission &nbsp;with respect to any action brought against the licensee by the commission or a member state, and consent to accept service of a subpoena by mail &nbsp;at the licensee&rsquo;s domicile &nbsp;on record with the commission with respect to any action brought or investigation conducted by the commission or a member state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The compact privilege is valid until the expiration date or revocation of the home state license unless terminated pursuant to adverse action. &nbsp;The licensee must comply with all of the requirements of subsection (a) above, to maintain the compact privilege in a remote state. If those requirements are met, no adverse actions are taken, and the licensee has paid any applicable compact privilege renewal fees, then the licensee will maintain the licensee&rsquo;s compact privilege.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A licensee providing respiratory therapy in a remote state under the compact privilege shall function within the scope of practice authorized by the remote state for the type of respiratory therapist license the licensee holds. &nbsp;Such procedures, actions, processes, and the circumstances under which they may be undertaken may be established through means, including, but not limited to, statute, regulations, case law, and other processes available to the state respiratory therapy licensing authority or other government agency. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) If a licensee&rsquo;s compact privilege in a remote state is removed by the remote state, the individual shall lose or be ineligible for the compact privilege in that remote state until the compact privilege is no longer limited or restricted by that state. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) If a home state license is encumbered, the licensee shall lose the compact privilege in all remote states until the following occur: &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The home state license is no longer encumbered; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Two years have elapsed from the date on which the license is no longer encumbered due to the adverse action. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Once a licensee with a restricted or limited license meets the requirements of subsection (e)(1) and (2), the licensee must also meet the requirements of subsection a to obtain a compact privilege in a remote state. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-5. Active military member or spouse.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) An active military member, or their spouse, shall designate a home state where the individual has a current license in good standing. The individual may retain the home state designation during the period the service member is on active duty.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An active military member and their spouse shall not be required to pay to the commission for a compact privilege any fee that may otherwise be charged by the commission. &nbsp;</span><span class="csEF05ACC">	</span><span class="cs46AE26E6">(c) If a remote state chooses to charge a fee for a compact privilege, it may choose to charge a reduced fee or no fee to an active military member and their spouse for a compact privilege. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-6. Adverse actions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A member state in which a licensee is licensed shall have authority to impose adverse action against the license issued by that member state. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A member state may take adverse action based on significant investigative information of a remote state or the home state, so long as the member state follows its own procedures for imposing adverse action. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Nothing in this compact shall override a member state&rsquo;s decision that participation in an alternative program may be used in lieu of adverse action and that such participation shall remain non-public if required by the member state&rsquo;s laws. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A remote state shall have the authority to: &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Take adverse actions as set forth herein against a licensee&rsquo;s compact privilege in that state; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Issue subpoenas for both hearings and investigations that require the attendance and testimony of witnesses, and the production of evidence. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)(1) Subpoenas may be issued by a respiratory therapy licensing authority in a member state for the attendance and testimony of witnesses and the production of evidence. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Subpoenas issued by a respiratory therapy licensing authority in a member state for the attendance and testimony of witnesses shall be enforced in the latter state by any court of competent jurisdiction in the latter state, according to the practice and procedure of that court applicable to subpoenas issued in proceedings pending before it. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Subpoenas issued by a respiratory therapy licensing authority in a member state for production of evidence from another member state shall be enforced in the latter state, according to the practice and procedure of that court applicable to subpoenas issued in the proceedings</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">pending before it. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The issuing authority shall pay any witness fees, travel expenses, mileage, and other fees required by the service statutes of the state where the witnesses or evidence are located;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Unless otherwise prohibited by state law, recover from the licensee the costs of investigations and disposition of cases resulting from any adverse action taken against that licensee; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Notwithstanding subsection (d)(2), a member state may not issue a subpoena to gather evidence of conduct in another member state that is lawful in such other member state for the purpose of taking adverse action against a licensee&rsquo;s compact privilege or application for a compact privilege in that member state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Nothing in this compact authorizes a member state to impose discipline against a respiratory therapist&rsquo;s compact privilege in that member state for the individual&rsquo;s otherwise lawful practice in another state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Joint investigations:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) In addition to the authority granted to a member state by its respective respiratory therapy practice act or other applicable state law, a member state may participate with other member states in joint investigations of licensees, </span><span class="cs1489E706">Provided</span><span class="cs46AE26E6">, however, That a member state receiving such a request has no obligation to respond to any subpoena issued regarding an investigation of conduct or practice that was lawful in a member state at the time it was undertaken. &nbsp;</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	</span><span class="cs46AE26E6">(2) Member states shall share any significant investigative information, litigation, or compliance materials in furtherance of any joint or individual investigation initiated under the compact, in sharing such information between member state respiratory therapy licensing authorities, all information obtained shall be kept confidential, except as otherwise mutually agreed upon by the sharing and receiving member state(s). </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) Nothing in this compact may permit a member state to take any adverse action against a licensee or holder of a compact privilege for conduct or practice that was legal in the member state at the time it was undertaken.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) Nothing in this compact may permit a member state to take disciplinary action against a licensee or holder of a compact privilege for conduct or practice that was legal in the member state at the time it was undertaken. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-7. Respiratory care interstate compact commission.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The compact member states hereby create and establish a joint government agency whose membership consists of all member states that have enacted the compact known as the respiratory care interstate compact commission. The commission is an instrumentality of the compact member states acting jointly and not an instrumentality of any one state. The commission shall come into existence on or after the effective date of the compact, as set forth in &sect;30-34A- 11 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Membership, voting, and meetings. &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Each member state shall have and be limited to one commissioner selected by that member state&rsquo;s respiratory therapy licensing authority. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The commissioner shall be an administrator or their designated staff member of the member state&rsquo;s respiratory therapy licensing authority.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The commission shall by rule or bylaw establish a term of office for commissioners and may by rule or bylaw establish term limits. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The commission may recommend to a member state the removal or suspension any commissioner from office. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) A member state&rsquo;s respiratory therapy licensing authority shall fill any vacancy of its commissioner occurring on the commission within 60 days of the vacancy. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Each commissioner shall be entitled to one vote on all matters before the commission requiring a vote by commissioners.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) A commissioner shall vote in person or by such other means as provided in the bylaws.</span><span class="csEF05ACC"> &nbsp;</span><span class="cs46AE26E6">The bylaws may provide for commissioners to meet by telecommunication, videoconference, or other means of communication.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) The commission shall meet at least once during each calendar year. &nbsp;Additional meetings may be held as set forth in the bylaws. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The commission shall have the following powers: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Establish and amend the fiscal year of the commission; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Establish and amend bylaws and policies, including but not limited to, a code of conduct and conflict of interest; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Establish and amend rules, which shall be binding in all member states; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Maintain its financial records in accordance with the bylaws; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Meet and take such actions as are consistent with the provisions of this compact, the commission&rsquo;s rules, and the bylaws; &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Initiate and conduct legal proceedings or actions in the name of the commission, provided that the standing of any respiratory therapy licensing authority to sue or be sued under applicable law shall not be affected; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Maintain and certify records and information provided to a member state as the authenticated business records of the commission, and designate an agent to do so on the commission&rsquo;s behalf; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Purchase and maintain insurance and bonds; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Accept or contract for services of personnel, including, but not limited to, employees of a member state; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Conduct an annual financial review; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) Hire employees, elect or appoint officers, fix compensation, define duties, grant such individuals appropriate authority to carry out the purposes of the compact, and establish the commission&rsquo;s personnel policies and programs relating to conflicts of interest, qualifications of personnel, and other related personnel matters;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Assess and collect fees;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) Accept any and all appropriate gifts, donations, grants of money, other sources of revenue, equipment, supplies, materials, and services, and receive, utilize, and dispose of the same, provided that at all times:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The commission shall avoid any appearance of impropriety; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The commission shall avoid any appearance of conflict of interest.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(14) Lease, purchase, retain, own, hold, improve, or use any property, real, personal, or mixed, or any undivided interest therein; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(15) Sell, convey, mortgage, pledge, lease, exchange, abandon, or otherwise dispose of any property real, personal, or mixed; &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;(16) Establish a budget and make expenditures; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(17) Borrow money in a fiscally responsible manner;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(18) Appoint committees, including standing committees, composed of commissioners state regulators, state legislators or their representatives, and consumer representatives, and</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">such other interested persons as may be designated in this compact and the bylaws</span><span class="csEF05ACC">;</span></p><p class="cs7788C6BC"><span class="cs46AE26E6">(19) Provide and receive information from, and cooperate with, law enforcement agencies;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(20) Establish and elect an executive committee, including a chair, vice-chair, secretary, treasurer, and such other offices as the commission shall establish by rule or bylaw; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(21) Enter into contracts or arrangements for the management of the affairs of the commission; &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(22) Determine whether a state&rsquo;s adopted language is materially different from the model compact language such that the state would not qualify for participation in the compact; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(23) Perform such other functions as may be necessary or appropriate to achieve the purposes of this compact. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The executive committee. &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The executive committee shall have the power to act on behalf of the commission</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">according to the terms of this compact. &nbsp;The powers, duties, and responsibilities of the executive committee shall include:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Overseeing the day-to-day activities of the administration of the compact, including enforcement and compliance with the provisions of the compact, its rules and bylaws, and other such duties as deemed necessary; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Recommending to the commission changes to the rules or bylaws, changes to this compact legislation, fees charged to compact member states, fees charged to licensees, and other fees;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Ensuring compact administration services are appropriately provided, including by contract; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Preparing and recommending the budget;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Maintaining financial records on behalf of the commission; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Monitoring compact compliance of member states and providing compliance reports to the commission;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) Establishing additional committees as necessary; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) Exercising the powers and duties of the commission during the interim between commission meetings, except for adopting or amending rules, adopting or amending bylaws, and exercising any other powers and duties expressly reserved to the commission by rule or bylaw; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) Performing other duties as provided in the rules or bylaws of the commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The executive committee shall be composed of up to nine members, as further set forth in the bylaws of the commission: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Seven voting members who are elected by the commission from the current membership of the commission; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Two ex-officio, non -voting members.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The commission may remove any member of the executive committee as provided in</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">the commission&rsquo;s bylaws. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The executive committee shall meet at least annually.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Executive committee meetings shall be open to the public, except that the executive committee may meet in a closed, non-public meeting as provided in subsection (e) of this section;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The executive committee shall give advance notice of its meetings, posted on its website and as determined to provide notice to persons with an interest in the business of the commission; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The executive committee may hold a special meeting in accordance with subsection (e) below. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The commission shall adopt and provide to the member states an annual report.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Meetings of the commission. &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) All meetings of the commission that are not closed pursuant to &sect; 30-34a-7(e)(4) of this code shall be open to the public. Notice of public meetings shall be posted on the commission&rsquo;s website at least 30 days prior to the public meeting. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Notwithstanding </span><a name="_Hlk220516041"><span class="cs46AE26E6">&sect;30-34A-</span></a><span class="cs46AE26E6">7(e)(1) of this code, the commission may convene an emergency public meeting by providing at least 24 hours prior notice on the commission&rsquo;s website, and any other means as provided in the commission&rsquo;s rules, for any of the reasons it may dispense with notice of proposed rulemaking under &sect;30-34A-9(g) of this code, the commission&rsquo;s legal counsel shall certify that one of the reasons justifying an emergency public meeting has been met.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Notice of all commission meetings shall provide the time, date, and location of the meeting, and if the meeting is to be held or accessible via telecommunication, video conference, or other electronic means, the notice shall include the mechanism for access to the meeting. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The commission or the executive committee may convene in a closed, non-public meeting for the commission or executive committee to receive or solicit legal advice or to discuss: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Non-compliance of a member state with its obligations under the compact; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The employment, compensation, discipline or other matters, practices or procedures related to specific employees; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Current or threatened discipline of a licensee or compact privilege holder by the commission or by a member state&rsquo;s respiratory therapy licensing authority;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Current, threatened, or reasonably anticipated litigation; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Negotiation of contracts for the purchase, lease, or sale of goods, services, or real estate; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Accusing any person of a crime or formally censuring any person;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) Trade secrets or commercial or financial information that is privileged or confidential; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) Information of a personal nature where disclosure would constitute a clearly unwarranted invasion of personal privacy; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) Investigative records compiled for law enforcement purposes;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(J) Information related to any investigative reports prepared by or on behalf of or for use of the commission or other committee charged with responsibility of investigation or determination of compliance issues pursuant to the compact;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(K) Legal advice; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(L) Matters specifically exempted from disclosure by federal or member state law; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(M) Other matters as promulgated by the commission by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) If a meeting, or portion of a meeting, is closed, the presiding officer shall state that the meeting will be closed and reference each relevant exempting provision, and such reference shall be recorded in the minutes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The commission shall keep minutes in accordance with commission rules and bylaws. All documents considered in connection with an action shall be identified in such minutes. All minutes and documents of a closed meeting shall remain under seal, subject to release only by a majority vote of the commission or order of a court of competent jurisdiction.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Financing of the commission. &ndash;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The commission shall pay, or provide for the payment of, the reasonable expenses of its establishment, organization, and ongoing activities. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The commission may accept any and all appropriate revenue sources as provided herein. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The commission may levy on and collect an annual assessment from each member state and impose fees on licensees of member states to whom it grants a compact privilege to cover the cost of the operations and activities of the commission and its staff. The aggregate annual assessment amount for member states, if any, shall be allocated based upon a formula that the commission shall promulgate by rule. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The commission shall not incur obligations of any kind prior to securing the funds or a loan adequate to meet the same; nor shall the commission pledge the credit of any of the member states, except by and with the authority of the member state. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The commission shall keep accurate accounts of all receipts and disbursements. The receipts and disbursements of the commission shall be subject to the financial review and accounting procedures established under its bylaws. However, all receipts and disbursements of funds handled by the commission shall be subject to an annual financial review by a certified or &nbsp;&nbsp;licensed public accountant, and the report of the financial review shall be included in and become part of the annual report of the commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Qualified immunity, defense, and indemnification. &ndash; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Nothing herein shall be construed as a limitation on the liability of any licensee for professional malpractice or misconduct, which shall be governed solely by any other applicable state laws. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The member states, commissioners, officers, executive directors, employees, and agents of the commission shall be immune from suit and liability, both personally and in their official capacity, for any claim for damage to or loss of property or personal injury or other civil liability caused by or arising out of any actual or alleged act, error, or omission that occurred, or that the person against whom the claim is made had a reasonable basis for believing occurred within the scope of commission employment, duties or responsibilities; that nothing in this subsection &nbsp;shall be construed to protect any such person from suit or liability for any damage, loss, injury, or liability caused by the intentional or willful or wanton misconduct of that person. The procurement of insurance of any type by the commission shall not in any way compromise or limit the immunity granted hereunder.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The commission shall defend any commissioner, officer, executive director, employee, and agent of the commission in any civil action seeking to impose liability arising out of any actual or alleged act, error, or omission that occurred within the scope of commission employment, duties, or responsibilities, or as determined by the commission that the person against whom the claim is made had a reasonable basis for believing occurred within the scope of commission employment, duties, or responsibilities; provided that nothing herein shall be construed to prohibit that person from retaining their own counsel at their own expense; and provided further, that the actual or alleged act, error, or omission did not result from that person&rsquo;s intentional or willful or wanton misconduct. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The commission shall indemnify and hold harmless any commissioner, member, officer, executive director, employee, and agent of the commission for the amount of any settlement or judgment obtained against that person arising out of any actual or alleged act, error, or omission that occurred within the scope of commission employment, duties, or responsibilities, or that such person had a reasonable basis for believing occurred within the scope of commission employment, duties, or responsibilities, provided that the actual or alleged act, error, or omission did not result from the intentional or willful or wanton misconduct of that person. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Nothing in this compact shall be interpreted to waive or otherwise abrogate a member state&rsquo;s state action immunity or state action affirmative defense with respect to antitrust claims under the Sherman Act, Clayton Act, or any other state or federal antitrust or anticompetitive law or regulation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Nothing in this compact shall be construed to be a waiver of sovereign immunity by the member states or by the commission.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-8. Data system.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The commission shall provide for the development, maintenance, operation, and utilization of a coordinated database and reporting system containing licensure, adverse action, and the presence of significant investigative information.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Notwithstanding any other provision of state law to the contrary, a member state shall submit a uniform data set to the data system as required by the rules of the commission, including but not limited to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Identifying information; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Licensure data; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Adverse actions against a licensee, license applicant, or compact privilege holder and information related thereto; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Non-confidential information related to alternative program participation, the beginning and ending dates of such participation, and other information related to such participation not made confidential under member state law; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Any denial of application for licensure, and the reason(s) for such denial; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The presence of current significant investigative information; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Other information that may facilitate the administration of this compact or the protection of the public, as determined by the rules of the commission. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) No member state shall submit any information which constitutes criminal history record information, as defined by applicable federal law, to the data system established hereunder. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The records and information provided to a member state pursuant to this compact or through the data system, when certified by the commission or an agent thereof, shall constitute the authenticated business records of the commission, and shall be entitled to any associated hearsay exception in any relevant judicial, quasi-judicial or administrative proceedings in a</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">member state.</span><span class="csEF05ACC"> </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Significant investigative information pertaining to a licensee in any member state will only be available to other member states.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) It is the responsibility of the member states to report any adverse action against a licensee and to monitor the database to determine whether adverse action has been taken against a licensee. Adverse action information pertaining to a licensee in any member state will be available to any other member state. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Member states contributing information to the data system may designate information that may not be shared with the public without the express permission of the contributing state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Any information submitted to the data system that is subsequently expunged pursuant to federal law or the laws of the member state contributing the information shall be removed from the data system.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-9. Rulemaking.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The commission shall promulgate reasonable rules in order to effectively and efficiently implement and administer the purposes and provisions of the compact. A rule shall be invalid and have no force or effect only if a court of competent jurisdiction holds that the rule is invalid because the commission exercised its rulemaking authority in a manner that is beyond the scope and purposes of the compact, or the powers granted hereunder, or based upon another applicable standard of review.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) For purposes of the compact, the rules of the commission shall have the force of law in each member state. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The commission shall exercise its rulemaking powers pursuant to the criteria set forth in this section and the rules adopted thereunder. Rules shall become binding as of the date specified in each rule. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) If a majority of the legislatures of the member states rejects a rule or portion of a rule, by enactment of a statute or resolution in the same manner used to adopt the compact within four years of the date of adoption of the rule, then such rule shall have no further force and effect in any member state. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Rules shall be adopted at a regular or special meeting of the commission. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Prior to adoption of a proposed rule, the commission shall hold a public hearing and allow persons to provide oral and written comments, data, facts, opinions, and arguments. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Prior to adoption of a proposed rule by the commission, and at least 30 days in advance of the meeting at which the commission will hold a public hearing on the proposed rule, the commission shall provide a notice of proposed rulemaking: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) On the website of the commission or other publicly accessible platform; &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) To persons who have requested notice of the commission&rsquo;s notices of proposed rulemaking; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) In such other way(s) as the commission may by rule specify.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The notice of proposed rulemaking shall include:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The time, date, and location of the public hearing at which the commission will hear public comments on the proposed rule and, if different, the time, date, and location of the meeting where the commission will consider and vote on the proposed rule; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If the hearing is held via telecommunication, video conference, or other electronic means, the commission shall include the mechanism for access to the hearing in the notice of proposed rulemaking;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The text of the proposed rule and the reason therefor; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) A request for comments on the proposed rule from any interested person; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The manner in which interested persons may submit written comments.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) All hearings will be recorded. A copy of the recording and all written comments and documents received by the commission in response to the proposed rule shall be available to the public. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) Nothing in this section shall be construed as requiring a separate hearing on each rule. Rules may be grouped for the convenience of the commission at hearings required by this section. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) The commission shall, by majority vote of all commissioners, take final action on the proposed rule based on the rulemaking record and the full text of the rule. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The commission may adopt changes to the proposed rule provided the changes are consistent with the original purpose of the proposed Rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The commission shall provide an explanation of the reasons for substantive changes made to the proposed rule as well as reasons for substantive changes not made that were recommended by commenters.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The commission shall determine a reasonable effective date for the rule. Except for an emergency as provided in this article, the effective date of the rule shall be no sooner than 30 days after issuing the notice that it adopted or amended the rule. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(l) Upon determination that an emergency exists, the commission may consider and adopt an emergency rule with 24 hours&rsquo; notice, and with opportunity to comment, provided that the usual rulemaking procedures provided in the compact and in this section shall be retroactively applied to the rule as soon as reasonably possible, in no event later than 90 days after the effective date of the rule. For the purposes of this provision, an emergency rule is one that must be adopted immediately in order to: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Meet an imminent threat to public health, safety, or welfare; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Prevent a loss of commission or member state funds; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Meet a deadline for the promulgation of a rule that is established by federal law or rule; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Protect public health and safety.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(m) The commission or an authorized committee of the commission may direct revisions to a previously adopted rule for purposes of correcting typographical errors, errors in format, errors in consistency, or grammatical errors. Public notice of any revisions shall be posted on the website of the commission. The revision shall be subject to challenge by any person for a period of 30 days after posting. The revision may be challenged only on grounds that the revision results in a material change to a rule. A challenge shall be made in writing and delivered to the commission prior to the end of the notice period. If no challenge is made, the revision will take effect without further action. If the revision is challenged, the revision may not take effect without the approval of the commission. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(n) No member state&rsquo;s rulemaking process or procedural requirements shall apply to the commission. The commission shall have no authority over any member state&rsquo;s rulemaking process or procedural requirements that do not pertain to the compact. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(o) Nothing in this compact, nor any rule or regulation of the commission, shall be construed to limit, restrict, or in any way reduce the ability of a member state to enact and enforce laws, regulations, or other rules related to the practice of respiratory therapy in that state, where those laws, regulations, or other rules are not inconsistent with the provisions of this compact.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-10. Oversight, dispute resolution, and enforcement.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Oversight. &ndash; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The executive and judicial branches of state government in each member state shall enforce this compact and take all actions necessary and appropriate to implement the compact.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Venue is proper and judicial proceedings by or against the commission shall be brought solely and exclusively in a court of competent jurisdiction where the principal office of the commission is located. The commission may waive venue and jurisdictional defenses to the extent it adopts or consents to participate in alternative dispute resolution proceedings. Nothing herein shall affect or limit the selection or propriety of venue in any action against a licensee for professional malpractice, misconduct or any such similar matter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The commission shall be entitled to receive service of process in any proceeding regarding the enforcement or interpretation of the compact and shall have standing to intervene in such a proceeding for all purposes. Failure to provide the commission service of process shall render a judgment or order void as to the commission, this compact, or promulgated rules.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Default, technical assistance, and termination. &ndash; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) If the commission determines that a member state has defaulted in the performance of its obligations or responsibilities under this compact or the promulgated rules, the commission shall provide written notice to the defaulting state. The notice of default shall describe the default, the proposed means of curing the default, and any other action that the commission may take, and shall offer training and specific technical assistance regarding the default. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The commission shall provide a copy of the notice of default to the other member states. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If a state in default fails to cure the default, the defaulting state may be terminated from the compact upon an affirmative vote of a majority of the commissioners of the member states, and all rights, privileges and benefits conferred on that state by this compact may be terminated on the effective date of termination. A cure of the default does not relieve the offending state of obligations or liabilities incurred during the period of default. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Termination of membership in the compact shall be imposed only after all other means of securing compliance have been exhausted. Notice of intent to suspend or terminate shall be given by the commission to the governor, the majority and minority leaders of the defaulting state&rsquo;s legislature, the defaulting state&rsquo;s respiratory therapy licensing authority and each of the member states&rsquo; respiratory therapy licensing authorities. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A state that has been terminated is responsible for all assessments, obligations, and liabilities incurred through the effective date of termination, including obligations that extend beyond the effective date of termination, if necessary. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Upon the termination of a state&rsquo;s membership from this compact, that state shall immediately provide notice to all licensees and compact privilege holders (of which the commission has a record) within that state of such termination. The terminated state shall continue to recognize all licenses granted pursuant to this compact for a minimum of 180 days after the date of said notice of termination. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The commission shall not bear any costs related to a state that is found to be in default or that has been terminated from the compact, unless agreed upon in writing between the commission and the defaulting state. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The defaulting state may appeal the action of the commission by petitioning the U.S. District Court for the District of Columbia or the federal district where the commission has its principal offices. The prevailing party shall be awarded all costs of such litigation, including reasonable attorney&rsquo;s fees. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) Dispute resolution. &ndash; </span></p><p class="cs5251900E"><span class="cs46AE26E6">(1) Upon request by a member state, the commission shall attempt to resolve disputes related to the compact that arise among member states and between member and non -member states.</span></p><p class="cs5251900E"><span class="cs46AE26E6">(2) The commission shall promulgate a rule providing for both mediation and binding dispute resolution for disputes, as appropriate. </span></p><p class="cs5251900E"><span class="cs46AE26E6">(j) Enforcement. &ndash; &nbsp;</span></p><p class="cs5251900E"><span class="cs46AE26E6">(1) By majority vote, as may be further provided by rule, the commission may initiate legal action against a member state in default in the United States district court for the District of Columbia or the federal district where the commission has its principal offices to enforce compliance with the provisions of the compact and its promulgated rules. A member state by enactment of this compact, consents to venue and jurisdiction in such court for the purposes set forth herein. The relief sought may include both injunctive relief and damages. In the event judicial enforcement is necessary, the prevailing party shall be awarded all costs of such litigation, including reasonable attorney&rsquo;s fees. The remedies herein shall not be the exclusive remedies of the commission. The commission may pursue any other remedies available under federal or the defaulting member state&rsquo;s law. </span></p><p class="cs5251900E"><span class="cs46AE26E6">(2) A member state may initiate legal action against the commission in the U.S. District Court for the District of Columbia or the federal district where the commission has its principal offices to enforce compliance with the provisions of the compact and its promulgated rules. The relief sought may include both injunctive relief and damages. In the event judicial enforcement is necessary, the prevailing party shall be awarded all costs of such litigation, including reasonable attorney&rsquo;s fees.</span></p><p class="cs5251900E"><span class="cs46AE26E6">(3) No person other than a member state shall enforce this compact against the commission. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-11. Effective date; withdrawal; amendment.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The compact shall come into effect on the date on which the compact statute is enacted into law in the seventh member state. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) On or after the effective date of the compact, the commission shall convene and review the enactment of each of the first seven member states (&quot;charter member states&quot;) to determine if the statute enacted by each such charter member state is materially different than the model compact. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A charter member state whose enactment is found to be materially different from the model compact shall be entitled to the default process set forth in &sect;30-34A-10 of this code. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) If any member state is later found to be in default, or is terminated or withdraws from the compact, the commission shall remain in existence and the compact shall remain in effect even if the number of member states should be less than seven. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Member states enacting the compact subsequent to the seven initial charter member states shall be subject to the process set forth herein and commission rule to determine if their enactments are materially different from the model compact and whether they qualify for participation in the compact. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) All actions taken for the benefit of the commission or in furtherance of the purposes of the administration of the compact prior to the effective date of the compact or the commission coming into existence shall be considered to be actions of the commission unless specifically repudiated by the commission. The commission shall own and have all rights to any intellectual property developed on behalf or in furtherance of the commission by individuals or entities involved in organizing or establishing the commission, as may be further set forth in rules of the commission. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Any state that joins the compact subsequent to the commission&rsquo;s initial adoption of the rules and bylaws shall be subject to the rules and bylaws as they exist on the date on which the compact becomes law in that state. Any rule that has been previously adopted by the commission shall have the full force and effect of law on the date the compact becomes law in that state. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any member state may withdraw from this compact by enacting a statute repealing the same.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A member state&rsquo;s withdrawal shall not take effect until 180 days after enactment of the repealing statute. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Withdrawal shall not affect the continuing requirement of the withdrawing state&rsquo;s respiratory therapy licensing authority to comply with the investigative and adverse action reporting requirements of this compact prior to the effective date of withdrawal. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Upon the enactment of a statute withdrawing from this compact, a state shall immediately provide notice of such withdrawal to all licensees and compact privilege holders (of which the commission has a record) within that state. Notwithstanding any subsequent statutory enactment to the contrary, such withdrawing state shall continue to recognize all licenses granted pursuant to this compact for a minimum of 180 days after the date of such notice of withdrawal. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Nothing contained in this compact shall be construed to invalidate or prevent any licensure agreement or other cooperative arrangement between a member state and a non -member state that does not conflict with the provisions of this compact. &nbsp;</span></p><p class="cs7F45F1B"><span class="csEF05ACC">	</span><span class="cs46AE26E6">(d) This compact may be amended by the member states. No amendment to this compact shall become effective and binding upon any member state until it is enacted into the laws of all member states.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-12. Construction and severability.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) This compact and the commission&rsquo;s rulemaking authority shall be liberally construed so as to effectuate the purposes and the implementation and administration of the compact. provisions of the compact expressly authorizing or requiring the promulgation of rules shall not be construed to limit the commission&rsquo;s rulemaking authority solely for those purposes. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The provisions of this compact shall be severable, and if any phrase, clause, sentence or provision of this compact is held by a court of competent jurisdiction to be contrary to the constitution of any member state, a state seeking participation in the compact, or of the United States, or the applicability thereof to any government, agency, person or circumstance is held to be unconstitutional by a court of competent jurisdiction, the validity of the remainder of this compact and the applicability thereof to any other government, agency, person or circumstance shall not be affected thereby. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Notwithstanding subsection (b) of this section, the commission may deny a state&rsquo;s participation in the compact or, in accordance with the requirements of &sect;30-34A-10 of this code, terminate a member state&rsquo;s participation in the compact, if it determines that a constitutional requirement of a member state is a material departure from the compact.â€¯ Otherwise, if this compact shall be held to be contrary to the constitution of any member state, the compact shall remain in full force and effect as to the remaining member states and in full force and effect as to the member state affected as to all severable matters. &nbsp;&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;30-34A-13. Consistent effect and conflict with other state laws.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Nothing herein shall prevent or inhibit the enforcement of any other law of a member state that is not inconsistent with the compact. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any laws, statutes, regulations, or other legal requirements in a member state in conflict with the compact are superseded to the extent of the conflict, including any subsequently enacted state laws. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) All permissible agreements between the commission and the member states are binding in accordance with their terms. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Other than as expressly set forth herein, nothing in this compact will impact initial licensure.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>
