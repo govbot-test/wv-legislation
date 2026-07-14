@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5673 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5673">&laquo; House Bill 5673 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5673'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5673 - Creating a statutory right to petition circuit and family courts for sibling visitation&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5673+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5673"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D" style="tab-stops:left 418.5pt;"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5673</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Williams</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 17, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;51-2A-2 of the Code of West Virginia, 1931, as amended, and to amend the code by adding a new article, designated &sect;48-10A-101, &sect;48-10A-102, &sect;48-10A-201, &sect;48-10A-202, &sect;48-10A-203, &sect;48-10A-204, &sect;48-10A-301, &sect;48-10A-401, &sect;48-10A-402, &sect;48-10A-403, &sect;48-10A-501, &sect;48-10A-502, &sect;48-10A-601, &sect;48-10A-602, &sect;48-10A-701, &sect;48-10A-702, &sect;48-10A-801, &sect;48-10A-802, &sect;48-10A-901, &sect;48-10A-902, &sect;48-10A-1001, &sect;48-10A-1002, &sect;48-10A-1101, and &sect;48-10A-1201, relating to the creation of a statutory right to petition circuit and family courts in West Virginia for sibling visitation with minor children.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">Chapter 48. Domestic Relations.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 10A. SIBLING VISITATION.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-101. Legislative findings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The Legislature finds that circumstances arise where it is appropriate for circuit courts or family courts of this state to order that siblings of minor children may exercise visitation with those minor children. The Legislature further finds that in those situations, as in all situations involving minor children, the best interests of the minor child or children are the paramount consideration.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-102. Legislative intent.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">It is the express intent of the Legislature that the provisions for sibling visitation that are set forth in this article are exclusive.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-201. Applicability of definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">For the purposes of this article the words or terms defined in this article, and any variation of those words or terms required by the context, have the meanings ascribed to them in this article. These definitions are applicable unless a different meaning clearly appears from the context.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-202. Child defined.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Child&quot; means a person under the age of 18 years who has not been married or otherwise emancipated.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-203. Sibling defined.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Sibling&quot; means a blood brother or sister, a half brother or sister, a step brother or sister, or an adoptive brother or sister who is petitioning the court for sibling visitation rights and is at least 18 years of age.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-204. Ancillary definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Blood brother or sister&quot; means a male or female that have both a biological mother and a biological father in common with another person. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Half brother or sister&quot; means a male or female that have the same biological father or the same biological mother, but not both biological parents in common with another person. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Step brother or sister&quot; means a male or female that is the son or daughter of one&#39;s stepparent. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Adoptive brother or sister&quot; means a male or female who has become the son or daughter of a parent by virtue of legal adoption.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Stepparent&quot; means the spouse of one&rsquo;s mother or father by a later marriage. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-301. Persons who may apply for sibling visitation; venue.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">A sibling of a minor child residing in this state may, by motion or petition, make application to the circuit court or family court of the county in which that minor child resides for an order granting visitation with his or her sibling.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-401. Motion for sibling visitation when action for divorce, custody, legal separation, annulment or establishment of paternity is pending.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The provisions of this section apply to any pending actions for divorce, custody, legal separation, annulment or establishment of paternity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) After the commencement of the action, a sibling seeking visitation with the minor child may, by motion, apply to the family court for an order granting visitation. A sibling moving for an order of visitation may not be afforded party status, but may be called as a witness by the court, and is subject to cross-examination by the parties.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Motions or petitions for sibling visitation shall be filed and heard in the family court except when an abuse or neglect proceeding involving the minor child or children is pending before the circuit court, in which case the motion or petition shall be filed and heard in the circuit court.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-402. Petition for sibling visitation when action for divorce, custody, legal separation, annulment, or establishment of paternity is not pending.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The provisions of this section apply when no proceeding for divorce, custody, legal separation, annulment, or establishment of paternity is pending.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A sibling may petition the family court for an order granting visitation with the minor child, regardless of whether the parents of the minor child are married. If the sibling filed a motion for visitation in a previous proceeding for divorce, custody, legal separation, annulment or establishment of paternity, and a decree or final order has issued in that earlier action, the sibling may petition for visitation if the circumstances have materially changed since the entry of the earlier order or decree.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) When a petition under this section is filed, the matter shall be styled &quot;In re sibling visitation of [petitioner&#39;s(s&#39;) name(s)]&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Motions or petitions for sibling visitation shall be filed and heard in the family court except when an abuse or neglect proceeding involving the minor child or children is pending before the circuit court, in which case the motion or petition shall be filed and heard in the circuit court.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-403. Appointment of guardian ad litem for the minor child.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">When a motion or petition is filed seeking sibling visitation, the court, on its own motion or upon the motion of a party or sibling, may appoint a guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6"> for the minor child or children to assist the court in determining the best interests of the minor child or children regarding sibling visitation.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-501. Necessary findings for grant of reasonable visitation to a sibling.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The circuit court or family court shall grant reasonable visitation to a sibling upon a finding that visitation will be in the best interests of the minor child or children and will not substantially interfere with the parent-child relationship.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-502. Factors to be considered in making a determination as to a grant of visitation to a sibling.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">In making a determination on a motion or petition the court shall consider the following factors:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The age of the minor child;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The relationship between the minor child and the sibling;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The relationship between each of the minor child&rsquo;s parents or the person with whom the minor child is residing and the sibling;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The time which has elapsed since the minor child last had contact with the sibling;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The effect that visitation will have on the relationship between the minor child and the minor child&rsquo;s parents or the person with whom the minor child is residing;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) If the parents are divorced or separated, the custody and visitation arrangement which exists between the parents with regard to the minor child;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) The time available to the minor child and his or her parents, giving consideration to each parent&rsquo;s employment schedule, the minor child&rsquo;s schedule for home, school, and community activities, and the minor child&rsquo;s and parents&rsquo; holiday and vacation schedule;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) The good faith of the sibling in filing the motion or petition;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Any history of physical, emotional, or sexual abuse or neglect being performed, procured, assisted, or condoned by the sibling;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Whether the minor child has, in the past, resided with the sibling for a significant time, with or without the minor child&#39;s parent or parents;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) Whether the sibling has, in the past, been a significant caretaker for the minor child, regardless of whether the minor child resided inside or outside of the sibling&#39;s residence;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) The preference of the parents with regard to the requested visitation; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) Any other factor relevant to the best interests of the minor child.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-601. Interview of minor child in chambers.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">In considering the factors listed in &sect;48-10A-502 of this code for purposes of determining whether to grant visitation, establishing a specific visitation schedule, and resolving any issues related to the making of any determination with respect to visitation or the establishment of any specific visitation schedule, the court may interview in chambers any or all involved minor children regarding their wishes and concerns. No person may be present other than the court, the minor child, the minor child&rsquo;s attorney or guardian </span><span class="cs1489E706">ad litem</span><span class="cs46AE26E6">, if any, and any necessary court personnel.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-602. Prohibitions on use of minor child&#39;s written or recorded statement or affidavit; minor child not to be called as a witness.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) No person may obtain or attempt to obtain from a minor child a written or recorded statement or affidavit setting forth the wishes and concerns of the minor child regarding sibling visitation matters. The court, in considering the factors listed in &sect;48-10A-502 of this code for purposes of determining whether to grant any visitation, establishing a visitation schedule, or resolving any issues related to the making of any determination with respect to visitation or the establishment of any specific visitation schedule, may not accept or consider such a written or recorded statement or affidavit.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A minor child may not be called as a witness in any proceeding to determine whether sibling visitation should be awarded.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-701. Proof required when action is pending for divorce, custody, legal separation, annulment, or establishment of paternity.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">If a motion for sibling visitation is filed in a pending action for divorce, custody, legal separation, annulment, or establishment of paternity pursuant to &sect;48-10A-401 of this code, the sibling shall be granted visitation if a preponderance of the evidence shows that visitation is in the best interest of the minor child and that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The party to the divorce through which the sibling is related to the minor child has failed to answer or otherwise appear and defend the cause of action; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The location of the party through which the sibling is related to the minor child is unknown to the party bringing the action and to the sibling who filed the motion for visitation.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-702. Proof required when action is not pending for divorce, custody, legal separation, annulment, or establishment of paternity.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) If a petition is filed pursuant to &sect;48-10A-402 of this code when the parent through whom the sibling is related to the minor child does not: (1) have custody of the minor child; (2) share custody of the minor child; or (3) exercise visitation privileges with the minor child that will allow participation in the visitation by the sibling if the parent so choses, the sibling shall be granted visitation if a preponderance of the evidence shows that visitation is in the best interest of the minor child.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If a petition is filed pursuant to &sect;48-10A-402 of this code, there is a presumption that visitation privileges need not be extended to the sibling if the parent through whom the sibling is related to the minor child has custody of the minor child, shares custody of the minor child, or exercises visitation privileges with the minor child that will allow participation in the visitation by the sibling if the parent so chooses. This presumption may be rebutted by clear and convincing evidence that an award of sibling visitation is in the best interest of the minor child.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-801. Order granting or refusing sibling visitation shall state findings of fact and conclusions of law.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">An order granting or refusing the sibling&#39;s motion or petition for visitation shall state in writing the court&#39;s findings of fact and conclusions of law.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-802. Supervised visitation; conditions on visitation.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The court may enter an order granting visitation privileges to a sibling that may require supervised visitation, or the court may place conditions on visitation that it finds are in the best interests of the minor child, including, but not limited to, the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) That the sibling does not attempt to influence any religious beliefs or practices of the minor children in a manner contrary to the preferences of the minor child&#39;s parents;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) That the sibling does not engage in, permit or encourage activities, or expose the minor child to conditions or circumstances, that are contrary to the preferences of the minor child&#39;s parents; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) That the sibling does not otherwise act in a manner to contradict or interfere with child-rearing decisions made by the minor child&#39;s parents.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-901. Effect of remarriage of the custodial parent.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The remarriage of the custodial parent of a minor child does not affect the authority of a circuit court or family court to grant reasonable visitation to any sibling.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-902. Effect of adoption of the minor child.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">If a minor child who is subject to a sibling visitation order under this article is later adopted, the order for sibling visitation is automatically vacated when the order for adoption is entered, unless the adopting parent is a stepparent, grandparent, or other relative of the minor child; however, once the order for adoption is entered, the sibling may repetition the court seeking sibling visitation with the minor child.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-1001. Continuing jurisdiction of circuit court or family court.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any circuit court or family court that grants visitation rights to a sibling retains jurisdiction throughout the minority of the minor child with whom visitation is granted to modify or terminate the rights as dictated by the best interests of the minor child.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-1002. Termination of sibling visitation.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">A circuit court or family court shall, based upon a petition brought by an interested person, terminate any grant of the right of sibling visitation upon presentation of a preponderance of the evidence that a sibling granted visitation has materially violated the terms and conditions of the order of visitation.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-1101. Attorney&#39;s fees; reasonable costs.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">In an action brought under the provisions of this article, a circuit court or family court may order payment of reasonable attorney&#39;s fees and costs based upon the equities of the positions asserted by the parties to pay the fees and costs.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;48-10A-1201. Misdemeanor offense for allowing contact between minor child and person who has been precluded visitation rights; penalties.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Any sibling who knowingly allows contact between a minor child and a parent or other person who has been precluded visitation rights with the minor child by court order is guilty of a misdemeanor and, upon conviction thereof, shall be confined in jail not more than 30 days or fined not less than $100 nor more than $1,000.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 51. COURTS AND THEIR OFFICERS.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2A. FAMILY COURTS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;51-2A-2. Family court jurisdiction; exceptions; limitations.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The family court shall exercise jurisdiction over the following matters:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) All actions for divorce, annulment or separate maintenance brought </span><span class="cs68EFC440">under the provisions of</span><span class="csEF05ACC"> &sect;48-3-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, &sect;48-4-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, or &sect;48-5-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code, except as provided in subsections (b) and (c) of this section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) All actions to obtain orders of child support brought under </span><span class="cs68EFC440">the provisions of</span><span class="csEF05ACC"> &sect;48-11-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, &sect;48-12-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, and &sect;48-14-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) All actions to establish paternity brought under </span><span class="cs68EFC440">the provisions of</span><span class="csEF05ACC"> &sect;48-24-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code and any dependent claims related to such actions regarding child support, parenting plans or other allocation of custodial responsibility or decision-making responsibility for a child;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) All actions for grandparent visitation brought under </span><span class="cs68EFC440">the provisions of</span><span class="csEF05ACC"> &sect;48-10-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) All actions for the interstate enforcement of family support brought under &sect;48-16-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code and for the interstate enforcement of child custody brought under </span><span class="cs68EFC440">the provisions of</span><span class="csEF05ACC"> &sect;48-20-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) All actions for the establishment of a parenting plan or other allocation of custodial responsibility or decision-making responsibility for a child, including actions brought under the Uniform Child Custody Jurisdiction and Enforcement Act, as provided in &sect;48-20-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) All petitions for writs of habeas corpus in which the issue contested is custodial responsibility for a child;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) All motions for temporary relief affecting parenting plans or other allocation of custodial responsibility or decision-making responsibility for a child, child support, spousal support or domestic violence;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) All motions for modification of an order providing for a parenting plan or other allocation of custodial responsibility or decision-making responsibility for a child or for child support or spousal support;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) All actions brought, including civil contempt proceedings, to enforce an order of spousal or child support or to enforce an order for a parenting plan or other allocation of custodial responsibility or decision-making responsibility for a child;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) All actions brought by an obligor to contest the enforcement of an order of support through the withholding from income of amounts payable as support or to contest an affidavit of accrued support, filed with the circuit clerk, which seeks to collect an arrearage;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) All final hearings in domestic violence proceedings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) Petitions for a change of name, exercising concurrent jurisdiction with the circuit court;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) All proceedings for payment of attorney fees if the family court judge has jurisdiction of the underlying action;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) All proceedings for property distribution brought under &sect;48-7-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) All proceedings to obtain spousal support brought under &sect;48-8-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) All proceedings relating to the appointment of guardians or curators of minor children brought pursuant to &sect;44-10-3, &sect;44-10-4 and &sect;44-10-6 of this code, exercising concurrent jurisdiction with the circuit court; </span><span class="cs68EFC440">and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) All proceedings relating to petitions for sibling visitation; </span><span class="cs46AE26E6">and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(19) All actions for sibling visitation brought under the provisions of &sect;48-10A-101 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) If an action for divorce, annulment, or separate maintenance does not require the establishment of a parenting plan or other allocation of custodial responsibility or decision-making responsibility for a child and does not require an award or any payment of child support, the circuit court has concurrent jurisdiction with the family court over the action if, at the time of the filing of the action, the parties also file a written property settlement agreement executed by both parties.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) If an action for divorce, annulment, or separate maintenance is pending and a petition is filed pursuant to </span><span class="cs68EFC440">the provisions of</span><span class="csEF05ACC"> &sect;49-4-601 through &sect;49-4-610 of this code alleging abuse or neglect of a child by either of the parties to the divorce, annulment, or separate maintenance action, the orders of the circuit court in which the abuse or neglect petition is filed shall supersede and take precedence over an order of the family court respecting the allocation of custodial and decision-making responsibility for the child between the parents. If no order for the allocation of custodial and decision-making responsibility for the child between the parents has been entered by the family court in the pending action for divorce, annulment, or separate maintenance, the family court shall stay any further proceedings concerning the allocation of custodial and decision-making responsibility for the child between the parents and defer to the orders of the circuit court in the abuse or neglect proceedings.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) If a family court judge is assigned as a judicial officer of a domestic violence court then jurisdiction of all proceedings relating to criminal misdemeanor crimes of domestic violence as referenced in &sect;48-27-301 of this code involving a family or household member as referenced in &sect;48-27-204(1) through &sect;48-27-204(6) and &sect;48-27-204(7)(A), &sect;48-27-204(7)(B), and &sect;48-27-204(7)(H) of this code shall be concurrent with the circuit and magistrate courts.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) A family court is a court of limited jurisdiction. A family court is a court of record only for the purpose of exercising jurisdiction in the matters for which the jurisdiction of the family court is specifically authorized in this section and in chapter 48 of this code. A family court may not exercise the powers given courts of record in &sect;51-5-1 of this code or exercise any other powers provided for courts of record in this code unless specifically authorized by the Legislature. A family court judge is not a &quot;judge of any court of record&quot; or a &quot;judge of a court of record&quot; as the terms are defined and used in &sect;51-9-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create a statutory right for siblings to petition a circuit or family court for visitation with their minor child siblings.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

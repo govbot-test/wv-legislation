@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 67 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+sb67 sub1 
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=67">&laquo; Senate Bill 67 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 67'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb67 sub2.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=67" title="HTML  - Committee Substitute (2)
+ - Senate Bill 67">
+Committee Substitute (2)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb67 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=67" title="HTML  - Introduced Version
+ - Senate Bill 67">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 67 - Relating to public charter schools&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb67+sub1.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=67"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 67</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Senators Rucker, Helton, and Willis</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Reported February 13, 2026, from the Select Committee on School Choice; ]</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;18-5G-3, &sect;18-5G-4, &sect;18-5G-5, &sect;18-5G-7, &sect;18-5G-8, &sect;18-5G-12, &sect;18-5G-14, &sect;18-9A-6a, and &sect;18-9A-24, of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new section, designated &sect;18-5G-18, relating to establishing a right of first refusal for charter schools to obtain unused or underutilized public school buildings; providing direction on the funding disbursements for teachers of public charter schools that do not participate in the state teacher retirement funds; and clarifying the district schools procedures for students who are transferring to public school from a virtual charter school.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">Article 5G. PUBLIC CHARTER SCHOOLs.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5G-3. Public charter school criteria, governance structure and statutory compliance requirements; applicable federal and state laws.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Public charter schools authorized pursuant to this article shall meet the following general criteria:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Are part of the state&rsquo;s system of public schools and are subject to general supervision by the West Virginia Board of Education for meeting the student performance standards required of other public school students under &sect;18-2E-5(d) and (e) of this code; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Are subject to the oversight of the school&rsquo;s authorizer for operating in accordance with its approved charter contract and for meeting the terms and performance standards established in the charter contract; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Are not home school-based;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Are not affiliated with or espouse any specific religious denomination, organization, sect, or belief and do not promote or engage in any religious practices in their educational program, admissions, employment policies, or operations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Are not affiliated with any organized group whose espoused beliefs attack or malign an entire class of people, typically for immutable characteristics, as identified through listings of such groups as may be made by the U. S. Department of Justice, the Federal Bureau of Investigation, or officials having similar jurisdiction in this state;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Are public schools to which parents or legal guardians choose to send their child or children;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Do not charge full-time tuition and may only charge such tuition or fees as may be imposed by noncharter public schools in this state, such as for part-time Hope Scholarship enrollment or for participation in student activities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Have no requirements that would exclude any child from enrollment who would not be excluded at a noncharter public school.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) A public charter school authorized pursuant to this article shall be governed by a board that meets the requirements established in &sect;18-5G-7 of this code and: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Has autonomy over key decisions, including, but not limited to, decisions concerning finance, personnel, scheduling, curriculum, and instruction except as provided in this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Has no power to levy taxes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Operates in pursuit of a specific set of educational objectives as defined in its charter contract;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Provides a program of public education that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Includes one or more of the following: Prekindergarten and any grade or grades from kindergarten to grade 12 including any associated post-secondary embedded credit, dual credit, advanced placement, internship, and industry or workforce credential programs that the public charter school chooses to incorporate into its programs. </span><span class="cs46AE26E6">If a public charter school chooses to incorporate post-secondary embedded credit, dual credit, and industry and workforce credential; programs into its educational program, institutions of higher education may not impose any requirements on the public charter school that are not required of noncharter public schools</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) May include in its mission a specific focus on students with special needs, including, but not limited to, at-risk students, English language learners, students with severe disciplinary problems at a noncharter public school, or students involved with the juvenile justice system; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) May include a specific academic approach or theme including, but not limited to, approaches or themes such as STEM education, mastery-based education, early college, or fine and performing arts; </span><span class="cs46AE26E6">and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) May include before school and/or after school programs as a part of the public charter school&rsquo;s education program. No part of the education program of a public charter school is subject to regulation as a childcare facility;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Provides programs and services to a student with a disability in accordance with the student&rsquo;s individualized education program and all federal and state laws, regulations, rules and policies. A charter school shall deliver the services directly or contract with a county board or another provider to deliver the services as set forth in its charter contract;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(6) Is eligible to participate in state-sponsored or district-sponsored athletic and academic interscholastic leagues, competitions, awards, scholarships, and recognition programs for students, educators, administrators, and schools to the same extent as noncharter public schools. </span><span class="cs46AE26E6">If a public charter school does not sponsor an extracurricular athletic and/or academic interscholastic activity for the students enrolled in the public charter school, the public charter school students may participate on the same basis as other public school students in those activities that are sponsored by the noncharter public school serving the attendance area in which the student resides</span><span class="csEF05ACC">;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(7) Employs its own personnel as employees of the public charter school and is ultimately responsible for processing employee paychecks, managing its employees&rsquo; participation in the applicable retirement system, and managing its employees&rsquo; participation in insurance plans: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That nothing in this subdivision prohibits the public charter school from contracting with another person or entity to employ personnel or to perform services relating to managing its employees&rsquo; participation in the retirement system or insurance plan. A county board may not require any employee of its school system to be employed in a public charter school. A county board may not harass, threaten, discipline, discharge, retaliate, or in any manner discriminate against any school system employee involved directly or indirectly with an application to establish a public charter school as authorized under this section. All personnel in a public charter school who were previously employed by the county board shall continue to accrue seniority with the county board in the same manner that they would accrue seniority if employed in a noncharter public school in the county for purposes of employment in noncharter public schools; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Is responsible for establishing a staffing plan that includes the requisite qualifications and any associated certification and/or licensure </span><span class="cs46AE26E6">that it determines</span><span class="csEF05ACC"> necessary for teachers and other instructional staff to be employed at the public charter school and for verifying that these requirements are met.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A public charter school authorized pursuant to this article is exempt from all statutes, </span><span class="cs46AE26E6">state board policies,</span><span class="csEF05ACC"> &nbsp;and rules applicable to a noncharter public school or board of education except the following </span><span class="cs46AE26E6">unless otherwise specifically provided for in this article</span><span class="csEF05ACC">:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) All federal laws and authorities applicable to noncharter public schools in this state including, but not limited to, the same federal nutrition standards, the same civil rights, disability rights and health, life and safety requirements applicable to noncharter public schools in this state;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The provisions of &sect;29B-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code relating to freedom of information and the provisions of &sect;6-9A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code relating to open governmental proceedings;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The same immunization requirements </span><a name="_Hlk10037606"><span class="csEF05ACC">applicable to noncharter public schools</span></a><span class="csEF05ACC">; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The same compulsory school attendance requirements applicable to noncharter public schools. </span><span class="cs46AE26E6">When a student is withdrawn or otherwise disenrolled from a public charter school and returns to the public school district of the student&#39;s county of residence, the school district of the student&#39;s county of residence becomes responsible to track the student for all purposes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) </span><span class="cs68EFC440">When a parent or guardian withdraws a student from a public charter school and enrolls the child in a public school district of that county, the school district of the student&rsquo;s county of residence becomes responsible to track the student for all purposes. &nbsp;&nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(B) When a parent or guardian withdraws a student from a public charter school and enrolls the child in another public charter school, home school, private school, learning pod, microschool, or out-of-state school, the receiving school or district &nbsp;becomes responsible to track the student for all purposes: </span><span class="csB65271">Provided</span><span class="cs68EFC440">, That the</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">The</span><span class="csEF05ACC"> public charter school from which the student is withdrawing </span><span class="cs68EFC440">provides</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">shall provide</span><span class="csEF05ACC"> the attendance director of the student&rsquo;s county of residence </span><span class="cs46AE26E6">with</span><span class="csEF05ACC"> notification of withdrawal from the charter school by phone, electronically, or in writing. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B)</span><span class="csEF05ACC">The written notification shall include, but is not limited to, the student&rsquo;s name, WVEIS identification number, parent/guardian contact information, and the anticipated or actual withdrawal date.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The same minimum number of days or an equivalent amount of instructional time per year as required of noncharter public school students under &sect;18-5-45 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The same student assessment requirements applicable to noncharter public schools in this state, but only to the extent that will allow the state board to measure the performance of public charter school students pursuant to &sect;18-2E-5(d) and (e) of this code. </span><span class="cs46AE26E6">Any virtual public charter school may administer any required state assessment, if available, in a virtual setting utilizing remote proctoring that best meets the educational needs of the student. The ratio for students to teachers shall be allowed up to 15 to one when utilizing remote proctoring during virtual testing.</span><span class="csEF05ACC"> Nothing precludes a public charter school from establishing additional student assessment measures that go beyond state requirements. </span><span class="cs68EFC440">Public charter school teachers who are not certified or licensed in the State shall be permitted to proctor state assessments: </span><span class="csB65271">Provided</span><span class="cs68EFC440">, That the teacher has successfully completed the annual training to serve as proctor and the charter school maintains a list of all staff who have successfully completed that annual training.</span><span class="cs46AE26E6">Public charter school teachers shall be permitted to proctor state assessments whether the teachers are certified or licensed or not.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The Student Data Accessibility, Transparency and Accountability Act pursuant to &sect;18-2-5h of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Use of the electronic education information system established by the West Virginia Department of Education for the purpose of reporting required information;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Reporting information on student and school performance to parents, policy-makers, and the general public in the same manner as noncharter public schools utilizing the electronic format established by the West Virginia Department of Education. Nothing precludes a public charter school from utilizing additional measures for reporting information on student and school performance that go beyond state requirements; &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) All applicable accounting and financial reporting requirements as prescribed for public schools, including adherence to generally accepted accounting principles. &nbsp;A public charter school shall annually engage an external auditor to perform an independent audit of the school&rsquo;s finances. The public charter school shall submit the audit to its authorizer and to the state superintendent of schools within nine months of the end of the fiscal year for which the audit is performed;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) A criminal history check pursuant to &sect;18A-3-10 of this code for any staff person that would be required if the person was employed in a noncharter public school, unless a criminal history check has already been completed for that staff person pursuant to that section. &nbsp;Governing board members and other public charter school personnel are subject to criminal history record checks and fingerprinting requirements applicable to noncharter public schools in this state. Contractors and service providers or their employees are prohibited from making direct, unaccompanied contact with students and from access to school grounds unaccompanied when students are present if it cannot be verified that the contractors, service providers or employees have not previously been convicted of a qualifying offense pursuant to &sect;18-5-15c of this code: </span><span class="cs1489E706">Provided, </span><span class="cs46AE26E6">That nothing in this subdivisions, including the reference to &sect;18A-3-10 of this code, requires public charter school employees to be certified or licensed as a condition of employment in a public charter school. A public charter school may, but is not required to, establish certification or licensure as a condition of employment by the school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) The same zoning rules for its facilities that apply to noncharter public schools in this state; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) The same building codes, regulations and fees for its facilities that apply to noncharter public schools in this state, including any inspections required for noncharter public schools under this chapter and the West Virginia State Fire Marshal for inspection and issuance of a certificate of occupancy for any facility used by the public charter school; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) The same student transportation safety laws applicable to public schools when transportation is provided.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5G-4. West Virginia Board of Education; powers and duties for implementation, general supervision and support of public charter schools.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The state board</span><span class="cs46AE26E6">,</span><span class="csEF05ACC"> along with the West Virginia Public Charter School Board established in &sect;18-5G-15 of this code</span><span class="cs46AE26E6">,</span><span class="csEF05ACC"> shall </span><span class="cs68EFC440">consult with nationally recognized charter school organizations and </span><span class="csEF05ACC">establish and maintain a catalogue of best practices for public charter schools applicable for all applicants, authorizers, governing board members, and administrators that are consistent with this article </span><span class="cs68EFC440">and nationally recognized principles and professional standards for quality public charter school authorizing and governance in all major areas of authorizing and governance responsibility</span><span class="csEF05ACC"> in the following areas:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Organizational capacity and infrastructure;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Solicitation and evaluation of charter applications;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &nbsp;A framework to guide the development of charter contracts;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Performance contracting including a performance framework;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Providing transparency and avoiding all conflicts of interest;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Ongoing public charter school oversight and evaluation; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Charter approval and renewal decision-making;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The state board is responsible for exercising, in accordance with this article, the following powers and duties with respect to the oversight and authorization of public charter schools:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Provide forms to promote the quality and ease of use for authorizers to solicit applications for public charter schools, for applicants to complete applications, and for establishing quality charter contracts that include a framework for performance standards. The forms shall be available for use and solicitations made not later than the beginning of February, 2020. The forms shall include an application deadline of August 31st of the year prior to the beginning of operations for the proposed school year, or April 30th of the proposed school year in the case of a conversion public charter school or a program conversion public charter school; </span><span class="cs68EFC440">No public charter school may begin operation prior to the beginning of the proposed school year </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Provide training programs for public charter school applicants, administrators and governing board members, as applicable, that include, but are not limited to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Pre-application training programs and forms to assist in the development of high quality public charter school applications;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The required components and the necessary information of the public charter school application and the charter contract as set forth in this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) The public charter school board&rsquo;s statutory role and responsibilities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) Public charter school employment policies and practices; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v) Authorizer responsibilities for public charter school contract oversight and performance evaluation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Receive and expend appropriate gifts, grants and donations of any kind from any public or private entity to carry out the purposes of this act, subject to all lawful terms and conditions under which the gifts, grants or donations are given;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Apply for any federal funds that may be available for the implementation of public charter school programs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Establish reporting requirements that enable the state board to monitor the performance and legal compliance of authorizers and public charter schools; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Establish a framework and procedures for interactions between public charter schools, public noncharter schools and county boards of education to facilitate cooperation for shared services, training and information and to ensure the prompt transfer of student records, including IEPs, so as to minimize the interruption of a student&rsquo;s education when transferring between noncharter public schools and public charter schools; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(7) Submit to the Governor and the Legislature an annual report within 60 days of the end of each school year summarizing:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The student performance of all operating public charter schools; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The authorization status of all public charter schools within the last school year, identifying all public charter schools as:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Application pending;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Application denied and reasons for denial;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Application approved, but not yet operating;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) Operating and years of operation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v) Renewed and years of operation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vi) Terminated;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vii) Closed;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(viii) Never opened; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ix) Any successful innovations applied in authorized public charter schools which may be replicated in other schools. The report shall provide information about how noncharter public schools may implement these innovations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The state board shall be the authorizer of a public charter school when a county board or boards approve the application for a public charter school and requests the state board to perform the authorizer duties and responsibilities or when an application to form a public charter school or to renew a charter contract is submitted from an applicant within a county in which the state board has intervened and limited the power of the county board to act pursuant to &sect;18-2E-5 of this code.&sect;18-5G-5. State board rule relating to funding for public charter school enrollment and other necessary provisions; local education agency status; authorizer oversight fee.(a) The state board shall promulgate a rule pursuant to the provisions of &sect;29A-3B-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code setting forth requirements for public charter school funding. The rule shall include a requirement that 99 percent of the per pupil total basic foundation allowance follow the student to the public charter school, subject to the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Notwithstanding &sect;18-9A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, the rule may provide for modifications to the calculations set forth in &sect;18-9A-7 of this code regarding the allowance for student transportation and in &sect;18-9A-9(1) of this code regarding the allowance for current expense for the purpose of making appropriate adjustments to those allowances to account for student transportation and current expense related funding a school district loses in situations where it pays money to a public charter school pursuant to this subsection without a corresponding decrease in the county&rsquo;s transportation and current expense related expenditures;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The rule shall designate which </span><a name="_Hlk123826264"><span class="csEF05ACC">county school district is required to pay for a student attending a public charter school, </span></a><span class="csEF05ACC">and notwithstanding the terms in the definition of &quot;net enrollment&quot; in &sect;18-9A-2 of this code, shall provide that the county school district paying for the student attending a public charter school have that student included in its net enrollment for the purposes of &sect;18-9A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) When a student in grades kindergarten through 12 transfers on a full-time basis after the beginning of the school year from a school district to a public charter school, or vice versa, or to another public charter school, hereinafter referred to as entities, the following apply: &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) If the student is included in the second month net enrollment for the purposes of &sect;18-9A-2 of this code, of the entity from which the student transferred, the entity to which the student transfers may invoice the entity from which the student transferred for the amount, determined on a pro rata basis, based on the amount required pursuant to subdivision (2) of this subsection for a student attending a public charter school; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) If the student is included in the second month net enrollment for the purposes of &sect;18-9A-2 of this code, of the entity from which the student transferred and is eligible for aid to exceptional students, the entity to which the student transfers may invoice the entity from which the student transferred for the amount, determined on a pro rata basis, of the aid to exceptional students due for that student; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) If the student is included in the certified child count of exceptional students for the school year of the entity from which the student transferred, the entity to which the student transfers may invoice the entity from which the student transferred for the amount, determined on a pro rata basis, due for that student in the certified child count of exceptional students; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Invoices issued pursuant to paragraphs (A), (B) and (C) of this subdivision shall be paid by the entity from which the student transferred within 30 days of receipt of the invoice; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The rule shall require the Department of Education to follow federal requirements in ensuring that federal funding follows the student to a public charter school.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The state board may promulgate a rule in accordance with &sect;29A-3B-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, if necessary, for ensuring the accountability of public charter schools for meeting the standards for student performance required of other public school students under &sect;18-2E-5 of this code and the accountability of authorizers for ensuring that those standards are met in the schools authorized by it. If an authorizer fails to close a public charter school that does not meet the standards, the authorizer shall appear before the state board to justify its decision. The state board may uphold or overturn the authorizer&rsquo;s decision and may revoke the authority of the authorizer to authorize public charter schools. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Any public charter school authorized pursuant to this article shall be treated and act as its own local education agency for all purposes except as needed under the provisions of the Public School Support Plan for funding purposes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) To cover authorizer costs for overseeing public charter schools, the state board shall establish a statewide formula for authorizer oversight funding, which shall apply uniformly to every authorizer in the state. Each public charter school shall remit to its respective authorizer an oversight fee. The oversight fee shall be drawn from and calculated as a uniform percentage of the per pupil basic foundation allowance as provided pursuant to state board rule promulgated in accordance with this section, not to exceed one percent of each public charter school&rsquo;s per-student funding in a single school year. The state board may establish a sliding scale for authorizing funding, with the funding percentage decreasing after the authorizer has achieved a certain threshold, such as after a certain number of schools have been authorized or after a certain number of students are enrolled in the authorizer&rsquo;s public charter schools. The state board shall establish a cap on the total amount of funding that an authorizer may withhold from a full-time public charter school. &nbsp;The state board shall annually review the effectiveness of the state formula for authorizer funding and shall adjust the formula if necessary to maximize public benefit and strengthen the implementation of this act.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The state board shall promulgate a rule in accordance with &sect;29A-3B-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code to clarify, if necessary, the requirements of this article and address any unforeseen issues that might arise relating to the implementation of the requirements of this article: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That nothing in this rule may conflict with this code. The rule also shall include a provision prohibiting a county board from discrimination against any district employee involved directly or indirectly with an application to establish a public charter school under this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) All state board rules required to be promulgated by this article shall be promulgated on or before July 1, 2021. &nbsp;The state board may file emergency rules if necessary to meet the July 1, 2021, deadline.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5G-7. Public Charter school governing board.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) (1) To ensure compliance with this article, a public charter school shall be administered by a governing board accountable to the authorizer as set forth in the charter contract, </span><span class="cs46AE26E6">except in the case of a conversion public charter school authorized by a public school of this state</span><span class="csEF05ACC">. A public charter school governing board shall consist of no fewer than five members elected or selected in a manner specified in the charter application, including at least the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A)</span><span class="csEF05ACC"> Two parents of students attending the public charter school operating under the governing board; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B)</span><span class="csEF05ACC">Two members who reside in the community served by the public charter school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) In the case of a conversion school authorized by a public school of this state, the governing board shall include the Superintendent and one member of the elected county board of education in addition to the two members of the community, as well as a member who is a parent of a child enrolled in that school.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Members of the governing board shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Not be an employee of the public charter school administered by the governing board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Not be an employee of an education service provider that provides services to the public charter school, </span><span class="cs46AE26E6">unless the services are provided by a state institution of higher education;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) File a full disclosure report to the authorizer identifying potential conflicts of interest, relationships with management organizations, and relationships with family members who are employed by the public charter school or have other business dealings with the school, the management organization of the school, or any other public charter school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Collectively possess expertise in leadership, curriculum and instruction, law, and finance; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Be considered an officer of a school district under the provisions of &sect;6-6-7 of this code and removal from office shall be in accordance with the provisions of that section or by a vote of the governing board.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The public charter school governing board shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Operate under the oversight of its authorizer in accordance with its charter contract;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) As a public corporate body, have the powers necessary for carrying out the terms of its charter contract, including, but not limited to the power to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Receive and disburse funds for school purposes;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Secure appropriate insurance and enter into contracts and leases;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Contract with an education service provider, so long as the governing board retains final oversight and authority over the school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Pledge, assign, or encumber its assets to be used as collateral for loans or extensions of credit;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Solicit and accept any gifts or grants for school purposes, subject to applicable laws and the terms of its charter; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Acquire real property for use as its facilities or facilities from public or private sources;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Enroll students in the public charter school pursuant to &sect;18-5G-11 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Require any education service provider contracted with the governing board to provide a monthly detailed budget to the board; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Provide programs and services to a student with a disability in accordance with the student&rsquo;s individualized education program and all federal and state laws, rules, and regulations. A public charter school shall deliver the services directly or contract with another provider to deliver the services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) A public charter school authorized under this article may:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Negotiate and contract with its authorizer or any third party for the use, operation, and maintenance of a building and grounds, liability insurance, and the provision of any service, activity, or undertaking that the public charter school is required to perform in order to carry out the educational program described in its charter contract. Any services for which a public charter school contracts with a school district shall be provided by the district at cost and shall be negotiated as a separate agreement after final charter contract negotiations; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Sue and be sued in its own name; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Own, rent, or lease its space;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Participate in cocurricular activities to the same extent as noncharter public schools; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Participate in extracurricular activities to the same extent as noncharter public schools.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The public charter school governing board is responsible for the operation of its public charter school, including, but not limited to, ensuring compliance with the public charter school criteria, governance and statutory compliance set forth &sect;18-5G-3 of this code, the preparation of an annual budget, contracting for services, school curriculum, personnel matters, and achieving the objectives and goals of the public charter school&rsquo;s program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The public charter school governing board shall comply with the provisions of &sect;29B-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code relating to freedom of information and the provisions of &sect;6-9A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code relating to open governmental proceedings.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Notwithstanding anything else in this Code, when a state institution of higher education is an applicant and after its application is approved by an authorizer, the governing board of the public charter school may be an administrative unit of the state institution of higher education, and the governing board may enter into the charter contract on behalf of the state institution of higher education.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5G-8. Application to establish public charter school.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) To establish a new public charter school, to convert an existing noncharter public school to a public charter school or establish a program conversion public charter school, an applicant shall submit a charter application to an authorizer. </span><span class="cs46AE26E6">The West Virginia Professional Charter School Board may accept all types of applications.</span><span class="csEF05ACC"> Charter authorizers shall accept and document the date and time of receipt of all charter applications. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The application shall contain, at a minimum, the following information: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A mission statement and a vision statement for the public charter school, including specialized academic focus, if any, to be promoted and advanced through the establishment of the public charter school; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A detailed description of the public charter school&rsquo;s proposed program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The student achievement goals for the public charter school&rsquo;s program and the chosen methods of evaluating whether students have attained the skills and knowledge specified for those goals; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The school&rsquo;s plan for using data derived from student evaluations and assessments, including the statewide summative assessment, to drive instruction and promote continued school improvement; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) An explanation of how the school&rsquo;s proposed program is likely to improve the achievement of traditionally underperforming students in the local school district;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The proposed governance structure of the school, including a list of members of the initial governing board, a draft of bylaws that include the description of the qualifications, terms, and methods of appointment or election of governing board members, and the organizational structure of the school that clearly presents lines of authority and reporting between the governing board, school administrators, staff, any related bodies such as advisory bodies or parent and teacher councils, and any external organizations that will play a role in managing the school; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Plans and timelines for student enrollment, including the school primary recruitment area and policies and procedures for conducting transparent and random admission lotteries when applications for enrollment exceed capacity that are open to the public and consistent with this article; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) A proposed five-year budget, including the start-up year and projections for four additional years with clearly stated assumptions; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Proposed fiscal and internal control policies for the public charter school; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Acknowledgement that the public charter school will participate in the state&rsquo;s accountability system; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) A proposed handbook that outlines the personnel policies of the public charter school, including the criteria to be used in the hiring of qualified teachers, school administrators, and other school employees, a description of staff responsibilities, and the school&rsquo;s plan to evaluate personnel on an annual basis; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) An explanation of proposed student discipline procedures, including disciplinary procedures for students with disabilities, which shall be consistent with the requirements of due process and with state and federal laws and regulations governing the placement of students with disabilities; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) A description of the facilities to be used by the public charter school, including the location of the school and how the facility supports the implementation of the school&rsquo;s program. The school shall obtain all required occupation and operation certificates and licenses prior to the first instructional day for students;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) The proposed ages and grade levels to be served by the public charter school, including the planned minimum and maximum enrollment per grade per year;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) The school calendar and school day schedule; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) Types and amounts of insurance coverage to be obtained by the public charter school, which:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Shall include adequate insurance for liability, property loss, and the personal injury of students comparable to noncharter public schools within the local school district operated by the county board; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) May include coverage from the Board of Risk and Insurance Management pursuant to &sect;29-12-5a of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) A description of the food services to be provided to students attending the school; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) Process and procedures to be followed in the case of the closure or dissolution of the public charter school, including provisions for the transfer of students and student records to the appropriate local school district and an assurance and agreement to payment of net assets or equity after payment of debts; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(19) A code of ethics for the school setting forth the standards of conduct expected of its governing board, officers, and employees; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(20) The public charter school&rsquo;s plan for successfully serving students with disabilities, students who are English language learners, bilingual students, and students who are academically behind and gifted, including, but not limited to, the school&rsquo;s plan for compliance with all applicable federal and state laws and regulations; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(21) A description of cocurricular and extracurricular programs to be offered by the public charter school and how they will be funded and delivered; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(22) The process by which the school will resolve any disputes with the authorizer; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(23) A detailed start-up plan, including financing, tasks, timelines, and individuals responsible for carrying out the plan;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(24) The public charter school&rsquo;s plan for notice to parents and others of enrollment in the school as an option available for students and the school&rsquo;s primary recruitment area; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(25) The public charter school&rsquo;s plan for parental involvement. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) If the applicant intends to contract with an education service provider for educational program implementation or comprehensive management, the application shall additionally require the applicant to provide the following information with respect to the educational service provider: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Evidence of success in serving student populations similar to the targeted population, including demonstrated academic achievement as well as successful management of nonacademic school functions, if applicable; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Student performance data and financial audit reports for all current and past public charter schools;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Documentation of and explanation for any actions taken, legal or otherwise, against any of its public charter schools for academic, financial, or ethical concerns; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The proposed duration of the service contract;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The annual proposed fees and other amounts to be paid to the education service provider;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The roles and responsibilities of the governing board, the school staff, and the education service provider;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The scope of services and resources to be provided by the education service provider; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Performance evaluation measures and timelines;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Methods of contract oversight and enforcement;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Investment disclosure; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Conditions for renewal and termination of the contract; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) Disclosure and explanation any existing or potential conflicts of interest between the governing board and the proposed education service provider or any affiliated business entities.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A public charter school may submit to its authorizer a proposed amendment to any information in its application at any time and the authorizer may approve or reject the proposed amendment.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5G-12. Access to public facilities.</span></h4>
+	<p class="cs53FB8D75"><span class="cs68EFC440">(a) A public charter school may request usage of public facilities from the county board or other public entity in the county where the charter school is located or proposes to locate. A county board or other public entity shall make facilities available to the charter school that are either not used, in whole or in part, for classroom instruction at the time the charter school seeks to use or lease the public facility. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b) If a charter school seeks to lease the whole or part of a public facility, the cost of the lease must be at or under current market value.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c) During the term of the lease, the charter school is solely responsible for the direct expenses related to the public facility lease, including utilities, insurance, maintenance, repairs, and remodeling. The county school board is responsible for any debt incurred or liens that are attached to the school building before the charter school leases the public facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) In this subdivision, </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Unused school facility&quot; means a school building owned by a county school district that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Is not used for academic purposes, extracurricular activities, administrative school functions, or sports; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Has no school board approved written plan for future use that includes academic purposes, extracurricular activities, administrative functions, or sports scheduled to occur within 2 years of the plan&#39;s approval. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Underutilized property&quot; means a building or portion of a building, with or without improvements that is not used, or is used irregularly or intermittently, for instructional or academic program purposes, including but not limited to spaces that are potentially suitable for classroom use but are currently being used for storage of any kind. The term does not include vacant property or real property on which a building or permanent structure has not been erected.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;School building&quot; shall include any structure purpose built to provide academic instruction to any number of students in pre-kindergarten through grade twelve (pre-K-12), or any combination thereof. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The state board shall promulgate a rule pursuant to the provisions of &sect;29A-3B-1 et seq. of this code setting forth standards used to determine if a property is underutilized. For any facility that was originally built as a public school facility, it shall be deemed to be underutilized if actual student enrollment is less than or equal to seventy percent of the rated student capacity of the facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) On January 1, 2027, and on July 1 every year thereafter, the superintendent of each county school district shall report to the department of education each unused school facility, underutilized property, and vacant property owned by the county school district. The department shall establish and maintain a list of unused facilities and underutilized facilities owned by each school district and make such list available on the department&#39;s website. Each report submitted by a county school district shall include the following information:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The address or location of each building and the total square footage of, and the number of classrooms in, each school building;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) For each building, the portion of the total square footage that is used by the LEA for direct instruction to students in pre-kindergarten through grade twelve (pre-K-12), or any combination thereof;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) For each building, the enrollment capacity and the number of students in pre-kindergarten through grade twelve (pre-K-12), or any combination thereof, receiving academic instruction in the building; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) If a building is not used by the LEA for direct academic instruction for students in pre-kindergarten through grade twelve (pre-K-12), or any combination thereof, the manner in which the school building is used, including whether the building is vacant or is being used for administration, storage, or professional development.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A county school district shall offer an unused school facility or vacant property to a public charter school for purchase or lease at or below fair market value, and shall offer an underutilized property with less than 50% utilization to a public charter school for lease at or below fair market value, as follows: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) If a county school district extends an offer to purchase or lease an unused school facility or underutilized property to any party other than an approved public charter school operating in this state, the contract shall include a provision which makes the purchase or lease subject to the right of first refusal by an approved public charter school operating in this state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If the offer to purchase or lease is accepted, the entity selling or leasing the unused school facility or underutilized property shall notify the department of education who shall notify all approved public charter schools in this state, as listed on the department of education&#39;s website, of the contract to purchase or lease such facility. The notice provided to the public charter school shall contain clear language that such facility is available to any approved public charter school in this state only, and shall list the offering entity&rsquo;s name and location, the square footage of such facility, the contact information of the offering entity&rsquo;s representative, and the expiration date of the right of first refusal which shall be no earlier than 60 days after the date of the notification to the public charter school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A public charter school that fails to exercise its right of first refusal shall forfeit such right as it pertains to the specific unused school facility or underutilized property and any future right or interest in the specific facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) If the offering entity has not received an offer to purchase or lease an unused school facility or underutilized property from a party, other than an approved public charter school operating in this state, a public charter school may initiate, and the offering entity shall, within 60 days of receiving the offer, engage in, substantive good faith negotiations for the purchase or lease of such unused school facility or underutilized property. The negotiation period shall continue for 30 days, or less if an agreement is reached. If no agreement is reached, the department of education shall engage an independent mediator who shall gather independent appraisals of the value of the property when the public charter school made an offer to purchase. The appraised value shall determine a fair market price for the offering public charter school. In situations when the public charter school made an offer to lease the property, the appraisals gathered by the mediator shall determine a fair market lease price for the offering public charter school.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) If two or more public charter schools notify the offering entity indicating an interest in the unused facility to lease or purchase, the offering entity shall make the final selection of the purchaser or lessee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) In right of first refusal negotiations with a public charter school, it shall be the option of the offering entity whether to sell or lease the property under consideration, at fair market value or less, for a term to be agreed upon by the parties. A lease shall include ingress to and egress from the facility, and where a part of a facility is leased, the right to access and use of the common area shared by all tenants and users of the facility. If a public charter school leases the entire facility, the public charter school may incur debt to make improvements to the facility, and the offering entity shall subordinate its interest in the lease to such debt.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) A public charter school shall have six months after the date of making a written offer to complete the purchase or lease of the unused school facility or underutilized property for a price negotiated with the offering entity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) During the term of a lease, a public charter school shall be solely responsible for the direct expenses related to the public facility lease, including utilities, insurance, maintenance, repairs, and remodeling. The offering entity is responsible for any deferred maintenance, debt incurred, or liens that are attached to the building before the charter school leases the public facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) If a public charter school plans to sell a facility which it has purchased pursuant to this section, it shall first offer the facility to the entity from which it was purchased. Such offer shall be governed by the procedures set forth in paragraphs (d), (e), and (f) of this subdivision.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) A public charter school may petition the State Auditor for an audit of the list of all underutilized property or vacant property submitted pursuant to this part in which the public charter school is, or will be, geographically located. The State Auditor is authorized to promulgate rules, for the administration of this subdivision (i).</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5G-14. Virtual public charter schools.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Virtual public charter schools may be authorized pursuant to this article. &nbsp;To the extent they do not conflict with the following provisions, virtual public charter schools are subject to the same requirements as non-virtual public charter schools:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The Professional Charter School Board may authorize two statewide virtual public charter school which shall not count against the limit in &sect;18-5G-1 of this code. &nbsp;A statewide virtual public charter school shall enroll no more than five percent of the headcount enrollment per year; &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) County boards may authorize virtual public charter schools for students in an identified primary recruitment area within the state that is set forth in the charter application. Each county board may authorize no more than one virtual public charter school. &nbsp;Attendance to a virtual public charter school authorized by a county board is limited to students within the primary recruitment area identified in the application. &nbsp;Applications to establish a virtual public charter school shall not include within its primary recruitment area a location that is included in the primary recruitment area of another virtual public schools that has already been authorized. &nbsp;A county virtual public charter school shall enroll no more than 10 percent of a county&rsquo;s headcount enrollment;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The charter for a virtual public charter school is for a term of five years; and virtual public charter school renewals are also for a term of five years;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Virtual public charter school funding shall be consistent with other public charter school funding as set forth in &sect;18-5G-5 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) When enrolling a student who may require special education services, the same obligations apply to a virtual public charter school as applies to all other public charter schools. &nbsp;Enrollment shall not be denied or delayed on the basis of a disability and the charter school shall convene an Individualized Education Program (IEP) meeting after admission to ensure that the school develops an appropriate IEP in accordance with all of the requirements set forth in the Individuals with Disabilities Education Act (IDEA);</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The governing body of a virtual public charter school shall undergo at least one training per year related to appropriate oversight of the virtual public charter school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) A virtual public charter school student, to the extent the charter contract allows or requires instruction to occur outside of a school building, is not required to be physically present in a school building or classroom;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Neither the virtual public charter school governing board, virtual public charter school personnel, the virtual public charter school student nor the parents or guardian of the virtual public charter school student, to the extent the program as delineated in the charter contract allows or requires instruction to occur outside of a school building, may incur any penalty or be held accountable for the absence of the student from the school building;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) For a virtual public charter school student, neither the school district nor the student, to the extent the program as delineated in the charter contract is a learn at your own pace program, as defined in the contract, is required to comply with the instructional term requirement set forth in &sect;18-45-5 of this code or any other law or state board rule requiring a student to be receiving instruction for any set time;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) A virtual public charter school is exempt from any provision of law or state board rule that applies to the traditional delivery of instruction such as requirements relating to the physical presence of a student, student monitoring and security, the maximum teacher-pupil ratio set forth in &sect;18-5-18a of this code, instructional time requirements and physical education requirements to the extent any of the foregoing conflict with the delivery of the virtual instruction program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Each virtual charter school in the state shall offer a student orientation, notify the parents and guardians and each student who enrolls in that school of the requirement to participate in the student orientation, and require all students enrolled to complete the student orientation prior to completing any other instructional activity;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) Virtual charter schools must provide, in a manner agreed to in the charter contract, data demonstrating student progress toward graduation.&nbsp; Measurement of such progress shall account for specific characteristics of each enrolled student, including but not limited to age and course credit accrued prior to enrollment in educational instruction and course content that are delivered primarily over the internet pursuant to enrollment, and shall be consistent with evidence-based best practices. &nbsp;Virtual charter schools shall also maintain clear requirements relating to student engagement and teacher responsiveness for virtual charter school students and teachers; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) (A) For the purposes of this section, &ldquo;instructional activities&rdquo; means the following classroom-based or nonclassroom-based activities that a student is expected to complete, participate in, or attend during any given school day:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Online logins to curriculum or programs;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Offline activities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Completed assignments within a particular program, curriculum, or class;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) Testing;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v) Face-to-face communications or meetings with school staff or service providers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vi) Telephone or video conferences with school staff or service providers; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vii) Other documented communication with school staff or service providers related to school curriculum or programs.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Each virtual charter school shall develop and adopt a policy regarding failure to participate in instructional activities. The policy shall state that a student shall become subject to certain consequences, including disenrollment from the school, if both the following conditions are satisfied: (i) After the student&rsquo;s parent, guardian, or custodian receives a written report, the student fails to comply with the policy adopted under the paragraph within a reasonable period of time specified by the school; and (ii) Other intervention strategies contained in the policy adopted under this paragraph fail to cause a student to consistently participate in instructional activities. &nbsp;If a virtual charter school disenrolls a student pursuant to a policy adopted under this paragraph, the student shall be transferred to the district of residence </span><span class="cs46AE26E6">in accordance with &sect;18-5G-3</span><span class="csEF05ACC"> of this code and shall not be eligible to enroll in that virtual charter school or another virtual charter school for one school year from the date of the student&rsquo;s disenrollment.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(C) If a student is transferred under this section, the virtual charter school shall coordinate directly with the school district of residence on the appropriate educational placement for the student in the district. &nbsp;The appropriate educational placement shall be based on assessments of the student&rsquo;s abilities; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) The authorizer may establish additional requirements for virtual charter schools enrolling students in grades six and below to ensure they are developmentally appropriate for students. &nbsp;Virtual charter schools enrolling any student in grades six and below shall meet any requirements established and agreed upon by the authorizer and applicant in the contract, and shall develop a mechanism to ensure that these requirements, if any, are met.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) None of the requirements of this section applies to virtual instruction programs created pursuant to &sect;18-5F-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;18-5G-18. Higher education institution public charter mjcroschool; public charter school assistance to learning pods and microschools.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) An institution of higher education may apply to an authorizer pursuant to this article to establish virtual or on-campus public charter microschools which are required to meet the microschool related requirements of &sect;18-8-1 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any public charter school, including one that is affiliated with an institution of higher education, may partner with learning pods and microschools created pursuant to &sect;18-8-1 of this code to provide instruction on-campus or virtually to those learning pods or microschools.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 9A. PUBLIC SCHOOL SUPPORT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-9A-6a. Teachers retirement fund allowance; unfunded liability allowance.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The total teachers retirement fund allowance is the sum of the basic foundation allowance for professional educators, the basic foundation allowance for professional student support personnel and the basic foundation allowance for service personnel, as provided in </span><a name="_Hlk7166712"><span class="csEF05ACC">&sect;18-9A-4</span></a><span class="csEF05ACC">, &sect;18-9A-5 and &sect;18-9A-8 of this code; all salary equity appropriations authorized in &sect;18A-4-5 of this code; and such amounts as are to be paid by the counties pursuant to &sect;18A-4-5a and &sect;18A-4-5b of this code to the extent such county salary supplements are equal to the amount distributed for salary equity among the counties, multiplied by the average retirement contribution rate for each county board. The average contribution rate for each county board is based on the required employer contributions for state aid eligible employees participating in the retirement plans pursuant to &sect;18-7A-1 </span><span class="cs93AB6E8B">et</span><span class="csEF05ACC"> </span><span class="cs93AB6E8B">seq</span><span class="csEF05ACC">. and &sect;18-7B-1 </span><span class="cs93AB6E8B">et</span><span class="csEF05ACC"> </span><span class="cs93AB6E8B">seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The teachers retirement fund allowance amounts provided for in subsection (a) of this section shall be accumulated in the employers accumulation fund of the State Teachers Retirement System Fund pursuant to </span><a name="_Hlk7168422"><span class="csEF05ACC">&sect;18-7A-18 of this code</span></a><span class="csEF05ACC"> and shall be in lieu of the contribution required of employers pursuant to &sect;18-7A-18(b) of this code as to all personnel included in the allowance for state aid in accordance with &sect;18-9A-4, &sect;18-9A-5 and &sect;18-9A-8 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) In addition to the teachers retirement fund allowance provided for in subsection (a) of this section, there shall be an allowance for the reduction of any unfunded liability of the teachers retirement fund in accordance with the following provisions of this subsection. On or before December 31, of each year, the actuary or actuarial firm employed in accordance with the provisions of &sect;5-10D-4 of this code shall submit a report to the President of the Senate and the Speaker of the House of Delegates which sets forth an actuarial valuation of the teachers retirement fund as of the preceding June 31. Each annual report shall recommend the actuary&rsquo;s best estimate, at that time, of the funding necessary to both eliminate the unfunded liability over a 40-year period beginning on July 1, 1994, and to meet the cash flow requirements of the fund in fulfilling its future anticipated obligations to its members. In determining the amount of funding required, the actuary shall take into consideration all funding otherwise available to the fund for that year from any source. In any year in which the actuary determines that the teachers retirement fund is not being funded in such a manner, the allowance made for the unfunded liability for the next fiscal year shall be not less than the amount of the actuary&rsquo;s best estimate of the amount necessary to conform to the funding requirements set forth in this subsection.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) (1) If a public charter school elects to participate in the Teachers&#39; Retirement System and Teacher&#39;s Defined Contribution Retirement plans provided by the Consolidated Public Retirement Board, the West Virginia Department of Education shall calculate the amount of retirement funding that is attributable to the students enrolled in the public charter school and provide an allocation on behalf of the public charter school directly to the Consolidated Public Retirement Board in the same manner in which the allocations are provided to the Consolidated Public Retirement Board on behalf of the county boards of education, at 99 percent of the allocation. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If a public charter school does not elect to participate in the Teachers&#39; Retirement System and Teachers Defined Contribution retirement plans, an allocation shall be made directly to the public charter school distributed in the same manner as those districts participating in the Teachers&#39; Retirement System and Teachers&#39; Defined Contribution retirement plans, at 99 percent of the allocation. For the purposes of this subsection, the amount of retirement funding which is attributable to the students enrolled in the public charter school shall include amounts attributable from both the teachers&#39; retirement fund allowance. The allowance for any reduction of any unfunded liability of the teachers&#39; retirement fund attributable to those students enrolled in the public charter school shall not be made directly to the public charter school until after the fiscal year ends on June 30, 2034.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-9A-24. Foundation allowance for Public Employees Insurance Fund.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The allowance to the Public Employees Insurance Agency for school employees shall be made in accordance with the following: The number of individuals employed by county boards as professional educators pursuant to section four of this article, plus the number of individuals employed by county boards as service personnel pursuant to section five of this article, plus the number of individuals employed by county boards as professional student support personnel pursuant to section eight of this article, multiplied by the average premium rate for all county board of education employees established by the Public Employees Insurance Agency Finance Board. The average premium rate for all county board of education employees shall be incorporated into each financial plan developed by the Finance Board in accordance with section five, article sixteen, chapter five of this code. The premiums shall include any proportionate share of retirees subsidy established by the Finance Board and the difference, if any, between the previous year&#39;s actual premium costs and the previous year&#39;s appropriation, if the actual cost was greater than the appropriation. The amount of the allowance provided in this subsection shall be paid directly to the West Virginia Public Employees Insurance Agency. Each county board shall reflect its share of the payment as revenue on its financial statements to offset its expense for the employer annual required contribution, as defined in article sixteen-d, chapter five of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Notwithstanding any other provision of &sect;5-16D-6 of this code to the contrary, any amount of employer annual required contribution allocated and billed to county boards on or after July 1, 2012, and any amount of the employer annual required contribution allocated and billed to the county boards prior to that date for employees who are employed as professional employees within the limits authorized by section four of this article, employees who are employed as service personnel within the limits authorized by &sect;18-9A-5, </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC">, and employees who are employed as professional student support personnel within the limits authorized by section eight of this article, shall be charged to the state: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That nothing in this subsection requires any specific level of funding by the Legislature in any particular year: </span><span class="cs93AB6E8B">Provided, however,</span><span class="csEF05ACC"> That charging specified amounts to the state pursuant to this section is not to be construed as creating an employer employee relationship between the State of West Virginia and any employee under the employ of a county board or as creating a liability of the state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) County boards are liable for the employer annual required contribution allocated and billed to the county boards on or after July 1, 2012, and any amount of the employer annual required contribution allocated and billed to the county boards prior to that date for individuals who are employed as professional employees above and beyond those authorized by section four of this article, individuals who are employed as service personnel above and beyond those authorized by section five of this article and individuals who are employed as professional student support personnel above and beyond those authorized by section eight of this article. For each such employee, the county board shall forward to the Public Employees Insurance Agency an amount equal to the average premium rate established by the finance board in accordance with subsection (a) of this section: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That the county board shall pay the actual employer premium costs for any county board employee paid from special revenues, federal or state grants, or sources other than state general revenue or county funds.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Prior to July 1, 1995, nothing in this article shall be construed to limit the ability of county boards to use funds appropriated to county boards pursuant to this article to pay employer premiums to the Public Employees Insurance Agency for employees whose positions are funded pursuant to this article. Funds appropriated to county boards pursuant to this article shall not be used to pay employer premiums for employees of such boards whose positions are not, or will not be within twenty months, funded by funds appropriated pursuant to this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) (1) If a public charter school elects to participate in the Public Employee Insurance Agency Fund as a health insurance provider, the West Virginia Department of Education shall calculate the amount of insurance funding that is attributable to the students enrolled in the public charter school and provide an allocation on behalf of the public charter school directly to Public Employee Insurance Agency in the same manner in which the allocations are provided to Public Employee Insurance Agency on behalf of the county boards of education, at 99 percent of allocation. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If a public charter school does not elect to participate in Public Employee Insurance Agency, an allocation shall be made directly to the public charter school, distributed in the same manner as those school districts participating in Public Employee Insurance Agency, at 99 percent of the allocation.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to allow authorization and funding of alternative high-risk population public charter schools; provide eligibility requirements to be an alternative high-risk population public charter school; specify which students are included as &quot;high risk&quot;; require West Virginia Board of Education rule setting forth requirements for alternative high-risk population charter school funding; allow an institution of higher education to apply to an authorizer to establish virtual or on-campus public charter microschools; allow any public charter school to partner with learning pods and microschools to provide instruction to those learning pods and microschools; and make other changes to the public charter school law.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p><p class="cs63FD752D"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

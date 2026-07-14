@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5086 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Enrolled Version  - Final Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5086">&laquo; House Bill 5086 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5086'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5086 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5086" title="HTML  - Committee Substitute (1)
+ - House Bill 5086">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5086 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5086" title="HTML  - Engrossed Version
+ - House Bill 5086">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb5086 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=5086" title="HTML  - Introduced Version
+ - House Bill 5086">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5086 - Relating to peer support services&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5086+sub1+enr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5086"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs957AF5EC{text-align:justify;text-indent:-63pt;margin:0pt 0pt 0pt 63pt;line-height:2}
+		.cs2CFA8611{text-align:left;text-indent:18pt;margin:0pt 36pt 0pt 36pt}
+		.cs53BAC856{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.csF24B3FE4{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.csF5AA9F8B{text-align:center;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs74A86F32{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.cs51F7D470{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs93FA44A8{text-align:right;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs49AF4BA5{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:1.9}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">ENROLLED</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5086</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegates Pinson, Lewis, and Heckert</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Passed March 14, 2026; in effect 90 days from passage (June 12, 2026)]</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">&nbsp;</span></p><p class="cs89687900"><span class="csEF05ACC">AN ACT to amend and reenact &sect;30-1-8 of the Code of West Virginia, 1931, as amended; to amend said code by adding thereto a new article, designated &sect;21-18-1 and &sect;21-18-2; &nbsp;and to amend said code by adding a new section, designated &sect;57-3-11; relating to peer support programs; defining terms; establishing standards for peer support programs; prohibiting licensure discipline in certain instances; providing nothing shall prohibit a board from requiring a licensee to participate in attending a board designed professional health program; prohibiting boards from requesting certain information; &nbsp;allowing for privileged communications; creating a testimonial privilege; and providing exemptions.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 21. LABOR.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">Article 18. Peer Support Team.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;21-18-1. &nbsp;Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">As used in this article, the following terms shall have the meanings ascribed to them by this section, unless a different meaning is clearly required by the context in which the term is used:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &ldquo;Covered caregiver&rdquo; or &ldquo;caregiver&rdquo; means an individual licensed, certified, or otherwise authorized to practice any of the following professions in this state:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Medical doctors licensed pursuant to &sect;30-3-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Physician assistants licensed pursuant to &sect;30-3e-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Registered nurses licensed pursuant to &sect;30-7-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Practical nurses licensed pursuant to &sect;30-7A-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Osteopathic physicians and surgeons licensed pursuant to &sect;30-14-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Participant of a medical residency program pursuant to &sect;30-3-16 of this code or an approved program of post-graduate clinical training as defined in &sect;30-14-2 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Psychologists licensed pursuant to &sect;30-21-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) Counselors licensed pursuant to &sect;30-31-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) A first responder as defined by &sect;23-4-1f of this code, including but not limited to, law enforcement officers, firefighters, emergency medical technicians, paramedic and emergency dispatchers; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Social workers licensed pursuant to &sect;30-30-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(J) Chaplains certified by a recognized certifying body, such as the Association of Professional Chaplains or the National Association of Catholic Chaplains; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(K) Pharmacists or other professionals licensed pursuant to &sect;30-5-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(L) Any other licensed or certified professional designated by a hospital&rsquo;s governing authority as a health care professional with the experience necessary to provide other health care professionals with support. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &ldquo;Licensing board&rdquo; means any state board or agency responsible for the licensure, certification, or regulation of a covered caregiver.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &ldquo;Peer support program&rdquo; means a formal or informal program, including those operated by employers, professional associations, or nonprofit organizations, that provides peer support services to caregivers.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Peer support services&quot; means consultation, risk assessment, referral, or on-site intervention services provided by a peer support team member to an individual experiencing psychological or physical symptoms caused by exposure to acute or chronic high stress incidents in the course of the individual&#39;s employment. &quot;Peer support services&quot; includes:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Providing knowledge and experience or emotional, social, or practical support to peers; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Helping a peer navigate available resources, including the mental health system; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Nonclinical assistance provided by a caregiver or other trained individual with shared or similar professional experience, intended to promote emotional, psychological, or professional well-being.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Peer support team&quot; means an organized group that has been established by an employer of covered caregivers to provide peer support services to employees or members.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;21-18-2. Peer support teams. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) An employer or organization that appoints a peer support team may designate any of the following individuals as an advisor to ensure team members are appropriately trained and are providing proper peer support services:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An individual licensed to practice medicine and surgery or osteopathic medicine and surgery by the state medical board, including such an individual who has satisfactorily completed a residency training program in psychiatry;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) An individual licensed under &sect;30-21-10 of this code to practice psychology;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A advanced practice registered nurse as defined in section &sect;30-7-1 of this code who holds a psychiatric-mental health credential issued by the American nurses credentialing center or a successor organization;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) A licensed professional clinical counselor or licensed professional counselor authorized to practice under &sect;30-31-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) A licensed independent social worker or licensed social worker authorized to practice under &sect;30-30-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) To receive the testimonial privilege established under &sect;57-3-11 of this code, a peer support team member must complete not less than eight hours of initial basic peer support training and additional training or refreshers at least quarterly. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The training required for a peer support team member shall include the following topics:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) An introduction to peer support services and basic peer support skills;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Understanding and identifying the risk factors of mental health problems for the peer support team member&#39;s peers;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Understanding confidentiality and privacy for privileged communications;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Identifying local mental health support resources;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Understanding the importance of engaged communication, listening, and conflict resolution in the context of providing peer support services.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 30. PROFESSIONS AND OCCUPATIONS.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. GENERAL PROVISIONS APPLICABLE TO ALL STATE BOARDS OF EXAMINATION OR REGISTRATION REFERRED TO IN CHAPTER.</span></h2>
+	<h4 class="cs957AF5EC">
+		<span class="csB9803513">&sect;30-1-8. Denial, suspension or revocation of a license or registration; probation; proceedings; effect of suspension or revocation; transcript; report; judicial review.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Every board referred to in this chapter may suspend or revoke the license of any person who has been convicted of a felony or who has been found to have engaged in conduct, practices or acts constituting professional negligence or a willful departure from accepted standards of professional conduct. Where any person has been convicted of a felony or has been found to have engaged in such conduct, practices or acts, every board referred to in this chapter may enter into consent decrees, to reprimand, to enter into probation orders, to levy fines not to exceed $1,000 per day per violation, or any of these, singly or in combination. Each board may also assess administrative costs. Any costs which are assessed shall be placed in the special account of the board and any fine which is levied shall be deposited in the state Treasury&#39;s General Revenue Fund.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) For purposes of this section, the word &quot;felony&quot; means a felony or crime punishable as a felony under the laws of this state, any other state or the United States.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) (1) Every board may not take disciplinary action against a caregiver, as defined in &sect;21-18-1, solely because the caregiver voluntarily seeks or participates in:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Peer support;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Counseling: or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Therapy.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Every board may not require disclosure of participation in peer support or mental health services unless otherwise required by federal law or necessary to determine current fitness to practice.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Nothing in this section shall prohibit a board from requiring a licensee to participate in attending a board designated professional health program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Every board referred to in this chapter may promulgate rules in accordance with the provisions of chapter twenty-nine-a of this code to delineate conduct, practices or acts which, in the judgment of the board, constitute professional negligence, a willful departure from accepted standards of professional conduct or which may render an individual unqualified or unfit for licensure, registration or other authorization to practice.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Every board referred to in this chapter may revoke the license or registration of an individual licensed or otherwise lawfully practicing within this state whose license or registration in any other state, territory, jurisdiction or foreign nation has been revoked by the licensing authority thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Notwithstanding any other provision of law to the contrary, no certificate, license, registration or authority issued under the provisions of this chapter may be suspended or revoked without a prior hearing before the board or court which issued the certificate, license, registration or authority, except:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A board is authorized to suspend or revoke a certificate, license, registration or authority prior to a hearing if the person&#39;s continuation in practice constitutes an immediate danger to the public; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) After due diligence, if a board cannot locate a person licensed under the provisions of this chapter within sixty days of a complaint being filed against the licensee, then the board may suspend the license, certificate, registration or authority of the person without holding a hearing. After due diligence, if a Board still cannot locate the person licensed under the provisions of this chapter thirty days after the suspension of the person&#39;s license, certificate, registration or authority, then the board may revoke the license, certificate, registration or authority of the person without holding a hearing.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) In all proceedings before a board or court for the suspension or revocation of any certificate, license, registration or authority issued under the provisions of this chapter, a statement of the charges against the holder of the certificate, license, registration or authority and a notice of the time and place of hearing shall be served upon the person as a notice is served under section one, article two, chapter fifty-six of this code at least thirty days prior to the hearing and he or she may appear with witnesses and be heard in person, by counsel, or both. The board may take oral or written proof, for or against the accused, as it may consider advisable. If upon hearing the board finds that the charges are true, it may suspend or revoke the certificate, license, registration or authority and suspension or revocation shall take from the person all rights and privileges acquired thereby.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Pursuant to the provisions of section one, article five, chapter twenty-nine-a of this code, informal disposition may also be made by the board of any contested case by stipulation, agreed settlement, consent order or default. Further, the board may suspend its decision and place a licensee found by the board to be in violation of the applicable practice on probation.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Any person denied a license, certificate, registration or authority who believes the denial was in violation of this article or the article under which the license, certificate, registration or authority is authorized shall be entitled to a hearing on the action denying the license, certificate, registration or authority. Hearings under this subsection are in accordance with the provisions for hearings which are set forth in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) A stenographic report of each proceeding on the denial, suspension or revocation of a certificate, license, registration or authority shall be made at the expense of the board and a transcript of the hearing retained in its files. The board shall make a written report of its findings, which shall constitute part of the record.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) All proceedings under the provisions of this section are subject to review by the Supreme Court of Appeals.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) Every board referred to in this chapter shall adopt procedural rules in accordance with the provisions of article three, chapter twenty-nine-a of this code, which shall specify a procedure for the investigation and resolution of all complaints against persons licensed under this chapter. The proposed legislative rules relating only to complaint procedures or contested case hearing procedures required by the prior enactment of this subsection shall be redesignated as procedural rules in accordance with the provisions of article three, chapter twenty-nine-a of this code. Each board shall file the procedural rules required by this subsection by January 31, 2001. The public hearing or public comment period conducted for the proposed legislative rules shall serve as the public hearing or public comment period required by section five, article three, chapter twenty-nine-a of this code.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 57. EVIDENCE AND WITNESSES.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">Article 3. Competency of Witnesses.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;57-3-11. Privileged peer support communications. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) A peer support team member, as defined in &sect;21-18-1 may not be compelled to testify concerning the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A communication received from an individual who receives peer support services from the peer support team member; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The peer support team member&#39;s advice to the individual.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The testimonial privilege does not apply if any of the following are apply:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The communication or advice indicates clear and present danger to the individual who receives peer support services or to other persons;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The individual who received peer support services expressly consents to the testimony.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) If the individual who received peer support services is deceased, the surviving spouse or the executor or administrator of the estate of the deceased individual expressly consents.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The individual who received peer support services voluntarily testifies, in which case the peer support team member may be compelled to testify on the same subject.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The court in camera determines that the information communicated by the individual who received peer support services is not germane to the relationship between the individual and the peer support team member.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The communication or advice pertains or is related to any criminal act.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) For purposes of subsection (b)(1) of this section, indications of past or present abuse or neglect of a child constitute a clear and present danger.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) For the testimonial privilege established under subsection (b) of this section to apply to a communication made at the scene of and immediately after an incident that involves a substantial risk of serious physical harm to persons, serious physical harm to persons, or the loss of human life, the peer support team member must have provided the peer support services at the request of the recipient and at the direction of the appointing entity.</span></p><p class="cs2CFA8611"><span class="csEF05ACC">The Clerk of the House of Delegates and the Clerk of the Senate hereby certify that the foregoing bill is correctly enrolled.</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 130.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the House of Delegates</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">		...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 193.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="cs93AB6E8B">				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">Originated in the House of Delegates.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">In effect 90 days from passage.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">				...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 238.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Speaker of the House of Delegates</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">						...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 310.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">President of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="csF5AA9F8B" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">__________</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">	The within is ................................................ this the...........................................</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">Day of ..........................................................................................................., 2026.</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs93FA44A8"><span class="csEF05ACC">				.............................................................</span></p><p class="cs49AF4BA5"><span class="cs93AB6E8B">								Governor</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4547 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4547">&laquo; House Bill 4547 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4547'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4547 - To remove barriers to voting for persons with disabilities&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4547+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4547"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.csB65271{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4547</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Hansen</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 19, 2026; referred to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;3-1-34 and &sect;3-3-10 of the Code of West Virginia, 1931, as amended, relating to removal of barriers for disabled voters.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. GENERAL PROVISIONS AND DEFINITIONS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;3-1-34. Voting procedures generally; identification; assistance to voters; voting records; penalties.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) A person desiring to vote in an election shall, upon entering the election room, clearly state his or her name and residence to one of the poll clerks who shall thereupon announce the person&rsquo;s name and residence in a clear and distinct tone of voice. The person desiring to vote shall present to one of the poll clerks a valid identifying document meeting the requirements of &sect;3-1-34(a)(1) or &sect;3-1-34(a)(2) of this code, and the poll clerk shall inspect and confirm that the name on the valid identifying document conforms to the name in the individual&#39;s voter registration record and that, if the valid identifying document contains a photograph, the image displayed is truly an image of the person presenting the document. If that person is found to be duly registered as a voter at that precinct, he or she shall sign his or her name in the designated location provided at the precinct. If that person is physically or otherwise unable to sign his or her name, his or her mark shall be affixed by one of the poll clerks in the presence of the other and the name of the poll clerk affixing the voter&#39;s mark shall be indicated immediately under the affixation. A ballot may not be given to the person until he or she signs his or her name on the designated location or his or her signature is affixed thereon.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A document is a valid identifying document if it:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Has been issued either by the State of West Virginia, one of its political subdivisions or instrumentalities, or by the United States Government; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Contains the name of the person desiring to vote; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Contains a photograph of the person desiring to vote: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a driver&rsquo;s license or identification card issued in accordance with &sect;17B-2-1(f)(4) of this code that does not contain a photograph of the person desiring to vote is a valid identifying document.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Notwithstanding the provisions of &sect;3-1-34(a)(1) of this code, the following documents, if they contain the voter&rsquo;s name, shall be considered valid identifying documents, and a person desiring to vote may produce any of the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A valid West Virginia driver&rsquo;s license or valid West Virginia identification card issued by the West Virginia Division of Motor Vehicles, including a driver&rsquo;s license or identification card issued in accordance with &sect;17B-2-1(f)(4) of this code. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A valid driver&rsquo;s license issued by a state other than the State of West Virginia;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) A valid United States passport or passport card;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) A valid employee identification card with a photograph of the eligible voter issued by any branch, department, agency, or entity of the United States Government or of the State of West Virginia, or by any county, municipality, board, authority, or other political subdivision of West Virginia;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) A valid student identification card with a photograph of the eligible voter issued by an institution of higher education in West Virginia, or a valid high school identification card issued by a West Virginia high school;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) A valid military identification card issued by the United States with a photograph of the person desiring to vote; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) A valid voter registration card that includes the voter&rsquo;s photograph issued by a county clerk in the State of West Virginia or the Secretary of State. The county clerk or the Secretary of State may not charge or collect a fee for the application or issuance of a voter registration card that includes the voter&rsquo;s photograph.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Any expired document identified in &sect;3-1-34(a)(2) of this code is a valid identifying document if presented by a registered voter 65 years of age or older: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the identifying document was not expired on the registered voter&rsquo;s 65th birthday. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) In lieu of providing a valid identifying document, as required by this section, a registered voter may be accompanied at the polling place by an adult known to the registered voter for at least six months. That adult may sign an affidavit on a form provided to clerks and poll workers by the Secretary of State, which states under oath or affirmation that the adult has known the registered voter for at least six months, and that in fact the registered voter is the same person who is present for the purpose of voting. For the affidavit to be considered valid, the adult shall present a valid identifying document with his or her name, address, and photograph. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) A poll worker may allow a voter, whom the poll worker has known for at least six months, to vote without presenting a valid identifying document.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) If the person desiring to vote is unable to furnish a valid identifying document, or if the poll clerk determines that the proof of identification presented by the voter does not qualify as a valid identifying document, the person desiring to vote shall be permitted to cast a provisional ballot after executing an affidavit affirming his or her identity pursuant to &sect;3-1-34(a)(6)(B) of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The provisional ballot may be counted once the election authority verifies the identity of the individual by comparing that individual&#39;s signature to the current signature on file with the election authority and determines that the individual was otherwise eligible to cast a ballot at the polling place where the ballot was cast.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The affidavit to be used for voting shall be substantially in the following form:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&quot;State of West Virginia</span></p><p class="cs53FB8D75"><span class="csEF05ACC">County of.....................................</span></p><p class="cs53FB8D75"><span class="csEF05ACC">I do solemnly swear (or affirm) that my name is .................................................; that I reside at.............................; and that I am the person listed in the precinct register under this name and at this address.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">I understand that knowingly providing false information is a violation of law and subjects me to possible criminal prosecution.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">.......................................................</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Signature of voter</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Subscribed and affirmed before me this........... day of ....................., 20....</span></p><p class="cs53FB8D75"><span class="csEF05ACC">................................</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Name of Election Official</span></p><p class="cs53FB8D75"><span class="csEF05ACC">................................</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Signature of Election Official&quot;.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) A voter who votes in person at a precinct polling place that is located in a building which is part of a state licensed care facility where the voter is a resident is not required to provide proof of identification as a condition before voting in an election.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The person entering voter information into the centralized voter registration database shall cause the records to indicate when a voter has not presented a valid identifying document and has executed a voter identity affidavit.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) If a voter participating in the Address Confidentiality Program established by </span><a name="_Hlk191305747"><span class="csEF05ACC">&sect;48-28A-103</span></a><span class="csEF05ACC"> of this code, executes a voter identity affidavit, the program participant&#39;s residential or mailing address is subject to the confidentiality provisions of &sect;48-28A-108 of this code and shall be used only for those statutory and administrative purposes authorized by this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) The Secretary of State shall educate voters about the requirement to present a valid identifying document and develop a program to help ensure that all eligible voters are able to obtain a valid identifying document.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The clerk of the county commission may, upon verification that the precinct at which a handicapped person is registered to vote is not handicap accessible, transfer that person&#39;s registration to the nearest polling place in the county which is handicap accessible. A request by a handicapped person for a transfer of registration must be received by the county clerk no later than 30 days prior to the date of the election. A handicapped person who has not made a request for a transfer of registration at least 30 days prior to the date of the election may vote a provisional ballot at a handicap accessible polling place in the county of his or her registration. If during the canvass the county commission determines that the person had been registered in a precinct that is not handicap accessible, the voted ballot, if otherwise valid, shall be counted. The handicapped person may vote in the precinct to which the registration was transferred only as long as the disability exists or the precinct from which the handicapped person was transferred remains inaccessible to the handicapped. To ensure confidentiality of the transferred ballot, the county clerk processing the ballot shall provide the voter with an unmarked envelope and an outer envelope designated &quot;provisional ballot/handicapped voter&quot;. After validation of the ballot at the canvass, the outer envelope shall be destroyed and the handicapped voter&#39;s ballot shall be placed with other approved provisional ballots prior to removal of the ballot from the unmarked envelope.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) When the voter&#39;s signature is properly marked and the voter has presented a valid identifying document, the two poll clerks shall sign their names in the places indicated on the back of the official ballot and deliver the ballot to the voter to be voted by him or her without leaving the election room. If he or she returns the ballot spoiled to the clerks, they shall immediately mark the ballot &quot;spoiled&quot; and it shall be preserved and placed in a spoiled ballot envelope together with other spoiled ballots to be delivered to the board of canvassers and deliver to the voter another official ballot, signed by the clerks on the reverse side. The voter shall then retire alone to the booth or compartment prepared within the election room for voting purposes and there prepare his or her ballot. In voting for candidates in general and special elections, the voter shall comply with the rules and procedures prescribed in &sect;3-6-5 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) A poll clerk shall, in the presence of the other poll clerk, indicate by a check mark, or by other means, inserted in the appropriate place on the registration record of each voter the fact that the voter voted in the election. In primary elections the clerk shall also insert on the registration record of each voter a distinguishing initial or initials of the political party for whose candidates the voter voted. If a person is challenged at the polls, the challenge shall be indicated by the poll clerks on the registration record, together with the name of the challenger. The subsequent removal of the challenge shall be recorded on the registration record by the clerk of the county commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) (1) A voter may not receive any assistance in voting unless, by reason of blindness, disability, advanced age, or inability to read and write, that voter is unable to vote without assistance. Any voter qualified to receive assistance in voting may:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Declare his or her choice of candidates to an Election Commissioner of each political party who, in the presence of the voter and in the presence of each other, shall prepare the ballot for voting in the manner provided in this section and, on request, shall read to the voter the names of the candidates selected on the ballot;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Require the Election Commissioners to indicate to him or her the relative position of the names of the candidates on the ballot. The voter shall then retire to one of the booths or compartments to prepare his or her ballot in the manner provided in this section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Be assisted by any person of the voter&#39;s choice, other than the voter&#39;s present or former employer or agent of that employer, the officer or agent of a labor union of which the voter is a past or present member or a candidate on the ballot or an official write-in candidate; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) If he or she is handicapped, vote from an automobile outside the polling place or precinct by the absentee balloting method provided in </span><a name="_Hlk191306935"><span class="csEF05ACC">&sect;3-3-5</span></a><span class="csEF05ACC">(e) of this code in the presence of an Election Commissioner of each political party if all of the following conditions are met:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The polling place is not handicap accessible; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Voters are not voting or waiting to vote inside the polling place.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The voted ballot shall then be returned to the precinct officials and secured in a sealed envelope to be returned to the clerk of the county commission with all other election materials. The ballot shall then be tabulated using the appropriate method provided in </span><a name="_Hlk191306987"><span class="csEF05ACC">&sect;3-1-8 of this code </span></a><span class="csEF05ACC">as it relates to the specific voting system in use.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(3) A voter who requests assistance in voting but who is believed not to be qualified for assistance under the provisions of this section shall be permitted to vote a provisional ballot with the assistance of any person authorized in this section to render assistance.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4) One or more of the Election Commissioners or poll clerks in the precinct may challenge the ballot on the ground that the voter received assistance in voting if when in his, her or their opinion the person who received assistance in voting is not so illiterate, blind, disabled or of such advanced age as to have been unable to vote without assistance. The Election Commissioner or poll clerk or commissioners or poll clerks making the challenge shall enter the challenge and the reason for such challenge on the form and in the manner prescribed or authorized by &sect;3-3-1 </span><span class="csB65271">et seq</span><span class="cs68EFC440">. of this code.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(3)</span><span class="csEF05ACC"> An Election Commissioner or other person who assists a voter in voting:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) May not in any manner request or seek to persuade or induce the voter to vote a particular ticket or for a particular candidate or for or against any public question and shall not keep or make any memorandum or entry of anything occurring within the voting booth or compartment and shall not, directly or indirectly, reveal to any person the name of a candidate voted for by the voter, which ticket he or she had voted, how he or she had voted on any public question, or anything occurring within the voting booth, compartment, or voting machine booth except when required &nbsp;by law to give testimony as to the matter in a judicial proceeding; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Shall sign a written oath or affirmation before assisting the voter on a form prescribed by the Secretary of State stating that he or she will not override the actual preference of the voter being assisted, attempt to influence the voter&#39;s choice, or mislead the voter into voting for someone other than the candidate of voter&#39;s choice. The person assisting the voter shall also swear or affirm that he or she believes that the voter is voting free of intimidation or manipulation. There is no requirement that a person providing assistance to a voter is required to sign an oath or affirmation where the reason for requesting assistance is the voter&#39;s inability to vote without assistance because of blindness as defined in &sect;5-15-3 of this code and the inability to vote without assistance because of blindness is certified in writing by a physician of the voter&#39;s choice and is on file in the office of the clerk of the county commission.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(6)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(4)</span><span class="csEF05ACC"> In accordance with instructions issued by the Secretary of State, the clerk of the county commission shall provide a form entitled &quot;list of assisted voters&quot;, on a form as prescribed by the Secretary of State. The commissioners shall enter the name of each voter receiving assistance in voting the ballot, together with the poll slip number of that voter and the signature of the person or the commissioner from each party who assisted the voter. If no voter has been assisted in voting, the commissioners shall make and subscribe to an oath of that fact on the list.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) After preparing the ballot, the voter shall fold the ballot so that the face is not exposed and the names of the poll clerks on it are seen. The voter shall announce his or her name and present his or her ballot to one of the commissioners who shall hand the ballot to another commissioner, of a different political party, who shall deposit it in the ballot box if the ballot is the official one and properly signed. The Commissioner of Election may inspect every ballot before it is deposited in the ballot box to ascertain whether it is single, but without unfolding or unrolling it so as to disclose its content. When the voter has voted, he or she shall retire immediately from the election room and beyond the 60-foot limit and not return except by permission of the commissioners.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Following the election, the oaths or affirmations required by this section from those assisting voters, together with the &quot;list of assisted voters&quot;, shall be returned by the Election Commissioners to the clerk of the county commission along with the election supplies, records, and returns. The clerk of the county commission shall make the oaths, affirmations, and list available for public inspection and preserve them for a period of 22 months or until disposition is authorized or directed by the Secretary of State or court of record. The clerk may use these records to update the voter registration records in accordance with &sect;3-2-18(d) of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Any person making an oath or affirmation required under the provisions of this section who knowingly swears falsely or any person who counsels, advises, aids, or abets another in the commission of false swearing under this section, is guilty of a misdemeanor and, upon conviction thereof, shall be fined not more than $1,000 or confined in jail for a period of not more than one year, or both fined and confined.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Any Election Commissioner or poll clerk who authorizes or provides unchallenged assistance to a voter when the voter is known to the Election Commissioner or poll clerk not to require assistance in voting, is guilty of a felony and, upon conviction thereof, shall be fined not more than $5,000 or imprisoned in a state correctional facility for a period of not less than one year nor more than five years, or both fined and imprisoned.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;3-3-10. Challenging of absent voters&#39; ballots.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The official designated to supervise and conduct absentee voting may challenge an absent voter&#39;s ballot on any of the following grounds:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) That the application for an absent voter&#39;s ballot has not been completed as required by law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) That any statement or declaration contained in the application for an absent voter&#39;s ballot is not true;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) That the applicant for an absent voter&#39;s ballot is not registered to vote in the precinct of his or her residence as provided by law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) That the person voting an absent voter&#39;s ballot by personal appearance in his or her office had assistance in voting the ballot when the person was not qualified for voting assistance because: (A) The affidavit of the person who received assistance does not indicate a legally sufficient reason for assistance; or (B) the person who received assistance did not make an affidavit as required by this article. </span><span class="cs68EFC440">or (C) the person who received assistance is not so illiterate as to have been unable to read the names on the ballot or that he or she is not so physically disabled as to have been unable to see or mark the absent voter&#39;s ballot; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5) That the person who voted an absent voter&#39;s ballot by mail and received assistance in voting the ballot was not qualified under the provisions of this article for assistance; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(6)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(5)</span><span class="csEF05ACC"> That the person has voted absentee by mail as a result of being out of the county more than four consecutive times: </span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC"> That the determination as to whether the person has voted more than four consecutive times does not apply if the person is a citizen residing out of the United States; or a member, spouse or dependent of a member serving in the uniformed services; or a college student living outside of his or her home county.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Any one or more of the election commissioners or poll clerks in a precinct may challenge an absent voter&#39;s ballot on any of the following grounds:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) That the application for an absent voter&#39;s ballot was not completed as required by law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) That any statement or declaration contained in the application for an absent voter&#39;s ballot is not true;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) That the person voting an absent voter&#39;s ballot is not registered to vote in the precinct of his or her residence as provided by law;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) That the signatures of the person voting an absent voter&#39;s ballot as they appear on his or her registration record, his or her application for an absent voter&#39;s ballot and the absent voter&#39;s ballot envelope are not in the same handwriting;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) That the person voting an absent voter&#39;s ballot by personal appearance had assistance in voting the ballot when the person was not qualified for assistance because: (A) The affidavit of the person who received assistance does not indicate a legally sufficient reason for assistance; or (B) the person who received assistance did not make an affidavit as required by this article; </span><span class="cs68EFC440">or (C) the person who received assistance is not so illiterate as to have been unable to read the names on the ballot or that he or she was not so physically disabled as to have been unable to see or mark the absent voter&#39;s ballot;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(6) That the person voted an absent voter&#39;s ballot by mail and received assistance in voting the ballot when not qualified under the provisions of this article for assistance;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(7)</span><span class="cs46AE26E6">(6)</span><span class="csEF05ACC"> That the person who voted the absent voter&#39;s ballot voted in person at the polls on election day;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(8)</span><span class="cs46AE26E6">(7)</span><span class="csEF05ACC"> That the person voted an absent voter&#39;s ballot under authority of subdivision (3), subsection (b), section one of this article and is or was present in the county in which he or she is registered to vote between the opening and closing of the polls on election day; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(9)</span><span class="cs46AE26E6">(8)</span><span class="csEF05ACC"> On any other ground or for any reason on which or for which the ballot of a voter voting in person at the polls on election day may be challenged.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">No challenge may be made to any absent voter ballot if the voter was registered and qualified to vote pursuant to the provisions of subsection (a), section one of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Forms for, and the manner of, challenging an absent voter&#39;s ballot under the provisions of this article are to be prescribed by the Secretary of State.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) Absent voters&#39; ballots challenged by the official designated to supervise and conduct absentee voting under the provisions of this article are to be transmitted by the official directly to the county commission sitting as a board of canvassers. The absent voters&#39; ballots challenged by the election commissioners and poll clerks under the provisions of this article may not be counted by the election officials but are to be transmitted by them to the county commission sitting as a board of canvassers. Action by the board of canvassers on challenged absent voters&#39; ballots is to be governed by the provisions of section forty-one, article one of this chapter.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to remove voting barriers for disabled voters.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

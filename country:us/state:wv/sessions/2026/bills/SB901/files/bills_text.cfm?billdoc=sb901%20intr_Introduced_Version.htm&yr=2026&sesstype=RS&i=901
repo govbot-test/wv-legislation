@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 901 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=901">&laquo; Senate Bill 901 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 901'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb901 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=901" title="HTML  - Committee Substitute (1)
+ - Senate Bill 901">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 901 - Creating truancy pre-trial diversion program&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb901+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=901"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.cs1713567A{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csBD9249E2{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:1.5}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csA130ECD1{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through underline;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	<span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 901</span></p><p class="csFF933113"><span class="cs1713567A">By Senators Smith (Mr. President) and Woelfel</span></p><p class="csFF933113"><span class="cs1713567A">(By Request The Executive)</span></p><p class="cs8BEF69CE"><span class="csEF05ACC">[Introduced February 10, 2026; referred<br/>to the Committee on the Judiciary; and then to the Committee on Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;18-8-2 of the Code of West Virginia, 1931, as amended, and to amend the code by adding two new sections, designated &sect;49-2-202a and &sect;61-11-22b, relating to affording parents, guardians, and custodians of truant children with additional resources and assistance prior to conviction; removing criminal penalties for students who have reached the age of majority; creating a truancy pre-trial diversion program which allows parents, guardians, and custodians of truant children to avoid conviction if they remedy the truancy and the causes that led to the truancy; requiring sentencing of truant parents, guardians, and custodians to be delayed to allow for additional opportunities to address the truancy; and allowing magistrate and circuit court judges to require the Department of Human Services to offer home-based family preservation services for families of truant children, when the courts are involved.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h1 class="csBD9249E2">
+		<span class="csE70BDF83">CHAPTER 18. EDUCATION.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 8. COMPULSORY SCHOOL ATTENDANCE.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-8-2. Offenses; penalties; cost of prosecution; jurisdiction.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Any parent, guardian, or custodian who fails to cause a child or children under 18 years of age in that person&#39;s legal or actual charge to attend school in violation of this article or without just cause, is guilty of a misdemeanor and, shall, upon conviction of a first offense, be fined not less than $50 nor more than $100 together with the costs of prosecution. </span><span class="cs68EFC440">The magistrate or circuit court judge, upon conviction and pronouncing sentence, may delay the sentence for a period of 60 school days provided the child is in attendance every day during said 60-day period. Following the 60-day period, if the child was present at school for every school day, the delayed sentence may be suspended and dismissed.</span><span class="csEF05ACC"> Upon conviction of a second offense, a fine may be imposed of not less than $50 nor more than $100 together with the costs of prosecution or confined in jail not less than five nor more than 20 days. Every day a child is out of school contrary to this article constitutes a separate offense. Magistrates shall have concurrent jurisdiction with circuit courts for the trial of offenses arising under this section.</span><span class="cs46AE26E6"> Eligibility for the truancy pretrial diversion program and required prerequisites to sentencing shall be governed by &sect;61-11-22b of this code.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b) Any person 18 years of age or older who is enrolled in school who, after receiving due notice, fails to attend school in violation of this article or without just cause, is guilty of a misdemeanor and, shall, upon conviction of a first offense, be fined not less than $50 nor more than $100 together with the costs of prosecution and required to attend school and remain throughout the school day. The magistrate or circuit court judge, upon conviction and pronouncing sentence, may delay the imposition of a fine for a period of 60 school days provided the person is in attendance every day during said 60-day period. Following the 60-day period, if the student was present at school every day, the delayed sentence may be suspended and dismissed. Upon conviction of a second offense, a fine may be imposed of not less than $50 nor more than $100 together with the costs of prosecution and the person may be required to go to school and remain throughout the school day until such time as the person graduates or withdraws from school or confined in jail not less than five nor more than 20 days. Every day a student is out of school contrary to this article constitutes a separate offense. Magistrates shall have concurrent jurisdiction with circuit courts for the trial of offenses arising under this section.</span><span class="csA130ECD1"> </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c) Upon conviction of a third offense, any person 18 years of age or older who is enrolled in school shall be withdrawn from school during the remainder of that school year. Enrollment of that person in school during the next school year or years thereafter is conditional upon all absences being excused as defined in law, state board policy and county board of education policy. More than one unexcused absence of such a student shall be grounds for the director of attendance to authorize the school to withdraw the person for the remainder of the school year. Magistrates shall have concurrent jurisdiction with circuit courts for the trial of offenses arising under this section.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(d)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(b)</span><span class="csEF05ACC"> Jurisdiction to enforce compulsory school attendance laws lies in the county in which a student resides and in the county where the school at which the student is enrolled is located. When the county of residence and enrollment are different, an action to enforce compulsory school attendance may be brought in either county and the magistrates and circuit courts of either county have concurrent jurisdiction for the trial of offenses arising under this section.</span></p><h1 class="csBD9249E2">
+		<span class="csE70BDF83">CHAPTER 49. CHILD WELFARE.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. STATE RESPONSIBILITIES FOR CHILDREN.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;49-2-202a. Family preservation services for truancy.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Oftentimes, truancy or chronic absenteeism can be a symptom of deeper problems, including the mental health and substance abuse of the child or their parents, undiagnosed learning disorders of the child, deficient parenting skills of the parents, or complex family dynamics. &nbsp;In order to adequately remedy truancy, it may be necessary to work with the family, as a whole, to identify the underlying cause and to overcome barriers to improvement. &nbsp;Further it is presumed that when a matter of truancy has resulted in criminal charges, pursuant to &sect;18-8-2 of this code, or any court involvement pursuant to &sect;49-4-702 or &sect;49-4-702a of this code, it is significantly more likely that a child in the home will be removed from the custody of the parent, guardian, or custodian. &nbsp;Therefore, intervention by the department may be necessary to preserve the family. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Accordingly, when a magistrate or circuit court judge refers a matter to the department due to court involvement pursuant to &sect;18-8-2a, &sect;49-4-702, or &sect;49-4-702a of this code, the department shall initiate home-based family preservation services. &nbsp;Except as otherwise allowed, the home-based family preservation services required by this section shall be provided consistent with the home-based family preservation services required by &sect;49-2-202 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Home-based family preservation services may continue after resolution of the underlying matter pursuant to &sect;18-8-2a, &sect;49-4-702, or &sect;49-4-702 of this code. &nbsp;&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Nothing contained herein should be interpreted as precluding or limiting other actions the department, or the courts, may take to provide children and their families with better tools to address the root causes of truancy, and to improve school attendance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) When short-term home-based family preservation intervention is initiated pursuant to this section, then a contractor employee of the department may engage in more than three families during any period of time, so long as the department can determine that such will not impact the efficacy of the services. &nbsp;Except as explicitly set forth, this subsection does not otherwise alter the requirements of &sect;49-2-203 of this code. </span></p><h1 class="csBD9249E2">
+		<span class="csE70BDF83">CHAPTER 61. CRIMES AND THEIR PUNISHMENT.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 11. GENERAL PROVISIONS CONCERNING CRIMES.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;61-11-22b. Pretrial Diversion for Truancy Offenses; Delayed Sentencing for Truancy.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs1489E706">Entitlement to Truancy Pretrial Diversion</span><span class="cs46AE26E6">. &ndash; &nbsp;Any person charged with committing a first offense in violation of &sect;18-8-2 of this code, who has no other pending criminal charges, shall be entitled to an offer to enter into pretrial diversion agreement, pursuant to the terms and procedure set forth in this subsection.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The prosecuting attorney and the person charged may enter into a pretrial diversion. &nbsp;A pretrial diversion will not be valid unless it is reduced to writing. &nbsp;The written agreement must be executed in the presence of the person&rsquo;s attorney, or, if the person does not have counsel, in the presence of the presiding magistrate or circuit court judge.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The pretrial diversion agreement must set forth the duration of the agreement, which must be at least six months, but may not exceed 18 months.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The pretrial diversion agreement must include the condition that the person must improve the school attendance of any child named in the criminal complaint. &nbsp;The pretrial diversion agreement may include other children under the care, custody, and control of the person charged, even if the other child is not alleged in the criminal complaint. &nbsp;The agreement should include a goal or metric for determining whether sufficient improvement has been made.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The pretrial diversion agreement may include terms and conditions similar to those set forth in &sect;62-12-9 of this code relating to conditions of probation, including supervision by a probation officer.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The pretrial diversion agreement may include drug and alcohol treatment, counseling, and participation in programs offered under &sect;62-11A-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., &sect;62-11C-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., &sect;62-15-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., &sect;62-15A-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., &sect;62-15B-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., and &sect;62-16-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) The pretrial diversion agreement must include a waiver of confidentiality, which allows the county truancy officer to provide the magistrate or circuit court judge, the prosecuting attorney, and the probation officer, if any, with the school attendance records of the subject child or children. &nbsp;The county truancy officer must submit school attendance records to the parties prior to the final hearing on the pretrial diversion, but the county truancy officer may be required to submit records more frequently, upon the direction of the magistrate or circuit court judge.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Unless explicitly prohibited by any other provision of law, the pretrial diversion agreement may include any other terms and conditions upon which the person charged and the prosecuting attorney agree. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The magistrate or circuit court judge may impose additional terms and conditions, which do not have to be set forth in the agreement. &nbsp;A person entering a pretrial diversion agreement should be advised that these terms and conditions may be ordered as a part of the pretrial diversion.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The magistrate or circuit court judge may require status hearings, at which time the court shall be provided with an update as to the progress of the person charged. &nbsp;The magistrate or circuit court judge may order the county truancy officer, or his or her designee, to appear in court to provide the school attendance for the person charged or the children of the person charged.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The magistrate or circuit court judge may refer the person to the Department of Human Services to receive home-based family preservation services, pursuant to &sect;49-2-202a of this code. &nbsp;The magistrate or circuit court judge may order the department to provide monthly or quarterly status reports on the home-based family preservation services. &nbsp;It is presumed that if a parent, guardian, or custodian is charged pursuant to &sect;18-8-2 of this code, then it is significantly more likely that a child in the home will be removed from the custody of said parent, guardian, or custodian, and, as such, home-based family preservation services may be appropriate. &nbsp;If a magistrate or circuit court judge refers a person to the department for home-based family preservation services, then the department shall offer those services.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A person entitled to a pretrial diversion is entitled to the offer of a pretrial diversion agreement, but the terms and conditions of the agreement must be mutually agreeable to both the person and the prosecuting attorney. &nbsp;No charged person is obligated to enter into a pretrial diversion agreement. &nbsp;A magistrate or circuit court judge may deny a pretrial diversion, in accordance with Rule 11 of the West Virginia Rules of Criminal Procedure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) A person who has entered into an agreement for a pretrial diversion with a prosecuting attorney and who has successfully complied with the terms of the pretrial diversion is not subject to prosecution for the offense or offenses described in the agreement, or for the underlying conduct or transaction constituting the offense or offenses described in the agreement, unless the agreement includes a provision that upon compliance the person agrees to plead guilty or nolo contendere to a specific related offense, with or without a specific sentencing recommendation by the prosecuting attorney.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Upon the determination of the magistrate or circuit court judge that the person who has entered into an agreement for a pretrial diversion has not successfully complied with the terms of the pretrial diversion, the prosecuting attorney may proceed to prosecute the person for the charged offenses, as if the pretrial diversion was never entered. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) A person who enters into a pretrial diversion agreement pursuant to this section may also be entitled to a pretrial diversion for other charges, insomuch as permissible pursuant to &sect;61-11-22 of this code. &nbsp;Nothing contained herein shall prevent the prosecuting attorney from filing new charges which arise after the entry of the pretrial diversion agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs1489E706">Eligibility for Truancy Pretrial Diversion</span><span class="cs46AE26E6">. &ndash; The prosecuting attorney may offer a pretrial diversion to any person charged with committing a first offense in violation of &sect;18-8-2 even if the person has other pending criminal charges, or if the person it charged with a second offense in violation of &sect;18-8-2 of this code. &nbsp;The agreement will have the same requirements and will have the same procedure as set forth in subsection (a) of this section, except that the duration of the agreement must be for a minimum of 12 months, but may not exceed 24 months.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs1489E706">Delayed Sentencing for Truancy Conviction</span><span class="cs46AE26E6">. &ndash; Upon the entry of a guilty plea to any offense or offenses set forth in &sect;18-8-2 of this code, the magistrate or circuit court judge shall schedule sentencing for at least 90 days after the plea hearing. &nbsp;If the conviction is obtained in June, July, or the beginning of August, the sentencing hearing shall be extended such that there is a continuous 90-day period which begins with the start of the next school year. &nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The magistrate or circuit court judge shall set terms which the defendant is required to meet during the 90-day period.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The magistrate or circuit court judge shall require the defendant to ensure that any child or children within the care, custody, or control of the defendant shall maintain good school attendance for the 90 days, regardless of whether the child was named in the criminal complaint which resulted in the conviction. &nbsp;The magistrate or circuit court judge will identify what would be considered good or adequate attendance for the purposes of this subsection.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) When the defendant&rsquo;s substance use is a contributing factor to the truancy, the magistrate or circuit court judge may order the defendant to participate in family treatment court, enroll in the day report center, or enroll in another out-patient treatment program. &nbsp;The magistrate or circuit court judge may order the defendant to participate in an assessment through the day report center to determine whether substance use is a contributing factor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The magistrate or circuit court judge may order additional requirements which may allow the magistrate or circuit court judge to determine whether the defendant is seriously and effectively addressing the matter of truancy.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The magistrate or circuit court judge will determine if the defendant substantially complied with the terms of the 90-day delay.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Upon a finding of substantial compliance, then the statutory fine for a first offense or second offense shall become not less than $5 nor more than $50 together with the costs of prosecution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Upon a finding of substantial compliance, the magistrate or circuit court judge may not impose a jail term for a conviction for a second offense, unless the execution of confinement is suspended for unsupervised probation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) If the magistrate or circuit court judge determines that all children under the care, custody, or control maintained school attendance during the 90-day period, and that the defendant substantially complied with any term or condition of the delay period, then the magistrate or circuit court judge shall order the defendant to pay court costs, but will not impose a fine, jail term, or probation. &nbsp;Upon agreement by the parties, the magistrate or circuit court judge may allow the defendant to withdraw his or her guilty plea, and will entertain a motion of the prosecuting attorney to dismiss the charge, with prejudice. &nbsp;The magistrate or circuit court judge may consider the child or children to have maintained the required attendance if the magistrate or circuit court judge determines that the child or children only had excused absences. &nbsp;The magistrate or circuit court judge may also determine that the child or children did not have the required attendance if the child or children were habitually tardy.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) If the magistrate or circuit court judge determines that the defendant did not substantially comply with the 90-day delay, then the matter shall proceed to sentencing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The magistrate or circuit court judge may allow for a 90-day delay in sentencing, pursuant to the requirements of this subsection, if the defendant is convicted at trial and if the parties agree to the delay. &nbsp;A person convicted by trial who receives a 90-day delay in sentencing will not be eligible for the dismissal of charges.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) </span><span class="cs1489E706">Definitions</span><span class="cs46AE26E6">. &ndash; For purposes of this section, </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;County truancy officer&quot; shall include any county truancy officer, specialist, probation officer, or other person designated by the school or the court as the most appropriate person capable of providing the court with school attendance records.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &nbsp;&quot;Excused absences&quot; shall have the same definition as set forth in &sect;18-8-4 of this code. &nbsp;However, a magistrate or circuit court judge may requests a doctor&rsquo;s excuse, even if not required by &sect;18-8-4 of this code, and, further, a magistrate or circuit court judge find that an absence excused by the school is not excused for purposes of this section if the excuse provided cannot be confirmed as authenticate, or if the magistrate or circuit court judge determines that the excused absences did not justify the child from missing school. &nbsp;A magistrate or circuit court judge may disregard any absence excused by the defendant.</span></p><p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: This bill creates a Truancy Pretrial Diversion Program that allows parents, guardians, and custodians of truant children an opportunity to remedy the truancy prior to conviction, allows for additional delays in sentencing to address the underlying truancy, and requires the Department of Human Services to provide home-based family preservation services when ordered by a magistrate or circuit court judge.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,548 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4371 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4371">&laquo; House Bill 4371 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4371'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4371 - Relating to legalizing cannabis production, sales and adult consumption&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4371+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4371"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs7F85AE1E{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs5F28C1DD{color:#212121;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><div style="width:145.5pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	<div style="width:2.55pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	<span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4371</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegate Hansen</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 15, 2026; referred to the Committee on the Judiciary then Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;16A-17-1, &sect;16A-17-2, &sect;16A-17-3, &sect;16A-17-4, &sect;16A-17-5, &sect;16A-17-6, &sect;16A-17-7, &sect;16A-17-8, and &sect;16A-17-9, relating to legalizing cannabis production, sales, and adult consumption; providing legislative purpose and findings; &nbsp;defining terms; legalizing the possession of one ounce or less of cannabis and cannabis products by adults; authorizing production, sales, transfer, and transport of cannabis upon passing county referendums; providing procedure for county commissions to authorize county referendum on legislation of production and sales; establishing mechanisms for permitting and licensing production and sales facilities by the Bureau for Public Health and localities; authorizing the Bureau of Public Health to propose legislative rules, establish licensing and administrative penalties relating to the production, sales, transfer, and transport </span><span class="cs7F85AE1E">of</span><span class="csEF05ACC"> cannabis in authorizing counties; authorizing the Department of Revenue to promulgate rules and administer tax collections; authorizing localities to regulate manufacturing and sales locations; authorizing a special excise tax on cannabis; creating a new fund and dedicating proceeds of the fund; authorizing county local sales tax to be collected and used for the benefit of county and municipal governments; providing current laws relating to employment, vehicle operation, underage use or private property use preserved; and that the operation of this article is not intended to alter West Virginia Medical Cannabis Act.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 17. LEGAL ADULT CONSUMPTION OF CANNABIS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16A-17-1. &nbsp;Purpose and findings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) In the interest of the efficient use of law-enforcement resources, enhancing revenue for public purposes, and individual freedom, the Legislature finds and declares that the use of cannabis should be legal for persons 21 years of age or older.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) In the interest of the health and public safety of our citizenry, the Legislature further finds and declares that cannabis should be regulated in a manner similar to alcohol so that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Individuals shall have to show proof of age before purchasing cannabis;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Selling, distributing, or transferring cannabis to minors and other individuals under the age of 21 remains illegal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Driving under the influence of cannabis remains illegal;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Legitimate, taxpaying businesspeople, and not criminal actors, shall conduct sales of cannabis; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Cannabis sold in this state shall be labeled and subject to additional regulations to ensure that consumers are informed and protected.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The Legislature finds and declares that it is necessary to ensure consistency and fairness in the application of this article throughout the state and that the matters addressed by this article are, except as specified herein, matters of statewide concern.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16A-17-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article, unless the context otherwise requires,</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Bureau&quot; means the West Virginia Bureau for Public Health;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cannabis&quot; means all parts of the plant of the genus cannabis whether growing or not, the seeds thereof, the resin extracted from any part of the plant, and every compound, manufacture, salt, derivative, mixture, or preparation of the plant, its seeds, or its resin, including marijuana concentrate. &nbsp;Cannabis does not include industrial hemp, nor does it include fiber produced from the stalks, oil, or cake made from the seeds of the plant, sterilized seed of the plant which is incapable of germination, or the weight of any other ingredient combined with cannabis to prepare topical or oral administrations, food, drink, or other product;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cannabis accessories&quot; means any equipment, products, or materials of any kind which are used, intended for use, or designed for use in planting, propagating, cultivating, growing, harvesting, composting, manufacturing, compounding, converting, producing, processing, preparing, testing, analyzing, packaging, repackaging, storing, vaporizing, or containing cannabis, or for ingesting, inhaling, or otherwise introducing cannabis into the human body;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cannabis cultivation facility&quot; means an entity licensed to cultivate, prepare, and package cannabis and sell cannabis to retail cannabis stores, to cannabis product manufacturing facilities, and to other cannabis cultivation facilities, but not to consumers;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cannabis establishment&quot; means a cannabis cultivation facility, a cannabis testing facility, a cannabis product manufacturing facility, or a retail cannabis store;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cannabis product manufacturing facility&quot; means an entity licensed to purchase cannabis; manufacture, prepare, and package cannabis products; and sell cannabis and cannabis products to other cannabis product manufacturing facilities and to retail cannabis stores, but not to consumers;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cannabis products&quot; means concentrated cannabis products and cannabis products that are comprised of cannabis and other ingredients and are intended for use or consumption, such as, but not limited to, edible products, ointments, and tinctures;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Cannabis testing facility&quot; means an entity licensed to analyze and certify the safety and potency of cannabis;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Consumer&quot; means a person 21 years of age or older who purchases cannabis or cannabis products for personal use by persons 21 years of age or older, but not for resale to others;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Department&quot; means the Department of Tax and Revenue or its successor agency;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Industrial hemp&quot; means the plant of the genus cannabis and any part of such plant, whether growing or not, as authorized pursuant to &sect;19-12D-1 </span><span class="cs1489E706">et seq. </span><span class="cs46AE26E6">of this code</span><span class="cs1489E706">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Retail cannabis store&quot; means an entity licensed to purchase cannabis from cannabis cultivation facilities and cannabis and cannabis products from cannabis product manufacturing facilities and to sell cannabis and cannabis products to consumers; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Unreasonably impracticable&quot; means that the measures necessary to comply with the requirements of this article require such a high investment of risk, money, time, or any other resource or asset that the operation of a cannabis establishment is not worthy of being carried out in practice by a reasonably prudent businessperson.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16A-17-3. Personal use of cannabis.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Notwithstanding any other provision of the code, the following acts are not unlawful and are not an offense under state law or a basis for seizure or forfeiture of assets under state law for persons 21 years of age or older:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Possession of one ounce or less of cannabis;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Consumption of cannabis: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That this article does not permit consumption that is conducted openly and publicly or in a manner that endangers others, and for state and local governments to prohibit use on government owned property;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Following the authorization by a county referendum authorized by &sect;16A-17-4, of this code, manufacturing, displaying, purchasing, transporting, or sales of up to one ounce of cannabis in an approved county to persons 21 years or older; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Assisting another person who is 21 years of age or older in any of the acts described in this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16A-17-4. &nbsp;County option election on allowing production and sales of cannabis.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The county commission of any county may conduct a county option election on the question of whether the manufacture and sale to persons 21 years of age or older is allowed in the county as provided in this article, upon approval as provided in this section. The option election on this question may be placed on the ballot in each county at any primary or general election. The county commission of the county shall give notice to the public of the election by publication of the notice as a Class II-0 legal advertisement in compliance with the provisions of &sect;59-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, and the publication area for publication is the county in which the election is to be held. The date of the last publication of the notice shall fall on a date within the period of the 14 consecutive days next preceding the election. There shall be printed on the local option election ballot the following: &quot;Shall the production and sale of cannabis for consumption by persons 21 years or older be lawful in this county?</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">If approved by the voters this will authorize licenses to be issued for the regulated manufacture and sales of cannabis in the county for lawful consumption to persons 21 years or older, and the collection for a special sales tax of five percent for the benefit of the county and its municipalities on all retail cannabis sales&quot;.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">[ ] Yes [ ] No</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(Place a cross mark in the square opposite your choice.)</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The ballots shall be counted, returns made and canvassed as in general elections and the results certified by the commissioners of election to the county commission. The county commission shall, without delay, certify the result of the election. Upon receipt of the results of the election, if a majority of the votes are marked &quot;Yes&quot; all applicable licensees shall be permitted for the manufacture and sales of cannabis in the county. &nbsp;If a majority of the votes are marked &quot;No&quot; the manufacture and sales of cannabis shall remain unlawful.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16A-17-5. Lawful operation of cannabis-related facilities.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Notwithstanding any other provision of law, the following acts are not unlawful and are not an offense under state law or a basis for seizure or forfeiture of assets under state law for persons 21 years of age or older to possess one ounce or less.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">In counties where the voters have by referendum so authorized:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Manufacture, possession, or purchase of cannabis accessories or the sale of cannabis accessories to a person who is 21 years of age or older;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Possessing, displaying, or transporting cannabis or cannabis products; purchase of cannabis from a cannabis cultivation facility; purchase of cannabis or cannabis products from a cannabis product manufacturing facility; or sale of cannabis or cannabis products to consumers, if the person conducting the activities described in this paragraph has obtained a current, valid license to operate a retail cannabis store or is acting in his or her capacity as an owner, employee, or agent of a licensed retail cannabis store;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Cultivating, harvesting, processing, packaging, transporting, displaying, or possessing cannabis; delivery or transfer of cannabis to a cannabis testing facility; selling cannabis to a cannabis cultivation facility, a cannabis product manufacturing facility, or a retail cannabis store; or the purchase of cannabis from a cannabis cultivation facility, if the person conducting the activities described in this paragraph has obtained a current, valid license to operate a cannabis cultivation facility or is acting in his or her capacity as an owner, employee, or agent of a licensed cannabis cultivation facility;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Packaging, processing, transporting, manufacturing, displaying, or possessing cannabis or cannabis products; delivery or transfer of cannabis or cannabis products to a cannabis testing facility; selling cannabis or cannabis products to a retail cannabis store or a cannabis product manufacturing facility; the purchase of cannabis from a cannabis cultivation facility; or the purchase of cannabis or cannabis products from a cannabis product manufacturing facility, if the person conducting the activities described in this paragraph has obtained a current, valid license to operate a cannabis product manufacturing facility or is acting in his or her capacity as an owner, employee, or agent of a licensed cannabis product manufacturing facility;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Possessing, cultivating, processing, repackaging, storing, transporting, displaying, transferring, or delivering cannabis or cannabis products if the person has obtained a current, valid license to operate a cannabis testing facility or is acting in his or her capacity as an owner, employee, or agent of a licensed cannabis testing facility; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Leasing or otherwise allowing the use of property owned, occupied, or controlled by any person, corporation or other entity for any of the activities conducted lawfully in accordance this section.</span></p><h4 class="cs89687900">
+		<a name="_Hlk530137909"><span class="csF3C8A5A3">&sect;16A-17-6</span></a><span class="csF3C8A5A3">. Regulation of cannabis.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Not later than July 1, 2027, the bureau shall propose rules for legislative approval in accordance with the provisions of &sect;29A-3-1 </span><span class="cs1489E706">et seq. </span><span class="cs46AE26E6">of this code</span><span class="cs1489E706"> </span><span class="cs46AE26E6">necessary for implementation of this article. The rules may not prohibit the operation of cannabis establishments, either expressly or through rule, that make their operation unreasonably impracticable, and shall include:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Procedures for the issuance, renewal, suspension, and revocation of a license to operate a cannabis establishment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A schedule of application, licensing, and renewal fees: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That application fees may not exceed $5,000, with this upper limit adjusted annually for inflation, unless the bureau determines a greater fee is necessary to carry out its responsibilities under this article: </span><span class="cs1489E706">Provided, however,</span><span class="cs46AE26E6"> That an entity that is licensed under this article to cultivate or sell cannabis or to manufacture cannabis products for medical purposes at the time this article takes effect and that chooses to apply for a separate cannabis establishment license may not be required to pay an application fee greater than $500 to apply for a license to operate a cannabis establishment in accordance with the provisions of this article;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Qualifications for licensure that are directly and demonstrably related to the operation of a cannabis establishment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Security requirements for cannabis establishments;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Requirements to prevent the sale or diversion of cannabis and cannabis products to persons under the age of 21;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Labeling requirements for cannabis and cannabis products sold or distributed by a cannabis establishment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Health and safety regulations and standards for the manufacture of cannabis products and the cultivation of cannabis;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Restrictions on the advertising and display of cannabis and cannabis products; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Civil penalties for the failure to comply with rules made pursuant to this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) In order to ensure that individual privacy is protected, notwithstanding subsection (a) of this section, the bureau may not require a consumer to provide a retail cannabis store with personal information other than government-issued identification to determine the consumer&#39;s age, and a retail cannabis store may not be required to acquire and record personal information about consumers other than information typically acquired in a financial transaction conducted at a retail liquor store.</span></p><p class="cs53FB8D75"><a name="_Hlk63164131"><span class="cs46AE26E6">(c) A municipality may enact ordinances, not in conflict with this state law or with legislative rules enacted pursuant to this article, governing the times of operation, locations, manner, and number of cannabis establishment operations</span></a><span class="cs46AE26E6">.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Each application for an annual license to operate a cannabis establishment shall be submitted to the bureau. The bureau shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Begin accepting and processing applications by October 1, 2027;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Immediately forward a copy of each application and half of the license application fee to the county and municipality in which the applicant desires to operate the cannabis establishment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Issue an annual license to the applicant between 45 and 90 days after receipt of an application unless the bureau has not received the fee or the bureau is notified by the relevant municipality that the applicant is not in compliance with its ordinances in effect at the time of application: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That when a municipality has enacted a numerical limit on the number of cannabis establishments and a greater number of applicants seek licenses, the bureau shall solicit and consider input from the municipality as to its&#39; preference or preferences for licensure; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Upon denial of an application, notify the applicant in writing of the specific reason for its denial.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16A-17-7. Cannabis excise tax and sales tax, distribution.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) There shall be an excise tax to be levied upon cannabis sold or otherwise transferred by a cannabis cultivation facility to a cannabis product manufacturing facility or to a retail cannabis store at a rate of 15 percent of the sales price. &nbsp;The excise tax shall be deposited in the Cannabis Transfer Tax Fund created in this section and allocated pursuant to the provisions of this section. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) There is created a special fund in the State Treasury which shall be designated and known as the &quot;Cannabis Transfer Tax Fund&quot;. &nbsp;All revenues received from licensees pursuant to &sect;16A-17-7(a) shall be deposited with the State Treasurer and placed in the Cannabis Transfer Tax Fund. The fund shall be an interest-bearing account with interest to be credited to and deposited in the fund. The department shall establish procedures for the collection of all taxes levied and may promulgate legislative rules, pursuant to &sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code necessary to administer collection and enforcement of tax collections, on a monthly basis, as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Fifty percent of the revenue shall be deposited into the Public Employees Insurance Agency Stability Fund and expended pursuant to &sect;11B-2-32 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Twenty-five percent shall be deposited into the Fight Substance Abuse Fund created by &sect;60A-9-8 of this code; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Twelve and one-half percent shall be allocated to the Division of Justice and Community Services and expended pursuant to &sect;15-9A-3 of this code for grants to state and local law-enforcement agencies for training in and promotion of community relations, training on identification of driving under the influence of cannabis, and other training and programs promoting effective drug law-enforcement activities; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Twelve and one-half percent shall be allocated to the General Fund of the state for the purpose of state employee pay raises; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) All proceeds from license fees and any administrative penalties shall be allocated to </span><span class="cs5F28C1DD">the Bureau for Public Health.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A local sales tax shall be assessed on all cannabis derived products of six percent and shall be collected at the point of sale by the licensed retail cannabis store. The county shall receive all proceeds of the local sales tax within 30 days of collection, and the tax shall be distributed as follows:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The county shall retain 50 percent of the tax; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The municipalities of the county shall receive 50 percent of the tax, to be divided among the municipalities on a per capita basis as determined by the most recent decennial United States census of population.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) &nbsp;Sales of cannabis derived products authorized for sale pursuant to this article are not otherwise subject to the consumers sales and service tax as provided in &sect;11-15-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> and &sect;11-15B-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code or any other state taxes not provided pursuant to this section: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That the calculation of the fractional percentage of the tax for parts of a dollar shall be determined by &sect;11-15-3 of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16A-17-8. &nbsp;Employers, driving, minors and control of property.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Nothing in this article is intended to require an employer to permit or accommodate the use, consumption, possession, transfer, display, transportation, sale, or growing of cannabis in the workplace or to affect the ability of employers to have policies restricting the use of cannabis by employees.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Nothing in this article is intended to allow driving under the influence of cannabis or driving while impaired by cannabis or to supersede statutory laws related to driving under the influence of cannabis or driving while impaired by cannabis, nor shall this article prevent the state from enacting and imposing penalties for driving under the influence of or while impaired by cannabis.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Nothing in this article is intended to permit the transfer of cannabis, with or without remuneration, to a person under the age of 21 or to allow a person under the age of 21 to purchase, possess, use, transport, grow, or consume cannabis.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Nothing in this article prohibits a person, employer, school, hospital, detention facility, corporation, or any other entity who occupies, owns, or controls a property from prohibiting or otherwise regulating the possession, consumption, use, display, transfer, distribution, sale, transportation, or growing of cannabis on or in that property.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16A-17-9. Medical cannabis provisions unaffected.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Nothing in this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Limits any privileges or rights of a medical cannabis patient, primary caregiver, or licensed entity as provided by this chapter;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Permits a medical cannabis center to distribute cannabis to a person who is not a medical cannabis patient;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Permits a medical cannabis center licensed pursuant to this article to operate on the same premises as a retail cannabis store; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Discharges the bureau or the department or the from their statutory and constitutional duties to regulate medical cannabis pursuant to this chapter.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to legalize the personal use and possession of cannabis by adults; providing for a county option election to allow for the production and sales in that county; providing for regulation by the Bureau of Health; authorizing an excise and local sales tax on cannabis; prohibiting underage use; and preserving current laws relating to allowing employers and property owners to prohibit use or possession.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

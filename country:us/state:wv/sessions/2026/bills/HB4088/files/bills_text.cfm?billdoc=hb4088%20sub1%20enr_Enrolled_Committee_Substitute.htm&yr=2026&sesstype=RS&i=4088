@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4088 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Enrolled Version  - Final Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4088">&laquo; House Bill 4088 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4088'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4088 sub1.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4088" title="HTML  - Committee Substitute (1)
+ - House Bill 4088">
+Committee Substitute (1)
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4088 sub1 eng.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4088" title="HTML  - Engrossed Version
+ - House Bill 4088">
+Engrossed Version
+</a>&nbsp;|&nbsp;
+
+<a href="bills_text.cfm?billdoc=hb4088 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=H&i=4088" title="HTML  - Introduced Version
+ - House Bill 4088">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4088 - Relating to certified public accountants&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4088+sub1+enr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4088"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csC371C521{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2.0208333}
+		.cs9782B5C6{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2.0208333}
+		.cs98C3A77C{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2.0208333}
+		.csD11938D7{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2.0208333}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs4FA6118B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:italic;}
+		.cs5251900E{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2.1}
+		.cs2CFA8611{text-align:left;text-indent:18pt;margin:0pt 36pt 0pt 36pt}
+		.cs53BAC856{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.csF24B3FE4{text-align:left;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.csF5AA9F8B{text-align:center;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs74A86F32{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 0pt}
+		.cs51F7D470{text-align:justify;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs93FA44A8{text-align:right;text-indent:0pt;margin:0pt 36pt 0pt 36pt}
+		.cs49AF4BA5{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:1.9}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">ENROLLED</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4088</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Delegates Criss, Roop, Adkins, Jeffries, Young, Fehrenbacher, Heckert and Holstein</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">[</span><span class="cs7B75DFFE">Passed February 23, 2026; in effect 90 days from passage (May 24, 2026</span><span class="csADC6E5DB">)]</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">AN ACT to amend and reenact &sect;30-9-2, &sect;30-9-5, &sect;30-9-7, &sect;30-9-8, &sect;30-9-10, &sect;30-9-11, &sect;30-9-16, and &sect;30-9-26 of the Code of West Virginia, 1931, as amended, relating to certified public accountants; clarifying and updating definitions; modifying rule-making authority of the Board of Accountancy; updating education, examination, and experience requirements for certification; revising provisions on substantial equivalency practice privileges; and updating unlawful acts and disciplinary provisions applicable to licensees, firms, and substantial equivalency practitioners.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 9. ACCOUNTANTS. </span></h2>
+	<p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-9-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">As used in this article, the following words and terms have the following meanings, unless the context or associated language clearly indicates otherwise:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Affiliated entity&quot; means an entity that controls, is controlled by, or is under common control with, a firm. For purposes of this definition, an entity controls another entity if the entity directly or indirectly or acting in concert with one or more other affiliated entities, or through one or more subsidiaries, owns, controls, or holds with power to vote, or holds proxies representing, more than 50 percent of the voting interest in such entity.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Assurance&quot; means any act or action, whether written or oral, expressing an opinion or conclusion about the reliability of a financial statement or about its conformity with any financial accounting standards.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Attest services&quot; means providing the following services:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) &nbsp;Any audit or other engagement to be performed in accordance with the Statements on Auditing Standards (SAS);</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) &nbsp;Any review of a financial statement to be performed in accordance with the Statements on Standards for Accounting and Review Services (SSARS);</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) &nbsp;Any examination of prospective financial information to be performed in accordance with applicable Statements on Standards for Attestation Engagements (SSAE);</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) &nbsp;Any engagement to be performed in accordance with the Auditing Standards of the Public Company Accounting Oversight Board (PCAOB); or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Any examination, review, or agreed upon procedures engagement to be performed in accordance with the Statements on Standards for Attestation Engagements (SSAE), other than an examination described in paragraph (C) of this subdivision.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Audit&quot; means expressing an opinion about the fairness of presentation of financial statements in accordance with the Statements on Auditing Standards.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Authorization&quot; means an authorization issued pursuant to this article that entitles a permit holder or an individual practitioner to perform, attest, or compilation services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Board&quot; means the West Virginia Board of Accountancy.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Business entity&quot; means any corporation, partnership, limited partnership, limited liability partnership, professional limited liability partnership, limited liability company, professional limited liability company, joint venture, business trust or any other form of business organization. The term &quot;business entity&quot; includes a firm.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;Certificate&quot; means a certificate as a certified public accountant issued or renewed by the board pursuant to this article or corresponding provisions of prior law.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;Certified public accountant&quot; or &quot;CPA&quot; means the holder of a certificate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) &quot;Client&quot; means a person or entity that agrees with a licensee or licensee&rsquo;s employer to receive any professional service.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) &quot;Commission&quot; means compensation, except a referral fee, for recommending or referring any product or service to be supplied by another person.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) &quot;Compilation services&quot; means providing a service performed in accordance with the Statements on Standards for Accounting and Review Services that presents, in the form of a financial statement, information that is the representation of management without an expression of assurance on the statement: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That this definition does not apply to the use of the term &quot;compilation&quot; in &sect;30-9-31 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) &quot;Contingent fee&quot; means a fee established for the performance of any service pursuant to an arrangement in which no fee will be charged unless a specified finding or result is attained, or in which the amount of the fee is otherwise dependent upon the finding or result of the service. A fee fixed by a court, taxing authority, or other public authority is not a contingent fee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(14) &quot;Examination&quot;, when used with reference to prospective financial statements, means expressing an opinion about the fairness of presentation of financial information in accordance with the Statements on Standards for Attestation Engagements.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) &quot;Financial statement&quot; means a writing or other presentation, including accompanying notes, which presents, in whole or in part, historical or prospective financial position, results of operations or changes in financial position of any person, corporation, partnership, or other entity.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) &quot;Firm&quot; means any business entity, including, but not limited to, accounting corporations and professional limited liability companies, in which two or more certified public accountants or public accountants hold an ownership or membership interest, in terms of the financial interests and voting rights of all partners, officers, shareholders, members or managers, and the primary business activity of which is the provision of professional services to the public by certified public accountants or public accountants.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) &quot;Firm ownership requirements&quot; means, with respect to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Any professional limited liability company organized pursuant to &sect;31B-13-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code, consisting of one or more licensed certified public accountants or licensed public accountants;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Any other firm where:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) A simple majority of ownership of the firm, in terms of financial interests and voting rights of all partners, officers, shareholders, members or managers, belongs either to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Certified public accountants holding a certificate under &sect;30-9-12 of this code or the equivalent provision of another state; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(II) Public accountants who have met the continuing professional education requirements of &sect;30-9-12(b) of this code and who are not subject to the exemption or limitation set forth in &sect;30-9-12(b)(1) or (2) of this code or similar provisions of another state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) All owners of the firm who are not certified public accountants or public accountants are active participants in the firm or in affiliated entities.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(18) &quot;Foreign&quot; means any country other than the United States.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(19) &quot;Home office&quot; means the client&rsquo;s office address.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(20) &quot;Individual practitioner&quot; means a certified public accountant or a public accountant who offers professional services to the public, but who does not practice in a firm.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(21) &quot;License&quot; means a certificate, permit, registration, or authorization.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(22) &quot;Licensee&quot; means the holder of a license.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(23) &quot;Manager&quot; means a manager of a professional limited liability company.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(24) &quot;Member&quot; means a member of a professional limited liability company.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(25) &quot;Nonlicensee&quot; means a person or business entity that does not hold a license.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(26) &quot;Out-of-state certificate&quot; means a valid certificate as a certified public accountant or equivalent designation issued or renewed under the laws of another state: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That &quot;out-of-state certificate&quot; does not include any certificate as a certified public accountant or equivalent designation that was issued or renewed solely by virtue of a holder&rsquo;s prior status as a public accountant or its equivalent in the state of issuance and not by virtue of the holder&rsquo;s having met the certification requirements of the state of issuance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(27) &quot;Out-of-state permit&quot; means a valid permit as a firm of certified public accountants or another designation equivalent to a permit issued or renewed by the board and that is issued or renewed under the laws of another state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(28) &quot;Peer Review&quot; means a study, appraisal, or review of one or more aspects of the professional work of a licensee by a person who holds a certificate or an out-of-state certificate and who is not affiliated with the licensee being reviewed.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(29) &quot;Permit&quot; means a permit issued to a firm pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(30) &quot;Principal place of business&quot; means the licensee&rsquo;s office location in the state where the licensee holds a certificate or registration.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(31) &quot;Professional services&quot; means those services that involve the specialized knowledge and skills of a certified public accountant or a public accountant delivered by any means, including, but not limited to, in person, by mail, telephone, or by electronic means.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(32) &quot;Public accountant&quot; means a person holding a registration who is not a certified public accountant.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(33) &quot;Referral fee&quot; means compensation for recommending or referring any service of a licensee to any person.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(34) &quot;Registration&quot; means a registration as a public accountant issued by the board pursuant to prior law governing the registration of public accountants and renewed by the board pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(35) &quot;Report&quot;, when used with reference to financial statements, means an opinion or disclaimer of opinion or other form of language or representation which states or implies any form of assurance or denial of assurance.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(36) &quot;Rule&quot; means any rule proposed for legislative approval by the board pursuant to this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(37) &quot;State&quot; means any state of the United States, the District of Columbia, Northern Mariana Islands, Puerto Rico, the U.S. Virgin Islands, or Guam.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(38) &quot;Substantial equivalency&quot; or &quot;substantially equivalent&quot; means or refers to a determination by the West Virginia Board of Accountancy or its designee that the education, examination, and experience requirements contained in the statutes and administrative rules of another jurisdiction are comparable to or exceed the education, examination, and experience requirements of the State of West Virginia, or that an individual certified public accountant&rsquo;s education, examination, and experience qualifications are comparable to or exceed the education, examination, and experience requirements contained in the Uniform Accountancy Act. In ascertaining substantial equivalency, as used in this article, the board shall take into account the qualifications without regard to the sequence in which experience, education, or examination requirements were attained. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(39) &quot;Substantial equivalency practitioner&quot; means any certified public accountant whose principal place of business is not in this state, who holds a certificate from another state and has complied with the provisions of &sect;30-9-16 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(40) &quot;Uniform Accountancy Act&quot; means the most recent edition of the model act to regulate the practice of public accounting, jointly published by the American Institute of Certified Public Accountants and the National Association of State Boards of Accountancy.</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-9-5. &nbsp;Rule-making authority. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The board shall propose rules for legislative approval in accordance with the provisions of &sect;29A-3-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code to implement the provisions of this article, including, but not limited to, the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The education required of an applicant;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The experience required of an applicant;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The examination administered under this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Issuing or renewing a certificate, registration, permit, or authorization;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Denying, suspending, revoking, or reinstating a certificate, registration, permit, or authorization;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The conduct of investigations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Firm ownership requirements;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Accounting corporations;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Substantial equivalency practice privileges;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Continuing professional education requirements for licensees, including exemptions;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Peer review requirements;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) Professional conduct requirements;	</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) Identifying professional services required to be performed in accordance with the applicable statements on standards;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) Use of the titles &quot;certified public accountant,&quot; &quot;CPA,&quot; &quot;public accountant&quot; and &quot;PA&quot;;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) Use of commissions, referral fees, and contingent fees;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) Fees for the issuance and renewal of a certificate, registration, permit, or authorization and other fees authorized by this article; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) Other rules the board considers necessary and proper for implementing the provisions of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) All rules in effect on July 1, 2001, will remain in effect until they are superseded.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-9-7. &nbsp;Issuance of certificate; certificates issued prior to July 1, 2001.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The board shall issue an original certificate to an applicant who demonstrates that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) He or she has met one of the following qualifications for a certificate:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) He or she meets the qualifications for a certificate set forth in &sect;30-9-8 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) He or she holds an out-of-state certificate and meets the requirements of &sect;30-9-9 of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) He or she holds an out-of-state certificate, does not meet the requirements of &sect;30-9-9 of this code but does meet the requirements of &sect;30-9-10 of this code; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) He or she holds a substantially equivalent foreign designation that meets the requirements of &sect;30-9-11 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) He or she has submitted an application, in writing, on a form prescribed by the board: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the application must require an applicant to list all states in which he or she has applied for or holds an out-of-state certificate and any past denial, revocation, or suspension of an out-of-state certificate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) He or she has paid the appropriate fee prescribed by the board;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) He or she has submitted to a state and national criminal history record check, as set forth in this subdivision:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) This requirement is found not to be against public policy;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) The criminal history record check shall be based on fingerprints submitted to the West Virginia State Police or its assigned agent for forwarding to the Federal Bureau of Investigation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) The applicant shall meet all requirements necessary to accomplish the state and national criminal history record check, including:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Submitting fingerprints for the purposes set forth in this subsection; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Authorizing the board, the West Virginia State Police, and the Federal Bureau of Investigation to use all records submitted and produced for the purpose of screening the applicant for a certificate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) The results of the state and national criminal history record check may not be released to or by a private entity except:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) To the individual who is the subject of the criminal history record check;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) With the written authorization of the individual who is the subject of the criminal history record check; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Pursuant to a court order.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) The criminal history record check and related records are not public records for the purposes of &sect;29B-1-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) The applicant shall pay the actual costs of the fingerprinting and criminal history record check;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) The board may propose rules to implement the provisions of this section for legislative approval in accordance with &sect;29A-3-1</span><span class="cs93AB6E8B"> et seq. </span><span class="csEF05ACC">of this code. The rules must be consistent with standards established by the Federal Bureau of Investigation and the National Crime Prevention and Privacy Compact as authorized by 42 U. S. C. &sect;14611, </span><span class="cs93AB6E8B">et seq.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Certificates will initially be issued for a period to expire on June 30 following the date of issue.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) A certificate issued by the board prior to July 1, 2001, will for all purposes be considered a certificate issued under this section: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That a person holding a certificate issued prior to July 1, 2001, must renew the certificate pursuant to &sect;30-9-12 of this code.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;30-9-8. &nbsp;Education, examination, and experience certificate requirements. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">The board shall issue a certificate to an applicant who meets the following requirements:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The education requirement for a certificate shall be met through any of the following pathways:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A post baccalaureate degree conferred by a college or university acceptable to the board, the total educational program to include an accounting concentration or equivalent as determined by board rule;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A baccalaureate degree plus an additional 30 semester credit hours, conferred by a college or university acceptable to the board, the total educational program to include an accounting concentration or equivalent as determined by board rule; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) A baccalaureate degree conferred by a college or university acceptable to the Board, the total education program to include an accounting concentration or equivalent as determined by board rule.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Passage of the Uniform Certified Public Accountant Examination published by the American Institute for Certified Public Accountants or its successor and any additional examination required by the board by rule that tests the applicant&rsquo;s knowledge of the subjects related to the practice of accounting: </span><span class="cs93AB6E8B">Provided, </span><span class="csEF05ACC">That before applying for the examination required by this subdivision, an applicant is required to have obtained at minimum a baccalaureate degree or higher with an accounting concentration or equivalent as determined by board rule.</span></p><p class="csC371C521"><span class="csEF05ACC">(3) One of the following experience requirements: </span></p><p class="csC371C521"><span class="csEF05ACC">(A) At least one year of experience for an applicant who is applying for licensure on the basis of either of the educational requirements set forth in subparagraph (1)(A) or (1)(B) of this section; or</span></p><p class="csC371C521"><span class="csEF05ACC">(B) At least two years of experience for an applicant who is applying for licensure on the basis of the educational requirement in subparagraph (1)(C) of this section. </span></p><p class="csC371C521"><span class="csEF05ACC">(4) Qualifying experience for either subparagraph (3)(A) or (3)(B) may consist of providing any type of service or advice involving the use of accounting, attest, compilation, management advisory, financial advisory, tax, or consulting skills. Either experience requirement may be satisfied by employment in private practice, government, industry, not-for-profit organization, academia, or public practice. An applicant&rsquo;s experience must be verified by a licensee and must meet any additional requirements determined by the board by rule to be appropriate. </span></p><p class="cs9782B5C6"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs98C3A77C">
+		<span class="csB9803513">&sect;30-9-10. Not substantially equivalent certificate requirements.</span></h4>
+	<p class="csC371C521"><span class="csEF05ACC">The board shall issue a certificate to an applicant who holds a valid out-of-state certificate but who does not qualify for a certificate under the provisions of &sect;30-9-9 of this code if the applicant meets the education, experience, examination, and continuing education requirements specified by the board by rule.</span></p><h4 class="csD11938D7">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="csD11938D7">
+		<span class="csB9803513">&sect;30-9-11. Foreign designation certificate requirements.</span></h4>
+	<p class="csC371C521"><span class="csEF05ACC">The board shall issue a certificate to an applicant who holds a foreign designation in public accountancy if:</span></p><p class="csC371C521"><span class="csEF05ACC">(1) The foreign authority that granted the designation regulates the practice of public accountancy and allows a person holding a certificate issued by this state to obtain the foreign authority&#39;s comparable designation; and </span></p><p class="csC371C521"><span class="csEF05ACC">(2) The applicant meets the education, examination, experience, and continuing education requirements specified by the board by rule.</span></p><h4 class="cs7F45F1B">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs63FD752D"><span class="csB9803513">&sect;30-9-16. &nbsp;Substantial equivalency practice privileges.</span></p><p class="cs63FD752D"><span class="cs4FA6118B">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) An individual whose principal place of business is not in this state, holds a valid out-of-state certificate in good standing, and whose initial license requirements have met the certification requirements of &sect;30-9-8 of this code shall have all the rights and privileges of a certificate holder of this state without the need to obtain a certificate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) An individual whose principal place of business is not in this state, and who holds a valid license as a certified public accountant from any state as of December 31, 2025, has practice privileges in this state and shall continue to have all of the privileges of a license in this state without the need to obtain a certificate.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) An individual who offers or renders professional services under this section shall be granted practice privileges in this state, and no notice, fee, or other submission is required of any such individual. Such an individual is subject to the requirements in subsection &nbsp;(e) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(d)(1) Any individual performing or offering to perform any services in the state as a substantial equivalency practitioner and the firm which employs that out-of-state certificate holder are simultaneously subject to the jurisdiction of the board concerning all matters within the scope of this article and are required to comply with the provisions of this article and applicable rules;</span></p><p class="cs5251900E"><span class="csEF05ACC">(2) The state board of accountancy of the state of issuance of any substantial equivalency practitioner&#39;s certificate is appointed as his or her agent upon which process may be served in an action or proceeding by the board.</span></p><p class="cs5251900E"><span class="csEF05ACC">&nbsp;(e) In the event the certificate from the state of the individual&#39;s principal place of business is no longer valid, the individual will cease offering or rendering professional services in this state individually and on behalf of a firm.</span></p><p class="cs5251900E"><span class="csEF05ACC">&nbsp;(f) Subject to the provisions of subsection &nbsp;(g) of this section, an individual who qualifies for the practice privileges under this section may only perform any of the following services, for any entity with its home office in this state, through a firm which has obtained a permit issued under &sect;30-9-17 of this code and an authorization issued under &sect;30-9-19 of this code:</span></p><p class="cs5251900E"><span class="csEF05ACC">(1) A financial statement audit or other engagement to be performed in accordance with the Statements on Auditing Standards;</span></p><p class="cs5251900E"><span class="csEF05ACC">(2) An examination of prospective financial information to be performed in accordance with the Statements on Standards for Attestation Engagements; or</span></p><p class="cs5251900E"><span class="csEF05ACC">(3) An engagement to be performed in accordance with the Auditing Standards of the Public Company Accounting Oversight Board.</span></p><p class="cs5251900E"><span class="csEF05ACC">&nbsp;(g) An individual practitioner who is also a substantial equivalency practitioner may provide the services set out in subsection (f) of this section without obtaining a permit issued under &sect;30-9-17 of this code, but must obtain the authorization issued under &sect;30-9-19 of this code.</span></p><p class="cs5251900E"><span class="csEF05ACC">&nbsp;(h) A certificate holder of this state offering or rendering services or using their CPA title in another state is subject to disciplinary action in this state for an act committed in another state for which the certificate holder would be subject to discipline in that other state.</span></p><p class="cs5251900E"><span class="csEF05ACC">&nbsp;(i) The board shall investigate any complaint made by the board of accountancy of another state.</span><span class="cs93AB6E8B"> </span></p><p class="cs63FD752D"><span class="csB9803513">&sect;30-9-26. &nbsp;Unlawful Acts. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) No authorization holder or substantial equivalency practitioner may perform attest or compilation services in a manner other than pursuant to the statements on standards relating to those services specified by rule.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) (1) No licensee or substantial equivalency practitioner or firm may, for a commission or referral fee, recommend or refer to a client any product or service or refer any product or service to be supplied by a client, or perform for a contingent fee any professional services for or receive a referral fee, commission, or contingent fee from a client for whom the licensee, the substantial equivalency practitioner or firm works or associates or in which either of them owns an interest or who performs for that client:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) An audit or review of a financial statement;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A compilation of a financial statement when the licensee or substantial equivalency practitioner expects, or reasonably might expect, that a third party will use the financial statement and the compilation report does not disclose a lack of independence; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) An examination of prospective financial information.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The prohibition in subdivision one of this subsection applies only during the period in which the licensee or substantial equivalency practitioner is engaged to perform any of the services listed in subdivision (1) of this subsection and the period covered by any historical financial statements involved in any of those listed services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) No licensee or substantial equivalency practitioner may for a contingent fee prepare an original or amended tax return or claim for a tax refund or serve as an expert witness.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) No person holding a certificate or registration or firm holding a permit shall use a professional or firm name or designation that is misleading about the legal form of the firm, or about the persons who are partners, officers, members, managers, or shareholders of the firm, or about any other matter: </span><span class="cs93AB6E8B">Provided, </span><span class="csEF05ACC"> That names of one or more former partners, members, managers, or shareholders may be included in the name of a firm or its successor: </span><span class="cs93AB6E8B">Provided further</span><span class="csEF05ACC">, That a common brand name, including common initials, used by a CPA firm in its name, is not misleading if said firm is a Network Firm as defined in the current AICPA Code of Professional Conduct and when offering or rendering services that require independence under AICPA standards, said firm complies with the AICPA Code of Professional Conduct&rsquo;s applicable standards on independence.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) No person or firm that does not hold an authorization to perform attest services, or is not otherwise exempt from the authorization requirement, may perform or offer to perform attest services, and no person or firm that does not hold an authorization to perform compilation services, or is not otherwise exempt from the authorization requirement, may perform or offer to perform compilation services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) No individual practitioner who holds an authorization may perform or offer to perform attest services for a client of his or her employer through or on behalf of his or her employer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) No person who is not a certified public accountant, a public accountant, or a substantial equivalency practitioner may:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Issue a report on financial statements of any other person, business entity, or governmental unit or otherwise render or offer to render any attest or compilation service: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That this subdivision does not prohibit any act of a public official or public employee in the performance of that person&#39;s duties or the performance by any person of other services involving the use of accounting skills, including the preparation of tax returns, management advisory services, and the preparation of financial statements without the issuance of reports thereon: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That this subdivision does not prohibit any person who is not a certified public accountant, a public accountant, or a substantial equivalency practitioner to prepare financial statements or issue nonattest transmittals of information thereon that do not purport to have been performed in accordance with the applicable statements on standards;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Claim to hold a certificate, registration, or authorization or make any other claim of licensure or approval related to the preparation of financial statements or the issuance of reports thereon that is false or misleading;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Claim to have used &quot;generally accepted accounting principles,&quot; &quot;generally accepted accounting standards,&quot; &quot;public accountancy standards,&quot; &quot;public accountancy principles,&quot; &quot;generally accepted auditing principles&quot; or &quot;generally accepted auditing standards&quot; in connection with the preparation of any financial statement, or use any of these terms to describe any complete or partial variation from those standards or principles or to imply complete or partial conformity with those standards or principles;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) State or imply that he or she is tested, competent, qualified, or proficient in financial standards established by the American Institute of Certified Public Accountants or any agency thereof, the governmental accounting standards board or any agency thereof, the Securities and Exchange Commission or any agency thereof, the Financial Accounting Standards Board or any agency thereof, or any successor entity to any of these entities;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Assume or use the titles &quot;certified accountant,&quot; &quot;chartered accountant,&quot; &quot;enrolled accountant,&quot; &quot;licensed accountant,&quot; &quot;registered accountant,&quot; &quot;Auditor,&quot; &quot;independent Auditor&quot; or any other title or designation that a reasonable person may confuse with the titles &quot;certified public accountant&quot; or &quot;public accountant,&quot; or assume or use the abbreviations &quot;CA,&quot; &quot;LA,&quot; &quot;RA,&quot; or similar abbreviation that a reasonable person may confuse with the abbreviations &quot;CPA&quot; or &quot;PA&quot;: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the title &quot;Enrolled Agent&quot; and the abbreviation &quot;EA&quot; may only be used by individuals so designated by the Internal Revenue Service;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Use language in any statement relating to the financial affairs of a person or entity that is conventionally used by a licensee in a report on a financial statement;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Use the words &quot;audit,&quot; &quot;audit report,&quot; &quot;independent audit,&quot; &quot;examine,&quot; &quot;examination,&quot; &quot;opinion&quot; or &quot;review&quot; in a report on a financial statement;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Assume or use any title that includes the words &quot;accountant,&quot; &quot;Auditor,&quot; or &quot;accounting&quot; in connection with any other language (including the language of a report) that implies that the person or business entity holds a license or has special competence in accounting or auditing: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That this subdivision does not prohibit any officer, partner, member, manager, or employee of any business entity from affixing that person&#39;s own signature to any statement in reference to the financial affairs of the business entity with any wording designating the position, title, or office that the person holds therein, nor does it prohibit any act of a public official or employee in the performance of the person&#39;s duties;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Use or assume the title &quot;certified public accountant,&quot; the abbreviation &quot;CPA,&quot; or any other title, designation, word, combination of letters, abbreviation, sign, card, or device that may lead a reasonable person to believe that the person is a certified public accountant or the holder of an out-of-state certificate; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Assume or use the title &quot;public accountant,&quot; the abbreviation &quot;PA,&quot; or any other title, designation, word, combination of letters, abbreviation, sign, card, or device that may lead a reasonable person to believe that the person is a public accountant.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Only a business entity that holds a permit or is exempt from the permit requirement under &sect;30-9-17(c) or (d) of this code, may assume or use the designations &quot;certified public accountants,&quot; &quot;CPA firm,&quot; &quot;public accountants,&quot; or &quot;PA firm&quot; or the abbreviations &quot;CPAs,&quot; or &quot;PAs,&quot; or any other title, designation, word, combination of letters, abbreviation, sign, card, or device that may lead a reasonable person to believe that the business entity is a firm or holds a permit.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The display or uttering by a person of any printed, engraved, or written instrument, bearing the name of the person in conjunction with any of the claims, titles, words, or phrases listed in this section is, for purposes of this section, prima facie evidence that the person has engaged in the acts.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) Notwithstanding any provision in this section to the contrary, it is not a violation of this section for a firm or business entity which does not hold a permit under &sect;30-9-17 of this code or an authorization under &sect;30-9-19 of this code and which does not have an office in this state to provide its professional services in this state so long as it complies with &sect;30-9-17(c) or (d) of this code, whichever is applicable, and with any applicable provision of &sect;30-9-19 of this code.</span></p><p class="cs2CFA8611"><span class="csEF05ACC">The Clerk of the House of Delegates and the Clerk of the Senate hereby certify that the foregoing bill is correctly enrolled.</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 130.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the House of Delegates</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">		...............................................................</span></p><p class="cs53BAC856" style="tab-stops:center 193.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Clerk of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="cs93AB6E8B">				 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">Originated in the House of Delegates.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856"><span class="csEF05ACC">In effect 90 days from passage.</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 18pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">				...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 238.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">Speaker of the House of Delegates</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">						...............................................................</span></p><p class="csF24B3FE4" style="tab-stops:center 310.5pt;"><span class="csEF05ACC">	</span><span class="cs93AB6E8B">President of the Senate</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53BAC856" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 36pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="csF5AA9F8B" style="tab-stops:left -62.75pt left -36pt left 0pt left 22.1pt left 72pt left 98.6pt left 108pt left 144pt left 180pt left 216pt left 252pt left 288pt left 324pt left 360pt left 396pt left 432pt left 468pt left 504pt left 540pt left 576pt left 612pt left 648pt left 684pt left 720pt left 756pt left 792pt left 828pt left 864pt left 900pt left 936pt;"><span class="csEF05ACC">__________</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs74A86F32"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">	The within is ................................................ this the...........................................</span></p><p class="cs51F7D470" style="tab-stops:left 54pt;"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">Day of ..........................................................................................................., 2026.</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs51F7D470"><span class="csEF05ACC">&nbsp;</span></p><p class="cs93FA44A8"><span class="csEF05ACC">				.............................................................</span></p><p class="cs49AF4BA5"><span class="cs93AB6E8B">								Governor</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

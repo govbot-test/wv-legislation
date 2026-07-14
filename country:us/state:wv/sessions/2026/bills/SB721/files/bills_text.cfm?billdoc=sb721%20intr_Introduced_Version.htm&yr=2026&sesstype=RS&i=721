@@ -1,0 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 721 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=721">&laquo; Senate Bill 721 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 721'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 721 - Updating definitions and requirements for rental agreements of self-storage facilities&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb721+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=721"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csE6119F9E{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: none;}
+		.cs4B48C176{color:#0000FF;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs69618F40{color:#CAD6E1;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs48E79D7E{color:#1A1A1A;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs4A61BCD6{color:#1A1A1A;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 721</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Azinger</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[</span><span class="csEF05ACC">Introduced February 3, 2026; referred<br/>to the Committee on the Judiciary</span><span class="cs7B75DFFE">]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;38-14-2, &sect;38-14-3, &sect;38-14-5, &sect;38-14-7, and &sect;38-14-9 <a class="csE6119F9E" href="https://code.wvlegislature.gov/5B-2E-3"><span class="cs4B48C176">https://code.wvlegislature.gov/5B-2E-3</span></a></span><span class="csEF05ACC">of the Code of West Virginia, 1931, as amended, relating to updating the definitions and requirements for rental agreements of self-service storage facilities; recognizing unsinged rental agreements under certain circumstances; providing for notice of removal of personal property from the self-service storage facilities upon termination or non-renewal of the rental agreements; and establishing an effective date applicable to all rental agreements.</span></p><p class="cs7F45F1B"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia: </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 14. SELF-SERVICE STORAGE LIEN ACT. </span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;38-14-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">As used in this article, unless the context clearly requires otherwise:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Default&quot; means the failure by the occupant to perform on time any obligation or duty set forth in the rental agreement or this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Last known address&quot; means that address, or electronic mail address provided by the occupant in the rental agreement or,</span><span class="cs69618F40"> </span><span class="cs46AE26E6">subject to any requirements in the rental agreement,</span><span class="csEF05ACC"> the address or electronic mail address provided by the occupant in a subsequent written notice of a change of address;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Leased space&quot; means the individual storage space at the self-service storage facility which is rented to an occupant pursuant to a rental agreement;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Occupant&quot; means a person, a sublessee, successor, or assign, entitled to the use of a leased space at a self-service storage facility under a rental agreement;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Operator&quot; means the owner, operator, lessor, or sublessor of a self-service storage facility, an agent, or any other person authorized to manage the facility. The operator is not a warehouseman, unless the operator issues a warehouse receipt, bill of lading, or other document of title for the personal property stored;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Personal property&quot; means movable property, not affixed to land. Personal property includes goods, wares, merchandise, motor vehicles, trailers, watercraft, and household items and furnishings.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Rental agreement&quot; means </span><span class="cs46AE26E6">a commercial agreement that is</span><span class="csEF05ACC"> any written or electronic agreement </span><span class="cs46AE26E6">and</span><span class="csEF05ACC"> that establishes or modifies the terms, conditions, or rules concerning the use and occupancy of leased space at a self-service storage facility;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;38-14-3. Self-service storage lien.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) The operator has a lien on all personal property stored within each leased space for agreed rent, labor, late fees, and other charges and for expenses reasonably incurred in its sale or disposition pursuant to this article. The lien attaches as of the date the personal property is stored within each leased space and remains a lien until the occupant has satisfied the terms of the rental agreement.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) In the case of any motor vehicle or watercraft which is subject to a lien previously recorded on the certificate of title, the operator has a lien on the vehicle or watercraft as long as the motor vehicle or watercraft remains stored within the leased space.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The rental agreement shall contain:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A statement advising the occupant of the existence of the lien and that the personal property stored within the leased space may be sold to satisfy the lien if the occupant is in default;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A statement advising the occupant that personal property stored in the leased space may be towed or removed from the self-service storage facility if the personal property is a motor vehicle, trailer, or watercraft and the occupant is in default for more than 60 days; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) A statement advising the occupant that a sale of personal property stored in the leased space to satisfy the lien if the occupant is in default may be advertised:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) In a newspaper of general circulation in the jurisdiction where the sale is to be held or where the self-service storage facility is located;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) By electronic mail or text; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) On an online website.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The occupant shall be bound by the rental agreement even if unsigned, if the operator delivers the rental agreement to the occupant&rsquo;s last known address and the occupant pays, rents, or uses the leased space more than 30 days after delivery of the written rental agreement to the occupant.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;38-14-5. Enforcement of lien.</span></h4>
+	<p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a)(1) If the occupant is in default for a period of more than </span><span class="cs68EFC440">60</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">30</span><span class="csEF05ACC"> days, the operator may enforce the lien by selling the personal property stored in the leased space at a public sale or dispose of the personal property if the operator can demonstrate by photographs or other images and affidavit of a knowledgeable and credible person that the personal property lacks a value sufficient to cover the reasonable expense of a public auction plus the amount of the self-service storage lien.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Proceeds from the sale shall be applied to satisfy the lien, and any surplus shall be disbursed as provided in subsection (e) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b)(1) Before conducting a sale under subsection (a) of this section, the operator shall, subject to subdivision (2) of this subsection, notify the occupant of the default by hand delivery, verified mail, electronic mail, or text at the occupant&rsquo;s last known address.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2)(A) The operator may not notify the occupant of the default by electronic mail unless:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) The rental agreement specifies, in bold type, that notice may be given by electronic mail or text; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The occupant provides the occupant&rsquo;s initials next to the statement in the rental agreement specifying that notice of default may be given by electronic mail or text.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) If the operator notifies the occupant of the default by electronic mail or text at the occupant&rsquo;s last known address and does not receive a response, return receipt, or a confirmation of delivery, the operator shall send the notice of default to the occupant by hand delivery or by verified mail to the occupant&rsquo;s last known postal address.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Additional requirements for members of the military apply under the Soldiers and Sailors Relief Act, 50 U.S.C. &sect;&sect;3901-4043.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The notice shall include:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) A statement that the contents of the occupant&rsquo;s leased space are subject to the operator&rsquo;s lien;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) A statement of the operator&rsquo;s claim, indicating the charges due on the date of the notice, the amount of any additional charges which will become due before the date of sale, and the date those additional charges will become due;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) A demand for payment of the charges due within a specified time, not less than 14 days after the date that the notice was mailed;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) A statement that unless the claim is paid within the time stated, the contents of the occupant&rsquo;s space will be sold at a specified time and place; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) The name, street address, and telephone number of the operator, or his or her designated agent, whom the occupant may contact to respond to the notice.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) </span><span class="cs68EFC440">(A) </span><span class="cs48E79D7E">Subject to paragraph (B) of this subdivision, at</span><span class="cs4A61BCD6"> </span><span class="cs46AE26E6">At </span><span class="csEF05ACC">least three days before conducting a sale under this section, the operator shall advertise the time, place, and terms of the sale:</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(i)</span><span class="cs46AE26E6">(A)</span><span class="csEF05ACC"> In a newspaper of general circulation in the jurisdiction where the sale is to be held; </span><span class="cs46AE26E6">or</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(ii)</span><span class="cs46AE26E6">(B)</span><span class="csEF05ACC"> By electronic mail; or</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(iii)</span><span class="cs46AE26E6">(C)</span><span class="csEF05ACC"> On an online website.</span></p><p class="cs53FB8D75"><span class="cs48E79D7E">(B) The operator may not advertise the sale in the manner provided under subparagraph (ii) or (iii) of this paragraph unless the occupant provides the occupant&rsquo;s initials next to the statement in the rental agreement required under this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) The operator may dispose of the personal property if the operator has complied with subsection (b) of this section and the property has not been purchased.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) At any time before a sale under this section, the occupant may pay the amount necessary to satisfy the lien and redeem the occupant&rsquo;s personal property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) A sale under this section shall be held at the self-service storage facility where the personal property is stored, on an online auction website, or at any other location reasonably determined by the operator.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f)(1) If a sale is held under this section, the operator shall:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Satisfy the lien from the proceeds of the sale; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Mail the balance, if any, by certified mail to the occupant at the occupant&rsquo;s last known address of the occupant.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2)(A) If the balance is returned to the operator after the operator mailed the balance in the manner required under paragraph (B), subdivision (1) of this subsection, the operator shall hold the balance for one year after the date of sale for delivery on demand to the operator.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) After expiration of the one-year period, the balance is presumed abandoned.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) A purchaser in good faith of any personal property sold under this article takes the property free and clear of any rights of persons against whom the lien was valid.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) If the operator complies with the provisions of this article, the operator&rsquo;s liability to the occupant is limited to the net proceeds received from the sale of the personal property less the amount of the operator&rsquo;s lien.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) If an occupant is in default, the operator may deny the occupant access to the leased space.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j)(1)(A) Notices sent to the operator shall be sent to the self-service storage facility where the occupant&rsquo;s personal property is stored by hand delivery or verified mail, </span><span class="cs46AE26E6">unless another address is specified in the rental agreement.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Notices to the occupant shall be sent to the occupant at the occupant&rsquo;s last known address.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Notices shall be considered delivered when:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Deposited with the United States Postal Service or a private delivery service, properly addressed as provided in subsection (b) of this section, with postage prepaid; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Sent by electronic mail to the occupant&rsquo;s last known address.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k)(1) If the occupant is in default for more than 60 days and the personal property stored in the leased space is a motor vehicle, trailer, or watercraft, the operator may have the personal property towed or removed from the self-service storage facility. </span><span class="cs68EFC440">in lieu of a sale authorized under subsection (a) of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The operator is immune from civil liability for any damage to the personal property towed or removed from the self-service storage facility under subdivision (1) of this subsection that occurs after the person that undertakes the towing or removal of the personal property takes possession of the personal property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) If a rental agreement specifies a limit on the value of personal property that may be stored in the occupant&rsquo;s leased space, the limit is the maximum value of the stored personal property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) Nothing in this article impairs or affects the rights of the parties to create additional rights, duties, and obligations in and by virtue of the rental agreement.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;38-14-7. Duties; care, custody, and control of property.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) The operator shall use reasonable care in maintaining the self-service storage facility for the purposes of storage of personal property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Unless the rental agreement specifically provides otherwise, the exclusive care, custody, and control of all personal property stored in the leased space remains vested in the occupant.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) An occupant may not use a self-service storage facility for residential purposes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) An occupant may not store hazardous waste or contraband in the leased space.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) An occupant may not use a self-service storage facility after the operator or occupant has delivered written notice in person, by electronic mail, or by verified mail of the termination or nonrenewal of the rental agreement, except as provided in subsection (f) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The notice must provide the occupant with not less than 15 days after delivery of the notice to remove all personal property from the self-service storage facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Prior to the occupant&rsquo;s removal of all personal property, the operator may place reasonable restrictions on the occupant&rsquo;s use of the self-service storage facility, including denying access to the self-service storage facility except for the occupant to remove personal property during the operator&rsquo;s normal business hours. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The operator may dispose of any personal property remaining at the self-service storage facility after the date provided in the written notice under this section. </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;38-14-9. Effective date and application of article.</span></h4>
+	<p class="cs7F45F1B"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The </span><span class="cs46AE26E6">amendments to the</span><span class="csEF05ACC"> provisions of this article </span><span class="cs46AE26E6">during the 2026 regular legislative session</span><span class="csEF05ACC"> apply to all rental agreements entered into or extended or renewed after July 1, </span><span class="cs68EFC440">2019</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">2026</span><span class="csEF05ACC">.</span></p><p class="cs637BA255"><span class="csEF05ACC">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to amend definitions and requirements for rental agreements of self-service storage facilities; recognize unsinged rental agreements under certain circumstances; provide for notice of removal of personal property from the self-service storage facilities upon termination or non-renewal of the rental agreements; and, establish an effective date applicable to all rental agreements</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

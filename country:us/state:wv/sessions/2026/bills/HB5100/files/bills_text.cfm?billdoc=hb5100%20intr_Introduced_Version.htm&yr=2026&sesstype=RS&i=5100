@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5100 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5100">&laquo; House Bill 5100 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5100'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5100 - Transferring all regulatory and enforcement responsibilities for CBD and Kratom from the Department of Agriculture to the Alcohol Beverage Control Administration. &amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5100+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5100"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5100</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Pinson, Drennan, and Burkhammer</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 03, 2026; referred to the Committee on Government Organization then the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;19-12E-3, &sect;19-12E-12, &sect;19-12F-3, and &sect;19-12F-5 of the Code of West Virginia, 1931, as amended; and to amend said code by adding two new sections, designated &sect;19-12E-13 and &sect;19-12F-12, all relating to the transfer of CBD and Kratom oversight from the Department of Agriculture to the Alcohol Beverage Control Administration Commissioner.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<a name="_Hlk140138364"><span class="cs7A33E2F1">&nbsp;</span></a></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 12E. INDUSTRIAL HEMP DEVELOPMENT ACT. </span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12E-3. Definitions.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">As used in this article:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(a) &quot;Cannabidiol&quot; or &quot;CBD&quot; means the compound by the same name derived from the hemp variety of the cannabis sativa L. plant;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) &quot;Commercial sales&quot; means the sale of products in the stream of commerce, at retail, wholesale, and online;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) &quot;Commissioner&quot; means the </span><span class="cs68EFC440">Commissioner of Agriculture</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Alcohol Beverage Control Administration Commissioner </span><span class="csEF05ACC">or his or her designee;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) &quot;Cultivating&quot; means planting, watering, growing, and harvesting a plant or crop;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) &quot;Department&quot; means the West Virginia Department of Agriculture and its employees; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) &quot;Handling&quot; means possessing or storing hemp plants for any period of time on premises owned, operated, or controlled by a person licensed to cultivate or process hemp. &quot;Handling&quot; also includes possessing or storing hemp plants in a vehicle for any period of time other than during its actual transport from the premises of one licensed person to cultivate or process industrial hemp to the premises of another licensed person. &quot;Handling&quot; does not mean possessing or storing finished hemp products; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(g) &quot;Hemp&quot; or &quot;industrial hemp&quot; means all parts and varieties of the plant Cannabis sativa L. and any part of the plant, including the seeds of the plant and all derivatives, extracts, cannabinoids, isomers, acids, salts, and salts of isomers, whether growing or not with no greater than 0.3% tetrahydrocannabinol, or the THC concentration for hemp defined in 7 U.S.C. &sect; 5940, whichever is greater; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) &quot;Hemp products&quot; means all products derived from, or made by, processing hemp plants or plant parts, that are prepared in a form available for commercial sale; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) &quot;Licensee&quot; means an individual or business entity possessing a license issued by the Department to grow, handle, cultivate, or process hemp; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(j) &quot;Marijuana&quot; means all plant material from the genus cannabis containing more than one percent tetrahydrocannabinol or seeds of the genus capable of germination;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(k) &quot;Processing&quot; means converting an agricultural commodity into a marketable form; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l) &quot;THC&quot; means tetrahydrocannabinol. Notwithstanding any other provision of this code to the contrary, the THC found in industrial hemp shall not be considered to be THC for the purposes of qualifying as a controlled substance.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<a name="_Hlk140138310"><span class="csB9803513">&sect;19-12E-12. Regulation of select plant-based derivatives; findings; industrial hemp.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) This section shall be known as the Select Plant-Based Derivatives Regulation Act: Industrial Hemp.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;(b) The Legislature finds that select plant-based derivatives can be regulated so as not to interfere with the strict regulation of controlled substances in this state, and that the manufacturing, processing, distribution, and retail sale, or other sale of hemp-derived cannabinoid products is an activity deserving of particular, careful, and strict attention to the administration and enforcement of West Virginia standards designed to protect and safeguard the welfare and well-being of West Virginia citizens and residents. The purpose of the act is to allow limited, regulated access to select plant-based derivatives which are naturally occurring and as authorized by the provisions of this article for adults 21 years of age and older: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That the provisions of this section shall not apply to naturally occurring select plant-based derivative products not containing tetrahydrocannabinol content. Businesses located within this state engaged in manufacturing, processing, distributing, or sale of hemp-derived cannabinoid products and businesses located outside of this state that are engaged in the remote distribution or remote retail sale of hemp-derived cannabinoid products across state lines for delivery into this state, are subject to the permitting, labeling, and other control and administration provisions of this article. In the interest of protecting the safety, welfare, and well-being of West Virginia citizens and residents, West Virginia nexus and jurisdiction attaches for purposes of business registration, permitting, regulation, and taxation with relation to the activity of distribution or sale of hemp-derived cannabinoid products across state lines into this state. Persons located outside of this state that are engaged in distribution or sale of hemp-derived cannabinoid products across state lines into this state shall obtain a West Virginia business registration certificate as specified in &sect;11-12-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code and are subject to other administrative and regulatory requirements as set forth in this code. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) As used in this section:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Alcohol Beverage Control Administration Commissioner&quot; means the West Virginia Alcohol Beverage Control Administration Commissioner or his or her designees.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Commissioner&quot; means the </span><span class="cs68EFC440">Commissioner of Agriculture</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Alcohol Beverage Control Administration Commissioner </span><span class="csEF05ACC">or his or her designees.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Contaminated&quot; means made impure or unsafe by biological, chemical, or physical</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;additives.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Department&quot; or &quot;Department of Agriculture&quot; means the West Virginia Department of Agriculture.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Final product&quot; means a product approved by the Department in accordance with the provisions of this article, and any other applicable rules and requirements set forth by the Department, as specified for the product.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Grower&quot; means a person or entity which grows industrial hemp.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Hemp-derived cannabinoid&quot; means a naturally occurring non-synthetic substance as &nbsp;follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Delta-9 tetrahydrocannabinol with a total concentration of not more than 0.3 percent on a dry weight basis; or </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Delta-8 tetrahydrocannabinol;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Delta-10 tetrahydrocannabinol;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Hexahydrocannabinol (HHC-);</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Tetrahydrocannabiphorol (THCp); and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Tetrahydrocannabivarin (THCv).</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;Non-naturally occurring derivative&quot; means a product that is contaminated as defined by this article, or a product that, upon result of Department laboratory testing, is found to be in violation of this article or rules promulgated therewith, or otherwise violates applicable federal regulations.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;Processor&quot; or &quot;manufacturer&quot; means a person or entity that processes compounds or converts hemp-derived cannabinoids into a hemp-derived cannabinoid product and distributes, sells, or offers for sale, hemp-derived cannabinoid products in this state on a wholesale basis to a retailer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) &quot;Retail sales&quot; means the sale of hemp-derived products in a commercial setting as determined and set forth in rules promulgated by the commissioner. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) &quot;Seller&quot; or &quot;distributor&quot; means a person or entity that distributes, offers for sale, or sells hemp-derived products to persons for personal consumption.</span></p><p class="cs53FB8D75"><a name="_Hlk140147668"><span class="csEF05ACC">(d) Permitting and registration. </span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The commissioner may issue manufacturer, processor, distributor, and retailer permits. &nbsp;Any person manufacturing, processing, distributing, offering for sale, or selling any hemp-derived cannabinoid products in this state shall have a permit issued by the commissioner and be otherwise authorized to do business in this State. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The business activity subject to permitting under this section shall be treated as separate and distinct from manufacturing, processing, distribution, or sale of kratom and kratom products addressed and administered under &sect;19-12F-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, or of hemp addressed and administered under other sections of this article, or of medical cannabis addressed and administered under &sect;16A-9-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Persons engaged in manufacturing, processing, distribution, or sale of hemp-derived cannabinoid products in this state shall obtain a West Virginia business registration certificate as specified in &sect;11-12-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code and are subject to other administrative and regulatory requirements set forth in this code. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The Tax Commissioner may place a notation on the business registration certificate showing the status of the certificate holder as a person or entity holding a permit from the commissioner pursuant to this section. &nbsp; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The commissioner shall keep a list of all persons and entities that have been issued permits pursuant to this section. Such list shall be public information and shall be published </span><a name="_Hlk140846262"><span class="csEF05ACC">initially on or before June 30, 2024,</span></a><span class="csEF05ACC"> by the commissioner on its website from time to time so as to reflect a current listing.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) The commissioner shall keep a list of any persons or entities that have been subject to a permit revocation, withdrawal, suspension, non-renewal, or other process whereby the person or entity has ceased to be a permit holder in good standing with the commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) The commissioner shall keep a list of all hemp-derived cannabinoid products that have been approved for sale or distribution in this state. Such list shall be public information and shall be published initially on or before June 30, 2024, by the commissioner on its website from time to time so as to reflect a current listing.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Rules. The commissioner shall propose legislative rules for promulgation in accordance with &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code that include, but are not limited to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Issuance of permits to persons who wish to manufacture, handle, process, distribute,</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;offer for sale, or sell hemp-derived cannabinoid products;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Regular sampling and testing of hemp-derived cannabinoid products to determine purity levels;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Supervision of the hemp-derived cannabinoid products during their cultivation, processing, and sale;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Assessment of fees as commensurate with the need of the commissioner&rsquo;s activities in issuing permits, laboratory testing, and in overseeing the regulation of hemp-derived products. Such fees shall be in addition to those fees specified in subsection (d) of this section; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Approving the manufacture, production, sale, processing, distributing, and transport of</span></p><p class="cs7F45F1B"><span class="csEF05ACC">hemp-derived cannabinoid products;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Developing guidelines for the labeling of hemp-derived cannabinoid products, including, but not limited to, a statement which says &quot;KEEP OUT OF REACH OF CHILDREN. CONSULT YOUR PHYSICIAN BEFORE USE IF YOU ARE PREGNANT OR TAKING ANY MEDICATION&quot; and &quot;USE OF THIS PRODUCT MAY IMPACT DRUG TESTING RESULTS&quot;;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Developing guidelines or standards related to the display or staging of hemp-derived</span></p><p class="cs7F45F1B"><span class="csEF05ACC">cannabinoid products to increase the safety of underage patrons in retail environments;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Developing guidelines or standards to restrict the advertising or marketing of unapproved or unlawful products;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Developing prohibitions on child-targeted packaging and shapes and forms of products;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Developing administrative rules, procedures, and sanctions for violations of this section; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Any other rules and procedures necessary to carry out the purposes of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) Emergency rules; mandatory labeling.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Emergency Rules. The commissioner and the Alcohol Beverage Control Administration Commissioner may, pursuant to &sect;29A-3-15 of this code, promulgate such separate or joint emergency rules necessary to effectuate the purposes of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Labeling. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) The commissioner shall review labels to be used on hemp-derived cannabinoid products to be sold in this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) In addition to the labeling required by the provisions of subdivision (6) of subsection (e) of this section the commissioner may require and prescribe such labeling as he or she may determine to be necessary and appropriate for hemp-derived cannabinoid products to be sold to the final consumer in this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Hemp-derived cannabinoid products may not be sold to the final consumer in this State without an approved label.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) Any website owned, managed, or operated by a person who manufactures, processes, distributes, offers for sale, or sells hemp-derived cannabinoid products to persons in this state shall employ a neutral age-screening mechanism to verify legal age. The mechanism may include an age-gate, age-screen, or any other age-verification mechanism approved by the commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(h) Any person or entity distributing, offering to distribute, or selling hemp-derived cannabinoid products to persons in this state by means other than a direct in-person transaction shall employ an age verification mechanism approved by the commissioner. </span></p><p class="cs53FB8D75"><a name="_Hlk140228707"><span class="csEF05ACC">(i) For the privilege of engaging or continuing within this state in the business of the retail sale of hemp-derived cannabinoid products, as defined in this section, there is hereby levied upon and collected from every person exercising the privilege a privilege tax equal to 11 percent of the retail sales price on each retail sale of hemp-derived cannabinoids. </span></a><a name="_Hlk140229185"><span class="csEF05ACC">Such tax is imposed in addition to all other applicable taxes.</span></a><span class="csEF05ACC"> </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The tax imposed by this subsection shall not be added by the retailer as a separate charge or line item on any sales slip, invoice, receipt, other statement, or memorandum of the price paid by a customer. The tax shall be due and payable on a quarterly basis as follows: on the 20th day of January, April, July, and October for the preceding calendar quarter. When the payment of tax is due, the person or entity permitted by the commissioner shall file a tax return in a form prescribed by the Tax Commissioner. The Tax Commissioner may require such forms, schedules, and returns and impose such filing and remittance requirements that are necessary or convenient for the efficient administration of taxes imposed by this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The taxes imposed by this subsection shall be paid by the person or entity permitted by the commissioner to the Tax Commissioner by electronic funds transfer unless electronic payment is prohibited by state or federal law. Tax returns required by this subsection shall be filed electronically with the Tax Commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The West Virginia use tax shall be collected from sellers and marketplace facilitators as defined in &sect;11-15A-1 of this code, and referrers engaged in making sales, facilitating sales, marketing, or referring sellers or purchasers for the purpose of making or furthering retail sales of hemp-derived cannabinoid products into this state. &nbsp;Such sellers, marketplace facilitators, and referrers are subject to the taxation and other requirements of &sect;11-15A-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, including &sect;11-15A-6a and &sect;11-15A-6b of this code. Application of &sect;11-15A-6a and &sect;11-15A-6b of this code shall not be limited to the thresholds specified in subsection &sect;11-15A-6b(e) of this code but in the interest of protecting the safety, welfare, and well-being of West Virginia citizens and residents, West Virginia nexus and jurisdiction shall attach with relation to any such activity for the purpose of making or furthering retail sales of hemp-derived cannabinoid products, into this state.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) If any retailer does not renew its permit, relinquishes its permit, has its permit to operate suspended or revoked, or otherwise ceases selling hemp-derived cannabinoid products, then any tax, additions to tax, penalties, and interest imposed by this section and by &sect;11-10-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code shall become due and the retailer shall make a final return or returns and pay any tax which is due within 90 days of not renewing its permit, relinquishing its permit, having its permit to operate suspended or revoked, or otherwise ceasing business. The unpaid amount of any tax is to be considered a lien.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) All money received from the privilege tax imposed under this section, including any interest and additions to tax paid under &sect;11-10-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, less the amount of any refunds, and less the fee retained by the Tax Commissioner pursuant to &sect;11-10-27 of this code, shall be deposited into the Agricultural Fees Fund created by &sect;19-1-4c of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Persons or entities subject to the tax imposed by this section shall provide to the Tax Commissioner any information required by the Tax Commissioner to administer, collect, and enforce the tax imposed by this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Notwithstanding any provision of &sect;11-10-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code or of this article to the contrary, the Tax Commissioner, the Alcohol Beverage Control Administration Commissioner, and the commissioner may enter into written agreements pursuant to which the Tax Commissioner may disclose to designated employees of the Alcohol Beverage Control Administration Commissioner or the commissioner, or both, whether a particular retailer or permittee, or applicant for a permit, is in good standing with the Tax Commissioner, and the commissioner may disclose to designated employees of the Tax Commissioner or the Alcohol Beverage Control Administration Commissioner, or both, information a retailer or permittee, or applicant for a permit, provides to the commissioner pursuant to this code and the Alcohol Beverage Control Administration Commissioner may disclose to designated employees of the Tax Commissioner, or the commissioner, or both, information a retailer or permittee, or applicant for a permit, provides to the Alcohol Beverage Control Administration Commissioner pursuant to this code. Tax information disclosed pursuant to a written agreement shall remain confidential in the hands of the receiver and shall not be disclosable under &sect;29B-1-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code. To the extent feasible, this information should be shared or exchanged electronically to ensure safe destruction, or as necessary, proper file retention practices.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) The Tax Commissioner may promulgate, in accordance with the provisions of &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, any necessary legislative rules, including emergency rules, as the Tax Commissioner considers necessary for the efficient administration of taxes imposed by this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Funds from the tax imposed by the provisions of subdivision (1) of this subsection, less the fee retained by the Tax Commissioner pursuant to &sect;11-10-27 of this code, and deposited in the Agricultural Fees Fund, shall be divided and deposited as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Sixty-five percent shall remain in the Agriculture Fees Fund for the use of the commissioner for administering and enforcing the provisions of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) Five percent shall be transferred to the Fight Substance Abuse Fund created by &sect;60A-9-8 of this code; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Thirty percent shall be deposited in the Alcohol Beverage Control Enforcement Fund established by the provisions of &sect;60-7-13 of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Notwithstanding any provision in &sect;11-9-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code to the contrary, and as relevant to the tax imposed by this section, the West Virginia Tax Crimes and Penalties Act set forth in &sect;11-9-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code shall apply with like effect as if the said West Virginia Tax Crimes and Penalties Act were applicable only to the tax imposed by this section and were set forth in extenso in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Notwithstanding any provision of &sect;11-10-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, or any other provision of this code to the contrary, each and every provision of the West Virginia Tax Procedure and Administration Act as set forth in &sect;11-10-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code applies to the tax imposed by this section with like effect as if the said West Virginia Tax Procedure and Administration Act were applicable only to the tax imposed by this section and were set forth in extenso in this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(j) The provisions of this section related to retail sales shall be enforced by the commissioner with the assistance of the Alcohol Beverage Control Administration Commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The commissioner, the Tax Commissioner, and the Alcohol Beverage Control Administration Commissioner may enter into a memorandum or memoranda of understanding to facilitate the enforcement of this section. In addition to any other memoranda, the aforementioned commissioners may enter into, they shall agree by memorandum to the following:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) To assist each other in enforcement of this section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) To assist each other in training and cooperating with State and local law enforcement to develop a state-wide plan for implementing the provisions of this section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) To confer among themselves and law enforcement about enforcement of this section on a monthly basis; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) To jointly compile a report to be submitted to the Joint Committee on Government and Finance on or before January 1, 2025, as to actions undertaken to enforce this section and the results thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Procedure for contested cases. Any person or entity seeking to contest an administrative action of the commissioner under this article shall assert such contestation in writing within 14 days under the provisions of the Administrative Procedures Act set forth in &sect;29A-5-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code in administrative proceedings held by or before the commissioner or his or her designee. &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(l)(1) Any hemp-derived product found in this state in violation of this article is hereby declared contraband and any property interest in the hemp-derived product is vested in the State of West Virginia and is subject to seizure, forfeiture, and destruction.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Any certified law-enforcement officer in this state may enforce the criminal provisions of this section, and enforcement agents of the Alcohol Beverage Control Administration Commissioner may enforce the administrative retailer provisions of this section as relating to retail sales.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The commissioner shall provide the requisite training necessary to enforce the criminal and administrative provisions of this section.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) The amendments to this subsection enacted during the 2024 Regular Legislative Session are effective from passage.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(m) Any person who manufactures, processes, distributes, sells, or offers for sale any hemp-derived cannabinoid product in this state without a permit to do so is guilty of a crime.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A first violation of this subsection is a misdemeanor and, upon conviction thereof, a person shall be fined not more than $1,000, confined in jail for not more than one year, or both fined and confined.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) A second or subsequent violation of this subsection is a felony and, upon conviction thereof, a person shall be fined not more than $5,000, or imprisoned in a state correctional facility for not less than one nor more than five years, or both fined and imprisoned.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(n) Any person who processes, distributes, manufactures, sells, or offers to sell any hemp-derived product knowing or having reason to know that the product has been contaminated with a toxic or illegal substance is guilty of a felony and, upon conviction thereof, shall be fined not more than $10,000, or imprisoned in a state correctional facility for not less than two nor more than 10 years, or both fined and imprisoned.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(o)(1) Any person who knowingly manufactures, processes, distributes, sells, or offers for sale any hemp-derived cannabinoid product which has not been approved by the commissioner is guilty of a misdemeanor and, upon conviction thereof, shall be fined not less than $1,000 nor more than $5,000, or confined in jail for not more than one year, or both fined and confined.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Notwithstanding the provisions of subdivision (1) of this subsection, a second or subsequent violation of subdivision (1) of this subsection constitutes a felony and any person convicted thereof shall be fined not more than $5,000, or imprisoned in a state correctional facility for not less than one nor more than five years, or both fined and imprisoned.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(p) Any person who knowingly distributes, offers for sale, or sells a contaminated hemp-derived cannabinoid product is guilty of a felony and, upon conviction thereof, shall be fined not less than $10,000 nor more than $25,000, or imprisoned in a state correctional facility for not less than one nor more than five years, or both fined and imprisoned.</span></p><p class="cs53FB8D75"><a name="_Hlk140144813"><span class="csEF05ACC">(q) Any person who knowingly distributes or sells hemp-derived cannabinoid product to a person under the age of 21 is guilty of a felony and, upon conviction thereof, shall be </span></a><span class="csEF05ACC">fined not more than $5,000, or imprisoned in a state correctional facility for not less than one nor more than five years, or both fined and imprisoned. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(r)(1) Any person under the age of 21 who possesses hemp-derived cannabinoid product is guilty of a misdemeanor and, upon conviction thereof, shall be fined not more than $1,000, or confined in jail for not more than one year, or both fined and confined.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Notwithstanding the provisions of subdivision (1) of this subsection, second and subsequent violations of subdivision (1) of this subsection constitute a felony, and any person convicted thereof shall be fined not more than $5,000, and imprisoned in a state correctional facility for not less than one nor more than three years, or both fined and imprisoned.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(s) Administrative sanctions.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) In the case of any person or entity holding a permit issued by the commissioner under this article charged with any criminal violation enumerated in this section, the commissioner, in addition to such criminal penalties imposed, may impose administrative sanctions including, but not limited to, permanent revocation of any one or more permits held by the violator, revocation of one or more permits held by the violator for a period of time to be determined by the commissioner, suspension of any one or more permits held by the violator for a period of time to be determined by the commissioner, </span><a name="_Hlk140845944"><span class="csEF05ACC">a fine or fines to any one or more permits held by the violator not to exceed $1,000 per each violation as determined by the commissioner, </span></a><span class="csEF05ACC">or non-issuance of a permit upon application of a violator. For purposes of this subsection, administrative sanctions may be imposed by the commissioner upon or against any alter ego, agent, representative, or person or entity acting on behalf of, or in the interest of, a violator. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The commissioner may impose the administrative sanctions in subdivision (1) of this subsection upon any person or entity under indictment for any of the criminal violations during, and during the pendency, of a criminal trial therefor.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(t) Nothing in this article shall prohibit an authorized</span><a name="_Hlk140234372"><span class="csEF05ACC"> enforcement agent of the Alcohol Beverage Control Administration Commissioner or a person who is at least 18 years of age from purchasing or possessing hemp-derived cannabinoid products when he or she is acting upon the request of, or under the direction and control of, any member of a state, federal, or local law-enforcement agency </span></a><span class="csEF05ACC">or the Alcohol Beverage Control Administration Commissioner while the agency is conducting an investigation or other activity relating to the criminal or administrative enforcement of this section. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;19-12E-13. Transfer of regulatory and enforcement to Alcohol and Beverage Commission.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Effective July 1, 2026, all regulatory and enforcement under this article shall be transferred from the Department of Agriculture to the Alcohol and Beverage Commission.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 12F. SELECT PLANT-BASED DERIVATIVES REGULATION ACT: KRATOM. </span></h2>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<a name="_Hlk140138338"><span class="csB9803513">&sect;19-12F-3. Definitions.</span></a></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Alcohol Beverage Control Administration Commissioner&quot; means the West Virginia Alcohol Beverage Control Administration Commissioner or his or her designee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Commissioner&quot; means the </span><span class="cs68EFC440">Commissioner of Agriculture</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Alcohol Beverage Control Administration Commissioner </span><span class="csEF05ACC">or his or her designee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;Contaminated&quot; means made impure and unsafe by biological, chemical, or physical additives.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Department&quot; or &quot;Department of Agriculture&quot; means the West Virginia Department of Agriculture.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Kratom&quot; means a psychoactive preparation that is composed of the crushed or powdered dried leaves of the mitragyna speciosa, a lowered tropical tree which contains the alkaloids mitragynine and 7-hydroxymitragynine.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Kratom product&quot; means a food product, food ingredient, dietary ingredient, dietary supplement, or beverage intended or marketed for human consumption containing any part of the leaf of the plant mitragyna speciosa.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Grower&quot; means a person or entity which grows kratom for commercial purposes.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;Processor&quot; or &quot;manufacturer&quot; means a person or entity that processes, compounds, or converts plant material from mitragyna speciosa into a kratom product. This also includes further processing, compounding, converting, or repackaging of existing kratom products.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;Retailer&quot; or &quot;seller&quot; means a person or entity that distributes, offers for sale, or sells kratom or kratom products to persons for personal consumption.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;19-12F-5. Rule-making authority.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The commissioner shall propose legislative rules for promulgation in accordance with &sect;29A-3-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code that include, but are not limited to:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Issuance of permits to persons who wish to manufacture, process, distribute, offer for sale, or sell kratom; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Sampling and testing of kratom to determine purity levels;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Supervision of the kratom during its manufacture, processing, and sale;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Assessment of fees that are commensurate with the costs of the Commissioner of Agriculture&rsquo;s activities in permitting, testing, and supervising the regulation of kratom and the sale of kratom products;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) The production, processing, sale, possession, distribution, or transport of kratom products;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Developing standards for the labeling of kratom products to include, at a minimum, a statement which says &quot;KEEP OUT OF REACH OF CHILDREN. CONSULT YOUR PHYSICIAN BEFORE USE IF YOU ARE PREGNANT OR TAKING ANY MEDICATION&quot;; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Developing guidelines or standards related to the display or staging of kratom products to increase the safety of underage patrons in retail environments;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Developing prohibitive standards as to child targeted packaging and shapes and forms of products;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Developing administrative rules, procedures, and sanctions for violations of this section;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Any other rules and procedures necessary to carry out the provisions of this article. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) The </span><span class="cs68EFC440">Commissioner of Agriculture and the</span><span class="csEF05ACC"> Alcohol Beverage Control Commissioner may, pursuant to &sect;29A-3-15 of this code, promulgate such separate or joint emergency rules as are necessary to effectuate the purposes of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;19-12F-12. Transfer of regulatory and enforcement to Alcohol and Beverage Commission.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Effective July 1, 2026, all regulatory and enforcement of Kratom under this article shall be transferred from the Department of Agriculture to the Alcohol and Beverage Commission.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to transfer all regulatory and enforcement responsibilities for CBD and Kratom from the Department of Agriculture to the Alcohol Beverage Control Administration.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

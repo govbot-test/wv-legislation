@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 928 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+sb928 sub1 
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=928">&laquo; Senate Bill 928 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 928'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb928 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=928" title="HTML  - Introduced Version
+ - Senate Bill 928">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 928 - Relating to manufacture, sale, and distribution of low-proof spirit alcohol products&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb928+sub1.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=928"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csE6119F9E{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: none;}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs46D32D22{color:#2E75B5;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 928</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Senators Morris, Fuller, Helton, Rucker, Takubo, Clements, and Hamilton </span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Reported February 18, 2026, from the Committee on Finance]</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;60-1-5 of the Code of West Virginia, 1931, as amended; and to amend the code by adding a new article, designated &sect;60-8B-1, &sect;60-8B-2, &sect;60-8B-3, &sect;60-8B-4, and &sect;60-8B-5, relating to the manufacture, sale, and distribution of low-proof spirit alcohol products; defining terms; declaring legislative findings, policy, and intent; prescribing manufacture, sales, and distribution requirements for low-proof spirit alcohol products; prescribing taxation amount and methodology for low-proof spirit alcohol products; and granting permissive rule-making authority.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. GENERAL PROVISIONS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;60-1-5. Definitions. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">For the purposes of this chapter:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &quot;Alcohol&quot; means ethyl alcohol whatever its origin and shall include synthetic ethyl alcohol but not denatured alcohol.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &quot;Alcoholic liquor&quot; includes alcohol, beer, wine, and spirits, and any liquid or solid capable of being used as a beverage</span><span class="cs68EFC440">,</span><span class="csEF05ACC"> but shall not include nonintoxicating beer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &quot;An agency&quot; means a drugstore, grocery store, or general store designated by the commission as a retail distributor of alcoholic liquor for the West Virginia Alcohol Beverage Control Commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &quot;Beer&quot; means any beverage obtained by the fermentation of barley, malt, hops, or any other similar product or substitute, and containing more alcohol than that of nonintoxicating beer.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &quot;Brewery&quot; means an establishment where beer is manufactured or in any way prepared.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) &quot;Commissioner&quot; or &quot;commission&quot; means the West Virginia Alcohol Beverage Control Commissioner.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &quot;Department&quot; means the organization through which the commission exercises powers imposed upon it by this chapter.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &quot;Distillery&quot; means an establishment where alcoholic liquor other than wine or beer is manufactured or in any way prepared.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &quot;Intoxicated&quot; means a person&#39;s faculties are impaired by alcohol or other substance to the point where physical or mental control or both are markedly diminished.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) &quot;</span><a name="_Hlk221478394"><span class="cs46AE26E6">Low-proof spirit alcohol product</span></a><span class="cs46AE26E6">s&quot; mean any alcoholic liquor beverage drink, other than wine, beer, or nonintoxicating beer, containing one half of one percent or more of alcohol by volume, but not more than fifteen and one-half percent alcohol by volume&nbsp;obtained by distillation, mixed with drinkable water, fruit juices, flavoring, or coloring materials, other alcoholic or non-alcoholic beverages or other ingredients in a solution, which are packaged in containers not to exceed 25 fluid ounces.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(10)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(11)</span><span class="csEF05ACC"> &quot;Manager&quot; means an individual who is the applicant&#39;s or licensee&#39;s on-premises employee, member, partner, shareholder, director, or officer who meets the licensure requirements of &sect;11-16-1&nbsp;</span><span class="cs93AB6E8B">et seq.&nbsp;</span><span class="csEF05ACC">of this code&nbsp;and rules promulgated thereunder who actively manages, conducts, and carries on the day-to-day operations of the applicant or licensee with full and apparent authority or actual authority to act on behalf of the applicant or licensee. Such duties include, but are not limited to: Coordinating staffing; reviewing and approving payroll; ordering and paying for inventory, such as nonintoxicating beer, wine, and liquor, as applicable; </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> managing security staff, security systems, video and other security equipment; and any further acts or actions involved in managing the affairs of the business, on behalf of owners, partners, members, shareholders, officers, or directors.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(11)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(12)</span><span class="csEF05ACC"> &quot;Manufacture&quot; means to distill, rectify, ferment, brew, make, mix, concoct, process, blend, bottle, or fill an original package with any alcoholic liquor.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(12)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(13)</span><span class="csEF05ACC"> &quot;Manufacturer&quot; means any person engaged in the manufacture of any alcoholic liquor, and among others includes a distiller, a rectifier, a wine maker, and a brewer.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(13)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(14)</span><span class="csEF05ACC"> &quot;Nonintoxicating beer&quot; means any beverage obtained by the fermentation of barley, malt, hops, or similar products or substitute, and containing not more alcohol than that specified by&nbsp;&sect;11-16-2 of this code.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(14)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(15)</span><span class="csEF05ACC"> &quot;Original package&quot; means any closed or sealed container or receptacle used for holding alcoholic liquor.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(15)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(16)</span><span class="csEF05ACC"> &quot;Person&quot; means an individual, firm, partnership, limited partnership, corporation, or voluntary association.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(16)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(17)</span><span class="csEF05ACC"> &quot;Powdered alcohol&quot; means an alcohol manufactured in a powder or crystalline form for either direct use or reconstitution as an alcoholic liquor or food. For purposes of this chapter, powdered alcohol excludes any material intended for industrial purposes.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(17)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(18)</span><span class="csEF05ACC"> &quot;Public place&quot; means any place, building, or conveyance to which the public has, or is permitted to have access, including restaurants, soda fountains, hotel dining rooms, lobbies, and corridors of hotels and any highway, street, lane, park, or place of public resort or amusement:&nbsp;</span><span class="cs93AB6E8B">Provided,</span><span class="csEF05ACC">&nbsp;That the term &quot;public place&quot; shall not mean or include any of the above-named places or any portion or portions thereof which qualify and are licensed under the provisions of this chapter to sell alcoholic liquors for consumption on the premises:&nbsp;</span><span class="cs93AB6E8B">Provided, however,&nbsp;</span><span class="csEF05ACC">That the term &quot;public place&quot; shall not mean or include any legally demarcated area designated solely for the consumption of beverages and freshly prepared food that directly connects and adjoins any portion or portions of a premise that qualifies and is licensed under the provisions of this chapter to sell alcoholic liquors for consumption thereupon:&nbsp;</span><span class="cs93AB6E8B">Provided further,</span><span class="csEF05ACC">&nbsp;That the term &quot;public place&quot; shall not include a facility constructed primarily for the use of a Division I, II, or III college or university that is a member of the National Collegiate Athletic Association, or its successor, and used as a football, basketball, baseball, soccer, or other Division I, II, or III sports stadium which holds a special license to sell wine pursuant to the provisions of&nbsp;<a class="csE6119F9E" href="https://1.next.westlaw.com/Link/Document/FullText?findType=L&amp;pubNum=1000041&amp;cite=WVSTS60-8-3&amp;originatingDoc=N0E00781090BA11EA9EFECD097BB30456&amp;refType=LQ&amp;originationContext=document&amp;transitionType=DocumentItem&amp;ppcid=b2580dcf4a6c4f179b6d4e567bfcd317&amp;contextData=(sc.History*oc.Category)"><span>&sect;60-8-3 of this code</span></a></span><span class="csEF05ACC">, in the designated areas of sale and consumption of wine and other restrictions established by that section and the terms of the special license issued thereunder.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(18)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(19)</span><span class="csEF05ACC"> &quot;Sale&quot; means any transfer, exchange, or barter in any manner or by any means, for a consideration, and shall include all sales made by a principal, proprietor, agent, or employee.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(19)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(20)</span><span class="csEF05ACC"> &quot;Selling&quot; includes solicitation or receipt of orders; possession for sale; and possession with intent to sell.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(20)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(21)</span><span class="csEF05ACC"> &quot;Spirits&quot; means any alcoholic beverage obtained by distillation and mixed with potable water and other substances in solution and includes brandy, rum, whiskey, cordials, and gin.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(21)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(22)</span><span class="csEF05ACC"> &quot;State liquor store&quot; means a store established and operated by the commission under this chapter for the sale of alcoholic liquor in the original package for consumption off the premises.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(22)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(23)</span><span class="csEF05ACC"> &quot;Wine&quot; means any alcoholic beverage obtained by the fermentation of the natural content of fruits, or other agricultural products, containing sugar.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(23)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(24)</span><span class="csEF05ACC"> &quot;Winery&quot; means an establishment where wine is manufactured or in any way prepared.</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">Article 8B. Low-Proof Spirit Alcohol Products.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-8B-1. Declaration of legislative findings, policy and intent; construction.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">It is hereby found by the Legislature and declared to be the policy of this state that it is in the public interest to regulate and control the manufacture, sale, distribution, transportation, storage, and consumption of the beverages regulated by this article within this state and that, therefore, the provisions of this article are a necessary, proper, and valid exercise of the police powers of this state and are intended for the protection of the public safety, welfare, health, peace, and morals and are further intended to eliminate, or to minimize to the extent practicable, the evils attendant to the unregulated, unlicensed, and unlawful manufacture, sale, distribution, transportation, storage, and consumption of such beverages and are further intended to promote temperance in the use and consumption thereof. The Legislature further finds and declares that advertising is essential to the growth of business and job promotion within the state. In order to further these ends, the provisions of this article and of the rules promulgated pursuant thereto, shall be construed so that the accomplishment of these stated purposes may be effectuated.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-8B-2. Definition of low-proof spirit alcohol products.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Low-proof spirit alcohol products&quot; mean any alcoholic liquor beverage drink, other than wine, beer, or nonintoxicating beer, containing 0.5 percent or more of alcohol by volume, but not more than 15.5 percent alcohol by volume obtained by distillation, mixed with drinkable water, fruit juices, flavoring or coloring materials, other alcoholic or non-alcoholic beverages or other ingredients in a solution, which are packaged in containers not to exceed 25 fluid ounces. &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-8B-3. Applicability of other laws; license to manufacture, sell, and distribute low-proof spirit alcohol products.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) </span><span class="cs1489E706">Manufacture of low-proof spirit alcohol products.</span><span class="cs46AE26E6"> &ndash; Except as stated in this article, all distillery licenses and other requirements for the manufacture of alcoholic liquors set forth in &sect;60-4-2 and &sect;60-4-3a of this code, and any rules promulgated by the commissioner thereunder, shall apply to the manufacture of low-proof spirit alcohol products. All procedures for obtaining and maintaining a license for the manufacture of low-proof spirit alcohol products shall comply with the requirements of &sect;60-4-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, and any rules promulgated by the commissioner thereunder. No additional alcoholic liquor license fees shall be charged for the privilege of manufacturing low-proof spirit alcohol products.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) </span><span class="cs1489E706">Sales of low-proof spirit alcohol product. &ndash; </span><span class="cs46AE26E6">Any person or licensee legally authorized to manufacture, distribute, or sell low-proof spirit alcohol products may sell low-proof spirit alcohol products in the same manner and to the same persons, and subject to the same limitations and conditions, as such license or legal right authorizes him or her to manufacture, distribute, or sell nonintoxicating beer as set forth in &sect;11-16-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code: </span><span class="cs1489E706">Provided, </span><span class="cs46AE26E6">That</span><span class="cs46D32D22"> </span><span class="cs46AE26E6">no person or licensee shall be permitted to sell low-proof spirit alcohol products in growlers as defined in &sect;11-16-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, and any rules promulgated by the commissioner thereunder. The provisions of &sect;60-4-3 of this code, which require that sales by a manufacturer of alcoholic liquors may only be sold to the West Virginia Alcohol Beverage Control Commissioner and to wholesalers and retailers licensed as provided in chapter 60 of this code, are inapplicable to sales of low-proof spirit alcohol products. No additional license fees shall be charged for the privilege of selling low-proof spirit alcohol products. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs1489E706">Distribution of low-proof spirit alcohol products.</span><span class="cs46AE26E6"> &ndash; Except as stated in this article, the distribution of low-proof spirit alcohol products shall be administered and carried out in the same manner as proscribed for nonintoxicating beer distribution as set forth in &sect;11-16-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, and any rules promulgated by the commissioner thereunder. Any person or licensee legally authorized to distribute low-proof spirit alcohol products must distribute low-proof spirit alcohol products in the same manner and to the same persons, and subject to the same limitations and conditions, as a license or legal right would authorize him or her to distribute nonintoxicating beer. No manufacturer or distillery may self-distribute low-proof spirit alcohol products. No additional license fees shall be charged for the privilege of distributing low-proof spirit alcohol products.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-8B-4. Taxation; reporting; penalties for failure to file returns; application of state tax law; rule-making authority.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) There is hereby levied and imposed on all low-proof spirit alcohol products sold on and after the effective date, by every distillery, or supplier to distributors, there is hereby levied and imposed on all low-proof spirit alcohol products sold by distilleries, manufacturers, and suppliers to distributors, a tax of $1.25 per gallon, in like ratio for any partial gallon or other unit of measure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Before the 16th day of each month thereafter, every distillery, supplier, distributor, and direct shipper shall make a written report under oath to the Tax Commissioner and the commissioner showing the identity of the purchasing person, the quantity, label, and alcoholic content of low-proof spirit alcohol products sold by the distillery and supplier to West Virginia distributors or the direct shipper to persons 21 years of age or older who reside in West Virginia during the preceding month and at the same time shall pay the tax imposed by this article on the low-proof spirit alcohol products sold to the distributor or to persons 21 years of age or older who reside in West Virginia during the preceding month to the Tax Commissioner. The reports shall contain other information and be in the form required by the Tax Commissioner. For purposes of this article, the reports required by this section are considered tax returns covered by the provisions of &sect;11-10-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code. Failure to timely file the tax returns within five calendar days of the 16th day of each month subjects a distillery, supplier, distributor, and direct shipper to penalties under &sect;60-8-18 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) </span><span class="cs1489E706">Administrative procedures.</span><span class="cs46AE26E6"> &ndash; Each and every provision of the West Virginia Tax Procedure and Administration Act set forth in &sect;11-10-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code applies to the taxes imposed pursuant to this section, except as otherwise expressly provided in this article, with like effect as if that act were applicable only to the taxes imposed by this section and were set forth in extenso in this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) </span><span class="cs1489E706">Criminal penalties.</span><span class="cs46AE26E6"> &ndash; Each and every provision of the West Virginia Tax Crimes and Penalties Act set forth in &sect;11-9-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code applies to the taxes imposed pursuant to this section with like effect as if that act were applicable only to the taxes imposed pursuant to this article and were set forth in extenso in this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The Tax Commissioner may propose legislative rules for legislative approval, pursuant to &sect;29A-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code, to implement this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;60-8B-5. Rule-making authorization.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The West Virginia Alcoholic Beverage Control Commissioner may propose legislative rules for legislative approval, pursuant to &sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code, to implement this article.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 4594 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=4594">&laquo; House Bill 4594 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 4594'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 4594 - Reorganization of the Executive branch&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb4594+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=4594"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.csAC81313F{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.csE70BDF83{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs7A33E2F1{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+		.cs5F7FB1FA{color:#000000;background-color:#FFFF00;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.csCA63F0B4{color:#2F5496;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.csFE9C8D6C{color:#000000;background-color:transparent;font-family:Arial;font-size:14pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span><div style="width:49pt;height:32pt;border-width:0.5pt;border-style:solid;border-color:Black;background-color:#FFFFFF;margin:0pt 9pt 0pt 9pt;padding:5pt 0pt 0pt 0pt;">
+		<p class="csAC81313F"><span class="csB9803513">FISCAL NOTE</span></p></div>
+	</p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 4594</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Leavitt, Hanshaw (Mr. Speaker), Rohrbach, Phillips, Burkhammer, Funkhouser, Green, Ridenour, and Riley</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced January 20, 2026; referred to the Committee on Government Organization then Finance]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;5F-1-2, &sect;5F-2-1a, &sect;6-7-2a, &sect;9-5-5, &sect;18-5-19c, and &sect;18-10A-2 of the Code of West Virginia, 1931, as amended, to amend the code by adding a new chapter, designated &sect;21B-1-1, &sect;21B-1-2, &sect;21B-1-3, &sect;21B-1-4, &sect;21B-1-5, &sect;21B-1-6, &sect;21B-1-7, &sect;21B-2-1, &sect;21B-2-2, &sect;21B-2-3, &sect;21B-3-1, and &sect;21B-3-2, and to repeal &sect;5B-2B-1, &sect;5B-2B-2, &sect;5B-2B-3, &sect;5B-2B-4, &sect;5B-2B-4b, &sect;5B-2B-5, &sect;5B-2B-6, &sect;5B-2B-8, and &sect;5B-2B-9, &sect;9-3-1, &sect;9-3-2, &sect;9-3-3, &sect;9-3-4, &sect;9-3-5, and &sect;9-3-6 &sect;9-8-1; &sect;9-8-2; &sect;9-8-3; &sect;9-8-4; &sect;9-8-5; &sect;9-8-6; &sect;9-8-7; &sect;9-8-8; &sect;9-8-9; &sect;9-8-10; &sect;9-8-11, &sect;9-8-12, &sect;9-9-1, &sect;9-9-2, &sect;9-9-3, &sect;9-9-4, &sect;9-9-5, &sect;9-9-6, &sect;9-9-7, &sect;9-9-8, &sect;9-9-9, &sect;9-9-10, &sect;9-9-11, &sect;9-9-12, &sect;9-9-13, &sect;9-9-14, &sect;9-9-15, &sect;9-9-16, &sect;9-9-17, &sect;9-9-18, &sect;9-9-19, &sect;9-9-20, &sect;9-9-21, and &sect;9-9-22; relating to the creation of the Department of Workforce Services; establishing a cabinet-level agency; consolidating workforce development, vocational rehabilitation, adult education, and public assistance programs; transferring the Bureau for Family Assistance and Division of Rehabilitation Services and its components; integrating work requirements for SNAP, TANF, and Medicaid populations pursuant to the federal One Big Beautiful Bill (OBBB) Act of 2025; providing for automatic exemptions and deemed compliance; and providing for an orderly transition of all records, personnel, and property by July 1, 2027.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5B. ECONOMIC DEVELOPMENT ACT OF 1985.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2B. WEST VIRGINIA WORKFORCE INVESTMENT ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-1. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-3. West Virginia Workforce Development Board; membership of board; meetings; quorum requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-4. Duties of the Workforce Development Board.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-4b. Open meetings; public information.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-5. State agencies.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-6. Administration of board.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-8. Powers and duties of the commission.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2B-9. Coordination between agencies providing workforce investment programs, local workforce investment boards and the Executive Director of Workforce West Virginia.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 5F. REORGANIZATION OF THE EXECUTIVE BRANCH OF STATE GOVERNMENT.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 1. GENERAL PROVISIONS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5F-1-2. Executive departments created; offices of secretary created.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) </span><a name="_Hlk125352911"><span class="csEF05ACC">There are created, within the executive branch of the state government, the following departments</span></a><span class="csEF05ACC">:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Department of Administration;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Department of Environmental Protection;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Department of Health; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Department of Homeland Security;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Department of Revenue;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Department of Transportation;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Department of Commerce; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Department of Veterans&#39; Assistance; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Department of Tourism; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Department of Human Services; </span><span class="cs68EFC440">and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) Department of Health Facilities; </span><span class="cs46AE26E6">and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Department of Workforce Services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Each department will be headed by a secretary appointed by the Governor with the advice and consent of the Senate. Each secretary serves at the will and pleasure of the Governor.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 2. TRANSFER OF AGENCIES AND BOARDS.</span></h2>
+	<h4 class="cs89687900">
+		<a name="_Hlk126333868"><span class="csB9803513">&sect;5F-2-1a</span></a><span class="csB9803513">. Termination of the department of health and human resources; transfer and incorporation of agencies and boards legislative intent; creation of new departments.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) It is the intent of the Legislature to devolve the functions of the </span><a name="_Hlk125356608"><span class="csEF05ACC">Department of Health and Human Resources</span></a><span class="csEF05ACC"> into three new and separate departments of the executive branch as provided in this Act over a period of transition that concludes with the termination of the Department of Health and Human Resources. &nbsp;It is the intent of the Legislature that the provisions of this Act be construed to achieve the restructuring and reallocation of the powers, duties and functions of the </span><a name="_Hlk125357203"><span class="csEF05ACC">Department of Health and Human Resources </span></a><span class="csEF05ACC">to the three new departments created in this section in an orderly manner designed to maintain the delivery of services that have heretofore been provided by the Department of Health and Human Resources by the new departments during the transition and beyond the termination of the Department of </span><a name="_Hlk125361462"><span class="csEF05ACC">Health and Human Resources </span></a><span class="csEF05ACC">without disruption and to streamline and, where possible, to share administrative and operative expenses where common to each of the new departments. &nbsp;To that end, the Secretary of the Department of Health and Human Resources, the Secretary of the Department of Human Services, the Secretary of the Department of Health and the </span><a name="_Hlk125985170"><span class="csEF05ACC">Secretary of the Department of Health Facilities </span></a><a name="_Hlk125985110"><span class="csEF05ACC">shall enter </span></a><a name="_Hlk126577198"><span class="csEF05ACC">into a memorandum of understanding to effect the provisions of this Act that shall, at a minimum, create a Office of Shared Administration mutually administered by the secretaries that shall coordinate efforts with the Department of Administration to maximize efficiencies and function of services in an effort to contain expenses within the Department of Human Services, the Department of Health and the Department of Health Facilities. &nbsp;The Office of Shared Administration shall implement a plan to maximize function and efficiency administrative services for the purpose of streamlining administrative services and reducing expenses within the departments.</span></a><span class="csEF05ACC"> &nbsp;The Office of Shared Administration shall complete implementation by June 30, 2024, and shall provide quarterly updates to the Legislative Oversight Commission on Health and Human Resources Accountability.</span></p><p class="cs53FB8D75"><a name="_Hlk126573267"><span class="csEF05ACC">(b) The Department of Human Services created under &sect;5F-1-2 of this code is a separate and distinct department of the executive branch. The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are </span></a><a name="_Hlk125355168"><span class="csEF05ACC">transferred to,</span></a><span class="csEF05ACC"> incorporated in and administered as a part of the Department of Human Services:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Bureau for Social Services;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Bureau for Medical Services; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Bureau for Child Support Enforcement;</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(4) Bureau for Family Assistance; </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(5)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(4)</span><span class="csEF05ACC"> Bureau for Behavioral Health; and</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(6)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(5)</span><span class="csEF05ACC"> Any other agency or entity hereinafter established within the Department of Human Services by an act of the Legislature.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) (1) The Department of Health created under &sect;5F-1-2 of this code is a separate and distinct department of the executive branch. The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are transferred to, incorporated in and administered as a part of the Department of Health:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Bureau for Public Health;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Office of Emergency Medical Services; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Office of the Chief Medical Examiner;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Center for Threat Preparedness;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Health Care Authority; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Any other agency or entity hereinafter established within the Department of Health by an act of the Legislature.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The Office of the Inspector General is a separate and autonomous agency within the Department of Health as provided in &sect;16B-2-1. &nbsp;The following agencies and boards, including all of the allied, advisory, affiliated, or related entities and funds associated with any agency or board, are transferred to, incorporated in and administered as a part of the Office of the Inspector General. The Office of the Inspector General, shall include:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Office of Health Facility Licensure and Certification;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Board of Review;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Foster Care Ombudsman;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) Olmstead Office;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Investigations and Fraud Management;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(F) Quality Control; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(G) Mental Health Ombudsman;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(H) WV Clearance for Access: Registry and Employment Screening; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(I) Human Rights Commission.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The Department of Health Facilities created under &sect;5F-1-2 of this code is a separate and distinct department of the executive branch. The following state facilities, including all of the allied, advisory, affiliated, or related entities and funds associated with any state facility, are transferred to, incorporated in and administered as a part of the Department of Health Facilities:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) Hopemont Hospital;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Jackie Withrow Hospital;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) John Manchin, Sr. Health Care Center;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Lakin Hospital;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Mildred Mitchell-Bateman Hospital;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Welch Community Hospital; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) William R. Sharpe Jr. Hospital; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Any other agency or entity hereinafter established within the Department of Health Facilities by an act of the Legislature.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Any secretary may recommend that a bureau, office, board, commission or other state entity be included or excluded from the organization of the departments created in this section to the Joint Committee on Government and Finance and the Legislative Commission on Health and Human Resources Accountability.</span><span class="cs5F7FB1FA"> </span></p><p class="cs53FB8D75"><a name="_Hlk125624691"><span class="csEF05ACC">(f) All programs, orders, determinations, rules, permits, grants, contracts, certificates, bonds, authorizations and privileges which have been issued, promulgated, made, granted or allowed to become pursuant to authority provided by this code to the Department of Health and Human Resources or the Secretary of that Department that are in effect on the dates of the creation of the new departments as provided in this section shall continue in effect according to their terms until modified, terminated, superseded, set aside or revoked by the department or secretary that assumes authority over the subject matter of the same under the provisions of this Act.</span></a></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 6. GENERAL PROVISIONS RESPECTING OFFICERS.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 7. COMPENSATION AND ALLOWANCES.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;6-7-2a. Terms of certain appointive state officers; appointment; qualifications; powers and salaries of officers.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Each of the following appointive state officers named in this subsection shall be appointed by the Governor, by and with the advice and consent of the Senate. Each of the appointive state officers serves at the will and pleasure of the Governor for the term for which the Governor was elected and until the respective state officers&rsquo; successors have been appointed and qualified. Each of the appointive state officers are subject to the existing qualifications for holding each respective office and each has and is hereby granted all of the powers and authority and shall perform all of the functions and services heretofore vested in and performed by virtue of existing law respecting each office.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The annual salary of each named appointive state officer is as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Commissioner, Division of Highways, $92,500; Commissioner, Division of Corrections and Rehabilitation, $90,000; Director, Division of Natural Resources, $75,000; Superintendent, State Police, $85,000; Commissioner, Division of Financial Institutions, $75,000; Commissioner, Division of Culture and History, $65,000; Commissioner, Alcohol Beverage Control Commission, $75,000; Commissioner, Division of Motor Vehicles, $75,000; Director, Human Rights Commission, $55,000; Commissioner, Division of Labor, $70,000; Chairperson, Board of Parole, $55,000; members, Board of Parole, $50,000; </span><span class="cs46AE26E6">and</span><span class="csEF05ACC"> members, Employment Security Review Board, $17,000. </span><span class="cs68EFC440">and Commissioner, Workforce West Virginia, $75,000.</span><span class="csEF05ACC"> Secretaries of the departments shall be paid an annual salary as follows: Health and Human Resources, $95,000: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That effective July 1, 2013, </span><a name="_Hlk135215621"><span class="csEF05ACC">the Secretary of </span></a><span class="csEF05ACC">the Department of Human Services, the Secretary of the Department of Health, and the Secretary of the Department of Health Facilities shall be paid an annual salary not to exceed $175,000; Transportation, $95,000: </span><span class="cs93AB6E8B">Provided, however</span><span class="csEF05ACC">, That if the same person is serving as both the Secretary of Transportation and the Commissioner of Highways, he or she shall be paid $120,000; Revenue, $95,000; Military Affairs and Public Safety, $95,000; Administration, $95,000; Education and the Arts, $95,000; Commerce, $95,000; Veterans&rsquo; Assistance, $95,000; </span><span class="cs68EFC440">and</span><span class="csEF05ACC"> Environmental Protection, $95,000; </span><span class="cs46AE26E6">and Workforce Services, $95,000</span><span class="csEF05ACC">: </span><span class="cs93AB6E8B">Provided further</span><span class="csEF05ACC">, That any officer specified in this subsection whose salary is increased by more than $5,000 as a result of the amendment and reenactment of this section during the 2011 regular session of the Legislature shall be paid the salary increase in increments of $5,000 per fiscal year beginning July 1, 2011, up to the maximum salary provided in this subsection.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) Each of the state officers named in this subsection shall continue to be appointed in the manner prescribed in this code and shall be paid an annual salary as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Director, Board of Risk and Insurance Management, $80,000; Director, Division of Rehabilitation Services, $70,000; Director, Division of Personnel, $70,000; Executive Director, Educational Broadcasting Authority, $75,000; Secretary, Library Commission, $72,000; Director, Geological and Economic Survey, $75,000; Executive Director, Prosecuting Attorneys Institute, $80,000; Executive Director, Public Defender Services, $70,000; Commissioner, Bureau of Senior Services, $75,000; Executive Director, Women&rsquo;s Commission, $45,000; Director, Hospital Finance Authority, $35,000; member, Racing Commission, $12,000; Chairman, Public Service Commission, $85,000; members, Public Service Commission, $85,000; Director, Division of Forestry, $75,000; and Executive Director of the Health Care Authority, $80,000.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) Each of the following appointive state officers named in this subsection shall be appointed by the Governor, by and with the advice and consent of the Senate. Each of the appointive state officers serves at the will and pleasure of the Governor for the term for which the Governor was elected and until the respective state officers&rsquo; successors have been appointed and qualified. Each of the appointive state officers are subject to the existing qualifications for holding each respective office and each has and is hereby granted all of the powers and authority and shall perform all of the functions and services heretofore vested in and performed by virtue of existing law respecting each office.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The annual salary of each named appointive state officer shall be as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">Commissioner, State Tax Division, $92,500; Insurance Commissioner, $92,500; Lottery Director, $110,000; Director, Division of Homeland Security and Emergency Management, $65,000; and Adjutant General, $125,000.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) No increase in the salary of any appointive state officer pursuant to this section may be paid until and unless the appointive state officer has first filed with the State Auditor and the Legislative Auditor a sworn statement, on a form to be prescribed by the Attorney General, certifying that his or her spending unit is in compliance with any general law providing for a salary increase for his or her employees. The Attorney General shall prepare and distribute the form to the affected spending units.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) The annual salary of each appointive state officer named in this section shall continue in the amount as set forth in this section from the effective date of the amendments to this section enacted in 2020, until the position held by the officer is vacated or until July 1, 2020, whichever occurs first. After the vacancy or after July 1, 2020, whichever occurs first, unless otherwise prohibited by law, the annual salary of each appointed state officer named in this section shall be fixed by the Governor within the current budget allocation. In the event the annual salary fixed by the Governor for an appointed state officer named in this section exceeds the amount set forth in this section for the appointed state officer, the amount of the annual salary for the appointed state officer shall be set forth in a line-item in the budget bill, and payment of an annual salary to the appointed state officer may not exceed that amount but may be lower than the salary approved in the budget bill or established in this section. The salary of a newly appointed state officer named in this section shall be included in the appointment letter for the position.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">The amendment and reenactment of this section in the third extraordinary session of the Legislature, 2021, shall not operate to reduce the salary of any appointive state officer whose salary has been increased pursuant to this subsection since July 1, 2020.</span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 9. HUMAN SERVICES.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 3. APPLICATION FOR AND GRANTING OF ASSISTANCE.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-3-1. Application for and granting of federal-state or federal assistance.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-3-2. Application for and granting of state assistance.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-3-3. Making application, investigation and grant.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-3-4. Assignment of support obligations.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-3-5. Services to persons not otherwise eligible.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-3-6. &nbsp;Program for drug screening of applicants for cash assistance.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 5. MISCELLANEOUS PROVISIONS.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-5-5. Recipients of cash grants.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">Within such limitations as may be imposed by applicable federal laws, rules and regulations, the </span><span class="cs68EFC440">department of welfare</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Department of Workforce Services</span><span class="csEF05ACC"> shall make available for public inspection by the thirtieth day of each month a separate alphabetical list of the names and addresses of all persons receiving any class of welfare assistance in the form of cash grants during the preceding month, together with the amounts of such cash grants. This information shall be delivered to the clerk of each county court in the state who shall immediately file the same in his </span><span class="cs46AE26E6">or her</span><span class="csEF05ACC"> office with respect to persons receiving such cash grants as residents of that county. Such information shall be retained in the files of said clerks of the county courts for a period of two years from the date of receipt thereof. All information other than names, addresses and amounts of such cash grants shall be considered as confidential.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">It shall be unlawful, for commercial or political purposes of any nature, for any person or persons, body, association, firm, corporation or other agency to solicit, disclose, receive, make use of, or to authorize, knowingly permit, participate in, or acquiesce in the use of, any lists of names of, or any information concerning, persons applying for or receiving any class of welfare assistance, directly or indirectly derived from the records, papers, files, or communications of the department of welfare or acquired in the course of performance of official duties. The violation of this provision is a misdemeanor, punishable upon conviction, by a fine of not more than $1,000 or imprisonment of not more than six months, or both.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">For the protection of applicants and recipients of welfare assistance, the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Department of Workforce Services</span><span class="csEF05ACC"> shall be required to establish reasonable rules and regulations governing the custody, use and preservation of the records, papers, files and communications of the </span><span class="cs68EFC440">department</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Department of Workforce Services</span><span class="csEF05ACC">.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 8. eligibility and fraud requirements for public ASSISTANCE.</span></h2>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">&nbsp;</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-1. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-2. Work requirements.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-3. Income and identity verification.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-4. Eligibility verification.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-5. Identity authentication.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-6. Case review.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-7. Notice and right to be heard.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-8. Referrals for fraud, misrepresentation or inadequate documentation.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] &nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-9. Reporting to the Governor and Legislature.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-10. Prohibitions on use of electronic benefit transfer cards.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-11. Tracking out-of-state spending.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-8-12. Rulemaking.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 9. WV WORKS ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-1. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-2. Legislative findings; purpose.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-3. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-4. Authorization for program.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-5. WV works program fund.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-6. Program participation.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-7. Work requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-8. Exemptions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-9. Personal responsibility contract.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-10. Participation limitation; exceptions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-11. Breach of contract; notice; sanctions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-12. Diversionary assistance allowance in lieu of monthly cash assistance.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.]</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-13. Subsidized employment.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-14. Transitional assistance.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-15. Interagency coordination.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-16. Intergovernmental coordination.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-17. Public-private partnerships.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-18. Relationship with other law.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-19. Legislative oversight.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-20. Confidentiality, fines and penalties.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-21. West Virginia Works Separate State College Program; eligibility; special revenue account.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;9-9-22. West Virginia Works Separate State Two-Parent Families Program.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">[Repealed.] </span></p><h1 class="cs709C557D">
+		<span class="csE70BDF83">CHAPTER 18. EDUCATION.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 5. COUNTY BOARD OF EDUCATION.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-5-19c. Division of Technical and Adult Education Services.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The State Superintendent of Schools has authority to establish in the state Department of Education a Division of Technical </span><span class="cs68EFC440">and Adult</span><span class="csEF05ACC"> Education Services, and to provide for suitable coordination and supervision of the educational programs established in </span><span class="cs68EFC440">sections nineteen-a and nineteen-b of this article</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">&sect;18-5-19a of this code</span><span class="csEF05ACC">. All programs established under those sections are under rules of the state Board of Education.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Transition of Personnel and Property: All personnel, equipment, records, and property primarily used for adult education within the Department of Education shall be transferred to the Department of Workforce Services on or before July 1, 2027.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(b)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(c)</span><span class="csEF05ACC"> The Legislature finds that:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The General Educational Development (GED) exam is an implement for success that can transform the future of a graduate;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) For an individual who has not attained a high school diploma, achieving a High School Equivalency Diploma can increase employment opportunities and earning potential;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) Individuals who will benefit from a High School Equivalency Diploma often lack the credentials necessary for employment, and therefore lack the resources to afford the costs of the GED exam; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Many individuals for whom the GED exam is unattainable are likely to remain in a state of poverty.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(c)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(d)</span><span class="csCA63F0B4"> </span><span class="csEF05ACC">The state board shall develop and administer a program to provide the GED exam fee for an eligible individual pursuing a High School Equivalency Diploma. The state board shall promulgate a rule in accordance with the provisions of article three-b, chapter twenty-nine-a of this code to implement the program.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The rule shall provide for eligibility requirements as follows:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Successful completion of a GED preparation program;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) Successful completion of the GED Official Practice Test;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(C) Standards for measuring successful completion of the program and test required by this subdivision;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(D) GED exam registration with a GED testing center that is approved by the state board; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(E) Any other requirements established by the state board.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) The state board shall provide the GED exam fee directly to the GED testing center.</span></p><h2 class="cs89687900">
+		<span class="cs7A33E2F1">ARTICLE 10A. REHABILITATION SERVICES.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;18-10A-2. Division of Rehabilitation Services.</span></h4>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) The Division of Rehabilitation Services is transferred to the Department of </span><span class="cs68EFC440">Commerce</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Workforce Services</span><span class="csEF05ACC"> created in &sect;5F-1-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code. The secretary shall appoint any board, commission, or council over the division to the extent required by federal law to qualify for federal funds for providing rehabilitation services for disabled persons. The secretary and the boards, commissions or councils as he or she is required by federal law to appoint are authorized and directed to cooperate with the federal government to the fullest extent in an effort to provide rehabilitation services for disabled persons.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) References in this article or &sect;18-10B-1 </span><span class="cs93AB6E8B">et seq.</span><span class="csEF05ACC"> of this code to the state Board of Vocational Education, the state Board of Rehabilitation or the state board as the governing board of vocational or other rehabilitation services or facilities mean the Secretary of </span><span class="cs68EFC440">Commerce</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">Workforce Services</span><span class="csEF05ACC">. All references in the code to the Division of Vocational Rehabilitation mean the Division of Rehabilitation Services and all references to the Director of the Division of Vocational Rehabilitation means the Director of the Division of Rehabilitation Services.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h1 class="cs709C557D">
+		<span class="csFE9C8D6C">CHAPTER 21B. DEPARTMENT OF WORKFORCE SERVICES.</span></h1>
+	<h2 class="cs89687900">
+		<span class="cs456817A0">article 1. creation of department; powers and duties; transfer of existing agencies; transition; eligibility; compliance; conforming references.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-1-1. Creation of Department; Secretary. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The Department of Workforce Services is hereby created. The Secretary shall be the chief executive officer and shall be appointed by the Governor with the advice and consent of the Senate.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-1-2. Powers and Duties of the Secretary. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Secretary shall direct and manage the department to provide a unified system of workforce development, vocational rehabilitation, and economic assistance, and is authorized to enter into contracts and grants with federal and state agencies.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-1-3. Transfer of Existing Agencies and Programs. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Effective July 1, 2027, the following are transferred to the Department of Workforce Services: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) WorkForce West Virginia; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The Division of Rehabilitation Services, including the VR program and Disability Determination Section; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The Bureau for Family Assistance (SNAP and TANF); </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Administration of Medicaid eligibility and work requirements; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The Office of Adult Education; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The West Virginia Workforce Development Board.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-1-4. Transition; Transfer of Records, Property, and Personnel. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) To ensure an orderly transition by July 1, 2027, the Secretary shall coordinate the transfer of all records, assets, and personnel. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Any employee transferred shall retain their current pay grade, benefits, and seniority.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-1-5. Integrated Eligibility and Work Tracking System. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Secretary shall maintain a unified electronic system to track eligibility and work-requirement compliance for SNAP, TANF, and Medicaid simultaneously. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Verification of qualifying hours submitted to any division shall be applied automatically to all assistance programs.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-1-6. Federal Compliance. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Department is designated as the successor agency for all federal grants and state plans relating to the transferred programs, ensuring no lapse in federal funding under the Rehabilitation Act of 1973 or the Social Security Act.</span></p><h4 class="cs89687900">
+		<a name="_Hlk219187623"><span class="csF3C8A5A3">&sect;</span></a><span class="csF3C8A5A3">21B-1-7. Conforming References. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">Wherever in this code, specifically including Chapter 21A, reference is made to the &ldquo;Bureau of Employment Programs&rdquo; or &ldquo;WorkForce West Virginia,&rdquo; it shall be construed to mean the Department of Workforce Services created by this chapter. Wherever reference is made to the &#39;Commissioner of WorkForce West Virginia,&#39; it shall be construed to mean the Secretary of the Department of Workforce Services.</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">article 2. west virginia workforce development board; single region designation; waivers. </span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-2-1. West Virginia Workforce Development Board; membership of board; duties of Board; staffing of the Board.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The West Virginia Workforce Development Board is hereby created and shall serve as the state&rsquo;s Workforce Development Board, as required by the WIOA. The board shall make general recommendations regarding workforce investment in the state to the Governor and the Legislature. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The membership of the board shall meet the requirements of WIOA &sect;101(b) and represent diverse geographic areas of the state, including urban, rural and suburban areas.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The board shall conduct such duties as required by WIOA &sect;101(d), including assisting the Governor with oversight and performance of the state workforce system. The board may develop and implement and performance metrics that provide accountability and guide the work of the department.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The department shall provide staff support to the board to ensure the board can carry out its duties under WIOA and state law.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-2-2. West Virginia single region designation; service delivery. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Legislature designates West Virginia as a single region encompassing the entire state consistent with provisions in WIOA. As a single region, it is the Legislature&rsquo;s intent that West Virginia provide services as a single state area with the operations of any comprehensive or affiliate one-stop centers being conducted by the department.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-2-3. West Virginia waivers. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Legislature encourages the Governor and the department to pursue and submit any waivers of federal law and regulations such that services to West Virginia residents and businesses can be conducted in a more efficient and effective manner. Waivers that improve coordination between the department and other state agencies and commissions are also encouraged.</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">article 3. work requirments; legal services.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-3-1. Work requirements; integration. </span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The Secretary of the Department of Workforce Services shall administer work requirements for SNAP and TANF in accordance with federal law. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Consolidated Job-Matching: Every individual subject to SNAP or TANF work requirements shall be automatically enrolled in the WorkForce West Virginia job-matching database. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Medicaid Work Requirements: Pursuant to the federal One Big Beautiful Bill Act of 2025, the department shall implement an 80-hour-per-month community engagement and work requirement for the Medicaid expansion population. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Automatic Exemption and Deemed Compliance: To prevent administrative duplication, any individual verified as meeting the work requirements for TANF or SNAP shall be deemed in automatic compliance with Medicaid work requirements. Individuals participating in full-time programs under the Division of Rehabilitation Services or the Office of Adult Education shall be automatically exempt from additional work-reporting requirements for the duration of active enrollment.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;21B-3-2. Attorney general and prosecuting attorneys to render legal services to commissioner.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Attorney General of the state and his assistants, and the prosecuting attorneys of the various counties shall render to the commissioner, without additional compensation, such legal services as he shall require of them in the discharge of his duties. This section shall not be construed to prohibit the department from developing plans for cooperation with courts, prosecuting attorneys, and other law-enforcement officials in such a manner as to permit the state and its citizens to obtain maximum fiscal benefits under federal laws, rules and regulations.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create a single cabinet-level Department of Workforce Services consolidating employment, rehabilitation, adult literacy, and public assistance work requirements (including the 80-hour federal Medicaid mandate) into one body effective July 1, 2027. Strike-throughs indicate language that would be superseded from present law, and underscoring indicates new language that would be added.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

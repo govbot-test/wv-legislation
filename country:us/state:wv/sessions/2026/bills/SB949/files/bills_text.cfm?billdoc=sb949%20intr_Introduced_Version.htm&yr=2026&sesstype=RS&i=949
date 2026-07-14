@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 949 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=949">&laquo; Senate Bill 949 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 949'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 949 - Creating Uniform Assignment for Benefit of Creditors Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb949+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=949"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 949</span></p><p class="csFF933113"><span class="csADC6E5DB">By Senator Oliverio</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 16, 2026; referred<br/>to the Committee on the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated </span><a name="_Hlk221266347"><span class="csEF05ACC">&sect;46C-1-1, </span></a><span class="csEF05ACC">&sect;46C-1-2, &sect;46C-1-3, &sect;46C-1-4, &sect;46C-1-5, &sect;46C-1-6, &sect;46C-1-7, &sect;46C-1-8, &sect;46C-1-9, &sect;46C-1-10, &sect;46C-1-11, &sect;46C-1-12, &sect;46C-1-13, &sect;46C-1-14, &sect;46C-1-15, &sect;46C-1-16, &sect;46C-1-17, &sect;46C-1-18, &sect;46C-1-19, &sect;46C-1-20, &sect;46C-1-21, &sect;46C-1-22, &sect;46C-1-23, &sect;46C-1-24, &sect;46C-1-25, &sect;46C-1-26, and &sect;46C-1-27, relating to the Uniform Assignment for Benefit of Creditors Act; providing a short title; providing definitions; establishing requirements and effects for assignment agreements; clarifying filing, recording, and title transfer requirements; requiring notification to creditors; establishing duties of assignors and assignees; clarifying the powers of assignees; establishing when a claim is allowed, disputed, or disallowed; clarifying requirements for proof of claim; establishing rights of transferees; clarifying distributions and claim subordination; creating liability; clarifying removal of an assignee and a successor; clarifying requirements to wind up; clarifying interstate matters; establishing court action; &nbsp;and providing severability. </span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 1. Uniform Assignment for Benefit of Creditors Act.</span></h2>
+	<p class="cs63FD752D"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-1. Short title.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This article shall be known and may be cited as the &quot; Uniform Assignment for Benefit of Creditors Act.&quot;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">For the purposes of this article:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Affiliate&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) a person that directly or indirectly owns, controls, or holds, with power to vote, 20 percent or more of the outstanding voting interests of another person, other than a person that holds the interests:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) In a fiduciary or agency capacity without sole discretionary power to vote the interests; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) Solely to secure a debt, if the person has not in fact exercised the power to vote;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A person with 20 percent or more of the person&rsquo;s outstanding voting interests directly or indirectly owned, controlled, or held, with power to vote, by another person;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A person whose business is operated under a lease or operating agreement by another person, or a person substantially all of whose assets are controlled by the other person; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) A person that operates the business or substantially all the assets of another person under a lease or operating agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Asset&quot; means a legal or equitable interest in property of an assignor, regardless of the person holding or in possession, custody, or control of the property or where the property is located. The term does not include: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A legal or equitable interest in property restricted from assignment if the restriction is</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">effective under other law, unless the other law permits assignment with the consent of another person and the person consents to the assignment in a manner permitted by the other law; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) If the assignor is an individual, a legal or equitable interest in property to the extent it is exempt from legal process under other law. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Assigned asset&quot; means an asset transferred under an assignment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Assignee&quot; means a person to which assets are transferred under an assignment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) &quot;Assignment&quot; means a transfer by a person of all the person&rsquo;s assets to another person for the benefit of the transferor&rsquo;s creditors.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) &quot;Assignment agreement&quot; means an agreement that transfers or provides for a transfer of all the assignor&rsquo;s assets.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) &quot;Assignment estate&quot; means the assets held at a given time by the assignee under an assignment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) &quot;Assignor&quot; means a person whose assets are transferred under an assignment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) &quot;Claim&quot; means a creditor&rsquo;s right to payment or to an equitable remedy, regardless of whether the right is reduced to judgment, liquidated, unliquidated, fixed, contingent, matured, unmatured, disputed, undisputed, legal, equitable, secured, or unsecured. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) &quot;Cohabitant&quot; means each of two individuals not married to each other who live together as a couple after each has reached the age of majority or been emancipated.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) &quot;Creditor&quot; means a person that has a claim against an assigned asset or the assignor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) &quot;Electronic&quot; means relating to technology having electrical, digital, magnetic, wireless, optical, electromagnetic, or similar capabilities.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) &quot;Good faith&quot; means honesty in fact and the observance of reasonable commercial standards of fair dealing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(14) &quot;Insider&quot; includes:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) In the case of an individual:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) A relative of the individual;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) A partnership or limited liability company in which the individual is a general partner or managing member; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) An organization of which the individual is a director, officer, or person in control;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) In the case of an organization:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) A director, officer, manager, or other person in control of or with controlling equity interest in the organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(ii) A partnership or limited liability company in which the organization is a general partner or managing member;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iii) A general partner or managing member of the organization; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(iv) A relative of a general partner, managing member, director, officer, manager, or other person in control of or with controlling equity interest in the organization;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) An affiliate; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) A managing agent of an organization.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(15) &quot;Lien&quot; means an interest in an asset that secures payment or performance of an obligation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(16) &quot;Organization&quot; means a person other than an individual.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(17) &quot;Perfected lien&quot; means a lien on:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Real property other than fixtures on which a bona fide purchaser of the property cannot acquire an interest superior to the interest of the lienholder; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Fixtures or property other than real property on which a creditor cannot acquire a lien by attachment, levy, or the like that is superior to the interest of the lienholder.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(18) &quot;Person&quot; means an individual, estate, business or nonprofit entity, government or governmental subdivision, agency, or instrumentality, or other legal entity. The term includes a protected series, however denominated, of an entity if the protected series is established under</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">law that limits, or limits if conditions specified under law are satisfied, the ability of a creditor of the entity or of any other protected series of the entity to satisfy a claim from assets of the protected series.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(19) &quot;Proof of claim&quot; means a record a creditor submits to an assignee to evidence the creditor&rsquo;s claim.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(20) &quot;Record&quot; means information:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Inscribed on a tangible medium; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Stored in an electronic or other medium and retrievable in perceivable form.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(21) &quot;Relative&quot; means an individual related by affinity or consanguinity within the third degree or a cohabitant.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(22) &quot;Security interest&quot; means a lien created by an agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(23) &quot;Send&quot;, in connection with a record or notification, means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) To deposit in the mail, deliver for transmission, or transmit by any other usual means of communication, with postage or cost of transmission provided for, addressed to any address reasonable under the circumstances; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) To cause the record or notification to be received within the time it would have been received if properly sent under subparagraph (A).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(24) &quot;Sign&quot; means, with present intent to authenticate or adopt a record:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Execute or adopt a tangible symbol; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Attach to or logically associate with the record an electronic symbol, sound, or process.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(25) &quot;State&quot; means a state of the United States, the District of Columbia, Puerto Rico, the United States Virgin Islands, or any other territory or possession subject to the jurisdiction of the United States. The term includes a federally recognized Indian tribe.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(26) &quot;Transfer&quot; means disposing of or parting with an asset or with an interest in an asset, regardless of whether the disposition or parting is indirect, conditional, or involuntary.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-3. Scope.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">This article applies to an assignment made by an assignor that is:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) An organization whose principal place of business is in this state; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An organization whose internal affairs are governed by other law of this state; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) An individual whose principal residence is in this state;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) An organization wholly owned, directly or indirectly, by an assignor that satisfies subdivisions (1), (2), or (3) of this section; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) An organization that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Is partly owned, directly or indirectly, and controlled by an assignor that satisfies subdivisions (1), (2), or (3) of this section;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Has no place of business or employees; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Relies on the services the organization receives from an assignor that satisfies subdivisions (1), (2), or (3) of this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-4. Requirements for assignee and assignment agreement.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) An assignee must be a person that:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Is not a creditor, affiliate, or insider of the assignor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Is not an affiliate or insider of a creditor of the assignor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Does not have a claim against the assignment estate, other than a claim for fees and expenses to be paid under the assignment agreement;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Does not have a material financial interest in the outcome of the assignment, other than a claim for fees and expenses to be paid under the assignment agreement; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Does not hold an equity interest in the assignor other than a noncontrolling interest in a publicly traded company; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Is not an affiliate of a person that fails to satisfy subdivisions (1), (2), (3), (4), or (5) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A person that satisfies subsection (a) is not precluded from being an assignee merely because the person performed services for the assignor before the assignment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) An assignment agreement must be in a record signed by the assignor and the assignee. The record must:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) State the name and address of the assignor and of the assignee;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Transfer or provide for a transfer of all the assignor&rsquo;s assets;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Describe the assigned assets in sufficient detail to identify the assets;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Provide for the distribution of the assignment estate;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Describe the fees to be charged by the assignee in connection with the assignment, including the basis on which they are to be calculated; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Include a representation by the assignor, under penalty of perjury, that the assignor is assigning all the assignor&rsquo;s assets. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) If an assignee relies in good faith on the assignor&rsquo;s representation made under subsection (c)(6), all the assignor&rsquo;s assets are deemed to be assigned, even if the representation is inaccurate.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-5. Effect of assignment; when assignment agreement effective.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) An assignee obtains the rights, title, and interests of the assignor in the assigned assets.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If the assignor is an organization, an assignee obtains the rights, title, and interests of the assignor in assets acquired after the assignment. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Except as provided in &sect;46C-1-10(b)(12) of this code, an assignee takes each assigned asset subject to an existing interest in the asset held by another person.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) An assignee holds the assigned assets subject to the assignee&rsquo;s duties under &sect;46C-1-9 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) An assignment is subject to other law under which the assignment may be fraudulent or otherwise voidable.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The effective date of an assignment agreement is the date the agreement is signed by the last party to the agreement that is required to sign the agreement unless a later date is identified in the agreement as the effective date.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-6. Filing, recording, and title transfer requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) In this section, &quot;financing statement&quot; has the meaning in Uniform Commercial Code Section 9-102(a)(39).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An assignee of a legal or equitable interest in personal property may file a financing statement in the filing office of:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) This state established for purposes of Uniform Commercial Code Section 9-501(a)(2);</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Any other state in which:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The assignor would be located under Uniform Commercial Code Section 9-307 if the assignor were a debtor for the purpose of that section; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) An asset of the assignment estate may be located. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A financing statement filed under subsection (b) must indicate that it is filed in connection with an assignment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) When filing a financing statement under subsection (b), the assignee must:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Attach a copy of the assignment agreement to the financing statement; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) State on the financing statement that a copy of the assignment agreement is available on request to the assignee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A financing statement filed under subsection (b) may:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Designate the assignor as &quot;debtor&quot; and the assignee as &quot;secured party&quot;; or </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Use the terms &quot;assignor&quot; and &quot;assignee&quot; or words of similar import.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The filing of a financing statement under subsection (b) is not itself a factor in determining whether an asset secures an obligation. The rights of the assignee under the assignment are not affected if the assignee does not file a financing statement under subsection (b).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) An assignee of a legal or equitable interest in real property shall record the assignment of the interest or notice of the assignment under the real estate recording law of the jurisdiction where the property is located.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) An assignee shall comply with other law governing the transfer of title to an asset.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) By signing an assignment agreement, the assignor authorizes the assignee to take the actions required by this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-7. Notification to creditors.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Unless a creditor waives in a signed record the right to notification, an assignee shall send a notification of the assignment to each creditor known to the assignee within a reasonable time not to exceed 30 days after the effective date of the assignment agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The notification must:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Be in a record signed by the assignee;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Include the assignee&rsquo;s name, address, and other contact information reasonably necessary to communicate with the assignee;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Provide reasonable instructions for submitting a proof of claim using the method established by the assignee under &sect;46C-1-9(b)(5) of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Identify the date established under &sect;46C-1-9(b)(6) of this code by which each creditor whose claim is not otherwise allowed without timely proof of claim under this [act] must submit a proof of claim. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) An assignee shall use reasonable means to provide the information in subsection (b) to unknown creditors, including by any means the assignor regularly used to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Provide information to the assignor&rsquo;s creditors; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Communicate information about the assignor, other than advertising, to the public.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-8. Duties of assignor.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Subject to &sect;46C-1-23 of this code, an assignor has a duty to take all reasonable actions necessary for the assignee to administer the assignment, the assigned assets, and the assignment estate. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) In furtherance of the duty under subsection (a), the assignor shall:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Preserve and turn over to the assignee the assigned assets in the assignor&rsquo;s possession or control;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Provide to the assignee information reasonably necessary to administer the</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">assignment, the assigned assets, and the assignment estate;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Sign any record reasonably necessary to transfer an assigned asset and comply with any notarization required under other law;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Designate, and provide the assignee with the name, address, and other contact information reasonably necessary to communicate with, an appropriate person willing and able to act as a representative on behalf of the assignor as may be reasonably necessary to administer the assignment, the assigned assets, and the assignment estate;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) If the assignment includes a legal or equitable interest in real property or titled personal property, cooperate with the assignee in taking actions under &sect;46C-1-6 of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) On or as soon as practicable after the effective date of the assignment agreement, provide the assignee:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A list of all assets;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A list of all the assignor&rsquo;s employees, including those whose employment is terminated in connection with the assignment; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A list of all the assignor&rsquo;s known creditors, including, for each creditor, the creditor&rsquo;s address and other contact information reasonably necessary to communicate with the creditor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Verify under penalty of perjury the accuracy of the lists required under &sect;46C-1-8(b)(6) of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) With respect to a legal or equitable interest in property restricted from assignment, cooperate with the assignee to obtain consent from a person whose consent to assign the interest is necessary under other law; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Provide assistance to the assignee as required by the assignment agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The duties in this section also apply to a representative designated under subsection (b)(4).</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-9. Duties of assignee.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Subject to &sect;46C-1-23 of this code, an assignee has a fiduciary duty to the assignment estate for the benefit of creditors:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Of loyalty, including the duty to manage the assignment in good faith;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) To use reasonable care to maximize distributions under &sect;46C-1-15 of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) To wind up the assignment under &sect;46C-1-19 of this code in a manner compatible with the best interests of the assignment estate and creditors.(b) Without limitation on the duties under subsection (a), and subject to &sect;46C-1-23 of this code, the assignee also has a duty to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Maintain a separate deposit account for funds related to the assignment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Collect on or dispose of each assigned asset, unless the assignee determines it is more economically efficient to abandon the asset;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Prepare and retain appropriate business records, including a record of each receipt, disbursement, and collection on or disposition of an assigned asset;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Pay administrative expenses of the assignment estate, to the extent the assignment estate has sufficient unencumbered assets;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Establish a method that is reasonably designed to permit a creditor to submit a proof of claim;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Establish a single date by which creditors whose claims are not otherwise allowed without timely proofs of claim under this [act] must submit proofs of claim, which must be 150 days after the effective date of the assignment agreement;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Unless a claim would receive minimal or no distribution without regard to the claim&rsquo;s validity or asserted priority, examine the validity and priority of claims against the assignment estate and, if necessary, consult with the representative designated by the assignor under &sect;46C-1-8(b)(4) of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) At least every six months, provide to each creditor a summary of the assets, liabilities, and expenses of the assignment estate;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Comply with all requirements of the Internal Revenue Service and state and local taxing authorities;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Send a notification to each creditor of the assignee&rsquo;s compensation and any change in the method of determining the assignee&rsquo;s compensation from the method provided in the assignment agreement;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) Send a final accounting under &sect;46C-1-19(a) of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Comply with the other requirements imposed on the assignee under this article.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-10. Powers of assignee.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) An assignee has the powers necessary or appropriate to perform the assignee&rsquo;s duties.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Unless the assignment agreement expressly provides otherwise, the assignee has power to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Operate an existing business that uses an assigned asset, including preservation of the asset and collection on, or the sale, lease, license, or other disposition of, the asset;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Incur secured or unsecured debt and pay expenses incidental to the exercise of the power under &sect;46C-1-10(b)(1) of this code;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Assert a right, claim, cause of action, or defense the assignor could have asserted that relates to the assignment estate;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Engage professionals, including a professional previously engaged by the assignor, to give advice, to prosecute or defend litigation, or for other purposes as the assignee considers appropriate, and pay professionals reasonable fees for services from the assignment estate;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Collect on, or sell, lease, license, or otherwise dispose of, an asset of the assignment estate regardless of whether the asset is subject to a lien or other encumbrance;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Exercise a right to redeem an asset of the assignment estate that is subject to a mortgage, deed of trust, security interest, or other encumbrance;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Settle a matter involving a debtor of the assignor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Prosecute or defend a litigation pending on the effective date of the assignment agreement in favor of or against the assignor in the manner and with the same effect as the assignor could have done if the assignment had not been made;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Recover an asset in the manner and with the same effect as the assignor could have done if the assignment had not been made;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) Settle claims against the assignment estate;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) Abandon an assigned asset;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) Subject to subsections (c) and (e), avoid a transfer or the incurrence of an obligation which a creditor that has filed a proof of claim could have avoided under other law if the assignment had not been made; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) Invest funds, subject to applicable prudent investor standards under other law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The power under subsection (b)(12) is exclusive to the assignee with respect to a creditor that submits a proof of claim. A recovery by the assignee in the exercise of this power must be for the benefit of the assignment estate but may not exceed the amount, asset, or other value the creditor could have obtained by the avoidance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) For the purpose of exercising the assignee&rsquo;s power under subsection (b)(12), exercising a voidable-transaction remedy, or otherwise establishing the priority of the assignee&rsquo;s interest, an assignee has a lien on the assignment estate and the status of:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A lien creditor under [cite to Uniform Commercial Code Section 9-102(a)(52)(B)] as to an asset that is a legal or equitable interest in personal property or fixtures;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A bona fide purchaser under [the recording statute of this state] as to an asset that is a legal or equitable interest in real property, other than fixtures, located in this state; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A bona fide purchaser under the law of another state as to an asset that is a legal or equitable interest in real property, other than fixtures, located in the other state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) An assignee&rsquo;s power under subsection (b)(12) to avoid a transfer made before the effective date of the assignment agreement, under or in connection with a swap agreement, securities contract, commodity contract, forward contract, repurchase agreement, or master netting agreement, is limited to the extent a trustee would not have the power to avoid the transfer under the Bankruptcy Code, 11 U.S.C. Section 101 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., as amended.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) An assignee shall exercise the powers under this section consistent with the assignee&rsquo;s fiduciary duty under &sect;46C-1-9(a) of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-11. Allowed claim.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) An assignee shall allow a creditor&rsquo;s claim if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The creditor submits a proof of claim in compliance with &sect;46C-1-13 of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The assignee does not dispute the claim under &sect;46C-1-12 of this code before final distribution.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An assignee may:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Allow a claim, pay a known liquidated claim, or accept a notice to the assignee of a claim received by the date established by the assignee under &sect;46C-1-9(b)(6) of this code even if the creditor does not submit a proof of claim; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Allow and pay a claim evidenced by a late-filed proof of claim, if the assignee determines there is a reasonable basis for excusing the late filing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Any unsecured portion of an allowed claim shall be valued as of the effective date of the assignment agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A creditor&rsquo;s claim is allowed if the creditor succeeds in a dispute under &sect;46C-1-12(b) of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Subject to subsection (f), after expiration of the time for submitting a proof of claim, the assignee shall create a complete list of creditors that have submitted a proof of claim in compliance with &sect;46C-1-13 of this code. For each creditor&rsquo;s claim, the list must state:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The amount of the claim, if the amount is known to the assignee; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Whether the claim is secured or unsecured and, if secured, describe the collateral for the claim.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) If a class of creditors will receive no distribution on account of allowed claims, the assignee shall send a notice in a record to each creditor in that class that the creditor will receive no distribution instead of the list required in subsection (e).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) If requested by a creditor or other party with an interest in the assignment estate, the assignee shall provide the list created under subsection (e) to the person making the request to the extent permitted by privacy laws and subject to any privacy safeguards the assignee determines in the assignee&rsquo;s business judgment are reasonably necessary.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-12. Disputed and disallowed claims.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) An assignee may dispute a creditor&rsquo;s claim before final distribution by sending notification in a record stating the nature of the assignee&rsquo;s dispute to the creditor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If a dispute cannot be resolved consensually, the assignee may commence a proceeding under &sect;46C-1-21 of this code to disallow the claim. The assignee must commence proceedings before final distribution under &sect;46C-1-15 of this code. If the proceeding is not filed before final distribution, the assignee shall allow the claim under &sect;46C-1-11 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) An assignee shall create a dollar-for-dollar reserve for the estimated amount of the potential distribution on a disputed claim.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Subject to subsection (b), an assignee shall disallow a claim for reimbursement or contribution of a person that is liable with the assignor on, or that has secured, the claim, to the extent:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The claim against the assignment estate is disallowed;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The claim for reimbursement or contribution is contingent as of the time of allowance or disallowance; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The person asserts a right of subrogation to the rights of a creditor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A claim for reimbursement or contribution of a person liable with the assignor on, or that has secured, the claim that becomes fixed after the effective date of the assignment agreement shall be determined, and shall be allowed or disallowed, subject to subsection (b), as if the claim had become fixed before the effective date of the assignment agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) An assignee may reconsider the assignee&rsquo;s decision to allow or disallow a claim for cause. If a reconsidered claim is allowed under &sect;46C-1-11 of this code, before the assignee makes additional payments or transfers to other creditors that are equal or junior in priority under &sect;46C-1-15 of this code to the reconsidered claim, the creditor with the reconsidered claim shall receive a payment or transfer in an amount proportionate in value to the payments or transfers already received by the other creditors. This subsection does not modify the assignee&rsquo;s right under other law to recover from a creditor an excess payment or transfer made to the creditor. If a reconsidered claim is disallowed, the assignee shall comply with subsections (b) and (c).</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;</span><span class="csF3C8A5A3">46C-1-13. Proof of claim.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A proof of claim must:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) State the name, address, and other contact information reasonably necessary to communicate with the creditor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) State the amount of the claim;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Briefly state the nature of the claim;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Identify any asset of the assignment estate securing the claim;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Be signed by the creditor under penalty of perjury;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Include a copy of a record, if any, on which the claim is based;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Be submitted using the method established under &sect;46C-1-9(b)(5) of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Be submitted by the date established by the assignee under &sect;46C-1-9(b)(6) of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A proof of claim submitted in compliance with this section is prima facie evidence of the validity and amount of the claim.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The submission by a creditor of a proof of claim in compliance with this section constitutes the creditor&rsquo;s:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Consent to the jurisdiction of the court under &sect;46C-1-21 of this code; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Assignment to the assignee of any right of the creditor to bring a voidable transaction action relating to the creditor&rsquo;s claim.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-14. Rights of transferees.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) An assignee&rsquo;s disposition of an asset:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Transfers to a transferee for value all of the assignee&rsquo;s rights in the asset;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Discharges the assignee&rsquo;s lien and, to the extent the assignment creates a security interest in favor of the assignee, the assignee&rsquo;s security interest; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Discharges any subordinate security interest or other lien subordinate to the assignee&rsquo;s lien. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A transferee that acts in good faith takes free of the rights and interests described in subsection (a), even if the assignee fails to comply with this article or the requirements of a judicial proceeding.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If a transferee does not take free of the rights and interests described in subsection (a), the transferee takes the asset subject to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The assignee&rsquo;s rights in the assets of the assignment estate;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The assignee&rsquo;s lien and, if applicable, security interest; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any other security interest or other line.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Unless otherwise provided in a record, any warranty arising by operation of other law is disclaimed to the extent permitted by other law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) If a subordinate security interest or other lien is discharged under this section, the assignee may file a record with the official or office responsible for maintaining an official filing, recording, registration, or certificate-of-title system covering the asset secured by the security interest or other lien. The record must state that the security interest or other lien is discharged as a subordinate security interest or other lien in connection with a disposition under an assignment for the benefit of creditors of the assignor whose asset is subject to the security interest or other lien.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-15. Distributions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) In this section, &quot;protected secured creditor&quot; means a secured creditor whose lien:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Is a perfected lien;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Cannot be avoided by the assignee under &sect;46A-10(b)(12) of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Is not subordinate to the assignee&rsquo;s lien. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Except as provided in </span><a name="_Hlk221617459"><span class="cs46AE26E6">&sect;46A-1-16 of this code</span></a><span class="cs46AE26E6">, the assignee shall pay claims from the assignment estate allowed under &sect;46A-1-11 of this code in the order of priority stated in this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Unless otherwise agreed between the assignee and a protected secured creditor, before distributions under subsections (d), (e), (f), and (g), and in accordance with the priorities of creditors with liens under other law, the protected secured creditor shall receive the asset or the proceeds from the collection on or disposition of the asset to the extent of the value of the protected secured creditor&rsquo;s interest in the asset, less the assignee&rsquo;s reasonable and necessary expenses of preserving or disposing of the asset to the extent the expenses benefit the protected secured creditor and are incurred with the protected secured creditor&rsquo;s consent or acquiescence. The protected secured creditor has an unsecured claim under subsection (g)(2) for the amount of the claim that remains after deducting the amount or value of an asset the protected secured creditor receives under this subsection. To the extent a claim is secured by an asset the value of which, after the deductions provided under this subsection, is greater than the amount of the claim, the protected secured creditor may receive interest on the claim and any reasonable fees, costs, or charges provided for under the agreement or other law under which the claim arose.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) After the distributions under subsection (c), the assignee shall pay the necessary costs of the administration of the assignment estate. The costs include:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Fees and reimbursements of the expenses of the assignee and any professionals engaged by the assignee;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Post-assignment taxes incurred by the assignee;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Post-assignment rent incurred by the assignee in occupying premises on which assets of the assignment estate are located or the business of the assignor is conducted; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Post-assignment lease payments incurred by the assignee in renting personal property used in the business of the assignor; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Amounts required to be paid under the assignment agreement for expenses of winding up the assignment under &sect;46A-19 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) After the distributions under subsections (c) and (d), the assignee shall pay claims entitled to priority under federal law including under 31 U.S.C. Section 3713, as amended, from the assignment estate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) After the distributions under subsections (c), (d), and (e), the assignee shall pay claims from the assignment estate for wages, salaries, or commissions earned not more than 180 days before the earlier of the effective date of the assignment agreement or the cessation of the assignor&rsquo;s business. Payment shall be limited to the greater of:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The amount of the claim allowed as a priority claim ahead of claims of other unsecured creditors under the Bankruptcy Code, 11 U.S.C. Section 101 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., as amended; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The amount allowed as a priority claim ahead of claims of other unsecured creditors under applicable non-bankruptcy law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) After the distributions under subsections (c), (d), (e), and (f), each creditor shall receive a distribution of the assets of the assignment estate in the following order of priority:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Unsecured claims entitled to priority ahead of claims of other unsecured creditors under other law; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Unsecured claims not entitled to priority.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) If the assets available for distribution to claims with equal priority under subsection (g) are insufficient to pay the total amount of the claims with that priority, each creditor with a claim with that priority shall receive a pro rata distribution of the available assets based on the proportion the amount of the creditor&rsquo;s claim bears to the total amount of the claims with that priority.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) If the claims entitled to the distribution under subsections (c), (d), (e), (f), and (g) are paid in full, the residue shall be distributed to allowed claims evidenced by a late-filed proof of claim, other than a late-filed claim allowed by the assignee under &sect;46A-11(b)(2) of this code, and, after the allowed claims evidenced by a late-filed proof of claim have been paid in full, as provided in the assignment agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) An assignee may make interim distributions after considering future expenses and the reserves for disputed claims established under &sect;46A-12(c) of this code.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-16. Claim subordination.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A subordination agreement is enforceable under this article to the same extent the agreement is enforceable under other law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Subject to subsection (c), the following claims are subordinate to a claim or interest that is senior or equal in priority to a claim or interest represented by a security or other equity interest in the assignor or an affiliate of the assignor:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A claim arising from rescission of a purchase or sale of the security or other equity interest; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A claim for damages arising from the purchase or sale of the security or other equity interest; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A claim for reimbursement or contribution allowed on account of the rescission or damage claim.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If the security is common stock or another common equity interest, a claim subject to subordination under subsection (b) has the same priority as common stock or another common equity interest.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-17. Liability.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) An assignor is not personally liable for an act or omission by the assignee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An assignee is not personally liable for an act or omission by the assignor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A representative designated by an assignor under &sect;46C-1-8(b)(4) of this code is exculpated to the same extent as a person acting on behalf of the assignor under other law had there been no assignment, except for an act or omission resulting from the representative&rsquo;s gross negligence or willful misconduct.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A term of an assignment agreement relieving the assignee of liability is unenforceable to the extent the agreement relieves the assignee of liability for an act or omission committed in bad faith or with reckless indifference to the purposes of the assignment or the interests of the creditors of the assignment estate. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Subject to subsection (f), an assignee is personally liable for breach of a fiduciary duty under &sect;46C-1-9(a) of this code. If the assignee is liable:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The assignee is personally liable to a creditor for an individualized harm to the creditor if the harm is not shared by all creditors or a class of creditors; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The assignee is personally liable to the assignment estate for a harm shared by all creditors or a class of creditors.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) An assignee is not liable if, in the performance of the assignee&rsquo;s duties and exercise of the assignee&rsquo;s powers, the assignee relies in good faith on:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A record of the assignor;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Information, an opinion, a report, or a statement presented to the assignee by the assignor&rsquo;s officer or employee, a committee of the assignor&rsquo;s board of directors, an independent director or manager of the assignor, or another representative of the assignor; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Information, an opinion, a report, or a statement presented to the assignee by another person that has been selected with reasonable care by or on behalf of the assignee as to a matter the assignee reasonably believes is within the other person&rsquo;s professional or expert competence.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-18. Assignee removal; successor assignee.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The assignor or a creditor may request a court of competent jurisdiction in West Virginia to remove the assignee, if the assignor or creditor has a reasonable belief grounds for removal exist under subsection (b) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) After a request under subsection (a) or on the court&rsquo;s initiative in an action pending before the court under &sect;46C-1-21 of this code, the court may remove an assignee:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) For cause, including the assignee&rsquo;s fraud, dishonesty, incompetence, gross mismanagement, or failure to comply with this article; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If removal of the assignee best serves the interests of the creditors.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) After an assignee resigns, or is removed, dies, or becomes incapacitated, a successor assignee provided for in the assignment agreement becomes the assignee, unless the successor assignee is not eligible to be an assignee under &sect;46C-1-4(a) of this code &nbsp;or is subject to removal under subsection (b). A court shall appoint a successor assignee if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The assignment agreement does not provide for a successor assignee; or</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The successor assignee provided for in the assignment agreement is ineligible to be an assignee under &sect;46A-1-4(a) of this code or is subject to removal under subsection (b).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Subject to &sect;46C-1-17 of this code , an assignee that resigns, or is removed, dies, or becomes incapacitated, is discharged from the assignee&rsquo;s duties under this article when the assignee, or a representative of a deceased or incapacitated assignee:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Accounts for and turns over to the successor assignee all assets of the assignment estate; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Submits to creditors a report summarizing the receipts and disbursements made during the service of the assignee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Subject to an applicable privilege, a court may order an attorney, accountant, or other person that has information in a record relating to the assignment estate or the assignor&rsquo;s financial affairs to turn over or disclose the record to the successor assignee.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-19. Winding up.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) On completion of an assignee&rsquo;s duties, the assignee shall send a creditor whose claim is allowed under &sect;46C-1-11 of this code, and not satisfied in full, a final accounting sufficient to inform the creditor of all material aspects of the assignment, including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A description of the actions taken by the assignee under the assignment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A summary of the assets received by the assignee at the commencement of the assignment and the assets received by the assignee during the assignment;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A summary of disbursements made by the assignee during the assignment for the purpose of administering the assignment estate, including the fees charged by the assignee, and payments to professionals, for rent, and for business purchases;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) A summary of collections and dispositions of assets by the assignee;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) A summary of distributions made or proposed to be made by the assignee for creditor claims;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) A description of additional work to be done by the assignee to complete the administration of the assignment estate and the distributions under &sect;46C-1-15 of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Other information considered reasonably necessary by the assignee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Except as otherwise provided in the final accounting or if the assignee has not fulfilled the assignee&rsquo;s duties under this article, the assignee is discharged from the assignee&rsquo;s duties under this article when the assignee sends the final accounting and distributes all the assets of the assignment estate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If the final accounting describes additional work under subsection (a)(6), the assignee shall exercise the powers appropriate to complete the work.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-20. Interstate matters.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Subject to subsection (b), an assignment made under the law of another state must be recognized and enforced on an issue if the result for the issue would be substantially similar to the result for the issue if the assignment had been made under this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If a claim for wages, salaries, or commissions or a claim of a governmental unit exists in another state, for the purpose of determining the priority of the claim under &sect;46C-1-15(f)(2) of this code, the assignee shall use the amount asserted or determined under the law of the other state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If an assignee determines that a creditor should receive the treatment the creditor would receive under an assignment made under the law of another state, the assignee may treat the creditor as the creditor would be treated in the other state.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-21. Court action.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) A court of competent jurisdiction in West Virginia may hear and resolve a matter involving the administration of an assignment or the exercise of an assignee&rsquo;s powers and duties, including a request for instructions or approval or to declare rights.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Without limiting the rights of the assignee or a creditor or other interested person to request the court to hear or resolve a matter under subsection (a), on request of the assignee, the court may issue an order relating to the administration of the assignment or the exercise of the assignee&rsquo;s powers and duties, including an order for disposition of an asset or the incurrence of an obligation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Acceptance of the assignment by the assignee constitutes the assignee&rsquo;s consent to the jurisdiction of the court.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-22. Ancillary assignee.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Subject to other law of this state governing a person from another state serving as a fiduciary in this state, a court of competent jurisdiction in West Virginia may appoint a person serving as an assignee in an assignment in another state, or the person&rsquo;s nominee, as an ancillary assignee relating to assigned assets located in this state or subject to the jurisdiction of a court in this state, if:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The person or nominee would be eligible to serve as an assignee under &sect;46C-1-4 of this code; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The appointment furthers the person&rsquo;s possession, custody, control, or disposition of an assigned asset under the assignment in the other state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The court may issue an order that implements an order entered in another state appointing or directing an assignee or otherwise concerning an assignment in the other state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Unless the court orders otherwise, an ancillary assignee appointed under subsection (a) has the rights, powers, and duties of an assignee appointed under this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A person in possession, custody, or control of an assigned asset in this state, other than a creditor holding a lien or a right of setoff or recoupment relating to the asset, shall, on notification in a record by an ancillary assignee appointed under subsection (a), turn over the asset to the ancillary assignee.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-23. Provisions variable by agreement.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Except as provided in this section and &sect;46C-1-10(b) of this code, the provisions of this article may not be varied by agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The duties under &sect;46C-1-8(a) and &sect;46C-1-9(a) may not be disclaimed by agreement. An assignor and the assignee may determine by agreement the standards measuring the fulfillment of the duties of the assignor under &sect;46C-1-8 and the assignee under &sect;46C-1-9 if the standards are not manifestly unreasonable.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Except as provided in &sect;46C-1-17(d) of this code, the assignment agreement may limit the assignee&rsquo;s liability under &sect;46C-1-17 and may require the assignee be indemnified by the assignment estate.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Except as provided under &sect;46C-1-7(a) of this code, whenever this article requires an action to be taken within a reasonable time, a time not manifestly unreasonable may be fixed by agreement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The assignment agreement may provide for duties of the assignee in addition to those in this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&sect;</span><span class="csF3C8A5A3">46C-1-24. Uniformity of application and construction.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">In applying and construing this uniform act, a court shall consider the promotion of uniformity of the law among states that enact it.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-25. Relation to electronic signatures in global and national commerce act.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This article modifies, limits, or supersedes the Electronic Signatures in Global and National Commerce Act, 15 U.S.C. Section 7001 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">., as amended, but does not modify, limit, or supersede 15 U.S.C. Section 7001(c), or authorize electronic delivery of any of the notices described in 15 U.S.C. Section 7003(b).</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-26. Transitional provision.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This article applies to an assignment made on or after passage of this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;46C-1-27. Severability.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">If a provision of this article or its application to a person or circumstance is held invalid, the invalidity does not affect another provision or application that can be given effect without the invalid provision.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to create the Uniform Assignment for Benefit of Creditors Act.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

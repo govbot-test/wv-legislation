@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5657 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5657">&laquo; House Bill 5657 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5657'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5657 - Electric Choice and Competition Act &amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5657+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5657"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5657</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Anders and Dillon</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 17, 2026; referred to the Committee on Energy and Public Works then the Judiciary]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding a new article, designated &sect;24-9-1, &sect;24-9-2, &sect;24-9-3, &sect;24-9-4, &sect;24-9-5, &sect;24-9-6, &sect;24-9-7, &sect;24-9-8, and &sect;24-9-9, relating to establishing the Electric Choice and Competition Act; providing a short title and legislative findings; defining terms; permitting retail freedom and competition for the purchase and sale of electric power for certain non-residential retail customers; providing procedures for the commission to establish eligible load capacity allowance; providing for the establishment of a subscription queue; providing notice requirements; providing utility rate transparency requirements for electric utilities; requiring the licensing of competitive service providers; requiring the commission prohibit unreasonable shifting of costs to ratepayers; requiring additional commission oversight measures; providing the commission rulemaking authority; establishing annual reporting requirements.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">ARTICLE 9. Electric choice and competition ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-1. Short title; legislative findings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) This article shall be known and cited as the &quot;Electric Choice and Competition Act.&quot;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The Legislature hereby finds that: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Reliable and affordable electricity is essential to the prosperity, retention of manufacturing and jobs, economic growth, and well-being of the citizens of West Virginia;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Electric demand is increasing rapidly due to the growth of data centers, industrial expansion, and the transition to a more electrified economy;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Over the last several years, regulated electric rates for non-residential retail customers in West Virginia have increased significantly and harmed the competitiveness of West Virginia business and industry;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Over the last two decades, there have been few investments by electric utilities in baseload power generation, significant resources are scheduled for retirement, and the state does not have sufficient generation to meet significant new load growth now projected;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Utility ratepayers in West Virginia fund the development of new power generation projects, exposing households and businesses to significant and escalating electricity costs to replace the retirement of power generation and to meet increases in demand;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Allowing certain large electricity users the option to procure their own electric supply will shift the risk of building new generation, thereby lowering overall system costs for the regulated electric utilities and relieving financial burdens on all ratepayers;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) By providing certain large customers the option to procure power freely from a competitive market while maintaining the utilities&rsquo; obligation to provide reliable transmission and distribution service, this act provides a balanced framework that secures the retention of business and industry, promotes economic development, supports resource adequacy, and protects households and small businesses from disproportionate cost increases;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) The avoided utility incurred generation power purchase and development costs resulting from this act represent a direct savings to ratepayers and an important step toward ensuring the long-term affordability, reliability, and competitiveness of the state&rsquo;s electric system; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) It is therefore the purpose of this act to establish a process for limited retail access and third-party procurement by certain large consumers, to provide for commission oversight, and to ensure that all ratepayers benefit from a more efficient, transparent, and sustainable electric system.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-2. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">As used in this article, or in the administration of this article, the following terms shall have the meanings ascribed to them by this section, unless a different meaning is clearly required by the context in which the term is used: </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Aggregation program&quot; means a grouping of non-residential retail customers into a buying group to purchase energy generation services in bulk from a competitive service provider;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Commission&quot; means the Public Service Commission of West Virginia;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Competitive service provider&quot; means a person or entity licensed by the commission to provide electric supply to retail customers pursuant to this article. The term does not include a person, not otherwise a competitive service supplier who owns or operates equipment or procures electricity used solely for self-generation or self-supply of electricity;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Electric utility&quot; means any electric distribution company that sells electricity to retail customers in this state under rates regulated by the commission. &quot;Electric utility&quot; shall not include municipally owned electric utilities or rural electric cooperatives, but such municipally owned or rural electric cooperatives may choose to opt in and be bound by the applicable provisions of this law. Neither an electric utility nor any of its affiliates can be licensed as a competitive service provider;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Eligible customer&quot; means any non-residential retail customer who is eligible to procure electric power from the competitive wholesale electricity market or a third-party supplier pursuant to &sect;24-9-3 of this code. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Non-residential retail customer&quot; means a customer purchasing electric supply from the electric utility or from a competitive service provider; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Transmission and distribution service&quot; means the delivery of electricity provided by the electric utility over its transmission and distribution systems.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&quot;Bypassable Charges&quot; shall mean those charges no longer assessed by the electric utility to a customer for generation and supply services that the customer is receiving from a competitive service provider.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-3. Retail freedom and competition for the purchase and sale of electric power for non-residential retail customers.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Effective January 1, 2027, and notwithstanding any other provision of this chapter, a non-residential retail customer whose demand during the most recent calendar year exceeded one megawatt shall be permitted to purchase all or a portion of its electric power from an entity other than the incumbent electric utility, including directly from the competitive wholesale electricity market via a competitive service provider or other eligible third-party supplier: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That non-residential retail customers procuring electric power pursuant to this section shall be subject to the limitations and requirements contained herein this article. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) One or more non-residential retail customers may meet the peak demand threshold of this section by aggregating loads at contiguous or non-contiguous sites located within the state. Individual non-residential retail customers may form an aggregation program to procure bulk power as a group. For purposes of qualification, the 1-megawatt threshold for the aggregated group of accounts may utilize the sum of each account&rsquo;s annual non-coincident peak demand.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Nothing within this article shall be interpreted to prohibit or limit the rights of a person or entity to self-generate or co-locate electric power, nor to impose a transition, implementation, exit fee, or any other similar charge on self-generation. A person or entity using self-generated or co-located power is not a competitive service provider, electric utility, nor a person conducting an electric utility business jurisdictional to the commission.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-4. Limitation on eligible load capacity; subscription queue.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The commission shall establish a load capacity allowance for each electric utility for non-residential retail customers eligible to purchase electric power and capacity services outside of the electric utility as provided for in &sect;24-9-3 of this code. The total amount of electric power that may be purchased by non-residential retail customers outside of an electric utility may not exceed the load capacity allowances set by the commission. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The capacity allowances shall be published by order and shall be incremental to existing loads served by licensed competitive service providers and third parties, and shall be based on a percentage of each electric utility&rsquo;s weather-adjusted retail sales from the previous calendar year, with consideration for any incremental demand growth. Such capacity allowance shall be no less than 20 percent of the total weather-adjusted retail sales for the preceding calendar year for each utility and shall remain in effect until replaced by a new order, at which time the cap may increase but shall not decrease. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The commission shall issue an order establishing the subscription cap allowance within nine months of the effective date of this section. If the commission fails to issue such an order within the required timeframe, an automatic minimum cap of 20 percent shall take effect and remain in force until a new order is published. The previously published cap shall have effect until the publication of such new order.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The commission shall establish a queue process for non-residential retail customers eligible to purchase electric power and capacity services outside of the electric utility. If an electric utility&rsquo;s load capacity allowance is fully subscribed, a new customer will be placed in the subscription queue. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) If a utility&rsquo;s subscription capacity allowance is fully subscribed for two consecutive years, the commission shall conduct a hearing to review such capacity allowance and may expand such cap allowance if (i) there is a subscription queue for unserved customers or (ii) additional evidence of sustained or accelerated load growth is presented. If either of the conditions of this subsection are satisfied, then the commission shall issue an order adjusting the capacity allowance within 12 months of a request to do so. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) If the utility&rsquo;s subscription cap allowance is fully subscribed for two consecutive years and the commission has not completed the hearing required by this subsection, then the cap shall automatically increase annually by a minimum of 10 percent. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Every two years thereafter the hearing required by this subsection, the commission shall conduct a proceeding to review such subscription cap allowance and consider expanding or removing the cap allowance based on subscription queue load, projected utility load growth, and other market factors that the commission deems relevant. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) A non-residential retail customer that is already procuring electric power pursuant to &sect;24-9-3 of this code and is seeking to expand usage at a facility shall be permitted to purchase electric power from a licensed competitive service provider for both the existing and any expanded load at such facility, as well as any new facility constructed or acquired by the customer that is similar in nature, if the customer owns more than 50 percent of the new facility. The owner of such a new facility may purchase electric power from a third party regardless of whether the sales exceed the subscription capacity allowance established by this section, provided that such load is considered incremental in the calculation of the subsequent adjustments to the capacity allowance.</span></p><h4 class="cs89687900">
+		<span class="csB9803513">&nbsp;</span></h4>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-5. Notice requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Any non-residential retail customer intending to procure electric power from outside an electric utility pursuant to &sect;24-9-3 of this code must provide written notice to the electric utility at least 30 days prior to the termination of utility supply service date. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A non-residential retail customer procuring electric power pursuant to &sect;24-9-3 of this code may discontinue direct market purchases of electric power and resume purchasing standard generation electric service from an electric utility as set forth in the electric utility&rsquo;s tariff if the electric utility has sufficient capacity to serve the customer&rsquo;s needs: </span><span class="cs1489E706">Provided,</span><span class="cs46AE26E6"> That any such customer must provide notice of the customer&rsquo;s desire to receive service to the electric utility, subject to the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Customers whose peak demand was one to 25 megawatts during the most recent calendar year must provide written notice to the electric utility at least 30 days prior to the return to utility supply service date.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Customers whose peak demand was greater than 25 megawatts during the most recent calendar year must provide written notice to the electric utility at least six months prior to the return to service date.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Non-residential retail customers who wish to return to service with an electric utility prior to the notice requirements of this section may be placed on market-based hourly prices for the charges of electric supply from the electric utility until the notice period is complete and shall otherwise be subject to pay any other costs that are caused to receive such service.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-6. Utility rate transparency.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) Each electric utility shall take appropriate operational measures to separate internal costs to accurately reflect the associated costs charged to non-residential ratepayers for each of the service functions described below. All electric utility customer bills shall contain sufficient information to enable non-residential customers to determine the basis for charges and information necessary to compare offers in the competitive market. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Beginning on or before July 1, 2027, electric utilities shall delineate charge information on all eligible customer bills according to service, defining the following charges as separate line items:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Distribution;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Transmission;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Generation and supply, including the associated cost per kWh and per kW or any other pertinent billing unit determinants; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Individual program charges, including but not limited to energy efficiency, low-income assistance programs, demand response programs, and any other programs outside of the delivery of basic service;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Credits;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Taxes;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Account management and billing fees; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Any other charges and surcharges clearly defined, including non-by-passable charges.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A record of the individual program and service costs provided for in subsection (b) shall be published and made available in an electric utility&rsquo;s tariff. Any proposed changes to each category shall be included in all ratemaking cases and the electric utility&rsquo;s integrated resource plans.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-7. Licensing of competitive service providers.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Any entity providing electric power supply to a non-residential retail customer pursuant to the provisions of this article shall be licensed as a competitive service provider by the commission. To ensure adequate service to customers in this state, the commission shall require that a competitive service provider submit an application establishing that it has the necessary financial, managerial, and technical capabilities. The commission shall act upon such application within 90 days of filing or it shall be presumptively approved.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The commission shall require competitive service providers to maintain and submit records that the commission considers necessary, including:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Reasonable financial security requirements to ensure the financial responsibility of the retail electric supplier; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Confirmation that electric supply services to retail customers will be provided in accordance with acceptable contracts, agreements, or arrangements; and </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The payment of all required applicable state taxes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Each entity that applies for a competitive service provider license shall pay an annual licensing fee of $10,000 to the commission and execute and maintain a bond or other financial surety instrument of no less than $1 million issued by a qualifying surety, insurance company, or other financial institution authorized to transact business in the state. The cost of the surety shall be paid by the applicant. The applicant shall file a copy of this surety, with a notarized verification page from the issuer as part of its license application.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-8. Commission oversight; prohibiting cost shifting to ratepayers; rulemaking.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The commission shall ensure that the provisions of this article do not create an unreasonable shifting of costs to ratepayers who are not participating in the retail purchase of electricity pursuant to &sect;24-9-3 of this code. The commission shall consider the avoided generation and market purchase costs to ratepayers by relieving the electric utility of the obligation to acquire energy and capacity, while maintaining transmission and distribution services to customers that procure their own supply outside of the electric utility. These avoided costs must be balanced against any potential incurred costs of relieving the utility of the obligation to serve eligible customers that participate. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An electric utility shall not increase its rates and charges or alter, change, or amend any rate or rate schedules, the effect of which will be to increase the cost of services to its customers related to this bill, without first receiving commission approval as provided in this section. The utility shall place in evidence facts relied upon to support the utility&rsquo;s petition or application to increase its rates and charges, or to alter, change, or amend any rate or rate schedules.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The commission shall ensure that, in all integrated resource plans and cost recovery proceedings, no incumbent electric utility is improperly incorporating the loads of competitive service supply customers into its forecasts or load projections.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">&nbsp;(d) Within six months of the effective date of this article, the commission shall open a proceeding for stakeholder input on the capacity allowance, management of the queue, the process for licensing of competitive service providers, and any additional issues related to the implementation of this article deemed necessary by the commission.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Within nine months of the effective date of this article, and subject to the proceeding described in subsection (d), the commission shall promulgate rules necessary to implement the provisions of this article. The commission may amend and update such rules as they determine necessary.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;24-9-9. Reporting.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">On or before December 30 of each year, the commission shall submit a report to the Governor and the Joint Committee on Government and Finance, which provides a summary of proceedings and actions relevant to the competitive bid process and retail market participation, including, but not limited to:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Total collected licensing and application fees; </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Current cap totals for each utility service territory, and number of customers and associated megawatts participating in each service territory;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A rank-ordered list of customers in the queue for service, if any, including the number of customers and load size; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Total megawatts procuring electricity from a third party, rather than the utility, to demonstrate total avoided generation to serve that load.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to establish the Electric Choice and Competition Act, permitting retail competition for the purchase and sale of electric power for certain non-residential retail customers.</span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

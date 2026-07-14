@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>SB 627 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+sb627 sub1 
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=627">&laquo; Senate Bill 627 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='Senate' data-year='2026' data-billnumber='Bill 627'>
+</div>
+
+<br>
+
+
+
+
+<strong style="font-size:11px;">OTHER VERSIONS</strong> &nbsp;&mdash;&nbsp;
+
+<a href="bills_text.cfm?billdoc=sb627 intr.htm&yr=2026&sesstype=RS&billtype=B&houseorig=S&i=627" title="HTML  - Introduced Version
+ - Senate Bill 627">
+Introduced Version
+</a>&nbsp;|&nbsp;
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=SB 627 - Relating to Build WV Act&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=sb627+sub1.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=S%26i=627"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5E1DB61D{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.csF5B7C975{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;}
+		.csB9803513{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.csC221FD51{color:#000000;background-color:#FFFFFF;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs68EFC440{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs5F28C1DD{color:#212121;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+	</style>
+	<p class="cs709C557D"><span class="cs5E1DB61D">WEST virginia legislature</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 regular session</span></p><p class="cs709C557D"><span class="csC2FEE544">Committee Substitute</span></p><p class="cs709C557D"><span class="csC2FEE544">for</span></p><p class="cs3E63B65"><span class="cs8498B7A6">Senate Bill 627</span></p><p class="cs8BEF69CE"><span class="csADC6E5DB">By Senator Deeds</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Reported January 30, 2026, from the Committee on Economic Development]</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs709C557D"><span class="cs5E1DB61D">&nbsp;</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend and reenact &sect;5B-2L-3 and &sect;5B-2L-16 of the Code of West Virginia, 1931, as amended, relating to the Build WV Act; defining &ldquo;rural area&rdquo;; replacing the project cost with a cap on new tax credit liability; clarifying that the cost cap applies only to new project approvals; allowing credit for smaller projects in rural areas; requiring periodic review and adjustment to reflect demand and usage; and establishing a Build WV Credit Reserve Fund, adjusted annually. </span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="csF5B7C975">ARTICLE 2L. BUILD WV ACT.</span></h2>
+	<h4 class="cs89687900">
+		<span class="csB9803513">&sect;5B-2L-3. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) </span><span class="cs93AB6E8B">General</span><span class="csEF05ACC">. &mdash; &nbsp;</span><a name="Bookmark__a"></a><span class="csEF05ACC">When used in this article, or in the administration of this article, terms defined in this section have the meanings ascribed to them by this section unless a different meaning is clearly required by the context in which the term is used.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) </span><span class="cs93AB6E8B">Terms defined</span><span class="csEF05ACC">. &mdash; &nbsp;As used in this article, unless the context clearly indicates otherwise:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) &ldquo;Agreement&rdquo; means a </span><a name="_Hlk88569520"><span class="csEF05ACC">BUILD WV project agreement</span></a><span class="csEF05ACC"> entered into pursuant to this article, between the Department of Economic Development and an approved company or group of multiple party project participants with respect to a project.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) &ldquo;Approved company&rdquo; means any eligible company approved by the Department of Economic Development pursuant to this article seeking to undertake a project. The Department of Economic Development may certify multiple party projects comprised of more than one approved company, as provided in this article. &ldquo;Approved company&rdquo; means and includes an approved multiple party project participant.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) &ldquo;Approved costs&rdquo; means costs included, as stated herein, and not excluded pursuant to the provisions of this definition, or this article, or any other provision of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) Included costs:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Obligations incurred for labor and to vendors, contractors, subcontractors, builders, suppliers, delivery persons, and material persons in connection with the acquisition, construction, equipping, or installation of a project;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) The costs of acquiring real property or rights in real property and any costs incidental thereto;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) The cost of contract bonds and of insurance of all kinds that may be required or necessary during the course of the acquisition, construction, equipping, or installation of a project which is not paid by the vendor, supplier, delivery person, contractor, or otherwise provided;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) All costs of architectural and engineering services, including, but not limited to: estimates, plans and specifications, preliminary investigations and supervision of construction, installation, as well as for the performance of all the duties required by or consequent to the acquisition, construction, equipping, or installation of a project;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(v) All costs required to be paid under the terms of any contract for the acquisition, construction, equipping, or installation of a project;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vi) All costs required for the installation of utilities, including, but not limited to: water, sewer, sewer treatment, gas, electricity, communications, and off-site construction of utility extensions to the boundaries of the real estate on which the facilities are located, all of which are to be used to improve the economic situation of the approved company or group of multiple party project participants in a manner that allows the approved company or group of multiple party project participants to attract persons; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(vii) All other costs comparable with those described in this subdivision.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) </span><span class="cs93AB6E8B">Excluded costs</span><span class="csEF05ACC">. &mdash; The term &ldquo;approved costs&rdquo; does not include: </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) Any portion of the cost required to be paid for the acquisition, construction, equipping, or installation of a project that is financed with governmental incentives, grants or bonds, other than the exemptions and tax credits allowable under this article. &ldquo;Approved costs&rdquo; does not include any portion of the cost or for which the approved company or group of multiple party project participants elects to qualify for other economic development incentive tax credits authorized under West Virginia law. The exclusion of certain costs of a project under this paragraph does not automatically disqualify the remainder of the costs of the project;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) &nbsp;Any portion of the cost of property or space that is covered by a rehabilitated building tax credit under the provisions </span><a name="_Hlk94188457"><span class="csEF05ACC">of </span></a><a name="_Hlk94185395"><span class="csEF05ACC">&sect;11-21-</span></a><span class="csEF05ACC">8a, &sect;11-21-8b, &sect;11-21-8c, &sect;11-21-8d, &sect;11-21-8e, &sect;11-21-8f, or &sect;11-21-8g of this code or </span><a name="_Hlk94185450"><span class="csEF05ACC">&sect;11-24-</span></a><span class="csEF05ACC">23a, &sect;11-24-23b, &sect;11-24-23c, &sect;11-24-23d, &sect;11-24-23e, &sect;11-24-23f, or &sect;11-24-23g of this code;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iii) Any portion of the cost of property or space that is used, in whole or in part, as a residential timeshare, commercial timeshare, or as part of any similar arrangement; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(iv) Any portion of the cost of property or space that is excluded from certification by the Department of Economic Development by rule or administrative notice.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) &ldquo;Certified BUILD WV district&rdquo; or &ldquo;certified district&rdquo; means a geographic district designated pursuant to this article as an area in which a proposed BUILD WV residential housing project may be approved for certification. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) &ldquo;Certified BUILD WV project&rdquo; or &ldquo;project&rdquo; means BUILD WV project that has received the certification of the Department of Economic Development in accordance with this article, and for which certification remains current and in effect. A BUILD WV project shall be for the construction of residential housing, including new construction or the rehabilitation of existing unoccupied structures.</span></p><p class="cs53FB8D75"><span class="csC221FD51">(6) &ldquo;Common areas&rdquo; means, but is not limited to, lawns, roads, streets, alleys, sidewalks, parks, waterways, driveways, stairways, hallways, lobbies, corridors, sidewalks, parking lots, parking garages, community swimming pools, community laundry facilities, elevators, roofs, maintenance buildings, maintenance facilities, stairways, lobbies, corridors, and other property available for common use by all tenants and groups of tenants and their invitees. Common areas of a certified </span><span class="csEF05ACC">BUILD WV </span><span class="csC221FD51">project are included as certified project property.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) &ldquo;Corporation&rdquo; or &ldquo;C corporation&rdquo; means a corporation that is taxed separately from its owners for federal income tax purposes under subchapter C of the Internal Revenue Code and includes a limited liability company, partnership, or other entity that is treated as a corporation for federal income tax purposes. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) &ldquo;</span><span class="csC221FD51">Department of Economic Development</span><span class="csEF05ACC">&rdquo; means the West Virginia Department of Economic Development established under the provisions of &sect;5B-2-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) &ldquo;Eligible company&rdquo; means any corporation, limited liability company, partnership, limited liability partnership, sole proprietorship, business trust, joint venture, or any other entity operating or intending to operate a certified project, whether owned or leased, within the state that meets the standards required by the </span><span class="csC221FD51">Department of Economic Development for certification under this article</span><span class="csEF05ACC">. An eligible company may operate, or intend to operate, directly or indirectly through a lessee. The Department of Economic Development may certify multiple party projects comprised of more than one eligible company, as provided in this article.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) &ldquo;</span><span class="cs93AB6E8B">Eligible taxpayer</span><span class="csEF05ACC">&rdquo; &mdash; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(A) For purposes of the property value adjustment tax credit, &ldquo;eligible taxpayer&rdquo; means any approved company:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(i) That has made qualified investment in certified BUILD WV project property or any group of multiple party project participants that has made qualified investment in certified BUILD WV project property; or</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(ii) That is subject to the taxes imposed under &sect;11-21-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. or &sect;11-24-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code, or the owners, interest holders, partners, S Corporation shareholders, or other owners of an approved company, that receive flow-through income from the approved company, that are subject to the taxes imposed under &sect;11-21-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. or &sect;11-24-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(B) &ldquo;Eligible taxpayer&rdquo; also means and includes those members of an affiliated group of taxpayers engaged in a unitary business with an approved company or group of multiple party project participants, in which one or more members of the affiliated group is a person subject to the tax imposed under &sect;11-24-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code: </span><a name="_Hlk88470789"><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That application of the property value adjustment tax credit against the tax imposed under &sect;11-24-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code is subject to the provisions of &sect;11-24-13a(g) and &sect;11-24-13c(b)(2) of this code, and is limited to the single entity, from among the affiliated group of taxpayers, that earned entitlement to the credit. Credit may apply solely against that single entity&rsquo;s proportionate share of taxable income. No tax credit earned by one member of the affiliated group may be used, in whole or in part, by any other member of the affiliated group.</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) &ldquo;Final approval&rdquo; or &ldquo;certification&rdquo; means the action taken by the Secretary of the Department of Economic Development to certify a BUILD WV project.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(12) &ldquo;Flow-through entity&rdquo;, &ldquo;conduit entity&rdquo;, or &ldquo;pass through entity&rdquo; means an S corporation, partnership, limited partnership, limited liability partnership, or limited liability company. The term &ldquo;Flow-through entity&rdquo;, &ldquo;conduit entity&rdquo;, or &ldquo;pass through entity&rdquo; includes a publicly traded partnership as that term is defined in section 7704 of the Internal Revenue Code that has equity securities registered with the securities and exchange commission under section 12 of title I of the Securities Exchange Act of 1934, 15 U.S.C. &sect; 78l: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That, a partnership, limited liability company, or other entity or organization that is treated as a C corporation for federal income tax purposes shall be subject to income allocation, apportionment, and taxation under &sect;5B-24-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(13) &ldquo;Infrastructure&rdquo; means, and is limited to, the real and tangible personal property located in a project that is directly used in, and necessary for, providing broadband internet access, electricity, water, natural gas, sewer service, sewage treatment service, rubbish disposal, and other utility services for residential units within a certified BUILD WV project. An electrical charging facility for charging electrical motor vehicles, or electrical hybrid motor vehicles of certified BUILD WV project residents may be treated as an infrastructure component of a certified BUILD WV project: </span><span class="cs93AB6E8B">Provided</span><span class="csEF05ACC">, That in no case shall any property or space that is used, in whole or in part, as a gasoline filling station or other motor vehicle fueling station constitute certified project property, or any part thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(14) &ldquo;Natural person&rdquo; or &ldquo;individual&rdquo; means a human being. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(15) &ldquo;Partner&rdquo; includes a partner in a partnership, and a member in a syndicate, group, pool, joint venture, or organization.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(16) &ldquo;Partnership&rdquo; means and includes a syndicate, group, pool, joint venture, or other unincorporated organization through or by means of which any business, financial operation, or venture is carried on and which is not a trust or estate, a corporation, or a sole proprietorship.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(17) &ldquo;Person&rdquo; means and includes any natural person, corporation, limited liability company, flow-through entity, or partnership.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(18) &quot;Rural area&quot; means any county or municipality that is not part of a Metropolitan Statistical Area as defined by the United States Office of Management and Budget, or that meets other rural characteristics as determined by the state&rsquo;s Department of Economic Development, including but not limited to low population density, distance from urban centers, or housing scarcity.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(18)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(19)</span><span class="csEF05ACC"> &ldquo;Taxpayer&rdquo; means any person subject to the taxes imposed under &sect;11-21-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. or &sect;11-24-1 </span><span class="cs93AB6E8B">et seq</span><span class="csEF05ACC">. of this code.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(19)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(20)</span><span class="csEF05ACC"> &ldquo;Tax year&rdquo; or &ldquo;taxable year&rdquo; means the tax year of the taxpayer for federal income tax purposes.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">(20)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(21)</span><span class="csEF05ACC"> &ldquo;Timeshare&rdquo; means an agreement or arrangement in which two or more parties share the ownership of, or right to use, property (e.g. an apartment or condominium) that authorizes occupation by each party, typically for periods of less than a year. &ldquo;Timeshare&rdquo; includes a deeded contract providing such an arrangement and a fractional ownership agreement or arrangement. &ldquo;Timeshare&rdquo; means and includes property that the subject of any such agreement or arrangement. </span></p><p class="cs53FB8D75"><span class="cs68EFC440">(21)</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">(22)</span><span class="csEF05ACC"> &ldquo;Unitary business&rdquo; means a unitary business as defined in &sect;11-24-3a of this code.</span></p><h4 class="cs7F45F1B">
+		<span class="csB9803513">&sect;5B-2L-16. Project application; evaluation standards; approval of projects.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">(a) Each eligible company or group of multiple party project participants that seeks certification of a proposed project as a certified BUILD WV project </span><span class="cs68EFC440">must</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">shall</span><span class="csEF05ACC"> file a written application for approval and certification of the project with the Department of Economic Development.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(b) With respect to each eligible company or group of multiple party project participants making an application to the Department of Economic Development seeking certification of a proposed project as a certified BUILD WV project the Department of Economic Development shall make inquiries and request documentation, including a completed application, from the applicant that shall include the following: &nbsp;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) A description and location of the proposed project; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) Capital and other anticipated expenditures for the project and the sources of funding therefor; </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The anticipated employment, revenues, and expenses generated by the project; and </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Anything else determined necessary by the Department of Economic Development. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(c) </span><span class="cs68EFC440">The aggregate sum of approved costs for all projects for any fiscal year shall not exceed $150 million. Any project application submitted for certification in the fiscal year after the sum of $150 million has been reached shall not be approved or certified. Notwithstanding any other provision of this code, for any fiscal year, </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The aggregate amount of property value adjustment tax credits authorized for award under this article may not exceed $2 million in new project approvals per fiscal year, based on the estimated date of project completion as declared by the applicant in their approved certification. This cap shall apply only to credits authorized for projects first approved during the fiscal year in question and may not include credits previously allocated to projects approved in prior years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">At the time of application, each project shall provide an anticipated date of completion. The Department of Economic Development shall allocate a tax credit reservation for that project to the fiscal year of estimated completion and may not approve additional new projects for that fiscal year once the estimated cumulative credit liability reaches $2 million.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The estimated property value adjustment tax credit shall be calculated at the time of project approval using the credit formula outlined in &sect;5B-2L-10 of this code. For the purposes of estimating the property value adjustment tax credit under &sect;5B-2L-10 of this code, the value used for the statewide average Class III property tax rate shall be the average of the published statewide Class III property tax rates for the three calendar years immediately preceding the date of project approval. This average shall be used solely for administrative estimation and fiscal cap compliance purposes and may not affect the final credit awarded, which shall still be calculated using the </span><span class="cs5F28C1DD">actual Class </span><span class="cs46AE26E6">III rate for the year in which the project is completed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Department may allow applicants to amend the estimated completion year prior to project completion, subject to availability under the revised fiscal year&rsquo;s credit cap.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The fiscal cap established in this subsection shall be reviewed and revised, as appropriate, by the Department of Economic Development at least once every five years, based on program participation, demonstrated demand, and actual usage trends across approved projects.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">A Build WV Credit Reserve Fund shall be created and maintained in the State Treasury. The fund shall be used exclusively to support the refundable portion of the property value adjustment tax credits authorized under &sect;5B-2L-11 of this code.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Reserve Fund shall be capitalized initially at $2 million and replenished annually to ensure availability for refund claims associated with completed Build WV projects. The Department of Economic Development shall determine an appropriate funding level each year based on the number of completed projects, anticipated claims, and historical refund utilization trends.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">The Department shall manage the allocation and oversight of the Reserve Fund and shall publish an annual report outlining the fund&rsquo;s balance, projected obligations, and any potential shortfall risk. The Legislature may appropriate additional funds as needed to address increases in program participation or actual refund demands.</span></p><p class="cs53FB8D75"><span class="cs68EFC440">the</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">The</span><span class="csEF05ACC"> Secretary of the Department of Economic Development may not approve any single proposed project as a certified BUILD WV project for the fiscal year unless the proposed project has an aggregate sum of approved costs that is at least $3 million or the proposed project includes at least six residential units or houses.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">However, a project located in a designated rural area may be approved by the Secretary with aggregate certified costs below $3 million or fewer than six residential units, if the project otherwise meets the requirements of subsection (d) of this section and demonstrates a substantial positive economic or community impact.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(d) The Secretary of the Department of Economic Development, within 60 days following receipt of an application or receipt of any additional information requested by the Department of Economic Development respecting the application, whichever is later, shall act to grant or not to grant certification of the project, based on the following criteria:</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) The project will have approved costs of at least $3 million or includes at least six residential units or houses; </span><span class="cs46AE26E6">except that, for projects located in a rural area as defined in &sect;5B-2L-3 of this code or as otherwise designated by the Secretary, these thresholds may be reduced.</span></p><p class="cs53FB8D75"><a name="_Hlk92287218"><span class="csEF05ACC">(2) The project will have a significant and positive economic impact on the state;</span></a></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) The quality of the proposed project and how it addresses economic problems in the area in which the project will be located;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) Whether there is substantial and credible evidence that the project is likely to be started and completed in a timely fashion;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) Whether the project will, directly or indirectly, improve the opportunities in the area where the project will be located for the successful establishment or expansion of other commercial businesses;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(6) Whether the project will, directly or indirectly, assist in the creation of additional employment opportunities in the area where the project will be located;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(7) Whether the project helps to diversify the local economy;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(8) Whether the project is consistent with the goals of this article;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(9) Whether the project is economically and fiscally sound using recognized business standards of finance and accounting;</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(10) Whether the proposed project demonstrates that the project will meet the immediate future needs of the area; and</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(11) The ability of the eligible company or group of multiple party project participants to carry out the project.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(e) Exclusions. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(1) In no case </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> any property or space that is used, in whole or in part, as a residential timeshare, commercial timeshare, or as part of any similar arrangement, constitute certified project property, or any part thereof. </span></p><p class="cs53FB8D75"><span class="csEF05ACC">(2) In no case </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> any property or space that is used in whole or in part as an industrial or manufacturing operation, constitute certified project property, or any part thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(3) In no case </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> any property or space that is used in whole or in part as a warehouse, distribution center, telephone call center, or telemarketing operation, constitute certified project property, or any part thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(4) In no case </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> any property or space that is used, in whole or in part, as an airport constitute certified project property, or any part thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(5) In no case </span><span class="cs68EFC440">shall</span><span class="csEF05ACC"> </span><span class="cs46AE26E6">may</span><span class="csEF05ACC"> any property or space that is used primarily for business activity, business, or other operation or activity excluded from certification by the Department of Economic Development by rule or administrative notice, constitute certified project property, or any part thereof.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(f) The Department of Economic Development may establish additional criteria for consideration when evaluating and approving applications for certified BUILD WV housing projects.</span></p><p class="cs53FB8D75"><span class="csEF05ACC">(g) The decision by the Secretary of the Department of Economic Development as to certification of a proposed project, refusal to certify a proposed project, decertification, or revocation of certification of a project is final.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>

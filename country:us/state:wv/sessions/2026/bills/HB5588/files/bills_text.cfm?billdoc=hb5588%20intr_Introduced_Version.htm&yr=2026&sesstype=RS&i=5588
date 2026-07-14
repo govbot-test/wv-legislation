@@ -1,0 +1,597 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/js/md5.js"></script>
+<script type="text/javascript" src="/js/bpopup-0.11.0.min.js"></script>
+<style>
+.keytext{
+	display:hidden;
+	font-size:13px;
+	margin: 0 0 20px;
+}
+</style>
+
+
+
+<title>HB 5588 Text</title>
+<meta name="description" content="Bill Status - Bill Text">
+<meta name="keywords" content="Legislation, Bill, bill text, West Virginia Bills, West Virginia Bill, West Virginia Legislature, West Virginia, Legislature, WV">
+<LINK REL="SHORTCUT ICON" HREF="../images/home_link.gif">
+
+<style type="text/css">
+	body,p {margin: 10px 0 0 15px !important;
+	padding: 0px !important;
+	font-size: 100% !important;
+	font: inherit !important;
+	font-family: Arial, Helvetica, sans-serif !important;
+	vertical-align: baseline !important;
+}
+#pod-icon{
+padding: 5px 5px 12px 10px;
+width: 460px;
+border: 1px solid black;
+border-radius: 10px;
+margin-top:8px;
+}
+#pod-popup{
+    background-color:#fff;
+    border-radius:5px;
+    color:#000;
+    display:none;
+    padding:20px;
+    min-width:400px;
+    min-height: 180px;
+}
+#pod-popup h3{padding: 0px 10px 10px 0px}
+.pod-meta{width:400px;font-size:15px;background-color:#eee;padding:5px;margin:0 0 4px;float:left}
+.b-close{
+    cursor:pointer;
+    position:absolute;
+    right:10px;
+    top:5px;
+}
+.b-close img{
+width: 40px;
+height: auto;
+}
+ span {font-family: Arial, Helvetica, sans-serif !important;}
+
+ p {text-indent: 15px !important;
+ line-height:24px !important;}
+ .meta-input{
+ float:right;
+ width:300px;
+ font-size:14px;
+ }
+ #pod-minus{
+ margin-left:5px!important;
+ width:40px;height:auto
+ }
+ #pod-plus{
+ margin:10px 0 0 0;
+ width:40px;
+ height:auto
+ }
+ #pod-count{
+ font-size:15px;
+ padding:6px;
+ }
+ #pod-ok{
+ width:28px;
+ height:auto;
+ margin-top:5px;
+ }
+ #pod-go{
+ float:right;
+ }
+ .pod-input-error{
+ border:2px solid red;
+ }
+ .pod-row{
+ vertical-align:middle;
+ height:24px;
+ padding:0;
+ margin:2px 0 4px;
+ }
+ .del-pod{
+ float:left;
+ margin:0 4px 0}
+</style>
+
+<link rel="stylesheet" type="text/css" href="../styletest1.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../stylebillstatus.css" media="screen">
+<link rel="stylesheet" type="text/css" href="../printbstat.css" media="print">
+
+
+<nav><meta name="viewport" content="width=device-width, initial-scale=1">
+<script async src="https://cse.google.com/cse.js?cx=5c3144a0752ec82d3"></script>
+<script type="text/javascript">
+
+function _autoLayers() {
+  var g,b,k,f,args=_autoLayers.arguments;a=parseInt(args[0]);if(isNaN(a))a=0;
+  if(!document.setc){c=new Array();document.setc=true;for(var u=0;u<10;u++){
+  c[u]=new Array();}}for(k=0;k<c[a].length;k++){if((g=MM_findObj(c[a][k]))!=null){
+  b=(document.layers)?g:g.style;b.visibility="hidden";}}for(k=1;k<args.length;k++){
+  if((g=MM_findObj(args[k]))!=null){b=(document.layers)?g:g.style;b.visibility="visible";f=false;
+  for(var j=0;j<c[a].length;j++){if(args[k]==c[a][j]) {f=true;}}
+  if(!f){c[a][c[a].length++]=args[k];}}}
+}
+
+function _hideDiv(evt) {
+  var b,relT,mT=false;
+  if(document.layers){b=evt.target;if(b.aHide){
+    b.visibility="hidden";}else{routeEvent(evt);}
+  }else if(document.all&&!window.opera){b=event.srcElement;
+    while(b!=null){if(b.tagName=="DIV" && b.ahD){mT=true;break;}b=b.parentElement;}
+    if(!b.contains(event.toElement)){b.style.visibility="hidden";}
+  }else if(document.getElementById){b=evt.currentTarget;relT=evt.relatedTarget;
+    while(relT!=null){if(b==relT){mT=true;break;}
+    relT=relT.parentNode;}if(!mT){b.style.visibility="hidden";}}
+}
+
+function _autoHide() {
+  var i,g,args=_autoHide.arguments;
+  for(i=0;i<args.length;i++){if((g=MM_findObj(args[i]))!=null){
+    g.aHide=true;if(document.layers){
+    g.captureEvents(Event.MOUSEOUT);}g.onmouseout=_hideDiv;g.ahD=true;}}
+}
+
+function MM_findObj(n, d) {
+  var p,i,x; if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() {
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+  if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function hideAllSubmenus() {
+  var ids = ['subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8'];
+  ids.forEach(function(id) {
+    var sub = document.getElementById(id);
+    if (sub) {
+      sub.style.visibility = 'hidden';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '-1');
+      });
+    }
+  });
+  document.querySelectorAll('#trigger1 a,#trigger2 a,#trigger3 a,#trigger4 a,#trigger5 a,#trigger6 a,#trigger7 a,#trigger8 a').forEach(function(t) {
+    t.setAttribute('aria-expanded', 'false');
+  });
+}
+
+function openMenu(triggerId, subsId) {
+  hideAllSubmenus();
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  trigger.setAttribute('aria-expanded', 'true');
+  var sub = document.getElementById(subsId);
+  if (sub) {
+    sub.style.visibility = 'visible';
+    sub.querySelectorAll('a').forEach(function(a) {
+      a.setAttribute('tabindex', '0');
+    });
+  }
+}
+
+function toggleMenu(triggerId, subsId) {
+  var trigger = document.querySelector('#' + triggerId + ' a');
+  var isExpanded = trigger.getAttribute('aria-expanded') === 'true';
+  hideAllSubmenus();
+  if (!isExpanded) {
+    trigger.setAttribute('aria-expanded', 'true');
+    var sub = document.getElementById(subsId);
+    if (sub) {
+      sub.style.visibility = 'visible';
+      sub.querySelectorAll('a').forEach(function(a) {
+        a.setAttribute('tabindex', '0');
+      });
+    }
+  }
+}
+
+function init() {
+  _autoHide('subs1','subs2','subs3','subs4','subs5','subs6','subs7','subs8');
+  document.querySelectorAll('.submenus a').forEach(function(a) {
+    a.setAttribute('tabindex', '-1');
+  });
+}
+
+window.onload = init;
+
+document.addEventListener('focusin', function(e) {
+  var triggerIds = ['trigger1','trigger2','trigger3','trigger4','trigger5','trigger6','trigger7','trigger8'];
+  var subIds     = ['subs1',  'subs2',  'subs3',  'subs4',  'subs5',  'subs6',  'subs7',  'subs8'];
+
+  // If focus landed on a trigger link â€” open that menu
+  for (var i = 0; i < triggerIds.length; i++) {
+    var triggerLink = document.querySelector('#' + triggerIds[i] + ' a');
+    if (e.target === triggerLink) {
+      openMenu(triggerIds[i], subIds[i]);
+      return;
+    }
+  }
+
+  // If focus is still inside a submenu â€” leave it alone
+  var inSub = e.target.closest('#subs1,#subs2,#subs3,#subs4,#subs5,#subs6,#subs7,#subs8');
+  if (inSub) return;
+
+  // Focus is outside nav entirely â€” close everything
+  hideAllSubmenus();
+});
+
+</script>
+
+
+<!-- Google tag (gtag.js) edited 12-11-2023 JDT//DO NOT TOUCH-->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-EED2LTLF4G "></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-EED2LTLF4G ');
+</script>
+<!-- edited 12-11-2023 JDT//DO NOT TOUCH-->
+
+</head>
+<body>
+<div id="navskip"><a href="#main" name="begin">skip navigation</a></div>
+
+<div id="mainsearch">
+
+	
+		<div class="gcse-searchbox-only" data-resultsUrl="https://www.wvlegislature.gov/search.cfm" data-enableHistory="true"></div>
+
+</div>
+
+
+<div id="logo"><img src="/images/header.png" usemap="#m_header" alt="West Virginia Legislature" name="header" width="878" height="80" onMouseOver="_autoLayers(0)" >
+<map name="m_header"><area shape="rect" coords="126,10,515,53" href="/index.cfm" alt="Return to West Virginia Legislature homepage"></map></div>
+
+<div id="trigger1"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger1','subs1'); return false;}" onMouseOver="toggleMenu('trigger1','subs1')" onclick="return false;">SENATE</a></div>
+<div id="subs1" class="submenus">
+<a href="/Senate1/president.cfm">PRESIDENT</a>
+<a href="/Senate1/roster.cfm">SENATORS</a>
+<a href="/committees/senate/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/Senate1/clerk.cfm">SENATE CLERK</a>
+<a href="/Senate1/rules.cfm">SENATE RULES</a>
+</div>
+
+<div id="trigger2"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger2','subs2'); return false;}" onMouseOver="toggleMenu('trigger2','subs2')" onclick="return false;">HOUSE</a></div>
+
+<div id="subs2" class="submenus">
+<a href="/House/speaker.cfm">SPEAKER</a>
+<a href="/House/roster.cfm">DELEGATES</a>
+<a href="/committees/house/main.cfm">COMMITTEES</a>
+<a href="/live.cfm">VIDEO/AUDIO</a>
+<a href="/redistricting.cfm">DISTRICT MAPS</a>
+<a href="/House/clerk.cfm">HOUSE CLERK</a>
+<a href="/House/rules.cfm">HOUSE RULES</a>
+<a href="//house.wvlegislature.gov/">HOUSE STAFF</a>
+</div>
+
+<div id="trigger3"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger3','subs3'); return false;}" onMouseOver="toggleMenu('trigger3','subs3')" onclick="return false;">JOINT</a></div>
+
+<div id="subs3" class="submenus">
+<a href="/committees/interims/interims.cfm">INTERIM COMMITTEES</a>
+<a href="/Joint/administrator.cfm">LEGISLATIVE ADMINISTRATOR</a>
+<a href="/Joint/legis_services.cfm">LEGISLATIVE SERVICES DIVISION</a>
+<a href="/Joint/legisinfo.cfm">PUBLIC INFORMATION</a>
+<a href="/Joint/computercenter.cfm">LEGISLATIVE AUTOMATED SYSTEMS DIVISION</a>
+<a href="/Joint/legislative-auditor.cfm">LEGISLATIVE AUDITOR'S OFFICE</a>
+<a href="/Joint/perd.cfm">PERFORMANCE EVALUATION & RESEARCH DIVISION</a>
+<a href="/Joint/postaudit.cfm">POST AUDIT DIVISION</a>
+<a href="/Joint/budget.cfm">BUDGET DIVISION</a>
+<a href="/Joint/fiscal-regulatory.cfm">REGULATORY AND FISCAL AFFAIRS DIVISION</a>
+<a href="//claims.wvlegislature.gov/">CLAIMS COMMISSION</a>
+<a href="/Joint/victims.cfm">CRIME VICTIMS</a>
+<a href="/Joint/rule_making.cfm">RULE-MAKING REVIEW</a>
+<a href="/Joint/csi.cfm">SPECIAL INVESTIGATIONS</a>
+<a href="/Interims/judicial_comp.cfm">JUDICIAL COMP. COMMISSION</a>
+<a href="/Joint/rules.cfm">JOINT RULES</a>
+<a href="//staff.wvlegislature.gov/"><strong>STAFF INFO</strong></a></div>
+
+
+<div id="trigger4"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger4','subs4'); return false;}" onMouseOver="toggleMenu('trigger4','subs4')" onclick="return false;">BILL STATUS</a></div>
+
+<div id="subs4" class="submenus">
+<a href="/Bill_Status/bill_status.cfm">BILL STATUS</a>
+<a href="/bill-track/login.cfm">BILL TRACKING</a></div>
+
+<div id="trigger5"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger5','subs5'); return false;}" onMouseOver="toggleMenu('trigger5','subs5')" onclick="return false;">STATE LAW</a></div>
+
+<div id="subs5" class="submenus">
+
+<a href="//code.wvlegislature.gov">WEST VIRGINIA CODE</a>
+<a href="/Educational/publications.cfm#acts">ACTS OF THE LEGISLATURE</a>
+<a href="/Educational/publications/WVCode1931.cfm">CODE OF 1931</a>
+<a href="//home.wvlegislature.gov/constitution-of-west-virginia/">WV CONSTITUTION</a>
+<a href="//home.wvlegislature.gov/constitution-of-the-united-states/">US CONSTITUTION</a>
+</div>
+
+<div id="trigger6"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger6','subs6'); return false;}" onMouseOver="toggleMenu('trigger6','subs6')" onclick="return false;">REPORTS</a></div>
+
+<div id="subs6" class="submenus">
+<a href="/Reports/Agency_Reports/agencylist_all.cfm">AGENCY REPORTS</a>
+<a href="/SAGA/Agency.cfm">AGENCY GRANT AWARDS</a>
+<a href="/Joint/PERD/reports.cfm">PERFORMANCE EVALUATIONS</a>
+<a href="/Joint/Postaudit/reports.cfm">POST AUDITS</a>
+
+</div>
+
+<div id="trigger7"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger7','subs7'); return false;}" onMouseOver="toggleMenu('trigger7','subs7')" onclick="return false;">EDUCATIONAL</a></div>
+
+<div id="subs7" class="submenus">
+<a href="/Educational/citizens/guide.cfm">CITIZEN&#8217;S GUIDE</a>
+<a href="/Educational/internship.cfm">INTERNSHIP PROGRAM</a>
+<a href="//home.wvlegislature.gov/page-program/">PAGE PROGRAM</a>
+
+<a href="/Educational/publications.cfm">PUBLICATIONS</a>
+<a href="/photos" title="Visit the Legislature's Capitol Photo Gallery">PHOTO GALLERY</a>
+<a href="/Educational/Capitol_History/cap.cfm">CAPITOL HISTORY</a>
+<a href="/Educational/Bill_Becomes_Law/Bill_Becomes_Law.cfm">HOW A BILL BECOMES LAW</a>
+<!--<a href="/Educational/Kids_Page/kids.html">Kids&#8217; Page</a>--></div>
+
+<div id="trigger8"><a href="#" aria-haspopup="true" aria-expanded="false" onKeyDown="if(event.key==='Enter'||event.key===' '){toggleMenu('trigger8','subs8'); return false;}" onMouseOver="toggleMenu('trigger8','subs8')" onclick="return false;">CONTACT</a></div>
+
+<div id="subs8" class="submenus">
+<a href="/Senate1/roster.cfm">SENATE ROSTER</a>
+<a href="/House/roster.cfm">HOUSE ROSTER</a>
+<!--<a href="/Contact/capmail.cfm">All Members List</a>-->
+<a href="/Joint/legisinfo.cfm">PUBLIC INFO.</a>
+<a href="/News_release/news.cfm">NEWS RELEASES</a>
+<a href="/Contact/Links/links.cfm">HELPFUL LINKS</a></div>
+
+<div id="triggerhome">
+<img name="Home" src="/images/Home.gif" usemap="#m_Home" alt="home" height="21" width="26"></div>
+
+<map name="m_Home">
+<area shape="rect" coords="0,0,26,21" href="/index.cfm" alt="home" onMouseOut="MM_swapImage('Home','','/images/Home.gif',1);"  onMouseOver="MM_swapImage('Home','','/images/Home_f2.gif',1);_autoLayers(0)">
+</map>
+
+<a name="main" id="main"></a>
+</nav>
+<script>
+(function () {
+  var ua = navigator.userAgent;
+  if (ua.indexOf("Firefox") !== -1 && ua.indexOf("Windows") !== -1) {
+    document.documentElement.className += " windows-firefox";
+  }
+})();
+</script>
+
+<main id="wrapper">
+
+<span id='billversion' class="boldtxthead">
+Introduced Version
+
+</span>
+
+
+
+
+<span class="billemail">
+
+
+<a href="bills_history.cfm?year=2026&sessiontype=RS&input=5588">&laquo; House Bill 5588 History</a>
+
+</span><br>
+
+<div class='noprint' id='pod-icon' data-qty='0' data-version='' data-remoteip='172.184.210.163' data-billchamber='House' data-year='2026' data-billnumber='Bill 5588'>
+</div>
+
+<br>
+
+
+
+
+
+<span class="billemail">
+
+
+ <!--EMAIL-->&nbsp;|&nbsp;<a href="mailto:?subject=HB 5588 - Establish a regulated framework for the medical use of psilocybin to treat post-traumatic stress disorder (PTSD)&amp;body=https://www.wvlegislature.gov/bill_status/bills_text.cfm?billdoc=hb5588+intr.htm%26yr=2026%26sesstype=RS%26billtype=B%26houseorig=H%26i=5588"><img src="../images/mail_icon.gif"> Email</a><!--EMAIL-->
+
+</span>
+
+
+
+
+<hr style="width:880px; margin-left:0; border:none; border-top:1px solid #000;">
+
+
+
+ <div class='keytext'>Key: <span style='color:green'>Green</span> = existing Code. <span style='color:red'>Red</span> = new code to be enacted</div>
+<div class='textcontainer'>
+
+
+
+
+
+	<style type="text/css">
+		.cs709C557D{text-align:center;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs8498B7A6{color:#000000;background-color:transparent;font-family:Arial;font-size:22pt;font-weight:bold;font-style:normal;}
+		.cs1CE9D70E{text-align:center;text-indent:0pt;margin:0pt 0pt 48pt 0pt;line-height:2}
+		.csB0C9F1E0{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;text-transform:uppercase;}
+		.csC2FEE544{color:#000000;background-color:transparent;font-family:Arial;font-size:18pt;font-weight:bold;font-style:normal;}
+		.cs3E63B65{text-align:center;text-indent:0pt;margin:0pt 0pt 18pt 0pt;line-height:2}
+		.csFF933113{text-align:center;text-indent:0pt;margin:0pt 90pt 6pt 90pt;line-height:2}
+		.csADC6E5DB{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;font-variant:small-caps;}
+		.cs8BEF69CE{text-align:center;text-indent:0pt;margin:0pt 90pt 0pt 90pt;line-height:2}
+		.cs7B75DFFE{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:normal;font-style:normal;}
+		.cs29F66C3F{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2;page-break-before:always}
+		.csEF05ACC{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;}
+		.cs9E05ADC9{color:#4472C4;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: line-through;}
+		.cs63FD752D{text-align:left;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs93AB6E8B{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;}
+		.cs89687900{text-align:justify;text-indent:-36pt;margin:0pt 0pt 0pt 36pt;line-height:2}
+		.cs456817A0{color:#000000;background-color:transparent;font-family:Arial;font-size:12pt;font-weight:bold;font-style:normal;text-decoration: underline;text-transform:uppercase;}
+		.csF3C8A5A3{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:bold;font-style:normal;text-decoration: underline;}
+		.cs53FB8D75{text-align:justify;text-indent:36pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs46AE26E6{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:normal;text-decoration: underline;}
+		.cs7F45F1B{text-align:justify;text-indent:0pt;margin:0pt 0pt 0pt 0pt;line-height:2}
+		.cs1489E706{color:#000000;background-color:transparent;font-family:Arial;font-size:11pt;font-weight:normal;font-style:italic;text-decoration: underline;}
+		.cs637BA255{text-align:justify;text-indent:0pt;margin:0pt 36pt 11pt 36pt}
+		.cs7FA9C667{color:#000000;background-color:transparent;font-family:Arial;font-size:10pt;font-weight:normal;font-style:normal;}
+	</style>
+	<p class="cs709C557D"><span class="cs8498B7A6">WEST VIRGINIA LEGISLATURE</span></p><p class="cs1CE9D70E"><span class="csB0C9F1E0">2026 </span><span class="csC2FEE544">REGULAR SESSION</span></p><p class="cs709C557D"><span class="csC2FEE544">Introduced</span></p><p class="cs3E63B65"><span class="cs8498B7A6">House Bill 5588</span></p><p class="csFF933113"><span class="csADC6E5DB">By Delegates Hillenbrand, Worrell, and Ridenour</span></p><p class="cs8BEF69CE"><span class="cs7B75DFFE">[Introduced February 16, 2026; referred to the Committee on Health and Human Resources]</span></p><p class="cs29F66C3F"><span class="csEF05ACC">A BILL to amend the Code of West Virginia, 1931, as amended, by adding </span><span class="cs9E05ADC9">thereto</span><span class="csEF05ACC"> a new article, designated </span><a name="_Hlk221106284"></a><a name="_Hlk221106310"></a><a name="_Hlk221106357"></a><a name="_Hlk221106318"><span class="csEF05ACC">&sect;16-67-1, &sect;16-67-2, &sect;16-67-3, &sect;16-67-4, &sect;16-67-5, &sect;16-67-6, &sect;16-67-7, &sect;16-67-8, &sect;16-67-9, &sect;16-67-10, &sect;16-67-11, &sect;16-67-12, &sect;16-67-13, &sect;16-67-14, &sect;16-67-15, &sect;16-67-16, &sect;16-67-17, &sect;16-67-18, &sect;16-67-19, &sect;16-67-20, &sect;16-67-21, &sect;16-67-22, &sect;16-67-23, &sect;16-67-24, &sect;16-67-25, &sect;16-67-26, &sect;16-67-27, &sect;16-67-28, &sect;16-67-29, &sect;16-67-30, &sect;16-67-31, &sect;16-67-32, &sect;16-67-33, &sect;16-67-34, </span></a><a name="_Hlk221106484"><span class="csEF05ACC">&sect;16-67-35, &sect;16-67-36</span></a><span class="csEF05ACC">, &nbsp;&sect;16-67-37, and &sect;16-67-38, relating to adopting the Therapeutic Psilocybin Act; establishing legislative findings; creating a short title; establishing a purpose; establishing general provisions; defining terms; providing for applicability; creating medical use of psilocybin program; requiring psilocybin production establishments and providers to maintain inventory control systems; providing notice to employees; establishing psilocybin production establishment licensing board; requiring licenses for psilocybin production; requiring criminal background checks for psilocybin production, establishment, owners and directors; providing process for license renewal; requiring applicants to have an operating plan that needs certain requirements; establishing requirements for psilocybin, production, establishment, agent; establishing operation requirements for psilocybin production, establishments; providing inspection requirements; creating limitations in advertising for psilocybin production establishments; creating requirements for psilocybin transportation; creating requirements for disposal of psilocybin; creating requirements for psilocybin cultivation facilities; requiring independent psilocybin, testing laboratory to test product; requiring inspections for independent psilocybin, testing laboratories; creating a psilocybin electronic verification system; requiring the department to register individuals who provide medical psilocybin treatment; establishing standard of care for therapy providers who recommend or administer psilocybin treatment; establishing that providers are not liable in certain circumstances; providing that the use of psilocybin may not be used to discriminate against a patient; requiring insurance to cover psilocybin treatment; establishing that act should not be construed to affect dispensing of product approved by the Food and Drug Administration; requiring individuals to be registered by the department to be a qualified medical psilocybin therapist; requiring registration with the department to be a qualified therapy provider agent; providing reporting; providing for enforcement of article; authorizing rulemaking; creating presumption that contracts related to psilocybin treatment be enforceable; and establishing the department conduct a study regarding use of psilocybin compounds in the treatment of medical conditions.</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">Be it enacted by the Legislature of West Virginia:</span></p><p class="cs63FD752D"><span class="cs93AB6E8B">&nbsp;</span></p><h2 class="cs89687900">
+		<span class="cs456817A0">Article. 67. </span><a name="_Hlk221107048"><span class="cs456817A0">The Therapeutic Psilocybin Act For Veterans And First Responders</span></a><span class="cs456817A0">. </span></h2>
+	<h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-1. Legislative Findings.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Post-traumatic stress disorder (PTSD) is a severe mental health condition with limited effective treatments, as standard therapies like Selective Serotonin Reuptake Inhibitors and psychotherapy have high dropout rates and limited efficacy.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) Psilocybin, a naturally occurring psychedelic, shows promise in treating PTSD by promoting neuroplasticity, reducing emotional avoidance, and supporting emotional processing and self-compassion.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Animal studies demonstrate psilocybin&rsquo;s ability to reduce fear responses and stimulate neuroplasticity, suggesting efficacy for trauma-related disorders.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Psilocybin&rsquo;s rapid and sustained effects on anxiety and depression in cancer patients suggest broader potential to treat other psychiatric conditions;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Preliminary clinical studies have found psilocybin-assisted therapy to be safe, well-tolerated, and associated with clinically meaningful reductions in PTSD symptoms and improvements in mental health outcomes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) Trusted institutions, including the Department of Veterans Affairs, are actively supporting and investing in research on psychedelic-assisted therapies, including psilocybin, for PTSD and related mental health conditions.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) Nonprofit organizations that facilitate thousands of veterans traveling to legal psilocybin retreats in Oregon or other countries have released anecdotal evidence and observational studies reporting substantial improvements in PTSD symptoms, depression, anxiety, sleep, and quality of life.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Regulated psilocybin-assisted therapy offers a promising and safe treatment option to improve PTSD outcomes and address gaps in current treatments.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-2. Short Title.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This act may be cited as the &quot;Therapeutic Psilocybin Act.&quot;</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-3. Purpose.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The purpose of the Therapeutic Psilocybin Act is to allow the beneficial use of psilocybin in a regulated system for alleviating qualified medical conditions.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-4. General Provisions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">A person may knowingly or intentionally recommend, possess, use, dispense, deliver, transport, or administer psilocybin if the recommendation, possession, use, dispensing, delivery, transporting, or administering is in accordance with the provisions of this chapter.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-5. Definitions.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">For the purposes of this chapter, unless the context otherwise requires:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) &quot;Active psilocybin&quot; means the psychoactive chemical with the chemical abstracts service registry number 520-52-5.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) &quot;Adulterant&quot; means a poisonous or deleterious substance in a quantity that may be injurious to health.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) &quot;Adverse event&quot; means an injury or suspected injury to a patient that results in an</span></p><p class="cs7F45F1B"><span class="cs46AE26E6">escalation of care, harm to a patient, or rescue of a patient and occurs during a psilocybin administration session or within 24 hours from when the administration session ended.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) &quot;Community location&quot; means a public or private elementary or secondary school, a church, a public library, a public playground, or a public park.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) &quot;Cultivation space&quot; means, quantified in square feet, the horizontal area in which a psilocybin cultivation facility cultivates psilocybin, including each level of horizontal area if the psilocybin cultivation facility hangs, suspends, stacks, or otherwise positions plants above other plants in multiple levels. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) &quot;Department&quot; means the Department of Health. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) &quot;Family member&quot; means a parent, stepparent, spouse, child, sibling, stepsibling, uncle, aunt, nephew, niece, first cousin, mother-in-law, father-in-law, brother-in-law, sister-in-law, son-in-law, daughter-in-law, grandparent, or grandchild.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) &quot;Independent psilocybin testing laboratory&quot; means a person that does any of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Conducts a chemical or other analysis of psilocybin or a psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Acquires, possesses, and transports psilocybin or a psilocybin product with the intent to conduct a chemical or other analysis of the psilocybin or psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) &quot;Independent psilocybin testing laboratory agent&quot; means an individual who holds a valid psilocybin production establishment agent registration card with a psilocybin testing laboratory designation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(10) &quot;Inventory control system&quot; means a system described in Chapter 60A.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(11) &quot;Licensing board&quot; or &quot;board&quot; means the psilocybin production establishment licensing board created pursuant to Chapter 60A.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(12) &quot;Patient&quot; means an individual for whom a qualified medical psilocybin provider recommends psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(13) &quot;Payment provider&quot; means an entity that contracts with a psilocybin production establishment to facilitate transfer of funds between the establishment and another business or individual.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(14) &quot;Psilocybin&quot; means:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Fungi that contain naturally occurring psilocybin and psilocin compounds produced by such fungi, including but not limited to members of the genus Psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Fungi that include psilocin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Psilocybin-producing fungi and mixtures or a substance containing a detectable amount of psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(15) &quot;Psilocybin administration session&quot; means the time from when a qualified medical provider administers psilocybin to a patient to the time the patient leaves the qualified therapy provider location.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(16) &quot;Psilocybin biomass&quot; means any part of a psilocybin-containing fungus.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(17) &quot;Psilocybin byproduct&quot; means any part of a psilocybin-containing mushroom which is not used or intended for sale.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(18) &quot;Psilocybin cultivation facility&quot; means a person that possesses psilocybin, grows or intends to grow psilocybin, and sells or intends to sell psilocybin to a qualified therapy provider.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(19) &quot;Psilocybin cultivation facility agent&quot; means an individual who holds a valid psilocybin production establishment agent registration card with a cultivation facility designation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(20) &quot;Psilocybin product&quot; means any portion of a psilocybin-containing mushroom that has been dried and is intended for oral consumption by a patient.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(21) &quot;Psilocybin production establishment&quot; or &quot;establishment&quot; means a psilocybin cultivation facility or an independent psilocybin testing laboratory.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(22) &quot;Psilocybin production establishment agent registration card&quot; means a registration card issued by the department that authorizes an individual to act as a psilocybin production establishment agent, and that designates the type of psilocybin production establishment for which an individual is authorized to act as an agent.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(23) &quot;Qualified medical psilocybin provider&quot; means a physician and surgeon or osteopathic physician and surgeon, a physician assistant, an advanced registered nurse practitioner, and an advanced practice registered nurse licensed under Chapter 30 of this code, who is registered by the department under Chapter 60A to recommend treatment with psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(24) &quot;Qualified therapy provider&quot; means a physician and surgeon or osteopathic physician and surgeon, a physician assistant, an advanced registered nurse practitioner, an advanced practice registered nurse, a psychologist, or a social worker, licensed under Chapter 30 of this code, and who is registered by the department to administer treatment with psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(25) &quot;Qualified therapy provider agent&quot; means an individual who holds a valid qualified therapy provider agent registration card.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(26) &quot;Qualified therapy provider agent registration card&quot; means a registration card issued by the department that authorizes an individual to act as a qualified therapy provider agent.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(27) &quot;Qualified therapy provider location&quot; or &quot;provider location&quot; means a facility with all of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A single, secure public entrance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A security system with a backup power source that detects and records entry and provides notice of an unauthorized entry to law enforcement when the facility is closed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A lock or equivalent restrictive security feature on any area where the psilocybin or psilocybin product is stored at the facility.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-6. Applicability.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Federal Food and Drug Administration-approved products that contain psilocybin shall be exempt from the Therapeutic Psilocybin Act, with the exception that such products shall be authorized for use:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) In any research conducted by state research universities or health care providers pursuant to grants.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) By qualified patients.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-7. Department Program.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The &quot;medical use of psilocybin program&quot; is created in the department. In developing the program, the department shall establish:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Appropriate education and resources for patients.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Guidance on roles and responsibilities of qualified medical psilocybin providers, qualified therapy providers, and psilocybin cultivators.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Necessary initial and ongoing training for providers and cultivators.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Treatment protocols, including patient selection criteria, medical service standards, dosage standards and approved settings for administration of psilocybin to patients.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Safety protocols for producing psilocybin from mushrooms, transporting, storing and handling psilocybin and treating patients.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Other best practices for cultivators and providers.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Requirements for data collection to evaluate the program and the use of best practices by cultivators and providers.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) Recommend program expansion to additional psychedelic substances proving of medical and/or therapeutic value for patients.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(9) Other requirements, restrictions and limitations promulgated by the department to ensure an efficacious program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department shall monitor cultivators and clinicians to ensure compliance with the Therapeutic Psilocybin Act and rules promulgated in accordance with that act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The department shall collaborate with the board, state higher education institutions and health care providers to collect and analyze data to develop best practices, and within 180 days of the effective date of this act, implement the program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The department shall collaborate with the board regarding recommended programmatic changes and expansion of the program, including consideration of additional psychedelic therapeutics</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-8. Inventory Control System.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) Each psilocybin production establishment and qualified therapy provider shall maintain an inventory control system that meets all the requirements of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An inventory control system shall do all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Track, in real time, psilocybin and psilocybin products using a unique identifier from the time psilocybin is ready to be harvested.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Maintain in real time a record of the amount of psilocybin or psilocybin product in the possession of the establishment or provider.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Include a video recording system that is tamper proof and does all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Tracks all handling and processing of psilocybin or psilocybin product in the establishment or provider location.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Stores each video record for at least 45 days.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A psilocybin production establishment or qualified therapy provider shall allow the department, or a financial institution designated by the department, to validate transactions to access the inventory control system at any time.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The department shall propose legislative rules pursuant to &sect;29A-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code to implement this section, and the rules shall include requirements for aggregate or batch records regarding the planting and propagation of psilocybin before being tracked, and which may include compatibility standards for inventory control systems.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-9. Notice to Prospective and Current Public Employees.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">Prior to giving a current employee an assignment or duty that arises from or directly relates to an obligation under this chapter, or hiring a prospective employee whose assignments or duties would include an assignment or duty that arises from or directly relates to an obligation under this article, a state employer or a political subdivision employer shall give the employee or prospective employee a written notice that the employee&rsquo;s or prospective employee&rsquo;s job duties may require the employee or prospective employee to engage in conduct which is in violation of the criminal laws of the United States.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-10. Psilocybin Production Establishment Licensing Board.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) There is created within the department the psilocybin production establishment licensing board.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The board shall consist of the following members, appointed by the director of the department:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) One member of the public with knowledge of psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) One member with knowledge and experience in the pharmaceutical or nutraceutical manufacturing industry.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) One member representing law enforcement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) One member who is a chemist or researcher with experience in manufacturing and who is associated with a research university.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) One member who has a background in fungus or mushroom cultivation and processing.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) One member shall be licensed to provide behavioral health care services.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) The director or the director&rsquo;s designee, who shall serve as the chairperson of the board and as a nonvoting member, except to cast a deciding vote in the event of a tie.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A person is ineligible for appointment to the board if any of the following apply:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The person has any commercial or ownership interest in a psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The person is associated with a business that has an owner, officer, director, or employee whose family member holds a license or has an interest in a psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The person is employed or contracted to lobby on behalf of a psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The director shall ensure that no two members of the board are employed by or represent the same business or nonprofit organization.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Members of the board shall serve a term of four years, except that initial members of the board shall be appointed for staggered terms such that the director appoints two or three board members every two years. The director shall fill a vacancy on the board for the balance of the unexpired term.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The director may remove a member of the board for cause, neglect of duty, inefficiency, or malfeasance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Members of the board shall serve without compensation but may be reimbursed for actual expenses.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A majority of the members constitute a quorum, and a quorum of the members present, and a majority vote are needed to take any action.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The board shall meet as called by the chairperson to do all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Review each license application for compliance with this chapter and rules adopted by the department.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Conduct a public hearing to consider a license application.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Decide on a license application.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Review and recommend to the department medical conditions that may benefit from the medical use of psilocybin;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Recommend for approval programmatic expansion to additional psychedelic substances proving of medical and/or therapeutic value for patients;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Assist the department in establishing, monitoring and evaluating best practices for cultivators and providers.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The board shall hold a public hearing to review a psilocybin production establishment&rsquo;s license if the establishment changes location or as necessary based on the recommendation of the department.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The board is not subject to dissolution pursuant to subsection (b) or (c) of this section. </span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-11. Psilocybin Production Establishment &ndash; License.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A person shall not operate a psilocybin production establishment unless the person holds a psilocybin production establishment license issued by the licensing board pursuant to this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department shall adopt rules to develop a process for soliciting and evaluating applications for a psilocybin production establishment license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) An applicant for a psilocybin production establishment license shall submit all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The proposed name of the establishment and the address where the establishment will be located, except as provided in subdivision (2) of this subsection.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The board may issue a provisional license to an applicant who submits an application that does not include the address at which the establishment will be located. The department shall convert a provisional license to a license if the provisional licensee submits documentation confirming that the provisional licensee has purchased or leased a location meeting the requirements of subsection (d) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The name and address of any individual who has any of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) For a privately held company, a financial or voting interest in the proposed psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The power to direct the management or control of the proposed psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) An operating plan, approved by the department, that complies with current state law and any laws that the municipality or county in which the person is located adopt regarding the operation of psilocybin production establishments.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) A statement that the applicant will obtain and maintain a performance bond that a surety authorized to transact surety business in this state issues in an amount of at least $100,000 for each psilocybin cultivation facility license, or at least $50,000, for each independent psilocybin testing laboratory license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) An application fee in an amount determined by the department.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) A description of any investigatory or adverse action taken by a licensing jurisdiction, government agency, law enforcement agency, or court in any state for any violation or detrimental conduct in relation to any of the applicant&rsquo;s psilocybin-related operations or businesses.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A psilocybin production establishment shall not be located within 1,000 feet of a community location or in or within 500 feet of an area that is zoned as primarily residential. The board may grant a waiver to reduce the proximity requirements in this subsection by up to 20 percent if the board determines that it is not reasonably feasible for the applicant to site the proposed psilocybin production establishment without the waiver.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Upon the approval of an application for a license under this section, the applicant shall pay to the department the initial licensing fee, as determined by the department by rule, and the department shall inform the department of public safety of the license approval.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) A psilocybin production establishment may be located at the same location as a medical cannabidiol manufacturer licensed if a separate license is obtained for each.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) If the licensing board receives more than one application for a psilocybin production</span></p><p class="cs7F45F1B"><span class="cs46AE26E6">establishment within the same city or town, the licensing board shall consult with the local land use authority before approving any of the applications pertaining to that city or town.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) The licensing board shall not issue a license to operate an independent psilocybin testing laboratory to any of the following persons:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A person who holds a license or has an ownership interest to operate a psilocybin cultivation facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A person who has an owner, officer, director, or employee whose family member holds a license or has an ownership interest in a psilocybin cultivation facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A person who has an ownership interest in a psilocybin cultivation facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The licensing board shall not issue a license to operate a psilocybin production establishment to an applicant if an individual described in </span><a name="_Hlk221108803"><span class="cs46AE26E6">subdivision (2), subsection (c) of this section</span></a><span class="cs46AE26E6">, has been convicted of a misdemeanor for drug distribution, or convicted of a felony, or is younger than twenty-one years old.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(j) The licensing board may, at the discretion of the licensing board, grant preference to an applicant who currently holds a medical cannabidiol manufacturer.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(k) The licensing board may revoke a license issued pursuant to this section if any of the following apply:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The psilocybin production establishment does not begin operations within one year after the date on which the licensing board issues the initial license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An individual psilocybin production establishment operated by the licensee has violated the same provision of this chapter three times.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) An individual described in subdivision (2), subsection (c) of this section, is convicted of a misdemeanor for drug distribution, or is convicted of a felony.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The licensee fails to cooperate with an investigation of the psilocybin production establishment conducted by the licensing board.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The psilocybin production establishment demonstrates a willful or reckless disregard for the requirements of this chapter or the rules of the department.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The licensing board determines that the psilocybin production establishment no longer meets the minimum standards for licensure and operation of the psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) For an independent psilocybin testing laboratory, the independent psilocybin testing laboratory fails to substantially meet the performance standards adopted by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(l) If the municipality or county where the licensed psilocybin production establishment will be located requires a local land use permit, a person who is issued a psilocybin production establishment license under this chapter shall submit to the licensing board a copy of the licensee&rsquo;s approved land use permit within 120 days after the date on which the licensing board issues the license.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(m) The department shall deposit fees imposed under this section into the general fund of the state.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(n) The department shall begin accepting applications under this chapter on July 1, 2026.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(o) The licensing board&rsquo;s authority to issue a license under this section shall be plenary and not subject to review.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(p) The licensing board shall not issue more than four licenses to operate an independent psilocybin testing laboratory.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(q) The department may operate or partner with a research university to operate an independent psilocybin testing laboratory.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(r) A psilocybin production establishment license shall not be transferable or assignable.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-12. Psilocybin production establishment owners and directors &ndash; Criminal Background Checks.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The division of criminal investigation of the department of public safety shall conduct a thorough investigation of each applicant for a psilocybin production establishment. The division shall report the results of the investigation to the department.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department shall collect a fee from the applicant, determined by the department by rule, to cover the costs of the investigation by the division of criminal investigation of the department of public safety. The department shall remit the fee to the division.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-13. License Renewal.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The director of the department shall renew a license issued on an annual basis if all the following apply:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The licensee meets all the requirements for initial licensure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The director of the department does not identify a significant failure of compliance with this chapter or grounds for revocation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The licensee pays a renewal fee as determined by the department by rule.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-14. Operating Plan.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">A person applying for a psilocybin production establishment license or license renewal shall submit to the department for the department&rsquo;s review a proposed operating plan that includes all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A description of the physical characteristics of the proposed facility or, for a psilocybin cultivation facility, no more than two facility locations, including a floor plan and an architectural elevation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A description of the credentials and experience of each officer, director, and owner of the proposed psilocybin production establishment, and of any highly skilled or experienced prospective employee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The psilocybin production establishment&rsquo;s employee training standards.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) A security plan.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) A description of the psilocybin production establishment&rsquo;s inventory control system.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Storage protocols to ensure that psilocybin is stored in a manner that is sanitary and preserves the integrity of the psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) For a psilocybin cultivation facility:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Psilocybin cultivation practices, including the facility&rsquo;s intended pesticide and fertilizer use.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Square footage under cultivation and anticipated psilocybin yield.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(8) For an independent psilocybin testing laboratory:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Psilocybin and psilocybin product testing capacity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Psilocybin and psilocybin product testing equipment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Testing methods, standards, practices, and procedures for testing psilocybin or psilocybin product.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-15. Psilocybin Production Establishment Agent &ndash; Registration.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) An individual shall not act as a psilocybin production establishment agent unless the department registers the individual as a psilocybin production establishment agent, regardless of whether the individual is a seasonal, temporary, or permanent employee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) None of the following individuals shall serve as a psilocybin production establishment agent or have the power to direct or cause the management or control of a psilocybin production establishment:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) An advanced registered nurse practitioner or an advanced practice registered nurse.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An individual licensed to practice medicine and surgery or osteopathic medicine and surgery.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A physician assistant.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) An independent psilocybin testing laboratory agent may not act as a psilocybin cultivation facility agent.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The department shall, within 15 business days from the date on which the department receives a complete application from a psilocybin production establishment on behalf of a prospective psilocybin production establishment agent, register and issue a psilocybin production establishment agent registration card to the prospective psilocybin production establishment agent who successfully passes a criminal background investigation if the psilocybin production establishment does all of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Provides the department with the prospective psilocybin production establishment agent&rsquo;s name and address.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Pays a fee to the department in an amount determined by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The department shall designate, on an individual&rsquo;s psilocybin production establishment agent registration card, the type of psilocybin production establishment for which the individual is authorized to act as an agent.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f)(1) A psilocybin production establishment agent shall comply with either a certification standard developed by the department by rule, or a certification standard that the department has reviewed and approved.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A certification standard described in subdivision (1) of this subsection shall include training in all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) West Virginia medical psilocybin law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) For a psilocybin cultivation facility agent, psilocybin cultivation best practices.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) For an independent psilocybin testing laboratory agent, psilocybin laboratory testing best practices.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) A psilocybin production establishment agent registration card shall expire two years from the date the department issued the card. A psilocybin production establishment agent may renew the agent&rsquo;s registration card if the agent is still eligible to hold a psilocybin production establishment registration card and pays a fee determined by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h)(1) A psilocybin production establishment agent shall always carry the individual&rsquo;s psilocybin production card with the agent when the agent is on the premises of a psilocybin production establishment where the agent is registered, or when the agent is transporting psilocybin or psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If a psilocybin production establishment agent possesses psilocybin or psilocybin product and produces the registration card while handling or transporting psilocybin or psilocybin product, there is a rebuttable presumption that the agent possesses the psilocybin or psilocybin product legally and a law enforcement officer does not have probable cause, based solely on the agent&rsquo;s possession of the psilocybin or psilocybin product, to believe that the individual is engaging in illegal activity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A psilocybin production establishment agent who fails to carry the individual&rsquo;s psilocybin production card as required by subdivision (1) of this subsection is guilty of the following offenses:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) For a first offense, or second offense within a two-year period, a simple misdemeanor punishable by a fine of $100.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) For a third or subsequent offense within a two-year period, a simple misdemeanor punishable as provided by law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) For each violation of subdivision (3) of this subsection, the department may assess the relevant psilocybin production establishment a fine of up to $5,000 dollars.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-16. Psilocybin Production Establishment &ndash; General Operation Requirements.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A psilocybin production establishment shall operate in accordance with the operating plan submitted by the psilocybin production establishment pursuant to &sect;16-67-14 of this code. A psilocybin production establishment shall notify the department prior to implementing a change to the establishment&rsquo;s operating plan. The department shall inform the establishment of any deficiencies in the new operating plan.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)(1) Except as provided in subdivision (2) of this subsection, a psilocybin production establishment shall operate in a facility that is accessible only by an individual with a valid psilocybin production establishment agent registration card.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A psilocybin production establishment may authorize an individual who is at least 18 years of age and who is not a psilocybin production establishment agent to access the psilocybin production establishment if the psilocybin production establishment tracks and monitors the individual at all times while the individual is at the psilocybin production establishment, and maintains a record of the individual&rsquo;s access, including arrival and departure.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A psilocybin production establishment shall not employ an individual who is younger than 21 years of age or who has been convicted of a misdemeanor for drug distribution or convicted of a felony.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A psilocybin production establishment shall operate in a facility that has all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A single, secure public entrance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A security system with a backup power source that does all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) Detects and records entry into the psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) Provides notice of an unauthorized entry to law enforcement when the psilocybin production establishment is closed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Secure any area where the psilocybin production establishment stores psilocybin or a psilocybin product.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-17. Inspections.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The department may inspect the records and facility of a psilocybin production establishment at any time during business hours to determine if the psilocybin production establishment complies with this article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An inspection under this section may include all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Inspection of a site, facility, vehicle, book, record, paper, document, data, and other physical or electronic information.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Questioning of any relevant individual.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Observation of an independent psilocybin testing laboratory&rsquo;s methods, standards, practices, and procedures.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) The sampling of a specimen of psilocybin or psilocybin product sufficient for testing purposes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Inspection of equipment, an instrument, a tool, or machinery, including a container or label.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) In conducting an inspection under this section, the department may review and make copies of a book, record, paper, document, data, or other physical or electrical information, including financial data, sales data, shipping data, pricing data, and employee data.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The department may impose a fee, or a license or registration suspension or revocation, if a psilocybin production establishment fails to comply with this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-18. Advertising.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A psilocybin production establishment shall not advertise to the general public in any medium, except that a psilocybin production establishment may advertise an employment opportunity at the psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department shall propose rules for legislative approval in accordance with &sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code for standards relating to advertising by a qualified medical psilocybin provider or qualified therapy provider. The rules shall ensure that advertising by a qualified medical psilocybin provider or qualified therapy provider does not imply that the psilocybin may be used for recreational purposes.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-19. Psilocybin Transportation.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) No individual other than the following may transport psilocybin or a psilocybin product:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A registered psilocybin production establishment agent.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A qualified therapy provider.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A registered qualified therapy provider agent.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) An agent of the department conducting an inspection pursuant to Chapter 60A. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) An individual transporting psilocybin or psilocybin product shall be employed by the individual authorizing the transportation and possess a manifest that includes all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A unique identifier that links the psilocybin or psilocybin product to a relevant inventory control system.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The origin and destination information for any psilocybin or psilocybin product that the person is transporting.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The departure and arrival times of the individual transporting the psilocybin or psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A registered psilocybin production establishment agent transporting psilocybin or psilocybin product without a manifest as provided in subsection (b) is guilty of a simple misdemeanor punishable by a fine of $100. However, if the registered psilocybin production establishment agent is carrying more psilocybin or psilocybin products than is indicated on the manifest, other than a de minimis amount, the registered psilocybin production establishment agent is subject to penalties as provided in Chapter 60A. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) This section shall not prohibit the department from taking administrative enforcement action against a psilocybin production establishment or another person for failing to make a transport in compliance with this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-20. Psilocybin &ndash; Excess and Disposal.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) As used in this section, &quot;psilocybin waste&quot; means waste and unused material from the cultivation and production of psilocybin or psilocybin product under this chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A psilocybin production establishment shall do all of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Render psilocybin waste unusable and unrecognizable before transporting it from the psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Dispose of the psilocybin waste in compliance with all applicable state and federal laws.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A person shall not transport or dispose of psilocybin waste other than as provided in this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-21. Psilocybin Cultivation Facility &ndash; Growing and Harvesting.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A psilocybin cultivation facility shall use a unique identifier that is connected to the facility&rsquo;s inventory control system to identify all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Each unique harvest of psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Each batch of psilocybin that the facility transfers to an independent psilocybin testing laboratory.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Any psilocybin waste, of which the psilocybin cultivation facility disposes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A psilocybin cultivation facility shall identify psilocybin biomass as psilocybin byproduct or psilocybin product before transferring the psilocybin biomass from the facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A psilocybin cultivation facility shall destroy psilocybin cultivation byproducts as provided in Chapter 60A.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-22. Psilocybin Cultivation Facility &ndash; Sales.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A psilocybin cultivation facility shall not sell a product other than a psilocybin product or educational material related to the medical use of psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) A psilocybin cultivation facility shall not sell a product to a person other than a qualified therapy provider or a registered agent of a qualified therapy provider.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-23. Psilocybin Cultivation Facility &ndash; Labeling. </span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A psilocybin cultivation facility shall label a psilocybin or psilocybin product with the amount of active psilocybin in the psilocybin or psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department may adopt rules to establish labeling requirements for a psilocybin product.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-24. Independent Psilocybin Testing Laboratory &ndash; Psilocybin and Psilocybin Product Testing.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) The department shall adopt to do all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Identify the adulterant analyses required to be performed on psilocybin or psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Determine the level of each adulterant that is safe for human consumption.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Establish protocols for a recall of psilocybin or psilocybin product by a psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department may require an independent psilocybin testing laboratory to test for a toxin if the department receives information indicating the potential presence of a toxin, or the department&rsquo;s inspector has reason to believe a toxin may be present based on the inspection of a facility.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) A psilocybin production establishment may not transfer psilocybin or psilocybin product to a qualified therapy provider until an independent psilocybin testing laboratory tests a representative sample of the psilocybin or psilocybin product as provided by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) Before the sale of a psilocybin product, an independent psilocybin testing laboratory shall identify and quantify the amount of active psilocybin present in the psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) The department shall propose rules for legislative approval in accordance with the provisions of &sect;29A-3-1 </span><span class="cs1489E706">et seq</span><span class="cs46AE26E6">. of this code for standards, methods, practices, and procedures for the testing of psilocybin and psilocybin products by an independent psilocybin laboratory.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f) The department may require an independent psilocybin testing laboratory to participate in a proficiency evaluation that the department conducts, or that an organization that the department approves conducts.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-25. Independent Psilocybin Testing Laboratory &ndash; Inspections.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) If an independent psilocybin testing laboratory determines that the results of a laboratory test indicate that a psilocybin or psilocybin product batch may be unsafe for human use:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The independent psilocybin testing laboratory shall report the laboratory test results and the psilocybin or psilocybin product batch to the department and the psilocybin cultivation facility from which the batch originated.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The department shall place a hold on the psilocybin or psilocybin products to conduct a root cause analysis of the defective batch and make a determination as to the root cause. The psilocybin cultivation facility that grew the psilocybin may appeal the determination of the department.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If the department determines that psilocybin or psilocybin product prepared by a psilocybin cultivation establishment is unsafe for human consumption, the department may seize, embargo, or destroy the psilocybin or psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) If an independent psilocybin testing laboratory determines that the results of a lab test indicate that the active psilocybin content of psilocybin or a psilocybin product batch diverges more than ten percent from the amount the label indicates, the psilocybin cultivation facility shall not sell the psilocybin or psilocybin product batch unless the facility replaces the incorrect label with a label that correctly indicates the active psilocybin content.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-26. Psilocybin Electronic Verification System.</span></h4>
+	<p class="cs53FB8D75"><span class="csEF05ACC">&nbsp;</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(a) The department, in consultation with the West Virginia Department of Agriculture and the West Virginia Department of Homeland Security, shall propose rules for legislative approval pursuant to &sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> for the creation and operation of an electronic verification system that, at minimum, does all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Allows a qualified medical psilocybin provider to access dispensing information regarding a patient of the qualified medical psilocybin provider, electronically recommend or renew a recommendation for psilocybin or a psilocybin product, connect with an inventory control system that a psilocybin production establishment uses to track in real time and archive purchases of any psilocybin or psilocybin product, and connect with an inventory control system that a psilocybin production establishment utilizes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Allows access by all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The department to the extent necessary to carry out the department&rsquo;s functions and responsibilities.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The department of inspections, appeals, and licensing to carry out the functions and responsibilities related to the participation of qualified medical psilocybin providers and qualified therapy providers in the recommendation and administration of psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Creates a record each time a person accesses the system that identifies the person who accessed the system and the individual whose records the person accessed.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Keeps a current record of the total number of individuals who have a psilocybin recommendation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department may release limited data from the electronic verification system for the purposes of conducting research, issuing required reports, or for other official department purposes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)(1) A person who knowingly and intentionally releases any information from the state electronic verification system in violation of this section is guilty of a felony, and, upon conviction shall be fined not more than $5,000, or imprisoned in a state correctional facility not less than one year, nor more than 5 years, or both.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A person who negligently or recklessly releases any information from the state electronic verification system in violation of this section is guilty of a serious misdemeanor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d)(1) A person who obtains or attempts to obtain information from the state electronic verification system by misrepresentation or fraud is guilty of a felony, and, upon conviction shall be fined not more than $5,000, or imprisoned in a state correctional facility not less than one year, nor more than 3 years, or both.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A person who obtains or attempts to obtain information from the state electronic verification system for a purpose other than a purpose authorized in this chapter is guilty of a </span><a name="_Hlk221192826"><span class="cs46AE26E6">felony, and, upon conviction shall be fined not more than $5,000, or imprisoned in a state correctional facility not less than one year, nor more than 3 years, or both.</span></a></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)(1) Except as provided in subdivision (2) of this subsection, a person who knowingly and intentionally uses, releases, publishes, or otherwise makes available to any other person information obtained from the state electronic verification system for any purpose other than a purpose specified in this section is guilty of a </span><a name="_Hlk221192874"><span class="cs46AE26E6">felony, and, </span></a><a name="_Hlk221192762"><span class="cs46AE26E6">upon conviction shall be fined not more than $5,000, or imprisoned in a state correctional facility not less than one year, nor more than 5 years, or both.</span></a><span class="cs46AE26E6"> </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) This subsection shall not prohibit a person who rightfully obtains information from the state electronic verification system from including the information in the person&rsquo;s medical chart or file for access by a person authorized to review the medical chart or file, providing the information to a person in accordance with the requirements of the federal Health Insurance Portability and Accountability Act of 1996, Pub. L. No. 104-191, or discussing or sharing that information about the patient with the patient.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-27. Qualified Medical Psilocybin Provider Registration &ndash; Continuing Education &ndash; Treatment Recommendation.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) An individual shall not recommend a medical psilocybin treatment unless the department registers the individual as a qualified medical psilocybin provider under this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department shall, within 15 days after the date the department receives an application from an individual, register and issue a qualified medical psilocybin provider registration card to the individual if the individual does all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Provides the department with the individual&rsquo;s name and address.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Provides with the department a report detailing the individual&rsquo;s completion of the applicable continuing education requirements described in subsection (c) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Provides to the department evidence that the individual holds a license that qualifies the individual as a qualified medical psilocybin provider.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Pays an application fee as determined by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) For an applicant on or after January 1, 2026, provides the information required by subsection (i) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)(1) An individual applying for initial registration or renewal of a registration shall complete a continuing education program as determined by the department by rule. The continuing education program shall be offered by the department or a continuing education provider approved by the department. The continuing education program shall address all of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) This chapter.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) General information about psilocybin under federal and state law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The latest scientific research on medical psilocybin, including risks and benefits.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Best practices for recommending the form and dosage of psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Systems and receptors affected by psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Mechanisms of action.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) Drug interactions.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) Diagnostic criteria.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) Contraindications.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(J) Side effects and mitigation of side effects.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(K) Administrative set and setting, including physical patient safety.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(L) Integration.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(M) Potential outcomes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(N) Ethical considerations.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(O) Discharge safety planning.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An applicant for initial registration shall complete sixteen hours of continuing education. A qualified medical psilocybin provider shall complete four hours of continuing education every two years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A qualified medical psilocybin provider shall not recommend psilocybin to a patient, or renew a recommendation for psilocybin, unless the qualified medical psilocybin provider has done all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Completed and documented in the patient&rsquo;s medical record a thorough assessment of the patient&rsquo;s condition and medical history based on the appropriate standard of care.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Verified that the patient is at least 21 years old.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Met with the patient face to face if the qualified medical psilocybin provider has not recommended a psilocybin treatment to the patient in the past.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)(1) Except as provided in subdivision (2) of this subsection, an individual shall not advertise that the individual recommends medical psilocybin treatment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A qualified medical psilocybin provider, or a clinic or office that employs a qualified medical psilocybin provider, may advertise the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The provider&rsquo;s or clinic&rsquo;s name and logo.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) That the individual is registered as a qualified medical psilocybin provider and recommends medical psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) Scientific study regarding medical psilocybin use.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f)(1) A qualified medical psilocybin provider registration card shall expire two years from the date the department issued the card.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The department shall adopt for the renewal of a medical psilocybin provider registration card.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g) The department may revoke a medical psilocybin provider registration card if a qualified medical psilocybin provider fails to maintain compliance with this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) A qualified medical psilocybin provider shall not receive any compensation or benefit for the qualified medical psilocybin provider&rsquo;s medical psilocybin treatment recommendation from a psilocybin production establishment or an owner, officer, director, board member, employee, or agent of a psilocybin production establishment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) On or before January 1 of each year, a qualified medical provider shall report to the department all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) That the qualified medical psilocybin provider, or the entity that employs the qualified medical psilocybin provider, represents online or in printed material that the qualified medical psilocybin provider is a qualified medical psilocybin provider or offers medical psilocybin recommendations to patients, if applicable.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The fee amount that the qualified medical psilocybin provider, or the entity that employs the qualified medical psilocybin provider, charges a patient for a medical psilocybin recommendation, either as an actual cash rate or, if the psilocybin provider or entity bills insurance, an average cash rate.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-28. Standard of Care &ndash; Provider Not Liable &ndash; No Private Right of Action.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) A qualified medical psilocybin provider or a qualified therapy provider who recommends or administers psilocybin in compliance with this chapter shall not be subject to a civil or criminal penalty, or license discipline, solely for violating a federal law or regulation that prohibits recommending, prescribing, possessing, or dispensing psilocybin or a psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) This chapter shall not be construed to reduce or negate the duty of a qualified medical psilocybin provider or qualified therapy provider to use reasonable and ordinary care in the treatment of a patient.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) Exemption from criminal and civil penalties for the medical use of psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) A cultivator, therapist, clinician or qualified patient shall not be subject to arrest, prosecution or penalty for participating in the program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The following conduct is lawful and shall not constitute grounds for detention, search or arrest of a person or for a violation of probation or parole, and psilocybin that relates to the conduct is not contraband or subject to seizure or forfeiture pursuant to the Controlled Substances Act or the Forfeiture Act:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) A cultivator or provider possessing or transporting not more than an adequate supply of psilocybin for medical purposes as defined by department rule; and</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) A provider administering or a qualified patient taking psilocybin in an approved setting in accordance with the Therapeutic Psilocybin Act or rules promulgated in accordance with that act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A clinician shall not be subject to arrest or prosecution or denied any right or privilege for recommending the program or providing medical services authorized in the Therapeutic Psilocybin Act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) A person shall not be subject to arrest or prosecution for a psilocybin-related offense for simply being in the presence of the medical use of psilocybin as allowed under the provisions of the Therapeutic Psilocybin Act.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The Therapeutic Psilocybin Act does not apply to federal food and drug administration-approved clinical trials.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-29. Nondiscrimination for Use of Psilocybin.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) For purposes of medical care, including an organ or tissue transplant, a patient&rsquo;s use of psilocybin as provided in this chapter is the equivalent of authorized use of any other medication used at the discretion of a physician, and does not constitute the use of an illicit substance or otherwise disqualify an individual from needed medical care.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b)(1) Except as provided in subdivision (2) of this subsection, the state or a political subdivision of the state shall treat an employee&rsquo;s use of medical psilocybin as provided in this chapter in the same way the state or political subdivision treats an employee&rsquo;s use of any prescribed controlled substance, and an employee&rsquo;s medical psilocybin recommendation from a qualified medical psilocybin provider in the same way the state or political subdivision treats an employee&rsquo;s prescription for any prescribed controlled substance.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A state or political subdivision employee who has a valid medical psilocybin registration shall not be subject to adverse action for failing a drug test due to psilocybin or psilocin without evidence that the employee was impaired or otherwise adversely affected in the employee&rsquo;s job performance due to the use of medical psilocybin. This paragraph shall not apply in any of the following circumstances:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The employee&rsquo;s use of psilocybin jeopardizes federal funding, a federal security clearance, or any other federal background determination required for the employee&rsquo;s position.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) &nbsp;The employee&rsquo;s position is dependent on a license or peace officer certification that is subject to federal regulations, including 18 U.S.C. &sect;922(g)(3).</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) An employee who uses medical psilocybin during the 12 hours immediately preceding the employee&rsquo;s shift or during the employee&rsquo;s shift.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) An agency of this state or a political subdivision thereof, including any law enforcement agency, shall not remove or initiate proceedings to remove a child under the age of 18 from the home of a parent based solely upon the parent&rsquo;s possession or use of psilocybin as authorized under this chapter.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-30. Insurance &ndash; Coverage Requirement.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This chapter shall not be construed to require an insurer, a third-party administrator, or an employer to pay for or reimburse an employee for psilocybin or psilocybin product.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-31. Approved Drugs.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">This chapter shall not be construed to restrict or otherwise affect the prescription, distribution, or dispensing of a product that the United States Food and Drug Administration has approved.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-32. Qualified Therapy Provider Registration &ndash; Continuing Education &ndash; Psilocybin Administration.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) An individual shall not administer a medical psilocybin treatment unless the department registers the individual as a qualified medical psilocybin therapist as provided in this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department shall, within 15 days after the date the department receives an application from an individual, register and issue a qualified medical psilocybin therapist registration card to the individual if the individual does all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Provides to the department the individual&rsquo;s name and address.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Provides to the department the address of the clinic at which the individual will be administering psilocybin to patients.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Provides to the department a report detailing the individual&rsquo;s completion of the applicable continuing education requirements described in subsection (c) of this section.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Certifies to the department that the individual has installed and maintains an inventory control system.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) Provides to the department evidence that the individual holds a license that qualifies the individual as a qualified medical psilocybin provider.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) Pays an application fee as determined by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(7) Provides to the department an emergency transport plan for patients who experience a medical emergency during treatment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)(1) An individual applying for initial registration or renewal of a registration shall complete a continuing education program as determined by the department by rule. The continuing education program shall be offered by the department or a continuing education provider approved by the department. The continuing education program shall address all of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) This article.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) General information about psilocybin under federal and state law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The latest scientific research on medical psilocybin, including risks and benefits.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) Best practices for recommending the form and dosage of psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) Systems and receptors affected by psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) Mechanisms of action.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) Drug interactions.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) Diagnostic criteria.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(I) Contraindications.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(J) Side effects and mitigation of side effects.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(K) Administrative set and setting, including physical patient safety.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(L) Integration.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(M) Potential outcomes.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(N) Ethical considerations.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(O) Discharge safety planning.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An applicant for initial registration shall complete 80 hours of continuing education. A qualified therapy provider shall complete four hours of continuing education every two years.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A qualified therapy provider shall only administer psilocybin to a patient when all the following requirements are met:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The patient has a recommendation issued by a qualified medical psilocybin provider.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The qualified medical therapy provider has obtained and reviewed the patient&rsquo;s mental health history.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The qualified therapy provider has provided the patient with a safety data sheet created by the department which outlines the potential risks of psilocybin use.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) There are unexpired rescue medications on site, as determined by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The administration session is video-recorded, and the video recording is preserved for one year from the date of the session, or the patient gives written, informed consent waiving the video-recording requirement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The qualified therapy provider has a contractual relationship with a licensed physician and surgeon or osteopathic physician and surgeon who remains on call during the administration session in case the patient requires nonemergency medical intervention.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) A qualified therapy provider shall only administer psilocybin or a psilocybin product in a qualified therapy provider location.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(f)(1) Except as provided in subdivision (2) of this subsection, an individual shall not advertise that the individual administers medical psilocybin treatment.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A qualified therapy provider or clinic or office that employs a qualified therapy provider may advertise the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The provider&rsquo;s or clinic&rsquo;s name and logo.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) That the individual is registered as a qualified therapy provider and administers medical psilocybin.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) A scientific study regarding medical psilocybin use.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(g)(1) A qualified therapy provider registration card expires two years from the date the department issues the card.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The department shall adopt for the renewal of a qualified therapy provider registration card.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(h) Within seven days of the date on which an adverse event occurs, a qualified therapy provider shall submit to the department a report containing all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) The age and sex of the patient.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The patient&rsquo;s preexisting health conditions, if any.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) The amount of psilocybin administered to the patient.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Factors which contributed to the adverse event.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(5) The nature and severity of the adverse event.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(6) The ultimate outcome of the adverse event.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(i) The department may revoke a qualified therapy provider registration card if a qualified therapy provider fails to maintain compliance with this section.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-33. Qualified Therapy Provider Agent &ndash; Registration.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) An individual shall not act as a qualified therapy provider agent unless the department registers the individual as a qualified therapy provider agent, regardless of whether the individual is a seasonal, temporary, or permanent employee.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department shall, within 15 business days after the date the department receives a complete application from a qualified therapy provider agent, register and issue a qualified therapy provider agent registration card to the prospective agent who successfully passes a criminal background investigation if the prospective agent does all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Provides to the department with the prospective agent&rsquo;s name and address.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Pays a fee to the department in an amount determined by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c)(1) A qualified therapy provider agent shall comply with either a certification standard developed by the department by rule, or a certification standard that the department has reviewed and approved.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) A certification standard described in subdivision (1) of this subsection shall include training in West Virginia medical psilocybin law.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) A qualified therapy provider agent registration card shall expire two years from the date the department issued the card. A qualified therapy provider agent may renew the agent&rsquo;s registration card if the agent is still eligible to hold a qualified therapy provider agent registration card and pays a fee determined by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e)(1) A qualified therapy provider agent shall always carry the individual&rsquo;s qualified therapy provider agent card with the agent when the agent is handling psilocybin or psilocybin product.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) If a qualified therapy provider agent possesses psilocybin or psilocybin product and produces the registration card in the agent&rsquo;s possession, there is a rebuttable presumption that the agent possesses the psilocybin or psilocybin product legally and a law enforcement officer does not have probable cause, based solely on the agent&rsquo;s possession of the psilocybin or psilocybin product, to believe that the individual is engaging in illegal activity.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) A qualified therapy provider agent who fails to carry the individual&rsquo;s qualified therapy provider agent card with the agent as required by subdivision (1) of this subsection is guilty of the following offenses:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) For a first offense, or a second offense within a two-year period, a simple misdemeanor punishable by a fine of $100.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) For a third offense, or a subsequent offense within a two-year period, a simple misdemeanor.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) For each violation of subdivision (3) of this subsection, the department may assess the relevant qualified therapy provider a fine of up to $2,500.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-34. Reports.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a)(1) On or before November 1, 2026, and by November 1 of each year thereafter, the department shall submit a report to the Joint Committee on Government and Finance including all of the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(A) The number of patients for whom psilocybin has been recommended.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(B) The age and county of patients.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(C) The number of qualified medical psilocybin providers.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(D) The number of license applications and renewal applications received.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(E) The number of licenses the department has issued in each county.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(F) The number of licenses the department has revoked.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(G) The expenses incurred and revenues generated from the medical psilocybin program.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(H) The number and nature of adverse events reported.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) The department shall not include personally identifying information in the report submitted pursuant to subdivision (1) of this subsection. </span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) The department shall submit a report to the Joint Committee on Government and Finance regarding the efficacy of medical psilocybin, including recommendations, by June 1, 2028.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-35. Enforcement.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">(a) If a person that is licensed or registered under this chapter violates a provision of this chapter or rules adopted by the department pursuant to this chapter, or fails to comply with an enforcement action taken under this article, the department may do any of the following, subject to the requirements of this section:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Revoke the person&rsquo;s license or registration card.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Decline to renew the person&rsquo;s license or registration card.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Assess an administrative fee, as determined by the department by rule.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(b) If the department finds that a person produced a psilocybin or psilocybin product batch that contains a substance, other than active psilocybin, that poses a significant threat to human health the department shall do all the following:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Issue the person a written administrative citation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) Attempt to negotiate a stipulated settlement.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(3) Seize, embargo, or destroy the psilocybin or psilocybin product batch.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(4) Order the person to cease and desist from the action that creates a violation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(c) The department may, for a person subject to an uncontested citation, a stipulated settlement, or a finding of a violation in an adjudicative proceeding under this section, if a fine is not already specified by law, assess a person who is not an individual a fine of up to $5,000 per violation.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(d) The department shall not revoke a license or registration issued under this chapter without first conducting a contested case proceeding.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(e) Except where a criminal penalty is expressly provided for a specific violation of this chapter, the following criminal penalties apply:</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(1) Except as provided in subdivision (2) of this subsection, an individual who violates a provision of this chapter is guilty of a simple misdemeanor punishable by a fine of $100.</span></p><p class="cs53FB8D75"><span class="cs46AE26E6">(2) An individual who intentionally or knowingly violates a provision of this article, or violates a provision of this article three or more times, is guilty of a serious misdemeanor punishable by a fine of $1,000.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-36. Psilocybin and Psilocybin Products &ndash; Consumable Goods &ndash; Rules.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The department shall propose rules for legislative approval pursuant to &sect;29A-3-1 </span><span class="cs1489E706">et seq.</span><span class="cs46AE26E6"> of this code to allow for the production and sale of consumable goods containing psilocybin and psilocybin product.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-37. Contracts Enforceable.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">It is the public policy of this state that contracts related to the production, sale, and administration of psilocybin pursuant to this article shall be enforceable. It is the public policy of this state that no contract entered into by a psilocybin production establishment, qualified medical psilocybin provider, or qualified therapy provider, or its employees or agents as permitted pursuant to a valid registration, or by an entity who allows property to be used by an establishment, qualified medical psilocybin provider, or qualified therapy provider, its employees, or its agents as permitted pursuant to a valid registration, shall be unenforceable on the basis that cultivating, obtaining, manufacturing, distributing, dispensing, transporting, selling, possessing, or using psilocybin is prohibited by federal law.</span></p><h4 class="cs89687900">
+		<span class="csF3C8A5A3">&sect;16-67-38. Psychedelic Compounds &ndash; Study.</span></h4>
+	<p class="cs53FB8D75"><span class="cs46AE26E6">The department shall conduct a study regarding the use of psychedelic compounds other than psilocybin in the treatment of medical conditions. The department shall submit a report to the Joint Committee on Government and Finance, including the department&rsquo;s findings and recommendations.</span></p><p class="cs637BA255"><span class="cs7FA9C667">&nbsp;</span></p><p class="cs637BA255"><span class="cs7FA9C667">NOTE: The purpose of this bill is to adopt the Therapeutic Psilocybin Act. </span></p><p class="cs637BA255"><span class="cs7FA9C667">Strike-throughs indicate language that would be stricken from a heading or the present law and underscoring indicates new language that would be added.</span></p>
+
+
+</div>
+
+
+</main><!--wrapper-->
+
+
+<script src="/js/pdf-accessibility.js"></script>
+<footer><div id="footer">
+
+<div class="footerlinks">
+<a href="/bill_status/bill_status.cfm">Bill Status</a>&nbsp;&nbsp;|&nbsp;
+<a href="/bill-track/login.cfm">Bill Tracking</a>&nbsp;&nbsp;|&nbsp;
+<a href="/wvcodeentire.htm">Legacy WV Code</a>&nbsp;&nbsp;|&nbsp;
+<a href="https://www.wvlegislature.gov/Bulletin_Board/Bulletin_Board_menu.cfm">Bulletin Board</a>&nbsp;&nbsp;|&nbsp;
+<a href="/redistricting.cfm">District Maps</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Senate1/roster.cfm">Senate Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/House/roster.cfm">House Roster</a>&nbsp;&nbsp;|&nbsp;
+<a href="/live.cfm">Live</a>&nbsp;&nbsp;|&nbsp;
+<a href="//blog.wvlegislature.gov/">Blog</a>&nbsp;&nbsp;|&nbsp;
+<a href="//jobs.wvlegislature.gov/">Jobs</a>&nbsp;&nbsp;|&nbsp;
+<a href="/Contact/Links/links.cfm">Links</a>&nbsp;&nbsp;|&nbsp;
+<!--<a href="/FAQs/FAQ.cfm">FAQ</a>&nbsp;&nbsp;|&nbsp;
+<a href="/site_map.cfm">Site Map</a>&nbsp;&nbsp;|&nbsp;-->
+<a href="/index.cfm">Home</a>
+</div>
+<div class="social">
+<span>
+<a href="https://www.facebook.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/facebook.png" alt="Find on Facebook" width="24" height="24" style="vertical-align:middle" title="Find on Facebook"></a>
+<a href="https://twitter.com/wvlegislature"><img src="/images/SOCIAL-ICON-SET/512x512/twitter.png" alt="Follow on Twitter" width="24" height="24" style="vertical-align:middle" title="Follow on Twitter"></a>
+<a href="https://www.youtube.com/wvlegislature/"><img src="/images/SOCIAL-ICON-SET/512x512/utube.png" alt="Watch on YouTube" width="24" height="24" style="vertical-align:middle" title="Watch on YouTube"></a>
+</span>
+</div>
+</div>
+<div class="baseline">This Web site is maintained by the <a href="/Joint/legisinfo.cfm">West Virginia Legislature's Office of Reference &amp; Information.</a> &nbsp;|&nbsp; <a href="/termsofuse.cfm"> Terms of Use</a>  &nbsp;| &nbsp; <a href="mailto:webmaster@wvlegislature.gov"> <img src="/images/mail_icon.png" alt="Email Webmaster" style="vertical-align:top">Webmaster</a> &nbsp;  | &nbsp;  &copy; 2026 West Virginia Legislature  ** 
+</div><br /><br />
+<script>
+if (window.location.search.indexOf('sortby') !== -1) {
+  setTimeout(function() {
+    var target = document.getElementById('results');
+    if (target) { target.scrollIntoView({ behavior: 'smooth' }); }
+  }, 300);
+}
+</script>
+</footer>
+
+<div id='pod-popup' class='noprint'>
+	<a class="b-close"><img src='/js/images/close-icon128x128.png' alt='X'></a>
+	<h3>Print On Demand</h3>
+	<div class='pod-meta'>Name:<input type='text' value='' id='pod-name' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Email:<input type='text' value='' id='pod-email' class='meta-input'></div>
+	<div style='clear:both'></div>
+    <div class='pod-meta'>Phone:<input type='text' value='' id='pod-phone' class='meta-input'></div>
+	<div style='clear:both'></div>
+	<div id='pod-content'></div>
+	<hr>
+	<a><img id='pod-go' src='/js/images/print-request159x50.png' alt='Print'></a>
+</div>
+<script>
+	$('div.textcontainer a').replaceWith(function(){
+		return this.childNodes;
+	});
+</script>
+<script type="text/javascript" src="/js/validcodecheck.js"></script>
+<script type="text/javascript" src="/js/pod.js"></script>
+<script type="text/javascript" src="/js/codedetect.js"></script>
+<script type="text/javascript" src="/js/cleanfiscalnote.js"></script>
+</body>
+</html>
