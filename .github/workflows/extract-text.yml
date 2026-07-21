@@ -32,7 +32,7 @@ jobs:
 
       - name: Run text extraction action
         id: extract
-        uses: chihacknight/govbot/actions/extract@feat/session-scoped-repo-lifecycle
+        uses: chihacknight/govbot/actions/extract@main
         with:
           state: wv
           github-token: ${{ secrets.GITHUB_TOKEN }}
