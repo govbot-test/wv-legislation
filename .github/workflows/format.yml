@@ -34,10 +34,9 @@ jobs:
           fetch-depth: 0
 
       - name: Run formatter action
-        uses: chihacknight/govbot/actions/format@feat/session-scoped-repo-lifecycle
+        uses: chihacknight/govbot/actions/format@main
         with:
           state: ${{ env.STATE_CODE }}
           scraper-repo: ${{ env.SCRAPER_REPO }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
           force-update: ${{ inputs.force-update }}
-
